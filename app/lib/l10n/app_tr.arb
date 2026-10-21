@@ -1,0 +1,14 @@
+{
+  "@@locale": "tr",
+  "appTitle": "Sistem",
+  "navStatus": "Durum",
+  "navQuests": "Görevler",
+  "navNutrition": "Beslenme",
+  "navShop": "Mağaza",
+  "navMore": "Daha fazla",
+  "sectionEmptyTitle": "Bölüm geliştiriliyor",
+  "sectionEmptyBody": "Sistem bu bölümü sonraki aşamalarda açacak.",
+  "certExpiresInDays": "{days, plural, =0{Sertifikanın süresi bugün doluyor} one{Sertifikanın süresi {days} gün içinde doluyor} other{Sertifikanın süresi {days} gün içinde doluyor}}",
+  "certExpired": "Sertifikanın süresi doldu — uygulamayı yeniden yükleyin",
+  "certReinstallHint": "Uygulamayı Sideloadly ile yeniden yükleyin, veriler senkronizasyondan sonra korunur."
+}

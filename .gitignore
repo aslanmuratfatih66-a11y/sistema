@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.vscode/
+*.iml
+*.jks
+*.keystore
+*.p12
+key.properties
+.env
+/server/bin/
+/dist/

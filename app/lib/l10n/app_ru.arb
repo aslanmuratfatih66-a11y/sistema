@@ -1,0 +1,15 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Система",
+  "navStatus": "Статус",
+  "navQuests": "Квесты",
+  "navNutrition": "Питание",
+  "navShop": "Магазин",
+  "navMore": "Ещё",
+  "sectionEmptyTitle": "Раздел в разработке",
+  "sectionEmptyBody": "Система откроет этот раздел на следующих этапах.",
+  "certExpiresInDays": "{days, plural, =0{Сертификат истекает сегодня} one{Сертификат истекает через {days} день} few{Сертификат истекает через {days} дня} other{Сертификат истекает через {days} дней}}",
+  "@certExpiresInDays": {"placeholders": {"days": {"type": "int"}}},
+  "certExpired": "Сертификат истёк — переустановите приложение",
+  "certReinstallHint": "Переустановите приложение через Sideloadly, данные сохранятся после синхронизации."
+}
