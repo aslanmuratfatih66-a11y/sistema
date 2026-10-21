@@ -4,9 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sistema/domain/quests/quest_api.dart';
+import 'package:sistema/features/home/data/demo_home_data.dart';
+import 'package:sistema/features/home/data/home_live_data.dart';
 import 'package:sistema/features/home/data/home_providers.dart';
+import 'package:sistema/features/quests/outcomes/outcome_windows_host.dart';
 import 'package:sistema/l10n/app_localizations.dart';
 import 'package:sistema/ui/ui.dart';
+
+import '../quests/fake_quest_service.dart';
 
 final fixedNow = DateTime(2026, 10, 21, 10, 46);
 
@@ -18,9 +24,26 @@ const shellBottomBar = 56.0 + 34.0;
 /// Видимая область вкладки (в глобальных координатах) — как в AppShell.
 const visibleTabBottom = 852.0 - shellBottomBar;
 
+/// Контекст «Статуса» без БД: лента дня и начало программы — как в демо.
+HomeContext testHomeContext() {
+  final demo = buildDemoHomeData(fixedNow);
+  return HomeContext(
+    programStart: demo.programStart,
+    day: demo.day,
+    playerName: 'Мурат',
+    waterGoalMl: 2500,
+    kcalGoal: 2200,
+  );
+}
+
 /// Приложение с вкладкой, размещённой как в оболочке: сверху safe area, снизу навигация.
-Widget tabApp(Widget screen, Locale locale, {double textScale = 1}) => ProviderScope(
-      overrides: [homeNowSourceProvider.overrideWithValue(() => fixedNow)],
+/// Движок — [service] (по умолчанию фейк с данными «утро первого дня»), окна — OutcomeWindowsHost.
+Widget tabApp(Widget screen, Locale locale, {double textScale = 1, QuestService? service}) => ProviderScope(
+      overrides: [
+        homeNowSourceProvider.overrideWithValue(() => fixedNow),
+        questServiceProvider.overrideWithValue(service ?? FakeQuestService(now: fixedNow)),
+        homeContextProvider.overrideWithValue(testHomeContext()),
+      ],
       child: MaterialApp(
         theme: buildSystemTheme(),
         locale: locale,
@@ -30,13 +53,15 @@ Widget tabApp(Widget screen, Locale locale, {double textScale = 1}) => ProviderS
           data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(textScale)),
           child: child!,
         ),
-        home: Scaffold(
-          body: Column(
-            children: [
-              const SizedBox(height: iphoneTopInset),
-              Expanded(child: screen),
-              const SizedBox(height: shellBottomBar),
-            ],
+        home: OutcomeWindowsHost(
+          child: Scaffold(
+            body: Column(
+              children: [
+                const SizedBox(height: iphoneTopInset),
+                Expanded(child: screen),
+                const SizedBox(height: shellBottomBar),
+              ],
+            ),
           ),
         ),
       ),
@@ -58,13 +83,22 @@ Future<void> loadAppFonts() async {
   _fontsLoaded = true;
 }
 
-Future<void> pumpTab(WidgetTester tester, Widget screen, Locale locale, {double textScale = 1}) async {
+Future<void> pumpTab(
+  WidgetTester tester,
+  Widget screen,
+  Locale locale, {
+  double textScale = 1,
+  QuestService? service,
+}) async {
   tester.view.physicalSize = iphoneSize * 3;
   tester.view.devicePixelRatio = 3;
   addTearDown(tester.view.reset);
   await tester.runAsync(loadAppFonts);
-  await tester.pumpWidget(tabApp(screen, locale, textScale: textScale));
+  await tester.pumpWidget(tabApp(screen, locale, textScale: textScale, service: service));
   // Бесконечные анимации (пульс) — pumpAndSettle не дождётся, крутим вручную.
+  // Второй шаг — панели, появившиеся после данных движка: пока идёт проявление (WindowAppear),
+  // клип не пропускает нажатия.
+  await tester.pump(const Duration(milliseconds: 600));
   await tester.pump(const Duration(milliseconds: 600));
 }
 
@@ -111,4 +145,15 @@ Future<void> expectNoOverflowAtLargeText(WidgetTester tester, Widget screen, Key
     print('Предупреждение: $foreign ошибок вёрстки внутри компонентов дизайн-системы при ×2.');
   }
   expect(own, isEmpty, reason: own.map((e) => e.toString()).join('\n'));
+}
+
+/// Удержание кнопки отказа [duration] (кадрами по 100 мс) и отпускание.
+Future<void> holdFor(WidgetTester tester, Finder target, Duration duration) async {
+  final g = await tester.startGesture(tester.getCenter(target));
+  for (var t = Duration.zero; t < duration; t += const Duration(milliseconds: 100)) {
+    await tester.pump(const Duration(milliseconds: 100));
+  }
+  await g.up();
+  await tester.pump();
+  await tester.pump(const Duration(milliseconds: 400));
 }

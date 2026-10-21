@@ -882,6 +882,164 @@ class AppLocalizationsRu extends AppLocalizations {
   String get hqFinanceFoodTitle => 'Финансы на еду';
 
   @override
+  String ntfQuestTitle(String title) {
+    return '[ Квест ] $title';
+  }
+
+  @override
+  String ntfPenaltyQuestTitle(String title) {
+    return '[ Штрафной квест ] $title';
+  }
+
+  @override
+  String ntfBossTitle(String title) {
+    return '[ Босс недели ] $title';
+  }
+
+  @override
+  String ntfQuestBody(String time, int diamonds) {
+    return 'Срок — до $time. Награда: +$diamonds ◆';
+  }
+
+  @override
+  String ntfQuestBodyNoReward(String time) {
+    return 'Срок — до $time.';
+  }
+
+  @override
+  String ntfPenaltyQuestBody(String time) {
+    return 'Срок — до $time. Отказ невозможен.';
+  }
+
+  @override
+  String get ntfReproachTitle => '[ Система ] Квест не выполнен';
+
+  @override
+  String ntfReproachBody(String title) {
+    return '«$title» просрочен. Система фиксирует бездействие. Выполни сейчас.';
+  }
+
+  @override
+  String get ntfActionDone => 'Выполнено';
+
+  @override
+  String get ntfActionSnooze => '+10 мин';
+
+  @override
+  String get ntfChannelQuests => 'Квесты';
+
+  @override
+  String get ntfChannelQuestsDesc =>
+      'Напоминания о квестах, упрёки и сообщения Системы';
+
+  @override
+  String get ntfChannelNag => 'Надоедать';
+
+  @override
+  String get ntfChannelNagDesc =>
+      'Повтор каждую минуту, пока квест не выполнен';
+
+  @override
+  String get ntfFailedTitle => '[ Система ] Квест провален';
+
+  @override
+  String ntfFailedBody(String title, int diamonds) {
+    return '«$title»: −$diamonds ◆';
+  }
+
+  @override
+  String ntfPenaltyTitle(int diamonds) {
+    return '[ Штраф ] −$diamonds ◆';
+  }
+
+  @override
+  String get ntfLevelUpTitle => '[ Система ] Уровень повышен';
+
+  @override
+  String ntfLevelUpBody(int level, int points) {
+    return 'Уровень $level. Свободных очков: $points';
+  }
+
+  @override
+  String get ntfTestTitle => '[ Система ] Проверка связи';
+
+  @override
+  String get ntfTestBody => 'Уведомления работают. Игрок, жди приказов.';
+
+  @override
+  String get ntfTestSent => 'Уведомление отправлено';
+
+  @override
+  String get ntfSectionGeneral => 'Основное';
+
+  @override
+  String get ntfEnabled => 'Напоминания';
+
+  @override
+  String get ntfEnabledHint => 'Локальные уведомления о квестах';
+
+  @override
+  String get ntfNag => 'Надоедать каждую минуту';
+
+  @override
+  String get ntfNagHint => 'Повтор, пока не нажмёте «Выполнено»';
+
+  @override
+  String get ntfReproach => 'Упрёки';
+
+  @override
+  String get ntfReproachHint =>
+      'Через 15 мин после срока, если квест не выполнен';
+
+  @override
+  String get ntfVoice => 'Голос персонажа как звук';
+
+  @override
+  String get ntfVoiceHint => 'Будет на этапе 6 — пока стандартный звук';
+
+  @override
+  String get ntfSectionQuiet => 'Тихие часы';
+
+  @override
+  String get ntfQuietEnabled => 'Не беспокоить';
+
+  @override
+  String get ntfQuietHint =>
+      'В это время ничего не звенит, упрёк придёт после окончания';
+
+  @override
+  String get ntfQuietFrom => 'С';
+
+  @override
+  String get ntfQuietTo => 'До';
+
+  @override
+  String get ntfSectionPermission => 'Разрешение';
+
+  @override
+  String get ntfPermGranted => 'Уведомления разрешены';
+
+  @override
+  String get ntfPermDenied =>
+      'Уведомления запрещены — квесты не смогут напомнить о себе';
+
+  @override
+  String get ntfPermUnknown => 'Статус разрешения неизвестен';
+
+  @override
+  String get ntfPermExactOff =>
+      'Точные будильники выключены — напоминания могут опаздывать';
+
+  @override
+  String get ntfPermRequest => 'Запросить разрешение';
+
+  @override
+  String get ntfTest => 'Проверить уведомление';
+
+  @override
+  String get ntfUnavailable => 'Уведомления недоступны на этой платформе';
+
+  @override
   String get planNoticeLabel => 'Уведомление';
 
   @override
@@ -2225,6 +2383,569 @@ class AppLocalizationsRu extends AppLocalizations {
   String get qbPermAlarmsLater => 'Настроим на этапе будильника.';
 
   @override
+  String qeQuestPenaltyCleaning(String minutes) {
+    return 'Штраф: уборка $minutes мин';
+  }
+
+  @override
+  String qeQuestPenaltyReading(String minutes) {
+    return 'Штраф: чтение $minutes мин';
+  }
+
+  @override
+  String qeQuestPenaltyPlank(String seconds) {
+    return 'Штраф: планка $seconds с';
+  }
+
+  @override
+  String qeQuestPenaltyWalk(String minutes) {
+    return 'Штраф: прогулка $minutes мин';
+  }
+
+  @override
+  String get qeQuestPenaltyNoGames => 'Штраф: вечер без игр и соцсетей';
+
+  @override
+  String qeQuestBoostWalk(String minutes) {
+    return 'Усиление: прогулка $minutes мин';
+  }
+
+  @override
+  String qeQuestBoostWater(String ml) {
+    return 'Усиление: ещё $ml мл воды';
+  }
+
+  @override
+  String qeQuestBoostBedOnTime(String time) {
+    return 'Усиление: отбой не позже $time';
+  }
+
+  @override
+  String get qeQuestBoostPlanTomorrow => 'Усиление: распиши завтрашний день';
+
+  @override
+  String qeQuestBossAll(String count) {
+    return 'Закрой $count квестов за неделю';
+  }
+
+  @override
+  String qeQuestBossStrength(String count) {
+    return 'Закрой $count квестов силы';
+  }
+
+  @override
+  String qeQuestBossEndurance(String count) {
+    return 'Закрой $count квестов выносливости';
+  }
+
+  @override
+  String qeQuestBossDiscipline(String count) {
+    return 'Закрой $count квестов дисциплины';
+  }
+
+  @override
+  String qeQuestBossIntellect(String count) {
+    return 'Закрой $count квестов интеллекта';
+  }
+
+  @override
+  String qeQuestBossHealth(String count) {
+    return 'Закрой $count квестов здоровья';
+  }
+
+  @override
+  String qeQuestBossLooks(String count) {
+    return 'Закрой $count квестов внешности';
+  }
+
+  @override
+  String qeEffectVigor(String pct) {
+    return 'Бодрость +$pct% опыта';
+  }
+
+  @override
+  String qeEffectDehydration(String pct) {
+    return 'Обезвоживание −$pct% выносливости';
+  }
+
+  @override
+  String qeEffectBossAura(String pct) {
+    return 'Аура победителя +$pct% ◆';
+  }
+
+  @override
+  String get qeTitleStreak7 => 'Несгибаемый';
+
+  @override
+  String get qeTitleStreak30 => 'Железная воля';
+
+  @override
+  String get qeTitleBossSlayer => 'Победитель босса';
+
+  @override
+  String get qeTitleBossHunter => 'Охотник на боссов';
+
+  @override
+  String get qeTitleLevel10 => 'Пробуждённый';
+
+  @override
+  String get qeTitleLevel25 => 'Закалённый';
+
+  @override
+  String get qeTitleLevel50 => 'Легенда Системы';
+
+  @override
+  String get qeReasonFailedQuests => 'Провалы за день. Назначен штрафной квест';
+
+  @override
+  String get qeReasonMarkWalked =>
+      'Отметка: гулял с друзьями. За честность штраф мягче';
+
+  @override
+  String get qeReasonMarkAlcohol =>
+      'Отметка: алкоголь. Завтра — усиленный план';
+
+  @override
+  String get qeReasonMarkRelapse => 'Отметка: срыв. Завтра — усиленный план';
+
+  @override
+  String get qeReasonBossFailed => 'Босс недели не побеждён';
+
+  @override
+  String get qeReasonReproach => 'Квест не выполнен. Система недовольна';
+
+  @override
+  String get qeReasonOther => 'Штраф Системы';
+
+  @override
+  String get qstViewToday => 'Сегодня';
+
+  @override
+  String get qstViewWeek => 'Неделя';
+
+  @override
+  String get qstViewHistory => 'История';
+
+  @override
+  String get qstFilterTitle => 'Фильтр';
+
+  @override
+  String qstFilterActive(int count) {
+    return 'Фильтр: $count';
+  }
+
+  @override
+  String get qstFilterReset => 'Сбросить';
+
+  @override
+  String get qstFilterKind => 'Вид';
+
+  @override
+  String get qstFilterStat => 'Характеристика';
+
+  @override
+  String get qstKindDaily => 'Ежедневные';
+
+  @override
+  String get qstKindSchedule => 'Из расписания';
+
+  @override
+  String get qstKindGoal => 'По цели';
+
+  @override
+  String get qstKindPenalty => 'Штрафные';
+
+  @override
+  String get qstKindBoss => 'Босс';
+
+  @override
+  String get qstStatusPending => 'Активен';
+
+  @override
+  String get qstStatusDone => 'Выполнен';
+
+  @override
+  String get qstStatusFailed => 'Провален';
+
+  @override
+  String get qstStatusRefused => 'Отказ';
+
+  @override
+  String get qstStatusExcused => 'Пауза: без штрафа';
+
+  @override
+  String get qstEmptyDay => 'На сегодня квестов нет';
+
+  @override
+  String get qstEmptyWeek => 'На эту неделю квестов нет';
+
+  @override
+  String get qstEmptyFiltered => 'Нет квестов под фильтр';
+
+  @override
+  String get qstEmptyHistory => 'Журнал пуст';
+
+  @override
+  String get qstLoadError => 'Система не отвечает. Повторите позже.';
+
+  @override
+  String get qstActionRejected => 'Система отклонила действие.';
+
+  @override
+  String get qstNoValue => '—';
+
+  @override
+  String get qstAllDay => 'В течение дня';
+
+  @override
+  String get qstOpenQuest => 'Открыть квест';
+
+  @override
+  String get qstSubtasks => 'Подзадачи';
+
+  @override
+  String get qstProgress => 'Прогресс';
+
+  @override
+  String qstProgressAddLabel(String step) {
+    return 'Добавить прогресс: $step';
+  }
+
+  @override
+  String qstRefusePenalty(String points) {
+    return 'Отказ: −$points ◆';
+  }
+
+  @override
+  String get qstNoRefuse => 'Штрафной квест: отказ невозможен';
+
+  @override
+  String get qstArchive => 'В архив';
+
+  @override
+  String get qstArchiveConfirm =>
+      'Квест уйдёт в архив и больше не будет появляться.';
+
+  @override
+  String get qstNewQuest => 'Новый квест';
+
+  @override
+  String get qstEditQuest => 'Изменить квест';
+
+  @override
+  String qstBossReward(String points, String xp) {
+    return 'Награда: +$points ◆, +$xp XP';
+  }
+
+  @override
+  String qstDiamondsDelta(String value) {
+    return '$value ◆';
+  }
+
+  @override
+  String qstXpDelta(String value) {
+    return '$value XP';
+  }
+
+  @override
+  String get qstHistCompleted => 'Выполнено';
+
+  @override
+  String get qstHistFailed => 'Провал';
+
+  @override
+  String get qstHistRefused => 'Отказ';
+
+  @override
+  String get qstHistPenalty => 'Штраф';
+
+  @override
+  String get qstHistBonus => 'Бонус';
+
+  @override
+  String get qstHistPurchase => 'Покупка';
+
+  @override
+  String get qstHistMark => 'Отметка дня';
+
+  @override
+  String get qstHistPauseStarted => 'Пауза';
+
+  @override
+  String get qstHistPauseEnded => 'Пауза снята';
+
+  @override
+  String get qstHistStatPoint => 'Очко характеристики';
+
+  @override
+  String get qstHistBossCompleted => 'Босс повержен';
+
+  @override
+  String get qstHistBossFailed => 'Босс не повержен';
+
+  @override
+  String get qstHistDisciplineOn => 'Дисциплина включена';
+
+  @override
+  String get qstHistDisciplineOff => 'Дисциплина снята';
+
+  @override
+  String get qstHistAdjustment => 'Корректировка';
+
+  @override
+  String get qstMarksTitle => 'Честные отметки';
+
+  @override
+  String get qstMarksHint =>
+      'Честная отметка мягче скрытого срыва. Завтра — усиленный план.';
+
+  @override
+  String get qstMarkWalked => 'Гулял с друзьями';
+
+  @override
+  String get qstMarkAlcohol => 'Алкоголь';
+
+  @override
+  String get qstMarkRelapse => 'Сорвался';
+
+  @override
+  String qstMarkConfirmTitle(String mark) {
+    return 'Отметить: $mark?';
+  }
+
+  @override
+  String get qstMarkConfirmMessage =>
+      'Честная отметка мягче скрытого срыва: небольшой штраф сейчас, завтра — усиленный план.';
+
+  @override
+  String get qstMarkConfirm => 'Отметить';
+
+  @override
+  String get qstPauseTitle => 'Пауза';
+
+  @override
+  String get qstPauseHint =>
+      'Болезнь, каникулы, отпуск: штрафы не начисляются, серия не сгорает.';
+
+  @override
+  String get qstPauseStart => 'Поставить паузу';
+
+  @override
+  String get qstPauseEnd => 'Снять паузу';
+
+  @override
+  String get qstPauseConfirm => 'Начать паузу';
+
+  @override
+  String get qstPauseReason => 'Причина';
+
+  @override
+  String get qstPauseReasonIllness => 'Болезнь';
+
+  @override
+  String get qstPauseReasonVacation => 'Отпуск';
+
+  @override
+  String get qstPauseReasonHolidays => 'Каникулы';
+
+  @override
+  String get qstPauseReasonOther => 'Другое';
+
+  @override
+  String qstPauseActive(String reason) {
+    return 'Пауза: $reason';
+  }
+
+  @override
+  String qstPauseUntil(String date) {
+    return 'до $date';
+  }
+
+  @override
+  String get qstPauseUntilRemoved => 'До снятия';
+
+  @override
+  String get qstPauseUntilDate => 'До даты';
+
+  @override
+  String get qstPauseEndDate => 'Последний день паузы';
+
+  @override
+  String get qstPausedPill => 'Пауза';
+
+  @override
+  String get qstDisciplinePill => 'Дисциплина';
+
+  @override
+  String get qstPlayerNoName => 'Игрок';
+
+  @override
+  String get qstStatPointsTitle => 'Очки характеристик';
+
+  @override
+  String qstStatPointsLeft(int count) {
+    return 'Свободно: $count';
+  }
+
+  @override
+  String qstStatPointAdd(String stat) {
+    return 'Добавить очко: $stat';
+  }
+
+  @override
+  String qstWindowFailedMessage(String quest, String points) {
+    return '«$quest». Штраф: −$points ◆.';
+  }
+
+  @override
+  String qstWindowFailedMany(int count, String points) {
+    return 'Провалено квестов: $count. Штраф: −$points ◆.';
+  }
+
+  @override
+  String get qstWindowRefusedTitle => 'Отказ от квеста';
+
+  @override
+  String get qstWindowPenaltyTitle => 'Штраф';
+
+  @override
+  String qstWindowPenaltyMessage(String reason, String points) {
+    return '$reason. Штраф: −$points ◆.';
+  }
+
+  @override
+  String qstWindowPenaltyQuest(String quest) {
+    return 'Назначен штрафной квест: «$quest».';
+  }
+
+  @override
+  String get qstLevelUpTitle => 'Уровень повышен';
+
+  @override
+  String qstLevelUpLevel(int level) {
+    return 'LV $level';
+  }
+
+  @override
+  String qstLevelUpRank(String rank) {
+    return 'Новый ранг: $rank';
+  }
+
+  @override
+  String qstLevelUpPoints(int count) {
+    return 'Свободные очки характеристик: $count';
+  }
+
+  @override
+  String qstTitleGot(String title) {
+    return 'Титул: «$title»';
+  }
+
+  @override
+  String get qstBossWonTitle => 'Босс повержен';
+
+  @override
+  String get qstBossLostTitle => 'Босс не повержен';
+
+  @override
+  String get qstBossLostMessage =>
+      'Неделя закрыта без победы. Новый босс — с понедельника.';
+
+  @override
+  String get qstDisciplineOnTitle => 'Режим дисциплины включён';
+
+  @override
+  String get qstDisciplineOnMessage =>
+      'Подъём 6:00, отбой 22:00, дополнительная нагрузка в пределах плана. Режим снимется, когда баланс ◆ станет положительным.';
+
+  @override
+  String get qstDisciplineOffTitle => 'Режим дисциплины снят';
+
+  @override
+  String get qstDisciplineOffMessage => 'Баланс восстановлен. Обычный режим.';
+
+  @override
+  String get qstDisciplineMore => 'Подробнее';
+
+  @override
+  String get qstFormTitle => 'Название';
+
+  @override
+  String get qstFormTitleHint => 'Например: растяжка 10 минут';
+
+  @override
+  String get qstFormStat => 'Характеристика';
+
+  @override
+  String get qstFormTimed => 'Ко времени';
+
+  @override
+  String get qstFormTimedHint => 'Иначе — в течение дня';
+
+  @override
+  String get qstFormTime => 'Время';
+
+  @override
+  String get qstFormWindow => 'Окно выполнения';
+
+  @override
+  String get qstMinutesUnit => 'мин';
+
+  @override
+  String get qstFormWeekdays => 'Дни недели';
+
+  @override
+  String get qstFormWeekdaysHint => 'Не выбраны — каждый день';
+
+  @override
+  String get qstFormWeekParity => 'Чередование недель';
+
+  @override
+  String get qstWeekEvery => 'Каждую';
+
+  @override
+  String get qstWeek1 => 'Неделя 1';
+
+  @override
+  String get qstWeek2 => 'Неделя 2';
+
+  @override
+  String get qstFormSubtasks => 'Подзадачи';
+
+  @override
+  String qstFormSubtaskHint(int n) {
+    return 'Подзадача $n';
+  }
+
+  @override
+  String get qstFormAddSubtask => 'Добавить подзадачу';
+
+  @override
+  String get qstFormRemoveSubtask => 'Убрать подзадачу';
+
+  @override
+  String get qstFormDefaultReward => 'Награда и штраф — по правилам Системы';
+
+  @override
+  String get qstFormDefaultRewardHint =>
+      'Система рассчитает ◆ и опыт по виду квеста';
+
+  @override
+  String get qstFormRewardDiamonds => 'Награда, ◆';
+
+  @override
+  String get qstFormRewardXp => 'Опыт, XP';
+
+  @override
+  String get qstFormPenalty => 'Штраф за провал, ◆';
+
+  @override
+  String get qstFormNag => 'Надоедать';
+
+  @override
+  String get qstFormNagHint => 'Напоминать каждую минуту до выполнения';
+
+  @override
   String get schTitle => 'Расписание';
 
   @override
@@ -2718,4 +3439,300 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get setDisciplineHint => 'Подъём 6:00, отбой 22:00, доп. нагрузка';
+
+  @override
+  String get shpNoticeLabel => 'Уведомление';
+
+  @override
+  String get shpWarningLabel => 'Предупреждение';
+
+  @override
+  String get shpTitle => 'Магазин наград';
+
+  @override
+  String get shpBalance => 'Баланс';
+
+  @override
+  String get shpClosedMessage => 'Магазин закрыт: баланс отрицательный';
+
+  @override
+  String get shpClosedHint =>
+      'Выполняйте квесты, чтобы вернуть баланс в плюс. Режим дисциплины уже назначен.';
+
+  @override
+  String get shpRewards => 'Награды';
+
+  @override
+  String get shpAdd => 'Новая награда';
+
+  @override
+  String get shpEmptyTitle => 'Наград пока нет';
+
+  @override
+  String get shpEmptyText =>
+      'Награды придумываете вы и покупаете их за ◆. Нажмите на пример, чтобы заполнить форму:';
+
+  @override
+  String get shpExampleChocolate => 'Шоколадка';
+
+  @override
+  String get shpExampleFastFood => 'Фастфуд';
+
+  @override
+  String get shpExampleGames => 'Час игр';
+
+  @override
+  String get shpExampleFreeEvening => 'Вечер без квестов';
+
+  @override
+  String get shpBuy => 'Купить';
+
+  @override
+  String get shpLimitNone => 'Без лимита';
+
+  @override
+  String shpLimitDay(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count раза в день',
+      many: '$count раз в день',
+      few: '$count раза в день',
+      one: '$count раз в день',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String shpLimitWeek(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count раза в неделю',
+      many: '$count раз в неделю',
+      few: '$count раза в неделю',
+      one: '$count раз в неделю',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String shpLimitMonth(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count раза в месяц',
+      many: '$count раз в месяц',
+      few: '$count раза в месяц',
+      one: '$count раз в месяц',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String shpLimitLeft(int count) {
+    return 'осталось $count';
+  }
+
+  @override
+  String shpLimitReachedUntil(String date) {
+    return 'лимит исчерпан до $date';
+  }
+
+  @override
+  String shpNotEnough(int count) {
+    return 'не хватает $count ◆';
+  }
+
+  @override
+  String get shpConfirmTitle => 'Подтвердите покупку';
+
+  @override
+  String shpConfirmMessage(String title, int price, int after) {
+    return '«$title» за $price ◆. Баланс после покупки: $after ◆.';
+  }
+
+  @override
+  String shpBoughtMessage(String title) {
+    return 'Награда «$title» получена. Система зафиксировала покупку.';
+  }
+
+  @override
+  String get shpFailedMessage =>
+      'Покупка отклонена: недостаточно ◆ или магазин закрыт.';
+
+  @override
+  String get shpLimitReachedMessage => 'Лимит этой награды на период исчерпан.';
+
+  @override
+  String get shpHistory => 'История покупок';
+
+  @override
+  String get shpHistoryEmpty => 'Покупок пока нет';
+
+  @override
+  String get shpArchive => 'Архив';
+
+  @override
+  String get shpRestore => 'Вернуть';
+
+  @override
+  String get shpReorder => 'Порядок';
+
+  @override
+  String get shpMoveUp => 'Выше';
+
+  @override
+  String get shpMoveDown => 'Ниже';
+
+  @override
+  String get shpEditorNew => 'Новая награда';
+
+  @override
+  String get shpEditorEdit => 'Награда';
+
+  @override
+  String get shpFieldTitle => 'Название';
+
+  @override
+  String get shpFieldTitleHint => 'Например: час игр';
+
+  @override
+  String get shpFieldPrice => 'Цена';
+
+  @override
+  String get shpFieldPriceHint => 'Сколько ◆ стоит награда';
+
+  @override
+  String get shpFieldLimit => 'Лимит частоты';
+
+  @override
+  String get shpPeriodNone => 'Нет';
+
+  @override
+  String get shpPeriodDay => 'День';
+
+  @override
+  String get shpPeriodWeek => 'Неделя';
+
+  @override
+  String get shpPeriodMonth => 'Месяц';
+
+  @override
+  String get shpFieldLimitCount => 'Сколько раз за период';
+
+  @override
+  String get shpToArchive => 'В архив';
+
+  @override
+  String get shpErrorPrice => 'От 1 до 100000';
+
+  @override
+  String get shpErrorCount => 'От 1 до 99';
+
+  @override
+  String get dscTitle => 'Режим дисциплины';
+
+  @override
+  String get dscStatus => 'Статус';
+
+  @override
+  String get dscOn => 'Включён';
+
+  @override
+  String get dscOff => 'Выключен';
+
+  @override
+  String get dscReasonLabel => 'Причина';
+
+  @override
+  String get dscReasonDebt => 'отрицательный баланс';
+
+  @override
+  String get dscReasonManual => 'включён вручную';
+
+  @override
+  String get dscReasonAi => 'решение Системы после срыва';
+
+  @override
+  String get dscExitLabel => 'Выключится';
+
+  @override
+  String get dscExitBalancePositive => 'когда баланс станет положительным';
+
+  @override
+  String get dscExitManual => 'вручную, когда баланс не отрицательный';
+
+  @override
+  String get dscSinceLabel => 'С';
+
+  @override
+  String get dscOffText =>
+      'Режим включается сам, если баланс ◆ уходит в минус. Можно включить и вручную.';
+
+  @override
+  String get dscBalance => 'Баланс';
+
+  @override
+  String get dscToday => 'Правила на сегодня';
+
+  @override
+  String get dscRulesNote =>
+      'Нагрузка — в пределах вашего уровня. Еда и сон не урезаются: отбой и подъём не сдвигаются позже обычных.';
+
+  @override
+  String get dscCannotRefuse => 'Квесты режима нельзя отменить.';
+
+  @override
+  String get dscPreviewNote => 'Так будет выглядеть день в режиме дисциплины.';
+
+  @override
+  String get dscBlockerTitle => 'Блокировка приложений';
+
+  @override
+  String get dscBlockerText =>
+      'Блокировка развлекательных приложений после отбоя появится позже.';
+
+  @override
+  String get dscBlockerSoon => 'Позже';
+
+  @override
+  String get dscEnable => 'Включить режим';
+
+  @override
+  String get dscDisable => 'Выключить режим';
+
+  @override
+  String get dscEnableConfirmMessage =>
+      'Подъём в 6:00, отбой в 22:00, доп. нагрузка. Квесты режима нельзя отменить.';
+
+  @override
+  String get dscDisableLocked => 'Выключить нельзя, пока баланс отрицательный.';
+
+  @override
+  String get dscChangedOnMessage =>
+      'Режим дисциплины включён. Подъём в 6:00, отбой в 22:00, доп. нагрузка.';
+
+  @override
+  String get dscChangedOffMessage => 'Режим дисциплины выключен.';
+
+  @override
+  String dscQuestWake(String time) {
+    return 'Подъём в $time';
+  }
+
+  @override
+  String dscQuestBed(String time) {
+    return 'Отбой в $time';
+  }
+
+  @override
+  String dscQuestWorkout(int minutes) {
+    return 'Доп. тренировка: $minutes мин';
+  }
+
+  @override
+  String dscQuestWalk(int minutes) {
+    return 'Спокойная прогулка: $minutes мин';
+  }
 }

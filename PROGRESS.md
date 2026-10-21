@@ -2,24 +2,25 @@
 
 ## Сейчас
 Этап: 2 — Квесты, уведомления, баллы, штрафы, магазин
-Статус: в работе — сабагенты A–D
-Следующий шаг: дождаться отчётов A–D, интеграция (провайдеры в main, импорт квестов при «Принять» плана, фоновая задача, окна), CI
+Статус: интеграция сделана, analyze чистый — прогон тестов и CI
+Следующий шаг: зелёные локальные тесты → коммит → пуш → `gh run watch`
 
 ## Этап 2 — чек-лист
 - [x] Каркас: БД v3 (Quests, QuestInstances, QuestEvents, Effects, Pauses, Rewards, UserSettings), enums §6, контракты domain/quests/quest_api.dart и core/notifications/notification_api.dart, flutter_local_notifications 22.3 / timezone / flutter_timezone / workmanager, desugaring, ресиверы манифеста, BGAppRefresh (Info.plist + AppDelegate), маршруты /reminders /discipline, заглушки экранов
-- [ ] 1. Движок квестов §6 (A)
-- [ ] 2. Напоминания §7 (B)
-- [ ] 3. Отказ удержанием 5 с, отметки «гулял/алкоголь/сорвался», усиленный план (C)
-- [ ] 4. Режим дисциплины без блокировки (D)
-- [ ] 5. Магазин наград (D)
-- [ ] 6. Экраны квестов и системные окна (C)
+- [x] 1. Движок квестов §6 (A)
+- [x] 2. Напоминания §7 (B)
+- [x] 3. Отказ удержанием 5 с, отметки «гулял/алкоголь/сорвался», усиленный план (C)
+- [x] 4. Режим дисциплины без блокировки (D)
+- [x] 5. Магазин наград (D)
+- [x] 6. Экраны квестов и системные окна (C)
+- [x] Интеграция: createQuestService (+ DisciplineQuestSource), main (движок, планировщик, ReminderCoordinator, BG-задача), OutcomeWindowsHost вокруг AppShell, импорт квестов при «Принять» и для плана, принятого на этапе 1
 - [ ] 7. Юнит-тесты, CI зелёный, отчёт
 
 ## Сабагенты (этап 2)
-- A Движок квестов: в работе — app/lib/domain/quests (l10n_parts/qe_*)
+- A Движок квестов: готово — app/lib/domain/quests (l10n_parts/qe_*); при интеграции watchPlayer переписан (async* не отменялся)
 - B Уведомления: готово (36 тестов) — core/notifications, features/reminders (ntf_*); код для main.dart в отчёте: LocalReminderScheduler, ReminderCoordinator(onResume: markTablesUpdated), initBackgroundRefresh; разрешение запрашивать отдельно
-- C Экраны квестов и окна: в работе — app/lib/features/quests, app/lib/features/home/data (qst_*)
-- D Магазин и дисциплина: в работе — app/lib/features/shop, app/lib/features/discipline, app/lib/domain/discipline (shp_*)
+- C Экраны квестов и окна: готово — app/lib/features/quests, app/lib/features/home/data (qst_*)
+- D Магазин и дисциплина: готово — app/lib/features/shop, app/lib/features/discipline, app/lib/domain/discipline (shp_*)
 
 ## Этап 1 — итог
 Завершён (проверка на телефоне — вместе после этапа 4–5). Анкета 12 шагов, камера/фото-сессия под голос ассистента,
@@ -29,6 +30,7 @@
 ## Решения и договорённости
 - Этап 2: ◆/опыт/характеристики — только сумма журнала QuestEvents; покупка в магазине — событие purchase (отдельной таблицы Purchase нет); награда/штраф копируются в экземпляр
 - StatKind/PlayerRank переехали в core/models/enums.dart (home_view_data их реэкспортирует)
+- Виджет-тесты с drift-потоками: БД закрывать через `tester.runAsync(db.close)` после снятия экрана — иначе tearDown под fake async зависает
 - Сервисы этапа 2 — через провайдеры-контракты (questServiceProvider, reminderSchedulerProvider), реализация подключается в main
 - Проверка на телефоне — не после каждого этапа, а вместе после этапа 4–5 (решение владельца); после зелёного CI сразу следующий этап
 - Порядок анкеты: Профиль → Персонаж → Тело → … (ассистент озвучивает фото-сессии)

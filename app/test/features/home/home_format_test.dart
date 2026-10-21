@@ -1,10 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sistema/features/home/data/demo_home_data.dart';
 import 'package:sistema/features/home/utils/home_format.dart';
 import 'package:sistema/ui/ui.dart' show formatMinuteOfDay;
-import 'package:sistema/features/quests/widgets/daily_quests_panel.dart';
+import 'package:sistema/core/models/enums.dart';
+import 'package:sistema/features/quests/quest_format.dart';
+
+import '../quests/fake_quest_service.dart';
 
 void main() {
   group('formatCountdown', () {
@@ -66,11 +68,12 @@ void main() {
     expect(upperFor('Система', const Locale('ru')), 'СИСТЕМА');
   });
 
-  test('pendingPenalty считает штрафы невыполненных квестов с учётом отметок', () {
-    final data = buildDemoHomeData(DateTime(2026, 10, 21, 10, 46));
-    final base = pendingPenalty(data.dailyQuests, const {});
-    expect(base, 75);
-    expect(pendingPenalty(data.dailyQuests, const {'water': true}), base - 15);
-    expect(pendingPenalty(data.dailyQuests, const {'wake': false}), base + 10);
+  test('dayPenaltyTotal: штрафы незакрытых квестов дня, без босса', () {
+    final now = DateTime(2026, 10, 21, 10, 46);
+    final quests = [...fakeDayQuests(now), fakeBoss(now)];
+    final base = dayPenaltyTotal(quests);
+    expect(base, 85);
+    final done = [for (final q in quests) q.instanceId == 'water' ? copyQuest(q, status: QuestStatus.done) : q];
+    expect(dayPenaltyTotal(done), base - 15);
   });
 }

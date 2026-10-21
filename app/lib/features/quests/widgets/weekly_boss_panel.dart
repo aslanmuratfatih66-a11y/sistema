@@ -1,12 +1,14 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../domain/quests/quest_api.dart';
+import '../../../domain/quests/quest_l10n.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../ui/ui.dart';
 import '../../home/data/home_providers.dart';
-import '../../home/models/home_view_data.dart';
 import '../../home/utils/home_format.dart';
+import 'quest_sheet.dart';
 
 /// «3 д 13:14» до конца недели.
 String bossTimeLeft(AppLocalizations l, Duration left) {
@@ -15,18 +17,20 @@ String bossTimeLeft(AppLocalizations l, Duration left) {
   return l.homeBossTimeLeft('$days', formatHoursMinutes(left - Duration(days: days)));
 }
 
-/// Блок 7: босс недели (фиолетовая тема).
+/// Босс недели (фиолетовая тема): цель, прогресс, таймер, награда. Тап — карточка квеста.
 class WeeklyBossPanel extends ConsumerWidget {
   const WeeklyBossPanel({super.key, required this.boss});
 
-  final WeeklyBoss boss;
+  final QuestItem boss;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
     final nf = NumberFormat.decimalPattern(l.localeName);
     final now = ref.watch(homeClockProvider);
-    final left = bossTimeLeft(l, boss.endsAt.difference(now));
+    final left = bossTimeLeft(l, boss.deadlineAt.difference(now));
+    final total = boss.target ?? 1;
+    final current = boss.progress.clamp(0, total);
 
     return SysPanel(
       title: l.homeBossTitle,
@@ -43,33 +47,36 @@ class WeeklyBossPanel extends ConsumerWidget {
           ],
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          StatBar(
-            label: boss.goal.of(l),
-            value: boss.current.toDouble(),
-            max: boss.total.toDouble(),
-            color: SysColors.boss,
-            icon: SysGlyph.sword,
-            valueText: l.homeBossProgress(boss.current, boss.total),
-            height: 8,
-          ),
-          const SizedBox(height: 12),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SysIcon(SysGlyph.crown, size: 18, color: SysColors.gold),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(
-                  l.homeBossReward(nf.format(boss.rewardPoints), boss.rewardTitle.of(l)),
-                  style: SysText.secondary.copyWith(color: SysColors.gold),
+      child: InkWell(
+        onTap: () => showQuestSheet(context, boss),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            StatBar(
+              label: questTitleText(l, boss.title),
+              value: current.toDouble(),
+              max: total.toDouble(),
+              color: SysColors.boss,
+              icon: SysGlyph.sword,
+              valueText: l.homeBossProgress(current, total),
+              height: 8,
+            ),
+            const SizedBox(height: 12),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SysIcon(SysGlyph.crown, size: 18, color: SysColors.gold),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    l.qstBossReward(nf.format(boss.reward.diamonds), nf.format(boss.reward.xp)),
+                    style: SysText.mono.copyWith(fontSize: 12.5, color: SysColors.gold),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

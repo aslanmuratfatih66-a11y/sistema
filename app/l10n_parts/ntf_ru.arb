@@ -1,0 +1,125 @@
+{
+  "ntfQuestTitle": "[ Квест ] {title}",
+  "@ntfQuestTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfPenaltyQuestTitle": "[ Штрафной квест ] {title}",
+  "@ntfPenaltyQuestTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfBossTitle": "[ Босс недели ] {title}",
+  "@ntfBossTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfQuestBody": "Срок — до {time}. Награда: +{diamonds} ◆",
+  "@ntfQuestBody": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfQuestBodyNoReward": "Срок — до {time}.",
+  "@ntfQuestBodyNoReward": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfPenaltyQuestBody": "Срок — до {time}. Отказ невозможен.",
+  "@ntfPenaltyQuestBody": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfReproachTitle": "[ Система ] Квест не выполнен",
+  "ntfReproachBody": "«{title}» просрочен. Система фиксирует бездействие. Выполни сейчас.",
+  "@ntfReproachBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfActionDone": "Выполнено",
+  "ntfActionSnooze": "+10 мин",
+  "ntfChannelQuests": "Квесты",
+  "ntfChannelQuestsDesc": "Напоминания о квестах, упрёки и сообщения Системы",
+  "ntfChannelNag": "Надоедать",
+  "ntfChannelNagDesc": "Повтор каждую минуту, пока квест не выполнен",
+  "ntfFailedTitle": "[ Система ] Квест провален",
+  "ntfFailedBody": "«{title}»: −{diamonds} ◆",
+  "@ntfFailedBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfPenaltyTitle": "[ Штраф ] −{diamonds} ◆",
+  "@ntfPenaltyTitle": {
+    "placeholders": {
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfLevelUpTitle": "[ Система ] Уровень повышен",
+  "ntfLevelUpBody": "Уровень {level}. Свободных очков: {points}",
+  "@ntfLevelUpBody": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      },
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfTestTitle": "[ Система ] Проверка связи",
+  "ntfTestBody": "Уведомления работают. Игрок, жди приказов.",
+  "ntfTestSent": "Уведомление отправлено",
+  "ntfSectionGeneral": "Основное",
+  "ntfEnabled": "Напоминания",
+  "ntfEnabledHint": "Локальные уведомления о квестах",
+  "ntfNag": "Надоедать каждую минуту",
+  "ntfNagHint": "Повтор, пока не нажмёте «Выполнено»",
+  "ntfReproach": "Упрёки",
+  "ntfReproachHint": "Через 15 мин после срока, если квест не выполнен",
+  "ntfVoice": "Голос персонажа как звук",
+  "ntfVoiceHint": "Будет на этапе 6 — пока стандартный звук",
+  "ntfSectionQuiet": "Тихие часы",
+  "ntfQuietEnabled": "Не беспокоить",
+  "ntfQuietHint": "В это время ничего не звенит, упрёк придёт после окончания",
+  "ntfQuietFrom": "С",
+  "ntfQuietTo": "До",
+  "ntfSectionPermission": "Разрешение",
+  "ntfPermGranted": "Уведомления разрешены",
+  "ntfPermDenied": "Уведомления запрещены — квесты не смогут напомнить о себе",
+  "ntfPermUnknown": "Статус разрешения неизвестен",
+  "ntfPermExactOff": "Точные будильники выключены — напоминания могут опаздывать",
+  "ntfPermRequest": "Запросить разрешение",
+  "ntfTest": "Проверить уведомление",
+  "ntfUnavailable": "Уведомления недоступны на этой платформе"
+}

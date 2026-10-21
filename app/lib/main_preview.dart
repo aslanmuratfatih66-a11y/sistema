@@ -10,9 +10,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app/app.dart';
+import 'app/service_factory.dart';
 import 'core/capabilities/capability_service.dart';
 import 'core/capabilities/preview_capability_service.dart';
 import 'core/db/database.dart';
+import 'domain/quests/quest_api.dart';
 import 'features/onboarding/onboarding_progress.dart';
 
 /// iPhone 15 Pro: 393×852 @3x, Dynamic Island — геометрия как у iPhone 16,
@@ -44,6 +46,7 @@ Future<void> main() async {
 
   final db = AppDatabase();
   final onboarding = await OnboardingProgress.load(db);
+  final quests = await createQuestService(db);
 
   HardwareKeyboard.instance.addHandler(_toggleLocaleOnAltL);
   debugPrint('Предпросмотр: Alt+L — ru/tr; остальное — вкладка device_preview в DevTools.');
@@ -53,6 +56,7 @@ Future<void> main() async {
       capabilityServiceProvider.overrideWithValue(PreviewCapabilityService()),
       databaseProvider.overrideWithValue(db),
       onboardingProgressProvider.overrideWithValue(onboarding),
+      questServiceProvider.overrideWithValue(quests),
     ],
     child: const SistemaApp(),
   ));

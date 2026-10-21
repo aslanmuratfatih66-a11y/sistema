@@ -1,0 +1,281 @@
+{
+  "qstViewToday": "Сегодня",
+  "qstViewWeek": "Неделя",
+  "qstViewHistory": "История",
+  "qstFilterTitle": "Фильтр",
+  "qstFilterActive": "Фильтр: {count}",
+  "@qstFilterActive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qstFilterReset": "Сбросить",
+  "qstFilterKind": "Вид",
+  "qstFilterStat": "Характеристика",
+  "qstKindDaily": "Ежедневные",
+  "qstKindSchedule": "Из расписания",
+  "qstKindGoal": "По цели",
+  "qstKindPenalty": "Штрафные",
+  "qstKindBoss": "Босс",
+  "qstStatusPending": "Активен",
+  "qstStatusDone": "Выполнен",
+  "qstStatusFailed": "Провален",
+  "qstStatusRefused": "Отказ",
+  "qstStatusExcused": "Пауза: без штрафа",
+  "qstEmptyDay": "На сегодня квестов нет",
+  "qstEmptyWeek": "На эту неделю квестов нет",
+  "qstEmptyFiltered": "Нет квестов под фильтр",
+  "qstEmptyHistory": "Журнал пуст",
+  "qstLoadError": "Система не отвечает. Повторите позже.",
+  "qstActionRejected": "Система отклонила действие.",
+  "qstNoValue": "—",
+  "qstAllDay": "В течение дня",
+  "qstOpenQuest": "Открыть квест",
+  "qstSubtasks": "Подзадачи",
+  "qstProgress": "Прогресс",
+  "qstProgressAddLabel": "Добавить прогресс: {step}",
+  "@qstProgressAddLabel": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      }
+    }
+  },
+  "qstRefusePenalty": "Отказ: −{points} ◆",
+  "@qstRefusePenalty": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstNoRefuse": "Штрафной квест: отказ невозможен",
+  "qstArchive": "В архив",
+  "qstArchiveConfirm": "Квест уйдёт в архив и больше не будет появляться.",
+  "qstNewQuest": "Новый квест",
+  "qstEditQuest": "Изменить квест",
+  "qstBossReward": "Награда: +{points} ◆, +{xp} XP",
+  "@qstBossReward": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      },
+      "xp": {
+        "type": "String"
+      }
+    }
+  },
+  "qstDiamondsDelta": "{value} ◆",
+  "@qstDiamondsDelta": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "qstXpDelta": "{value} XP",
+  "@qstXpDelta": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "qstHistCompleted": "Выполнено",
+  "qstHistFailed": "Провал",
+  "qstHistRefused": "Отказ",
+  "qstHistPenalty": "Штраф",
+  "qstHistBonus": "Бонус",
+  "qstHistPurchase": "Покупка",
+  "qstHistMark": "Отметка дня",
+  "qstHistPauseStarted": "Пауза",
+  "qstHistPauseEnded": "Пауза снята",
+  "qstHistStatPoint": "Очко характеристики",
+  "qstHistBossCompleted": "Босс повержен",
+  "qstHistBossFailed": "Босс не повержен",
+  "qstHistDisciplineOn": "Дисциплина включена",
+  "qstHistDisciplineOff": "Дисциплина снята",
+  "qstHistAdjustment": "Корректировка",
+  "qstMarksTitle": "Честные отметки",
+  "qstMarksHint": "Честная отметка мягче скрытого срыва. Завтра — усиленный план.",
+  "qstMarkWalked": "Гулял с друзьями",
+  "qstMarkAlcohol": "Алкоголь",
+  "qstMarkRelapse": "Сорвался",
+  "qstMarkConfirmTitle": "Отметить: {mark}?",
+  "@qstMarkConfirmTitle": {
+    "placeholders": {
+      "mark": {
+        "type": "String"
+      }
+    }
+  },
+  "qstMarkConfirmMessage": "Честная отметка мягче скрытого срыва: небольшой штраф сейчас, завтра — усиленный план.",
+  "qstMarkConfirm": "Отметить",
+  "qstPauseTitle": "Пауза",
+  "qstPauseHint": "Болезнь, каникулы, отпуск: штрафы не начисляются, серия не сгорает.",
+  "qstPauseStart": "Поставить паузу",
+  "qstPauseEnd": "Снять паузу",
+  "qstPauseConfirm": "Начать паузу",
+  "qstPauseReason": "Причина",
+  "qstPauseReasonIllness": "Болезнь",
+  "qstPauseReasonVacation": "Отпуск",
+  "qstPauseReasonHolidays": "Каникулы",
+  "qstPauseReasonOther": "Другое",
+  "qstPauseActive": "Пауза: {reason}",
+  "@qstPauseActive": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "qstPauseUntil": "до {date}",
+  "@qstPauseUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "qstPauseUntilRemoved": "До снятия",
+  "qstPauseUntilDate": "До даты",
+  "qstPauseEndDate": "Последний день паузы",
+  "qstPausedPill": "Пауза",
+  "qstDisciplinePill": "Дисциплина",
+  "qstPlayerNoName": "Игрок",
+  "qstStatPointsTitle": "Очки характеристик",
+  "qstStatPointsLeft": "Свободно: {count}",
+  "@qstStatPointsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qstStatPointAdd": "Добавить очко: {stat}",
+  "@qstStatPointAdd": {
+    "placeholders": {
+      "stat": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowFailedMessage": "«{quest}». Штраф: −{points} ◆.",
+  "@qstWindowFailedMessage": {
+    "placeholders": {
+      "quest": {
+        "type": "String"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowFailedMany": "Провалено квестов: {count}. Штраф: −{points} ◆.",
+  "@qstWindowFailedMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowRefusedTitle": "Отказ от квеста",
+  "qstWindowPenaltyTitle": "Штраф",
+  "qstWindowPenaltyMessage": "{reason}. Штраф: −{points} ◆.",
+  "@qstWindowPenaltyMessage": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowPenaltyQuest": "Назначен штрафной квест: «{quest}».",
+  "@qstWindowPenaltyQuest": {
+    "placeholders": {
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "qstLevelUpTitle": "Уровень повышен",
+  "qstLevelUpLevel": "LV {level}",
+  "@qstLevelUpLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "qstLevelUpRank": "Новый ранг: {rank}",
+  "@qstLevelUpRank": {
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "qstLevelUpPoints": "Свободные очки характеристик: {count}",
+  "@qstLevelUpPoints": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qstTitleGot": "Титул: «{title}»",
+  "@qstTitleGot": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "qstBossWonTitle": "Босс повержен",
+  "qstBossLostTitle": "Босс не повержен",
+  "qstBossLostMessage": "Неделя закрыта без победы. Новый босс — с понедельника.",
+  "qstDisciplineOnTitle": "Режим дисциплины включён",
+  "qstDisciplineOnMessage": "Подъём 6:00, отбой 22:00, дополнительная нагрузка в пределах плана. Режим снимется, когда баланс ◆ станет положительным.",
+  "qstDisciplineOffTitle": "Режим дисциплины снят",
+  "qstDisciplineOffMessage": "Баланс восстановлен. Обычный режим.",
+  "qstDisciplineMore": "Подробнее",
+  "qstFormTitle": "Название",
+  "qstFormTitleHint": "Например: растяжка 10 минут",
+  "qstFormStat": "Характеристика",
+  "qstFormTimed": "Ко времени",
+  "qstFormTimedHint": "Иначе — в течение дня",
+  "qstFormTime": "Время",
+  "qstFormWindow": "Окно выполнения",
+  "qstMinutesUnit": "мин",
+  "qstFormWeekdays": "Дни недели",
+  "qstFormWeekdaysHint": "Не выбраны — каждый день",
+  "qstFormWeekParity": "Чередование недель",
+  "qstWeekEvery": "Каждую",
+  "qstWeek1": "Неделя 1",
+  "qstWeek2": "Неделя 2",
+  "qstFormSubtasks": "Подзадачи",
+  "qstFormSubtaskHint": "Подзадача {n}",
+  "@qstFormSubtaskHint": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "qstFormAddSubtask": "Добавить подзадачу",
+  "qstFormRemoveSubtask": "Убрать подзадачу",
+  "qstFormDefaultReward": "Награда и штраф — по правилам Системы",
+  "qstFormDefaultRewardHint": "Система рассчитает ◆ и опыт по виду квеста",
+  "qstFormRewardDiamonds": "Награда, ◆",
+  "qstFormRewardXp": "Опыт, XP",
+  "qstFormPenalty": "Штраф за провал, ◆",
+  "qstFormNag": "Надоедать",
+  "qstFormNagHint": "Напоминать каждую минуту до выполнения"
+}

@@ -1,5 +1,5 @@
-// Тестовые данные главного экрана. Позже homeDataProvider переключится на реальные
-// данные (Drift/сервер) — виджеты менять не придётся.
+// Демо-данные: предпросмотр, тесты и сводки калорий («Питание») и финансов («Ещё») до этапов 3 и 7.
+// Вкладка «Статус» берёт реальные данные из data/home_live_data.dart.
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 

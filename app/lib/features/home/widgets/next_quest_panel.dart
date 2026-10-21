@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../../domain/quests/quest_api.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../ui/ui.dart';
+import '../../quests/quest_actions.dart';
 import '../data/home_providers.dart';
 import '../models/home_view_data.dart';
 import '../utils/home_format.dart';
 
 /// Блок 4: следующий квест (золотая тема) — кольцо-таймер, награда/штраф, действия.
-/// Пока только UI: действия показывают системные окна, «+10 мин» сдвигает таймер локально.
+/// Действия идут в движок (QuestService); окна последствий показывает OutcomeWindowsHost.
 class NextQuestPanel extends ConsumerStatefulWidget {
   const NextQuestPanel({super.key, required this.quest});
 
@@ -24,7 +26,6 @@ class NextQuestPanel extends ConsumerStatefulWidget {
 class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
   Timer? _ticker;
   late DateTime _now;
-  Duration _snooze = Duration.zero;
 
   DateTime Function() get _clock => ref.read(homeNowSourceProvider);
 
@@ -43,46 +44,25 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
     super.dispose();
   }
 
-  DateTime get _deadline => widget.quest.deadline.add(_snooze);
-
-  Future<void> _showWindow(SystemWindow window) =>
-      showSystemWindow<void>(context, window: window);
-
-  List<Widget> _okAction(AppLocalizations l) => [
-        Builder(
-          builder: (ctx) => SysButton.primary(label: l.homeOk, onPressed: () => Navigator.of(ctx).pop()),
-        ),
-      ];
-
-  void _onDone(AppLocalizations l, NumberFormat nf) {
-    final q = widget.quest;
-    _showWindow(SystemWindow(
-      kind: SystemWindowKind.notice,
-      label: l.homeNoticeLabel,
-      title: l.homeQuestCompletedTitle,
-      message: l.homeQuestCompletedMessage(nf.format(q.rewardPoints), nf.format(q.rewardXp)),
-      actions: _okAction(l),
-    ));
+  void _act(Future<void> Function(QuestService s, String id, DateTime now) f) {
+    final id = widget.quest.instanceId;
+    if (id == null) return;
+    runQuestAction(context, ref, (s, now) => f(s, id, now));
   }
 
   void _onNoWater(AppLocalizations l) {
-    _showWindow(SystemWindow(
-      kind: SystemWindowKind.notice,
-      label: l.homeNoticeLabel,
-      message: l.homeNoWaterMessage,
-      actions: _okAction(l),
-    ));
-  }
-
-  void _onRefused(AppLocalizations l, NumberFormat nf) {
-    final q = widget.quest;
-    _showWindow(SystemWindow(
-      kind: SystemWindowKind.failed,
-      label: l.homeWarningLabel,
-      title: l.homeQuestFailedTitle,
-      message: l.homeQuestRefusedMessage(q.title.of(l), nf.format(q.penaltyPoints)),
-      actions: _okAction(l),
-    ));
+    _act((s, id, now) => s.snooze(id, at: now));
+    showSystemWindow<void>(
+      context,
+      window: SystemWindow(
+        kind: SystemWindowKind.notice,
+        label: l.homeNoticeLabel,
+        message: l.homeNoWaterMessage,
+        actions: [
+          Builder(builder: (ctx) => SysButton.primary(label: l.homeOk, onPressed: () => Navigator.of(ctx).pop())),
+        ],
+      ),
+    );
   }
 
   @override
@@ -90,7 +70,7 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
     final l = AppLocalizations.of(context);
     final nf = NumberFormat.decimalPattern(l.localeName);
     final q = widget.quest;
-    final deadline = _deadline;
+    final deadline = q.deadline;
     final left = deadline.difference(_now);
     final leftText = formatCountdown(left);
     final fraction = remainingFraction(q.startedAt, deadline, _now);
@@ -181,27 +161,31 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
               label: l.homeActionDone,
               icon: SysGlyph.check,
               expand: true,
-              onPressed: () => _onDone(l, nf),
+              onPressed: () => _act((s, id, now) => s.complete(id, at: now)),
             ),
             snooze: SysButton.secondary(
               label: l.homeActionSnooze,
               icon: SysGlyph.clock,
-              onPressed: () => setState(() => _snooze += const Duration(minutes: 10)),
+              onPressed: () => _act((s, id, now) => s.snooze(id, at: now)),
             ),
             contextAction: q.contextAction == NextQuestContextAction.noWater
                 ? SysButton.secondary(label: l.homeActionNoWater, icon: SysGlyph.water, onPressed: () => _onNoWater(l))
                 : null,
-            refuse: HoldButton(
-              label: l.homeActionRefuse,
-              semanticHint: l.homeRefuseHint,
-              tone: PanelTone.danger,
-              expand: true,
-              onCompleted: () => _onRefused(l, nf),
-            ),
+            // Штрафной квест: отказа нет.
+            refuse: q.cancellable
+                ? HoldButton(
+                    key: const Key('next-quest-refuse'),
+                    label: l.homeActionRefuse,
+                    semanticHint: l.homeRefuseHint,
+                    tone: PanelTone.danger,
+                    expand: true,
+                    onCompleted: () => _act((s, id, now) => s.refuse(id, at: now)),
+                  )
+                : null,
           ),
           const SizedBox(height: 4),
           Text(
-            l.homeRefuseHint,
+            q.cancellable ? l.homeRefuseHint : l.qstNoRefuse,
             textAlign: TextAlign.right,
             style: SysText.caption.copyWith(color: SysColors.dangerLight, fontSize: 11.5),
           ),
@@ -214,16 +198,17 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
 /// Кнопки квеста в два ряда: [Выполнено ····][+10 мин] / [Нет воды][Отказ (удержание) ····].
 /// На узкой ширине или при крупном шрифте — столбиком.
 class _Actions extends StatelessWidget {
-  const _Actions({required this.done, required this.snooze, required this.refuse, this.contextAction});
+  const _Actions({required this.done, required this.snooze, this.refuse, this.contextAction});
 
   final Widget done;
   final Widget snooze;
-  final Widget refuse;
+  final Widget? refuse;
   final Widget? contextAction;
 
   @override
   Widget build(BuildContext context) {
     final ctx = contextAction;
+    final refuse = this.refuse;
     return LayoutBuilder(builder: (context, c) {
       final scale = MediaQuery.textScalerOf(context).scale(14) / 14;
       if (c.maxWidth / scale < 300) {
@@ -233,8 +218,7 @@ class _Actions extends StatelessWidget {
             done,
             const SizedBox(height: 8),
             Wrap(spacing: 8, runSpacing: 8, children: [snooze, ?ctx]),
-            const SizedBox(height: 8),
-            refuse,
+            if (refuse != null) ...[const SizedBox(height: 8), refuse],
           ],
         );
       }
@@ -242,11 +226,13 @@ class _Actions extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Row(children: [Expanded(child: done), const SizedBox(width: 8), snooze]),
-          const SizedBox(height: 8),
-          Row(children: [
-            if (ctx != null) ...[ctx, const SizedBox(width: 8)],
-            Expanded(child: refuse),
-          ]),
+          if (refuse != null || ctx != null) ...[
+            const SizedBox(height: 8),
+            Row(children: [
+              if (ctx != null) ...[ctx, if (refuse != null) const SizedBox(width: 8)],
+              if (refuse != null) Expanded(child: refuse),
+            ]),
+          ],
         ],
       );
     });

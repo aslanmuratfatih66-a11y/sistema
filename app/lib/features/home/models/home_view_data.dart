@@ -1,5 +1,6 @@
 // Неизменяемые модели главного экрана (вкладка «Статус»).
-// Пока заполняются тестовыми данными (data/demo_home_data.dart), позже — из БД/сервера.
+// Статус строится из движка квестов и плана (data/home_live_data.dart); демо (data/demo_home_data.dart) —
+// для предпросмотра, тестов и сводок калорий/финансов до этапов 3 и 7.
 import 'package:flutter/foundation.dart';
 
 import '../../../l10n/app_localizations.dart';
@@ -56,11 +57,15 @@ class PlayerStatus {
     required this.stats,
     required this.points,
     required this.freeStatPoints,
+    this.paused = false,
+    this.discipline = false,
   });
 
   final int level;
   final HomeText name;
-  final HomeText title;
+
+  /// Титул; null — ещё не получен.
+  final HomeText? title;
   final PlayerRank rank;
   final int streakDays;
 
@@ -68,17 +73,25 @@ class PlayerStatus {
   final int xp;
   final int xpForNextLevel;
 
-  /// Энергия (сон), 0..100.
-  final int energyPercent;
+  /// Энергия (сон), 0..100; null — нет данных (сон — этап 3).
+  final int? energyPercent;
   final int waterMl;
+
+  /// Норма из плана; 0 — нормы нет.
   final int waterGoalMl;
   final int kcalEaten;
+
+  /// Норма из плана; 0 — нормы нет.
   final int kcalGoal;
   final List<StatValue> stats;
 
   /// Баллы ◆ (могут быть отрицательными).
   final int points;
   final int freeStatPoints;
+
+  /// Пауза (болезнь/отпуск) и режим дисциплины — пилюли рядом с рангом.
+  final bool paused;
+  final bool discipline;
 }
 
 @immutable
@@ -102,8 +115,15 @@ class NextQuest {
     required this.startedAt,
     required this.deadline,
     this.contextAction = NextQuestContextAction.none,
+    this.instanceId,
+    this.cancellable = true,
   });
 
+  /// Экземпляр в движке; null — демо (действия ничего не делают).
+  final String? instanceId;
+
+  /// false — штрафной квест: отказа нет.
+  final bool cancellable;
   final HomeText title;
   final int rewardPoints;
   final int rewardXp;
@@ -222,7 +242,27 @@ class FoodFinance {
   final int daysToStipend;
 }
 
-/// Всё, что показывает главный экран.
+/// Вкладка «Статус» (короткая, SPEC §4 уточнение): шапка, статус, эффекты, следующий квест, день.
+@immutable
+class HomeStatusData {
+  const HomeStatusData({
+    required this.programStart,
+    required this.unreadNotifications,
+    required this.player,
+    required this.effects,
+    required this.nextQuest,
+    required this.day,
+  });
+
+  final DateTime programStart;
+  final int unreadNotifications;
+  final PlayerStatus player;
+  final List<HomeEffect> effects;
+  final NextQuest? nextQuest;
+  final DayPlan day;
+}
+
+/// Всё, что показывал главный экран на этапе 0 (демо; сейчас — превью, тесты, сводки калорий/финансов).
 @immutable
 class HomeViewData {
   const HomeViewData({

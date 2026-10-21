@@ -1,0 +1,173 @@
+{
+  "shpNoticeLabel": "Уведомление",
+  "shpWarningLabel": "Предупреждение",
+  "shpTitle": "Магазин наград",
+  "shpBalance": "Баланс",
+  "shpClosedMessage": "Магазин закрыт: баланс отрицательный",
+  "shpClosedHint": "Выполняйте квесты, чтобы вернуть баланс в плюс. Режим дисциплины уже назначен.",
+  "shpRewards": "Награды",
+  "shpAdd": "Новая награда",
+  "shpEmptyTitle": "Наград пока нет",
+  "shpEmptyText": "Награды придумываете вы и покупаете их за ◆. Нажмите на пример, чтобы заполнить форму:",
+  "shpExampleChocolate": "Шоколадка",
+  "shpExampleFastFood": "Фастфуд",
+  "shpExampleGames": "Час игр",
+  "shpExampleFreeEvening": "Вечер без квестов",
+  "shpBuy": "Купить",
+  "shpLimitNone": "Без лимита",
+  "shpLimitDay": "{count, plural, one{{count} раз в день} few{{count} раза в день} many{{count} раз в день} other{{count} раза в день}}",
+  "@shpLimitDay": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitWeek": "{count, plural, one{{count} раз в неделю} few{{count} раза в неделю} many{{count} раз в неделю} other{{count} раза в неделю}}",
+  "@shpLimitWeek": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitMonth": "{count, plural, one{{count} раз в месяц} few{{count} раза в месяц} many{{count} раз в месяц} other{{count} раза в месяц}}",
+  "@shpLimitMonth": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitLeft": "осталось {count}",
+  "@shpLimitLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitReachedUntil": "лимит исчерпан до {date}",
+  "@shpLimitReachedUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "shpNotEnough": "не хватает {count} ◆",
+  "@shpNotEnough": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpConfirmTitle": "Подтвердите покупку",
+  "shpConfirmMessage": "«{title}» за {price} ◆. Баланс после покупки: {after} ◆.",
+  "@shpConfirmMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "price": {
+        "type": "int"
+      },
+      "after": {
+        "type": "int"
+      }
+    }
+  },
+  "shpBoughtMessage": "Награда «{title}» получена. Система зафиксировала покупку.",
+  "@shpBoughtMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "shpFailedMessage": "Покупка отклонена: недостаточно ◆ или магазин закрыт.",
+  "shpLimitReachedMessage": "Лимит этой награды на период исчерпан.",
+  "shpHistory": "История покупок",
+  "shpHistoryEmpty": "Покупок пока нет",
+  "shpArchive": "Архив",
+  "shpRestore": "Вернуть",
+  "shpReorder": "Порядок",
+  "shpMoveUp": "Выше",
+  "shpMoveDown": "Ниже",
+  "shpEditorNew": "Новая награда",
+  "shpEditorEdit": "Награда",
+  "shpFieldTitle": "Название",
+  "shpFieldTitleHint": "Например: час игр",
+  "shpFieldPrice": "Цена",
+  "shpFieldPriceHint": "Сколько ◆ стоит награда",
+  "shpFieldLimit": "Лимит частоты",
+  "shpPeriodNone": "Нет",
+  "shpPeriodDay": "День",
+  "shpPeriodWeek": "Неделя",
+  "shpPeriodMonth": "Месяц",
+  "shpFieldLimitCount": "Сколько раз за период",
+  "shpToArchive": "В архив",
+  "shpErrorPrice": "От 1 до 100000",
+  "shpErrorCount": "От 1 до 99",
+
+  "dscTitle": "Режим дисциплины",
+  "dscStatus": "Статус",
+  "dscOn": "Включён",
+  "dscOff": "Выключен",
+  "dscReasonLabel": "Причина",
+  "dscReasonDebt": "отрицательный баланс",
+  "dscReasonManual": "включён вручную",
+  "dscReasonAi": "решение Системы после срыва",
+  "dscExitLabel": "Выключится",
+  "dscExitBalancePositive": "когда баланс станет положительным",
+  "dscExitManual": "вручную, когда баланс не отрицательный",
+  "dscSinceLabel": "С",
+  "dscOffText": "Режим включается сам, если баланс ◆ уходит в минус. Можно включить и вручную.",
+  "dscBalance": "Баланс",
+  "dscToday": "Правила на сегодня",
+  "dscRulesNote": "Нагрузка — в пределах вашего уровня. Еда и сон не урезаются: отбой и подъём не сдвигаются позже обычных.",
+  "dscCannotRefuse": "Квесты режима нельзя отменить.",
+  "dscPreviewNote": "Так будет выглядеть день в режиме дисциплины.",
+  "dscBlockerTitle": "Блокировка приложений",
+  "dscBlockerText": "Блокировка развлекательных приложений после отбоя появится позже.",
+  "dscBlockerSoon": "Позже",
+  "dscEnable": "Включить режим",
+  "dscDisable": "Выключить режим",
+  "dscEnableConfirmMessage": "Подъём в 6:00, отбой в 22:00, доп. нагрузка. Квесты режима нельзя отменить.",
+  "dscDisableLocked": "Выключить нельзя, пока баланс отрицательный.",
+  "dscChangedOnMessage": "Режим дисциплины включён. Подъём в 6:00, отбой в 22:00, доп. нагрузка.",
+  "dscChangedOffMessage": "Режим дисциплины выключен.",
+  "dscQuestWake": "Подъём в {time}",
+  "@dscQuestWake": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestBed": "Отбой в {time}",
+  "@dscQuestBed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestWorkout": "Доп. тренировка: {minutes} мин",
+  "@dscQuestWorkout": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "dscQuestWalk": "Спокойная прогулка: {minutes} мин",
+  "@dscQuestWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
+}

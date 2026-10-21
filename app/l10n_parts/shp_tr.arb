@@ -1,0 +1,173 @@
+{
+  "shpNoticeLabel": "Bildirim",
+  "shpWarningLabel": "Uyarı",
+  "shpTitle": "Ödül mağazası",
+  "shpBalance": "Bakiye",
+  "shpClosedMessage": "Mağaza kapalı: bakiye eksi",
+  "shpClosedHint": "Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten atandı.",
+  "shpRewards": "Ödüller",
+  "shpAdd": "Yeni ödül",
+  "shpEmptyTitle": "Henüz ödül yok",
+  "shpEmptyText": "Ödülleri siz belirler, ◆ ile satın alırsınız. Formu doldurmak için bir örneğe dokunun:",
+  "shpExampleChocolate": "Çikolata",
+  "shpExampleFastFood": "Fast food",
+  "shpExampleGames": "Bir saat oyun",
+  "shpExampleFreeEvening": "Görevsiz bir akşam",
+  "shpBuy": "Satın al",
+  "shpLimitNone": "Sınırsız",
+  "shpLimitDay": "{count, plural, one{Günde {count} kez} other{Günde {count} kez}}",
+  "@shpLimitDay": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitWeek": "{count, plural, one{Haftada {count} kez} other{Haftada {count} kez}}",
+  "@shpLimitWeek": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitMonth": "{count, plural, one{Ayda {count} kez} other{Ayda {count} kez}}",
+  "@shpLimitMonth": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitLeft": "kalan {count}",
+  "@shpLimitLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitReachedUntil": "{date} tarihine kadar sınır doldu",
+  "@shpLimitReachedUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "shpNotEnough": "{count} ◆ eksik",
+  "@shpNotEnough": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpConfirmTitle": "Satın almayı onaylayın",
+  "shpConfirmMessage": "«{title}» — {price} ◆. Satın alma sonrası bakiye: {after} ◆.",
+  "@shpConfirmMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "price": {
+        "type": "int"
+      },
+      "after": {
+        "type": "int"
+      }
+    }
+  },
+  "shpBoughtMessage": "«{title}» ödülü alındı. Sistem satın almayı kaydetti.",
+  "@shpBoughtMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "shpFailedMessage": "Satın alma reddedildi: yetersiz ◆ veya mağaza kapalı.",
+  "shpLimitReachedMessage": "Bu ödülün dönem sınırı doldu.",
+  "shpHistory": "Satın alma geçmişi",
+  "shpHistoryEmpty": "Henüz satın alma yok",
+  "shpArchive": "Arşiv",
+  "shpRestore": "Geri al",
+  "shpReorder": "Sıralama",
+  "shpMoveUp": "Yukarı",
+  "shpMoveDown": "Aşağı",
+  "shpEditorNew": "Yeni ödül",
+  "shpEditorEdit": "Ödül",
+  "shpFieldTitle": "Ad",
+  "shpFieldTitleHint": "Örneğin: bir saat oyun",
+  "shpFieldPrice": "Fiyat",
+  "shpFieldPriceHint": "Ödülün kaç ◆ tuttuğu",
+  "shpFieldLimit": "Sıklık sınırı",
+  "shpPeriodNone": "Yok",
+  "shpPeriodDay": "Gün",
+  "shpPeriodWeek": "Hafta",
+  "shpPeriodMonth": "Ay",
+  "shpFieldLimitCount": "Dönem başına kaç kez",
+  "shpToArchive": "Arşive taşı",
+  "shpErrorPrice": "1 ile 100000 arası",
+  "shpErrorCount": "1 ile 99 arası",
+
+  "dscTitle": "Disiplin modu",
+  "dscStatus": "Durum",
+  "dscOn": "Açık",
+  "dscOff": "Kapalı",
+  "dscReasonLabel": "Neden",
+  "dscReasonDebt": "eksi bakiye",
+  "dscReasonManual": "elle açıldı",
+  "dscReasonAi": "bir aksamadan sonra Sistem kararı",
+  "dscExitLabel": "Kapanacak",
+  "dscExitBalancePositive": "bakiye artıya geçtiğinde",
+  "dscExitManual": "elle, bakiye eksi değilken",
+  "dscSinceLabel": "Başlangıç",
+  "dscOffText": "Bakiye ◆ eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.",
+  "dscBalance": "Bakiye",
+  "dscToday": "Bugünün kuralları",
+  "dscRulesNote": "Yük seviyenizi aşmaz. Yemek ve uyku kısılmaz: yatış ve kalkış her zamankinden geç olmaz.",
+  "dscCannotRefuse": "Mod görevleri iptal edilemez.",
+  "dscPreviewNote": "Disiplin modunda bir gün böyle görünecek.",
+  "dscBlockerTitle": "Uygulama engelleme",
+  "dscBlockerText": "Yatıştan sonra eğlence uygulamalarını engelleme daha sonra eklenecek.",
+  "dscBlockerSoon": "Sonra",
+  "dscEnable": "Modu aç",
+  "dscDisable": "Modu kapat",
+  "dscEnableConfirmMessage": "Kalkış 6:00, yatış 22:00, ek egzersiz. Mod görevleri iptal edilemez.",
+  "dscDisableLocked": "Bakiye eksiyken kapatılamaz.",
+  "dscChangedOnMessage": "Disiplin modu açıldı. Kalkış 6:00, yatış 22:00, ek egzersiz.",
+  "dscChangedOffMessage": "Disiplin modu kapatıldı.",
+  "dscQuestWake": "{time} kalkış",
+  "@dscQuestWake": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestBed": "{time} yatış",
+  "@dscQuestBed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestWorkout": "Ek antrenman: {minutes} dk",
+  "@dscQuestWorkout": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "dscQuestWalk": "Sakin yürüyüş: {minutes} dk",
+  "@dscQuestWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
+}

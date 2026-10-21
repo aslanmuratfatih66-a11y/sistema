@@ -23,6 +23,8 @@ class StatusPanel extends StatelessWidget {
     final oneDec = NumberFormat('0.0', l.localeName);
     final p = player;
     final pointsText = l.homePointsValue(nf.format(p.points));
+    final title = p.title?.of(l);
+    final energy = p.energyPercent;
 
     final points = Semantics(
       label: l.homePointsLabel,
@@ -61,11 +63,13 @@ class StatusPanel extends StatelessWidget {
                           text: upperFor(p.name.of(l), locale),
                           style: SysText.heading.copyWith(fontSize: 17, letterSpacing: 2),
                         ),
-                        const TextSpan(text: '   '),
-                        TextSpan(
-                          text: p.title.of(l),
-                          style: SysText.caption.copyWith(color: SysColors.accentLight),
-                        ),
+                        if (title != null && title.isNotEmpty) ...[
+                          const TextSpan(text: '   '),
+                          TextSpan(
+                            text: title,
+                            style: SysText.caption.copyWith(color: SysColors.accentLight),
+                          ),
+                        ],
                       ]),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -77,6 +81,9 @@ class StatusPanel extends StatelessWidget {
                       children: [
                         SysPill(label: l.homeRank(p.rank.letter), icon: SysGlyph.shield),
                         SysPill(label: l.homeStreakDays(p.streakDays), tone: PanelTone.gold, icon: SysGlyph.flame),
+                        if (p.paused) SysPill(label: l.qstPausedPill, tone: PanelTone.success, icon: SysGlyph.moon),
+                        if (p.discipline)
+                          SysPill(label: l.qstDisciplinePill, tone: PanelTone.danger, icon: SysGlyph.shield),
                       ],
                     ),
                   ],
@@ -116,8 +123,8 @@ class StatusPanel extends StatelessWidget {
                   label: l.homeEnergy,
                   icon: SysGlyph.bolt,
                   color: SysColors.energy,
-                  fraction: p.energyPercent / 100,
-                  value: l.homePercentValue(nf.format(p.energyPercent)),
+                  fraction: energy == null ? 0 : energy / 100,
+                  value: energy == null ? l.qstNoValue : l.homePercentValue(nf.format(energy)),
                 ),
               ),
               const SizedBox(width: 10),
@@ -127,7 +134,10 @@ class StatusPanel extends StatelessWidget {
                   icon: SysGlyph.water,
                   color: SysColors.water,
                   fraction: p.waterGoalMl <= 0 ? 0 : p.waterMl / p.waterGoalMl,
-                  value: l.homeLitersProgress(oneDec.format(p.waterMl / 1000), oneDec.format(p.waterGoalMl / 1000)),
+                  value: l.homeLitersProgress(
+                    oneDec.format(p.waterMl / 1000),
+                    p.waterGoalMl <= 0 ? l.qstNoValue : oneDec.format(p.waterGoalMl / 1000),
+                  ),
                 ),
               ),
               const SizedBox(width: 10),
@@ -137,7 +147,10 @@ class StatusPanel extends StatelessWidget {
                   icon: SysGlyph.flame,
                   color: SysColors.calories,
                   fraction: p.kcalGoal <= 0 ? 0 : p.kcalEaten / p.kcalGoal,
-                  value: l.homeKcalProgress(nf.format(p.kcalEaten), nf.format(p.kcalGoal)),
+                  value: l.homeKcalProgress(
+                    nf.format(p.kcalEaten),
+                    p.kcalGoal <= 0 ? l.qstNoValue : nf.format(p.kcalGoal),
+                  ),
                 ),
               ),
             ],

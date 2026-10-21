@@ -6,6 +6,9 @@ import 'package:go_router/go_router.dart';
 import 'package:sistema/app/routes.dart';
 import 'package:sistema/core/data/profile_repository.dart';
 import 'package:sistema/core/db/database.dart';
+import 'package:sistema/core/models/enums.dart';
+import 'package:sistema/domain/quests/local_quest_service.dart';
+import 'package:sistema/domain/quests/quest_api.dart';
 import 'package:sistema/features/plan/plan_screen.dart';
 import 'package:sistema/l10n/app_localizations.dart';
 import 'package:sistema/ui/ui.dart';
@@ -45,8 +48,13 @@ void main() {
         GoRoute(path: Routes.status, builder: (_, _) => const Text('status-page')),
       ],
     );
+    final quests = LocalQuestService(db);
+    addTearDown(quests.dispose);
     await tester.pumpWidget(ProviderScope(
-      overrides: [databaseProvider.overrideWithValue(db)],
+      overrides: [
+        databaseProvider.overrideWithValue(db),
+        questServiceProvider.overrideWithValue(quests),
+      ],
       child: MaterialApp.router(
         theme: buildSystemTheme(),
         routerConfig: router,
@@ -78,6 +86,10 @@ void main() {
     expect(rows.single.acceptedAt, isNotNull);
     expect(rows.single.source, 'local');
     expect(find.text('status-page'), findsOneWidget);
+    // Квесты плана переданы движку.
+    final planQuests = await (db.select(db.quests)..where((t) => t.source.equals(QuestSource.plan.name))).get();
+    expect(planQuests, isNotEmpty);
+    expect(planQuests.every((q) => q.planId == rows.single.id), isTrue);
 
     await tester.pumpWidget(const SizedBox());
     await tester.pump(Duration.zero);

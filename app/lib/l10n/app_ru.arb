@@ -550,6 +550,129 @@
   "hqNutritionDiaryTitle": "Дневник питания",
   "hqNutritionDiarySoon": "Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.",
   "hqFinanceFoodTitle": "Финансы на еду",
+  "ntfQuestTitle": "[ Квест ] {title}",
+  "@ntfQuestTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfPenaltyQuestTitle": "[ Штрафной квест ] {title}",
+  "@ntfPenaltyQuestTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfBossTitle": "[ Босс недели ] {title}",
+  "@ntfBossTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfQuestBody": "Срок — до {time}. Награда: +{diamonds} ◆",
+  "@ntfQuestBody": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfQuestBodyNoReward": "Срок — до {time}.",
+  "@ntfQuestBodyNoReward": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfPenaltyQuestBody": "Срок — до {time}. Отказ невозможен.",
+  "@ntfPenaltyQuestBody": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfReproachTitle": "[ Система ] Квест не выполнен",
+  "ntfReproachBody": "«{title}» просрочен. Система фиксирует бездействие. Выполни сейчас.",
+  "@ntfReproachBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "ntfActionDone": "Выполнено",
+  "ntfActionSnooze": "+10 мин",
+  "ntfChannelQuests": "Квесты",
+  "ntfChannelQuestsDesc": "Напоминания о квестах, упрёки и сообщения Системы",
+  "ntfChannelNag": "Надоедать",
+  "ntfChannelNagDesc": "Повтор каждую минуту, пока квест не выполнен",
+  "ntfFailedTitle": "[ Система ] Квест провален",
+  "ntfFailedBody": "«{title}»: −{diamonds} ◆",
+  "@ntfFailedBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfPenaltyTitle": "[ Штраф ] −{diamonds} ◆",
+  "@ntfPenaltyTitle": {
+    "placeholders": {
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfLevelUpTitle": "[ Система ] Уровень повышен",
+  "ntfLevelUpBody": "Уровень {level}. Свободных очков: {points}",
+  "@ntfLevelUpBody": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      },
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "ntfTestTitle": "[ Система ] Проверка связи",
+  "ntfTestBody": "Уведомления работают. Игрок, жди приказов.",
+  "ntfTestSent": "Уведомление отправлено",
+  "ntfSectionGeneral": "Основное",
+  "ntfEnabled": "Напоминания",
+  "ntfEnabledHint": "Локальные уведомления о квестах",
+  "ntfNag": "Надоедать каждую минуту",
+  "ntfNagHint": "Повтор, пока не нажмёте «Выполнено»",
+  "ntfReproach": "Упрёки",
+  "ntfReproachHint": "Через 15 мин после срока, если квест не выполнен",
+  "ntfVoice": "Голос персонажа как звук",
+  "ntfVoiceHint": "Будет на этапе 6 — пока стандартный звук",
+  "ntfSectionQuiet": "Тихие часы",
+  "ntfQuietEnabled": "Не беспокоить",
+  "ntfQuietHint": "В это время ничего не звенит, упрёк придёт после окончания",
+  "ntfQuietFrom": "С",
+  "ntfQuietTo": "До",
+  "ntfSectionPermission": "Разрешение",
+  "ntfPermGranted": "Уведомления разрешены",
+  "ntfPermDenied": "Уведомления запрещены — квесты не смогут напомнить о себе",
+  "ntfPermUnknown": "Статус разрешения неизвестен",
+  "ntfPermExactOff": "Точные будильники выключены — напоминания могут опаздывать",
+  "ntfPermRequest": "Запросить разрешение",
+  "ntfTest": "Проверить уведомление",
+  "ntfUnavailable": "Уведомления недоступны на этой платформе",
   "planNoticeLabel": "Уведомление",
   "planTitle": "План составлен",
   "planDraftNote": "Черновой план — Система уточнит его после подключения ИИ.",
@@ -1220,6 +1343,437 @@
   "qbPermAlarms": "Будильники",
   "qbPermAlarmsWhy": "Точные будильники для подъёма и важных квестов.",
   "qbPermAlarmsLater": "Настроим на этапе будильника.",
+  "qeQuestPenaltyCleaning": "Штраф: уборка {minutes} мин",
+  "@qeQuestPenaltyCleaning": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyReading": "Штраф: чтение {minutes} мин",
+  "@qeQuestPenaltyReading": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyPlank": "Штраф: планка {seconds} с",
+  "@qeQuestPenaltyPlank": {
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyWalk": "Штраф: прогулка {minutes} мин",
+  "@qeQuestPenaltyWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyNoGames": "Штраф: вечер без игр и соцсетей",
+  "qeQuestBoostWalk": "Усиление: прогулка {minutes} мин",
+  "@qeQuestBoostWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBoostWater": "Усиление: ещё {ml} мл воды",
+  "@qeQuestBoostWater": {
+    "placeholders": {
+      "ml": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBoostBedOnTime": "Усиление: отбой не позже {time}",
+  "@qeQuestBoostBedOnTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBoostPlanTomorrow": "Усиление: распиши завтрашний день",
+  "qeQuestBossAll": "Закрой {count} квестов за неделю",
+  "@qeQuestBossAll": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossStrength": "Закрой {count} квестов силы",
+  "@qeQuestBossStrength": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossEndurance": "Закрой {count} квестов выносливости",
+  "@qeQuestBossEndurance": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossDiscipline": "Закрой {count} квестов дисциплины",
+  "@qeQuestBossDiscipline": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossIntellect": "Закрой {count} квестов интеллекта",
+  "@qeQuestBossIntellect": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossHealth": "Закрой {count} квестов здоровья",
+  "@qeQuestBossHealth": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossLooks": "Закрой {count} квестов внешности",
+  "@qeQuestBossLooks": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectVigor": "Бодрость +{pct}% опыта",
+  "@qeEffectVigor": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectDehydration": "Обезвоживание −{pct}% выносливости",
+  "@qeEffectDehydration": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectBossAura": "Аура победителя +{pct}% ◆",
+  "@qeEffectBossAura": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeTitleStreak7": "Несгибаемый",
+  "qeTitleStreak30": "Железная воля",
+  "qeTitleBossSlayer": "Победитель босса",
+  "qeTitleBossHunter": "Охотник на боссов",
+  "qeTitleLevel10": "Пробуждённый",
+  "qeTitleLevel25": "Закалённый",
+  "qeTitleLevel50": "Легенда Системы",
+  "qeReasonFailedQuests": "Провалы за день. Назначен штрафной квест",
+  "qeReasonMarkWalked": "Отметка: гулял с друзьями. За честность штраф мягче",
+  "qeReasonMarkAlcohol": "Отметка: алкоголь. Завтра — усиленный план",
+  "qeReasonMarkRelapse": "Отметка: срыв. Завтра — усиленный план",
+  "qeReasonBossFailed": "Босс недели не побеждён",
+  "qeReasonReproach": "Квест не выполнен. Система недовольна",
+  "qeReasonOther": "Штраф Системы",
+  "qstViewToday": "Сегодня",
+  "qstViewWeek": "Неделя",
+  "qstViewHistory": "История",
+  "qstFilterTitle": "Фильтр",
+  "qstFilterActive": "Фильтр: {count}",
+  "@qstFilterActive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qstFilterReset": "Сбросить",
+  "qstFilterKind": "Вид",
+  "qstFilterStat": "Характеристика",
+  "qstKindDaily": "Ежедневные",
+  "qstKindSchedule": "Из расписания",
+  "qstKindGoal": "По цели",
+  "qstKindPenalty": "Штрафные",
+  "qstKindBoss": "Босс",
+  "qstStatusPending": "Активен",
+  "qstStatusDone": "Выполнен",
+  "qstStatusFailed": "Провален",
+  "qstStatusRefused": "Отказ",
+  "qstStatusExcused": "Пауза: без штрафа",
+  "qstEmptyDay": "На сегодня квестов нет",
+  "qstEmptyWeek": "На эту неделю квестов нет",
+  "qstEmptyFiltered": "Нет квестов под фильтр",
+  "qstEmptyHistory": "Журнал пуст",
+  "qstLoadError": "Система не отвечает. Повторите позже.",
+  "qstActionRejected": "Система отклонила действие.",
+  "qstNoValue": "—",
+  "qstAllDay": "В течение дня",
+  "qstOpenQuest": "Открыть квест",
+  "qstSubtasks": "Подзадачи",
+  "qstProgress": "Прогресс",
+  "qstProgressAddLabel": "Добавить прогресс: {step}",
+  "@qstProgressAddLabel": {
+    "placeholders": {
+      "step": {
+        "type": "String"
+      }
+    }
+  },
+  "qstRefusePenalty": "Отказ: −{points} ◆",
+  "@qstRefusePenalty": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstNoRefuse": "Штрафной квест: отказ невозможен",
+  "qstArchive": "В архив",
+  "qstArchiveConfirm": "Квест уйдёт в архив и больше не будет появляться.",
+  "qstNewQuest": "Новый квест",
+  "qstEditQuest": "Изменить квест",
+  "qstBossReward": "Награда: +{points} ◆, +{xp} XP",
+  "@qstBossReward": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      },
+      "xp": {
+        "type": "String"
+      }
+    }
+  },
+  "qstDiamondsDelta": "{value} ◆",
+  "@qstDiamondsDelta": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "qstXpDelta": "{value} XP",
+  "@qstXpDelta": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "qstHistCompleted": "Выполнено",
+  "qstHistFailed": "Провал",
+  "qstHistRefused": "Отказ",
+  "qstHistPenalty": "Штраф",
+  "qstHistBonus": "Бонус",
+  "qstHistPurchase": "Покупка",
+  "qstHistMark": "Отметка дня",
+  "qstHistPauseStarted": "Пауза",
+  "qstHistPauseEnded": "Пауза снята",
+  "qstHistStatPoint": "Очко характеристики",
+  "qstHistBossCompleted": "Босс повержен",
+  "qstHistBossFailed": "Босс не повержен",
+  "qstHistDisciplineOn": "Дисциплина включена",
+  "qstHistDisciplineOff": "Дисциплина снята",
+  "qstHistAdjustment": "Корректировка",
+  "qstMarksTitle": "Честные отметки",
+  "qstMarksHint": "Честная отметка мягче скрытого срыва. Завтра — усиленный план.",
+  "qstMarkWalked": "Гулял с друзьями",
+  "qstMarkAlcohol": "Алкоголь",
+  "qstMarkRelapse": "Сорвался",
+  "qstMarkConfirmTitle": "Отметить: {mark}?",
+  "@qstMarkConfirmTitle": {
+    "placeholders": {
+      "mark": {
+        "type": "String"
+      }
+    }
+  },
+  "qstMarkConfirmMessage": "Честная отметка мягче скрытого срыва: небольшой штраф сейчас, завтра — усиленный план.",
+  "qstMarkConfirm": "Отметить",
+  "qstPauseTitle": "Пауза",
+  "qstPauseHint": "Болезнь, каникулы, отпуск: штрафы не начисляются, серия не сгорает.",
+  "qstPauseStart": "Поставить паузу",
+  "qstPauseEnd": "Снять паузу",
+  "qstPauseConfirm": "Начать паузу",
+  "qstPauseReason": "Причина",
+  "qstPauseReasonIllness": "Болезнь",
+  "qstPauseReasonVacation": "Отпуск",
+  "qstPauseReasonHolidays": "Каникулы",
+  "qstPauseReasonOther": "Другое",
+  "qstPauseActive": "Пауза: {reason}",
+  "@qstPauseActive": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "qstPauseUntil": "до {date}",
+  "@qstPauseUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "qstPauseUntilRemoved": "До снятия",
+  "qstPauseUntilDate": "До даты",
+  "qstPauseEndDate": "Последний день паузы",
+  "qstPausedPill": "Пауза",
+  "qstDisciplinePill": "Дисциплина",
+  "qstPlayerNoName": "Игрок",
+  "qstStatPointsTitle": "Очки характеристик",
+  "qstStatPointsLeft": "Свободно: {count}",
+  "@qstStatPointsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qstStatPointAdd": "Добавить очко: {stat}",
+  "@qstStatPointAdd": {
+    "placeholders": {
+      "stat": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowFailedMessage": "«{quest}». Штраф: −{points} ◆.",
+  "@qstWindowFailedMessage": {
+    "placeholders": {
+      "quest": {
+        "type": "String"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowFailedMany": "Провалено квестов: {count}. Штраф: −{points} ◆.",
+  "@qstWindowFailedMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowRefusedTitle": "Отказ от квеста",
+  "qstWindowPenaltyTitle": "Штраф",
+  "qstWindowPenaltyMessage": "{reason}. Штраф: −{points} ◆.",
+  "@qstWindowPenaltyMessage": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "qstWindowPenaltyQuest": "Назначен штрафной квест: «{quest}».",
+  "@qstWindowPenaltyQuest": {
+    "placeholders": {
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "qstLevelUpTitle": "Уровень повышен",
+  "qstLevelUpLevel": "LV {level}",
+  "@qstLevelUpLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "qstLevelUpRank": "Новый ранг: {rank}",
+  "@qstLevelUpRank": {
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "qstLevelUpPoints": "Свободные очки характеристик: {count}",
+  "@qstLevelUpPoints": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "qstTitleGot": "Титул: «{title}»",
+  "@qstTitleGot": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "qstBossWonTitle": "Босс повержен",
+  "qstBossLostTitle": "Босс не повержен",
+  "qstBossLostMessage": "Неделя закрыта без победы. Новый босс — с понедельника.",
+  "qstDisciplineOnTitle": "Режим дисциплины включён",
+  "qstDisciplineOnMessage": "Подъём 6:00, отбой 22:00, дополнительная нагрузка в пределах плана. Режим снимется, когда баланс ◆ станет положительным.",
+  "qstDisciplineOffTitle": "Режим дисциплины снят",
+  "qstDisciplineOffMessage": "Баланс восстановлен. Обычный режим.",
+  "qstDisciplineMore": "Подробнее",
+  "qstFormTitle": "Название",
+  "qstFormTitleHint": "Например: растяжка 10 минут",
+  "qstFormStat": "Характеристика",
+  "qstFormTimed": "Ко времени",
+  "qstFormTimedHint": "Иначе — в течение дня",
+  "qstFormTime": "Время",
+  "qstFormWindow": "Окно выполнения",
+  "qstMinutesUnit": "мин",
+  "qstFormWeekdays": "Дни недели",
+  "qstFormWeekdaysHint": "Не выбраны — каждый день",
+  "qstFormWeekParity": "Чередование недель",
+  "qstWeekEvery": "Каждую",
+  "qstWeek1": "Неделя 1",
+  "qstWeek2": "Неделя 2",
+  "qstFormSubtasks": "Подзадачи",
+  "qstFormSubtaskHint": "Подзадача {n}",
+  "@qstFormSubtaskHint": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "qstFormAddSubtask": "Добавить подзадачу",
+  "qstFormRemoveSubtask": "Убрать подзадачу",
+  "qstFormDefaultReward": "Награда и штраф — по правилам Системы",
+  "qstFormDefaultRewardHint": "Система рассчитает ◆ и опыт по виду квеста",
+  "qstFormRewardDiamonds": "Награда, ◆",
+  "qstFormRewardXp": "Опыт, XP",
+  "qstFormPenalty": "Штраф за провал, ◆",
+  "qstFormNag": "Надоедать",
+  "qstFormNagHint": "Напоминать каждую минуту до выполнения",
   "schTitle": "Расписание",
   "schInstitution": "Учебное заведение",
   "schInstSchool": "Школа",
@@ -1509,5 +2063,175 @@
   "setReminders": "Напоминания",
   "setRemindersHint": "Тихие часы, повтор, упрёки",
   "setDiscipline": "Режим дисциплины",
-  "setDisciplineHint": "Подъём 6:00, отбой 22:00, доп. нагрузка"
+  "setDisciplineHint": "Подъём 6:00, отбой 22:00, доп. нагрузка",
+  "shpNoticeLabel": "Уведомление",
+  "shpWarningLabel": "Предупреждение",
+  "shpTitle": "Магазин наград",
+  "shpBalance": "Баланс",
+  "shpClosedMessage": "Магазин закрыт: баланс отрицательный",
+  "shpClosedHint": "Выполняйте квесты, чтобы вернуть баланс в плюс. Режим дисциплины уже назначен.",
+  "shpRewards": "Награды",
+  "shpAdd": "Новая награда",
+  "shpEmptyTitle": "Наград пока нет",
+  "shpEmptyText": "Награды придумываете вы и покупаете их за ◆. Нажмите на пример, чтобы заполнить форму:",
+  "shpExampleChocolate": "Шоколадка",
+  "shpExampleFastFood": "Фастфуд",
+  "shpExampleGames": "Час игр",
+  "shpExampleFreeEvening": "Вечер без квестов",
+  "shpBuy": "Купить",
+  "shpLimitNone": "Без лимита",
+  "shpLimitDay": "{count, plural, one{{count} раз в день} few{{count} раза в день} many{{count} раз в день} other{{count} раза в день}}",
+  "@shpLimitDay": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitWeek": "{count, plural, one{{count} раз в неделю} few{{count} раза в неделю} many{{count} раз в неделю} other{{count} раза в неделю}}",
+  "@shpLimitWeek": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitMonth": "{count, plural, one{{count} раз в месяц} few{{count} раза в месяц} many{{count} раз в месяц} other{{count} раза в месяц}}",
+  "@shpLimitMonth": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitLeft": "осталось {count}",
+  "@shpLimitLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitReachedUntil": "лимит исчерпан до {date}",
+  "@shpLimitReachedUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "shpNotEnough": "не хватает {count} ◆",
+  "@shpNotEnough": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpConfirmTitle": "Подтвердите покупку",
+  "shpConfirmMessage": "«{title}» за {price} ◆. Баланс после покупки: {after} ◆.",
+  "@shpConfirmMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "price": {
+        "type": "int"
+      },
+      "after": {
+        "type": "int"
+      }
+    }
+  },
+  "shpBoughtMessage": "Награда «{title}» получена. Система зафиксировала покупку.",
+  "@shpBoughtMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "shpFailedMessage": "Покупка отклонена: недостаточно ◆ или магазин закрыт.",
+  "shpLimitReachedMessage": "Лимит этой награды на период исчерпан.",
+  "shpHistory": "История покупок",
+  "shpHistoryEmpty": "Покупок пока нет",
+  "shpArchive": "Архив",
+  "shpRestore": "Вернуть",
+  "shpReorder": "Порядок",
+  "shpMoveUp": "Выше",
+  "shpMoveDown": "Ниже",
+  "shpEditorNew": "Новая награда",
+  "shpEditorEdit": "Награда",
+  "shpFieldTitle": "Название",
+  "shpFieldTitleHint": "Например: час игр",
+  "shpFieldPrice": "Цена",
+  "shpFieldPriceHint": "Сколько ◆ стоит награда",
+  "shpFieldLimit": "Лимит частоты",
+  "shpPeriodNone": "Нет",
+  "shpPeriodDay": "День",
+  "shpPeriodWeek": "Неделя",
+  "shpPeriodMonth": "Месяц",
+  "shpFieldLimitCount": "Сколько раз за период",
+  "shpToArchive": "В архив",
+  "shpErrorPrice": "От 1 до 100000",
+  "shpErrorCount": "От 1 до 99",
+  "dscTitle": "Режим дисциплины",
+  "dscStatus": "Статус",
+  "dscOn": "Включён",
+  "dscOff": "Выключен",
+  "dscReasonLabel": "Причина",
+  "dscReasonDebt": "отрицательный баланс",
+  "dscReasonManual": "включён вручную",
+  "dscReasonAi": "решение Системы после срыва",
+  "dscExitLabel": "Выключится",
+  "dscExitBalancePositive": "когда баланс станет положительным",
+  "dscExitManual": "вручную, когда баланс не отрицательный",
+  "dscSinceLabel": "С",
+  "dscOffText": "Режим включается сам, если баланс ◆ уходит в минус. Можно включить и вручную.",
+  "dscBalance": "Баланс",
+  "dscToday": "Правила на сегодня",
+  "dscRulesNote": "Нагрузка — в пределах вашего уровня. Еда и сон не урезаются: отбой и подъём не сдвигаются позже обычных.",
+  "dscCannotRefuse": "Квесты режима нельзя отменить.",
+  "dscPreviewNote": "Так будет выглядеть день в режиме дисциплины.",
+  "dscBlockerTitle": "Блокировка приложений",
+  "dscBlockerText": "Блокировка развлекательных приложений после отбоя появится позже.",
+  "dscBlockerSoon": "Позже",
+  "dscEnable": "Включить режим",
+  "dscDisable": "Выключить режим",
+  "dscEnableConfirmMessage": "Подъём в 6:00, отбой в 22:00, доп. нагрузка. Квесты режима нельзя отменить.",
+  "dscDisableLocked": "Выключить нельзя, пока баланс отрицательный.",
+  "dscChangedOnMessage": "Режим дисциплины включён. Подъём в 6:00, отбой в 22:00, доп. нагрузка.",
+  "dscChangedOffMessage": "Режим дисциплины выключен.",
+  "dscQuestWake": "Подъём в {time}",
+  "@dscQuestWake": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestBed": "Отбой в {time}",
+  "@dscQuestBed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestWorkout": "Доп. тренировка: {minutes} мин",
+  "@dscQuestWorkout": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "dscQuestWalk": "Спокойная прогулка: {minutes} мин",
+  "@dscQuestWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
 }

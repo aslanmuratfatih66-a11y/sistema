@@ -1580,6 +1580,270 @@ abstract class AppLocalizations {
   /// **'Финансы на еду'**
   String get hqFinanceFoodTitle;
 
+  /// No description provided for @ntfQuestTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Квест ] {title}'**
+  String ntfQuestTitle(String title);
+
+  /// No description provided for @ntfPenaltyQuestTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Штрафной квест ] {title}'**
+  String ntfPenaltyQuestTitle(String title);
+
+  /// No description provided for @ntfBossTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Босс недели ] {title}'**
+  String ntfBossTitle(String title);
+
+  /// No description provided for @ntfQuestBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срок — до {time}. Награда: +{diamonds} ◆'**
+  String ntfQuestBody(String time, int diamonds);
+
+  /// No description provided for @ntfQuestBodyNoReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срок — до {time}.'**
+  String ntfQuestBodyNoReward(String time);
+
+  /// No description provided for @ntfPenaltyQuestBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срок — до {time}. Отказ невозможен.'**
+  String ntfPenaltyQuestBody(String time);
+
+  /// No description provided for @ntfReproachTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Система ] Квест не выполнен'**
+  String get ntfReproachTitle;
+
+  /// No description provided for @ntfReproachBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{title}» просрочен. Система фиксирует бездействие. Выполни сейчас.'**
+  String ntfReproachBody(String title);
+
+  /// No description provided for @ntfActionDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполнено'**
+  String get ntfActionDone;
+
+  /// No description provided for @ntfActionSnooze.
+  ///
+  /// In ru, this message translates to:
+  /// **'+10 мин'**
+  String get ntfActionSnooze;
+
+  /// No description provided for @ntfChannelQuests.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты'**
+  String get ntfChannelQuests;
+
+  /// No description provided for @ntfChannelQuestsDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания о квестах, упрёки и сообщения Системы'**
+  String get ntfChannelQuestsDesc;
+
+  /// No description provided for @ntfChannelNag.
+  ///
+  /// In ru, this message translates to:
+  /// **'Надоедать'**
+  String get ntfChannelNag;
+
+  /// No description provided for @ntfChannelNagDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повтор каждую минуту, пока квест не выполнен'**
+  String get ntfChannelNagDesc;
+
+  /// No description provided for @ntfFailedTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Система ] Квест провален'**
+  String get ntfFailedTitle;
+
+  /// No description provided for @ntfFailedBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{title}»: −{diamonds} ◆'**
+  String ntfFailedBody(String title, int diamonds);
+
+  /// No description provided for @ntfPenaltyTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Штраф ] −{diamonds} ◆'**
+  String ntfPenaltyTitle(int diamonds);
+
+  /// No description provided for @ntfLevelUpTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Система ] Уровень повышен'**
+  String get ntfLevelUpTitle;
+
+  /// No description provided for @ntfLevelUpBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень {level}. Свободных очков: {points}'**
+  String ntfLevelUpBody(int level, int points);
+
+  /// No description provided for @ntfTestTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Система ] Проверка связи'**
+  String get ntfTestTitle;
+
+  /// No description provided for @ntfTestBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления работают. Игрок, жди приказов.'**
+  String get ntfTestBody;
+
+  /// No description provided for @ntfTestSent.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление отправлено'**
+  String get ntfTestSent;
+
+  /// No description provided for @ntfSectionGeneral.
+  ///
+  /// In ru, this message translates to:
+  /// **'Основное'**
+  String get ntfSectionGeneral;
+
+  /// No description provided for @ntfEnabled.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания'**
+  String get ntfEnabled;
+
+  /// No description provided for @ntfEnabledHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Локальные уведомления о квестах'**
+  String get ntfEnabledHint;
+
+  /// No description provided for @ntfNag.
+  ///
+  /// In ru, this message translates to:
+  /// **'Надоедать каждую минуту'**
+  String get ntfNag;
+
+  /// No description provided for @ntfNagHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повтор, пока не нажмёте «Выполнено»'**
+  String get ntfNagHint;
+
+  /// No description provided for @ntfReproach.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упрёки'**
+  String get ntfReproach;
+
+  /// No description provided for @ntfReproachHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Через 15 мин после срока, если квест не выполнен'**
+  String get ntfReproachHint;
+
+  /// No description provided for @ntfVoice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос персонажа как звук'**
+  String get ntfVoice;
+
+  /// No description provided for @ntfVoiceHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Будет на этапе 6 — пока стандартный звук'**
+  String get ntfVoiceHint;
+
+  /// No description provided for @ntfSectionQuiet.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тихие часы'**
+  String get ntfSectionQuiet;
+
+  /// No description provided for @ntfQuietEnabled.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не беспокоить'**
+  String get ntfQuietEnabled;
+
+  /// No description provided for @ntfQuietHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'В это время ничего не звенит, упрёк придёт после окончания'**
+  String get ntfQuietHint;
+
+  /// No description provided for @ntfQuietFrom.
+  ///
+  /// In ru, this message translates to:
+  /// **'С'**
+  String get ntfQuietFrom;
+
+  /// No description provided for @ntfQuietTo.
+  ///
+  /// In ru, this message translates to:
+  /// **'До'**
+  String get ntfQuietTo;
+
+  /// No description provided for @ntfSectionPermission.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешение'**
+  String get ntfSectionPermission;
+
+  /// No description provided for @ntfPermGranted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления разрешены'**
+  String get ntfPermGranted;
+
+  /// No description provided for @ntfPermDenied.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления запрещены — квесты не смогут напомнить о себе'**
+  String get ntfPermDenied;
+
+  /// No description provided for @ntfPermUnknown.
+  ///
+  /// In ru, this message translates to:
+  /// **'Статус разрешения неизвестен'**
+  String get ntfPermUnknown;
+
+  /// No description provided for @ntfPermExactOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Точные будильники выключены — напоминания могут опаздывать'**
+  String get ntfPermExactOff;
+
+  /// No description provided for @ntfPermRequest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Запросить разрешение'**
+  String get ntfPermRequest;
+
+  /// No description provided for @ntfTest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проверить уведомление'**
+  String get ntfTest;
+
+  /// No description provided for @ntfUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления недоступны на этой платформе'**
+  String get ntfUnavailable;
+
   /// No description provided for @planNoticeLabel.
   ///
   /// In ru, this message translates to:
@@ -3992,6 +4256,966 @@ abstract class AppLocalizations {
   /// **'Настроим на этапе будильника.'**
   String get qbPermAlarmsLater;
 
+  /// No description provided for @qeQuestPenaltyCleaning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф: уборка {minutes} мин'**
+  String qeQuestPenaltyCleaning(String minutes);
+
+  /// No description provided for @qeQuestPenaltyReading.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф: чтение {minutes} мин'**
+  String qeQuestPenaltyReading(String minutes);
+
+  /// No description provided for @qeQuestPenaltyPlank.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф: планка {seconds} с'**
+  String qeQuestPenaltyPlank(String seconds);
+
+  /// No description provided for @qeQuestPenaltyWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф: прогулка {minutes} мин'**
+  String qeQuestPenaltyWalk(String minutes);
+
+  /// No description provided for @qeQuestPenaltyNoGames.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф: вечер без игр и соцсетей'**
+  String get qeQuestPenaltyNoGames;
+
+  /// No description provided for @qeQuestBoostWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Усиление: прогулка {minutes} мин'**
+  String qeQuestBoostWalk(String minutes);
+
+  /// No description provided for @qeQuestBoostWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Усиление: ещё {ml} мл воды'**
+  String qeQuestBoostWater(String ml);
+
+  /// No description provided for @qeQuestBoostBedOnTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Усиление: отбой не позже {time}'**
+  String qeQuestBoostBedOnTime(String time);
+
+  /// No description provided for @qeQuestBoostPlanTomorrow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Усиление: распиши завтрашний день'**
+  String get qeQuestBoostPlanTomorrow;
+
+  /// No description provided for @qeQuestBossAll.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов за неделю'**
+  String qeQuestBossAll(String count);
+
+  /// No description provided for @qeQuestBossStrength.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов силы'**
+  String qeQuestBossStrength(String count);
+
+  /// No description provided for @qeQuestBossEndurance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов выносливости'**
+  String qeQuestBossEndurance(String count);
+
+  /// No description provided for @qeQuestBossDiscipline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов дисциплины'**
+  String qeQuestBossDiscipline(String count);
+
+  /// No description provided for @qeQuestBossIntellect.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов интеллекта'**
+  String qeQuestBossIntellect(String count);
+
+  /// No description provided for @qeQuestBossHealth.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов здоровья'**
+  String qeQuestBossHealth(String count);
+
+  /// No description provided for @qeQuestBossLooks.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрой {count} квестов внешности'**
+  String qeQuestBossLooks(String count);
+
+  /// No description provided for @qeEffectVigor.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бодрость +{pct}% опыта'**
+  String qeEffectVigor(String pct);
+
+  /// No description provided for @qeEffectDehydration.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обезвоживание −{pct}% выносливости'**
+  String qeEffectDehydration(String pct);
+
+  /// No description provided for @qeEffectBossAura.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аура победителя +{pct}% ◆'**
+  String qeEffectBossAura(String pct);
+
+  /// No description provided for @qeTitleStreak7.
+  ///
+  /// In ru, this message translates to:
+  /// **'Несгибаемый'**
+  String get qeTitleStreak7;
+
+  /// No description provided for @qeTitleStreak30.
+  ///
+  /// In ru, this message translates to:
+  /// **'Железная воля'**
+  String get qeTitleStreak30;
+
+  /// No description provided for @qeTitleBossSlayer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Победитель босса'**
+  String get qeTitleBossSlayer;
+
+  /// No description provided for @qeTitleBossHunter.
+  ///
+  /// In ru, this message translates to:
+  /// **'Охотник на боссов'**
+  String get qeTitleBossHunter;
+
+  /// No description provided for @qeTitleLevel10.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пробуждённый'**
+  String get qeTitleLevel10;
+
+  /// No description provided for @qeTitleLevel25.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закалённый'**
+  String get qeTitleLevel25;
+
+  /// No description provided for @qeTitleLevel50.
+  ///
+  /// In ru, this message translates to:
+  /// **'Легенда Системы'**
+  String get qeTitleLevel50;
+
+  /// No description provided for @qeReasonFailedQuests.
+  ///
+  /// In ru, this message translates to:
+  /// **'Провалы за день. Назначен штрафной квест'**
+  String get qeReasonFailedQuests;
+
+  /// No description provided for @qeReasonMarkWalked.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отметка: гулял с друзьями. За честность штраф мягче'**
+  String get qeReasonMarkWalked;
+
+  /// No description provided for @qeReasonMarkAlcohol.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отметка: алкоголь. Завтра — усиленный план'**
+  String get qeReasonMarkAlcohol;
+
+  /// No description provided for @qeReasonMarkRelapse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отметка: срыв. Завтра — усиленный план'**
+  String get qeReasonMarkRelapse;
+
+  /// No description provided for @qeReasonBossFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс недели не побеждён'**
+  String get qeReasonBossFailed;
+
+  /// No description provided for @qeReasonReproach.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квест не выполнен. Система недовольна'**
+  String get qeReasonReproach;
+
+  /// No description provided for @qeReasonOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф Системы'**
+  String get qeReasonOther;
+
+  /// No description provided for @qstViewToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня'**
+  String get qstViewToday;
+
+  /// No description provided for @qstViewWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя'**
+  String get qstViewWeek;
+
+  /// No description provided for @qstViewHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'История'**
+  String get qstViewHistory;
+
+  /// No description provided for @qstFilterTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фильтр'**
+  String get qstFilterTitle;
+
+  /// No description provided for @qstFilterActive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фильтр: {count}'**
+  String qstFilterActive(int count);
+
+  /// No description provided for @qstFilterReset.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сбросить'**
+  String get qstFilterReset;
+
+  /// No description provided for @qstFilterKind.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вид'**
+  String get qstFilterKind;
+
+  /// No description provided for @qstFilterStat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Характеристика'**
+  String get qstFilterStat;
+
+  /// No description provided for @qstKindDaily.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ежедневные'**
+  String get qstKindDaily;
+
+  /// No description provided for @qstKindSchedule.
+  ///
+  /// In ru, this message translates to:
+  /// **'Из расписания'**
+  String get qstKindSchedule;
+
+  /// No description provided for @qstKindGoal.
+  ///
+  /// In ru, this message translates to:
+  /// **'По цели'**
+  String get qstKindGoal;
+
+  /// No description provided for @qstKindPenalty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штрафные'**
+  String get qstKindPenalty;
+
+  /// No description provided for @qstKindBoss.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс'**
+  String get qstKindBoss;
+
+  /// No description provided for @qstStatusPending.
+  ///
+  /// In ru, this message translates to:
+  /// **'Активен'**
+  String get qstStatusPending;
+
+  /// No description provided for @qstStatusDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполнен'**
+  String get qstStatusDone;
+
+  /// No description provided for @qstStatusFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Провален'**
+  String get qstStatusFailed;
+
+  /// No description provided for @qstStatusRefused.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отказ'**
+  String get qstStatusRefused;
+
+  /// No description provided for @qstStatusExcused.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза: без штрафа'**
+  String get qstStatusExcused;
+
+  /// No description provided for @qstEmptyDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'На сегодня квестов нет'**
+  String get qstEmptyDay;
+
+  /// No description provided for @qstEmptyWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'На эту неделю квестов нет'**
+  String get qstEmptyWeek;
+
+  /// No description provided for @qstEmptyFiltered.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет квестов под фильтр'**
+  String get qstEmptyFiltered;
+
+  /// No description provided for @qstEmptyHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'Журнал пуст'**
+  String get qstEmptyHistory;
+
+  /// No description provided for @qstLoadError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система не отвечает. Повторите позже.'**
+  String get qstLoadError;
+
+  /// No description provided for @qstActionRejected.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система отклонила действие.'**
+  String get qstActionRejected;
+
+  /// No description provided for @qstNoValue.
+  ///
+  /// In ru, this message translates to:
+  /// **'—'**
+  String get qstNoValue;
+
+  /// No description provided for @qstAllDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'В течение дня'**
+  String get qstAllDay;
+
+  /// No description provided for @qstOpenQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Открыть квест'**
+  String get qstOpenQuest;
+
+  /// No description provided for @qstSubtasks.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подзадачи'**
+  String get qstSubtasks;
+
+  /// No description provided for @qstProgress.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогресс'**
+  String get qstProgress;
+
+  /// No description provided for @qstProgressAddLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить прогресс: {step}'**
+  String qstProgressAddLabel(String step);
+
+  /// No description provided for @qstRefusePenalty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отказ: −{points} ◆'**
+  String qstRefusePenalty(String points);
+
+  /// No description provided for @qstNoRefuse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штрафной квест: отказ невозможен'**
+  String get qstNoRefuse;
+
+  /// No description provided for @qstArchive.
+  ///
+  /// In ru, this message translates to:
+  /// **'В архив'**
+  String get qstArchive;
+
+  /// No description provided for @qstArchiveConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квест уйдёт в архив и больше не будет появляться.'**
+  String get qstArchiveConfirm;
+
+  /// No description provided for @qstNewQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый квест'**
+  String get qstNewQuest;
+
+  /// No description provided for @qstEditQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменить квест'**
+  String get qstEditQuest;
+
+  /// No description provided for @qstBossReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда: +{points} ◆, +{xp} XP'**
+  String qstBossReward(String points, String xp);
+
+  /// No description provided for @qstDiamondsDelta.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} ◆'**
+  String qstDiamondsDelta(String value);
+
+  /// No description provided for @qstXpDelta.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} XP'**
+  String qstXpDelta(String value);
+
+  /// No description provided for @qstHistCompleted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполнено'**
+  String get qstHistCompleted;
+
+  /// No description provided for @qstHistFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Провал'**
+  String get qstHistFailed;
+
+  /// No description provided for @qstHistRefused.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отказ'**
+  String get qstHistRefused;
+
+  /// No description provided for @qstHistPenalty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф'**
+  String get qstHistPenalty;
+
+  /// No description provided for @qstHistBonus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бонус'**
+  String get qstHistBonus;
+
+  /// No description provided for @qstHistPurchase.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупка'**
+  String get qstHistPurchase;
+
+  /// No description provided for @qstHistMark.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отметка дня'**
+  String get qstHistMark;
+
+  /// No description provided for @qstHistPauseStarted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get qstHistPauseStarted;
+
+  /// No description provided for @qstHistPauseEnded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза снята'**
+  String get qstHistPauseEnded;
+
+  /// No description provided for @qstHistStatPoint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Очко характеристики'**
+  String get qstHistStatPoint;
+
+  /// No description provided for @qstHistBossCompleted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс повержен'**
+  String get qstHistBossCompleted;
+
+  /// No description provided for @qstHistBossFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс не повержен'**
+  String get qstHistBossFailed;
+
+  /// No description provided for @qstHistDisciplineOn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дисциплина включена'**
+  String get qstHistDisciplineOn;
+
+  /// No description provided for @qstHistDisciplineOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дисциплина снята'**
+  String get qstHistDisciplineOff;
+
+  /// No description provided for @qstHistAdjustment.
+  ///
+  /// In ru, this message translates to:
+  /// **'Корректировка'**
+  String get qstHistAdjustment;
+
+  /// No description provided for @qstMarksTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Честные отметки'**
+  String get qstMarksTitle;
+
+  /// No description provided for @qstMarksHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Честная отметка мягче скрытого срыва. Завтра — усиленный план.'**
+  String get qstMarksHint;
+
+  /// No description provided for @qstMarkWalked.
+  ///
+  /// In ru, this message translates to:
+  /// **'Гулял с друзьями'**
+  String get qstMarkWalked;
+
+  /// No description provided for @qstMarkAlcohol.
+  ///
+  /// In ru, this message translates to:
+  /// **'Алкоголь'**
+  String get qstMarkAlcohol;
+
+  /// No description provided for @qstMarkRelapse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сорвался'**
+  String get qstMarkRelapse;
+
+  /// No description provided for @qstMarkConfirmTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отметить: {mark}?'**
+  String qstMarkConfirmTitle(String mark);
+
+  /// No description provided for @qstMarkConfirmMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Честная отметка мягче скрытого срыва: небольшой штраф сейчас, завтра — усиленный план.'**
+  String get qstMarkConfirmMessage;
+
+  /// No description provided for @qstMarkConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отметить'**
+  String get qstMarkConfirm;
+
+  /// No description provided for @qstPauseTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get qstPauseTitle;
+
+  /// No description provided for @qstPauseHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Болезнь, каникулы, отпуск: штрафы не начисляются, серия не сгорает.'**
+  String get qstPauseHint;
+
+  /// No description provided for @qstPauseStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поставить паузу'**
+  String get qstPauseStart;
+
+  /// No description provided for @qstPauseEnd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снять паузу'**
+  String get qstPauseEnd;
+
+  /// No description provided for @qstPauseConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать паузу'**
+  String get qstPauseConfirm;
+
+  /// No description provided for @qstPauseReason.
+  ///
+  /// In ru, this message translates to:
+  /// **'Причина'**
+  String get qstPauseReason;
+
+  /// No description provided for @qstPauseReasonIllness.
+  ///
+  /// In ru, this message translates to:
+  /// **'Болезнь'**
+  String get qstPauseReasonIllness;
+
+  /// No description provided for @qstPauseReasonVacation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отпуск'**
+  String get qstPauseReasonVacation;
+
+  /// No description provided for @qstPauseReasonHolidays.
+  ///
+  /// In ru, this message translates to:
+  /// **'Каникулы'**
+  String get qstPauseReasonHolidays;
+
+  /// No description provided for @qstPauseReasonOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое'**
+  String get qstPauseReasonOther;
+
+  /// No description provided for @qstPauseActive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза: {reason}'**
+  String qstPauseActive(String reason);
+
+  /// No description provided for @qstPauseUntil.
+  ///
+  /// In ru, this message translates to:
+  /// **'до {date}'**
+  String qstPauseUntil(String date);
+
+  /// No description provided for @qstPauseUntilRemoved.
+  ///
+  /// In ru, this message translates to:
+  /// **'До снятия'**
+  String get qstPauseUntilRemoved;
+
+  /// No description provided for @qstPauseUntilDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'До даты'**
+  String get qstPauseUntilDate;
+
+  /// No description provided for @qstPauseEndDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Последний день паузы'**
+  String get qstPauseEndDate;
+
+  /// No description provided for @qstPausedPill.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get qstPausedPill;
+
+  /// No description provided for @qstDisciplinePill.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дисциплина'**
+  String get qstDisciplinePill;
+
+  /// No description provided for @qstPlayerNoName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Игрок'**
+  String get qstPlayerNoName;
+
+  /// No description provided for @qstStatPointsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Очки характеристик'**
+  String get qstStatPointsTitle;
+
+  /// No description provided for @qstStatPointsLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Свободно: {count}'**
+  String qstStatPointsLeft(int count);
+
+  /// No description provided for @qstStatPointAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить очко: {stat}'**
+  String qstStatPointAdd(String stat);
+
+  /// No description provided for @qstWindowFailedMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}». Штраф: −{points} ◆.'**
+  String qstWindowFailedMessage(String quest, String points);
+
+  /// No description provided for @qstWindowFailedMany.
+  ///
+  /// In ru, this message translates to:
+  /// **'Провалено квестов: {count}. Штраф: −{points} ◆.'**
+  String qstWindowFailedMany(int count, String points);
+
+  /// No description provided for @qstWindowRefusedTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отказ от квеста'**
+  String get qstWindowRefusedTitle;
+
+  /// No description provided for @qstWindowPenaltyTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф'**
+  String get qstWindowPenaltyTitle;
+
+  /// No description provided for @qstWindowPenaltyMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'{reason}. Штраф: −{points} ◆.'**
+  String qstWindowPenaltyMessage(String reason, String points);
+
+  /// No description provided for @qstWindowPenaltyQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назначен штрафной квест: «{quest}».'**
+  String qstWindowPenaltyQuest(String quest);
+
+  /// No description provided for @qstLevelUpTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень повышен'**
+  String get qstLevelUpTitle;
+
+  /// No description provided for @qstLevelUpLevel.
+  ///
+  /// In ru, this message translates to:
+  /// **'LV {level}'**
+  String qstLevelUpLevel(int level);
+
+  /// No description provided for @qstLevelUpRank.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый ранг: {rank}'**
+  String qstLevelUpRank(String rank);
+
+  /// No description provided for @qstLevelUpPoints.
+  ///
+  /// In ru, this message translates to:
+  /// **'Свободные очки характеристик: {count}'**
+  String qstLevelUpPoints(int count);
+
+  /// No description provided for @qstTitleGot.
+  ///
+  /// In ru, this message translates to:
+  /// **'Титул: «{title}»'**
+  String qstTitleGot(String title);
+
+  /// No description provided for @qstBossWonTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс повержен'**
+  String get qstBossWonTitle;
+
+  /// No description provided for @qstBossLostTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс не повержен'**
+  String get qstBossLostTitle;
+
+  /// No description provided for @qstBossLostMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя закрыта без победы. Новый босс — с понедельника.'**
+  String get qstBossLostMessage;
+
+  /// No description provided for @qstDisciplineOnTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим дисциплины включён'**
+  String get qstDisciplineOnTitle;
+
+  /// No description provided for @qstDisciplineOnMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём 6:00, отбой 22:00, дополнительная нагрузка в пределах плана. Режим снимется, когда баланс ◆ станет положительным.'**
+  String get qstDisciplineOnMessage;
+
+  /// No description provided for @qstDisciplineOffTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим дисциплины снят'**
+  String get qstDisciplineOffTitle;
+
+  /// No description provided for @qstDisciplineOffMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Баланс восстановлен. Обычный режим.'**
+  String get qstDisciplineOffMessage;
+
+  /// No description provided for @qstDisciplineMore.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подробнее'**
+  String get qstDisciplineMore;
+
+  /// No description provided for @qstFormTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get qstFormTitle;
+
+  /// No description provided for @qstFormTitleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: растяжка 10 минут'**
+  String get qstFormTitleHint;
+
+  /// No description provided for @qstFormStat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Характеристика'**
+  String get qstFormStat;
+
+  /// No description provided for @qstFormTimed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ко времени'**
+  String get qstFormTimed;
+
+  /// No description provided for @qstFormTimedHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Иначе — в течение дня'**
+  String get qstFormTimedHint;
+
+  /// No description provided for @qstFormTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Время'**
+  String get qstFormTime;
+
+  /// No description provided for @qstFormWindow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Окно выполнения'**
+  String get qstFormWindow;
+
+  /// No description provided for @qstMinutesUnit.
+  ///
+  /// In ru, this message translates to:
+  /// **'мин'**
+  String get qstMinutesUnit;
+
+  /// No description provided for @qstFormWeekdays.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дни недели'**
+  String get qstFormWeekdays;
+
+  /// No description provided for @qstFormWeekdaysHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не выбраны — каждый день'**
+  String get qstFormWeekdaysHint;
+
+  /// No description provided for @qstFormWeekParity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чередование недель'**
+  String get qstFormWeekParity;
+
+  /// No description provided for @qstWeekEvery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Каждую'**
+  String get qstWeekEvery;
+
+  /// No description provided for @qstWeek1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя 1'**
+  String get qstWeek1;
+
+  /// No description provided for @qstWeek2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя 2'**
+  String get qstWeek2;
+
+  /// No description provided for @qstFormSubtasks.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подзадачи'**
+  String get qstFormSubtasks;
+
+  /// No description provided for @qstFormSubtaskHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подзадача {n}'**
+  String qstFormSubtaskHint(int n);
+
+  /// No description provided for @qstFormAddSubtask.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить подзадачу'**
+  String get qstFormAddSubtask;
+
+  /// No description provided for @qstFormRemoveSubtask.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать подзадачу'**
+  String get qstFormRemoveSubtask;
+
+  /// No description provided for @qstFormDefaultReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда и штраф — по правилам Системы'**
+  String get qstFormDefaultReward;
+
+  /// No description provided for @qstFormDefaultRewardHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система рассчитает ◆ и опыт по виду квеста'**
+  String get qstFormDefaultRewardHint;
+
+  /// No description provided for @qstFormRewardDiamonds.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда, ◆'**
+  String get qstFormRewardDiamonds;
+
+  /// No description provided for @qstFormRewardXp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Опыт, XP'**
+  String get qstFormRewardXp;
+
+  /// No description provided for @qstFormPenalty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф за провал, ◆'**
+  String get qstFormPenalty;
+
+  /// No description provided for @qstFormNag.
+  ///
+  /// In ru, this message translates to:
+  /// **'Надоедать'**
+  String get qstFormNag;
+
+  /// No description provided for @qstFormNagHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминать каждую минуту до выполнения'**
+  String get qstFormNagHint;
+
   /// No description provided for @schTitle.
   ///
   /// In ru, this message translates to:
@@ -4861,6 +6085,486 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Подъём 6:00, отбой 22:00, доп. нагрузка'**
   String get setDisciplineHint;
+
+  /// No description provided for @shpNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление'**
+  String get shpNoticeLabel;
+
+  /// No description provided for @shpWarningLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предупреждение'**
+  String get shpWarningLabel;
+
+  /// No description provided for @shpTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазин наград'**
+  String get shpTitle;
+
+  /// No description provided for @shpBalance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Баланс'**
+  String get shpBalance;
+
+  /// No description provided for @shpClosedMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазин закрыт: баланс отрицательный'**
+  String get shpClosedMessage;
+
+  /// No description provided for @shpClosedHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполняйте квесты, чтобы вернуть баланс в плюс. Режим дисциплины уже назначен.'**
+  String get shpClosedHint;
+
+  /// No description provided for @shpRewards.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награды'**
+  String get shpRewards;
+
+  /// No description provided for @shpAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новая награда'**
+  String get shpAdd;
+
+  /// No description provided for @shpEmptyTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Наград пока нет'**
+  String get shpEmptyTitle;
+
+  /// No description provided for @shpEmptyText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награды придумываете вы и покупаете их за ◆. Нажмите на пример, чтобы заполнить форму:'**
+  String get shpEmptyText;
+
+  /// No description provided for @shpExampleChocolate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шоколадка'**
+  String get shpExampleChocolate;
+
+  /// No description provided for @shpExampleFastFood.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фастфуд'**
+  String get shpExampleFastFood;
+
+  /// No description provided for @shpExampleGames.
+  ///
+  /// In ru, this message translates to:
+  /// **'Час игр'**
+  String get shpExampleGames;
+
+  /// No description provided for @shpExampleFreeEvening.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вечер без квестов'**
+  String get shpExampleFreeEvening;
+
+  /// No description provided for @shpBuy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Купить'**
+  String get shpBuy;
+
+  /// No description provided for @shpLimitNone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без лимита'**
+  String get shpLimitNone;
+
+  /// No description provided for @shpLimitDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{{count} раз в день} few{{count} раза в день} many{{count} раз в день} other{{count} раза в день}}'**
+  String shpLimitDay(int count);
+
+  /// No description provided for @shpLimitWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{{count} раз в неделю} few{{count} раза в неделю} many{{count} раз в неделю} other{{count} раза в неделю}}'**
+  String shpLimitWeek(int count);
+
+  /// No description provided for @shpLimitMonth.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{{count} раз в месяц} few{{count} раза в месяц} many{{count} раз в месяц} other{{count} раза в месяц}}'**
+  String shpLimitMonth(int count);
+
+  /// No description provided for @shpLimitLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'осталось {count}'**
+  String shpLimitLeft(int count);
+
+  /// No description provided for @shpLimitReachedUntil.
+  ///
+  /// In ru, this message translates to:
+  /// **'лимит исчерпан до {date}'**
+  String shpLimitReachedUntil(String date);
+
+  /// No description provided for @shpNotEnough.
+  ///
+  /// In ru, this message translates to:
+  /// **'не хватает {count} ◆'**
+  String shpNotEnough(int count);
+
+  /// No description provided for @shpConfirmTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтвердите покупку'**
+  String get shpConfirmTitle;
+
+  /// No description provided for @shpConfirmMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{title}» за {price} ◆. Баланс после покупки: {after} ◆.'**
+  String shpConfirmMessage(String title, int price, int after);
+
+  /// No description provided for @shpBoughtMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда «{title}» получена. Система зафиксировала покупку.'**
+  String shpBoughtMessage(String title);
+
+  /// No description provided for @shpFailedMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупка отклонена: недостаточно ◆ или магазин закрыт.'**
+  String get shpFailedMessage;
+
+  /// No description provided for @shpLimitReachedMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лимит этой награды на период исчерпан.'**
+  String get shpLimitReachedMessage;
+
+  /// No description provided for @shpHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'История покупок'**
+  String get shpHistory;
+
+  /// No description provided for @shpHistoryEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупок пока нет'**
+  String get shpHistoryEmpty;
+
+  /// No description provided for @shpArchive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Архив'**
+  String get shpArchive;
+
+  /// No description provided for @shpRestore.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вернуть'**
+  String get shpRestore;
+
+  /// No description provided for @shpReorder.
+  ///
+  /// In ru, this message translates to:
+  /// **'Порядок'**
+  String get shpReorder;
+
+  /// No description provided for @shpMoveUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выше'**
+  String get shpMoveUp;
+
+  /// No description provided for @shpMoveDown.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ниже'**
+  String get shpMoveDown;
+
+  /// No description provided for @shpEditorNew.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новая награда'**
+  String get shpEditorNew;
+
+  /// No description provided for @shpEditorEdit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда'**
+  String get shpEditorEdit;
+
+  /// No description provided for @shpFieldTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get shpFieldTitle;
+
+  /// No description provided for @shpFieldTitleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: час игр'**
+  String get shpFieldTitleHint;
+
+  /// No description provided for @shpFieldPrice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цена'**
+  String get shpFieldPrice;
+
+  /// No description provided for @shpFieldPriceHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сколько ◆ стоит награда'**
+  String get shpFieldPriceHint;
+
+  /// No description provided for @shpFieldLimit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лимит частоты'**
+  String get shpFieldLimit;
+
+  /// No description provided for @shpPeriodNone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет'**
+  String get shpPeriodNone;
+
+  /// No description provided for @shpPeriodDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'День'**
+  String get shpPeriodDay;
+
+  /// No description provided for @shpPeriodWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя'**
+  String get shpPeriodWeek;
+
+  /// No description provided for @shpPeriodMonth.
+  ///
+  /// In ru, this message translates to:
+  /// **'Месяц'**
+  String get shpPeriodMonth;
+
+  /// No description provided for @shpFieldLimitCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сколько раз за период'**
+  String get shpFieldLimitCount;
+
+  /// No description provided for @shpToArchive.
+  ///
+  /// In ru, this message translates to:
+  /// **'В архив'**
+  String get shpToArchive;
+
+  /// No description provided for @shpErrorPrice.
+  ///
+  /// In ru, this message translates to:
+  /// **'От 1 до 100000'**
+  String get shpErrorPrice;
+
+  /// No description provided for @shpErrorCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'От 1 до 99'**
+  String get shpErrorCount;
+
+  /// No description provided for @dscTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим дисциплины'**
+  String get dscTitle;
+
+  /// No description provided for @dscStatus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Статус'**
+  String get dscStatus;
+
+  /// No description provided for @dscOn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включён'**
+  String get dscOn;
+
+  /// No description provided for @dscOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключен'**
+  String get dscOff;
+
+  /// No description provided for @dscReasonLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Причина'**
+  String get dscReasonLabel;
+
+  /// No description provided for @dscReasonDebt.
+  ///
+  /// In ru, this message translates to:
+  /// **'отрицательный баланс'**
+  String get dscReasonDebt;
+
+  /// No description provided for @dscReasonManual.
+  ///
+  /// In ru, this message translates to:
+  /// **'включён вручную'**
+  String get dscReasonManual;
+
+  /// No description provided for @dscReasonAi.
+  ///
+  /// In ru, this message translates to:
+  /// **'решение Системы после срыва'**
+  String get dscReasonAi;
+
+  /// No description provided for @dscExitLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключится'**
+  String get dscExitLabel;
+
+  /// No description provided for @dscExitBalancePositive.
+  ///
+  /// In ru, this message translates to:
+  /// **'когда баланс станет положительным'**
+  String get dscExitBalancePositive;
+
+  /// No description provided for @dscExitManual.
+  ///
+  /// In ru, this message translates to:
+  /// **'вручную, когда баланс не отрицательный'**
+  String get dscExitManual;
+
+  /// No description provided for @dscSinceLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'С'**
+  String get dscSinceLabel;
+
+  /// No description provided for @dscOffText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим включается сам, если баланс ◆ уходит в минус. Можно включить и вручную.'**
+  String get dscOffText;
+
+  /// No description provided for @dscBalance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Баланс'**
+  String get dscBalance;
+
+  /// No description provided for @dscToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Правила на сегодня'**
+  String get dscToday;
+
+  /// No description provided for @dscRulesNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нагрузка — в пределах вашего уровня. Еда и сон не урезаются: отбой и подъём не сдвигаются позже обычных.'**
+  String get dscRulesNote;
+
+  /// No description provided for @dscCannotRefuse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты режима нельзя отменить.'**
+  String get dscCannotRefuse;
+
+  /// No description provided for @dscPreviewNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Так будет выглядеть день в режиме дисциплины.'**
+  String get dscPreviewNote;
+
+  /// No description provided for @dscBlockerTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Блокировка приложений'**
+  String get dscBlockerTitle;
+
+  /// No description provided for @dscBlockerText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Блокировка развлекательных приложений после отбоя появится позже.'**
+  String get dscBlockerText;
+
+  /// No description provided for @dscBlockerSoon.
+  ///
+  /// In ru, this message translates to:
+  /// **'Позже'**
+  String get dscBlockerSoon;
+
+  /// No description provided for @dscEnable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включить режим'**
+  String get dscEnable;
+
+  /// No description provided for @dscDisable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключить режим'**
+  String get dscDisable;
+
+  /// No description provided for @dscEnableConfirmMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём в 6:00, отбой в 22:00, доп. нагрузка. Квесты режима нельзя отменить.'**
+  String get dscEnableConfirmMessage;
+
+  /// No description provided for @dscDisableLocked.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключить нельзя, пока баланс отрицательный.'**
+  String get dscDisableLocked;
+
+  /// No description provided for @dscChangedOnMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим дисциплины включён. Подъём в 6:00, отбой в 22:00, доп. нагрузка.'**
+  String get dscChangedOnMessage;
+
+  /// No description provided for @dscChangedOffMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим дисциплины выключен.'**
+  String get dscChangedOffMessage;
+
+  /// No description provided for @dscQuestWake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём в {time}'**
+  String dscQuestWake(String time);
+
+  /// No description provided for @dscQuestBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отбой в {time}'**
+  String dscQuestBed(String time);
+
+  /// No description provided for @dscQuestWorkout.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доп. тренировка: {minutes} мин'**
+  String dscQuestWorkout(int minutes);
+
+  /// No description provided for @dscQuestWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спокойная прогулка: {minutes} мин'**
+  String dscQuestWalk(int minutes);
 }
 
 class _AppLocalizationsDelegate

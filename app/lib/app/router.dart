@@ -10,6 +10,7 @@ import '../features/onboarding/onboarding_screen.dart';
 import '../features/onboarding/onboarding_step.dart';
 import '../features/onboarding/step_edit_screen.dart';
 import '../features/plan/plan_screen.dart';
+import '../features/quests/outcomes/outcome_windows_host.dart';
 import '../features/quests/quests_screen.dart';
 import '../features/reminders/reminder_settings_screen.dart';
 import '../features/schedule/schedule_screen.dart';
@@ -44,7 +45,7 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
           },
         ),
         StatefulShellRoute.indexedStack(
-          builder: (context, state, shell) => AppShell(shell: shell),
+          builder: (context, state, shell) => OutcomeWindowsHost(child: AppShell(shell: shell)),
           branches: [
             StatefulShellBranch(routes: [
               GoRoute(path: Routes.status, builder: (_, _) => const HomeScreen()),

@@ -875,6 +875,162 @@ class AppLocalizationsTr extends AppLocalizations {
   String get hqFinanceFoodTitle => 'Yemek bütçesi';
 
   @override
+  String ntfQuestTitle(String title) {
+    return '[ Görev ] $title';
+  }
+
+  @override
+  String ntfPenaltyQuestTitle(String title) {
+    return '[ Ceza görevi ] $title';
+  }
+
+  @override
+  String ntfBossTitle(String title) {
+    return '[ Haftanın patronu ] $title';
+  }
+
+  @override
+  String ntfQuestBody(String time, int diamonds) {
+    return 'Son süre: $time. Ödül: +$diamonds ◆';
+  }
+
+  @override
+  String ntfQuestBodyNoReward(String time) {
+    return 'Son süre: $time.';
+  }
+
+  @override
+  String ntfPenaltyQuestBody(String time) {
+    return 'Son süre: $time. Reddedilemez.';
+  }
+
+  @override
+  String get ntfReproachTitle => '[ Sistem ] Görev tamamlanmadı';
+
+  @override
+  String ntfReproachBody(String title) {
+    return '«$title» gecikti. Sistem eylemsizliği kaydetti. Hemen tamamla.';
+  }
+
+  @override
+  String get ntfActionDone => 'Tamamlandı';
+
+  @override
+  String get ntfActionSnooze => '+10 dk';
+
+  @override
+  String get ntfChannelQuests => 'Görevler';
+
+  @override
+  String get ntfChannelQuestsDesc =>
+      'Görev hatırlatmaları, sitemler ve Sistem mesajları';
+
+  @override
+  String get ntfChannelNag => 'Israrcı hatırlatma';
+
+  @override
+  String get ntfChannelNagDesc => 'Görev tamamlanana kadar her dakika tekrar';
+
+  @override
+  String get ntfFailedTitle => '[ Sistem ] Görev başarısız';
+
+  @override
+  String ntfFailedBody(String title, int diamonds) {
+    return '«$title»: −$diamonds ◆';
+  }
+
+  @override
+  String ntfPenaltyTitle(int diamonds) {
+    return '[ Ceza ] −$diamonds ◆';
+  }
+
+  @override
+  String get ntfLevelUpTitle => '[ Sistem ] Seviye atladın';
+
+  @override
+  String ntfLevelUpBody(int level, int points) {
+    return 'Seviye $level. Serbest puan: $points';
+  }
+
+  @override
+  String get ntfTestTitle => '[ Sistem ] Bağlantı testi';
+
+  @override
+  String get ntfTestBody => 'Bildirimler çalışıyor. Oyuncu, emirleri bekle.';
+
+  @override
+  String get ntfTestSent => 'Bildirim gönderildi';
+
+  @override
+  String get ntfSectionGeneral => 'Genel';
+
+  @override
+  String get ntfEnabled => 'Hatırlatmalar';
+
+  @override
+  String get ntfEnabledHint => 'Görevler için yerel bildirimler';
+
+  @override
+  String get ntfNag => 'Her dakika ısrar et';
+
+  @override
+  String get ntfNagHint => '«Tamamlandı»ya basana kadar tekrar';
+
+  @override
+  String get ntfReproach => 'Sitemler';
+
+  @override
+  String get ntfReproachHint =>
+      'Süre dolduktan 15 dk sonra, görev yapılmadıysa';
+
+  @override
+  String get ntfVoice => 'Ses olarak karakterin sesi';
+
+  @override
+  String get ntfVoiceHint => '6. aşamada gelecek — şimdilik standart ses';
+
+  @override
+  String get ntfSectionQuiet => 'Sessiz saatler';
+
+  @override
+  String get ntfQuietEnabled => 'Rahatsız etme';
+
+  @override
+  String get ntfQuietHint => 'Bu sürede ses yok, sitem bitişten sonra gelir';
+
+  @override
+  String get ntfQuietFrom => 'Başlangıç';
+
+  @override
+  String get ntfQuietTo => 'Bitiş';
+
+  @override
+  String get ntfSectionPermission => 'İzin';
+
+  @override
+  String get ntfPermGranted => 'Bildirimlere izin verildi';
+
+  @override
+  String get ntfPermDenied =>
+      'Bildirimler kapalı — görevler hatırlatma yapamaz';
+
+  @override
+  String get ntfPermUnknown => 'İzin durumu bilinmiyor';
+
+  @override
+  String get ntfPermExactOff =>
+      'Tam zamanlı alarmlar kapalı — hatırlatmalar gecikebilir';
+
+  @override
+  String get ntfPermRequest => 'İzin iste';
+
+  @override
+  String get ntfTest => 'Bildirimi test et';
+
+  @override
+  String get ntfUnavailable => 'Bu platformda bildirimler kullanılamaz';
+
+  @override
   String get planNoticeLabel => 'Bildirim';
 
   @override
@@ -2216,6 +2372,571 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qbPermAlarmsLater => 'Alarm aşamasında ayarlanacak.';
 
   @override
+  String qeQuestPenaltyCleaning(String minutes) {
+    return 'Ceza: $minutes dk temizlik';
+  }
+
+  @override
+  String qeQuestPenaltyReading(String minutes) {
+    return 'Ceza: $minutes dk okuma';
+  }
+
+  @override
+  String qeQuestPenaltyPlank(String seconds) {
+    return 'Ceza: $seconds sn plank';
+  }
+
+  @override
+  String qeQuestPenaltyWalk(String minutes) {
+    return 'Ceza: $minutes dk yürüyüş';
+  }
+
+  @override
+  String get qeQuestPenaltyNoGames => 'Ceza: oyunsuz ve sosyal medyasız akşam';
+
+  @override
+  String qeQuestBoostWalk(String minutes) {
+    return 'Güçlendirme: $minutes dk yürüyüş';
+  }
+
+  @override
+  String qeQuestBoostWater(String ml) {
+    return 'Güçlendirme: $ml ml ek su';
+  }
+
+  @override
+  String qeQuestBoostBedOnTime(String time) {
+    return 'Güçlendirme: en geç $time yatış';
+  }
+
+  @override
+  String get qeQuestBoostPlanTomorrow => 'Güçlendirme: yarını planla';
+
+  @override
+  String qeQuestBossAll(String count) {
+    return 'Bu hafta $count görev tamamla';
+  }
+
+  @override
+  String qeQuestBossStrength(String count) {
+    return '$count güç görevi tamamla';
+  }
+
+  @override
+  String qeQuestBossEndurance(String count) {
+    return '$count dayanıklılık görevi tamamla';
+  }
+
+  @override
+  String qeQuestBossDiscipline(String count) {
+    return '$count disiplin görevi tamamla';
+  }
+
+  @override
+  String qeQuestBossIntellect(String count) {
+    return '$count zekâ görevi tamamla';
+  }
+
+  @override
+  String qeQuestBossHealth(String count) {
+    return '$count sağlık görevi tamamla';
+  }
+
+  @override
+  String qeQuestBossLooks(String count) {
+    return '$count görünüm görevi tamamla';
+  }
+
+  @override
+  String qeEffectVigor(String pct) {
+    return 'Zindelik +$pct% deneyim';
+  }
+
+  @override
+  String qeEffectDehydration(String pct) {
+    return 'Susuzluk −$pct% dayanıklılık';
+  }
+
+  @override
+  String qeEffectBossAura(String pct) {
+    return 'Galip aurası +$pct% ◆';
+  }
+
+  @override
+  String get qeTitleStreak7 => 'Yılmaz';
+
+  @override
+  String get qeTitleStreak30 => 'Demir İrade';
+
+  @override
+  String get qeTitleBossSlayer => 'Boss Galibi';
+
+  @override
+  String get qeTitleBossHunter => 'Boss Avcısı';
+
+  @override
+  String get qeTitleLevel10 => 'Uyanmış';
+
+  @override
+  String get qeTitleLevel25 => 'Çelikleşmiş';
+
+  @override
+  String get qeTitleLevel50 => 'Sistem Efsanesi';
+
+  @override
+  String get qeReasonFailedQuests =>
+      'Günün başarısızlıkları. Ceza görevi atandı';
+
+  @override
+  String get qeReasonMarkWalked =>
+      'İşaret: arkadaşlarla gezdin. Dürüstlük cezayı hafifletir';
+
+  @override
+  String get qeReasonMarkAlcohol => 'İşaret: alkol. Yarın güçlendirilmiş plan';
+
+  @override
+  String get qeReasonMarkRelapse =>
+      'İşaret: kaçamak. Yarın güçlendirilmiş plan';
+
+  @override
+  String get qeReasonBossFailed => 'Haftanın bossu yenilmedi';
+
+  @override
+  String get qeReasonReproach => 'Görev yapılmadı. Sistem memnun değil';
+
+  @override
+  String get qeReasonOther => 'Sistem cezası';
+
+  @override
+  String get qstViewToday => 'Bugün';
+
+  @override
+  String get qstViewWeek => 'Hafta';
+
+  @override
+  String get qstViewHistory => 'Geçmiş';
+
+  @override
+  String get qstFilterTitle => 'Filtre';
+
+  @override
+  String qstFilterActive(int count) {
+    return 'Filtre: $count';
+  }
+
+  @override
+  String get qstFilterReset => 'Sıfırla';
+
+  @override
+  String get qstFilterKind => 'Tür';
+
+  @override
+  String get qstFilterStat => 'Özellik';
+
+  @override
+  String get qstKindDaily => 'Günlük';
+
+  @override
+  String get qstKindSchedule => 'Programdan';
+
+  @override
+  String get qstKindGoal => 'Hedef';
+
+  @override
+  String get qstKindPenalty => 'Ceza';
+
+  @override
+  String get qstKindBoss => 'Boss';
+
+  @override
+  String get qstStatusPending => 'Aktif';
+
+  @override
+  String get qstStatusDone => 'Tamamlandı';
+
+  @override
+  String get qstStatusFailed => 'Başarısız';
+
+  @override
+  String get qstStatusRefused => 'Reddedildi';
+
+  @override
+  String get qstStatusExcused => 'Mola: cezasız';
+
+  @override
+  String get qstEmptyDay => 'Bugün için görev yok';
+
+  @override
+  String get qstEmptyWeek => 'Bu hafta için görev yok';
+
+  @override
+  String get qstEmptyFiltered => 'Filtreye uyan görev yok';
+
+  @override
+  String get qstEmptyHistory => 'Kayıt yok';
+
+  @override
+  String get qstLoadError =>
+      'Sistem yanıt vermiyor. Daha sonra tekrar deneyin.';
+
+  @override
+  String get qstActionRejected => 'Sistem işlemi reddetti.';
+
+  @override
+  String get qstNoValue => '—';
+
+  @override
+  String get qstAllDay => 'Gün içinde';
+
+  @override
+  String get qstOpenQuest => 'Görevi aç';
+
+  @override
+  String get qstSubtasks => 'Alt görevler';
+
+  @override
+  String get qstProgress => 'İlerleme';
+
+  @override
+  String qstProgressAddLabel(String step) {
+    return 'İlerleme ekle: $step';
+  }
+
+  @override
+  String qstRefusePenalty(String points) {
+    return 'Ret: −$points ◆';
+  }
+
+  @override
+  String get qstNoRefuse => 'Ceza görevi: reddedilemez';
+
+  @override
+  String get qstArchive => 'Arşivle';
+
+  @override
+  String get qstArchiveConfirm =>
+      'Görev arşivlenecek ve bir daha görünmeyecek.';
+
+  @override
+  String get qstNewQuest => 'Yeni görev';
+
+  @override
+  String get qstEditQuest => 'Görevi düzenle';
+
+  @override
+  String qstBossReward(String points, String xp) {
+    return 'Ödül: +$points ◆, +$xp XP';
+  }
+
+  @override
+  String qstDiamondsDelta(String value) {
+    return '$value ◆';
+  }
+
+  @override
+  String qstXpDelta(String value) {
+    return '$value XP';
+  }
+
+  @override
+  String get qstHistCompleted => 'Tamamlandı';
+
+  @override
+  String get qstHistFailed => 'Başarısız';
+
+  @override
+  String get qstHistRefused => 'Ret';
+
+  @override
+  String get qstHistPenalty => 'Ceza';
+
+  @override
+  String get qstHistBonus => 'Bonus';
+
+  @override
+  String get qstHistPurchase => 'Satın alma';
+
+  @override
+  String get qstHistMark => 'Gün işareti';
+
+  @override
+  String get qstHistPauseStarted => 'Mola';
+
+  @override
+  String get qstHistPauseEnded => 'Mola bitti';
+
+  @override
+  String get qstHistStatPoint => 'Özellik puanı';
+
+  @override
+  String get qstHistBossCompleted => 'Boss yenildi';
+
+  @override
+  String get qstHistBossFailed => 'Boss yenilmedi';
+
+  @override
+  String get qstHistDisciplineOn => 'Disiplin açıldı';
+
+  @override
+  String get qstHistDisciplineOff => 'Disiplin kapandı';
+
+  @override
+  String get qstHistAdjustment => 'Düzeltme';
+
+  @override
+  String get qstMarksTitle => 'Dürüst işaretler';
+
+  @override
+  String get qstMarksHint =>
+      'Dürüst işaret, gizli bir kaçamaktan daha hafiftir. Yarın — güçlendirilmiş plan.';
+
+  @override
+  String get qstMarkWalked => 'Arkadaşlarla gezdim';
+
+  @override
+  String get qstMarkAlcohol => 'Alkol';
+
+  @override
+  String get qstMarkRelapse => 'Kendimi tutamadım';
+
+  @override
+  String qstMarkConfirmTitle(String mark) {
+    return 'İşaretle: $mark?';
+  }
+
+  @override
+  String get qstMarkConfirmMessage =>
+      'Dürüst işaret gizli kaçamaktan daha hafiftir: şimdi küçük bir ceza, yarın güçlendirilmiş plan.';
+
+  @override
+  String get qstMarkConfirm => 'İşaretle';
+
+  @override
+  String get qstPauseTitle => 'Mola';
+
+  @override
+  String get qstPauseHint =>
+      'Hastalık, tatil, izin: ceza yazılmaz, seri bozulmaz.';
+
+  @override
+  String get qstPauseStart => 'Mola ver';
+
+  @override
+  String get qstPauseEnd => 'Molayı bitir';
+
+  @override
+  String get qstPauseConfirm => 'Molayı başlat';
+
+  @override
+  String get qstPauseReason => 'Neden';
+
+  @override
+  String get qstPauseReasonIllness => 'Hastalık';
+
+  @override
+  String get qstPauseReasonVacation => 'İzin';
+
+  @override
+  String get qstPauseReasonHolidays => 'Okul tatili';
+
+  @override
+  String get qstPauseReasonOther => 'Diğer';
+
+  @override
+  String qstPauseActive(String reason) {
+    return 'Mola: $reason';
+  }
+
+  @override
+  String qstPauseUntil(String date) {
+    return '$date tarihine kadar';
+  }
+
+  @override
+  String get qstPauseUntilRemoved => 'Bitirene kadar';
+
+  @override
+  String get qstPauseUntilDate => 'Tarihe kadar';
+
+  @override
+  String get qstPauseEndDate => 'Molanın son günü';
+
+  @override
+  String get qstPausedPill => 'Mola';
+
+  @override
+  String get qstDisciplinePill => 'Disiplin';
+
+  @override
+  String get qstPlayerNoName => 'Oyuncu';
+
+  @override
+  String get qstStatPointsTitle => 'Özellik puanları';
+
+  @override
+  String qstStatPointsLeft(int count) {
+    return 'Boş: $count';
+  }
+
+  @override
+  String qstStatPointAdd(String stat) {
+    return 'Puan ekle: $stat';
+  }
+
+  @override
+  String qstWindowFailedMessage(String quest, String points) {
+    return '«$quest». Ceza: −$points ◆.';
+  }
+
+  @override
+  String qstWindowFailedMany(int count, String points) {
+    return 'Başarısız görev: $count. Ceza: −$points ◆.';
+  }
+
+  @override
+  String get qstWindowRefusedTitle => 'Görev reddedildi';
+
+  @override
+  String get qstWindowPenaltyTitle => 'Ceza';
+
+  @override
+  String qstWindowPenaltyMessage(String reason, String points) {
+    return '$reason. Ceza: −$points ◆.';
+  }
+
+  @override
+  String qstWindowPenaltyQuest(String quest) {
+    return 'Ceza görevi verildi: «$quest».';
+  }
+
+  @override
+  String get qstLevelUpTitle => 'Seviye atladın';
+
+  @override
+  String qstLevelUpLevel(int level) {
+    return 'LV $level';
+  }
+
+  @override
+  String qstLevelUpRank(String rank) {
+    return 'Yeni rütbe: $rank';
+  }
+
+  @override
+  String qstLevelUpPoints(int count) {
+    return 'Boş özellik puanı: $count';
+  }
+
+  @override
+  String qstTitleGot(String title) {
+    return 'Unvan: «$title»';
+  }
+
+  @override
+  String get qstBossWonTitle => 'Boss yenildi';
+
+  @override
+  String get qstBossLostTitle => 'Boss yenilmedi';
+
+  @override
+  String get qstBossLostMessage =>
+      'Hafta zafersiz kapandı. Yeni boss — pazartesi.';
+
+  @override
+  String get qstDisciplineOnTitle => 'Disiplin modu açık';
+
+  @override
+  String get qstDisciplineOnMessage =>
+      'Kalkış 6:00, yatış 22:00, plan sınırları içinde ek yük. Bakiye ◆ pozitif olunca mod kapanır.';
+
+  @override
+  String get qstDisciplineOffTitle => 'Disiplin modu kapandı';
+
+  @override
+  String get qstDisciplineOffMessage => 'Bakiye düzeldi. Normal mod.';
+
+  @override
+  String get qstDisciplineMore => 'Ayrıntılar';
+
+  @override
+  String get qstFormTitle => 'Ad';
+
+  @override
+  String get qstFormTitleHint => 'Örneğin: 10 dakika esneme';
+
+  @override
+  String get qstFormStat => 'Özellik';
+
+  @override
+  String get qstFormTimed => 'Belirli saatte';
+
+  @override
+  String get qstFormTimedHint => 'Aksi halde gün içinde';
+
+  @override
+  String get qstFormTime => 'Saat';
+
+  @override
+  String get qstFormWindow => 'Süre penceresi';
+
+  @override
+  String get qstMinutesUnit => 'dk';
+
+  @override
+  String get qstFormWeekdays => 'Haftanın günleri';
+
+  @override
+  String get qstFormWeekdaysHint => 'Seçilmezse her gün';
+
+  @override
+  String get qstFormWeekParity => 'Hafta dönüşümü';
+
+  @override
+  String get qstWeekEvery => 'Her hafta';
+
+  @override
+  String get qstWeek1 => 'Hafta 1';
+
+  @override
+  String get qstWeek2 => 'Hafta 2';
+
+  @override
+  String get qstFormSubtasks => 'Alt görevler';
+
+  @override
+  String qstFormSubtaskHint(int n) {
+    return 'Alt görev $n';
+  }
+
+  @override
+  String get qstFormAddSubtask => 'Alt görev ekle';
+
+  @override
+  String get qstFormRemoveSubtask => 'Alt görevi kaldır';
+
+  @override
+  String get qstFormDefaultReward => 'Ödül ve ceza — Sistem kurallarına göre';
+
+  @override
+  String get qstFormDefaultRewardHint =>
+      'Sistem ◆ ve deneyimi görev türüne göre hesaplar';
+
+  @override
+  String get qstFormRewardDiamonds => 'Ödül, ◆';
+
+  @override
+  String get qstFormRewardXp => 'Deneyim, XP';
+
+  @override
+  String get qstFormPenalty => 'Başarısızlık cezası, ◆';
+
+  @override
+  String get qstFormNag => 'Israr et';
+
+  @override
+  String get qstFormNagHint => 'Tamamlanana kadar her dakika hatırlat';
+
+  @override
   String get schTitle => 'Ders programı';
 
   @override
@@ -2703,4 +3424,294 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get setDisciplineHint => '06:00 kalkış, 22:00 yatış, ek yük';
+
+  @override
+  String get shpNoticeLabel => 'Bildirim';
+
+  @override
+  String get shpWarningLabel => 'Uyarı';
+
+  @override
+  String get shpTitle => 'Ödül mağazası';
+
+  @override
+  String get shpBalance => 'Bakiye';
+
+  @override
+  String get shpClosedMessage => 'Mağaza kapalı: bakiye eksi';
+
+  @override
+  String get shpClosedHint =>
+      'Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten atandı.';
+
+  @override
+  String get shpRewards => 'Ödüller';
+
+  @override
+  String get shpAdd => 'Yeni ödül';
+
+  @override
+  String get shpEmptyTitle => 'Henüz ödül yok';
+
+  @override
+  String get shpEmptyText =>
+      'Ödülleri siz belirler, ◆ ile satın alırsınız. Formu doldurmak için bir örneğe dokunun:';
+
+  @override
+  String get shpExampleChocolate => 'Çikolata';
+
+  @override
+  String get shpExampleFastFood => 'Fast food';
+
+  @override
+  String get shpExampleGames => 'Bir saat oyun';
+
+  @override
+  String get shpExampleFreeEvening => 'Görevsiz bir akşam';
+
+  @override
+  String get shpBuy => 'Satın al';
+
+  @override
+  String get shpLimitNone => 'Sınırsız';
+
+  @override
+  String shpLimitDay(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Günde $count kez',
+      one: 'Günde $count kez',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String shpLimitWeek(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Haftada $count kez',
+      one: 'Haftada $count kez',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String shpLimitMonth(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Ayda $count kez',
+      one: 'Ayda $count kez',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String shpLimitLeft(int count) {
+    return 'kalan $count';
+  }
+
+  @override
+  String shpLimitReachedUntil(String date) {
+    return '$date tarihine kadar sınır doldu';
+  }
+
+  @override
+  String shpNotEnough(int count) {
+    return '$count ◆ eksik';
+  }
+
+  @override
+  String get shpConfirmTitle => 'Satın almayı onaylayın';
+
+  @override
+  String shpConfirmMessage(String title, int price, int after) {
+    return '«$title» — $price ◆. Satın alma sonrası bakiye: $after ◆.';
+  }
+
+  @override
+  String shpBoughtMessage(String title) {
+    return '«$title» ödülü alındı. Sistem satın almayı kaydetti.';
+  }
+
+  @override
+  String get shpFailedMessage =>
+      'Satın alma reddedildi: yetersiz ◆ veya mağaza kapalı.';
+
+  @override
+  String get shpLimitReachedMessage => 'Bu ödülün dönem sınırı doldu.';
+
+  @override
+  String get shpHistory => 'Satın alma geçmişi';
+
+  @override
+  String get shpHistoryEmpty => 'Henüz satın alma yok';
+
+  @override
+  String get shpArchive => 'Arşiv';
+
+  @override
+  String get shpRestore => 'Geri al';
+
+  @override
+  String get shpReorder => 'Sıralama';
+
+  @override
+  String get shpMoveUp => 'Yukarı';
+
+  @override
+  String get shpMoveDown => 'Aşağı';
+
+  @override
+  String get shpEditorNew => 'Yeni ödül';
+
+  @override
+  String get shpEditorEdit => 'Ödül';
+
+  @override
+  String get shpFieldTitle => 'Ad';
+
+  @override
+  String get shpFieldTitleHint => 'Örneğin: bir saat oyun';
+
+  @override
+  String get shpFieldPrice => 'Fiyat';
+
+  @override
+  String get shpFieldPriceHint => 'Ödülün kaç ◆ tuttuğu';
+
+  @override
+  String get shpFieldLimit => 'Sıklık sınırı';
+
+  @override
+  String get shpPeriodNone => 'Yok';
+
+  @override
+  String get shpPeriodDay => 'Gün';
+
+  @override
+  String get shpPeriodWeek => 'Hafta';
+
+  @override
+  String get shpPeriodMonth => 'Ay';
+
+  @override
+  String get shpFieldLimitCount => 'Dönem başına kaç kez';
+
+  @override
+  String get shpToArchive => 'Arşive taşı';
+
+  @override
+  String get shpErrorPrice => '1 ile 100000 arası';
+
+  @override
+  String get shpErrorCount => '1 ile 99 arası';
+
+  @override
+  String get dscTitle => 'Disiplin modu';
+
+  @override
+  String get dscStatus => 'Durum';
+
+  @override
+  String get dscOn => 'Açık';
+
+  @override
+  String get dscOff => 'Kapalı';
+
+  @override
+  String get dscReasonLabel => 'Neden';
+
+  @override
+  String get dscReasonDebt => 'eksi bakiye';
+
+  @override
+  String get dscReasonManual => 'elle açıldı';
+
+  @override
+  String get dscReasonAi => 'bir aksamadan sonra Sistem kararı';
+
+  @override
+  String get dscExitLabel => 'Kapanacak';
+
+  @override
+  String get dscExitBalancePositive => 'bakiye artıya geçtiğinde';
+
+  @override
+  String get dscExitManual => 'elle, bakiye eksi değilken';
+
+  @override
+  String get dscSinceLabel => 'Başlangıç';
+
+  @override
+  String get dscOffText =>
+      'Bakiye ◆ eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.';
+
+  @override
+  String get dscBalance => 'Bakiye';
+
+  @override
+  String get dscToday => 'Bugünün kuralları';
+
+  @override
+  String get dscRulesNote =>
+      'Yük seviyenizi aşmaz. Yemek ve uyku kısılmaz: yatış ve kalkış her zamankinden geç olmaz.';
+
+  @override
+  String get dscCannotRefuse => 'Mod görevleri iptal edilemez.';
+
+  @override
+  String get dscPreviewNote => 'Disiplin modunda bir gün böyle görünecek.';
+
+  @override
+  String get dscBlockerTitle => 'Uygulama engelleme';
+
+  @override
+  String get dscBlockerText =>
+      'Yatıştan sonra eğlence uygulamalarını engelleme daha sonra eklenecek.';
+
+  @override
+  String get dscBlockerSoon => 'Sonra';
+
+  @override
+  String get dscEnable => 'Modu aç';
+
+  @override
+  String get dscDisable => 'Modu kapat';
+
+  @override
+  String get dscEnableConfirmMessage =>
+      'Kalkış 6:00, yatış 22:00, ek egzersiz. Mod görevleri iptal edilemez.';
+
+  @override
+  String get dscDisableLocked => 'Bakiye eksiyken kapatılamaz.';
+
+  @override
+  String get dscChangedOnMessage =>
+      'Disiplin modu açıldı. Kalkış 6:00, yatış 22:00, ek egzersiz.';
+
+  @override
+  String get dscChangedOffMessage => 'Disiplin modu kapatıldı.';
+
+  @override
+  String dscQuestWake(String time) {
+    return '$time kalkış';
+  }
+
+  @override
+  String dscQuestBed(String time) {
+    return '$time yatış';
+  }
+
+  @override
+  String dscQuestWorkout(int minutes) {
+    return 'Ek antrenman: $minutes dk';
+  }
+
+  @override
+  String dscQuestWalk(int minutes) {
+    return 'Sakin yürüyüş: $minutes dk';
+  }
 }

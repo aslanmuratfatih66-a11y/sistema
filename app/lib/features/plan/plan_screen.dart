@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../app/routes.dart';
+import '../../domain/quests/quest_api.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
 import '../onboarding/onboarding_step.dart';
@@ -82,6 +83,10 @@ class _PlanScreenState extends ConsumerState<PlanScreen> {
     if (plan == null || _busy) return;
     setState(() => _busy = true);
     await ref.read(planRepositoryProvider).accept(plan.id);
+    await ref.read(questServiceProvider).importPlanQuests(
+      planId: plan.id,
+      drafts: [for (final q in plan.plan.quests) q.toJson()],
+    );
     if (!mounted) return;
     context.go(Routes.status);
   }

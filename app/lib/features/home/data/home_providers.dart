@@ -1,4 +1,4 @@
-// Провайдеры главного экрана: часы, локальные отметки ежедневных квестов.
+// Провайдеры главного экрана: инжектируемые часы (общие для «Статуса» и «Квестов»).
 import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,15 +26,4 @@ class HomeClock extends Notifier<DateTime> {
     ref.onDispose(() => _timer?.cancel());
     return t;
   }
-}
-
-/// Локальные отметки ежедневных квестов (id → выполнен). Пока только UI.
-final dailyQuestChecksProvider =
-    NotifierProvider<DailyQuestChecks, Map<String, bool>>(DailyQuestChecks.new);
-
-class DailyQuestChecks extends Notifier<Map<String, bool>> {
-  @override
-  Map<String, bool> build() => const {};
-
-  void set(String id, bool done) => state = {...state, id: done};
 }

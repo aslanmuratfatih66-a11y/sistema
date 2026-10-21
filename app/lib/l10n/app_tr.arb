@@ -247,6 +247,50 @@
   "hqNutritionDiaryTitle": "Beslenme günlüğü",
   "hqNutritionDiarySoon": "Beslenme günlüğünü, yemek fotoğraflarını ve makro takibini Sistem bir sonraki aşamada açacak.",
   "hqFinanceFoodTitle": "Yemek bütçesi",
+  "ntfQuestTitle": "[ Görev ] {title}",
+  "ntfPenaltyQuestTitle": "[ Ceza görevi ] {title}",
+  "ntfBossTitle": "[ Haftanın patronu ] {title}",
+  "ntfQuestBody": "Son süre: {time}. Ödül: +{diamonds} ◆",
+  "ntfQuestBodyNoReward": "Son süre: {time}.",
+  "ntfPenaltyQuestBody": "Son süre: {time}. Reddedilemez.",
+  "ntfReproachTitle": "[ Sistem ] Görev tamamlanmadı",
+  "ntfReproachBody": "«{title}» gecikti. Sistem eylemsizliği kaydetti. Hemen tamamla.",
+  "ntfActionDone": "Tamamlandı",
+  "ntfActionSnooze": "+10 dk",
+  "ntfChannelQuests": "Görevler",
+  "ntfChannelQuestsDesc": "Görev hatırlatmaları, sitemler ve Sistem mesajları",
+  "ntfChannelNag": "Israrcı hatırlatma",
+  "ntfChannelNagDesc": "Görev tamamlanana kadar her dakika tekrar",
+  "ntfFailedTitle": "[ Sistem ] Görev başarısız",
+  "ntfFailedBody": "«{title}»: −{diamonds} ◆",
+  "ntfPenaltyTitle": "[ Ceza ] −{diamonds} ◆",
+  "ntfLevelUpTitle": "[ Sistem ] Seviye atladın",
+  "ntfLevelUpBody": "Seviye {level}. Serbest puan: {points}",
+  "ntfTestTitle": "[ Sistem ] Bağlantı testi",
+  "ntfTestBody": "Bildirimler çalışıyor. Oyuncu, emirleri bekle.",
+  "ntfTestSent": "Bildirim gönderildi",
+  "ntfSectionGeneral": "Genel",
+  "ntfEnabled": "Hatırlatmalar",
+  "ntfEnabledHint": "Görevler için yerel bildirimler",
+  "ntfNag": "Her dakika ısrar et",
+  "ntfNagHint": "«Tamamlandı»ya basana kadar tekrar",
+  "ntfReproach": "Sitemler",
+  "ntfReproachHint": "Süre dolduktan 15 dk sonra, görev yapılmadıysa",
+  "ntfVoice": "Ses olarak karakterin sesi",
+  "ntfVoiceHint": "6. aşamada gelecek — şimdilik standart ses",
+  "ntfSectionQuiet": "Sessiz saatler",
+  "ntfQuietEnabled": "Rahatsız etme",
+  "ntfQuietHint": "Bu sürede ses yok, sitem bitişten sonra gelir",
+  "ntfQuietFrom": "Başlangıç",
+  "ntfQuietTo": "Bitiş",
+  "ntfSectionPermission": "İzin",
+  "ntfPermGranted": "Bildirimlere izin verildi",
+  "ntfPermDenied": "Bildirimler kapalı — görevler hatırlatma yapamaz",
+  "ntfPermUnknown": "İzin durumu bilinmiyor",
+  "ntfPermExactOff": "Tam zamanlı alarmlar kapalı — hatırlatmalar gecikebilir",
+  "ntfPermRequest": "İzin iste",
+  "ntfTest": "Bildirimi test et",
+  "ntfUnavailable": "Bu platformda bildirimler kullanılamaz",
   "planNoticeLabel": "Bildirim",
   "planTitle": "Plan hazırlandı",
   "planDraftNote": "Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.",
@@ -649,6 +693,285 @@
   "qbPermAlarms": "Alarmlar",
   "qbPermAlarmsWhy": "Kalkış ve önemli görevler için tam zamanlı alarmlar.",
   "qbPermAlarmsLater": "Alarm aşamasında ayarlanacak.",
+  "qeQuestPenaltyCleaning": "Ceza: {minutes} dk temizlik",
+  "@qeQuestPenaltyCleaning": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyReading": "Ceza: {minutes} dk okuma",
+  "@qeQuestPenaltyReading": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyPlank": "Ceza: {seconds} sn plank",
+  "@qeQuestPenaltyPlank": {
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyWalk": "Ceza: {minutes} dk yürüyüş",
+  "@qeQuestPenaltyWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestPenaltyNoGames": "Ceza: oyunsuz ve sosyal medyasız akşam",
+  "qeQuestBoostWalk": "Güçlendirme: {minutes} dk yürüyüş",
+  "@qeQuestBoostWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBoostWater": "Güçlendirme: {ml} ml ek su",
+  "@qeQuestBoostWater": {
+    "placeholders": {
+      "ml": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBoostBedOnTime": "Güçlendirme: en geç {time} yatış",
+  "@qeQuestBoostBedOnTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBoostPlanTomorrow": "Güçlendirme: yarını planla",
+  "qeQuestBossAll": "Bu hafta {count} görev tamamla",
+  "@qeQuestBossAll": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossStrength": "{count} güç görevi tamamla",
+  "@qeQuestBossStrength": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossEndurance": "{count} dayanıklılık görevi tamamla",
+  "@qeQuestBossEndurance": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossDiscipline": "{count} disiplin görevi tamamla",
+  "@qeQuestBossDiscipline": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossIntellect": "{count} zekâ görevi tamamla",
+  "@qeQuestBossIntellect": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossHealth": "{count} sağlık görevi tamamla",
+  "@qeQuestBossHealth": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeQuestBossLooks": "{count} görünüm görevi tamamla",
+  "@qeQuestBossLooks": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectVigor": "Zindelik +{pct}% deneyim",
+  "@qeEffectVigor": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectDehydration": "Susuzluk −{pct}% dayanıklılık",
+  "@qeEffectDehydration": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectBossAura": "Galip aurası +{pct}% ◆",
+  "@qeEffectBossAura": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeTitleStreak7": "Yılmaz",
+  "qeTitleStreak30": "Demir İrade",
+  "qeTitleBossSlayer": "Boss Galibi",
+  "qeTitleBossHunter": "Boss Avcısı",
+  "qeTitleLevel10": "Uyanmış",
+  "qeTitleLevel25": "Çelikleşmiş",
+  "qeTitleLevel50": "Sistem Efsanesi",
+  "qeReasonFailedQuests": "Günün başarısızlıkları. Ceza görevi atandı",
+  "qeReasonMarkWalked": "İşaret: arkadaşlarla gezdin. Dürüstlük cezayı hafifletir",
+  "qeReasonMarkAlcohol": "İşaret: alkol. Yarın güçlendirilmiş plan",
+  "qeReasonMarkRelapse": "İşaret: kaçamak. Yarın güçlendirilmiş plan",
+  "qeReasonBossFailed": "Haftanın bossu yenilmedi",
+  "qeReasonReproach": "Görev yapılmadı. Sistem memnun değil",
+  "qeReasonOther": "Sistem cezası",
+  "qstViewToday": "Bugün",
+  "qstViewWeek": "Hafta",
+  "qstViewHistory": "Geçmiş",
+  "qstFilterTitle": "Filtre",
+  "qstFilterActive": "Filtre: {count}",
+  "qstFilterReset": "Sıfırla",
+  "qstFilterKind": "Tür",
+  "qstFilterStat": "Özellik",
+  "qstKindDaily": "Günlük",
+  "qstKindSchedule": "Programdan",
+  "qstKindGoal": "Hedef",
+  "qstKindPenalty": "Ceza",
+  "qstKindBoss": "Boss",
+  "qstStatusPending": "Aktif",
+  "qstStatusDone": "Tamamlandı",
+  "qstStatusFailed": "Başarısız",
+  "qstStatusRefused": "Reddedildi",
+  "qstStatusExcused": "Mola: cezasız",
+  "qstEmptyDay": "Bugün için görev yok",
+  "qstEmptyWeek": "Bu hafta için görev yok",
+  "qstEmptyFiltered": "Filtreye uyan görev yok",
+  "qstEmptyHistory": "Kayıt yok",
+  "qstLoadError": "Sistem yanıt vermiyor. Daha sonra tekrar deneyin.",
+  "qstActionRejected": "Sistem işlemi reddetti.",
+  "qstNoValue": "—",
+  "qstAllDay": "Gün içinde",
+  "qstOpenQuest": "Görevi aç",
+  "qstSubtasks": "Alt görevler",
+  "qstProgress": "İlerleme",
+  "qstProgressAddLabel": "İlerleme ekle: {step}",
+  "qstRefusePenalty": "Ret: −{points} ◆",
+  "qstNoRefuse": "Ceza görevi: reddedilemez",
+  "qstArchive": "Arşivle",
+  "qstArchiveConfirm": "Görev arşivlenecek ve bir daha görünmeyecek.",
+  "qstNewQuest": "Yeni görev",
+  "qstEditQuest": "Görevi düzenle",
+  "qstBossReward": "Ödül: +{points} ◆, +{xp} XP",
+  "qstDiamondsDelta": "{value} ◆",
+  "qstXpDelta": "{value} XP",
+  "qstHistCompleted": "Tamamlandı",
+  "qstHistFailed": "Başarısız",
+  "qstHistRefused": "Ret",
+  "qstHistPenalty": "Ceza",
+  "qstHistBonus": "Bonus",
+  "qstHistPurchase": "Satın alma",
+  "qstHistMark": "Gün işareti",
+  "qstHistPauseStarted": "Mola",
+  "qstHistPauseEnded": "Mola bitti",
+  "qstHistStatPoint": "Özellik puanı",
+  "qstHistBossCompleted": "Boss yenildi",
+  "qstHistBossFailed": "Boss yenilmedi",
+  "qstHistDisciplineOn": "Disiplin açıldı",
+  "qstHistDisciplineOff": "Disiplin kapandı",
+  "qstHistAdjustment": "Düzeltme",
+  "qstMarksTitle": "Dürüst işaretler",
+  "qstMarksHint": "Dürüst işaret, gizli bir kaçamaktan daha hafiftir. Yarın — güçlendirilmiş plan.",
+  "qstMarkWalked": "Arkadaşlarla gezdim",
+  "qstMarkAlcohol": "Alkol",
+  "qstMarkRelapse": "Kendimi tutamadım",
+  "qstMarkConfirmTitle": "İşaretle: {mark}?",
+  "qstMarkConfirmMessage": "Dürüst işaret gizli kaçamaktan daha hafiftir: şimdi küçük bir ceza, yarın güçlendirilmiş plan.",
+  "qstMarkConfirm": "İşaretle",
+  "qstPauseTitle": "Mola",
+  "qstPauseHint": "Hastalık, tatil, izin: ceza yazılmaz, seri bozulmaz.",
+  "qstPauseStart": "Mola ver",
+  "qstPauseEnd": "Molayı bitir",
+  "qstPauseConfirm": "Molayı başlat",
+  "qstPauseReason": "Neden",
+  "qstPauseReasonIllness": "Hastalık",
+  "qstPauseReasonVacation": "İzin",
+  "qstPauseReasonHolidays": "Okul tatili",
+  "qstPauseReasonOther": "Diğer",
+  "qstPauseActive": "Mola: {reason}",
+  "qstPauseUntil": "{date} tarihine kadar",
+  "qstPauseUntilRemoved": "Bitirene kadar",
+  "qstPauseUntilDate": "Tarihe kadar",
+  "qstPauseEndDate": "Molanın son günü",
+  "qstPausedPill": "Mola",
+  "qstDisciplinePill": "Disiplin",
+  "qstPlayerNoName": "Oyuncu",
+  "qstStatPointsTitle": "Özellik puanları",
+  "qstStatPointsLeft": "Boş: {count}",
+  "qstStatPointAdd": "Puan ekle: {stat}",
+  "qstWindowFailedMessage": "«{quest}». Ceza: −{points} ◆.",
+  "qstWindowFailedMany": "Başarısız görev: {count}. Ceza: −{points} ◆.",
+  "qstWindowRefusedTitle": "Görev reddedildi",
+  "qstWindowPenaltyTitle": "Ceza",
+  "qstWindowPenaltyMessage": "{reason}. Ceza: −{points} ◆.",
+  "qstWindowPenaltyQuest": "Ceza görevi verildi: «{quest}».",
+  "qstLevelUpTitle": "Seviye atladın",
+  "qstLevelUpLevel": "LV {level}",
+  "qstLevelUpRank": "Yeni rütbe: {rank}",
+  "qstLevelUpPoints": "Boş özellik puanı: {count}",
+  "qstTitleGot": "Unvan: «{title}»",
+  "qstBossWonTitle": "Boss yenildi",
+  "qstBossLostTitle": "Boss yenilmedi",
+  "qstBossLostMessage": "Hafta zafersiz kapandı. Yeni boss — pazartesi.",
+  "qstDisciplineOnTitle": "Disiplin modu açık",
+  "qstDisciplineOnMessage": "Kalkış 6:00, yatış 22:00, plan sınırları içinde ek yük. Bakiye ◆ pozitif olunca mod kapanır.",
+  "qstDisciplineOffTitle": "Disiplin modu kapandı",
+  "qstDisciplineOffMessage": "Bakiye düzeldi. Normal mod.",
+  "qstDisciplineMore": "Ayrıntılar",
+  "qstFormTitle": "Ad",
+  "qstFormTitleHint": "Örneğin: 10 dakika esneme",
+  "qstFormStat": "Özellik",
+  "qstFormTimed": "Belirli saatte",
+  "qstFormTimedHint": "Aksi halde gün içinde",
+  "qstFormTime": "Saat",
+  "qstFormWindow": "Süre penceresi",
+  "qstMinutesUnit": "dk",
+  "qstFormWeekdays": "Haftanın günleri",
+  "qstFormWeekdaysHint": "Seçilmezse her gün",
+  "qstFormWeekParity": "Hafta dönüşümü",
+  "qstWeekEvery": "Her hafta",
+  "qstWeek1": "Hafta 1",
+  "qstWeek2": "Hafta 2",
+  "qstFormSubtasks": "Alt görevler",
+  "qstFormSubtaskHint": "Alt görev {n}",
+  "qstFormAddSubtask": "Alt görev ekle",
+  "qstFormRemoveSubtask": "Alt görevi kaldır",
+  "qstFormDefaultReward": "Ödül ve ceza — Sistem kurallarına göre",
+  "qstFormDefaultRewardHint": "Sistem ◆ ve deneyimi görev türüne göre hesaplar",
+  "qstFormRewardDiamonds": "Ödül, ◆",
+  "qstFormRewardXp": "Deneyim, XP",
+  "qstFormPenalty": "Başarısızlık cezası, ◆",
+  "qstFormNag": "Israr et",
+  "qstFormNagHint": "Tamamlanana kadar her dakika hatırlat",
   "schTitle": "Ders programı",
   "schInstitution": "Eğitim kurumu",
   "schInstSchool": "Okul",
@@ -793,5 +1116,175 @@
   "setReminders": "Hatırlatmalar",
   "setRemindersHint": "Sessiz saatler, tekrar, sitemler",
   "setDiscipline": "Disiplin modu",
-  "setDisciplineHint": "06:00 kalkış, 22:00 yatış, ek yük"
+  "setDisciplineHint": "06:00 kalkış, 22:00 yatış, ek yük",
+  "shpNoticeLabel": "Bildirim",
+  "shpWarningLabel": "Uyarı",
+  "shpTitle": "Ödül mağazası",
+  "shpBalance": "Bakiye",
+  "shpClosedMessage": "Mağaza kapalı: bakiye eksi",
+  "shpClosedHint": "Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten atandı.",
+  "shpRewards": "Ödüller",
+  "shpAdd": "Yeni ödül",
+  "shpEmptyTitle": "Henüz ödül yok",
+  "shpEmptyText": "Ödülleri siz belirler, ◆ ile satın alırsınız. Formu doldurmak için bir örneğe dokunun:",
+  "shpExampleChocolate": "Çikolata",
+  "shpExampleFastFood": "Fast food",
+  "shpExampleGames": "Bir saat oyun",
+  "shpExampleFreeEvening": "Görevsiz bir akşam",
+  "shpBuy": "Satın al",
+  "shpLimitNone": "Sınırsız",
+  "shpLimitDay": "{count, plural, one{Günde {count} kez} other{Günde {count} kez}}",
+  "@shpLimitDay": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitWeek": "{count, plural, one{Haftada {count} kez} other{Haftada {count} kez}}",
+  "@shpLimitWeek": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitMonth": "{count, plural, one{Ayda {count} kez} other{Ayda {count} kez}}",
+  "@shpLimitMonth": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitLeft": "kalan {count}",
+  "@shpLimitLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpLimitReachedUntil": "{date} tarihine kadar sınır doldu",
+  "@shpLimitReachedUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "shpNotEnough": "{count} ◆ eksik",
+  "@shpNotEnough": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shpConfirmTitle": "Satın almayı onaylayın",
+  "shpConfirmMessage": "«{title}» — {price} ◆. Satın alma sonrası bakiye: {after} ◆.",
+  "@shpConfirmMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "price": {
+        "type": "int"
+      },
+      "after": {
+        "type": "int"
+      }
+    }
+  },
+  "shpBoughtMessage": "«{title}» ödülü alındı. Sistem satın almayı kaydetti.",
+  "@shpBoughtMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "shpFailedMessage": "Satın alma reddedildi: yetersiz ◆ veya mağaza kapalı.",
+  "shpLimitReachedMessage": "Bu ödülün dönem sınırı doldu.",
+  "shpHistory": "Satın alma geçmişi",
+  "shpHistoryEmpty": "Henüz satın alma yok",
+  "shpArchive": "Arşiv",
+  "shpRestore": "Geri al",
+  "shpReorder": "Sıralama",
+  "shpMoveUp": "Yukarı",
+  "shpMoveDown": "Aşağı",
+  "shpEditorNew": "Yeni ödül",
+  "shpEditorEdit": "Ödül",
+  "shpFieldTitle": "Ad",
+  "shpFieldTitleHint": "Örneğin: bir saat oyun",
+  "shpFieldPrice": "Fiyat",
+  "shpFieldPriceHint": "Ödülün kaç ◆ tuttuğu",
+  "shpFieldLimit": "Sıklık sınırı",
+  "shpPeriodNone": "Yok",
+  "shpPeriodDay": "Gün",
+  "shpPeriodWeek": "Hafta",
+  "shpPeriodMonth": "Ay",
+  "shpFieldLimitCount": "Dönem başına kaç kez",
+  "shpToArchive": "Arşive taşı",
+  "shpErrorPrice": "1 ile 100000 arası",
+  "shpErrorCount": "1 ile 99 arası",
+  "dscTitle": "Disiplin modu",
+  "dscStatus": "Durum",
+  "dscOn": "Açık",
+  "dscOff": "Kapalı",
+  "dscReasonLabel": "Neden",
+  "dscReasonDebt": "eksi bakiye",
+  "dscReasonManual": "elle açıldı",
+  "dscReasonAi": "bir aksamadan sonra Sistem kararı",
+  "dscExitLabel": "Kapanacak",
+  "dscExitBalancePositive": "bakiye artıya geçtiğinde",
+  "dscExitManual": "elle, bakiye eksi değilken",
+  "dscSinceLabel": "Başlangıç",
+  "dscOffText": "Bakiye ◆ eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.",
+  "dscBalance": "Bakiye",
+  "dscToday": "Bugünün kuralları",
+  "dscRulesNote": "Yük seviyenizi aşmaz. Yemek ve uyku kısılmaz: yatış ve kalkış her zamankinden geç olmaz.",
+  "dscCannotRefuse": "Mod görevleri iptal edilemez.",
+  "dscPreviewNote": "Disiplin modunda bir gün böyle görünecek.",
+  "dscBlockerTitle": "Uygulama engelleme",
+  "dscBlockerText": "Yatıştan sonra eğlence uygulamalarını engelleme daha sonra eklenecek.",
+  "dscBlockerSoon": "Sonra",
+  "dscEnable": "Modu aç",
+  "dscDisable": "Modu kapat",
+  "dscEnableConfirmMessage": "Kalkış 6:00, yatış 22:00, ek egzersiz. Mod görevleri iptal edilemez.",
+  "dscDisableLocked": "Bakiye eksiyken kapatılamaz.",
+  "dscChangedOnMessage": "Disiplin modu açıldı. Kalkış 6:00, yatış 22:00, ek egzersiz.",
+  "dscChangedOffMessage": "Disiplin modu kapatıldı.",
+  "dscQuestWake": "{time} kalkış",
+  "@dscQuestWake": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestBed": "{time} yatış",
+  "@dscQuestBed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dscQuestWorkout": "Ek antrenman: {minutes} dk",
+  "@dscQuestWorkout": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "dscQuestWalk": "Sakin yürüyüş: {minutes} dk",
+  "@dscQuestWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
 }
