@@ -2,8 +2,8 @@
 
 ## Сейчас
 Этап: 1 — Онбординг, профиль, расписание, план
-Статус: доработка 1.1 — собирается в CI
-Следующий шаг: дождаться зелёного CI (gh run watch), записать ссылки на ipa/apk, попросить проверку на телефоне
+Статус: доработка 1.1 — ждёт проверки на телефоне
+Следующий шаг: получить замечания владельца по 1.1 с телефона; если ок — этап 1 завершён, переход к этапу 2
 
 ## Этап 1 — чек-лист
 - [x] Каркас: схема БД v2 (Profiles, BodyMeasurements, Photos, Goals, ScheduleSettings/Items, Plans, QuestionnaireSections), enums, QuestionnaireRepository, хост анкеты (OnboardingScreen/StepFrame/StepScope/StepEditScreen), роутер с redirect на /onboarding, поля ввода ui/form_fields.dart, зависимости (camera, permission_handler, file_picker, share_plus, uuid, path), Info.plist/манифест, Drift в вебе
@@ -73,10 +73,10 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39605607416 (app) и …/39605607323 (server) — зелёные
+Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39615717883 (app) и …/39615717981 (server) — зелёные
 Артефакты:
-- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39605607416/artifacts/12349055879
-- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39605607416/artifacts/12348945699
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39615717883/artifacts/12353125786
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39615717883/artifacts/12354160396
 
 ## Что нужно от пользователя
 - Проверить на телефоне 1.1: обхваты необязательны, фото-сессия с голосом/отсчётом (фронталка, незеркальные снимки, профиль L/R), выбор персонажа и проба голоса, персонаж поверх экранов, короткий «Статус», вкладки Квесты/Питание, финансы в «Ещё»
@@ -84,7 +84,7 @@
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 
 ## История
-- 2026-10-21 — этап 1 — доработка 1.1 (сабагенты F/G/H) интегрирована, отправлена в CI
+- 2026-10-21 — этап 1 — доработка 1.1 (сабагенты F/G/H) интегрирована, CI зелёный, ждёт проверки на телефоне
 - 2026-10-21 — этап 1 — собран, CI зелёный, ждёт проверки на телефоне
 - 2026-10-21 — этап 0 — проверен на телефоне; добавлен веб-предпросмотр (main_preview.dart)
 - 2026-10-21 — этап 0 — каркас, дизайн-система, главный экран, CapabilityService, сервер-заготовка, CI зелёный
