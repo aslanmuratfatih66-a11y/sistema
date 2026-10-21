@@ -4,9 +4,9 @@ import 'package:intl/intl.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../../ui/ui.dart';
-import '../data/home_providers.dart';
-import '../models/home_view_data.dart';
-import '../utils/home_format.dart';
+import '../../home/data/home_providers.dart';
+import '../../home/models/home_view_data.dart';
+import '../../home/utils/home_format.dart';
 
 /// «3 д 13:14» до конца недели.
 String bossTimeLeft(AppLocalizations l, Duration left) {

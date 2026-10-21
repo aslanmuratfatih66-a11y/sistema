@@ -156,6 +156,5 @@ HomeViewData buildDemoHomeData(DateTime now) {
     ),
     calories: const CaloriesSummary(eaten: 640, burned: 1420, deficit: 450),
     finance: const FoodFinance(spent: 1240, limit: 3500, currencyCode: 'RUB', daysToStipend: 9),
-    assistant: AssistantState(line: _t((l) => l.homeDemoAssistantLine)),
   );
 }

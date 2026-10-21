@@ -9,13 +9,15 @@ import '../../../ui/ui.dart';
 import '../step_scope.dart';
 import 'camera/capture_flow.dart';
 import 'camera/capture_guide.dart';
+import 'camera/guided_capture_screen.dart';
 import 'data/photo_repository.dart';
 import 'data/serial_writer.dart';
 import 'widgets/estimate_block.dart';
 import 'widgets/photo_slot.dart';
-import 'widgets/tip_line.dart';
+import 'widgets/session_card.dart';
 
-/// Этап 4 «Кожа»: фото лица (анфас, профили, крупные планы) + опрос (раздел skin) + блок оценки.
+/// Этап 4 «Кожа»: фото-сессия лица (анфас, профиль слева/справа), крупные планы вручную,
+/// опрос (раздел skin) + блок оценки.
 class SkinStep extends ConsumerStatefulWidget {
   const SkinStep({super.key});
 
@@ -60,16 +62,23 @@ class _SkinStepState extends ConsumerState<SkinStep> {
             .patch(QuestionnaireSection.skin, {'photosTaken': photos.any((p) => p.sessionId == null)});
       });
 
-  Future<void> _capture(PhotoPose pose, CaptureGuide guide, String title, String instruction, {bool replace = true}) async {
+  Future<void> _startSession() async {
+    final saved = await GuidedCaptureScreen.open(context, GuidedSessionKind.face);
+    if (saved) _syncPhotosTaken();
+  }
+
+  /// Крупный план — вручную, можно несколько (replace: false).
+  Future<void> _addCloseup() async {
+    final l = AppLocalizations.of(context);
     final saved = await captureAndSavePhoto(
       context,
       ref,
       kind: PhotoKind.skin,
-      pose: pose,
-      guide: guide,
-      title: title,
-      instruction: instruction,
-      replace: replace,
+      pose: PhotoPose.closeup,
+      guide: CaptureGuide.closeup,
+      title: l.qaPoseCloseup,
+      instruction: l.qaPoseCloseupHint,
+      replace: false,
       preferFrontCamera: true,
     );
     if (saved) _syncPhotosTaken();
@@ -99,16 +108,6 @@ class _SkinStepState extends ConsumerState<SkinStep> {
 
     final closeups = photos.where((p) => p.pose == PhotoPose.closeup.name).toList();
 
-    Widget faceSlot(PhotoPose pose, CaptureGuide guide, String label, String instruction) => PhotoSlot(
-          label: label,
-          guide: guide,
-          photo: byPose(pose),
-          onTap: camera ? () => _capture(pose, guide, label, instruction) : null,
-        );
-
-    void addCloseup() =>
-        _capture(PhotoPose.closeup, CaptureGuide.closeup, l.qaPoseCloseup, l.qaPoseCloseupHint, replace: false);
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -116,26 +115,15 @@ class _SkinStepState extends ConsumerState<SkinStep> {
           Text(l.qaSkinIntro, style: SysText.secondary),
           const SysFieldGap(),
         ],
-        SysPanel(
-          title: l.qaPhotoTipsTitle,
-          animateIn: false,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [for (final t in [l.qaSkinTipLight, l.qaSkinTipClean, l.qaSkinTipHair]) TipLine(t)],
-          ),
-        ),
-        const SysFieldGap(),
         if (!camera) const CameraUnavailableNote(),
-        SysFieldLabel(l.qaSkinFacePhotos, optional: true, optionalLabel: l.commonOptional),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(child: faceSlot(PhotoPose.faceFront, CaptureGuide.faceFront, l.qaPoseFaceFront, l.qaPoseFaceFrontHint)),
-            const SizedBox(width: 10),
-            Expanded(child: faceSlot(PhotoPose.faceLeft, CaptureGuide.faceLeft, l.qaPoseFaceLeft, l.qaPoseFaceLeftHint)),
-            const SizedBox(width: 10),
-            Expanded(child: faceSlot(PhotoPose.faceRight, CaptureGuide.faceRight, l.qaPoseFaceRight, l.qaPoseFaceRightHint)),
+        SessionCard(
+          title: l.qaShootCardFace,
+          thumbs: [
+            SessionThumb(l.qaPoseFaceFront, CaptureGuide.faceFront, byPose(PhotoPose.faceFront)),
+            SessionThumb(l.qaPoseFaceLeft, CaptureGuide.faceLeft, byPose(PhotoPose.faceLeft)),
+            SessionThumb(l.qaPoseFaceRight, CaptureGuide.faceRight, byPose(PhotoPose.faceRight)),
           ],
+          onStart: camera ? _startSession : null,
         ),
         const SysFieldGap(),
         SysFieldLabel(l.qaSkinCloseups, hint: l.qaSkinCloseupsHint, optional: true, optionalLabel: l.commonOptional),
@@ -156,14 +144,13 @@ class _SkinStepState extends ConsumerState<SkinStep> {
                     onDelete: () => _delete(p),
                   ),
                 ),
-              if (camera)
-                SizedBox(
-                  width: w,
-                  child: PhotoSlot(label: l.qaSkinAddCloseup, guide: CaptureGuide.closeup, photo: null, onTap: addCloseup),
-                ),
             ],
           );
         }),
+        if (camera) ...[
+          if (closeups.isNotEmpty) const SizedBox(height: 10),
+          SysButton.secondary(label: l.qaShootCloseupButton, icon: SysGlyph.plus, onPressed: _addCloseup, expand: true),
+        ],
         const SysFieldGap(),
         if (_loaded) ...[
           SysFieldLabel(l.qaSkinOily),
@@ -218,7 +205,10 @@ class _SkinStepState extends ConsumerState<SkinStep> {
         SysPanel(
           title: l.qaEstimateTitle,
           animateIn: false,
-          child: EstimateBlock(items: [l.qaEstSkinType, l.qaEstAcne, l.qaEstBlackheads, l.qaEstPostAcne]),
+          child: EstimateBlock(
+            items: [l.qaEstSkinType, l.qaEstAcne, l.qaEstBlackheads, l.qaEstPostAcne],
+            aiNote: l.qaShootAiNoteSkin,
+          ),
         ),
         const SysFieldGap(),
         SysPanel(

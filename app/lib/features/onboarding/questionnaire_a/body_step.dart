@@ -11,6 +11,7 @@ import '../step_scope.dart';
 import 'data/measurement_repository.dart';
 import 'data/serial_writer.dart';
 import 'widgets/option_list.dart';
+import 'widgets/tip_line.dart';
 
 /// Допустимые диапазоны (см, кг).
 class BodyRanges {
@@ -25,7 +26,8 @@ class BodyRanges {
   static bool ok(num? v, (double, double) r) => v != null && v >= r.$1 && v <= r.$2;
 }
 
-/// Этап 2 «Тело»: рост и вес (обязательно), обхваты, активность, нагрузка.
+/// Этап 2 «Тело»: рост и вес (обязательно), обхваты (необязательно, свёрнуто — «если знаете»; иначе
+/// Система оценит их по фото), активность, нагрузка.
 class BodyStep extends ConsumerStatefulWidget {
   const BodyStep({super.key});
 
@@ -39,6 +41,9 @@ class _BodyStepState extends ConsumerState<BodyStep> {
   num? _height, _weight, _waist, _hips, _chest, _neck, _arm;
   ActivityLevel? _activity;
   Workload? _workload;
+
+  /// Секция обхватов раскрыта (по умолчанию — только если что-то уже введено).
+  bool _girthsOpen = false;
 
   @override
   void initState() {
@@ -61,6 +66,7 @@ class _BodyStepState extends ConsumerState<BodyStep> {
       _chest = m?.chestCm;
       _neck = m?.neckCm;
       _arm = m?.armCm;
+      _girthsOpen = [_waist, _hips, _chest, _neck, _arm].any((v) => v != null);
     });
   }
 
@@ -101,7 +107,9 @@ class _BodyStepState extends ConsumerState<BodyStep> {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final scope = StepScope.maybeOf(context);
-    scope?.setCanProceed(_loaded && BodyRanges.ok(_height, BodyRanges.height) && BodyRanges.ok(_weight, BodyRanges.weight));
+    scope?.setCanProceed(
+      _loaded && BodyRanges.ok(_height, BodyRanges.height) && BodyRanges.ok(_weight, BodyRanges.weight),
+    );
     if (!_loaded) {
       return const Padding(
         padding: EdgeInsets.all(24),
@@ -109,16 +117,17 @@ class _BodyStepState extends ConsumerState<BodyStep> {
       );
     }
     Widget pair(Widget a, Widget b) => Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [Expanded(child: a), const SizedBox(width: 12), Expanded(child: b)],
-        );
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(child: a),
+        const SizedBox(width: 12),
+        Expanded(child: b),
+      ],
+    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        if (scope?.editing != true) ...[
-          Text(l.qaBodyIntro, style: SysText.secondary),
-          const SysFieldGap(),
-        ],
+        if (scope?.editing != true) ...[Text(l.qaBodyIntro, style: SysText.secondary), const SysFieldGap()],
         pair(
           _number(
             label: l.qaBodyHeight,
@@ -142,80 +151,89 @@ class _BodyStepState extends ConsumerState<BodyStep> {
           ),
         ),
         const SysFieldGap(),
-        SysPanel(
-          title: l.qaBodyGirths,
-          animateIn: false,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(l.qaBodyGirthsHint, style: SysText.caption),
-              const SizedBox(height: 10),
-              pair(
-                _number(
-                  label: l.qaBodyWaist,
-                  value: _waist,
-                  unit: l.qaUnitCm,
-                  range: BodyRanges.waist,
-                  optional: true,
-                  onChanged: (v) {
-                    setState(() => _waist = v);
-                    _saveMeasurement(BodyMeasurementsCompanion(waistCm: _v(v, BodyRanges.waist)));
-                  },
-                ),
-                _number(
-                  label: l.qaBodyHips,
-                  value: _hips,
-                  unit: l.qaUnitCm,
-                  range: BodyRanges.hips,
-                  optional: true,
-                  onChanged: (v) {
-                    setState(() => _hips = v);
-                    _saveMeasurement(BodyMeasurementsCompanion(hipsCm: _v(v, BodyRanges.hips)));
-                  },
-                ),
+        _GirthsSection(
+          open: _girthsOpen,
+          onToggle: () => setState(() => _girthsOpen = !_girthsOpen),
+          children: [
+            Text(l.qaBodyGirthsOptionalHint, style: SysText.caption),
+            const SizedBox(height: 8),
+            Text(l.qaBodyGirthsHowTitle.toUpperCase(), style: SysText.label),
+            const SizedBox(height: 4),
+            for (final t in [
+              l.qaBodyGirthsHowGeneral,
+              l.qaBodyWaistHow,
+              l.qaBodyHipsHow,
+              l.qaBodyChestHow,
+              l.qaBodyNeckHow,
+              l.qaBodyArmHow,
+            ])
+              TipLine(t),
+            const SizedBox(height: 10),
+            pair(
+              _number(
+                label: l.qaBodyWaist,
+                value: _waist,
+                unit: l.qaUnitCm,
+                range: BodyRanges.waist,
+                optional: true,
+                onChanged: (v) {
+                  setState(() => _waist = v);
+                  _saveMeasurement(BodyMeasurementsCompanion(waistCm: _v(v, BodyRanges.waist)));
+                },
               ),
-              const SysFieldGap(),
-              pair(
-                _number(
-                  label: l.qaBodyChest,
-                  value: _chest,
-                  unit: l.qaUnitCm,
-                  range: BodyRanges.chest,
-                  optional: true,
-                  onChanged: (v) {
-                    setState(() => _chest = v);
-                    _saveMeasurement(BodyMeasurementsCompanion(chestCm: _v(v, BodyRanges.chest)));
-                  },
-                ),
-                _number(
-                  label: l.qaBodyNeck,
-                  value: _neck,
-                  unit: l.qaUnitCm,
-                  range: BodyRanges.neck,
-                  optional: true,
-                  onChanged: (v) {
-                    setState(() => _neck = v);
-                    _saveMeasurement(BodyMeasurementsCompanion(neckCm: _v(v, BodyRanges.neck)));
-                  },
-                ),
+              _number(
+                label: l.qaBodyHips,
+                value: _hips,
+                unit: l.qaUnitCm,
+                range: BodyRanges.hips,
+                optional: true,
+                onChanged: (v) {
+                  setState(() => _hips = v);
+                  _saveMeasurement(BodyMeasurementsCompanion(hipsCm: _v(v, BodyRanges.hips)));
+                },
               ),
-              const SysFieldGap(),
-              pair(
-                _number(
-                  label: l.qaBodyArm,
-                  value: _arm,
-                  unit: l.qaUnitCm,
-                  range: BodyRanges.arm,
-                  optional: true,
-                  onChanged: (v) {
-                    setState(() => _arm = v);
-                    _saveMeasurement(BodyMeasurementsCompanion(armCm: _v(v, BodyRanges.arm)));
-                  },
-                ),
-                const SizedBox.shrink(),
+            ),
+            const SysFieldGap(),
+            pair(
+              _number(
+                label: l.qaBodyChest,
+                value: _chest,
+                unit: l.qaUnitCm,
+                range: BodyRanges.chest,
+                optional: true,
+                onChanged: (v) {
+                  setState(() => _chest = v);
+                  _saveMeasurement(BodyMeasurementsCompanion(chestCm: _v(v, BodyRanges.chest)));
+                },
               ),
-            ],
-          ),
+              _number(
+                label: l.qaBodyNeck,
+                value: _neck,
+                unit: l.qaUnitCm,
+                range: BodyRanges.neck,
+                optional: true,
+                onChanged: (v) {
+                  setState(() => _neck = v);
+                  _saveMeasurement(BodyMeasurementsCompanion(neckCm: _v(v, BodyRanges.neck)));
+                },
+              ),
+            ),
+            const SysFieldGap(),
+            pair(
+              _number(
+                label: l.qaBodyArm,
+                value: _arm,
+                unit: l.qaUnitCm,
+                range: BodyRanges.arm,
+                optional: true,
+                onChanged: (v) {
+                  setState(() => _arm = v);
+                  _saveMeasurement(BodyMeasurementsCompanion(armCm: _v(v, BodyRanges.arm)));
+                },
+              ),
+              const SizedBox.shrink(),
+            ),
+          ],
         ),
         const SysFieldGap(),
         SysFieldLabel(l.qaBodyActivity),
@@ -251,6 +269,51 @@ class _BodyStepState extends ConsumerState<BodyStep> {
           },
         ),
       ],
+    );
+  }
+}
+
+/// Свёрнутая секция «Обхваты — если знаете».
+class _GirthsSection extends StatelessWidget {
+  const _GirthsSection({required this.open, required this.onToggle, required this.children});
+
+  final bool open;
+  final VoidCallback onToggle;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    return SysPanel(
+      animateIn: false,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Semantics(
+            button: true,
+            expanded: open,
+            child: InkWell(
+              onTap: onToggle,
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minHeight: SysDims.minTap),
+                child: Row(
+                  children: [
+                    Expanded(child: Text(l.qaBodyGirthsOptionalTitle.toUpperCase(), style: SysText.title)),
+                    Text(l.commonOptional, style: SysText.caption),
+                    const SizedBox(width: 8),
+                    AnimatedRotation(
+                      turns: open ? .5 : 0,
+                      duration: const Duration(milliseconds: 160),
+                      child: const SysIcon(SysGlyph.arrowDown, size: 18),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          if (open) ...[const SizedBox(height: 8), ...children],
+        ],
+      ),
     );
   }
 }

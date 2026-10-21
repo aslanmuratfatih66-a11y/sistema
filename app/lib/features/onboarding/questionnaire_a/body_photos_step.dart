@@ -9,18 +9,20 @@ import '../../../ui/ui.dart';
 import '../step_scope.dart';
 import 'camera/capture_flow.dart';
 import 'camera/capture_guide.dart';
+import 'camera/guided_capture_screen.dart';
 import 'data/measurement_repository.dart';
 import 'data/photo_repository.dart';
 import 'data/serial_writer.dart';
 import 'widgets/estimate_block.dart';
 import 'widgets/photo_slot.dart';
-import 'widgets/tip_line.dart';
+import 'widgets/session_card.dart';
 
 /// Диапазоны «знаю точные цифры».
 const _fatRange = (2.0, 70.0);
 const _muscleRange = (10.0, 150.0);
 
-/// Этап 3 «Фото тела» (необязательный): три позы, инструкция, блок оценки, точные цифры.
+/// Этап 3 «Фото тела» (необязательный): фото-сессия из трёх ракурсов под руководством Системы, блок оценки,
+/// точные цифры.
 class BodyPhotosStep extends ConsumerStatefulWidget {
   const BodyPhotosStep({super.key});
 
@@ -55,8 +57,7 @@ class _BodyPhotosStepState extends ConsumerState<BodyPhotosStep> {
   void _saveMeasurement(BodyMeasurementsCompanion patch) =>
       _writer.run(() => ref.read(onboardingMeasurementRepositoryProvider).patch(patch));
 
-  Future<void> _capture(PhotoPose pose, CaptureGuide guide, String title, String instruction) =>
-      captureAndSavePhoto(context, ref, kind: PhotoKind.body, pose: pose, guide: guide, title: title, instruction: instruction);
+  Future<void> _startSession() => GuidedCaptureScreen.open(context, GuidedSessionKind.body);
 
   @override
   Widget build(BuildContext context) {
@@ -75,15 +76,6 @@ class _BodyPhotosStepState extends ConsumerState<BodyPhotosStep> {
       return last;
     }
 
-    Widget slot(PhotoPose pose, CaptureGuide guide, String label, String instruction) => Expanded(
-          child: PhotoSlot(
-            label: label,
-            guide: guide,
-            photo: byPose(pose),
-            onTap: camera ? () => _capture(pose, guide, label, instruction) : null,
-          ),
-        );
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -91,28 +83,15 @@ class _BodyPhotosStepState extends ConsumerState<BodyPhotosStep> {
           Text(l.qaBodyPhotosIntro, style: SysText.secondary),
           const SysFieldGap(),
         ],
-        SysPanel(
-          title: l.qaPhotoTipsTitle,
-          animateIn: false,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              for (final tip in [l.qaBodyTipLight, l.qaBodyTipClothes, l.qaBodyTipPose, l.qaBodyTipCamera])
-                TipLine(tip),
-            ],
-          ),
-        ),
-        const SysFieldGap(),
         if (!camera) const CameraUnavailableNote(),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            slot(PhotoPose.bodyFront, CaptureGuide.bodyFront, l.qaPoseBodyFront, l.qaPoseBodyFrontHint),
-            const SizedBox(width: 10),
-            slot(PhotoPose.bodySide, CaptureGuide.bodySide, l.qaPoseBodySide, l.qaPoseBodySideHint),
-            const SizedBox(width: 10),
-            slot(PhotoPose.bodyBack, CaptureGuide.bodyBack, l.qaPoseBodyBack, l.qaPoseBodyBackHint),
+        SessionCard(
+          title: l.qaShootCardBody,
+          thumbs: [
+            SessionThumb(l.qaPoseBodyFront, CaptureGuide.bodyFront, byPose(PhotoPose.bodyFront)),
+            SessionThumb(l.qaPoseBodySide, CaptureGuide.bodySide, byPose(PhotoPose.bodySide)),
+            SessionThumb(l.qaPoseBodyBack, CaptureGuide.bodyBack, byPose(PhotoPose.bodyBack)),
           ],
+          onStart: camera ? _startSession : null,
         ),
         const SysFieldGap(),
         SysPanel(
@@ -124,7 +103,7 @@ class _BodyPhotosStepState extends ConsumerState<BodyPhotosStep> {
             l.qaEstPosture,
             l.qaEstFigure,
             l.qaEstFaceSwelling,
-          ]),
+          ], aiNote: l.qaShootAiNoteBody),
         ),
         const SysFieldGap(),
         SysPanel(

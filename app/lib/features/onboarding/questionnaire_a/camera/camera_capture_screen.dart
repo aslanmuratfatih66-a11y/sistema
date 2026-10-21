@@ -7,6 +7,7 @@ import 'package:permission_handler/permission_handler.dart';
 import '../../../../l10n/app_localizations.dart';
 import '../../../../ui/ui.dart';
 import 'capture_guide.dart';
+import 'mirror.dart';
 
 enum _CameraError { none, unavailable, denied }
 
@@ -155,10 +156,20 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> with WidgetsB
     if (c == null || !c.value.isInitialized || c.value.isTakingPicture || _busy) return;
     setState(() => _busy = true);
     try {
-      final x = await c.takePicture();
-      if (mounted) setState(() => _shot = x);
+      var x = await c.takePicture();
+      // Сохраняем «как видит другой»: фронтальный снимок на iOS зеркальный — отражаем (см. mirror.dart).
+      if (captureIsMirrored(frontCamera: c.description.lensDirection == CameraLensDirection.front)) {
+        x = XFile(await mirrorImageFile(x.path));
+      }
+      if (mounted) {
+        setState(() => _shot = x);
+      } else {
+        _deleteTemp(x);
+      }
     } on CameraException catch (e) {
       debugPrint('takePicture: ${e.code} ${e.description}');
+    } catch (e) {
+      debugPrint('takePicture/mirror: $e');
     } finally {
       if (mounted) setState(() => _busy = false);
     }
@@ -246,7 +257,13 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> with WidgetsB
       child: CameraPreview(
         c,
         child: IgnorePointer(
-          child: CustomPaint(painter: CaptureGuidePainter(widget.guide), size: Size.infinite),
+          child: CustomPaint(
+            painter: CaptureGuidePainter(
+              widget.guide,
+              mirrored: previewIsMirrored(frontCamera: c.description.lensDirection == CameraLensDirection.front),
+            ),
+            size: Size.infinite,
+          ),
         ),
       ),
     );

@@ -108,9 +108,9 @@ class _HeaderIconButton extends StatelessWidget {
       excludeSemantics: true,
       child: InkResponse(
         onTap: onTap ?? () {},
-        radius: 24,
+        radius: 22,
         child: SizedBox.square(
-          dimension: 48,
+          dimension: SysDims.minTap,
           child: Stack(
             alignment: Alignment.center,
             clipBehavior: Clip.none,

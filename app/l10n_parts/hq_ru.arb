@@ -1,0 +1,12 @@
+{
+  "hqStatStrengthShort": "СИЛ",
+  "hqStatEnduranceShort": "ВЫН",
+  "hqStatDisciplineShort": "ДИС",
+  "hqStatIntellectShort": "ИНТ",
+  "hqStatHealthShort": "ЗДР",
+  "hqStatLooksShort": "ВНШ",
+  "hqCaloriesTodayTitle": "Калории за день",
+  "hqNutritionDiaryTitle": "Дневник питания",
+  "hqNutritionDiarySoon": "Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.",
+  "hqFinanceFoodTitle": "Финансы на еду"
+}

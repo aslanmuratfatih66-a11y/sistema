@@ -440,6 +440,315 @@ class AppLocalizationsRu extends AppLocalizations {
       'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.';
 
   @override
+  String get chrIntro =>
+      'Выберите спутника. Он будет жить внизу экрана, напоминать, хвалить и ругать — в выбранном режиме.';
+
+  @override
+  String get chrArchetype => 'Персонаж';
+
+  @override
+  String get chrArchetypeRequired => 'Выберите персонажа, чтобы продолжить';
+
+  @override
+  String get chrNameAnimeGirl => 'Аниме-девушка';
+
+  @override
+  String get chrDescAnimeGirl =>
+      'Жизнерадостная и упрямая. Радуется каждой победе и не даёт сдаться.';
+
+  @override
+  String get chrSpeechAnimeGirl => 'живая, с восклицаниями и подбадриваниями';
+
+  @override
+  String get chrSampleAnimeGirl1 => 'Привет! Сегодня мы точно всё успеем!';
+
+  @override
+  String get chrSampleAnimeGirl2 =>
+      'Ещё один квест — и я буду тобой гордиться!';
+
+  @override
+  String get chrSampleAnimeGirl3 =>
+      'Не сдавайся, у тебя получается лучше, чем вчера!';
+
+  @override
+  String get chrLineAnimeGirlSoft =>
+      'Ничего страшного, отдохни немного — и попробуем ещё раз, ладно?';
+
+  @override
+  String get chrLineAnimeGirlNormal =>
+      'Хорошая работа! Осталось совсем чуть-чуть, давай закончим!';
+
+  @override
+  String get chrLineAnimeGirlStrict =>
+      'Эй! Квест сам себя не выполнит. Встаём и делаем!';
+
+  @override
+  String get chrLineAnimeGirlHarsh =>
+      'Опять откладываешь?! Хватит оправданий — марш выполнять, сейчас же!';
+
+  @override
+  String get chrNameAnimeGuy => 'Аниме-парень';
+
+  @override
+  String get chrDescAnimeGuy =>
+      'Соперник и напарник. Вызывает на спор и тянет вперёд.';
+
+  @override
+  String get chrSpeechAnimeGuy => 'дерзкая, с вызовом и азартом';
+
+  @override
+  String get chrSampleAnimeGuy1 => 'Спорим, сегодня ты меня не обгонишь?';
+
+  @override
+  String get chrSampleAnimeGuy2 =>
+      'Ха, неплохо! Но я знаю, что ты можешь больше.';
+
+  @override
+  String get chrSampleAnimeGuy3 =>
+      'Вперёд, напарник, уровень сам себя не поднимет!';
+
+  @override
+  String get chrLineAnimeGuySoft =>
+      'Сегодня тяжело? Бывает. Сделаем хотя бы маленький шаг вместе.';
+
+  @override
+  String get chrLineAnimeGuyNormal =>
+      'Неплохо идёшь! Ещё рывок — и этот день наш.';
+
+  @override
+  String get chrLineAnimeGuyStrict =>
+      'Ты же не собираешься проиграть лени? Докажи, что сильнее.';
+
+  @override
+  String get chrLineAnimeGuyHarsh =>
+      'Серьёзно? Это всё, на что ты способен? Встал и сделал, без нытья!';
+
+  @override
+  String get chrNameStoicStrongman => 'Невозмутимый силач';
+
+  @override
+  String get chrDescStoicStrongman =>
+      'Спокоен как скала. Верит в дисциплину и повторения.';
+
+  @override
+  String get chrSpeechStoicStrongman => 'короткие фразы, без лишних слов';
+
+  @override
+  String get chrSampleStoicStrongman1 => 'Новый день. Делаем.';
+
+  @override
+  String get chrSampleStoicStrongman2 => 'Сила — это повторения.';
+
+  @override
+  String get chrSampleStoicStrongman3 => 'Медленно, но каждый день.';
+
+  @override
+  String get chrLineStoicStrongmanSoft => 'Отдохни. Потом продолжим.';
+
+  @override
+  String get chrLineStoicStrongmanNormal => 'Хорошо. Следующий подход.';
+
+  @override
+  String get chrLineStoicStrongmanStrict => 'Пропуск. Так не пойдёт. Делай.';
+
+  @override
+  String get chrLineStoicStrongmanHarsh =>
+      'Хватит болтать. Встал. Сделал. Сейчас.';
+
+  @override
+  String get chrNameGrimSwordsman => 'Мрачный мечник';
+
+  @override
+  String get chrDescGrimSwordsman =>
+      'Суровый наставник. Каждый день — тренировка воли.';
+
+  @override
+  String get chrSpeechGrimSwordsman => 'сдержанная, с мрачной иронией';
+
+  @override
+  String get chrSampleGrimSwordsman1 => 'Клинок тупится без дела. Как и воля.';
+
+  @override
+  String get chrSampleGrimSwordsman2 =>
+      'Ты снова здесь. Значит, ещё не сдался.';
+
+  @override
+  String get chrSampleGrimSwordsman3 =>
+      'Тьма не страшна тому, кто держит слово.';
+
+  @override
+  String get chrLineGrimSwordsmanSoft =>
+      'Даже клинку нужен отдых. Переведи дух и возвращайся.';
+
+  @override
+  String get chrLineGrimSwordsmanNormal =>
+      'Удар засчитан. Держи ритм до конца дня.';
+
+  @override
+  String get chrLineGrimSwordsmanStrict =>
+      'Слабость ищет оправдания. Сила ищет путь. Выбирай.';
+
+  @override
+  String get chrLineGrimSwordsmanHarsh =>
+      'Позорно. Воин, который бросает клятву, — уже не воин. Исправь это.';
+
+  @override
+  String chrSpeechLabel(String speech) {
+    return 'Манера речи: $speech';
+  }
+
+  @override
+  String get chrPreviewStates => 'Анимации';
+
+  @override
+  String get chrStateIdle => 'Покой';
+
+  @override
+  String get chrStateWalk => 'Идти';
+
+  @override
+  String get chrStateTalk => 'Говорить';
+
+  @override
+  String get chrStateHappy => 'Радость';
+
+  @override
+  String get chrStateAngry => 'Злость';
+
+  @override
+  String get chrStateSit => 'Сесть';
+
+  @override
+  String get chrStateSleep => 'Сон';
+
+  @override
+  String get chrStatePoint => 'Указать';
+
+  @override
+  String get chrVoice => 'Голос';
+
+  @override
+  String get chrVoiceNote =>
+      'Пока звучит системный синтез речи телефона; позже появятся голоса персонажей.';
+
+  @override
+  String get chrVoiceBright => 'Звонкий';
+
+  @override
+  String get chrVoiceSoft => 'Мягкий';
+
+  @override
+  String get chrVoiceCalm => 'Спокойный';
+
+  @override
+  String get chrVoiceEnergetic => 'Энергичный';
+
+  @override
+  String get chrVoiceDeep => 'Глубокий';
+
+  @override
+  String get chrVoiceLow => 'Низкий';
+
+  @override
+  String get chrVoiceHoarse => 'Хриплый';
+
+  @override
+  String get chrListen => 'Прослушать';
+
+  @override
+  String get chrStop => 'Остановить';
+
+  @override
+  String get chrTtsUnavailable =>
+      'Синтез речи недоступен на этом устройстве для языка интерфейса — голос можно будет прослушать позже.';
+
+  @override
+  String get chrMotivation => 'Режим мотивации';
+
+  @override
+  String get chrModeSoft => 'Мягкий';
+
+  @override
+  String get chrModeSoftDesc => 'Поддержка и мягкие напоминания, без давления.';
+
+  @override
+  String get chrModeNormal => 'Обычный';
+
+  @override
+  String get chrModeNormalDesc =>
+      'Похвала за успехи, спокойные замечания за пропуски.';
+
+  @override
+  String get chrModeStrict => 'Строгий';
+
+  @override
+  String get chrModeStrictDesc =>
+      'Чёткие требования и прямая критика за провалы.';
+
+  @override
+  String get chrModeHarsh => 'Жёсткий';
+
+  @override
+  String get chrModeHarshDesc =>
+      'Ругает по всей строгости, но без унижений внешности и здоровья.';
+
+  @override
+  String get chrModeExample => 'Пример реплики';
+
+  @override
+  String get chrModeTry => 'Услышать в этом режиме';
+
+  @override
+  String get chrProfanity => 'Допускать мат';
+
+  @override
+  String get chrProfanityHint => 'Редко и только в жёстком режиме';
+
+  @override
+  String get chrTapSoft1 => 'Я рядом. Сделаем немного — уже хорошо.';
+
+  @override
+  String get chrTapSoft2 => 'Не торопись, всё получится.';
+
+  @override
+  String get chrTapSoft3 => 'Ты молодец, что заглянул.';
+
+  @override
+  String get chrTapNormal1 => 'Как продвигаются квесты?';
+
+  @override
+  String get chrTapNormal2 => 'Хороший темп. Продолжаем.';
+
+  @override
+  String get chrTapNormal3 => 'Не забудь про воду.';
+
+  @override
+  String get chrTapStrict1 => 'Квесты ждут. Не расслабляйся.';
+
+  @override
+  String get chrTapStrict2 => 'Сначала дело, потом отдых.';
+
+  @override
+  String get chrTapStrict3 => 'Проверь список. Что ещё не сделано?';
+
+  @override
+  String get chrTapHarsh1 => 'Хватит листать. Иди выполнять.';
+
+  @override
+  String get chrTapHarsh2 => 'Оправдания не засчитываются.';
+
+  @override
+  String get chrTapHarsh3 => 'День не резиновый. Действуй.';
+
+  @override
+  String get chrPocketTab => 'Вернуть персонажа';
+
+  @override
+  String chrSemantics(String name) {
+    return '$name: нажмите, чтобы услышать реплику; смахните вниз, чтобы убрать';
+  }
+
+  @override
   String get commonNext => 'Далее';
 
   @override
@@ -540,6 +849,37 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get onbStepPermissions => 'Разрешения';
+
+  @override
+  String get hqStatStrengthShort => 'СИЛ';
+
+  @override
+  String get hqStatEnduranceShort => 'ВЫН';
+
+  @override
+  String get hqStatDisciplineShort => 'ДИС';
+
+  @override
+  String get hqStatIntellectShort => 'ИНТ';
+
+  @override
+  String get hqStatHealthShort => 'ЗДР';
+
+  @override
+  String get hqStatLooksShort => 'ВНШ';
+
+  @override
+  String get hqCaloriesTodayTitle => 'Калории за день';
+
+  @override
+  String get hqNutritionDiaryTitle => 'Дневник питания';
+
+  @override
+  String get hqNutritionDiarySoon =>
+      'Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.';
+
+  @override
+  String get hqFinanceFoodTitle => 'Финансы на еду';
 
   @override
   String get planNoticeLabel => 'Уведомление';
@@ -1005,7 +1345,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaPoseBodySideHint =>
-      'Повернитесь боком, руки вдоль тела, смотрите прямо.';
+      'Повернитесь к камере правым боком, руки вдоль тела, смотрите прямо.';
 
   @override
   String get qaPoseBodyBack => 'Сзади';
@@ -1112,14 +1452,14 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaPoseFaceLeftHint =>
-      'Поверните голову вправо, чтобы в кадре была левая сторона лица.';
+      'Повернитесь так, чтобы к камере была ЛЕВАЯ щека.';
 
   @override
   String get qaPoseFaceRight => 'Профиль справа';
 
   @override
   String get qaPoseFaceRightHint =>
-      'Поверните голову влево, чтобы в кадре была правая сторона лица.';
+      'Повернитесь так, чтобы к камере была ПРАВАЯ щека.';
 
   @override
   String get qaSkinCloseups => 'Проблемные зоны крупно';
@@ -1136,6 +1476,189 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaSkinAddCloseup => 'Добавить';
+
+  @override
+  String get qaShootTitleBody => 'Фото-сессия: тело';
+
+  @override
+  String get qaShootTitleFace => 'Фото-сессия: лицо';
+
+  @override
+  String get qaShootCardBody => 'Фото-сессия: тело (3 ракурса)';
+
+  @override
+  String get qaShootCardFace => 'Фото-сессия: лицо (3 ракурса)';
+
+  @override
+  String get qaShootCardHint =>
+      'Поставьте телефон и нажмите «Начать» — дальше Система всё скажет голосом и сама сделает снимки.';
+
+  @override
+  String get qaShootStartSession => 'Начать сессию';
+
+  @override
+  String get qaShootRestartSession => 'Пройти сессию заново';
+
+  @override
+  String get qaShootCloseupButton => 'Крупный план проблемной зоны';
+
+  @override
+  String get qaShootAiNoteBody =>
+      'После съёмки ИИ оценит габариты и состав тела с учётом роста и напишет вам.';
+
+  @override
+  String get qaShootAiNoteSkin =>
+      'После съёмки ИИ оценит тип кожи и выраженность высыпаний и напишет вам.';
+
+  @override
+  String get qaShootPrepTitle => 'Подготовка';
+
+  @override
+  String get qaShootPrepPhoneBody =>
+      'Поставьте телефон вертикально на уровне пояса: обоприте о стену, стопку книг или поставьте на штатив. Экран — к себе.';
+
+  @override
+  String get qaShootPrepDistanceBody =>
+      'Вы встанете примерно в 2,5 метрах — так в кадр поместится всё тело.';
+
+  @override
+  String get qaShootPrepPhoneFace =>
+      'Поставьте телефон вертикально на уровне глаз, примерно в 50 см от лица.';
+
+  @override
+  String get qaShootPrepLight =>
+      'Свет: встаньте лицом к окну или лампе. Яркого окна за спиной быть не должно.';
+
+  @override
+  String get qaShootPrepSound =>
+      'Включите звук: Система скажет, куда встать, и сосчитает до снимка. Нажимать ничего не нужно.';
+
+  @override
+  String get qaShootDelay => 'Задержка отсчёта';
+
+  @override
+  String qaShootDelaySec(int n) {
+    return '$n с';
+  }
+
+  @override
+  String get qaShootDelayManual => 'Кнопкой';
+
+  @override
+  String get qaShootOperator => 'Снимает другой человек';
+
+  @override
+  String get qaShootOperatorHint =>
+      'Основная камера. Отсчёт можно выключить и снимать кнопкой.';
+
+  @override
+  String get qaShootStart => 'Начать';
+
+  @override
+  String get qaShootPause => 'Пауза';
+
+  @override
+  String get qaShootResume => 'Продолжить';
+
+  @override
+  String get qaShootPausedTitle => 'Сессия на паузе';
+
+  @override
+  String get qaShootPausedHint => 'Текущий ракурс начнётся заново.';
+
+  @override
+  String get qaShootStop => 'Прервать';
+
+  @override
+  String qaShootShotOf(int n, int total) {
+    return 'Ракурс $n из $total';
+  }
+
+  @override
+  String get qaShootWaitShutter =>
+      'Нажмите кнопку, когда человек встанет в контур.';
+
+  @override
+  String get qaShootRetry => 'Повторить';
+
+  @override
+  String get qaShootReviewTitle => 'Проверьте снимки';
+
+  @override
+  String get qaShootReviewHint =>
+      'Если ракурс не получился — переснимите только его.';
+
+  @override
+  String get qaShootSaveFailed =>
+      'Не удалось сохранить снимки. Попробуйте ещё раз.';
+
+  @override
+  String get qaShootSayBodyFront =>
+      'Отойди примерно на 2,5 метра и встань в контур лицом к камере. Руки немного в стороны.';
+
+  @override
+  String get qaShootSayBodySide =>
+      'Повернись к камере правым боком. Руки вдоль тела, смотри прямо.';
+
+  @override
+  String get qaShootSayBodyBack =>
+      'Повернись к камере спиной. Руки немного в стороны.';
+
+  @override
+  String get qaShootSayFaceFront =>
+      'Сядь примерно в 50 сантиметрах от телефона. Смотри прямо в камеру, лицо — в овале.';
+
+  @override
+  String get qaShootSayFaceLeft =>
+      'Повернись так, чтобы к камере была левая щека. Голову держи ровно.';
+
+  @override
+  String get qaShootSayFaceRight =>
+      'Теперь повернись так, чтобы к камере была правая щека.';
+
+  @override
+  String qaShootTaken(String next) {
+    return 'Снимок сделан. Следующий: $next.';
+  }
+
+  @override
+  String get qaShootTakenLast => 'Снимок сделан. Съёмка завершена.';
+
+  @override
+  String get qaShootFailed => 'Не удалось сделать снимок. Попробуй ещё раз.';
+
+  @override
+  String get qaBodyGirthsOptionalTitle => 'Обхваты — если знаете';
+
+  @override
+  String get qaBodyGirthsOptionalHint =>
+      'Необязательно. Если не знаете — Система примерно оценит их по фото с учётом роста и сообщит вам.';
+
+  @override
+  String get qaBodyGirthsHowTitle => 'Как мерить';
+
+  @override
+  String get qaBodyGirthsHowGeneral =>
+      'Сантиметровая лента горизонтально, прилегает, но не сдавливает. Утром, на спокойном выдохе.';
+
+  @override
+  String get qaBodyWaistHow =>
+      'Талия — по самому узкому месту, обычно чуть выше пупка.';
+
+  @override
+  String get qaBodyHipsHow =>
+      'Бёдра — по самым выступающим точкам ягодиц, ноги вместе.';
+
+  @override
+  String get qaBodyChestHow =>
+      'Грудь — по самым выступающим точкам, лента проходит под мышками.';
+
+  @override
+  String get qaBodyNeckHow => 'Шея — сразу под кадыком.';
+
+  @override
+  String get qaBodyArmHow =>
+      'Рука — по самому широкому месту плеча, рука расслаблена.';
 
   @override
   String get qaSkinOily => 'Жирность к обеду';
@@ -1302,6 +1825,20 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaGoalDeadlineClear => 'Убрать срок';
+
+  @override
+  String get qaTzCityHint => 'Часовой пояс подставится по городу';
+
+  @override
+  String qaTzFromCity(String city) {
+    return 'Определён по городу: $city';
+  }
+
+  @override
+  String get qaTzFromDevice => 'Текущий пояс телефона';
+
+  @override
+  String get qaTzDeviceBadge => 'сейчас на телефоне';
 
   @override
   String get qbScheduleIntro =>
@@ -1597,125 +2134,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String qbFinDueShort(String date) {
     return 'до $date';
   }
-
-  @override
-  String get qbCharacterIntro =>
-      'Выберите спутника. Он будет напоминать, хвалить и ругать — в выбранном режиме.';
-
-  @override
-  String get qbArchetype => 'Персонаж';
-
-  @override
-  String get qbArchetypeRequired => 'Выберите персонажа, чтобы продолжить';
-
-  @override
-  String get qbArchAnimeGirl => 'Аниме-девушка';
-
-  @override
-  String get qbArchAnimeGirlDesc =>
-      'Жизнерадостная и упрямая. Радуется каждой победе и не даёт сдаться.';
-
-  @override
-  String get qbArchAnimeGirlSpeech =>
-      'живая, с восклицаниями и подбадриваниями';
-
-  @override
-  String get qbArchAnimeGuy => 'Аниме-парень';
-
-  @override
-  String get qbArchAnimeGuyDesc =>
-      'Соперник и напарник. Вызывает на спор и тянет вперёд.';
-
-  @override
-  String get qbArchAnimeGuySpeech => 'дерзкая, с вызовом и азартом';
-
-  @override
-  String get qbArchStoicStrongman => 'Невозмутимый силач';
-
-  @override
-  String get qbArchStoicStrongmanDesc =>
-      'Спокоен как скала. Верит в дисциплину и повторения.';
-
-  @override
-  String get qbArchStoicStrongmanSpeech => 'короткие фразы, без лишних слов';
-
-  @override
-  String get qbArchGrimSwordsman => 'Мрачный мечник';
-
-  @override
-  String get qbArchGrimSwordsmanDesc =>
-      'Суровый наставник. Каждый день — тренировка воли.';
-
-  @override
-  String get qbArchGrimSwordsmanSpeech => 'сдержанная, с мрачной иронией';
-
-  @override
-  String qbArchSpeechLabel(String speech) {
-    return 'Манера речи: $speech';
-  }
-
-  @override
-  String get qbVoice => 'Голос';
-
-  @override
-  String get qbVoiceLater => 'Голос подключится позже';
-
-  @override
-  String get qbVoiceBright => 'Звонкий';
-
-  @override
-  String get qbVoiceSoft => 'Мягкий';
-
-  @override
-  String get qbVoiceCalm => 'Спокойный';
-
-  @override
-  String get qbVoiceEnergetic => 'Энергичный';
-
-  @override
-  String get qbVoiceDeep => 'Глубокий';
-
-  @override
-  String get qbVoiceLow => 'Низкий';
-
-  @override
-  String get qbVoiceHoarse => 'Хриплый';
-
-  @override
-  String get qbMotivation => 'Режим мотивации';
-
-  @override
-  String get qbMotSoft => 'Мягкий';
-
-  @override
-  String get qbMotSoftDesc => 'Поддержка и мягкие напоминания, без давления.';
-
-  @override
-  String get qbMotNormal => 'Обычный';
-
-  @override
-  String get qbMotNormalDesc =>
-      'Похвала за успехи, спокойные замечания за пропуски.';
-
-  @override
-  String get qbMotStrict => 'Строгий';
-
-  @override
-  String get qbMotStrictDesc =>
-      'Чёткие требования и прямая критика за провалы.';
-
-  @override
-  String get qbMotHarsh => 'Жёсткий';
-
-  @override
-  String get qbMotHarshDesc =>
-      'Ругает по всей строгости, но без унижений внешности и здоровья.';
-
-  @override
-  String get qbProfanity => 'Допускать мат';
-
-  @override
-  String get qbProfanityHint => 'Редко и только в жёстком режиме';
 
   @override
   String get qbPermissionsIntro =>

@@ -12,6 +12,7 @@ import '../../core/data/profile_repository.dart';
 import '../../core/db/database.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
+import '../home/widgets/finance_summary_panel.dart';
 import '../onboarding/onboarding_progress.dart';
 import '../onboarding/onboarding_step.dart';
 import 'backup/backup_platform.dart';
@@ -44,6 +45,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         key: const Key('settings-list'),
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
         children: [
+          const FinanceSummaryPanel(),
+          const SizedBox(height: 16),
           _questionnairePanel(l),
           const SizedBox(height: 16),
           SysPanel(

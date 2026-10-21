@@ -3,26 +3,46 @@ import 'package:flutter/widgets.dart';
 import '../../../../ui/ui.dart';
 
 /// Контурная подсказка поверх камеры.
+///
+/// Контуры заданы так, как человека видит ДРУГОЙ (незеркальный снимок):
+/// - [bodySide] — «правым боком к камере»: человек смотрит в ПРАВУЮ сторону кадра;
+/// - [faceLeft] — «профиль слева»: к камере ЛЕВАЯ щека, нос смотрит ВЛЕВО кадра;
+/// - [faceRight] — «профиль справа»: к камере ПРАВАЯ щека, нос смотрит ВПРАВО кадра.
+/// Для зеркального превью фронтальной камеры передавайте `mirrored: true` (см. mirror.dart).
 enum CaptureGuide { bodyFront, bodySide, bodyBack, faceFront, faceLeft, faceRight, closeup }
 
 /// Рисует контур (линейный стиль, свечение акцента) по центру области превью.
 class CaptureGuidePainter extends CustomPainter {
-  const CaptureGuidePainter(this.guide, {this.color = SysColors.accentLighter, this.glow = SysColors.accent});
+  const CaptureGuidePainter(
+    this.guide, {
+    this.color = SysColors.accentLighter,
+    this.glow = SysColors.accent,
+    this.mirrored = false,
+  });
 
   final CaptureGuide guide;
   final Color color;
   final Color glow;
+
+  /// Отразить по горизонтали (превью фронтальной камеры зеркальное).
+  final bool mirrored;
 
   @override
   void paint(Canvas canvas, Size size) {
     final path = switch (guide) {
       CaptureGuide.bodyFront || CaptureGuide.bodyBack => _bodyFront(_box(size, .46, .88)),
       CaptureGuide.bodySide => _bodySide(_box(size, .46, .88)),
-      CaptureGuide.faceFront => _face(_box(size, .72, .7), turn: 0),
-      CaptureGuide.faceLeft => _face(_box(size, .72, .7), turn: -1),
-      CaptureGuide.faceRight => _face(_box(size, .72, .7), turn: 1),
+      CaptureGuide.faceFront => _face(_box(size, .72, .7)),
+      CaptureGuide.faceLeft => _profile(_box(size, .72, .7), noseRight: false),
+      CaptureGuide.faceRight => _profile(_box(size, .72, .7), noseRight: true),
       CaptureGuide.closeup => _closeup(_box(size, 1, .6)),
     };
+    if (mirrored) {
+      canvas
+        ..save()
+        ..translate(size.width, 0)
+        ..scale(-1, 1);
+    }
     canvas.drawPath(
       path,
       Paint()
@@ -42,6 +62,7 @@ class CaptureGuidePainter extends CustomPainter {
         ..strokeJoin = StrokeJoin.round
         ..color = color,
     );
+    if (mirrored) canvas.restore();
   }
 
   /// Прямоугольник с соотношением [aspect] (ширина/высота), занимающий [fill] высоты (или ширины), по центру.
@@ -87,18 +108,23 @@ class CaptureGuidePainter extends CustomPainter {
       ..addOval(Rect.fromCenter(center: _pt(r, .5, .075), width: r.width * .26, height: r.height * .12));
   }
 
-  /// [turn]: 0 — анфас, −1 / 1 — профиль (шеврон показывает сторону поворота).
-  static Path _face(Rect r, {required int turn}) {
-    final p = Path()
-      ..addOval(Rect.fromCenter(center: _pt(r, .5, .42), width: r.width * .66, height: r.height * .76))
-      ..addPath(_poly(r, const [(.36, .74), (.33, 1)], close: false), Offset.zero)
-      ..addPath(_poly(r, const [(.64, .74), (.67, 1)], close: false), Offset.zero);
-    if (turn != 0) {
-      final x = turn < 0 ? .06 : .94;
-      final d = turn < 0 ? .06 : -.06;
-      p.addPath(_poly(r, [(x + d, .34), (x, .42), (x + d, .5)], close: false), Offset.zero);
-    }
-    return p;
+  /// Анфас: овал лица и шея.
+  static Path _face(Rect r) => Path()
+    ..addOval(Rect.fromCenter(center: _pt(r, .5, .42), width: r.width * .66, height: r.height * .76))
+    ..addPath(_poly(r, const [(.36, .74), (.33, 1)], close: false), Offset.zero)
+    ..addPath(_poly(r, const [(.64, .74), (.67, 1)], close: false), Offset.zero);
+
+  /// Профиль головы: затылок, лоб, нос, губы, подбородок, шея и ухо. [noseRight] — нос смотрит вправо кадра.
+  static Path _profile(Rect r, {required bool noseRight}) {
+    const right = [
+      (.34, 1.0), (.35, .82), (.25, .68), (.2, .5), (.23, .3), (.32, .15), (.45, .07), (.58, .07), (.69, .13),
+      (.75, .25), (.76, .36), (.74, .41), (.85, .53), (.76, .57), (.77, .62), (.74, .65), (.76, .69), (.71, .75),
+      (.72, .81), (.63, .85), (.59, .87), (.61, 1.0),
+    ];
+    final pts = [for (final (x, y) in right) (noseRight ? x : 1 - x, y)];
+    final earX = noseRight ? .42 : .58;
+    return _poly(r, pts, close: false)
+      ..addOval(Rect.fromCenter(center: _pt(r, earX, .5), width: r.width * .1, height: r.height * .14));
   }
 
   static Path _closeup(Rect r) {
@@ -113,5 +139,6 @@ class CaptureGuidePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(CaptureGuidePainter old) => old.guide != guide || old.color != color || old.glow != glow;
+  bool shouldRepaint(CaptureGuidePainter old) =>
+      old.guide != guide || old.color != color || old.glow != glow || old.mirrored != mirrored;
 }

@@ -435,6 +435,312 @@ class AppLocalizationsTr extends AppLocalizations {
       'Su hedefinin %48’i tamam. 11:30’a kadar bir bardak iç, «Zindelik» bir saat daha sürsün.';
 
   @override
+  String get chrIntro =>
+      'Bir yol arkadaşı seç. Ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.';
+
+  @override
+  String get chrArchetype => 'Karakter';
+
+  @override
+  String get chrArchetypeRequired => 'Devam etmek için bir karakter seç';
+
+  @override
+  String get chrNameAnimeGirl => 'Anime kız';
+
+  @override
+  String get chrDescAnimeGirl =>
+      'Neşeli ve inatçı. Her zafere sevinir, pes etmene izin vermez.';
+
+  @override
+  String get chrSpeechAnimeGirl => 'canlı, ünlemlerle ve cesaretlendirmelerle';
+
+  @override
+  String get chrSampleAnimeGirl1 =>
+      'Merhaba! Bugün kesinlikle her şeye yetişeceğiz!';
+
+  @override
+  String get chrSampleAnimeGirl2 =>
+      'Bir görev daha ve seninle gurur duyacağım!';
+
+  @override
+  String get chrSampleAnimeGirl3 => 'Pes etme, dünden daha iyi gidiyorsun!';
+
+  @override
+  String get chrLineAnimeGirlSoft =>
+      'Sorun değil, biraz dinlen, sonra tekrar deneriz, olur mu?';
+
+  @override
+  String get chrLineAnimeGirlNormal => 'Harika iş! Az kaldı, hadi bitirelim!';
+
+  @override
+  String get chrLineAnimeGirlStrict =>
+      'Hey! Görev kendi kendini yapmaz. Kalk ve yap!';
+
+  @override
+  String get chrLineAnimeGirlHarsh =>
+      'Yine mi erteliyorsun?! Bahane yok — hemen git ve yap!';
+
+  @override
+  String get chrNameAnimeGuy => 'Anime çocuk';
+
+  @override
+  String get chrDescAnimeGuy =>
+      'Hem rakip hem ortak. Meydan okur ve seni ileri çeker.';
+
+  @override
+  String get chrSpeechAnimeGuy => 'cüretkâr, meydan okuyan ve hırslı';
+
+  @override
+  String get chrSampleAnimeGuy1 => 'İddiaya var mısın, bugün beni geçemezsin?';
+
+  @override
+  String get chrSampleAnimeGuy2 =>
+      'Ha, fena değil! Ama daha fazlasını yapabileceğini biliyorum.';
+
+  @override
+  String get chrSampleAnimeGuy3 => 'Haydi ortak, seviye kendi kendine atlamaz!';
+
+  @override
+  String get chrLineAnimeGuySoft =>
+      'Bugün zor mu? Olur böyle. En azından küçük bir adım atalım.';
+
+  @override
+  String get chrLineAnimeGuyNormal =>
+      'İyi gidiyorsun! Bir hamle daha ve bu gün bizim.';
+
+  @override
+  String get chrLineAnimeGuyStrict =>
+      'Tembelliğe yenilmeyeceksin, değil mi? Daha güçlü olduğunu kanıtla.';
+
+  @override
+  String get chrLineAnimeGuyHarsh =>
+      'Ciddi misin? Tüm yapabildiğin bu mu? Kalk ve yap, sızlanmak yok!';
+
+  @override
+  String get chrNameStoicStrongman => 'Soğukkanlı güçlü adam';
+
+  @override
+  String get chrDescStoicStrongman =>
+      'Kaya gibi sakin. Disipline ve tekrara inanır.';
+
+  @override
+  String get chrSpeechStoicStrongman => 'kısa cümleler, gereksiz söz yok';
+
+  @override
+  String get chrSampleStoicStrongman1 => 'Yeni gün. Yapıyoruz.';
+
+  @override
+  String get chrSampleStoicStrongman2 => 'Güç, tekrardır.';
+
+  @override
+  String get chrSampleStoicStrongman3 => 'Yavaş ama her gün.';
+
+  @override
+  String get chrLineStoicStrongmanSoft => 'Dinlen. Sonra devam ederiz.';
+
+  @override
+  String get chrLineStoicStrongmanNormal => 'İyi. Sıradaki set.';
+
+  @override
+  String get chrLineStoicStrongmanStrict => 'Atladın. Böyle olmaz. Yap.';
+
+  @override
+  String get chrLineStoicStrongmanHarsh => 'Konuşmayı bırak. Kalk. Yap. Şimdi.';
+
+  @override
+  String get chrNameGrimSwordsman => 'Karanlık kılıç ustası';
+
+  @override
+  String get chrDescGrimSwordsman =>
+      'Sert bir usta. Her gün iradeyi eğitmektir.';
+
+  @override
+  String get chrSpeechGrimSwordsman => 'ölçülü, karanlık bir ironiyle';
+
+  @override
+  String get chrSampleGrimSwordsman1 =>
+      'Kılıç boş durunca körelir. İrade de öyle.';
+
+  @override
+  String get chrSampleGrimSwordsman2 =>
+      'Yine buradasın. Demek ki henüz pes etmedin.';
+
+  @override
+  String get chrSampleGrimSwordsman3 =>
+      'Sözünü tutana karanlık korkutucu değildir.';
+
+  @override
+  String get chrLineGrimSwordsmanSoft =>
+      'Kılıcın da dinlenmesi gerekir. Nefeslen ve geri dön.';
+
+  @override
+  String get chrLineGrimSwordsmanNormal =>
+      'Vuruş sayıldı. Gün bitene kadar ritmi koru.';
+
+  @override
+  String get chrLineGrimSwordsmanStrict =>
+      'Zayıflık bahane arar. Güç yol arar. Seç.';
+
+  @override
+  String get chrLineGrimSwordsmanHarsh =>
+      'Utanç verici. Yeminini bırakan savaşçı artık savaşçı değildir. Düzelt bunu.';
+
+  @override
+  String chrSpeechLabel(String speech) {
+    return 'Konuşma tarzı: $speech';
+  }
+
+  @override
+  String get chrPreviewStates => 'Animasyonlar';
+
+  @override
+  String get chrStateIdle => 'Bekleme';
+
+  @override
+  String get chrStateWalk => 'Yürü';
+
+  @override
+  String get chrStateTalk => 'Konuş';
+
+  @override
+  String get chrStateHappy => 'Sevinç';
+
+  @override
+  String get chrStateAngry => 'Öfke';
+
+  @override
+  String get chrStateSit => 'Otur';
+
+  @override
+  String get chrStateSleep => 'Uyku';
+
+  @override
+  String get chrStatePoint => 'İşaret et';
+
+  @override
+  String get chrVoice => 'Ses';
+
+  @override
+  String get chrVoiceNote =>
+      'Şimdilik telefonun sistem sesi kullanılıyor; karakter sesleri daha sonra eklenecek.';
+
+  @override
+  String get chrVoiceBright => 'Parlak';
+
+  @override
+  String get chrVoiceSoft => 'Yumuşak';
+
+  @override
+  String get chrVoiceCalm => 'Sakin';
+
+  @override
+  String get chrVoiceEnergetic => 'Enerjik';
+
+  @override
+  String get chrVoiceDeep => 'Derin';
+
+  @override
+  String get chrVoiceLow => 'Pes';
+
+  @override
+  String get chrVoiceHoarse => 'Boğuk';
+
+  @override
+  String get chrListen => 'Dinle';
+
+  @override
+  String get chrStop => 'Durdur';
+
+  @override
+  String get chrTtsUnavailable =>
+      'Bu cihazda arayüz dili için konuşma sentezi yok — sesi daha sonra dinleyebilirsin.';
+
+  @override
+  String get chrMotivation => 'Motivasyon modu';
+
+  @override
+  String get chrModeSoft => 'Yumuşak';
+
+  @override
+  String get chrModeSoftDesc => 'Destek ve nazik hatırlatmalar, baskı yok.';
+
+  @override
+  String get chrModeNormal => 'Normal';
+
+  @override
+  String get chrModeNormalDesc => 'Başarıya övgü, aksatmalara sakin uyarılar.';
+
+  @override
+  String get chrModeStrict => 'Sıkı';
+
+  @override
+  String get chrModeStrictDesc =>
+      'Net talepler ve başarısızlıklara doğrudan eleştiri.';
+
+  @override
+  String get chrModeHarsh => 'Sert';
+
+  @override
+  String get chrModeHarshDesc =>
+      'Tüm sertliğiyle azarlar, ama görünüş ve sağlıkla aşağılamadan.';
+
+  @override
+  String get chrModeExample => 'Örnek replik';
+
+  @override
+  String get chrModeTry => 'Bu modda dinle';
+
+  @override
+  String get chrProfanity => 'Küfre izin ver';
+
+  @override
+  String get chrProfanityHint => 'Nadiren ve yalnızca sert modda';
+
+  @override
+  String get chrTapSoft1 => 'Yanındayım. Biraz yapalım — bu bile iyi.';
+
+  @override
+  String get chrTapSoft2 => 'Acele etme, her şey yoluna girecek.';
+
+  @override
+  String get chrTapSoft3 => 'Uğraman çok güzel.';
+
+  @override
+  String get chrTapNormal1 => 'Görevler nasıl gidiyor?';
+
+  @override
+  String get chrTapNormal2 => 'İyi tempo. Devam.';
+
+  @override
+  String get chrTapNormal3 => 'Suyu unutma.';
+
+  @override
+  String get chrTapStrict1 => 'Görevler bekliyor. Gevşeme.';
+
+  @override
+  String get chrTapStrict2 => 'Önce iş, sonra dinlenme.';
+
+  @override
+  String get chrTapStrict3 => 'Listeye bak. Ne yapılmadı?';
+
+  @override
+  String get chrTapHarsh1 => 'Kaydırmayı bırak. Git ve yap.';
+
+  @override
+  String get chrTapHarsh2 => 'Bahaneler sayılmaz.';
+
+  @override
+  String get chrTapHarsh3 => 'Gün uzamıyor. Harekete geç.';
+
+  @override
+  String get chrPocketTab => 'Karakteri geri getir';
+
+  @override
+  String chrSemantics(String name) {
+    return '$name: replik için dokun; kaldırmak için aşağı kaydır';
+  }
+
+  @override
   String get commonNext => 'İleri';
 
   @override
@@ -536,6 +842,37 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get onbStepPermissions => 'İzinler';
+
+  @override
+  String get hqStatStrengthShort => 'GÜÇ';
+
+  @override
+  String get hqStatEnduranceShort => 'DAY';
+
+  @override
+  String get hqStatDisciplineShort => 'DİS';
+
+  @override
+  String get hqStatIntellectShort => 'ZEK';
+
+  @override
+  String get hqStatHealthShort => 'SAĞ';
+
+  @override
+  String get hqStatLooksShort => 'GÖR';
+
+  @override
+  String get hqCaloriesTodayTitle => 'Günlük kalori';
+
+  @override
+  String get hqNutritionDiaryTitle => 'Beslenme günlüğü';
+
+  @override
+  String get hqNutritionDiarySoon =>
+      'Beslenme günlüğünü, yemek fotoğraflarını ve makro takibini Sistem bir sonraki aşamada açacak.';
+
+  @override
+  String get hqFinanceFoodTitle => 'Yemek bütçesi';
 
   @override
   String get planNoticeLabel => 'Bildirim';
@@ -1001,7 +1338,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaPoseBodySideHint =>
-      'Yan dönün, kollar vücudun yanında, düz bakın.';
+      'Sağ yanınızı kameraya dönün, kollar yanda, ileriye bakın.';
 
   @override
   String get qaPoseBodyBack => 'Arkadan';
@@ -1108,14 +1445,14 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaPoseFaceLeftHint =>
-      'Başınızı sağa çevirin; kadrajda yüzün sol tarafı olsun.';
+      'Kameraya SOL yanağınız bakacak şekilde dönün.';
 
   @override
   String get qaPoseFaceRight => 'Sağ profil';
 
   @override
   String get qaPoseFaceRightHint =>
-      'Başınızı sola çevirin; kadrajda yüzün sağ tarafı olsun.';
+      'Kameraya SAĞ yanağınız bakacak şekilde dönün.';
 
   @override
   String get qaSkinCloseups => 'Sorunlu bölgeler yakından';
@@ -1132,6 +1469,186 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaSkinAddCloseup => 'Ekle';
+
+  @override
+  String get qaShootTitleBody => 'Fotoğraf seansı: vücut';
+
+  @override
+  String get qaShootTitleFace => 'Fotoğraf seansı: yüz';
+
+  @override
+  String get qaShootCardBody => 'Fotoğraf seansı: vücut (3 açı)';
+
+  @override
+  String get qaShootCardFace => 'Fotoğraf seansı: yüz (3 açı)';
+
+  @override
+  String get qaShootCardHint =>
+      'Telefonu yerleştirip «Başla»ya basın — gerisini Sistem sesli anlatır ve fotoğrafları kendisi çeker.';
+
+  @override
+  String get qaShootStartSession => 'Seansı başlat';
+
+  @override
+  String get qaShootRestartSession => 'Seansı yeniden yap';
+
+  @override
+  String get qaShootCloseupButton => 'Sorunlu bölgenin yakın çekimi';
+
+  @override
+  String get qaShootAiNoteBody =>
+      'Çekimden sonra yapay zekâ boyunuzu dikkate alarak vücut ölçülerini ve kompozisyonunu tahmin edip size yazacak.';
+
+  @override
+  String get qaShootAiNoteSkin =>
+      'Çekimden sonra yapay zekâ cilt tipinizi ve sivilcelerin yoğunluğunu tahmin edip size yazacak.';
+
+  @override
+  String get qaShootPrepTitle => 'Hazırlık';
+
+  @override
+  String get qaShootPrepPhoneBody =>
+      'Telefonu bel hizasında dikey koyun: duvara, kitap yığınına dayayın ya da tripoda takın. Ekran size dönük.';
+
+  @override
+  String get qaShootPrepDistanceBody =>
+      'Yaklaşık 2,5 metre uzakta duracaksınız — böylece tüm vücut kadraja girer.';
+
+  @override
+  String get qaShootPrepPhoneFace =>
+      'Telefonu göz hizasında, yüzünüzden yaklaşık 50 cm uzağa dikey koyun.';
+
+  @override
+  String get qaShootPrepLight =>
+      'Işık: yüzünüz pencereye veya lambaya dönük olsun. Arkanızda parlak pencere olmamalı.';
+
+  @override
+  String get qaShootPrepSound =>
+      'Sesi açın: Sistem nerede durmanız gerektiğini söyleyecek ve çekime kadar sayacak. Hiçbir şeye basmanız gerekmez.';
+
+  @override
+  String get qaShootDelay => 'Geri sayım süresi';
+
+  @override
+  String qaShootDelaySec(int n) {
+    return '$n sn';
+  }
+
+  @override
+  String get qaShootDelayManual => 'Düğmeyle';
+
+  @override
+  String get qaShootOperator => 'Başka biri çekiyor';
+
+  @override
+  String get qaShootOperatorHint =>
+      'Arka kamera. Geri sayımı kapatıp düğmeyle çekebilirsiniz.';
+
+  @override
+  String get qaShootStart => 'Başla';
+
+  @override
+  String get qaShootPause => 'Duraklat';
+
+  @override
+  String get qaShootResume => 'Devam et';
+
+  @override
+  String get qaShootPausedTitle => 'Seans duraklatıldı';
+
+  @override
+  String get qaShootPausedHint => 'Geçerli açı baştan başlayacak.';
+
+  @override
+  String get qaShootStop => 'Bitir';
+
+  @override
+  String qaShootShotOf(int n, int total) {
+    return 'Açı $n / $total';
+  }
+
+  @override
+  String get qaShootWaitShutter => 'Kişi çerçeveye girdiğinde düğmeye basın.';
+
+  @override
+  String get qaShootRetry => 'Tekrarla';
+
+  @override
+  String get qaShootReviewTitle => 'Fotoğrafları kontrol edin';
+
+  @override
+  String get qaShootReviewHint =>
+      'Bir açı olmadıysa yalnızca onu yeniden çekin.';
+
+  @override
+  String get qaShootSaveFailed => 'Fotoğraflar kaydedilemedi. Tekrar deneyin.';
+
+  @override
+  String get qaShootSayBodyFront =>
+      'Yaklaşık 2,5 metre uzaklaş ve yüzün kameraya dönük şekilde çerçeveye gir. Kollar hafif yanlara.';
+
+  @override
+  String get qaShootSayBodySide =>
+      'Sağ yanını kameraya dön. Kollar yanda, ileriye bak.';
+
+  @override
+  String get qaShootSayBodyBack =>
+      'Sırtını kameraya dön. Kollar hafif yanlara.';
+
+  @override
+  String get qaShootSayFaceFront =>
+      'Telefondan yaklaşık 50 santimetre uzağa otur. Doğrudan kameraya bak, yüzün ovalin içinde olsun.';
+
+  @override
+  String get qaShootSayFaceLeft =>
+      'Kameraya sol yanağın bakacak şekilde dön. Başını dik tut.';
+
+  @override
+  String get qaShootSayFaceRight =>
+      'Şimdi kameraya sağ yanağın bakacak şekilde dön.';
+
+  @override
+  String qaShootTaken(String next) {
+    return 'Fotoğraf çekildi. Sıradaki: $next.';
+  }
+
+  @override
+  String get qaShootTakenLast => 'Fotoğraf çekildi. Çekim tamamlandı.';
+
+  @override
+  String get qaShootFailed => 'Fotoğraf çekilemedi. Tekrar dene.';
+
+  @override
+  String get qaBodyGirthsOptionalTitle => 'Çevre ölçüleri — biliyorsanız';
+
+  @override
+  String get qaBodyGirthsOptionalHint =>
+      'İsteğe bağlı. Bilmiyorsanız Sistem bunları boyunuzu dikkate alarak fotoğraftan yaklaşık tahmin edip size bildirir.';
+
+  @override
+  String get qaBodyGirthsHowTitle => 'Nasıl ölçülür';
+
+  @override
+  String get qaBodyGirthsHowGeneral =>
+      'Mezura yere paralel, tene oturuyor ama sıkmıyor. Sabah, rahat bir nefes verişte.';
+
+  @override
+  String get qaBodyWaistHow =>
+      'Bel — en ince yerden, genellikle göbeğin biraz üstünden.';
+
+  @override
+  String get qaBodyHipsHow =>
+      'Kalça — kalçanın en çıkıntılı noktalarından, ayaklar bitişik.';
+
+  @override
+  String get qaBodyChestHow =>
+      'Göğüs — en çıkıntılı noktalardan, mezura koltuk altlarından geçer.';
+
+  @override
+  String get qaBodyNeckHow => 'Boyun — hemen gırtlak çıkıntısının altından.';
+
+  @override
+  String get qaBodyArmHow => 'Kol — üst kolun en geniş yerinden, kol gevşek.';
 
   @override
   String get qaSkinOily => 'Öğlene kadar yağlanma';
@@ -1300,6 +1817,20 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaGoalDeadlineClear => 'Tarihi kaldır';
+
+  @override
+  String get qaTzCityHint => 'Saat dilimi şehre göre ayarlanır';
+
+  @override
+  String qaTzFromCity(String city) {
+    return 'Şehre göre belirlendi: $city';
+  }
+
+  @override
+  String get qaTzFromDevice => 'Telefonun geçerli saat dilimi';
+
+  @override
+  String get qaTzDeviceBadge => 'şu an telefonda';
 
   @override
   String get qbScheduleIntro =>
@@ -1595,123 +2126,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String qbFinDueShort(String date) {
     return '$date tarihine kadar';
   }
-
-  @override
-  String get qbCharacterIntro =>
-      'Bir yol arkadaşı seçin. Seçtiğiniz modda hatırlatacak, övecek ve azarlayacak.';
-
-  @override
-  String get qbArchetype => 'Karakter';
-
-  @override
-  String get qbArchetypeRequired => 'Devam etmek için bir karakter seçin';
-
-  @override
-  String get qbArchAnimeGirl => 'Anime kız';
-
-  @override
-  String get qbArchAnimeGirlDesc =>
-      'Neşeli ve inatçı. Her zafere sevinir, pes etmene izin vermez.';
-
-  @override
-  String get qbArchAnimeGirlSpeech => 'canlı, ünlemler ve cesaretlendirmelerle';
-
-  @override
-  String get qbArchAnimeGuy => 'Anime erkek';
-
-  @override
-  String get qbArchAnimeGuyDesc =>
-      'Hem rakip hem ortak. Meydan okur ve ileri çeker.';
-
-  @override
-  String get qbArchAnimeGuySpeech => 'cüretkâr, meydan okuyan ve hırslı';
-
-  @override
-  String get qbArchStoicStrongman => 'Soğukkanlı güçlü adam';
-
-  @override
-  String get qbArchStoicStrongmanDesc =>
-      'Kaya gibi sakin. Disipline ve tekrara inanır.';
-
-  @override
-  String get qbArchStoicStrongmanSpeech => 'kısa cümleler, gereksiz söz yok';
-
-  @override
-  String get qbArchGrimSwordsman => 'Kasvetli kılıç ustası';
-
-  @override
-  String get qbArchGrimSwordsmanDesc =>
-      'Sert bir usta. Her gün iradenin antrenmanıdır.';
-
-  @override
-  String get qbArchGrimSwordsmanSpeech => 'ölçülü, kara mizahlı';
-
-  @override
-  String qbArchSpeechLabel(String speech) {
-    return 'Konuşma tarzı: $speech';
-  }
-
-  @override
-  String get qbVoice => 'Ses';
-
-  @override
-  String get qbVoiceLater => 'Ses daha sonra bağlanacak';
-
-  @override
-  String get qbVoiceBright => 'Tiz';
-
-  @override
-  String get qbVoiceSoft => 'Yumuşak';
-
-  @override
-  String get qbVoiceCalm => 'Sakin';
-
-  @override
-  String get qbVoiceEnergetic => 'Enerjik';
-
-  @override
-  String get qbVoiceDeep => 'Derin';
-
-  @override
-  String get qbVoiceLow => 'Kalın';
-
-  @override
-  String get qbVoiceHoarse => 'Boğuk';
-
-  @override
-  String get qbMotivation => 'Motivasyon modu';
-
-  @override
-  String get qbMotSoft => 'Yumuşak';
-
-  @override
-  String get qbMotSoftDesc => 'Destek ve nazik hatırlatmalar, baskı yok.';
-
-  @override
-  String get qbMotNormal => 'Normal';
-
-  @override
-  String get qbMotNormalDesc => 'Başarıya övgü, aksamalara sakin uyarılar.';
-
-  @override
-  String get qbMotStrict => 'Katı';
-
-  @override
-  String get qbMotStrictDesc =>
-      'Net talepler ve başarısızlıklara doğrudan eleştiri.';
-
-  @override
-  String get qbMotHarsh => 'Sert';
-
-  @override
-  String get qbMotHarshDesc =>
-      'Tüm sertliğiyle azarlar, ama görünüş ve sağlıkla aşağılamadan.';
-
-  @override
-  String get qbProfanity => 'Küfüre izin ver';
-
-  @override
-  String get qbProfanityHint => 'Nadiren ve yalnızca sert modda';
 
   @override
   String get qbPermissionsIntro =>

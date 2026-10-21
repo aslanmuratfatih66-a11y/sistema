@@ -9,7 +9,8 @@ import 'package:path_provider/path_provider.dart';
 import '../../../../core/db/database.dart';
 import '../../../../core/models/enums.dart';
 
-/// Файлы фото в каталоге документов приложения: `photos/<kind>/<uuid>.jpg`.
+/// Файлы фото в каталоге документов приложения: `photos/<kind>/<uuid>.jpg` (или `.png` — отражённые
+/// снимки фронтальной камеры перекодируются в PNG, см. camera/mirror.dart).
 /// В БД хранится относительный путь (абсолютный путь на iOS меняется при переустановке).
 class PhotoStorage {
   PhotoStorage({Future<Directory> Function()? rootDir}) : _rootDir = rootDir ?? getApplicationDocumentsDirectory;
@@ -17,7 +18,11 @@ class PhotoStorage {
   final Future<Directory> Function() _rootDir;
 
   /// Новый относительный путь (всегда с '/', не зависит от ОС).
-  static String newRelativePath(PhotoKind kind) => p.posix.join('photos', kind.name, '${newId()}.jpg');
+  static String newRelativePath(PhotoKind kind, {String ext = '.jpg'}) =>
+      p.posix.join('photos', kind.name, '${newId()}$ext');
+
+  /// Расширение для хранилища по исходному файлу: .png сохраняется, всё остальное — .jpg.
+  static String extFor(String sourcePath) => p.extension(sourcePath).toLowerCase() == '.png' ? '.png' : '.jpg';
 
   Future<String> rootPath() async => (await _rootDir()).path;
 
@@ -25,7 +30,7 @@ class PhotoStorage {
 
   /// Скопировать снимок (например, временный файл камеры) в хранилище. Возвращает относительный путь.
   Future<String> import(String sourcePath, PhotoKind kind) async {
-    final rel = newRelativePath(kind);
+    final rel = newRelativePath(kind, ext: extFor(sourcePath));
     final target = await resolve(rel);
     await target.parent.create(recursive: true);
     await File(sourcePath).copy(target.path);

@@ -28,6 +28,16 @@ void main() {
     expect(PhotoStorage.newRelativePath(PhotoKind.skin), startsWith('photos/skin/'));
   });
 
+  test('PNG (отражённый фронтальный снимок) хранится с расширением .png', () async {
+    final storage = PhotoStorage(rootDir: () async => root);
+    final src = File(p.join(root.path, 'shot_m.png'));
+    await src.writeAsBytes([1, 2, 3]);
+    final rel = await storage.import(src.path, PhotoKind.skin);
+    expect(rel, endsWith('.png'));
+    expect(PhotoStorage.extFor('a/b/CAP_1.jpg'), '.jpg');
+    expect(PhotoStorage.extFor('a/b/x.heif'), '.jpg');
+  });
+
   test('сохранение и пересъёмка позы: старая запись мягко удаляется вместе с файлом', () async {
     final db = memoryDb();
     addTearDown(db.close);

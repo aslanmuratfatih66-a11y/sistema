@@ -102,24 +102,29 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
       children: [
         Text(
           q.title.of(l),
-          style: SysText.body.copyWith(fontSize: 17, fontWeight: FontWeight.w600),
+          style: SysText.body.copyWith(fontSize: 16, fontWeight: FontWeight.w600),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 6),
         Wrap(
           spacing: 6,
           runSpacing: 6,
           children: [
-            SysPill(
+            // Подписи «Награда/Штраф» — в семантике, на экране только значения (компактно).
+            Semantics(
               label: l.homeRewardLabel,
-              tone: PanelTone.gold,
-              icon: SysGlyph.diamond,
-              trailing: '${l.homeRewardPoints(nf.format(q.rewardPoints))}  ${l.homeRewardXp(nf.format(q.rewardXp))}',
+              child: SysPill(
+                label: '${l.homeRewardPoints(nf.format(q.rewardPoints))}  ${l.homeRewardXp(nf.format(q.rewardXp))}',
+                tone: PanelTone.gold,
+                icon: SysGlyph.diamond,
+              ),
             ),
-            SysPill(
+            Semantics(
               label: l.homePenaltyLabel,
-              tone: PanelTone.danger,
-              icon: SysGlyph.warning,
-              trailing: l.homePenaltyPoints(nf.format(q.penaltyPoints)),
+              child: SysPill(
+                label: l.homePenaltyPoints(nf.format(q.penaltyPoints)),
+                tone: PanelTone.danger,
+                icon: SysGlyph.warning,
+              ),
             ),
           ],
         ),
@@ -129,6 +134,7 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
     return SysPanel(
       title: l.homeNextQuestTitle,
       tone: PanelTone.gold,
+      padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
       trailing: Text(
         l.homeQuestDeadline(DateFormat.Hm(l.localeName).format(deadline)),
         style: SysText.mono.copyWith(fontSize: 12, color: SysColors.gold),
@@ -144,7 +150,7 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
                 excludeSemantics: true,
                 child: ProgressRing(
                   progress: fraction,
-                  size: 84,
+                  size: 64,
                   strokeWidth: 5,
                   color: ringColor,
                   center: FittedBox(
@@ -165,40 +171,84 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
                   ),
                 ),
               ),
-              const SizedBox(width: 14),
+              const SizedBox(width: 12),
               Expanded(child: info),
             ],
           ),
-          const SizedBox(height: 14),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              SysButton.primary(label: l.homeActionDone, icon: SysGlyph.check, onPressed: () => _onDone(l, nf)),
-              SysButton.secondary(
-                label: l.homeActionSnooze,
-                icon: SysGlyph.clock,
-                onPressed: () => setState(() => _snooze += const Duration(minutes: 10)),
-              ),
-              if (q.contextAction == NextQuestContextAction.noWater)
-                SysButton.secondary(label: l.homeActionNoWater, icon: SysGlyph.water, onPressed: () => _onNoWater(l)),
-            ],
-          ),
           const SizedBox(height: 10),
-          HoldButton(
-            label: l.homeActionRefuse,
-            tone: PanelTone.danger,
-            expand: true,
-            onCompleted: () => _onRefused(l, nf),
+          _Actions(
+            done: SysButton.primary(
+              label: l.homeActionDone,
+              icon: SysGlyph.check,
+              expand: true,
+              onPressed: () => _onDone(l, nf),
+            ),
+            snooze: SysButton.secondary(
+              label: l.homeActionSnooze,
+              icon: SysGlyph.clock,
+              onPressed: () => setState(() => _snooze += const Duration(minutes: 10)),
+            ),
+            contextAction: q.contextAction == NextQuestContextAction.noWater
+                ? SysButton.secondary(label: l.homeActionNoWater, icon: SysGlyph.water, onPressed: () => _onNoWater(l))
+                : null,
+            refuse: HoldButton(
+              label: l.homeActionRefuse,
+              semanticHint: l.homeRefuseHint,
+              tone: PanelTone.danger,
+              expand: true,
+              onCompleted: () => _onRefused(l, nf),
+            ),
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 4),
           Text(
             l.homeRefuseHint,
-            textAlign: TextAlign.center,
-            style: SysText.caption.copyWith(color: SysColors.dangerLight),
+            textAlign: TextAlign.right,
+            style: SysText.caption.copyWith(color: SysColors.dangerLight, fontSize: 11.5),
           ),
         ],
       ),
     );
+  }
+}
+
+/// Кнопки квеста в два ряда: [Выполнено ····][+10 мин] / [Нет воды][Отказ (удержание) ····].
+/// На узкой ширине или при крупном шрифте — столбиком.
+class _Actions extends StatelessWidget {
+  const _Actions({required this.done, required this.snooze, required this.refuse, this.contextAction});
+
+  final Widget done;
+  final Widget snooze;
+  final Widget refuse;
+  final Widget? contextAction;
+
+  @override
+  Widget build(BuildContext context) {
+    final ctx = contextAction;
+    return LayoutBuilder(builder: (context, c) {
+      final scale = MediaQuery.textScalerOf(context).scale(14) / 14;
+      if (c.maxWidth / scale < 300) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            done,
+            const SizedBox(height: 8),
+            Wrap(spacing: 8, runSpacing: 8, children: [snooze, ?ctx]),
+            const SizedBox(height: 8),
+            refuse,
+          ],
+        );
+      }
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(children: [Expanded(child: done), const SizedBox(width: 8), snooze]),
+          const SizedBox(height: 8),
+          Row(children: [
+            if (ctx != null) ...[ctx, const SizedBox(width: 8)],
+            Expanded(child: refuse),
+          ]),
+        ],
+      );
+    });
   }
 }

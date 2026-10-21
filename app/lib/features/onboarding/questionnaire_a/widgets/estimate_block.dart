@@ -5,10 +5,13 @@ import '../../../../ui/ui.dart';
 
 /// Блок оценок ИИ до расчёта: «≈ … Будет рассчитано Системой» + пометка «оценка по фото…».
 class EstimateBlock extends StatelessWidget {
-  const EstimateBlock({super.key, required this.items});
+  const EstimateBlock({super.key, required this.items, this.aiNote});
 
   /// Названия оцениваемых показателей.
   final List<String> items;
+
+  /// Пояснение «после съёмки ИИ оценит … и напишет вам».
+  final String? aiNote;
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +46,17 @@ class EstimateBlock extends StatelessWidget {
             Expanded(child: Text(l.commonEstimateNote, style: SysText.caption)),
           ],
         ),
+        if (aiNote != null) ...[
+          const SizedBox(height: 6),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SysIcon(SysGlyph.sparkle, size: 14, color: SysColors.accentLight),
+              const SizedBox(width: 6),
+              Expanded(child: Text(aiNote!, style: SysText.caption.copyWith(color: SysColors.textSecondary))),
+            ],
+          ),
+        ],
       ],
     );
   }

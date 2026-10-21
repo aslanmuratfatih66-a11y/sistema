@@ -225,13 +225,6 @@ class FoodFinance {
   final int daysToStipend;
 }
 
-@immutable
-class AssistantState {
-  const AssistantState({required this.line, this.speaking = true});
-  final HomeText line;
-  final bool speaking;
-}
-
 /// Всё, что показывает главный экран.
 @immutable
 class HomeViewData {
@@ -246,7 +239,6 @@ class HomeViewData {
     required this.boss,
     required this.calories,
     required this.finance,
-    required this.assistant,
   });
 
   /// Дата начала программы — для «НЕДЕЛЯ n · ДЕНЬ n».
@@ -260,5 +252,4 @@ class HomeViewData {
   final WeeklyBoss? boss;
   final CaloriesSummary calories;
   final FoodFinance finance;
-  final AssistantState assistant;
 }

@@ -770,6 +770,558 @@ abstract class AppLocalizations {
   /// **'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.'**
   String get homeDemoAssistantLine;
 
+  /// No description provided for @chrIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите спутника. Он будет жить внизу экрана, напоминать, хвалить и ругать — в выбранном режиме.'**
+  String get chrIntro;
+
+  /// No description provided for @chrArchetype.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персонаж'**
+  String get chrArchetype;
+
+  /// No description provided for @chrArchetypeRequired.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите персонажа, чтобы продолжить'**
+  String get chrArchetypeRequired;
+
+  /// No description provided for @chrNameAnimeGirl.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аниме-девушка'**
+  String get chrNameAnimeGirl;
+
+  /// No description provided for @chrDescAnimeGirl.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жизнерадостная и упрямая. Радуется каждой победе и не даёт сдаться.'**
+  String get chrDescAnimeGirl;
+
+  /// No description provided for @chrSpeechAnimeGirl.
+  ///
+  /// In ru, this message translates to:
+  /// **'живая, с восклицаниями и подбадриваниями'**
+  String get chrSpeechAnimeGirl;
+
+  /// No description provided for @chrSampleAnimeGirl1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Привет! Сегодня мы точно всё успеем!'**
+  String get chrSampleAnimeGirl1;
+
+  /// No description provided for @chrSampleAnimeGirl2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ещё один квест — и я буду тобой гордиться!'**
+  String get chrSampleAnimeGirl2;
+
+  /// No description provided for @chrSampleAnimeGirl3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не сдавайся, у тебя получается лучше, чем вчера!'**
+  String get chrSampleAnimeGirl3;
+
+  /// No description provided for @chrLineAnimeGirlSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ничего страшного, отдохни немного — и попробуем ещё раз, ладно?'**
+  String get chrLineAnimeGirlSoft;
+
+  /// No description provided for @chrLineAnimeGirlNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хорошая работа! Осталось совсем чуть-чуть, давай закончим!'**
+  String get chrLineAnimeGirlNormal;
+
+  /// No description provided for @chrLineAnimeGirlStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Эй! Квест сам себя не выполнит. Встаём и делаем!'**
+  String get chrLineAnimeGirlStrict;
+
+  /// No description provided for @chrLineAnimeGirlHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Опять откладываешь?! Хватит оправданий — марш выполнять, сейчас же!'**
+  String get chrLineAnimeGirlHarsh;
+
+  /// No description provided for @chrNameAnimeGuy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аниме-парень'**
+  String get chrNameAnimeGuy;
+
+  /// No description provided for @chrDescAnimeGuy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Соперник и напарник. Вызывает на спор и тянет вперёд.'**
+  String get chrDescAnimeGuy;
+
+  /// No description provided for @chrSpeechAnimeGuy.
+  ///
+  /// In ru, this message translates to:
+  /// **'дерзкая, с вызовом и азартом'**
+  String get chrSpeechAnimeGuy;
+
+  /// No description provided for @chrSampleAnimeGuy1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спорим, сегодня ты меня не обгонишь?'**
+  String get chrSampleAnimeGuy1;
+
+  /// No description provided for @chrSampleAnimeGuy2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ха, неплохо! Но я знаю, что ты можешь больше.'**
+  String get chrSampleAnimeGuy2;
+
+  /// No description provided for @chrSampleAnimeGuy3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вперёд, напарник, уровень сам себя не поднимет!'**
+  String get chrSampleAnimeGuy3;
+
+  /// No description provided for @chrLineAnimeGuySoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня тяжело? Бывает. Сделаем хотя бы маленький шаг вместе.'**
+  String get chrLineAnimeGuySoft;
+
+  /// No description provided for @chrLineAnimeGuyNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неплохо идёшь! Ещё рывок — и этот день наш.'**
+  String get chrLineAnimeGuyNormal;
+
+  /// No description provided for @chrLineAnimeGuyStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ты же не собираешься проиграть лени? Докажи, что сильнее.'**
+  String get chrLineAnimeGuyStrict;
+
+  /// No description provided for @chrLineAnimeGuyHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Серьёзно? Это всё, на что ты способен? Встал и сделал, без нытья!'**
+  String get chrLineAnimeGuyHarsh;
+
+  /// No description provided for @chrNameStoicStrongman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Невозмутимый силач'**
+  String get chrNameStoicStrongman;
+
+  /// No description provided for @chrDescStoicStrongman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спокоен как скала. Верит в дисциплину и повторения.'**
+  String get chrDescStoicStrongman;
+
+  /// No description provided for @chrSpeechStoicStrongman.
+  ///
+  /// In ru, this message translates to:
+  /// **'короткие фразы, без лишних слов'**
+  String get chrSpeechStoicStrongman;
+
+  /// No description provided for @chrSampleStoicStrongman1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый день. Делаем.'**
+  String get chrSampleStoicStrongman1;
+
+  /// No description provided for @chrSampleStoicStrongman2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сила — это повторения.'**
+  String get chrSampleStoicStrongman2;
+
+  /// No description provided for @chrSampleStoicStrongman3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Медленно, но каждый день.'**
+  String get chrSampleStoicStrongman3;
+
+  /// No description provided for @chrLineStoicStrongmanSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отдохни. Потом продолжим.'**
+  String get chrLineStoicStrongmanSoft;
+
+  /// No description provided for @chrLineStoicStrongmanNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хорошо. Следующий подход.'**
+  String get chrLineStoicStrongmanNormal;
+
+  /// No description provided for @chrLineStoicStrongmanStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пропуск. Так не пойдёт. Делай.'**
+  String get chrLineStoicStrongmanStrict;
+
+  /// No description provided for @chrLineStoicStrongmanHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хватит болтать. Встал. Сделал. Сейчас.'**
+  String get chrLineStoicStrongmanHarsh;
+
+  /// No description provided for @chrNameGrimSwordsman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мрачный мечник'**
+  String get chrNameGrimSwordsman;
+
+  /// No description provided for @chrDescGrimSwordsman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Суровый наставник. Каждый день — тренировка воли.'**
+  String get chrDescGrimSwordsman;
+
+  /// No description provided for @chrSpeechGrimSwordsman.
+  ///
+  /// In ru, this message translates to:
+  /// **'сдержанная, с мрачной иронией'**
+  String get chrSpeechGrimSwordsman;
+
+  /// No description provided for @chrSampleGrimSwordsman1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Клинок тупится без дела. Как и воля.'**
+  String get chrSampleGrimSwordsman1;
+
+  /// No description provided for @chrSampleGrimSwordsman2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ты снова здесь. Значит, ещё не сдался.'**
+  String get chrSampleGrimSwordsman2;
+
+  /// No description provided for @chrSampleGrimSwordsman3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тьма не страшна тому, кто держит слово.'**
+  String get chrSampleGrimSwordsman3;
+
+  /// No description provided for @chrLineGrimSwordsmanSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Даже клинку нужен отдых. Переведи дух и возвращайся.'**
+  String get chrLineGrimSwordsmanSoft;
+
+  /// No description provided for @chrLineGrimSwordsmanNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удар засчитан. Держи ритм до конца дня.'**
+  String get chrLineGrimSwordsmanNormal;
+
+  /// No description provided for @chrLineGrimSwordsmanStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Слабость ищет оправдания. Сила ищет путь. Выбирай.'**
+  String get chrLineGrimSwordsmanStrict;
+
+  /// No description provided for @chrLineGrimSwordsmanHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Позорно. Воин, который бросает клятву, — уже не воин. Исправь это.'**
+  String get chrLineGrimSwordsmanHarsh;
+
+  /// No description provided for @chrSpeechLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Манера речи: {speech}'**
+  String chrSpeechLabel(String speech);
+
+  /// No description provided for @chrPreviewStates.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анимации'**
+  String get chrPreviewStates;
+
+  /// No description provided for @chrStateIdle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покой'**
+  String get chrStateIdle;
+
+  /// No description provided for @chrStateWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Идти'**
+  String get chrStateWalk;
+
+  /// No description provided for @chrStateTalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Говорить'**
+  String get chrStateTalk;
+
+  /// No description provided for @chrStateHappy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Радость'**
+  String get chrStateHappy;
+
+  /// No description provided for @chrStateAngry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Злость'**
+  String get chrStateAngry;
+
+  /// No description provided for @chrStateSit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сесть'**
+  String get chrStateSit;
+
+  /// No description provided for @chrStateSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон'**
+  String get chrStateSleep;
+
+  /// No description provided for @chrStatePoint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Указать'**
+  String get chrStatePoint;
+
+  /// No description provided for @chrVoice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос'**
+  String get chrVoice;
+
+  /// No description provided for @chrVoiceNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пока звучит системный синтез речи телефона; позже появятся голоса персонажей.'**
+  String get chrVoiceNote;
+
+  /// No description provided for @chrVoiceBright.
+  ///
+  /// In ru, this message translates to:
+  /// **'Звонкий'**
+  String get chrVoiceBright;
+
+  /// No description provided for @chrVoiceSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мягкий'**
+  String get chrVoiceSoft;
+
+  /// No description provided for @chrVoiceCalm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спокойный'**
+  String get chrVoiceCalm;
+
+  /// No description provided for @chrVoiceEnergetic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Энергичный'**
+  String get chrVoiceEnergetic;
+
+  /// No description provided for @chrVoiceDeep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Глубокий'**
+  String get chrVoiceDeep;
+
+  /// No description provided for @chrVoiceLow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Низкий'**
+  String get chrVoiceLow;
+
+  /// No description provided for @chrVoiceHoarse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хриплый'**
+  String get chrVoiceHoarse;
+
+  /// No description provided for @chrListen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прослушать'**
+  String get chrListen;
+
+  /// No description provided for @chrStop.
+  ///
+  /// In ru, this message translates to:
+  /// **'Остановить'**
+  String get chrStop;
+
+  /// No description provided for @chrTtsUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синтез речи недоступен на этом устройстве для языка интерфейса — голос можно будет прослушать позже.'**
+  String get chrTtsUnavailable;
+
+  /// No description provided for @chrMotivation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим мотивации'**
+  String get chrMotivation;
+
+  /// No description provided for @chrModeSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мягкий'**
+  String get chrModeSoft;
+
+  /// No description provided for @chrModeSoftDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поддержка и мягкие напоминания, без давления.'**
+  String get chrModeSoftDesc;
+
+  /// No description provided for @chrModeNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обычный'**
+  String get chrModeNormal;
+
+  /// No description provided for @chrModeNormalDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Похвала за успехи, спокойные замечания за пропуски.'**
+  String get chrModeNormalDesc;
+
+  /// No description provided for @chrModeStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Строгий'**
+  String get chrModeStrict;
+
+  /// No description provided for @chrModeStrictDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чёткие требования и прямая критика за провалы.'**
+  String get chrModeStrictDesc;
+
+  /// No description provided for @chrModeHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жёсткий'**
+  String get chrModeHarsh;
+
+  /// No description provided for @chrModeHarshDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ругает по всей строгости, но без унижений внешности и здоровья.'**
+  String get chrModeHarshDesc;
+
+  /// No description provided for @chrModeExample.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пример реплики'**
+  String get chrModeExample;
+
+  /// No description provided for @chrModeTry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Услышать в этом режиме'**
+  String get chrModeTry;
+
+  /// No description provided for @chrProfanity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Допускать мат'**
+  String get chrProfanity;
+
+  /// No description provided for @chrProfanityHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Редко и только в жёстком режиме'**
+  String get chrProfanityHint;
+
+  /// No description provided for @chrTapSoft1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Я рядом. Сделаем немного — уже хорошо.'**
+  String get chrTapSoft1;
+
+  /// No description provided for @chrTapSoft2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не торопись, всё получится.'**
+  String get chrTapSoft2;
+
+  /// No description provided for @chrTapSoft3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ты молодец, что заглянул.'**
+  String get chrTapSoft3;
+
+  /// No description provided for @chrTapNormal1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как продвигаются квесты?'**
+  String get chrTapNormal1;
+
+  /// No description provided for @chrTapNormal2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хороший темп. Продолжаем.'**
+  String get chrTapNormal2;
+
+  /// No description provided for @chrTapNormal3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не забудь про воду.'**
+  String get chrTapNormal3;
+
+  /// No description provided for @chrTapStrict1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты ждут. Не расслабляйся.'**
+  String get chrTapStrict1;
+
+  /// No description provided for @chrTapStrict2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сначала дело, потом отдых.'**
+  String get chrTapStrict2;
+
+  /// No description provided for @chrTapStrict3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проверь список. Что ещё не сделано?'**
+  String get chrTapStrict3;
+
+  /// No description provided for @chrTapHarsh1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хватит листать. Иди выполнять.'**
+  String get chrTapHarsh1;
+
+  /// No description provided for @chrTapHarsh2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оправдания не засчитываются.'**
+  String get chrTapHarsh2;
+
+  /// No description provided for @chrTapHarsh3.
+  ///
+  /// In ru, this message translates to:
+  /// **'День не резиновый. Действуй.'**
+  String get chrTapHarsh3;
+
+  /// No description provided for @chrPocketTab.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вернуть персонажа'**
+  String get chrPocketTab;
+
+  /// No description provided for @chrSemantics.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}: нажмите, чтобы услышать реплику; смахните вниз, чтобы убрать'**
+  String chrSemantics(String name);
+
   /// No description provided for @commonNext.
   ///
   /// In ru, this message translates to:
@@ -967,6 +1519,66 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Разрешения'**
   String get onbStepPermissions;
+
+  /// No description provided for @hqStatStrengthShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'СИЛ'**
+  String get hqStatStrengthShort;
+
+  /// No description provided for @hqStatEnduranceShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'ВЫН'**
+  String get hqStatEnduranceShort;
+
+  /// No description provided for @hqStatDisciplineShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'ДИС'**
+  String get hqStatDisciplineShort;
+
+  /// No description provided for @hqStatIntellectShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИНТ'**
+  String get hqStatIntellectShort;
+
+  /// No description provided for @hqStatHealthShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'ЗДР'**
+  String get hqStatHealthShort;
+
+  /// No description provided for @hqStatLooksShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'ВНШ'**
+  String get hqStatLooksShort;
+
+  /// No description provided for @hqCaloriesTodayTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Калории за день'**
+  String get hqCaloriesTodayTitle;
+
+  /// No description provided for @hqNutritionDiaryTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дневник питания'**
+  String get hqNutritionDiaryTitle;
+
+  /// No description provided for @hqNutritionDiarySoon.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.'**
+  String get hqNutritionDiarySoon;
+
+  /// No description provided for @hqFinanceFoodTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Финансы на еду'**
+  String get hqFinanceFoodTitle;
 
   /// No description provided for @planNoticeLabel.
   ///
@@ -1757,7 +2369,7 @@ abstract class AppLocalizations {
   /// No description provided for @qaPoseBodySideHint.
   ///
   /// In ru, this message translates to:
-  /// **'Повернитесь боком, руки вдоль тела, смотрите прямо.'**
+  /// **'Повернитесь к камере правым боком, руки вдоль тела, смотрите прямо.'**
   String get qaPoseBodySideHint;
 
   /// No description provided for @qaPoseBodyBack.
@@ -1955,7 +2567,7 @@ abstract class AppLocalizations {
   /// No description provided for @qaPoseFaceLeftHint.
   ///
   /// In ru, this message translates to:
-  /// **'Поверните голову вправо, чтобы в кадре была левая сторона лица.'**
+  /// **'Повернитесь так, чтобы к камере была ЛЕВАЯ щека.'**
   String get qaPoseFaceLeftHint;
 
   /// No description provided for @qaPoseFaceRight.
@@ -1967,7 +2579,7 @@ abstract class AppLocalizations {
   /// No description provided for @qaPoseFaceRightHint.
   ///
   /// In ru, this message translates to:
-  /// **'Поверните голову влево, чтобы в кадре была правая сторона лица.'**
+  /// **'Повернитесь так, чтобы к камере была ПРАВАЯ щека.'**
   String get qaPoseFaceRightHint;
 
   /// No description provided for @qaSkinCloseups.
@@ -1999,6 +2611,312 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Добавить'**
   String get qaSkinAddCloseup;
+
+  /// No description provided for @qaShootTitleBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото-сессия: тело'**
+  String get qaShootTitleBody;
+
+  /// No description provided for @qaShootTitleFace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото-сессия: лицо'**
+  String get qaShootTitleFace;
+
+  /// No description provided for @qaShootCardBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото-сессия: тело (3 ракурса)'**
+  String get qaShootCardBody;
+
+  /// No description provided for @qaShootCardFace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото-сессия: лицо (3 ракурса)'**
+  String get qaShootCardFace;
+
+  /// No description provided for @qaShootCardHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поставьте телефон и нажмите «Начать» — дальше Система всё скажет голосом и сама сделает снимки.'**
+  String get qaShootCardHint;
+
+  /// No description provided for @qaShootStartSession.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать сессию'**
+  String get qaShootStartSession;
+
+  /// No description provided for @qaShootRestartSession.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пройти сессию заново'**
+  String get qaShootRestartSession;
+
+  /// No description provided for @qaShootCloseupButton.
+  ///
+  /// In ru, this message translates to:
+  /// **'Крупный план проблемной зоны'**
+  String get qaShootCloseupButton;
+
+  /// No description provided for @qaShootAiNoteBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'После съёмки ИИ оценит габариты и состав тела с учётом роста и напишет вам.'**
+  String get qaShootAiNoteBody;
+
+  /// No description provided for @qaShootAiNoteSkin.
+  ///
+  /// In ru, this message translates to:
+  /// **'После съёмки ИИ оценит тип кожи и выраженность высыпаний и напишет вам.'**
+  String get qaShootAiNoteSkin;
+
+  /// No description provided for @qaShootPrepTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подготовка'**
+  String get qaShootPrepTitle;
+
+  /// No description provided for @qaShootPrepPhoneBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поставьте телефон вертикально на уровне пояса: обоприте о стену, стопку книг или поставьте на штатив. Экран — к себе.'**
+  String get qaShootPrepPhoneBody;
+
+  /// No description provided for @qaShootPrepDistanceBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вы встанете примерно в 2,5 метрах — так в кадр поместится всё тело.'**
+  String get qaShootPrepDistanceBody;
+
+  /// No description provided for @qaShootPrepPhoneFace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поставьте телефон вертикально на уровне глаз, примерно в 50 см от лица.'**
+  String get qaShootPrepPhoneFace;
+
+  /// No description provided for @qaShootPrepLight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Свет: встаньте лицом к окну или лампе. Яркого окна за спиной быть не должно.'**
+  String get qaShootPrepLight;
+
+  /// No description provided for @qaShootPrepSound.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включите звук: Система скажет, куда встать, и сосчитает до снимка. Нажимать ничего не нужно.'**
+  String get qaShootPrepSound;
+
+  /// No description provided for @qaShootDelay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Задержка отсчёта'**
+  String get qaShootDelay;
+
+  /// No description provided for @qaShootDelaySec.
+  ///
+  /// In ru, this message translates to:
+  /// **'{n} с'**
+  String qaShootDelaySec(int n);
+
+  /// No description provided for @qaShootDelayManual.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кнопкой'**
+  String get qaShootDelayManual;
+
+  /// No description provided for @qaShootOperator.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снимает другой человек'**
+  String get qaShootOperator;
+
+  /// No description provided for @qaShootOperatorHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Основная камера. Отсчёт можно выключить и снимать кнопкой.'**
+  String get qaShootOperatorHint;
+
+  /// No description provided for @qaShootStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать'**
+  String get qaShootStart;
+
+  /// No description provided for @qaShootPause.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get qaShootPause;
+
+  /// No description provided for @qaShootResume.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить'**
+  String get qaShootResume;
+
+  /// No description provided for @qaShootPausedTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сессия на паузе'**
+  String get qaShootPausedTitle;
+
+  /// No description provided for @qaShootPausedHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Текущий ракурс начнётся заново.'**
+  String get qaShootPausedHint;
+
+  /// No description provided for @qaShootStop.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прервать'**
+  String get qaShootStop;
+
+  /// No description provided for @qaShootShotOf.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ракурс {n} из {total}'**
+  String qaShootShotOf(int n, int total);
+
+  /// No description provided for @qaShootWaitShutter.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нажмите кнопку, когда человек встанет в контур.'**
+  String get qaShootWaitShutter;
+
+  /// No description provided for @qaShootRetry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get qaShootRetry;
+
+  /// No description provided for @qaShootReviewTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проверьте снимки'**
+  String get qaShootReviewTitle;
+
+  /// No description provided for @qaShootReviewHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Если ракурс не получился — переснимите только его.'**
+  String get qaShootReviewHint;
+
+  /// No description provided for @qaShootSaveFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось сохранить снимки. Попробуйте ещё раз.'**
+  String get qaShootSaveFailed;
+
+  /// No description provided for @qaShootSayBodyFront.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отойди примерно на 2,5 метра и встань в контур лицом к камере. Руки немного в стороны.'**
+  String get qaShootSayBodyFront;
+
+  /// No description provided for @qaShootSayBodySide.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повернись к камере правым боком. Руки вдоль тела, смотри прямо.'**
+  String get qaShootSayBodySide;
+
+  /// No description provided for @qaShootSayBodyBack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повернись к камере спиной. Руки немного в стороны.'**
+  String get qaShootSayBodyBack;
+
+  /// No description provided for @qaShootSayFaceFront.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сядь примерно в 50 сантиметрах от телефона. Смотри прямо в камеру, лицо — в овале.'**
+  String get qaShootSayFaceFront;
+
+  /// No description provided for @qaShootSayFaceLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повернись так, чтобы к камере была левая щека. Голову держи ровно.'**
+  String get qaShootSayFaceLeft;
+
+  /// No description provided for @qaShootSayFaceRight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Теперь повернись так, чтобы к камере была правая щека.'**
+  String get qaShootSayFaceRight;
+
+  /// No description provided for @qaShootTaken.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снимок сделан. Следующий: {next}.'**
+  String qaShootTaken(String next);
+
+  /// No description provided for @qaShootTakenLast.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снимок сделан. Съёмка завершена.'**
+  String get qaShootTakenLast;
+
+  /// No description provided for @qaShootFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось сделать снимок. Попробуй ещё раз.'**
+  String get qaShootFailed;
+
+  /// No description provided for @qaBodyGirthsOptionalTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обхваты — если знаете'**
+  String get qaBodyGirthsOptionalTitle;
+
+  /// No description provided for @qaBodyGirthsOptionalHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Необязательно. Если не знаете — Система примерно оценит их по фото с учётом роста и сообщит вам.'**
+  String get qaBodyGirthsOptionalHint;
+
+  /// No description provided for @qaBodyGirthsHowTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как мерить'**
+  String get qaBodyGirthsHowTitle;
+
+  /// No description provided for @qaBodyGirthsHowGeneral.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сантиметровая лента горизонтально, прилегает, но не сдавливает. Утром, на спокойном выдохе.'**
+  String get qaBodyGirthsHowGeneral;
+
+  /// No description provided for @qaBodyWaistHow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Талия — по самому узкому месту, обычно чуть выше пупка.'**
+  String get qaBodyWaistHow;
+
+  /// No description provided for @qaBodyHipsHow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бёдра — по самым выступающим точкам ягодиц, ноги вместе.'**
+  String get qaBodyHipsHow;
+
+  /// No description provided for @qaBodyChestHow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Грудь — по самым выступающим точкам, лента проходит под мышками.'**
+  String get qaBodyChestHow;
+
+  /// No description provided for @qaBodyNeckHow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шея — сразу под кадыком.'**
+  String get qaBodyNeckHow;
+
+  /// No description provided for @qaBodyArmHow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рука — по самому широкому месту плеча, рука расслаблена.'**
+  String get qaBodyArmHow;
 
   /// No description provided for @qaSkinOily.
   ///
@@ -2323,6 +3241,30 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Убрать срок'**
   String get qaGoalDeadlineClear;
+
+  /// No description provided for @qaTzCityHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Часовой пояс подставится по городу'**
+  String get qaTzCityHint;
+
+  /// No description provided for @qaTzFromCity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Определён по городу: {city}'**
+  String qaTzFromCity(String city);
+
+  /// No description provided for @qaTzFromDevice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Текущий пояс телефона'**
+  String get qaTzFromDevice;
+
+  /// No description provided for @qaTzDeviceBadge.
+  ///
+  /// In ru, this message translates to:
+  /// **'сейчас на телефоне'**
+  String get qaTzDeviceBadge;
 
   /// No description provided for @qbScheduleIntro.
   ///
@@ -2893,222 +3835,6 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'до {date}'**
   String qbFinDueShort(String date);
-
-  /// No description provided for @qbCharacterIntro.
-  ///
-  /// In ru, this message translates to:
-  /// **'Выберите спутника. Он будет напоминать, хвалить и ругать — в выбранном режиме.'**
-  String get qbCharacterIntro;
-
-  /// No description provided for @qbArchetype.
-  ///
-  /// In ru, this message translates to:
-  /// **'Персонаж'**
-  String get qbArchetype;
-
-  /// No description provided for @qbArchetypeRequired.
-  ///
-  /// In ru, this message translates to:
-  /// **'Выберите персонажа, чтобы продолжить'**
-  String get qbArchetypeRequired;
-
-  /// No description provided for @qbArchAnimeGirl.
-  ///
-  /// In ru, this message translates to:
-  /// **'Аниме-девушка'**
-  String get qbArchAnimeGirl;
-
-  /// No description provided for @qbArchAnimeGirlDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Жизнерадостная и упрямая. Радуется каждой победе и не даёт сдаться.'**
-  String get qbArchAnimeGirlDesc;
-
-  /// No description provided for @qbArchAnimeGirlSpeech.
-  ///
-  /// In ru, this message translates to:
-  /// **'живая, с восклицаниями и подбадриваниями'**
-  String get qbArchAnimeGirlSpeech;
-
-  /// No description provided for @qbArchAnimeGuy.
-  ///
-  /// In ru, this message translates to:
-  /// **'Аниме-парень'**
-  String get qbArchAnimeGuy;
-
-  /// No description provided for @qbArchAnimeGuyDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Соперник и напарник. Вызывает на спор и тянет вперёд.'**
-  String get qbArchAnimeGuyDesc;
-
-  /// No description provided for @qbArchAnimeGuySpeech.
-  ///
-  /// In ru, this message translates to:
-  /// **'дерзкая, с вызовом и азартом'**
-  String get qbArchAnimeGuySpeech;
-
-  /// No description provided for @qbArchStoicStrongman.
-  ///
-  /// In ru, this message translates to:
-  /// **'Невозмутимый силач'**
-  String get qbArchStoicStrongman;
-
-  /// No description provided for @qbArchStoicStrongmanDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Спокоен как скала. Верит в дисциплину и повторения.'**
-  String get qbArchStoicStrongmanDesc;
-
-  /// No description provided for @qbArchStoicStrongmanSpeech.
-  ///
-  /// In ru, this message translates to:
-  /// **'короткие фразы, без лишних слов'**
-  String get qbArchStoicStrongmanSpeech;
-
-  /// No description provided for @qbArchGrimSwordsman.
-  ///
-  /// In ru, this message translates to:
-  /// **'Мрачный мечник'**
-  String get qbArchGrimSwordsman;
-
-  /// No description provided for @qbArchGrimSwordsmanDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Суровый наставник. Каждый день — тренировка воли.'**
-  String get qbArchGrimSwordsmanDesc;
-
-  /// No description provided for @qbArchGrimSwordsmanSpeech.
-  ///
-  /// In ru, this message translates to:
-  /// **'сдержанная, с мрачной иронией'**
-  String get qbArchGrimSwordsmanSpeech;
-
-  /// No description provided for @qbArchSpeechLabel.
-  ///
-  /// In ru, this message translates to:
-  /// **'Манера речи: {speech}'**
-  String qbArchSpeechLabel(String speech);
-
-  /// No description provided for @qbVoice.
-  ///
-  /// In ru, this message translates to:
-  /// **'Голос'**
-  String get qbVoice;
-
-  /// No description provided for @qbVoiceLater.
-  ///
-  /// In ru, this message translates to:
-  /// **'Голос подключится позже'**
-  String get qbVoiceLater;
-
-  /// No description provided for @qbVoiceBright.
-  ///
-  /// In ru, this message translates to:
-  /// **'Звонкий'**
-  String get qbVoiceBright;
-
-  /// No description provided for @qbVoiceSoft.
-  ///
-  /// In ru, this message translates to:
-  /// **'Мягкий'**
-  String get qbVoiceSoft;
-
-  /// No description provided for @qbVoiceCalm.
-  ///
-  /// In ru, this message translates to:
-  /// **'Спокойный'**
-  String get qbVoiceCalm;
-
-  /// No description provided for @qbVoiceEnergetic.
-  ///
-  /// In ru, this message translates to:
-  /// **'Энергичный'**
-  String get qbVoiceEnergetic;
-
-  /// No description provided for @qbVoiceDeep.
-  ///
-  /// In ru, this message translates to:
-  /// **'Глубокий'**
-  String get qbVoiceDeep;
-
-  /// No description provided for @qbVoiceLow.
-  ///
-  /// In ru, this message translates to:
-  /// **'Низкий'**
-  String get qbVoiceLow;
-
-  /// No description provided for @qbVoiceHoarse.
-  ///
-  /// In ru, this message translates to:
-  /// **'Хриплый'**
-  String get qbVoiceHoarse;
-
-  /// No description provided for @qbMotivation.
-  ///
-  /// In ru, this message translates to:
-  /// **'Режим мотивации'**
-  String get qbMotivation;
-
-  /// No description provided for @qbMotSoft.
-  ///
-  /// In ru, this message translates to:
-  /// **'Мягкий'**
-  String get qbMotSoft;
-
-  /// No description provided for @qbMotSoftDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Поддержка и мягкие напоминания, без давления.'**
-  String get qbMotSoftDesc;
-
-  /// No description provided for @qbMotNormal.
-  ///
-  /// In ru, this message translates to:
-  /// **'Обычный'**
-  String get qbMotNormal;
-
-  /// No description provided for @qbMotNormalDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Похвала за успехи, спокойные замечания за пропуски.'**
-  String get qbMotNormalDesc;
-
-  /// No description provided for @qbMotStrict.
-  ///
-  /// In ru, this message translates to:
-  /// **'Строгий'**
-  String get qbMotStrict;
-
-  /// No description provided for @qbMotStrictDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Чёткие требования и прямая критика за провалы.'**
-  String get qbMotStrictDesc;
-
-  /// No description provided for @qbMotHarsh.
-  ///
-  /// In ru, this message translates to:
-  /// **'Жёсткий'**
-  String get qbMotHarsh;
-
-  /// No description provided for @qbMotHarshDesc.
-  ///
-  /// In ru, this message translates to:
-  /// **'Ругает по всей строгости, но без унижений внешности и здоровья.'**
-  String get qbMotHarshDesc;
-
-  /// No description provided for @qbProfanity.
-  ///
-  /// In ru, this message translates to:
-  /// **'Допускать мат'**
-  String get qbProfanity;
-
-  /// No description provided for @qbProfanityHint.
-  ///
-  /// In ru, this message translates to:
-  /// **'Редко и только в жёстком режиме'**
-  String get qbProfanityHint;
 
   /// No description provided for @qbPermissionsIntro.
   ///
