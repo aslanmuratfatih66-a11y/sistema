@@ -3,6 +3,7 @@
 // Этап 2: квесты, экземпляры, журнал событий, эффекты, паузы, награды магазина, пользовательские настройки.
 // Этап 3: продукты, дневник питания, рецепты, вода, список покупок, шаги, сон, уход за кожей, тренировки.
 // Этап 4: прогулки и маршруты.
+// Этап 6: чат с персонажем, знания (курсы, уроки с повторениями), анализы фото.
 // Остальные сущности SPEC §11 — на следующих этапах (миграции через schemaVersion).
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -383,6 +384,52 @@ class Walks extends Table with SyncColumns {
   TextColumn get payload => text().withDefault(const Constant('{}'))(); // отрезки, темп по отрезкам
 }
 
+/// Сообщение чата с персонажем (SPEC §9.3).
+@DataClassName('ChatMessageRow')
+class ChatMessages extends Table with SyncColumns {
+  TextColumn get role => text()(); // 'user' / 'assistant' / 'system' (журнал действий ИИ)
+  TextColumn get body => text()();
+  DateTimeColumn get createdAt => dateTime()();
+  BoolColumn get viaVoice => boolean().withDefault(const Constant(false))();
+  TextColumn get actionIds => text().nullable()(); // JSON id действий ИИ (ai_actions) из этого ответа
+}
+
+/// Курс знаний (SPEC §8.9).
+@DataClassName('CourseRow')
+class Courses extends Table with SyncColumns {
+  TextColumn get title => text()();
+  TextColumn get topic => text()(); // свободная тема / ключ встроенного курса
+  TextColumn get lang => text()(); // ru / tr
+  IntColumn get totalLessons => integer().withDefault(const Constant(0))();
+  IntColumn get dailyLessons => integer().withDefault(const Constant(1))();
+  TextColumn get status => text().withDefault(const Constant('active'))(); // active / paused / done
+  DateTimeColumn get createdAt => dateTime()();
+}
+
+/// Урок курса: содержание, проверка, интервальные повторения.
+@DataClassName('LessonRow')
+class Lessons extends Table with SyncColumns {
+  TextColumn get courseId => text()();
+  IntColumn get orderIndex => integer()();
+  TextColumn get title => text()();
+  TextColumn get content => text()(); // JSON: абзацы, примеры
+  TextColumn get quiz => text().withDefault(const Constant('[]'))(); // JSON вопросов
+  DateTimeColumn get openedAt => dateTime().nullable()();
+  DateTimeColumn get completedAt => dateTime().nullable()();
+  IntColumn get score => integer().nullable()(); // % правильных
+  IntColumn get reviewStep => integer().withDefault(const Constant(0))(); // ступень повторения
+  DateTimeColumn get nextReviewAt => dateTime().nullable()();
+}
+
+/// Результат анализа фото ИИ (тело, кожа, еда, чек) — всегда «оценка» (SPEC §9.4).
+@DataClassName('PhotoAnalysisRow')
+class PhotoAnalyses extends Table with SyncColumns {
+  TextColumn get photoId => text().nullable()(); // Photos.id, если фото сохранено
+  TextColumn get kind => text()(); // body / skin / food / receipt
+  TextColumn get result => text()(); // JSON ответа сервера
+  DateTimeColumn get createdAt => dateTime()();
+}
+
 @DriftDatabase(tables: [
   AppSettings,
   Profiles,
@@ -412,6 +459,10 @@ class Walks extends Table with SyncColumns {
   WorkoutSessions,
   WalkRoutes,
   Walks,
+  ChatMessages,
+  Courses,
+  Lessons,
+  PhotoAnalyses,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor])
@@ -425,7 +476,7 @@ class AppDatabase extends _$AppDatabase {
             ));
 
   @override
-  int get schemaVersion => 5;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -465,6 +516,12 @@ class AppDatabase extends _$AppDatabase {
           if (from < 5) {
             await m.createTable(walkRoutes);
             await m.createTable(walks);
+          }
+          if (from < 6) {
+            await m.createTable(chatMessages);
+            await m.createTable(courses);
+            await m.createTable(lessons);
+            await m.createTable(photoAnalyses);
           }
         },
       );

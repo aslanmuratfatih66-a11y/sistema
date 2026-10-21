@@ -10,6 +10,7 @@ import 'app/service_factory.dart';
 import 'core/activity/activity_api.dart';
 import 'core/activity/activity_providers.dart';
 import 'core/activity/channel_step_counter.dart';
+import 'core/ai/ai_api.dart';
 import 'core/audio/audio_api.dart';
 import 'core/audio/audio_providers.dart';
 import 'core/capabilities/capability_service.dart';
@@ -66,6 +67,7 @@ Future<void> main() async {
     walkTrackerProvider.overrideWithValue(walkTracker),
     liveActivityServiceProvider.overrideWithValue(createLiveActivityService(l10n: () => reminderL10n(db))),
     widgetSyncProvider.overrideWithValue(createWidgetSync(l10n: () => reminderL10n(db))),
+    httpAiGatewayOverride,
     ...syncOverrides(readPhoto: (rel) async {
       final f = await PhotoStorage().resolve(rel);
       return await f.exists() ? f.readAsBytes() : null;

@@ -20,6 +20,11 @@ abstract final class Routes {
   static const workouts = '/workouts';
   static const walks = '/walks';
   static const account = '/account';
+  static const chat = '/chat';
+  static const learning = '/learning';
+
+  /// Расходы ИИ и журнал действий ИИ (с отменой).
+  static const aiJournal = '/ai';
 
   /// Редактирование раздела анкеты из настроек.
   static String editStep(OnboardingStep step) => '/edit/${step.name}';

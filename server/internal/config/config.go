@@ -46,6 +46,16 @@ type Config struct {
 	TrustProxy bool
 	// FXURL — источник курсов валют (SISTEMA_FX_URL; пусто — значение по умолчанию модуля jobs).
 	FXURL string
+
+	// Этап 6 — ИИ и каналы (ключи только в .env на сервере).
+	AnthropicKey string  // SISTEMA_ANTHROPIC_API_KEY
+	GeminiKey    string  // SISTEMA_GEMINI_API_KEY
+	AIModels     string  // SISTEMA_AI_MODELS — «задача=модель,…»
+	AIBudgetUSD  float64 // SISTEMA_AI_BUDGET_USD (по умолчанию 30)
+	TTSKey       string  // SISTEMA_TTS_API_KEY (ElevenLabs)
+	NtfyURL      string  // SISTEMA_NTFY_URL — запасной канал, пусто = выкл.
+	NtfyToken    string  // SISTEMA_NTFY_TOKEN
+	FCMKeyFile   string  // SISTEMA_FCM_KEY_FILE — JSON сервисного аккаунта Firebase
 }
 
 // Load читает конфиг через getenv (обычно os.Getenv) и валидирует его.
@@ -117,6 +127,22 @@ func Load(getenv func(string) string) (Config, error) {
 	}
 	cfg.TrustProxy = get("SISTEMA_TRUST_PROXY", "0") == "1"
 	cfg.FXURL = get("SISTEMA_FX_URL", "")
+	cfg.AnthropicKey = get("SISTEMA_ANTHROPIC_API_KEY", "")
+	cfg.GeminiKey = get("SISTEMA_GEMINI_API_KEY", "")
+	cfg.AIModels = get("SISTEMA_AI_MODELS", "")
+	cfg.AIBudgetUSD = 30
+	if v := get("SISTEMA_AI_BUDGET_USD", ""); v != "" {
+		f, err := strconv.ParseFloat(v, 64)
+		if err != nil || f <= 0 {
+			errs = append(errs, fmt.Errorf("SISTEMA_AI_BUDGET_USD: positive number expected, got %q", v))
+		} else {
+			cfg.AIBudgetUSD = f
+		}
+	}
+	cfg.TTSKey = get("SISTEMA_TTS_API_KEY", "")
+	cfg.NtfyURL = get("SISTEMA_NTFY_URL", "")
+	cfg.NtfyToken = get("SISTEMA_NTFY_TOKEN", "")
+	cfg.FCMKeyFile = get("SISTEMA_FCM_KEY_FILE", "")
 
 	if err := cfg.validate(); err != nil {
 		errs = append(errs, err)

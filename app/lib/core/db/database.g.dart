@@ -19284,6 +19284,2720 @@ class WalksCompanion extends UpdateCompanion<WalkRow> {
   }
 }
 
+class $ChatMessagesTable extends ChatMessages
+    with TableInfo<$ChatMessagesTable, ChatMessageRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $ChatMessagesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deviceIdMeta = const VerificationMeta(
+    'deviceId',
+  );
+  @override
+  late final GeneratedColumn<String> deviceId = GeneratedColumn<String>(
+    'device_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _roleMeta = const VerificationMeta('role');
+  @override
+  late final GeneratedColumn<String> role = GeneratedColumn<String>(
+    'role',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _bodyMeta = const VerificationMeta('body');
+  @override
+  late final GeneratedColumn<String> body = GeneratedColumn<String>(
+    'body',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _viaVoiceMeta = const VerificationMeta(
+    'viaVoice',
+  );
+  @override
+  late final GeneratedColumn<bool> viaVoice = GeneratedColumn<bool>(
+    'via_voice',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("via_voice" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _actionIdsMeta = const VerificationMeta(
+    'actionIds',
+  );
+  @override
+  late final GeneratedColumn<String> actionIds = GeneratedColumn<String>(
+    'action_ids',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    role,
+    body,
+    createdAt,
+    viaVoice,
+    actionIds,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'chat_messages';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<ChatMessageRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('device_id')) {
+      context.handle(
+        _deviceIdMeta,
+        deviceId.isAcceptableOrUnknown(data['device_id']!, _deviceIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deviceIdMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    }
+    if (data.containsKey('role')) {
+      context.handle(
+        _roleMeta,
+        role.isAcceptableOrUnknown(data['role']!, _roleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_roleMeta);
+    }
+    if (data.containsKey('body')) {
+      context.handle(
+        _bodyMeta,
+        body.isAcceptableOrUnknown(data['body']!, _bodyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_bodyMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('via_voice')) {
+      context.handle(
+        _viaVoiceMeta,
+        viaVoice.isAcceptableOrUnknown(data['via_voice']!, _viaVoiceMeta),
+      );
+    }
+    if (data.containsKey('action_ids')) {
+      context.handle(
+        _actionIdsMeta,
+        actionIds.isAcceptableOrUnknown(data['action_ids']!, _actionIdsMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  ChatMessageRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return ChatMessageRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      deviceId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}device_id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      role: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}role'],
+      )!,
+      body: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}body'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+      viaVoice: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}via_voice'],
+      )!,
+      actionIds: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}action_ids'],
+      ),
+    );
+  }
+
+  @override
+  $ChatMessagesTable createAlias(String alias) {
+    return $ChatMessagesTable(attachedDatabase, alias);
+  }
+}
+
+class ChatMessageRow extends DataClass implements Insertable<ChatMessageRow> {
+  final String id;
+  final DateTime updatedAt;
+  final DateTime? deletedAt;
+  final String deviceId;
+  final int version;
+  final String role;
+  final String body;
+  final DateTime createdAt;
+  final bool viaVoice;
+  final String? actionIds;
+  const ChatMessageRow({
+    required this.id,
+    required this.updatedAt,
+    this.deletedAt,
+    required this.deviceId,
+    required this.version,
+    required this.role,
+    required this.body,
+    required this.createdAt,
+    required this.viaVoice,
+    this.actionIds,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
+    map['device_id'] = Variable<String>(deviceId);
+    map['version'] = Variable<int>(version);
+    map['role'] = Variable<String>(role);
+    map['body'] = Variable<String>(body);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    map['via_voice'] = Variable<bool>(viaVoice);
+    if (!nullToAbsent || actionIds != null) {
+      map['action_ids'] = Variable<String>(actionIds);
+    }
+    return map;
+  }
+
+  ChatMessagesCompanion toCompanion(bool nullToAbsent) {
+    return ChatMessagesCompanion(
+      id: Value(id),
+      updatedAt: Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      deviceId: Value(deviceId),
+      version: Value(version),
+      role: Value(role),
+      body: Value(body),
+      createdAt: Value(createdAt),
+      viaVoice: Value(viaVoice),
+      actionIds: actionIds == null && nullToAbsent
+          ? const Value.absent()
+          : Value(actionIds),
+    );
+  }
+
+  factory ChatMessageRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return ChatMessageRow(
+      id: serializer.fromJson<String>(json['id']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
+      deviceId: serializer.fromJson<String>(json['deviceId']),
+      version: serializer.fromJson<int>(json['version']),
+      role: serializer.fromJson<String>(json['role']),
+      body: serializer.fromJson<String>(json['body']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      viaVoice: serializer.fromJson<bool>(json['viaVoice']),
+      actionIds: serializer.fromJson<String?>(json['actionIds']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
+      'deviceId': serializer.toJson<String>(deviceId),
+      'version': serializer.toJson<int>(version),
+      'role': serializer.toJson<String>(role),
+      'body': serializer.toJson<String>(body),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'viaVoice': serializer.toJson<bool>(viaVoice),
+      'actionIds': serializer.toJson<String?>(actionIds),
+    };
+  }
+
+  ChatMessageRow copyWith({
+    String? id,
+    DateTime? updatedAt,
+    Value<DateTime?> deletedAt = const Value.absent(),
+    String? deviceId,
+    int? version,
+    String? role,
+    String? body,
+    DateTime? createdAt,
+    bool? viaVoice,
+    Value<String?> actionIds = const Value.absent(),
+  }) => ChatMessageRow(
+    id: id ?? this.id,
+    updatedAt: updatedAt ?? this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    deviceId: deviceId ?? this.deviceId,
+    version: version ?? this.version,
+    role: role ?? this.role,
+    body: body ?? this.body,
+    createdAt: createdAt ?? this.createdAt,
+    viaVoice: viaVoice ?? this.viaVoice,
+    actionIds: actionIds.present ? actionIds.value : this.actionIds,
+  );
+  ChatMessageRow copyWithCompanion(ChatMessagesCompanion data) {
+    return ChatMessageRow(
+      id: data.id.present ? data.id.value : this.id,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      deviceId: data.deviceId.present ? data.deviceId.value : this.deviceId,
+      version: data.version.present ? data.version.value : this.version,
+      role: data.role.present ? data.role.value : this.role,
+      body: data.body.present ? data.body.value : this.body,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      viaVoice: data.viaVoice.present ? data.viaVoice.value : this.viaVoice,
+      actionIds: data.actionIds.present ? data.actionIds.value : this.actionIds,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ChatMessageRow(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('role: $role, ')
+          ..write('body: $body, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('viaVoice: $viaVoice, ')
+          ..write('actionIds: $actionIds')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    role,
+    body,
+    createdAt,
+    viaVoice,
+    actionIds,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is ChatMessageRow &&
+          other.id == this.id &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt &&
+          other.deviceId == this.deviceId &&
+          other.version == this.version &&
+          other.role == this.role &&
+          other.body == this.body &&
+          other.createdAt == this.createdAt &&
+          other.viaVoice == this.viaVoice &&
+          other.actionIds == this.actionIds);
+}
+
+class ChatMessagesCompanion extends UpdateCompanion<ChatMessageRow> {
+  final Value<String> id;
+  final Value<DateTime> updatedAt;
+  final Value<DateTime?> deletedAt;
+  final Value<String> deviceId;
+  final Value<int> version;
+  final Value<String> role;
+  final Value<String> body;
+  final Value<DateTime> createdAt;
+  final Value<bool> viaVoice;
+  final Value<String?> actionIds;
+  final Value<int> rowid;
+  const ChatMessagesCompanion({
+    this.id = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.deviceId = const Value.absent(),
+    this.version = const Value.absent(),
+    this.role = const Value.absent(),
+    this.body = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.viaVoice = const Value.absent(),
+    this.actionIds = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  ChatMessagesCompanion.insert({
+    required String id,
+    required DateTime updatedAt,
+    this.deletedAt = const Value.absent(),
+    required String deviceId,
+    this.version = const Value.absent(),
+    required String role,
+    required String body,
+    required DateTime createdAt,
+    this.viaVoice = const Value.absent(),
+    this.actionIds = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       updatedAt = Value(updatedAt),
+       deviceId = Value(deviceId),
+       role = Value(role),
+       body = Value(body),
+       createdAt = Value(createdAt);
+  static Insertable<ChatMessageRow> custom({
+    Expression<String>? id,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
+    Expression<String>? deviceId,
+    Expression<int>? version,
+    Expression<String>? role,
+    Expression<String>? body,
+    Expression<DateTime>? createdAt,
+    Expression<bool>? viaVoice,
+    Expression<String>? actionIds,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (deviceId != null) 'device_id': deviceId,
+      if (version != null) 'version': version,
+      if (role != null) 'role': role,
+      if (body != null) 'body': body,
+      if (createdAt != null) 'created_at': createdAt,
+      if (viaVoice != null) 'via_voice': viaVoice,
+      if (actionIds != null) 'action_ids': actionIds,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  ChatMessagesCompanion copyWith({
+    Value<String>? id,
+    Value<DateTime>? updatedAt,
+    Value<DateTime?>? deletedAt,
+    Value<String>? deviceId,
+    Value<int>? version,
+    Value<String>? role,
+    Value<String>? body,
+    Value<DateTime>? createdAt,
+    Value<bool>? viaVoice,
+    Value<String?>? actionIds,
+    Value<int>? rowid,
+  }) {
+    return ChatMessagesCompanion(
+      id: id ?? this.id,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
+      deviceId: deviceId ?? this.deviceId,
+      version: version ?? this.version,
+      role: role ?? this.role,
+      body: body ?? this.body,
+      createdAt: createdAt ?? this.createdAt,
+      viaVoice: viaVoice ?? this.viaVoice,
+      actionIds: actionIds ?? this.actionIds,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
+    if (deviceId.present) {
+      map['device_id'] = Variable<String>(deviceId.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (role.present) {
+      map['role'] = Variable<String>(role.value);
+    }
+    if (body.present) {
+      map['body'] = Variable<String>(body.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (viaVoice.present) {
+      map['via_voice'] = Variable<bool>(viaVoice.value);
+    }
+    if (actionIds.present) {
+      map['action_ids'] = Variable<String>(actionIds.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('ChatMessagesCompanion(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('role: $role, ')
+          ..write('body: $body, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('viaVoice: $viaVoice, ')
+          ..write('actionIds: $actionIds, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $CoursesTable extends Courses with TableInfo<$CoursesTable, CourseRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $CoursesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deviceIdMeta = const VerificationMeta(
+    'deviceId',
+  );
+  @override
+  late final GeneratedColumn<String> deviceId = GeneratedColumn<String>(
+    'device_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+    'title',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _topicMeta = const VerificationMeta('topic');
+  @override
+  late final GeneratedColumn<String> topic = GeneratedColumn<String>(
+    'topic',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _langMeta = const VerificationMeta('lang');
+  @override
+  late final GeneratedColumn<String> lang = GeneratedColumn<String>(
+    'lang',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _totalLessonsMeta = const VerificationMeta(
+    'totalLessons',
+  );
+  @override
+  late final GeneratedColumn<int> totalLessons = GeneratedColumn<int>(
+    'total_lessons',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _dailyLessonsMeta = const VerificationMeta(
+    'dailyLessons',
+  );
+  @override
+  late final GeneratedColumn<int> dailyLessons = GeneratedColumn<int>(
+    'daily_lessons',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('active'),
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    title,
+    topic,
+    lang,
+    totalLessons,
+    dailyLessons,
+    status,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'courses';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<CourseRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('device_id')) {
+      context.handle(
+        _deviceIdMeta,
+        deviceId.isAcceptableOrUnknown(data['device_id']!, _deviceIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deviceIdMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+        _titleMeta,
+        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_titleMeta);
+    }
+    if (data.containsKey('topic')) {
+      context.handle(
+        _topicMeta,
+        topic.isAcceptableOrUnknown(data['topic']!, _topicMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_topicMeta);
+    }
+    if (data.containsKey('lang')) {
+      context.handle(
+        _langMeta,
+        lang.isAcceptableOrUnknown(data['lang']!, _langMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_langMeta);
+    }
+    if (data.containsKey('total_lessons')) {
+      context.handle(
+        _totalLessonsMeta,
+        totalLessons.isAcceptableOrUnknown(
+          data['total_lessons']!,
+          _totalLessonsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('daily_lessons')) {
+      context.handle(
+        _dailyLessonsMeta,
+        dailyLessons.isAcceptableOrUnknown(
+          data['daily_lessons']!,
+          _dailyLessonsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  CourseRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return CourseRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      deviceId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}device_id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      title: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title'],
+      )!,
+      topic: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}topic'],
+      )!,
+      lang: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}lang'],
+      )!,
+      totalLessons: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}total_lessons'],
+      )!,
+      dailyLessons: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}daily_lessons'],
+      )!,
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $CoursesTable createAlias(String alias) {
+    return $CoursesTable(attachedDatabase, alias);
+  }
+}
+
+class CourseRow extends DataClass implements Insertable<CourseRow> {
+  final String id;
+  final DateTime updatedAt;
+  final DateTime? deletedAt;
+  final String deviceId;
+  final int version;
+  final String title;
+  final String topic;
+  final String lang;
+  final int totalLessons;
+  final int dailyLessons;
+  final String status;
+  final DateTime createdAt;
+  const CourseRow({
+    required this.id,
+    required this.updatedAt,
+    this.deletedAt,
+    required this.deviceId,
+    required this.version,
+    required this.title,
+    required this.topic,
+    required this.lang,
+    required this.totalLessons,
+    required this.dailyLessons,
+    required this.status,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
+    map['device_id'] = Variable<String>(deviceId);
+    map['version'] = Variable<int>(version);
+    map['title'] = Variable<String>(title);
+    map['topic'] = Variable<String>(topic);
+    map['lang'] = Variable<String>(lang);
+    map['total_lessons'] = Variable<int>(totalLessons);
+    map['daily_lessons'] = Variable<int>(dailyLessons);
+    map['status'] = Variable<String>(status);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  CoursesCompanion toCompanion(bool nullToAbsent) {
+    return CoursesCompanion(
+      id: Value(id),
+      updatedAt: Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      deviceId: Value(deviceId),
+      version: Value(version),
+      title: Value(title),
+      topic: Value(topic),
+      lang: Value(lang),
+      totalLessons: Value(totalLessons),
+      dailyLessons: Value(dailyLessons),
+      status: Value(status),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory CourseRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return CourseRow(
+      id: serializer.fromJson<String>(json['id']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
+      deviceId: serializer.fromJson<String>(json['deviceId']),
+      version: serializer.fromJson<int>(json['version']),
+      title: serializer.fromJson<String>(json['title']),
+      topic: serializer.fromJson<String>(json['topic']),
+      lang: serializer.fromJson<String>(json['lang']),
+      totalLessons: serializer.fromJson<int>(json['totalLessons']),
+      dailyLessons: serializer.fromJson<int>(json['dailyLessons']),
+      status: serializer.fromJson<String>(json['status']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
+      'deviceId': serializer.toJson<String>(deviceId),
+      'version': serializer.toJson<int>(version),
+      'title': serializer.toJson<String>(title),
+      'topic': serializer.toJson<String>(topic),
+      'lang': serializer.toJson<String>(lang),
+      'totalLessons': serializer.toJson<int>(totalLessons),
+      'dailyLessons': serializer.toJson<int>(dailyLessons),
+      'status': serializer.toJson<String>(status),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  CourseRow copyWith({
+    String? id,
+    DateTime? updatedAt,
+    Value<DateTime?> deletedAt = const Value.absent(),
+    String? deviceId,
+    int? version,
+    String? title,
+    String? topic,
+    String? lang,
+    int? totalLessons,
+    int? dailyLessons,
+    String? status,
+    DateTime? createdAt,
+  }) => CourseRow(
+    id: id ?? this.id,
+    updatedAt: updatedAt ?? this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    deviceId: deviceId ?? this.deviceId,
+    version: version ?? this.version,
+    title: title ?? this.title,
+    topic: topic ?? this.topic,
+    lang: lang ?? this.lang,
+    totalLessons: totalLessons ?? this.totalLessons,
+    dailyLessons: dailyLessons ?? this.dailyLessons,
+    status: status ?? this.status,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  CourseRow copyWithCompanion(CoursesCompanion data) {
+    return CourseRow(
+      id: data.id.present ? data.id.value : this.id,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      deviceId: data.deviceId.present ? data.deviceId.value : this.deviceId,
+      version: data.version.present ? data.version.value : this.version,
+      title: data.title.present ? data.title.value : this.title,
+      topic: data.topic.present ? data.topic.value : this.topic,
+      lang: data.lang.present ? data.lang.value : this.lang,
+      totalLessons: data.totalLessons.present
+          ? data.totalLessons.value
+          : this.totalLessons,
+      dailyLessons: data.dailyLessons.present
+          ? data.dailyLessons.value
+          : this.dailyLessons,
+      status: data.status.present ? data.status.value : this.status,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CourseRow(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('title: $title, ')
+          ..write('topic: $topic, ')
+          ..write('lang: $lang, ')
+          ..write('totalLessons: $totalLessons, ')
+          ..write('dailyLessons: $dailyLessons, ')
+          ..write('status: $status, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    title,
+    topic,
+    lang,
+    totalLessons,
+    dailyLessons,
+    status,
+    createdAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is CourseRow &&
+          other.id == this.id &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt &&
+          other.deviceId == this.deviceId &&
+          other.version == this.version &&
+          other.title == this.title &&
+          other.topic == this.topic &&
+          other.lang == this.lang &&
+          other.totalLessons == this.totalLessons &&
+          other.dailyLessons == this.dailyLessons &&
+          other.status == this.status &&
+          other.createdAt == this.createdAt);
+}
+
+class CoursesCompanion extends UpdateCompanion<CourseRow> {
+  final Value<String> id;
+  final Value<DateTime> updatedAt;
+  final Value<DateTime?> deletedAt;
+  final Value<String> deviceId;
+  final Value<int> version;
+  final Value<String> title;
+  final Value<String> topic;
+  final Value<String> lang;
+  final Value<int> totalLessons;
+  final Value<int> dailyLessons;
+  final Value<String> status;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const CoursesCompanion({
+    this.id = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.deviceId = const Value.absent(),
+    this.version = const Value.absent(),
+    this.title = const Value.absent(),
+    this.topic = const Value.absent(),
+    this.lang = const Value.absent(),
+    this.totalLessons = const Value.absent(),
+    this.dailyLessons = const Value.absent(),
+    this.status = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  CoursesCompanion.insert({
+    required String id,
+    required DateTime updatedAt,
+    this.deletedAt = const Value.absent(),
+    required String deviceId,
+    this.version = const Value.absent(),
+    required String title,
+    required String topic,
+    required String lang,
+    this.totalLessons = const Value.absent(),
+    this.dailyLessons = const Value.absent(),
+    this.status = const Value.absent(),
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       updatedAt = Value(updatedAt),
+       deviceId = Value(deviceId),
+       title = Value(title),
+       topic = Value(topic),
+       lang = Value(lang),
+       createdAt = Value(createdAt);
+  static Insertable<CourseRow> custom({
+    Expression<String>? id,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
+    Expression<String>? deviceId,
+    Expression<int>? version,
+    Expression<String>? title,
+    Expression<String>? topic,
+    Expression<String>? lang,
+    Expression<int>? totalLessons,
+    Expression<int>? dailyLessons,
+    Expression<String>? status,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (deviceId != null) 'device_id': deviceId,
+      if (version != null) 'version': version,
+      if (title != null) 'title': title,
+      if (topic != null) 'topic': topic,
+      if (lang != null) 'lang': lang,
+      if (totalLessons != null) 'total_lessons': totalLessons,
+      if (dailyLessons != null) 'daily_lessons': dailyLessons,
+      if (status != null) 'status': status,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  CoursesCompanion copyWith({
+    Value<String>? id,
+    Value<DateTime>? updatedAt,
+    Value<DateTime?>? deletedAt,
+    Value<String>? deviceId,
+    Value<int>? version,
+    Value<String>? title,
+    Value<String>? topic,
+    Value<String>? lang,
+    Value<int>? totalLessons,
+    Value<int>? dailyLessons,
+    Value<String>? status,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return CoursesCompanion(
+      id: id ?? this.id,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
+      deviceId: deviceId ?? this.deviceId,
+      version: version ?? this.version,
+      title: title ?? this.title,
+      topic: topic ?? this.topic,
+      lang: lang ?? this.lang,
+      totalLessons: totalLessons ?? this.totalLessons,
+      dailyLessons: dailyLessons ?? this.dailyLessons,
+      status: status ?? this.status,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
+    if (deviceId.present) {
+      map['device_id'] = Variable<String>(deviceId.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (topic.present) {
+      map['topic'] = Variable<String>(topic.value);
+    }
+    if (lang.present) {
+      map['lang'] = Variable<String>(lang.value);
+    }
+    if (totalLessons.present) {
+      map['total_lessons'] = Variable<int>(totalLessons.value);
+    }
+    if (dailyLessons.present) {
+      map['daily_lessons'] = Variable<int>(dailyLessons.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('CoursesCompanion(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('title: $title, ')
+          ..write('topic: $topic, ')
+          ..write('lang: $lang, ')
+          ..write('totalLessons: $totalLessons, ')
+          ..write('dailyLessons: $dailyLessons, ')
+          ..write('status: $status, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $LessonsTable extends Lessons with TableInfo<$LessonsTable, LessonRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LessonsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deviceIdMeta = const VerificationMeta(
+    'deviceId',
+  );
+  @override
+  late final GeneratedColumn<String> deviceId = GeneratedColumn<String>(
+    'device_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _courseIdMeta = const VerificationMeta(
+    'courseId',
+  );
+  @override
+  late final GeneratedColumn<String> courseId = GeneratedColumn<String>(
+    'course_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _orderIndexMeta = const VerificationMeta(
+    'orderIndex',
+  );
+  @override
+  late final GeneratedColumn<int> orderIndex = GeneratedColumn<int>(
+    'order_index',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+    'title',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _contentMeta = const VerificationMeta(
+    'content',
+  );
+  @override
+  late final GeneratedColumn<String> content = GeneratedColumn<String>(
+    'content',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _quizMeta = const VerificationMeta('quiz');
+  @override
+  late final GeneratedColumn<String> quiz = GeneratedColumn<String>(
+    'quiz',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('[]'),
+  );
+  static const VerificationMeta _openedAtMeta = const VerificationMeta(
+    'openedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> openedAt = GeneratedColumn<DateTime>(
+    'opened_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _completedAtMeta = const VerificationMeta(
+    'completedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+    'completed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _scoreMeta = const VerificationMeta('score');
+  @override
+  late final GeneratedColumn<int> score = GeneratedColumn<int>(
+    'score',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _reviewStepMeta = const VerificationMeta(
+    'reviewStep',
+  );
+  @override
+  late final GeneratedColumn<int> reviewStep = GeneratedColumn<int>(
+    'review_step',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _nextReviewAtMeta = const VerificationMeta(
+    'nextReviewAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> nextReviewAt = GeneratedColumn<DateTime>(
+    'next_review_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    courseId,
+    orderIndex,
+    title,
+    content,
+    quiz,
+    openedAt,
+    completedAt,
+    score,
+    reviewStep,
+    nextReviewAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'lessons';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<LessonRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('device_id')) {
+      context.handle(
+        _deviceIdMeta,
+        deviceId.isAcceptableOrUnknown(data['device_id']!, _deviceIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deviceIdMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    }
+    if (data.containsKey('course_id')) {
+      context.handle(
+        _courseIdMeta,
+        courseId.isAcceptableOrUnknown(data['course_id']!, _courseIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_courseIdMeta);
+    }
+    if (data.containsKey('order_index')) {
+      context.handle(
+        _orderIndexMeta,
+        orderIndex.isAcceptableOrUnknown(data['order_index']!, _orderIndexMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_orderIndexMeta);
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+        _titleMeta,
+        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_titleMeta);
+    }
+    if (data.containsKey('content')) {
+      context.handle(
+        _contentMeta,
+        content.isAcceptableOrUnknown(data['content']!, _contentMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_contentMeta);
+    }
+    if (data.containsKey('quiz')) {
+      context.handle(
+        _quizMeta,
+        quiz.isAcceptableOrUnknown(data['quiz']!, _quizMeta),
+      );
+    }
+    if (data.containsKey('opened_at')) {
+      context.handle(
+        _openedAtMeta,
+        openedAt.isAcceptableOrUnknown(data['opened_at']!, _openedAtMeta),
+      );
+    }
+    if (data.containsKey('completed_at')) {
+      context.handle(
+        _completedAtMeta,
+        completedAt.isAcceptableOrUnknown(
+          data['completed_at']!,
+          _completedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('score')) {
+      context.handle(
+        _scoreMeta,
+        score.isAcceptableOrUnknown(data['score']!, _scoreMeta),
+      );
+    }
+    if (data.containsKey('review_step')) {
+      context.handle(
+        _reviewStepMeta,
+        reviewStep.isAcceptableOrUnknown(data['review_step']!, _reviewStepMeta),
+      );
+    }
+    if (data.containsKey('next_review_at')) {
+      context.handle(
+        _nextReviewAtMeta,
+        nextReviewAt.isAcceptableOrUnknown(
+          data['next_review_at']!,
+          _nextReviewAtMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  LessonRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LessonRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      deviceId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}device_id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      courseId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}course_id'],
+      )!,
+      orderIndex: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}order_index'],
+      )!,
+      title: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title'],
+      )!,
+      content: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}content'],
+      )!,
+      quiz: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}quiz'],
+      )!,
+      openedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}opened_at'],
+      ),
+      completedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}completed_at'],
+      ),
+      score: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}score'],
+      ),
+      reviewStep: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}review_step'],
+      )!,
+      nextReviewAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}next_review_at'],
+      ),
+    );
+  }
+
+  @override
+  $LessonsTable createAlias(String alias) {
+    return $LessonsTable(attachedDatabase, alias);
+  }
+}
+
+class LessonRow extends DataClass implements Insertable<LessonRow> {
+  final String id;
+  final DateTime updatedAt;
+  final DateTime? deletedAt;
+  final String deviceId;
+  final int version;
+  final String courseId;
+  final int orderIndex;
+  final String title;
+  final String content;
+  final String quiz;
+  final DateTime? openedAt;
+  final DateTime? completedAt;
+  final int? score;
+  final int reviewStep;
+  final DateTime? nextReviewAt;
+  const LessonRow({
+    required this.id,
+    required this.updatedAt,
+    this.deletedAt,
+    required this.deviceId,
+    required this.version,
+    required this.courseId,
+    required this.orderIndex,
+    required this.title,
+    required this.content,
+    required this.quiz,
+    this.openedAt,
+    this.completedAt,
+    this.score,
+    required this.reviewStep,
+    this.nextReviewAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
+    map['device_id'] = Variable<String>(deviceId);
+    map['version'] = Variable<int>(version);
+    map['course_id'] = Variable<String>(courseId);
+    map['order_index'] = Variable<int>(orderIndex);
+    map['title'] = Variable<String>(title);
+    map['content'] = Variable<String>(content);
+    map['quiz'] = Variable<String>(quiz);
+    if (!nullToAbsent || openedAt != null) {
+      map['opened_at'] = Variable<DateTime>(openedAt);
+    }
+    if (!nullToAbsent || completedAt != null) {
+      map['completed_at'] = Variable<DateTime>(completedAt);
+    }
+    if (!nullToAbsent || score != null) {
+      map['score'] = Variable<int>(score);
+    }
+    map['review_step'] = Variable<int>(reviewStep);
+    if (!nullToAbsent || nextReviewAt != null) {
+      map['next_review_at'] = Variable<DateTime>(nextReviewAt);
+    }
+    return map;
+  }
+
+  LessonsCompanion toCompanion(bool nullToAbsent) {
+    return LessonsCompanion(
+      id: Value(id),
+      updatedAt: Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      deviceId: Value(deviceId),
+      version: Value(version),
+      courseId: Value(courseId),
+      orderIndex: Value(orderIndex),
+      title: Value(title),
+      content: Value(content),
+      quiz: Value(quiz),
+      openedAt: openedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(openedAt),
+      completedAt: completedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(completedAt),
+      score: score == null && nullToAbsent
+          ? const Value.absent()
+          : Value(score),
+      reviewStep: Value(reviewStep),
+      nextReviewAt: nextReviewAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(nextReviewAt),
+    );
+  }
+
+  factory LessonRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LessonRow(
+      id: serializer.fromJson<String>(json['id']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
+      deviceId: serializer.fromJson<String>(json['deviceId']),
+      version: serializer.fromJson<int>(json['version']),
+      courseId: serializer.fromJson<String>(json['courseId']),
+      orderIndex: serializer.fromJson<int>(json['orderIndex']),
+      title: serializer.fromJson<String>(json['title']),
+      content: serializer.fromJson<String>(json['content']),
+      quiz: serializer.fromJson<String>(json['quiz']),
+      openedAt: serializer.fromJson<DateTime?>(json['openedAt']),
+      completedAt: serializer.fromJson<DateTime?>(json['completedAt']),
+      score: serializer.fromJson<int?>(json['score']),
+      reviewStep: serializer.fromJson<int>(json['reviewStep']),
+      nextReviewAt: serializer.fromJson<DateTime?>(json['nextReviewAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
+      'deviceId': serializer.toJson<String>(deviceId),
+      'version': serializer.toJson<int>(version),
+      'courseId': serializer.toJson<String>(courseId),
+      'orderIndex': serializer.toJson<int>(orderIndex),
+      'title': serializer.toJson<String>(title),
+      'content': serializer.toJson<String>(content),
+      'quiz': serializer.toJson<String>(quiz),
+      'openedAt': serializer.toJson<DateTime?>(openedAt),
+      'completedAt': serializer.toJson<DateTime?>(completedAt),
+      'score': serializer.toJson<int?>(score),
+      'reviewStep': serializer.toJson<int>(reviewStep),
+      'nextReviewAt': serializer.toJson<DateTime?>(nextReviewAt),
+    };
+  }
+
+  LessonRow copyWith({
+    String? id,
+    DateTime? updatedAt,
+    Value<DateTime?> deletedAt = const Value.absent(),
+    String? deviceId,
+    int? version,
+    String? courseId,
+    int? orderIndex,
+    String? title,
+    String? content,
+    String? quiz,
+    Value<DateTime?> openedAt = const Value.absent(),
+    Value<DateTime?> completedAt = const Value.absent(),
+    Value<int?> score = const Value.absent(),
+    int? reviewStep,
+    Value<DateTime?> nextReviewAt = const Value.absent(),
+  }) => LessonRow(
+    id: id ?? this.id,
+    updatedAt: updatedAt ?? this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    deviceId: deviceId ?? this.deviceId,
+    version: version ?? this.version,
+    courseId: courseId ?? this.courseId,
+    orderIndex: orderIndex ?? this.orderIndex,
+    title: title ?? this.title,
+    content: content ?? this.content,
+    quiz: quiz ?? this.quiz,
+    openedAt: openedAt.present ? openedAt.value : this.openedAt,
+    completedAt: completedAt.present ? completedAt.value : this.completedAt,
+    score: score.present ? score.value : this.score,
+    reviewStep: reviewStep ?? this.reviewStep,
+    nextReviewAt: nextReviewAt.present ? nextReviewAt.value : this.nextReviewAt,
+  );
+  LessonRow copyWithCompanion(LessonsCompanion data) {
+    return LessonRow(
+      id: data.id.present ? data.id.value : this.id,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      deviceId: data.deviceId.present ? data.deviceId.value : this.deviceId,
+      version: data.version.present ? data.version.value : this.version,
+      courseId: data.courseId.present ? data.courseId.value : this.courseId,
+      orderIndex: data.orderIndex.present
+          ? data.orderIndex.value
+          : this.orderIndex,
+      title: data.title.present ? data.title.value : this.title,
+      content: data.content.present ? data.content.value : this.content,
+      quiz: data.quiz.present ? data.quiz.value : this.quiz,
+      openedAt: data.openedAt.present ? data.openedAt.value : this.openedAt,
+      completedAt: data.completedAt.present
+          ? data.completedAt.value
+          : this.completedAt,
+      score: data.score.present ? data.score.value : this.score,
+      reviewStep: data.reviewStep.present
+          ? data.reviewStep.value
+          : this.reviewStep,
+      nextReviewAt: data.nextReviewAt.present
+          ? data.nextReviewAt.value
+          : this.nextReviewAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LessonRow(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('courseId: $courseId, ')
+          ..write('orderIndex: $orderIndex, ')
+          ..write('title: $title, ')
+          ..write('content: $content, ')
+          ..write('quiz: $quiz, ')
+          ..write('openedAt: $openedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('score: $score, ')
+          ..write('reviewStep: $reviewStep, ')
+          ..write('nextReviewAt: $nextReviewAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    courseId,
+    orderIndex,
+    title,
+    content,
+    quiz,
+    openedAt,
+    completedAt,
+    score,
+    reviewStep,
+    nextReviewAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LessonRow &&
+          other.id == this.id &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt &&
+          other.deviceId == this.deviceId &&
+          other.version == this.version &&
+          other.courseId == this.courseId &&
+          other.orderIndex == this.orderIndex &&
+          other.title == this.title &&
+          other.content == this.content &&
+          other.quiz == this.quiz &&
+          other.openedAt == this.openedAt &&
+          other.completedAt == this.completedAt &&
+          other.score == this.score &&
+          other.reviewStep == this.reviewStep &&
+          other.nextReviewAt == this.nextReviewAt);
+}
+
+class LessonsCompanion extends UpdateCompanion<LessonRow> {
+  final Value<String> id;
+  final Value<DateTime> updatedAt;
+  final Value<DateTime?> deletedAt;
+  final Value<String> deviceId;
+  final Value<int> version;
+  final Value<String> courseId;
+  final Value<int> orderIndex;
+  final Value<String> title;
+  final Value<String> content;
+  final Value<String> quiz;
+  final Value<DateTime?> openedAt;
+  final Value<DateTime?> completedAt;
+  final Value<int?> score;
+  final Value<int> reviewStep;
+  final Value<DateTime?> nextReviewAt;
+  final Value<int> rowid;
+  const LessonsCompanion({
+    this.id = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.deviceId = const Value.absent(),
+    this.version = const Value.absent(),
+    this.courseId = const Value.absent(),
+    this.orderIndex = const Value.absent(),
+    this.title = const Value.absent(),
+    this.content = const Value.absent(),
+    this.quiz = const Value.absent(),
+    this.openedAt = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.score = const Value.absent(),
+    this.reviewStep = const Value.absent(),
+    this.nextReviewAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  LessonsCompanion.insert({
+    required String id,
+    required DateTime updatedAt,
+    this.deletedAt = const Value.absent(),
+    required String deviceId,
+    this.version = const Value.absent(),
+    required String courseId,
+    required int orderIndex,
+    required String title,
+    required String content,
+    this.quiz = const Value.absent(),
+    this.openedAt = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.score = const Value.absent(),
+    this.reviewStep = const Value.absent(),
+    this.nextReviewAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       updatedAt = Value(updatedAt),
+       deviceId = Value(deviceId),
+       courseId = Value(courseId),
+       orderIndex = Value(orderIndex),
+       title = Value(title),
+       content = Value(content);
+  static Insertable<LessonRow> custom({
+    Expression<String>? id,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
+    Expression<String>? deviceId,
+    Expression<int>? version,
+    Expression<String>? courseId,
+    Expression<int>? orderIndex,
+    Expression<String>? title,
+    Expression<String>? content,
+    Expression<String>? quiz,
+    Expression<DateTime>? openedAt,
+    Expression<DateTime>? completedAt,
+    Expression<int>? score,
+    Expression<int>? reviewStep,
+    Expression<DateTime>? nextReviewAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (deviceId != null) 'device_id': deviceId,
+      if (version != null) 'version': version,
+      if (courseId != null) 'course_id': courseId,
+      if (orderIndex != null) 'order_index': orderIndex,
+      if (title != null) 'title': title,
+      if (content != null) 'content': content,
+      if (quiz != null) 'quiz': quiz,
+      if (openedAt != null) 'opened_at': openedAt,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (score != null) 'score': score,
+      if (reviewStep != null) 'review_step': reviewStep,
+      if (nextReviewAt != null) 'next_review_at': nextReviewAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  LessonsCompanion copyWith({
+    Value<String>? id,
+    Value<DateTime>? updatedAt,
+    Value<DateTime?>? deletedAt,
+    Value<String>? deviceId,
+    Value<int>? version,
+    Value<String>? courseId,
+    Value<int>? orderIndex,
+    Value<String>? title,
+    Value<String>? content,
+    Value<String>? quiz,
+    Value<DateTime?>? openedAt,
+    Value<DateTime?>? completedAt,
+    Value<int?>? score,
+    Value<int>? reviewStep,
+    Value<DateTime?>? nextReviewAt,
+    Value<int>? rowid,
+  }) {
+    return LessonsCompanion(
+      id: id ?? this.id,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
+      deviceId: deviceId ?? this.deviceId,
+      version: version ?? this.version,
+      courseId: courseId ?? this.courseId,
+      orderIndex: orderIndex ?? this.orderIndex,
+      title: title ?? this.title,
+      content: content ?? this.content,
+      quiz: quiz ?? this.quiz,
+      openedAt: openedAt ?? this.openedAt,
+      completedAt: completedAt ?? this.completedAt,
+      score: score ?? this.score,
+      reviewStep: reviewStep ?? this.reviewStep,
+      nextReviewAt: nextReviewAt ?? this.nextReviewAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
+    if (deviceId.present) {
+      map['device_id'] = Variable<String>(deviceId.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (courseId.present) {
+      map['course_id'] = Variable<String>(courseId.value);
+    }
+    if (orderIndex.present) {
+      map['order_index'] = Variable<int>(orderIndex.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (content.present) {
+      map['content'] = Variable<String>(content.value);
+    }
+    if (quiz.present) {
+      map['quiz'] = Variable<String>(quiz.value);
+    }
+    if (openedAt.present) {
+      map['opened_at'] = Variable<DateTime>(openedAt.value);
+    }
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
+    }
+    if (score.present) {
+      map['score'] = Variable<int>(score.value);
+    }
+    if (reviewStep.present) {
+      map['review_step'] = Variable<int>(reviewStep.value);
+    }
+    if (nextReviewAt.present) {
+      map['next_review_at'] = Variable<DateTime>(nextReviewAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LessonsCompanion(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('courseId: $courseId, ')
+          ..write('orderIndex: $orderIndex, ')
+          ..write('title: $title, ')
+          ..write('content: $content, ')
+          ..write('quiz: $quiz, ')
+          ..write('openedAt: $openedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('score: $score, ')
+          ..write('reviewStep: $reviewStep, ')
+          ..write('nextReviewAt: $nextReviewAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $PhotoAnalysesTable extends PhotoAnalyses
+    with TableInfo<$PhotoAnalysesTable, PhotoAnalysisRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $PhotoAnalysesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deviceIdMeta = const VerificationMeta(
+    'deviceId',
+  );
+  @override
+  late final GeneratedColumn<String> deviceId = GeneratedColumn<String>(
+    'device_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _photoIdMeta = const VerificationMeta(
+    'photoId',
+  );
+  @override
+  late final GeneratedColumn<String> photoId = GeneratedColumn<String>(
+    'photo_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _resultMeta = const VerificationMeta('result');
+  @override
+  late final GeneratedColumn<String> result = GeneratedColumn<String>(
+    'result',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    photoId,
+    kind,
+    result,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'photo_analyses';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<PhotoAnalysisRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('device_id')) {
+      context.handle(
+        _deviceIdMeta,
+        deviceId.isAcceptableOrUnknown(data['device_id']!, _deviceIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deviceIdMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    }
+    if (data.containsKey('photo_id')) {
+      context.handle(
+        _photoIdMeta,
+        photoId.isAcceptableOrUnknown(data['photo_id']!, _photoIdMeta),
+      );
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('result')) {
+      context.handle(
+        _resultMeta,
+        result.isAcceptableOrUnknown(data['result']!, _resultMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_resultMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  PhotoAnalysisRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return PhotoAnalysisRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      deviceId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}device_id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      photoId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}photo_id'],
+      ),
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      result: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}result'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $PhotoAnalysesTable createAlias(String alias) {
+    return $PhotoAnalysesTable(attachedDatabase, alias);
+  }
+}
+
+class PhotoAnalysisRow extends DataClass
+    implements Insertable<PhotoAnalysisRow> {
+  final String id;
+  final DateTime updatedAt;
+  final DateTime? deletedAt;
+  final String deviceId;
+  final int version;
+  final String? photoId;
+  final String kind;
+  final String result;
+  final DateTime createdAt;
+  const PhotoAnalysisRow({
+    required this.id,
+    required this.updatedAt,
+    this.deletedAt,
+    required this.deviceId,
+    required this.version,
+    this.photoId,
+    required this.kind,
+    required this.result,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
+    map['device_id'] = Variable<String>(deviceId);
+    map['version'] = Variable<int>(version);
+    if (!nullToAbsent || photoId != null) {
+      map['photo_id'] = Variable<String>(photoId);
+    }
+    map['kind'] = Variable<String>(kind);
+    map['result'] = Variable<String>(result);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  PhotoAnalysesCompanion toCompanion(bool nullToAbsent) {
+    return PhotoAnalysesCompanion(
+      id: Value(id),
+      updatedAt: Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      deviceId: Value(deviceId),
+      version: Value(version),
+      photoId: photoId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(photoId),
+      kind: Value(kind),
+      result: Value(result),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory PhotoAnalysisRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return PhotoAnalysisRow(
+      id: serializer.fromJson<String>(json['id']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
+      deviceId: serializer.fromJson<String>(json['deviceId']),
+      version: serializer.fromJson<int>(json['version']),
+      photoId: serializer.fromJson<String?>(json['photoId']),
+      kind: serializer.fromJson<String>(json['kind']),
+      result: serializer.fromJson<String>(json['result']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
+      'deviceId': serializer.toJson<String>(deviceId),
+      'version': serializer.toJson<int>(version),
+      'photoId': serializer.toJson<String?>(photoId),
+      'kind': serializer.toJson<String>(kind),
+      'result': serializer.toJson<String>(result),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  PhotoAnalysisRow copyWith({
+    String? id,
+    DateTime? updatedAt,
+    Value<DateTime?> deletedAt = const Value.absent(),
+    String? deviceId,
+    int? version,
+    Value<String?> photoId = const Value.absent(),
+    String? kind,
+    String? result,
+    DateTime? createdAt,
+  }) => PhotoAnalysisRow(
+    id: id ?? this.id,
+    updatedAt: updatedAt ?? this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    deviceId: deviceId ?? this.deviceId,
+    version: version ?? this.version,
+    photoId: photoId.present ? photoId.value : this.photoId,
+    kind: kind ?? this.kind,
+    result: result ?? this.result,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  PhotoAnalysisRow copyWithCompanion(PhotoAnalysesCompanion data) {
+    return PhotoAnalysisRow(
+      id: data.id.present ? data.id.value : this.id,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      deviceId: data.deviceId.present ? data.deviceId.value : this.deviceId,
+      version: data.version.present ? data.version.value : this.version,
+      photoId: data.photoId.present ? data.photoId.value : this.photoId,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      result: data.result.present ? data.result.value : this.result,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('PhotoAnalysisRow(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('photoId: $photoId, ')
+          ..write('kind: $kind, ')
+          ..write('result: $result, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    photoId,
+    kind,
+    result,
+    createdAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is PhotoAnalysisRow &&
+          other.id == this.id &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt &&
+          other.deviceId == this.deviceId &&
+          other.version == this.version &&
+          other.photoId == this.photoId &&
+          other.kind == this.kind &&
+          other.result == this.result &&
+          other.createdAt == this.createdAt);
+}
+
+class PhotoAnalysesCompanion extends UpdateCompanion<PhotoAnalysisRow> {
+  final Value<String> id;
+  final Value<DateTime> updatedAt;
+  final Value<DateTime?> deletedAt;
+  final Value<String> deviceId;
+  final Value<int> version;
+  final Value<String?> photoId;
+  final Value<String> kind;
+  final Value<String> result;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const PhotoAnalysesCompanion({
+    this.id = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.deviceId = const Value.absent(),
+    this.version = const Value.absent(),
+    this.photoId = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.result = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  PhotoAnalysesCompanion.insert({
+    required String id,
+    required DateTime updatedAt,
+    this.deletedAt = const Value.absent(),
+    required String deviceId,
+    this.version = const Value.absent(),
+    this.photoId = const Value.absent(),
+    required String kind,
+    required String result,
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       updatedAt = Value(updatedAt),
+       deviceId = Value(deviceId),
+       kind = Value(kind),
+       result = Value(result),
+       createdAt = Value(createdAt);
+  static Insertable<PhotoAnalysisRow> custom({
+    Expression<String>? id,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
+    Expression<String>? deviceId,
+    Expression<int>? version,
+    Expression<String>? photoId,
+    Expression<String>? kind,
+    Expression<String>? result,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (deviceId != null) 'device_id': deviceId,
+      if (version != null) 'version': version,
+      if (photoId != null) 'photo_id': photoId,
+      if (kind != null) 'kind': kind,
+      if (result != null) 'result': result,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  PhotoAnalysesCompanion copyWith({
+    Value<String>? id,
+    Value<DateTime>? updatedAt,
+    Value<DateTime?>? deletedAt,
+    Value<String>? deviceId,
+    Value<int>? version,
+    Value<String?>? photoId,
+    Value<String>? kind,
+    Value<String>? result,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return PhotoAnalysesCompanion(
+      id: id ?? this.id,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
+      deviceId: deviceId ?? this.deviceId,
+      version: version ?? this.version,
+      photoId: photoId ?? this.photoId,
+      kind: kind ?? this.kind,
+      result: result ?? this.result,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
+    if (deviceId.present) {
+      map['device_id'] = Variable<String>(deviceId.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (photoId.present) {
+      map['photo_id'] = Variable<String>(photoId.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (result.present) {
+      map['result'] = Variable<String>(result.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('PhotoAnalysesCompanion(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('photoId: $photoId, ')
+          ..write('kind: $kind, ')
+          ..write('result: $result, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -19324,6 +22038,10 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   );
   late final $WalkRoutesTable walkRoutes = $WalkRoutesTable(this);
   late final $WalksTable walks = $WalksTable(this);
+  late final $ChatMessagesTable chatMessages = $ChatMessagesTable(this);
+  late final $CoursesTable courses = $CoursesTable(this);
+  late final $LessonsTable lessons = $LessonsTable(this);
+  late final $PhotoAnalysesTable photoAnalyses = $PhotoAnalysesTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -19357,6 +22075,10 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     workoutSessions,
     walkRoutes,
     walks,
+    chatMessages,
+    courses,
+    lessons,
+    photoAnalyses,
   ];
 }
 
@@ -28842,6 +31564,1336 @@ typedef $$WalksTableProcessedTableManager =
       WalkRow,
       PrefetchHooks Function()
     >;
+typedef $$ChatMessagesTableCreateCompanionBuilder =
+    ChatMessagesCompanion Function({
+      required String id,
+      required DateTime updatedAt,
+      Value<DateTime?> deletedAt,
+      required String deviceId,
+      Value<int> version,
+      required String role,
+      required String body,
+      required DateTime createdAt,
+      Value<bool> viaVoice,
+      Value<String?> actionIds,
+      Value<int> rowid,
+    });
+typedef $$ChatMessagesTableUpdateCompanionBuilder =
+    ChatMessagesCompanion Function({
+      Value<String> id,
+      Value<DateTime> updatedAt,
+      Value<DateTime?> deletedAt,
+      Value<String> deviceId,
+      Value<int> version,
+      Value<String> role,
+      Value<String> body,
+      Value<DateTime> createdAt,
+      Value<bool> viaVoice,
+      Value<String?> actionIds,
+      Value<int> rowid,
+    });
+
+class $$ChatMessagesTableFilterComposer
+    extends Composer<_$AppDatabase, $ChatMessagesTable> {
+  $$ChatMessagesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get role => $composableBuilder(
+    column: $table.role,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get body => $composableBuilder(
+    column: $table.body,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get viaVoice => $composableBuilder(
+    column: $table.viaVoice,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get actionIds => $composableBuilder(
+    column: $table.actionIds,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$ChatMessagesTableOrderingComposer
+    extends Composer<_$AppDatabase, $ChatMessagesTable> {
+  $$ChatMessagesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get role => $composableBuilder(
+    column: $table.role,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get body => $composableBuilder(
+    column: $table.body,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get viaVoice => $composableBuilder(
+    column: $table.viaVoice,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get actionIds => $composableBuilder(
+    column: $table.actionIds,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$ChatMessagesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $ChatMessagesTable> {
+  $$ChatMessagesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deviceId =>
+      $composableBuilder(column: $table.deviceId, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get role =>
+      $composableBuilder(column: $table.role, builder: (column) => column);
+
+  GeneratedColumn<String> get body =>
+      $composableBuilder(column: $table.body, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get viaVoice =>
+      $composableBuilder(column: $table.viaVoice, builder: (column) => column);
+
+  GeneratedColumn<String> get actionIds =>
+      $composableBuilder(column: $table.actionIds, builder: (column) => column);
+}
+
+class $$ChatMessagesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $ChatMessagesTable,
+          ChatMessageRow,
+          $$ChatMessagesTableFilterComposer,
+          $$ChatMessagesTableOrderingComposer,
+          $$ChatMessagesTableAnnotationComposer,
+          $$ChatMessagesTableCreateCompanionBuilder,
+          $$ChatMessagesTableUpdateCompanionBuilder,
+          (
+            ChatMessageRow,
+            BaseReferences<_$AppDatabase, $ChatMessagesTable, ChatMessageRow>,
+          ),
+          ChatMessageRow,
+          PrefetchHooks Function()
+        > {
+  $$ChatMessagesTableTableManager(_$AppDatabase db, $ChatMessagesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$ChatMessagesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$ChatMessagesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$ChatMessagesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
+                Value<String> deviceId = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String> role = const Value.absent(),
+                Value<String> body = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<bool> viaVoice = const Value.absent(),
+                Value<String?> actionIds = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => ChatMessagesCompanion(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                role: role,
+                body: body,
+                createdAt: createdAt,
+                viaVoice: viaVoice,
+                actionIds: actionIds,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required DateTime updatedAt,
+                Value<DateTime?> deletedAt = const Value.absent(),
+                required String deviceId,
+                Value<int> version = const Value.absent(),
+                required String role,
+                required String body,
+                required DateTime createdAt,
+                Value<bool> viaVoice = const Value.absent(),
+                Value<String?> actionIds = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => ChatMessagesCompanion.insert(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                role: role,
+                body: body,
+                createdAt: createdAt,
+                viaVoice: viaVoice,
+                actionIds: actionIds,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$ChatMessagesTable, ChatMessageRow>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $ChatMessagesTable,
+                    ChatMessageRow
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$ChatMessagesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $ChatMessagesTable,
+      ChatMessageRow,
+      $$ChatMessagesTableFilterComposer,
+      $$ChatMessagesTableOrderingComposer,
+      $$ChatMessagesTableAnnotationComposer,
+      $$ChatMessagesTableCreateCompanionBuilder,
+      $$ChatMessagesTableUpdateCompanionBuilder,
+      (
+        ChatMessageRow,
+        BaseReferences<_$AppDatabase, $ChatMessagesTable, ChatMessageRow>,
+      ),
+      ChatMessageRow,
+      PrefetchHooks Function()
+    >;
+typedef $$CoursesTableCreateCompanionBuilder = CoursesCompanion Function({
+  required String id,
+  required DateTime updatedAt,
+  Value<DateTime?> deletedAt,
+  required String deviceId,
+  Value<int> version,
+  required String title,
+  required String topic,
+  required String lang,
+  Value<int> totalLessons,
+  Value<int> dailyLessons,
+  Value<String> status,
+  required DateTime createdAt,
+  Value<int> rowid,
+});
+typedef $$CoursesTableUpdateCompanionBuilder = CoursesCompanion Function({
+  Value<String> id,
+  Value<DateTime> updatedAt,
+  Value<DateTime?> deletedAt,
+  Value<String> deviceId,
+  Value<int> version,
+  Value<String> title,
+  Value<String> topic,
+  Value<String> lang,
+  Value<int> totalLessons,
+  Value<int> dailyLessons,
+  Value<String> status,
+  Value<DateTime> createdAt,
+  Value<int> rowid,
+});
+
+class $$CoursesTableFilterComposer
+    extends Composer<_$AppDatabase, $CoursesTable> {
+  $$CoursesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get topic => $composableBuilder(
+    column: $table.topic,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get lang => $composableBuilder(
+    column: $table.lang,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get totalLessons => $composableBuilder(
+    column: $table.totalLessons,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get dailyLessons => $composableBuilder(
+    column: $table.dailyLessons,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$CoursesTableOrderingComposer
+    extends Composer<_$AppDatabase, $CoursesTable> {
+  $$CoursesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get topic => $composableBuilder(
+    column: $table.topic,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get lang => $composableBuilder(
+    column: $table.lang,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get totalLessons => $composableBuilder(
+    column: $table.totalLessons,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get dailyLessons => $composableBuilder(
+    column: $table.dailyLessons,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$CoursesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $CoursesTable> {
+  $$CoursesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deviceId =>
+      $composableBuilder(column: $table.deviceId, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get topic =>
+      $composableBuilder(column: $table.topic, builder: (column) => column);
+
+  GeneratedColumn<String> get lang =>
+      $composableBuilder(column: $table.lang, builder: (column) => column);
+
+  GeneratedColumn<int> get totalLessons => $composableBuilder(
+    column: $table.totalLessons,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get dailyLessons => $composableBuilder(
+    column: $table.dailyLessons,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$CoursesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $CoursesTable,
+          CourseRow,
+          $$CoursesTableFilterComposer,
+          $$CoursesTableOrderingComposer,
+          $$CoursesTableAnnotationComposer,
+          $$CoursesTableCreateCompanionBuilder,
+          $$CoursesTableUpdateCompanionBuilder,
+          (CourseRow, BaseReferences<_$AppDatabase, $CoursesTable, CourseRow>),
+          CourseRow,
+          PrefetchHooks Function()
+        > {
+  $$CoursesTableTableManager(_$AppDatabase db, $CoursesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$CoursesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$CoursesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$CoursesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
+                Value<String> deviceId = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String> title = const Value.absent(),
+                Value<String> topic = const Value.absent(),
+                Value<String> lang = const Value.absent(),
+                Value<int> totalLessons = const Value.absent(),
+                Value<int> dailyLessons = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => CoursesCompanion(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                title: title,
+                topic: topic,
+                lang: lang,
+                totalLessons: totalLessons,
+                dailyLessons: dailyLessons,
+                status: status,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required DateTime updatedAt,
+                Value<DateTime?> deletedAt = const Value.absent(),
+                required String deviceId,
+                Value<int> version = const Value.absent(),
+                required String title,
+                required String topic,
+                required String lang,
+                Value<int> totalLessons = const Value.absent(),
+                Value<int> dailyLessons = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => CoursesCompanion.insert(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                title: title,
+                topic: topic,
+                lang: lang,
+                totalLessons: totalLessons,
+                dailyLessons: dailyLessons,
+                status: status,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$CoursesTable, CourseRow>(table),
+                  BaseReferences<_$AppDatabase, $CoursesTable, CourseRow>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$CoursesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $CoursesTable,
+      CourseRow,
+      $$CoursesTableFilterComposer,
+      $$CoursesTableOrderingComposer,
+      $$CoursesTableAnnotationComposer,
+      $$CoursesTableCreateCompanionBuilder,
+      $$CoursesTableUpdateCompanionBuilder,
+      (CourseRow, BaseReferences<_$AppDatabase, $CoursesTable, CourseRow>),
+      CourseRow,
+      PrefetchHooks Function()
+    >;
+typedef $$LessonsTableCreateCompanionBuilder = LessonsCompanion Function({
+  required String id,
+  required DateTime updatedAt,
+  Value<DateTime?> deletedAt,
+  required String deviceId,
+  Value<int> version,
+  required String courseId,
+  required int orderIndex,
+  required String title,
+  required String content,
+  Value<String> quiz,
+  Value<DateTime?> openedAt,
+  Value<DateTime?> completedAt,
+  Value<int?> score,
+  Value<int> reviewStep,
+  Value<DateTime?> nextReviewAt,
+  Value<int> rowid,
+});
+typedef $$LessonsTableUpdateCompanionBuilder = LessonsCompanion Function({
+  Value<String> id,
+  Value<DateTime> updatedAt,
+  Value<DateTime?> deletedAt,
+  Value<String> deviceId,
+  Value<int> version,
+  Value<String> courseId,
+  Value<int> orderIndex,
+  Value<String> title,
+  Value<String> content,
+  Value<String> quiz,
+  Value<DateTime?> openedAt,
+  Value<DateTime?> completedAt,
+  Value<int?> score,
+  Value<int> reviewStep,
+  Value<DateTime?> nextReviewAt,
+  Value<int> rowid,
+});
+
+class $$LessonsTableFilterComposer
+    extends Composer<_$AppDatabase, $LessonsTable> {
+  $$LessonsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get courseId => $composableBuilder(
+    column: $table.courseId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get orderIndex => $composableBuilder(
+    column: $table.orderIndex,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get content => $composableBuilder(
+    column: $table.content,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get quiz => $composableBuilder(
+    column: $table.quiz,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get openedAt => $composableBuilder(
+    column: $table.openedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get score => $composableBuilder(
+    column: $table.score,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reviewStep => $composableBuilder(
+    column: $table.reviewStep,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$LessonsTableOrderingComposer
+    extends Composer<_$AppDatabase, $LessonsTable> {
+  $$LessonsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get courseId => $composableBuilder(
+    column: $table.courseId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get orderIndex => $composableBuilder(
+    column: $table.orderIndex,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get content => $composableBuilder(
+    column: $table.content,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get quiz => $composableBuilder(
+    column: $table.quiz,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get openedAt => $composableBuilder(
+    column: $table.openedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get score => $composableBuilder(
+    column: $table.score,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reviewStep => $composableBuilder(
+    column: $table.reviewStep,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$LessonsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $LessonsTable> {
+  $$LessonsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deviceId =>
+      $composableBuilder(column: $table.deviceId, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get courseId =>
+      $composableBuilder(column: $table.courseId, builder: (column) => column);
+
+  GeneratedColumn<int> get orderIndex => $composableBuilder(
+    column: $table.orderIndex,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get content =>
+      $composableBuilder(column: $table.content, builder: (column) => column);
+
+  GeneratedColumn<String> get quiz =>
+      $composableBuilder(column: $table.quiz, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get openedAt =>
+      $composableBuilder(column: $table.openedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get score =>
+      $composableBuilder(column: $table.score, builder: (column) => column);
+
+  GeneratedColumn<int> get reviewStep => $composableBuilder(
+    column: $table.reviewStep,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get nextReviewAt => $composableBuilder(
+    column: $table.nextReviewAt,
+    builder: (column) => column,
+  );
+}
+
+class $$LessonsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $LessonsTable,
+          LessonRow,
+          $$LessonsTableFilterComposer,
+          $$LessonsTableOrderingComposer,
+          $$LessonsTableAnnotationComposer,
+          $$LessonsTableCreateCompanionBuilder,
+          $$LessonsTableUpdateCompanionBuilder,
+          (LessonRow, BaseReferences<_$AppDatabase, $LessonsTable, LessonRow>),
+          LessonRow,
+          PrefetchHooks Function()
+        > {
+  $$LessonsTableTableManager(_$AppDatabase db, $LessonsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$LessonsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LessonsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$LessonsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
+                Value<String> deviceId = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String> courseId = const Value.absent(),
+                Value<int> orderIndex = const Value.absent(),
+                Value<String> title = const Value.absent(),
+                Value<String> content = const Value.absent(),
+                Value<String> quiz = const Value.absent(),
+                Value<DateTime?> openedAt = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<int?> score = const Value.absent(),
+                Value<int> reviewStep = const Value.absent(),
+                Value<DateTime?> nextReviewAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => LessonsCompanion(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                courseId: courseId,
+                orderIndex: orderIndex,
+                title: title,
+                content: content,
+                quiz: quiz,
+                openedAt: openedAt,
+                completedAt: completedAt,
+                score: score,
+                reviewStep: reviewStep,
+                nextReviewAt: nextReviewAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required DateTime updatedAt,
+                Value<DateTime?> deletedAt = const Value.absent(),
+                required String deviceId,
+                Value<int> version = const Value.absent(),
+                required String courseId,
+                required int orderIndex,
+                required String title,
+                required String content,
+                Value<String> quiz = const Value.absent(),
+                Value<DateTime?> openedAt = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<int?> score = const Value.absent(),
+                Value<int> reviewStep = const Value.absent(),
+                Value<DateTime?> nextReviewAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => LessonsCompanion.insert(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                courseId: courseId,
+                orderIndex: orderIndex,
+                title: title,
+                content: content,
+                quiz: quiz,
+                openedAt: openedAt,
+                completedAt: completedAt,
+                score: score,
+                reviewStep: reviewStep,
+                nextReviewAt: nextReviewAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$LessonsTable, LessonRow>(table),
+                  BaseReferences<_$AppDatabase, $LessonsTable, LessonRow>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$LessonsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $LessonsTable,
+      LessonRow,
+      $$LessonsTableFilterComposer,
+      $$LessonsTableOrderingComposer,
+      $$LessonsTableAnnotationComposer,
+      $$LessonsTableCreateCompanionBuilder,
+      $$LessonsTableUpdateCompanionBuilder,
+      (LessonRow, BaseReferences<_$AppDatabase, $LessonsTable, LessonRow>),
+      LessonRow,
+      PrefetchHooks Function()
+    >;
+typedef $$PhotoAnalysesTableCreateCompanionBuilder =
+    PhotoAnalysesCompanion Function({
+      required String id,
+      required DateTime updatedAt,
+      Value<DateTime?> deletedAt,
+      required String deviceId,
+      Value<int> version,
+      Value<String?> photoId,
+      required String kind,
+      required String result,
+      required DateTime createdAt,
+      Value<int> rowid,
+    });
+typedef $$PhotoAnalysesTableUpdateCompanionBuilder =
+    PhotoAnalysesCompanion Function({
+      Value<String> id,
+      Value<DateTime> updatedAt,
+      Value<DateTime?> deletedAt,
+      Value<String> deviceId,
+      Value<int> version,
+      Value<String?> photoId,
+      Value<String> kind,
+      Value<String> result,
+      Value<DateTime> createdAt,
+      Value<int> rowid,
+    });
+
+class $$PhotoAnalysesTableFilterComposer
+    extends Composer<_$AppDatabase, $PhotoAnalysesTable> {
+  $$PhotoAnalysesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get photoId => $composableBuilder(
+    column: $table.photoId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get result => $composableBuilder(
+    column: $table.result,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$PhotoAnalysesTableOrderingComposer
+    extends Composer<_$AppDatabase, $PhotoAnalysesTable> {
+  $$PhotoAnalysesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get photoId => $composableBuilder(
+    column: $table.photoId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get result => $composableBuilder(
+    column: $table.result,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$PhotoAnalysesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $PhotoAnalysesTable> {
+  $$PhotoAnalysesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deviceId =>
+      $composableBuilder(column: $table.deviceId, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get photoId =>
+      $composableBuilder(column: $table.photoId, builder: (column) => column);
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<String> get result =>
+      $composableBuilder(column: $table.result, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$PhotoAnalysesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $PhotoAnalysesTable,
+          PhotoAnalysisRow,
+          $$PhotoAnalysesTableFilterComposer,
+          $$PhotoAnalysesTableOrderingComposer,
+          $$PhotoAnalysesTableAnnotationComposer,
+          $$PhotoAnalysesTableCreateCompanionBuilder,
+          $$PhotoAnalysesTableUpdateCompanionBuilder,
+          (
+            PhotoAnalysisRow,
+            BaseReferences<
+              _$AppDatabase,
+              $PhotoAnalysesTable,
+              PhotoAnalysisRow
+            >,
+          ),
+          PhotoAnalysisRow,
+          PrefetchHooks Function()
+        > {
+  $$PhotoAnalysesTableTableManager(_$AppDatabase db, $PhotoAnalysesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$PhotoAnalysesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$PhotoAnalysesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$PhotoAnalysesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
+                Value<String> deviceId = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String?> photoId = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<String> result = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => PhotoAnalysesCompanion(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                photoId: photoId,
+                kind: kind,
+                result: result,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required DateTime updatedAt,
+                Value<DateTime?> deletedAt = const Value.absent(),
+                required String deviceId,
+                Value<int> version = const Value.absent(),
+                Value<String?> photoId = const Value.absent(),
+                required String kind,
+                required String result,
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => PhotoAnalysesCompanion.insert(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                photoId: photoId,
+                kind: kind,
+                result: result,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$PhotoAnalysesTable, PhotoAnalysisRow>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $PhotoAnalysesTable,
+                    PhotoAnalysisRow
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$PhotoAnalysesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $PhotoAnalysesTable,
+      PhotoAnalysisRow,
+      $$PhotoAnalysesTableFilterComposer,
+      $$PhotoAnalysesTableOrderingComposer,
+      $$PhotoAnalysesTableAnnotationComposer,
+      $$PhotoAnalysesTableCreateCompanionBuilder,
+      $$PhotoAnalysesTableUpdateCompanionBuilder,
+      (
+        PhotoAnalysisRow,
+        BaseReferences<_$AppDatabase, $PhotoAnalysesTable, PhotoAnalysisRow>,
+      ),
+      PhotoAnalysisRow,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -28902,4 +32954,12 @@ class $AppDatabaseManager {
       $$WalkRoutesTableTableManager(_db, _db.walkRoutes);
   $$WalksTableTableManager get walks =>
       $$WalksTableTableManager(_db, _db.walks);
+  $$ChatMessagesTableTableManager get chatMessages =>
+      $$ChatMessagesTableTableManager(_db, _db.chatMessages);
+  $$CoursesTableTableManager get courses =>
+      $$CoursesTableTableManager(_db, _db.courses);
+  $$LessonsTableTableManager get lessons =>
+      $$LessonsTableTableManager(_db, _db.lessons);
+  $$PhotoAnalysesTableTableManager get photoAnalyses =>
+      $$PhotoAnalysesTableTableManager(_db, _db.photoAnalyses);
 }

@@ -15,14 +15,18 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/ai"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/auth"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/config"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/httpapi"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/jobs"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/learning"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/media"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/memstat"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/messages"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/store"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/syncapi"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/vision"
 )
 
 // version подставляется при сборке: go build -ldflags "-X main.version=1.2.3".
@@ -65,12 +69,30 @@ func run() error {
 		MaxBytes:  cfg.MaxPhotoBytes,
 		Logger:    logger,
 	})
+	aiSvc := ai.New(db, ai.Options{
+		AnthropicKey:     cfg.AnthropicKey,
+		GeminiKey:        cfg.GeminiKey,
+		Models:           cfg.AIModels,
+		MonthlyBudgetUSD: cfg.AIBudgetUSD,
+		TTSKey:           cfg.TTSKey,
+		Logger:           logger,
+	})
+	visionH := vision.New(db, aiSvc, logger)
+	msgSvc := messages.New(db, aiSvc, messages.Options{
+		NtfyURL:    cfg.NtfyURL,
+		NtfyToken:  cfg.NtfyToken,
+		FCMKeyFile: cfg.FCMKeyFile,
+		Logger:     logger,
+	})
+	learningH := learning.New(db, aiSvc, logger)
 	go jobs.New(db, jobs.Options{
-		DataDir:        cfg.DataDir,
-		BackupDir:      cfg.BackupDir,
-		BackupKeepDays: cfg.BackupKeepDays,
-		FXURL:          cfg.FXURL,
-		Logger:         logger,
+		DataDir:          cfg.DataDir,
+		BackupDir:        cfg.BackupDir,
+		BackupKeepDays:   cfg.BackupKeepDays,
+		FXURL:            cfg.FXURL,
+		Logger:           logger,
+		GenerateMessages: msgSvc.GenerateAhead,
+		WeeklyReview:     aiSvc.WeeklyReview,
 	}).Run(ctx)
 
 	go memstat.Run(ctx, logger, cfg.MemLogInterval)
@@ -86,6 +108,10 @@ func run() error {
 				authSvc.Register(api)
 				syncH.Register(api, authSvc.Require)
 				mediaH.Register(api, authSvc.Require)
+				aiSvc.Register(api, authSvc.Require)
+				visionH.Register(api, authSvc.Require)
+				msgSvc.Register(api, authSvc.Require)
+				learningH.Register(api, authSvc.Require)
 			},
 		}),
 		ReadHeaderTimeout: 5 * time.Second,

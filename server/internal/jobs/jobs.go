@@ -32,6 +32,9 @@ type Options struct {
 	BackupKeepDays int
 	FXURL          string
 	Logger         *slog.Logger
+	// Этап 6: сообщения наперёд (messages.Service.GenerateAhead) и недельный пересмотр плана. nil — пропуск.
+	GenerateMessages func(ctx context.Context) error
+	WeeklyReview     func(ctx context.Context) error
 }
 
 type Scheduler struct {
@@ -64,7 +67,7 @@ func New(db *sql.DB, opts Options) *Scheduler {
 		{name: "backup", atMin: 3*60 + 30, run: s.backup},
 		{name: "fx_rates", every: 6 * time.Hour, atMin: -1, run: s.fxRates},
 		{name: "cleanup", every: day, atMin: -1, run: s.cleanup},
-		{name: "messages", every: day, atMin: -1, run: s.generateMessages},
+		{name: "messages", every: 3 * time.Hour, atMin: -1, run: s.generateMessages},
 		{name: "weekly_analysis", every: 7 * day, atMin: -1, run: s.weeklyAnalysis},
 	}
 	return s
@@ -243,13 +246,21 @@ func (s *Scheduler) cleanup(ctx context.Context) error {
 	return err
 }
 
-// ---- Заглушки этапа 6 ----
+// ---- Этап 6 (реализации подключает main) ----
 
-// TODO(этап 6): генерация сообщений наперёд.
-func (s *Scheduler) generateMessages(ctx context.Context) error { return nil }
+func (s *Scheduler) generateMessages(ctx context.Context) error {
+	if s.opts.GenerateMessages == nil {
+		return nil
+	}
+	return s.opts.GenerateMessages(ctx)
+}
 
-// TODO(этап 6): недельный анализ.
-func (s *Scheduler) weeklyAnalysis(ctx context.Context) error { return nil }
+func (s *Scheduler) weeklyAnalysis(ctx context.Context) error {
+	if s.opts.WeeklyReview == nil {
+		return nil
+	}
+	return s.opts.WeeklyReview(ctx)
+}
 
 // ---- Бэкап ----
 // Структура <BackupDir>:

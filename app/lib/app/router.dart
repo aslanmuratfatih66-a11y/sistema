@@ -18,7 +18,10 @@ import '../features/schedule/schedule_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/shop/shop_screen.dart';
 import '../features/walks/walks_screen.dart';
+import '../features/ai_journal/ai_journal_screen.dart';
 import '../features/auth/account_screen.dart';
+import '../features/chat/chat_screen.dart';
+import '../features/learning/learning_screen.dart';
 import '../features/workouts/workouts_screen.dart';
 import 'app_shell.dart';
 import 'routes.dart';
@@ -45,6 +48,9 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.workouts, builder: (_, _) => const WorkoutsScreen()),
         GoRoute(path: Routes.walks, builder: (_, _) => const WalksScreen()),
         GoRoute(path: Routes.account, builder: (_, _) => const AccountScreen()),
+        GoRoute(path: Routes.chat, builder: (_, _) => const ChatScreen()),
+        GoRoute(path: Routes.learning, builder: (_, _) => const LearningScreen()),
+        GoRoute(path: Routes.aiJournal, builder: (_, _) => const AiJournalScreen()),
         GoRoute(
           path: Routes.editStepPattern,
           builder: (_, state) {

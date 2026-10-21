@@ -155,4 +155,69 @@ CREATE TABLE job_runs (
   last_error TEXT
 );
 `,
+	// 2 — этап 6: ИИ (расходы, журнал действий, кэш), сообщения наперёд, push-токены.
+	`
+CREATE TABLE ai_usage (
+  id            INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id       TEXT,                    -- NULL — системные задачи
+  task          TEXT NOT NULL,
+  provider      TEXT NOT NULL,
+  model         TEXT NOT NULL,
+  input_tokens  INTEGER NOT NULL,
+  output_tokens INTEGER NOT NULL,
+  cache_read    INTEGER NOT NULL DEFAULT 0,
+  cache_write   INTEGER NOT NULL DEFAULT 0,
+  cost_usd      REAL NOT NULL,
+  at            INTEGER NOT NULL
+);
+CREATE INDEX ai_usage_at ON ai_usage(at);
+CREATE INDEX ai_usage_user ON ai_usage(user_id, at);
+
+-- Журнал действий ИИ через инструменты («Система изменила план: …»), с отменой.
+CREATE TABLE ai_actions (
+  id         TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  tool       TEXT NOT NULL,
+  input      TEXT NOT NULL,              -- JSON аргументов
+  summary    TEXT NOT NULL,
+  undo       TEXT,                       -- JSON для отмены; NULL — отмена невозможна
+  at         INTEGER NOT NULL,
+  undone_at  INTEGER
+);
+CREATE INDEX ai_actions_user ON ai_actions(user_id, at);
+
+-- Кэш ответов (КБЖУ блюд/товаров из веб-поиска, уроки и т.п.).
+CREATE TABLE ai_cache (
+  kind       TEXT NOT NULL,              -- 'food', 'lesson', …
+  key        TEXT NOT NULL,              -- нормализованный ключ запроса
+  value      TEXT NOT NULL,              -- JSON
+  source     TEXT,                       -- URL/название источника
+  at         INTEGER NOT NULL,
+  PRIMARY KEY (kind, key)
+);
+
+-- Сообщения наперёд (SPEC §9.5): клиент забирает пачку и ставит локальными уведомлениями.
+CREATE TABLE messages (
+  id          TEXT PRIMARY KEY,
+  user_id     TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  kind        TEXT NOT NULL,             -- briefing | cheer | reproach | reminder | chat
+  deliver_at  INTEGER NOT NULL,
+  quest_ref   TEXT,                      -- id экземпляра квеста (упрёк за пропуск — дедлайн+15 мин)
+  title       TEXT NOT NULL DEFAULT '',
+  body        TEXT NOT NULL,
+  audio_path  TEXT,                      -- озвучка (относительно <data>/audio), если есть
+  created_at  INTEGER NOT NULL,
+  fetched_at  INTEGER,
+  pushed_at   INTEGER                    -- отправлено через FCM/ntfy
+);
+CREATE INDEX messages_user ON messages(user_id, deliver_at);
+
+CREATE TABLE push_tokens (
+  user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  platform   TEXT NOT NULL,              -- android | ios | ntfy
+  token      TEXT NOT NULL,
+  updated_at INTEGER NOT NULL,
+  PRIMARY KEY (user_id, platform, token)
+);
+`,
 }
