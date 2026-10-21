@@ -1,0 +1,129 @@
+{
+  "wlkTitle": "Yürüyüş",
+  "wlkPlan": "Rota",
+  "wlkByDistance": "Kilometre",
+  "wlkByTime": "Dakika",
+  "wlkKm": "{value} km",
+  "@wlkKm": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkMin": "{n} dk",
+  "@wlkMin": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkIntervals": "Aralıklar: yürüyüş, hızlanma, kardiyo",
+  "wlkIntervalsHint": "Kapalı — tüm tur sakin tempoda",
+  "wlkBuild": "Tur oluştur",
+  "wlkBuilding": "Rota oluşturuluyor…",
+  "wlkNoLocation": "Konum erişimi yok. Ayarlardan izin verin.",
+  "wlkNoRoute": "Rota oluşturulamadı. Bağlantıyı kontrol edip tekrar deneyin.",
+  "wlkRouteInfo": "{km} km · ~{min} dk",
+  "@wlkRouteInfo": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkStart": "Yürüyüşe başla",
+  "wlkStartFree": "Rotasız",
+  "wlkPause": "Duraklat",
+  "wlkResume": "Devam et",
+  "wlkFinish": "Bitir",
+  "wlkActive": "Yürüyüş sürüyor",
+  "wlkPaused": "Duraklatıldı",
+  "wlkDistance": "Mesafe",
+  "wlkTime": "Süre",
+  "wlkPace": "Tempo",
+  "wlkPaceValue": "{value} /km",
+  "@wlkPaceValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkNext": "Sonraki",
+  "wlkInMeters": "{m} m sonra",
+  "@wlkInMeters": {
+    "placeholders": {
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkOffRoute": "Rotadan çıktınız",
+  "wlkModeWalk": "Yürüyüş",
+  "wlkModeBrisk": "Hızlanma",
+  "wlkModeCardio": "Kardiyo",
+  "wlkModeRest": "Dinlenme",
+  "wlkTurnStart": "Başlangıç",
+  "wlkTurnStraight": "Düz",
+  "wlkTurnLeft": "Sola",
+  "wlkTurnRight": "Sağa",
+  "wlkTurnSlightLeft": "Hafif sola",
+  "wlkTurnSlightRight": "Hafif sağa",
+  "wlkTurnUTurn": "Geri dönüş",
+  "wlkTurnArrive": "Varış",
+  "wlkSayTurnLeft": "sola dön",
+  "wlkSayTurnRight": "sağa dön",
+  "wlkSayTurnSlightLeft": "hafif sola dön",
+  "wlkSayTurnSlightRight": "hafif sağa dön",
+  "wlkSayTurnUTurn": "geri dön",
+  "wlkSayModeWalk": "sakin tempoda yürü",
+  "wlkSayModeBrisk": "hızlan",
+  "wlkSayModeCardio": "kardiyo aralığı, en yüksek tempo",
+  "wlkSayModeRest": "dinlenme, tempoyu düşür",
+  "wlkSayAnd": "{first} ve {second}",
+  "@wlkSayAnd": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkSayStart": "Yürüyüşe başlıyoruz",
+  "wlkSayArrive": "Rota tamamlandı. Harika iş",
+  "wlkSayOffRoute": "Rotadan çıktın, çizgiye geri dön",
+  "wlkSummary": "Yürüyüş özeti",
+  "wlkKcal": "{n} kcal",
+  "@wlkKcal": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkHistory": "Geçmiş",
+  "wlkHistoryEmpty": "Henüz yürüyüş yok.",
+  "wlkShop": "Yakındaki market",
+  "wlkGrocery": "Market",
+  "wlkWater": "Su",
+  "wlkSearching": "Yakında aranıyor…",
+  "wlkNothingNearby": "Yakında bir şey bulunamadı.",
+  "wlkUnnamed": "İsimsiz",
+  "wlkToPlace": "Hedef: {name}",
+  "@wlkToPlace": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkTrackerUnavailable": "Yürüyüş takibi kullanılamıyor.",
+  "wlkMapAttribution": "© OpenStreetMap katkıcıları"
+}

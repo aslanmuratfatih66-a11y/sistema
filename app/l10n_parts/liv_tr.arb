@@ -1,0 +1,18 @@
+{
+  "livNextQuest": "Sıradaki görev",
+  "livNoQuest": "Görev yok",
+  "livOverdue": "Süresi geçti",
+  "livSteps": "Adım",
+  "livWater": "Su",
+  "livAddWater": "+250 ml",
+  "livMl": "ml",
+  "livKm": "km",
+  "livPerKm": "/km",
+  "livReward": "Ödül",
+  "livWalk": "Yürüyüş",
+  "livQuest": "Görev",
+  "livWorkout": "Antrenman",
+  "livChannelName": "Etkinlik",
+  "livChannelDesc": "Bildirim panelinde yürüyüş, aktif görev ve antrenman",
+  "livWalkNextIn": "{m} m sonra dönüş"
+}

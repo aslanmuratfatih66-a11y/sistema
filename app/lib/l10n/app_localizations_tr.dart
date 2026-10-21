@@ -1242,6 +1242,66 @@ class AppLocalizationsTr extends AppLocalizations {
   String get hqFinanceFoodTitle => 'Yemek bütçesi';
 
   @override
+  String get livNextQuest => 'Sıradaki görev';
+
+  @override
+  String get livNoQuest => 'Görev yok';
+
+  @override
+  String get livOverdue => 'Süresi geçti';
+
+  @override
+  String get livSteps => 'Adım';
+
+  @override
+  String get livWater => 'Su';
+
+  @override
+  String get livAddWater => '+250 ml';
+
+  @override
+  String get livMl => 'ml';
+
+  @override
+  String get livKm => 'km';
+
+  @override
+  String get livPerKm => '/km';
+
+  @override
+  String get livReward => 'Ödül';
+
+  @override
+  String get livWalk => 'Yürüyüş';
+
+  @override
+  String get livQuest => 'Görev';
+
+  @override
+  String get livWorkout => 'Antrenman';
+
+  @override
+  String get livChannelName => 'Etkinlik';
+
+  @override
+  String get livChannelDesc =>
+      'Bildirim panelinde yürüyüş, aktif görev ve antrenman';
+
+  @override
+  String livWalkNextIn(int m) {
+    return '$m m sonra dönüş';
+  }
+
+  @override
+  String get locNotifTitle => 'Sistem · yürüyüş';
+
+  @override
+  String get locNotifText => 'Rota kaydediliyor';
+
+  @override
+  String get locNotifChannel => 'Yürüyüş';
+
+  @override
   String ntfQuestTitle(String title) {
     return '[ Görev ] $title';
   }
@@ -4473,6 +4533,218 @@ class AppLocalizationsTr extends AppLocalizations {
   String dscQuestWalk(int minutes) {
     return 'Sakin yürüyüş: $minutes dk';
   }
+
+  @override
+  String get wlkTitle => 'Yürüyüş';
+
+  @override
+  String get wlkPlan => 'Rota';
+
+  @override
+  String get wlkByDistance => 'Kilometre';
+
+  @override
+  String get wlkByTime => 'Dakika';
+
+  @override
+  String wlkKm(String value) {
+    return '$value km';
+  }
+
+  @override
+  String wlkMin(int n) {
+    return '$n dk';
+  }
+
+  @override
+  String get wlkIntervals => 'Aralıklar: yürüyüş, hızlanma, kardiyo';
+
+  @override
+  String get wlkIntervalsHint => 'Kapalı — tüm tur sakin tempoda';
+
+  @override
+  String get wlkBuild => 'Tur oluştur';
+
+  @override
+  String get wlkBuilding => 'Rota oluşturuluyor…';
+
+  @override
+  String get wlkNoLocation => 'Konum erişimi yok. Ayarlardan izin verin.';
+
+  @override
+  String get wlkNoRoute =>
+      'Rota oluşturulamadı. Bağlantıyı kontrol edip tekrar deneyin.';
+
+  @override
+  String wlkRouteInfo(String km, int min) {
+    return '$km km · ~$min dk';
+  }
+
+  @override
+  String get wlkStart => 'Yürüyüşe başla';
+
+  @override
+  String get wlkStartFree => 'Rotasız';
+
+  @override
+  String get wlkPause => 'Duraklat';
+
+  @override
+  String get wlkResume => 'Devam et';
+
+  @override
+  String get wlkFinish => 'Bitir';
+
+  @override
+  String get wlkActive => 'Yürüyüş sürüyor';
+
+  @override
+  String get wlkPaused => 'Duraklatıldı';
+
+  @override
+  String get wlkDistance => 'Mesafe';
+
+  @override
+  String get wlkTime => 'Süre';
+
+  @override
+  String get wlkPace => 'Tempo';
+
+  @override
+  String wlkPaceValue(String value) {
+    return '$value /km';
+  }
+
+  @override
+  String get wlkNext => 'Sonraki';
+
+  @override
+  String wlkInMeters(int m) {
+    return '$m m sonra';
+  }
+
+  @override
+  String get wlkOffRoute => 'Rotadan çıktınız';
+
+  @override
+  String get wlkModeWalk => 'Yürüyüş';
+
+  @override
+  String get wlkModeBrisk => 'Hızlanma';
+
+  @override
+  String get wlkModeCardio => 'Kardiyo';
+
+  @override
+  String get wlkModeRest => 'Dinlenme';
+
+  @override
+  String get wlkTurnStart => 'Başlangıç';
+
+  @override
+  String get wlkTurnStraight => 'Düz';
+
+  @override
+  String get wlkTurnLeft => 'Sola';
+
+  @override
+  String get wlkTurnRight => 'Sağa';
+
+  @override
+  String get wlkTurnSlightLeft => 'Hafif sola';
+
+  @override
+  String get wlkTurnSlightRight => 'Hafif sağa';
+
+  @override
+  String get wlkTurnUTurn => 'Geri dönüş';
+
+  @override
+  String get wlkTurnArrive => 'Varış';
+
+  @override
+  String get wlkSayTurnLeft => 'sola dön';
+
+  @override
+  String get wlkSayTurnRight => 'sağa dön';
+
+  @override
+  String get wlkSayTurnSlightLeft => 'hafif sola dön';
+
+  @override
+  String get wlkSayTurnSlightRight => 'hafif sağa dön';
+
+  @override
+  String get wlkSayTurnUTurn => 'geri dön';
+
+  @override
+  String get wlkSayModeWalk => 'sakin tempoda yürü';
+
+  @override
+  String get wlkSayModeBrisk => 'hızlan';
+
+  @override
+  String get wlkSayModeCardio => 'kardiyo aralığı, en yüksek tempo';
+
+  @override
+  String get wlkSayModeRest => 'dinlenme, tempoyu düşür';
+
+  @override
+  String wlkSayAnd(String first, String second) {
+    return '$first ve $second';
+  }
+
+  @override
+  String get wlkSayStart => 'Yürüyüşe başlıyoruz';
+
+  @override
+  String get wlkSayArrive => 'Rota tamamlandı. Harika iş';
+
+  @override
+  String get wlkSayOffRoute => 'Rotadan çıktın, çizgiye geri dön';
+
+  @override
+  String get wlkSummary => 'Yürüyüş özeti';
+
+  @override
+  String wlkKcal(int n) {
+    return '$n kcal';
+  }
+
+  @override
+  String get wlkHistory => 'Geçmiş';
+
+  @override
+  String get wlkHistoryEmpty => 'Henüz yürüyüş yok.';
+
+  @override
+  String get wlkShop => 'Yakındaki market';
+
+  @override
+  String get wlkGrocery => 'Market';
+
+  @override
+  String get wlkWater => 'Su';
+
+  @override
+  String get wlkSearching => 'Yakında aranıyor…';
+
+  @override
+  String get wlkNothingNearby => 'Yakında bir şey bulunamadı.';
+
+  @override
+  String get wlkUnnamed => 'İsimsiz';
+
+  @override
+  String wlkToPlace(String name) {
+    return 'Hedef: $name';
+  }
+
+  @override
+  String get wlkTrackerUnavailable => 'Yürüyüş takibi kullanılamıyor.';
+
+  @override
+  String get wlkMapAttribution => '© OpenStreetMap katkıcıları';
 
   @override
   String get wrkTitle => 'Antrenmanlar';

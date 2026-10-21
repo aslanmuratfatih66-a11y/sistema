@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Виджет «Система» (этап 4, SPEC §8.12). Подписи по умолчанию; из приложения приходят подписи на его языке. -->
+<resources>
+    <string name="sistema_widget_label">Система</string>
+    <string name="sistema_widget_description">Следующий квест, шаги и вода</string>
+    <string name="sistema_widget_next_quest">Следующий квест</string>
+    <string name="sistema_widget_no_quest">Квестов нет</string>
+    <string name="sistema_widget_add_water">+250 мл</string>
+    <color name="sistema_widget_bg">#E6081024</color>
+    <color name="sistema_widget_accent">#FF4DBFFF</color>
+    <color name="sistema_widget_water">#FF59A6FF</color>
+    <color name="sistema_widget_text">#FFFFFFFF</color>
+    <color name="sistema_widget_muted">#B3FFFFFF</color>
+    <color name="sistema_widget_danger">#FFFF5959</color>
+    <color name="sistema_widget_gold">#FFFFCC4D</color>
+</resources>

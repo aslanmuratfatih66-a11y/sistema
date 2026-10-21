@@ -2252,6 +2252,120 @@ abstract class AppLocalizations {
   /// **'Финансы на еду'**
   String get hqFinanceFoodTitle;
 
+  /// No description provided for @livNextQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Следующий квест'**
+  String get livNextQuest;
+
+  /// No description provided for @livNoQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квестов нет'**
+  String get livNoQuest;
+
+  /// No description provided for @livOverdue.
+  ///
+  /// In ru, this message translates to:
+  /// **'Просрочен'**
+  String get livOverdue;
+
+  /// No description provided for @livSteps.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаги'**
+  String get livSteps;
+
+  /// No description provided for @livWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вода'**
+  String get livWater;
+
+  /// No description provided for @livAddWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'+250 мл'**
+  String get livAddWater;
+
+  /// No description provided for @livMl.
+  ///
+  /// In ru, this message translates to:
+  /// **'мл'**
+  String get livMl;
+
+  /// No description provided for @livKm.
+  ///
+  /// In ru, this message translates to:
+  /// **'км'**
+  String get livKm;
+
+  /// No description provided for @livPerKm.
+  ///
+  /// In ru, this message translates to:
+  /// **'/км'**
+  String get livPerKm;
+
+  /// No description provided for @livReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'Награда'**
+  String get livReward;
+
+  /// No description provided for @livWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулка'**
+  String get livWalk;
+
+  /// No description provided for @livQuest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квест'**
+  String get livQuest;
+
+  /// No description provided for @livWorkout.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка'**
+  String get livWorkout;
+
+  /// No description provided for @livChannelName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Активность'**
+  String get livChannelName;
+
+  /// No description provided for @livChannelDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулка, активный квест и тренировка в шторке'**
+  String get livChannelDesc;
+
+  /// No description provided for @livWalkNextIn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поворот через {m} м'**
+  String livWalkNextIn(int m);
+
+  /// No description provided for @locNotifTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система · прогулка'**
+  String get locNotifTitle;
+
+  /// No description provided for @locNotifText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Идёт запись маршрута'**
+  String get locNotifText;
+
+  /// No description provided for @locNotifChannel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулка'**
+  String get locNotifChannel;
+
   /// No description provided for @ntfQuestTitle.
   ///
   /// In ru, this message translates to:
@@ -7951,6 +8065,396 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Спокойная прогулка: {minutes} мин'**
   String dscQuestWalk(int minutes);
+
+  /// No description provided for @wlkTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулка'**
+  String get wlkTitle;
+
+  /// No description provided for @wlkPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Маршрут'**
+  String get wlkPlan;
+
+  /// No description provided for @wlkByDistance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Километры'**
+  String get wlkByDistance;
+
+  /// No description provided for @wlkByTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Минуты'**
+  String get wlkByTime;
+
+  /// No description provided for @wlkKm.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} км'**
+  String wlkKm(String value);
+
+  /// No description provided for @wlkMin.
+  ///
+  /// In ru, this message translates to:
+  /// **'{n} мин'**
+  String wlkMin(int n);
+
+  /// No description provided for @wlkIntervals.
+  ///
+  /// In ru, this message translates to:
+  /// **'Интервалы: шаг, ускорение, кардио'**
+  String get wlkIntervals;
+
+  /// No description provided for @wlkIntervalsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключено — весь круг спокойным шагом'**
+  String get wlkIntervalsHint;
+
+  /// No description provided for @wlkBuild.
+  ///
+  /// In ru, this message translates to:
+  /// **'Построить круг'**
+  String get wlkBuild;
+
+  /// No description provided for @wlkBuilding.
+  ///
+  /// In ru, this message translates to:
+  /// **'Строю маршрут…'**
+  String get wlkBuilding;
+
+  /// No description provided for @wlkNoLocation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет доступа к геопозиции. Разрешите его в настройках.'**
+  String get wlkNoLocation;
+
+  /// No description provided for @wlkNoRoute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось построить маршрут. Проверьте сеть и попробуйте ещё раз.'**
+  String get wlkNoRoute;
+
+  /// No description provided for @wlkRouteInfo.
+  ///
+  /// In ru, this message translates to:
+  /// **'{km} км · ~{min} мин'**
+  String wlkRouteInfo(String km, int min);
+
+  /// No description provided for @wlkStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать прогулку'**
+  String get wlkStart;
+
+  /// No description provided for @wlkStartFree.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без маршрута'**
+  String get wlkStartFree;
+
+  /// No description provided for @wlkPause.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get wlkPause;
+
+  /// No description provided for @wlkResume.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить'**
+  String get wlkResume;
+
+  /// No description provided for @wlkFinish.
+  ///
+  /// In ru, this message translates to:
+  /// **'Завершить'**
+  String get wlkFinish;
+
+  /// No description provided for @wlkActive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Идёт прогулка'**
+  String get wlkActive;
+
+  /// No description provided for @wlkPaused.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get wlkPaused;
+
+  /// No description provided for @wlkDistance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дистанция'**
+  String get wlkDistance;
+
+  /// No description provided for @wlkTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Время'**
+  String get wlkTime;
+
+  /// No description provided for @wlkPace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Темп'**
+  String get wlkPace;
+
+  /// No description provided for @wlkPaceValue.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} /км'**
+  String wlkPaceValue(String value);
+
+  /// No description provided for @wlkNext.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дальше'**
+  String get wlkNext;
+
+  /// No description provided for @wlkInMeters.
+  ///
+  /// In ru, this message translates to:
+  /// **'через {m} м'**
+  String wlkInMeters(int m);
+
+  /// No description provided for @wlkOffRoute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вы сошли с маршрута'**
+  String get wlkOffRoute;
+
+  /// No description provided for @wlkModeWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаг'**
+  String get wlkModeWalk;
+
+  /// No description provided for @wlkModeBrisk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ускорение'**
+  String get wlkModeBrisk;
+
+  /// No description provided for @wlkModeCardio.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кардио'**
+  String get wlkModeCardio;
+
+  /// No description provided for @wlkModeRest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отдых'**
+  String get wlkModeRest;
+
+  /// No description provided for @wlkTurnStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Старт'**
+  String get wlkTurnStart;
+
+  /// No description provided for @wlkTurnStraight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прямо'**
+  String get wlkTurnStraight;
+
+  /// No description provided for @wlkTurnLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Налево'**
+  String get wlkTurnLeft;
+
+  /// No description provided for @wlkTurnRight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Направо'**
+  String get wlkTurnRight;
+
+  /// No description provided for @wlkTurnSlightLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Левее'**
+  String get wlkTurnSlightLeft;
+
+  /// No description provided for @wlkTurnSlightRight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Правее'**
+  String get wlkTurnSlightRight;
+
+  /// No description provided for @wlkTurnUTurn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разворот'**
+  String get wlkTurnUTurn;
+
+  /// No description provided for @wlkTurnArrive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Финиш'**
+  String get wlkTurnArrive;
+
+  /// No description provided for @wlkSayTurnLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'поверни налево'**
+  String get wlkSayTurnLeft;
+
+  /// No description provided for @wlkSayTurnRight.
+  ///
+  /// In ru, this message translates to:
+  /// **'поверни направо'**
+  String get wlkSayTurnRight;
+
+  /// No description provided for @wlkSayTurnSlightLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'держись левее'**
+  String get wlkSayTurnSlightLeft;
+
+  /// No description provided for @wlkSayTurnSlightRight.
+  ///
+  /// In ru, this message translates to:
+  /// **'держись правее'**
+  String get wlkSayTurnSlightRight;
+
+  /// No description provided for @wlkSayTurnUTurn.
+  ///
+  /// In ru, this message translates to:
+  /// **'развернись'**
+  String get wlkSayTurnUTurn;
+
+  /// No description provided for @wlkSayModeWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'иди спокойным шагом'**
+  String get wlkSayModeWalk;
+
+  /// No description provided for @wlkSayModeBrisk.
+  ///
+  /// In ru, this message translates to:
+  /// **'ускорься'**
+  String get wlkSayModeBrisk;
+
+  /// No description provided for @wlkSayModeCardio.
+  ///
+  /// In ru, this message translates to:
+  /// **'кардио-интервал, максимальный темп'**
+  String get wlkSayModeCardio;
+
+  /// No description provided for @wlkSayModeRest.
+  ///
+  /// In ru, this message translates to:
+  /// **'отдых, сбавь темп'**
+  String get wlkSayModeRest;
+
+  /// No description provided for @wlkSayAnd.
+  ///
+  /// In ru, this message translates to:
+  /// **'{first} и {second}'**
+  String wlkSayAnd(String first, String second);
+
+  /// No description provided for @wlkSayStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начинаем прогулку'**
+  String get wlkSayStart;
+
+  /// No description provided for @wlkSayArrive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Маршрут пройден. Отличная работа'**
+  String get wlkSayArrive;
+
+  /// No description provided for @wlkSayOffRoute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ты сошёл с маршрута, вернись на линию'**
+  String get wlkSayOffRoute;
+
+  /// No description provided for @wlkSummary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итог прогулки'**
+  String get wlkSummary;
+
+  /// No description provided for @wlkKcal.
+  ///
+  /// In ru, this message translates to:
+  /// **'{n} ккал'**
+  String wlkKcal(int n);
+
+  /// No description provided for @wlkHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'История'**
+  String get wlkHistory;
+
+  /// No description provided for @wlkHistoryEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулок пока нет.'**
+  String get wlkHistoryEmpty;
+
+  /// No description provided for @wlkShop.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазин рядом'**
+  String get wlkShop;
+
+  /// No description provided for @wlkGrocery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продукты'**
+  String get wlkGrocery;
+
+  /// No description provided for @wlkWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вода'**
+  String get wlkWater;
+
+  /// No description provided for @wlkSearching.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ищу рядом…'**
+  String get wlkSearching;
+
+  /// No description provided for @wlkNothingNearby.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рядом ничего не нашлось.'**
+  String get wlkNothingNearby;
+
+  /// No description provided for @wlkUnnamed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без названия'**
+  String get wlkUnnamed;
+
+  /// No description provided for @wlkToPlace.
+  ///
+  /// In ru, this message translates to:
+  /// **'До места: {name}'**
+  String wlkToPlace(String name);
+
+  /// No description provided for @wlkTrackerUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Трекинг прогулки недоступен.'**
+  String get wlkTrackerUnavailable;
+
+  /// No description provided for @wlkMapAttribution.
+  ///
+  /// In ru, this message translates to:
+  /// **'© участники OpenStreetMap'**
+  String get wlkMapAttribution;
 
   /// No description provided for @wrkTitle.
   ///

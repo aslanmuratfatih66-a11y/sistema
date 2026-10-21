@@ -1,0 +1,19 @@
+{
+  "livNextQuest": "Следующий квест",
+  "livNoQuest": "Квестов нет",
+  "livOverdue": "Просрочен",
+  "livSteps": "Шаги",
+  "livWater": "Вода",
+  "livAddWater": "+250 мл",
+  "livMl": "мл",
+  "livKm": "км",
+  "livPerKm": "/км",
+  "livReward": "Награда",
+  "livWalk": "Прогулка",
+  "livQuest": "Квест",
+  "livWorkout": "Тренировка",
+  "livChannelName": "Активность",
+  "livChannelDesc": "Прогулка, активный квест и тренировка в шторке",
+  "livWalkNextIn": "Поворот через {m} м",
+  "@livWalkNextIn": {"placeholders": {"m": {"type": "int"}}}
+}

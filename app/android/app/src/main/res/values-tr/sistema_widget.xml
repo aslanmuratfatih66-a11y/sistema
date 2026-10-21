@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sistema_widget_label">Sistem</string>
+    <string name="sistema_widget_description">Sıradaki görev, adımlar ve su</string>
+    <string name="sistema_widget_next_quest">Sıradaki görev</string>
+    <string name="sistema_widget_no_quest">Görev yok</string>
+    <string name="sistema_widget_add_water">+250 ml</string>
+</resources>

@@ -1247,6 +1247,65 @@ class AppLocalizationsRu extends AppLocalizations {
   String get hqFinanceFoodTitle => 'Финансы на еду';
 
   @override
+  String get livNextQuest => 'Следующий квест';
+
+  @override
+  String get livNoQuest => 'Квестов нет';
+
+  @override
+  String get livOverdue => 'Просрочен';
+
+  @override
+  String get livSteps => 'Шаги';
+
+  @override
+  String get livWater => 'Вода';
+
+  @override
+  String get livAddWater => '+250 мл';
+
+  @override
+  String get livMl => 'мл';
+
+  @override
+  String get livKm => 'км';
+
+  @override
+  String get livPerKm => '/км';
+
+  @override
+  String get livReward => 'Награда';
+
+  @override
+  String get livWalk => 'Прогулка';
+
+  @override
+  String get livQuest => 'Квест';
+
+  @override
+  String get livWorkout => 'Тренировка';
+
+  @override
+  String get livChannelName => 'Активность';
+
+  @override
+  String get livChannelDesc => 'Прогулка, активный квест и тренировка в шторке';
+
+  @override
+  String livWalkNextIn(int m) {
+    return 'Поворот через $m м';
+  }
+
+  @override
+  String get locNotifTitle => 'Система · прогулка';
+
+  @override
+  String get locNotifText => 'Идёт запись маршрута';
+
+  @override
+  String get locNotifChannel => 'Прогулка';
+
+  @override
   String ntfQuestTitle(String title) {
     return '[ Квест ] $title';
   }
@@ -4494,6 +4553,219 @@ class AppLocalizationsRu extends AppLocalizations {
   String dscQuestWalk(int minutes) {
     return 'Спокойная прогулка: $minutes мин';
   }
+
+  @override
+  String get wlkTitle => 'Прогулка';
+
+  @override
+  String get wlkPlan => 'Маршрут';
+
+  @override
+  String get wlkByDistance => 'Километры';
+
+  @override
+  String get wlkByTime => 'Минуты';
+
+  @override
+  String wlkKm(String value) {
+    return '$value км';
+  }
+
+  @override
+  String wlkMin(int n) {
+    return '$n мин';
+  }
+
+  @override
+  String get wlkIntervals => 'Интервалы: шаг, ускорение, кардио';
+
+  @override
+  String get wlkIntervalsHint => 'Выключено — весь круг спокойным шагом';
+
+  @override
+  String get wlkBuild => 'Построить круг';
+
+  @override
+  String get wlkBuilding => 'Строю маршрут…';
+
+  @override
+  String get wlkNoLocation =>
+      'Нет доступа к геопозиции. Разрешите его в настройках.';
+
+  @override
+  String get wlkNoRoute =>
+      'Не удалось построить маршрут. Проверьте сеть и попробуйте ещё раз.';
+
+  @override
+  String wlkRouteInfo(String km, int min) {
+    return '$km км · ~$min мин';
+  }
+
+  @override
+  String get wlkStart => 'Начать прогулку';
+
+  @override
+  String get wlkStartFree => 'Без маршрута';
+
+  @override
+  String get wlkPause => 'Пауза';
+
+  @override
+  String get wlkResume => 'Продолжить';
+
+  @override
+  String get wlkFinish => 'Завершить';
+
+  @override
+  String get wlkActive => 'Идёт прогулка';
+
+  @override
+  String get wlkPaused => 'Пауза';
+
+  @override
+  String get wlkDistance => 'Дистанция';
+
+  @override
+  String get wlkTime => 'Время';
+
+  @override
+  String get wlkPace => 'Темп';
+
+  @override
+  String wlkPaceValue(String value) {
+    return '$value /км';
+  }
+
+  @override
+  String get wlkNext => 'Дальше';
+
+  @override
+  String wlkInMeters(int m) {
+    return 'через $m м';
+  }
+
+  @override
+  String get wlkOffRoute => 'Вы сошли с маршрута';
+
+  @override
+  String get wlkModeWalk => 'Шаг';
+
+  @override
+  String get wlkModeBrisk => 'Ускорение';
+
+  @override
+  String get wlkModeCardio => 'Кардио';
+
+  @override
+  String get wlkModeRest => 'Отдых';
+
+  @override
+  String get wlkTurnStart => 'Старт';
+
+  @override
+  String get wlkTurnStraight => 'Прямо';
+
+  @override
+  String get wlkTurnLeft => 'Налево';
+
+  @override
+  String get wlkTurnRight => 'Направо';
+
+  @override
+  String get wlkTurnSlightLeft => 'Левее';
+
+  @override
+  String get wlkTurnSlightRight => 'Правее';
+
+  @override
+  String get wlkTurnUTurn => 'Разворот';
+
+  @override
+  String get wlkTurnArrive => 'Финиш';
+
+  @override
+  String get wlkSayTurnLeft => 'поверни налево';
+
+  @override
+  String get wlkSayTurnRight => 'поверни направо';
+
+  @override
+  String get wlkSayTurnSlightLeft => 'держись левее';
+
+  @override
+  String get wlkSayTurnSlightRight => 'держись правее';
+
+  @override
+  String get wlkSayTurnUTurn => 'развернись';
+
+  @override
+  String get wlkSayModeWalk => 'иди спокойным шагом';
+
+  @override
+  String get wlkSayModeBrisk => 'ускорься';
+
+  @override
+  String get wlkSayModeCardio => 'кардио-интервал, максимальный темп';
+
+  @override
+  String get wlkSayModeRest => 'отдых, сбавь темп';
+
+  @override
+  String wlkSayAnd(String first, String second) {
+    return '$first и $second';
+  }
+
+  @override
+  String get wlkSayStart => 'Начинаем прогулку';
+
+  @override
+  String get wlkSayArrive => 'Маршрут пройден. Отличная работа';
+
+  @override
+  String get wlkSayOffRoute => 'Ты сошёл с маршрута, вернись на линию';
+
+  @override
+  String get wlkSummary => 'Итог прогулки';
+
+  @override
+  String wlkKcal(int n) {
+    return '$n ккал';
+  }
+
+  @override
+  String get wlkHistory => 'История';
+
+  @override
+  String get wlkHistoryEmpty => 'Прогулок пока нет.';
+
+  @override
+  String get wlkShop => 'Магазин рядом';
+
+  @override
+  String get wlkGrocery => 'Продукты';
+
+  @override
+  String get wlkWater => 'Вода';
+
+  @override
+  String get wlkSearching => 'Ищу рядом…';
+
+  @override
+  String get wlkNothingNearby => 'Рядом ничего не нашлось.';
+
+  @override
+  String get wlkUnnamed => 'Без названия';
+
+  @override
+  String wlkToPlace(String name) {
+    return 'До места: $name';
+  }
+
+  @override
+  String get wlkTrackerUnavailable => 'Трекинг прогулки недоступен.';
+
+  @override
+  String get wlkMapAttribution => '© участники OpenStreetMap';
 
   @override
   String get wrkTitle => 'Тренировки';

@@ -7,6 +7,7 @@ import io.flutter.plugin.common.MethodChannel
 // FlutterFragmentActivity — для registerForActivityResult (разрешения Health Connect).
 class MainActivity : FlutterFragmentActivity() {
     private var steps: StepCounterChannel? = null
+    private var audio: AudioChannel? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -19,6 +20,13 @@ class MainActivity : FlutterFragmentActivity() {
                 }
             }
         steps = StepCounterChannel(this, flutterEngine.dartExecutor.binaryMessenger)
+        audio = AudioChannel(this, flutterEngine.dartExecutor.binaryMessenger)
+    }
+
+    override fun cleanUpFlutterEngine(flutterEngine: FlutterEngine) {
+        audio?.dispose()
+        audio = null
+        super.cleanUpFlutterEngine(flutterEngine)
     }
 
     private companion object {

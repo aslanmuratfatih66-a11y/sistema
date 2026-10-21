@@ -4,14 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app/app.dart';
+import 'app/live_bridge.dart';
 import 'app/routes.dart';
 import 'app/service_factory.dart';
 import 'core/activity/activity_api.dart';
 import 'core/activity/activity_providers.dart';
 import 'core/activity/channel_step_counter.dart';
+import 'core/audio/audio_api.dart';
+import 'core/audio/audio_providers.dart';
 import 'core/capabilities/capability_service.dart';
 import 'core/capabilities/platform_capability_service.dart';
 import 'core/db/database.dart';
+import 'core/live/live_api.dart';
+import 'core/live/live_providers.dart';
+import 'core/location/geolocator_location_service.dart';
+import 'core/location/walk_tracker_impl.dart';
 import 'core/notifications/background_refresh.dart';
 import 'core/notifications/local_reminder_scheduler.dart';
 import 'core/notifications/notification_api.dart';
@@ -22,8 +29,11 @@ import 'core/voice/tts_service.dart';
 import 'domain/quests/quest_api.dart';
 import 'domain/quests/quest_section_hooks.dart';
 import 'domain/quests/section_hooks.dart';
+import 'domain/walks/walk_api.dart';
 import 'features/character/voice/flutter_tts_service.dart';
 import 'features/onboarding/onboarding_progress.dart';
+import 'features/walks/data/walk_route_service.dart';
+import 'features/workouts/workouts_providers.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +46,7 @@ Future<void> main() async {
     debugPrint('importAcceptedPlanIfMissing: $e');
   }
   final scheduler = LocalReminderScheduler(l10n: () => reminderL10n(db));
+  final walkTracker = await createWalkTracker(db);
   final container = ProviderContainer(overrides: [
     capabilityServiceProvider.overrideWithValue(PlatformCapabilityService()),
     databaseProvider.overrideWithValue(db),
@@ -45,6 +56,13 @@ Future<void> main() async {
     reminderSchedulerProvider.overrideWithValue(scheduler),
     sectionQuestHooksProvider.overrideWithValue(QuestSectionHooks(quests)),
     stepCounterProvider.overrideWithValue(ChannelStepCounter()),
+    voicePrompterProvider.overrideWith((ref) => buildVoicePrompter(ref, voice: () => ref.read(workoutVoiceProfileProvider))),
+    musicControllerProvider.overrideWith(buildMusicController),
+    routeServiceProvider.overrideWith(buildWalkRouteService),
+    locationServiceProvider.overrideWithValue(const GeolocatorLocationService()),
+    walkTrackerProvider.overrideWithValue(walkTracker),
+    liveActivityServiceProvider.overrideWithValue(createLiveActivityService(l10n: () => reminderL10n(db))),
+    widgetSyncProvider.overrideWithValue(createWidgetSync(l10n: () => reminderL10n(db))),
   ]);
 
   final prefs = ReminderPrefsRepository(db);
@@ -61,6 +79,8 @@ Future<void> main() async {
   // Разрешение на уведомления спрашивает экран напоминаний, не старт.
   await scheduler.init(onResponse: reminders.handleResponse);
   unawaited(reminders.start());
+  // Виджеты из «Статуса», вода из виджета/App Intent, прогулка → Live Activity (после init уведомлений).
+  LiveBridge(container, () => reminderL10n(db)).start();
   // Шаги: опрос при старте, возврате и раз в 5 мин → StepLogs → квесты шагов.
   container.read(stepSyncProvider).start();
   unawaited(initBackgroundRefresh().catchError((Object e) => debugPrint('initBackgroundRefresh: $e')));

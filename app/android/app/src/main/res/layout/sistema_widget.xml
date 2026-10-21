@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Виджет «Система»: следующий квест + таймер, шаги, вода, кнопка +250 мл (SistemaWidgetProvider.kt). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sw_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sistema_widget_bg"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/sw_next_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sistema_widget_next_quest"
+        android:textAllCaps="true"
+        android:textColor="@color/sistema_widget_accent"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sw_quest_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/sistema_widget_no_quest"
+        android:textColor="@color/sistema_widget_text"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Chronometer
+            android:id="@+id/sw_quest_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sistema_widget_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sw_quest_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sistema_widget_danger"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sw_quest_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/sistema_widget_gold"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sw_steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/sistema_widget_text"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/sw_steps_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:max="100"
+        android:progressTint="@color/sistema_widget_accent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sw_water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sistema_widget_text"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                android:id="@+id/sw_water_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:max="100"
+                android:progressTint="@color/sistema_widget_water" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sw_add_water"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/sistema_widget_button"
+            android:minWidth="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/sistema_widget_add_water"
+            android:textAllCaps="false"
+            android:textColor="@color/sistema_widget_text"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

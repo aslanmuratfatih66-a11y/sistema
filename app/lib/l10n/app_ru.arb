@@ -721,6 +721,32 @@
   "hqNutritionDiaryTitle": "Дневник питания",
   "hqNutritionDiarySoon": "Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.",
   "hqFinanceFoodTitle": "Финансы на еду",
+  "livNextQuest": "Следующий квест",
+  "livNoQuest": "Квестов нет",
+  "livOverdue": "Просрочен",
+  "livSteps": "Шаги",
+  "livWater": "Вода",
+  "livAddWater": "+250 мл",
+  "livMl": "мл",
+  "livKm": "км",
+  "livPerKm": "/км",
+  "livReward": "Награда",
+  "livWalk": "Прогулка",
+  "livQuest": "Квест",
+  "livWorkout": "Тренировка",
+  "livChannelName": "Активность",
+  "livChannelDesc": "Прогулка, активный квест и тренировка в шторке",
+  "livWalkNextIn": "Поворот через {m} м",
+  "@livWalkNextIn": {
+    "placeholders": {
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "locNotifTitle": "Система · прогулка",
+  "locNotifText": "Идёт запись маршрута",
+  "locNotifChannel": "Прогулка",
   "ntfQuestTitle": "[ Квест ] {title}",
   "@ntfQuestTitle": {
     "placeholders": {
@@ -2598,6 +2624,133 @@
       }
     }
   },
+  "wlkTitle": "Прогулка",
+  "wlkPlan": "Маршрут",
+  "wlkByDistance": "Километры",
+  "wlkByTime": "Минуты",
+  "wlkKm": "{value} км",
+  "@wlkKm": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkMin": "{n} мин",
+  "@wlkMin": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkIntervals": "Интервалы: шаг, ускорение, кардио",
+  "wlkIntervalsHint": "Выключено — весь круг спокойным шагом",
+  "wlkBuild": "Построить круг",
+  "wlkBuilding": "Строю маршрут…",
+  "wlkNoLocation": "Нет доступа к геопозиции. Разрешите его в настройках.",
+  "wlkNoRoute": "Не удалось построить маршрут. Проверьте сеть и попробуйте ещё раз.",
+  "wlkRouteInfo": "{km} км · ~{min} мин",
+  "@wlkRouteInfo": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkStart": "Начать прогулку",
+  "wlkStartFree": "Без маршрута",
+  "wlkPause": "Пауза",
+  "wlkResume": "Продолжить",
+  "wlkFinish": "Завершить",
+  "wlkActive": "Идёт прогулка",
+  "wlkPaused": "Пауза",
+  "wlkDistance": "Дистанция",
+  "wlkTime": "Время",
+  "wlkPace": "Темп",
+  "wlkPaceValue": "{value} /км",
+  "@wlkPaceValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkNext": "Дальше",
+  "wlkInMeters": "через {m} м",
+  "@wlkInMeters": {
+    "placeholders": {
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkOffRoute": "Вы сошли с маршрута",
+  "wlkModeWalk": "Шаг",
+  "wlkModeBrisk": "Ускорение",
+  "wlkModeCardio": "Кардио",
+  "wlkModeRest": "Отдых",
+  "wlkTurnStart": "Старт",
+  "wlkTurnStraight": "Прямо",
+  "wlkTurnLeft": "Налево",
+  "wlkTurnRight": "Направо",
+  "wlkTurnSlightLeft": "Левее",
+  "wlkTurnSlightRight": "Правее",
+  "wlkTurnUTurn": "Разворот",
+  "wlkTurnArrive": "Финиш",
+  "wlkSayTurnLeft": "поверни налево",
+  "wlkSayTurnRight": "поверни направо",
+  "wlkSayTurnSlightLeft": "держись левее",
+  "wlkSayTurnSlightRight": "держись правее",
+  "wlkSayTurnUTurn": "развернись",
+  "wlkSayModeWalk": "иди спокойным шагом",
+  "wlkSayModeBrisk": "ускорься",
+  "wlkSayModeCardio": "кардио-интервал, максимальный темп",
+  "wlkSayModeRest": "отдых, сбавь темп",
+  "wlkSayAnd": "{first} и {second}",
+  "@wlkSayAnd": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkSayStart": "Начинаем прогулку",
+  "wlkSayArrive": "Маршрут пройден. Отличная работа",
+  "wlkSayOffRoute": "Ты сошёл с маршрута, вернись на линию",
+  "wlkSummary": "Итог прогулки",
+  "wlkKcal": "{n} ккал",
+  "@wlkKcal": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wlkHistory": "История",
+  "wlkHistoryEmpty": "Прогулок пока нет.",
+  "wlkShop": "Магазин рядом",
+  "wlkGrocery": "Продукты",
+  "wlkWater": "Вода",
+  "wlkSearching": "Ищу рядом…",
+  "wlkNothingNearby": "Рядом ничего не нашлось.",
+  "wlkUnnamed": "Без названия",
+  "wlkToPlace": "До места: {name}",
+  "@wlkToPlace": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wlkTrackerUnavailable": "Трекинг прогулки недоступен.",
+  "wlkMapAttribution": "© участники OpenStreetMap",
   "wrkTitle": "Тренировки",
   "wrkProgram": "Программа",
   "wrkToday": "Сегодня",

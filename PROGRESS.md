@@ -2,22 +2,23 @@
 
 ## Сейчас
 Этап: 4 — Прогулки, карта, голос, музыка, виджеты
-Статус: каркас готов; сабагенты A–D прошлой сессии оборвались, перезапущены 2026-10-21 (дописывают поверх частичных Dart-файлов)
-Следующий шаг: дождаться отчётов A–D → интеграция (override провайдеров в main, «Нет воды» → магазин, виджеты из «Статуса», вода из App Intent) → CI
+Статус: интеграция готова, собирается в CI
+Следующий шаг: дождаться CI (gh run watch), при ошибке Swift/Kotlin — gh run view --log-failed
 
 ## Этап 4 — чек-лист
 - [x] Каркас: БД v5 (WalkRoutes, Walks), WalkMode; geolocator, flutter_map+latlong2, audio_session, home_widget; контракты domain/walks/walk_api.dart, core/audio/audio_api.dart, core/live/live_api.dart; iOS: таргет SistemaWidgets (ruby ios/scripts/setup_extensions.rb, гем xcodeproj, Ruby в C:\Ruby33-x64), ios/Shared/SistemaShared.swift (App Group, SistemaActivityAttributes, AddWaterIntent), каналы MapKit/NowPlaying/LiveActivity (заготовки), entitlements App Group, Info.plist (фон location+audio, Live Activities, схема sistema://, queries spotify); Android: FOREGROUND_SERVICE_LOCATION, queries Spotify; маршрут /walks, заглушка
-- [ ] 1. Маршруты и карта, поиск магазина (A)
-- [ ] 2. Аудио: голос поверх музыки, Apple Music, Spotify (B)
-- [ ] 3. Фоновая геолокация и трекинг (C)
-- [ ] 4. Live Activity, виджеты, App Intent (D)
-- [ ] 5. Интеграция, CI, отчёт
+- [x] 1. Маршруты и карта, поиск магазина (A)
+- [x] 2. Аудио: голос поверх музыки, Apple Music, Spotify (B)
+- [x] 3. Фоновая геолокация и трекинг (C)
+- [x] 4. Live Activity, виджеты, App Intent (D)
+- [x] 5a. Интеграция: overrides в main (route/location/walkTracker/voice/music/live/widgets), app/live_bridge.dart (виджеты из «Статуса», вода из виджета при старте/resumed, Live Activity прогулки ≤1 раз в 5 с), «Нет воды» → /walks?shop=water; 533 теста
+- [ ] 5b. CI зелёный, отчёт
 
 ## Сабагенты (этап 4)
-- A Маршруты и карта: в работе — features/walks, ios/Runner/MapKitChannel.swift (wlk_*)
-- B Аудио: в работе — core/audio, ios/Runner/NowPlayingChannel.swift, android (aud_*)
-- C Геолокация и трекинг: в работе — core/location (loc_*)
-- D Live Activity и виджеты: в работе — core/live, ios/SistemaWidgets, ios/Runner/LiveActivityChannel.swift, android widget (liv_*)
+- A Маршруты и карта: готово (21 тест) — features/walks, MapKitChannel.swift, wlk_*.arb; «Магазин рядом»: /walks?shop=water|1 или showNearbyShopSheet
+- B Аудио: готово (19 тестов) — core/audio, NowPlayingChannel.swift, AudioChannel.kt; MainActivity подключён; main: override voicePrompterProvider (buildVoicePrompter) и musicControllerProvider — при интеграции
+- C Геолокация и трекинг: готово (20 тестов) — core/location (GeolocatorLocationService, GeolocatorWalkTracker, createWalkTracker(db)), loc_*.arb; main: override locationServiceProvider/walkTrackerProvider — при интеграции
+- D Live Activity и виджеты: готово (14 тестов) — core/live, ios/SistemaWidgets, LiveActivityChannel.swift, SistemaWidgetProvider.kt + res; манифест подключён; main: override liveActivityServiceProvider/widgetSyncProvider (create*), takePendingWater при старте и resumed — при интеграции
 
 ## Этап 3 — чек-лист (завершён)
 - [x] Каркас: БД v4 (FoodItems, MealEntries, Recipes, WaterLogs, ShoppingItems, StepLogs, SleepLogs, CareChecks, WorkoutPrograms, WorkoutSessions), enums, core/models/daily.dart, core/activity/activity_api.dart, domain/quests/section_hooks.dart; mobile_scanner/http/fl_chart/image_picker/wakelock_plus; Health Connect (minSdk 26, FlutterFragmentActivity, манифест), канал sistema/steps (StepCounterChannel.swift/.kt — заготовки, в pbxproj); маршруты /body /workouts, заглушки
@@ -82,6 +83,7 @@
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- Этап 4: Spotify — заглушка (нужна регистрация в Spotify Dashboard, Redirect URI); прогулка после перезапуска восстанавливается на паузе; норма шагов виджета — 8000 по умолчанию; Swift/Kotlin этапа 4 проверены только сборкой
 - Тело: «сегодня» (bodyClockProvider) не пересчитывается в полночь; дневной сон не записать; удаление фото без подтверждения
 - Шаги: Health Connect без приложения-писателя (Google Fit/Samsung Health) даёт 0, фолбэка на датчик нет; датчик не видит шаги до первого опроса за день; CMPedometer — история 7 дней
 - Перенос шага «Персонаж» сдвинул индексы шагов анкеты (прогресс хранится индексом) — у незавершённой анкеты шаг может сместиться на 1

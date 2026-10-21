@@ -2,8 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
+import '../../../app/routes.dart';
 import '../../../domain/quests/quest_api.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../ui/ui.dart';
@@ -59,7 +61,20 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
         label: l.homeNoticeLabel,
         message: l.homeNoWaterMessage,
         actions: [
-          Builder(builder: (ctx) => SysButton.primary(label: l.homeOk, onPressed: () => Navigator.of(ctx).pop())),
+          // Маршрут к ближайшему магазину с водой (этап 4).
+          Builder(
+            builder: (ctx) => SysButton.primary(
+              label: l.wlkShop,
+              icon: SysGlyph.water,
+              onPressed: () {
+                // Панель могла смениться после «отложить» — роутер берём из окна.
+                final router = GoRouter.of(ctx);
+                Navigator.of(ctx).pop();
+                router.push('${Routes.walks}?shop=water');
+              },
+            ),
+          ),
+          Builder(builder: (ctx) => SysButton.secondary(label: l.homeOk, onPressed: () => Navigator.of(ctx).pop())),
         ],
       ),
     );
