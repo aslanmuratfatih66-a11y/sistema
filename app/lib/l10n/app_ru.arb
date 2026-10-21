@@ -433,5 +433,917 @@
   "onbStepTraining": "Тренировки",
   "onbStepFinance": "Финансы",
   "onbStepCharacter": "Персонаж и голос",
-  "onbStepPermissions": "Разрешения"
+  "onbStepPermissions": "Разрешения",
+  "planNoticeLabel": "Уведомление",
+  "planTitle": "План составлен",
+  "planDraftNote": "Черновой план — Система уточнит его после подключения ИИ.",
+  "planAcceptedAt": "План принят {date}",
+  "@planAcceptedAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "planAccept": "Принять",
+  "planEditData": "Изменить данные",
+  "planRecalculate": "Пересчитать",
+  "planChooseSection": "Какой раздел изменить?",
+  "planLoadError": "Не удалось составить план",
+  "planRetry": "Повторить",
+  "planNormsTitle": "Нормы",
+  "planCalories": "Калории",
+  "planKcal": "{value} ккал",
+  "@planKcal": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planModeDeficit": "Дефицит",
+  "planModeSurplus": "Профицит",
+  "planModeMaintenance": "Поддержание",
+  "planBmrTdee": "Базовый обмен {bmr} · расход {tdee} ккал",
+  "@planBmrTdee": {
+    "placeholders": {
+      "bmr": {
+        "type": "String"
+      },
+      "tdee": {
+        "type": "String"
+      }
+    }
+  },
+  "planProtein": "Белки",
+  "planFat": "Жиры",
+  "planCarbs": "Углеводы",
+  "planGrams": "{value} г",
+  "@planGrams": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planWater": "Вода",
+  "planMl": "{value} мл",
+  "@planMl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planWaterTrainingDay": "В день тренировки — {value} мл",
+  "@planWaterTrainingDay": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planSleep": "Сон",
+  "planHours": "{value} ч",
+  "@planHours": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planHoursMinutes": "{h} ч {m} мин",
+  "@planHoursMinutes": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "planWakeBed": "Подъём {wake} · отбой {bed}",
+  "@planWakeBed": {
+    "placeholders": {
+      "wake": {
+        "type": "String"
+      },
+      "bed": {
+        "type": "String"
+      }
+    }
+  },
+  "planRoutineTitle": "Распорядок дня",
+  "planWeek": "Неделя {n}",
+  "@planWeek": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "planWdMon": "Пн",
+  "planWdTue": "Вт",
+  "planWdWed": "Ср",
+  "planWdThu": "Чт",
+  "planWdFri": "Пт",
+  "planWdSat": "Сб",
+  "planWdSun": "Вс",
+  "planRoutineWake": "Подъём",
+  "planRoutineSkincareAm": "Уход за кожей (утро)",
+  "planRoutineMeal": "Приём пищи {n}",
+  "@planRoutineMeal": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "planRoutineLeaveHome": "Выход из дома",
+  "planRoutineLesson": "Пара",
+  "planRoutineWork": "Работа",
+  "planRoutineOther": "Дело",
+  "planRoutineReturnHome": "Дома",
+  "planRoutineTraining": "Тренировка",
+  "planRoutineSkincarePm": "Уход за кожей (вечер)",
+  "planRoutineBed": "Отбой",
+  "planQuestsTitle": "Квесты",
+  "planQuestsNote": "Выполнение квестов появится в следующем обновлении.",
+  "planQuestLeaveHome": "Выйти из дома к {time}",
+  "@planQuestLeaveHome": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestAttendLesson": "Пара: {title}",
+  "@planQuestAttendLesson": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestAttendWork": "Работа: {title}",
+  "@planQuestAttendWork": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestWater": "Выпить {ml} мл воды",
+  "@planQuestWater": {
+    "placeholders": {
+      "ml": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestSleep": "Лечь спать в {time} (сон {hours} ч)",
+  "@planQuestSleep": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestMeals": "Приёмы пищи по плану: {count}",
+  "@planQuestMeals": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestTraining": "Тренировка {minutes} мин",
+  "@planQuestTraining": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestSkincareMorning": "Утренний уход за кожей",
+  "planQuestSkincareEvening": "Вечерний уход за кожей",
+  "planQuestWakeOnTime": "Подъём в {time} без отсрочек",
+  "@planQuestWakeOnTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestStudy": "Учёба {minutes} мин",
+  "@planQuestStudy": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestTrackExpenses": "Записать траты за день",
+  "planQuestEveryDay": "каждый день",
+  "planQuestWeekOnly": "неделя {n}",
+  "@planQuestWeekOnly": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestReward": "+{diamonds} ◆ · +{xp} опыта",
+  "@planQuestReward": {
+    "placeholders": {
+      "diamonds": {
+        "type": "String"
+      },
+      "xp": {
+        "type": "String"
+      }
+    }
+  },
+  "planWarningsTitle": "Предупреждения",
+  "planWarnSleepShort": "По расписанию сна {scheduled} — меньше нормы {target}. Рекомендуемый отбой — {bed}.",
+  "@planWarnSleepShort": {
+    "placeholders": {
+      "scheduled": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      },
+      "bed": {
+        "type": "String"
+      }
+    }
+  },
+  "planWarnDeficitFloor": "Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.",
+  "planWarnActivityDefaulted": "Уровень активности не указан — взят «сидячий».",
+  "planWarnNoTrainingWindow": "{day}: нет свободного окна для тренировки.",
+  "@planWarnNoTrainingWindow": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "planWarnInjuries": "Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.",
+  "planMissingMessage": "Для расчёта калорий и БЖУ заполните: {fields}.",
+  "@planMissingMessage": {
+    "placeholders": {
+      "fields": {
+        "type": "String"
+      }
+    }
+  },
+  "planMissingSex": "пол",
+  "planMissingBirthDate": "дата рождения",
+  "planMissingHeight": "рост",
+  "planMissingWeight": "вес",
+  "planFillSection": "Заполнить: {section}",
+  "@planFillSection": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      }
+    }
+  },
+  "qaUnitCm": "см",
+  "qaUnitKg": "кг",
+  "qaRangeHint": "Допустимо от {min} до {max}",
+  "@qaRangeHint": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "qaProfileIntro": "Система должна знать, как к вам обращаться и где вы находитесь.",
+  "qaProfileName": "Имя",
+  "qaProfileNameHint": "Как к вам обращаться",
+  "qaProfileLanguage": "Язык",
+  "qaLangRu": "Русский",
+  "qaLangTr": "Türkçe",
+  "qaLangSystem": "Как в системе",
+  "qaProfileSex": "Пол",
+  "qaSexMale": "Мужской",
+  "qaSexFemale": "Женский",
+  "qaProfileBirthDate": "Дата рождения",
+  "qaProfileTimezone": "Часовой пояс",
+  "qaProfileTimezoneHint": "Определён по устройству — проверьте",
+  "qaProfileCity": "Город",
+  "qaProfileCityHint": "Для погоды и магазинов рядом",
+  "qaBodyIntro": "Исходные параметры тела. По ним Система рассчитает нормы калорий и воды.",
+  "qaBodyHeight": "Рост",
+  "qaBodyWeight": "Вес",
+  "qaBodyGirths": "Обхваты",
+  "qaBodyGirthsHint": "Измерьте сантиметровой лентой утром, без одежды. Можно пропустить.",
+  "qaBodyWaist": "Талия",
+  "qaBodyHips": "Бёдра",
+  "qaBodyChest": "Грудь",
+  "qaBodyNeck": "Шея",
+  "qaBodyArm": "Рука (бицепс)",
+  "qaBodyActivity": "Уровень активности",
+  "qaActivitySedentary": "Минимальный",
+  "qaActivitySedentaryHint": "Почти весь день сидя, тренировок нет",
+  "qaActivityLight": "Низкий",
+  "qaActivityLightHint": "Лёгкие тренировки или прогулки 1–3 раза в неделю",
+  "qaActivityModerate": "Средний",
+  "qaActivityModerateHint": "Тренировки 3–5 раз в неделю",
+  "qaActivityActive": "Высокий",
+  "qaActivityActiveHint": "Интенсивные тренировки 6–7 раз в неделю",
+  "qaActivityVeryActive": "Очень высокий",
+  "qaActivityVeryActiveHint": "Тяжёлый физический труд или по две тренировки в день",
+  "qaBodyWorkload": "Нагрузка на учёбе / работе",
+  "qaBodyWorkloadHint": "Как вы проводите основную часть дня",
+  "qaWorkloadSitting": "Сидячая",
+  "qaWorkloadMixed": "Смешанная",
+  "qaWorkloadStanding": "На ногах",
+  "qaWorkloadPhysical": "Физический труд",
+  "qaBodyPhotosIntro": "Фото помогут Системе оценить состав тела и осанку и отслеживать прогресс. Этап можно пропустить. Снимки хранятся на устройстве.",
+  "qaPhotoTipsTitle": "Как снимать",
+  "qaBodyTipLight": "Ровный свет спереди, без яркого окна за спиной.",
+  "qaBodyTipClothes": "Облегающая одежда или бельё, волосы убраны.",
+  "qaBodyTipPose": "Стойте прямо, руки чуть в стороны, смотрите вперёд. Тело — внутри контура.",
+  "qaBodyTipCamera": "Камера на уровне пояса, в 2–3 метрах. Удобнее со штативом или с помощником.",
+  "qaPoseBodyFront": "Спереди",
+  "qaPoseBodyFrontHint": "Встаньте лицом к камере, руки немного в стороны, ноги на ширине плеч.",
+  "qaPoseBodySide": "Сбоку",
+  "qaPoseBodySideHint": "Повернитесь боком, руки вдоль тела, смотрите прямо.",
+  "qaPoseBodyBack": "Сзади",
+  "qaPoseBodyBackHint": "Встаньте спиной к камере, руки немного в стороны.",
+  "qaPhotoTap": "Нажмите, чтобы снять",
+  "qaPhotoTaken": "Снято",
+  "qaPhotoNotTaken": "Нет фото",
+  "qaPhotoRetakeHint": "Снято · нажмите, чтобы переснять",
+  "qaEstimateTitle": "Оценка",
+  "qaEstBodyFat": "% жира",
+  "qaEstMuscle": "Мышечная масса",
+  "qaEstPosture": "Осанка",
+  "qaEstFigure": "Тип фигуры",
+  "qaEstFaceSwelling": "Отёчность лица",
+  "qaExactTitle": "Знаю точные цифры",
+  "qaExactHint": "Если есть данные с умных весов или от врача — укажите их, Система будет опираться на них.",
+  "qaExactFat": "% жира",
+  "qaExactMuscle": "Мышечная масса",
+  "qaCameraWarningLabel": "Предупреждение",
+  "qaCameraUnavailable": "Камера недоступна на этом устройстве. Этап можно пропустить и вернуться к нему позже в настройках.",
+  "qaCameraUnavailableInline": "Камера недоступна — фото можно сделать позже в настройках. Остальные поля работают.",
+  "qaCameraDenied": "Нет доступа к камере. Разрешите доступ в настройках, затем вернитесь сюда.",
+  "qaCameraOpenSettings": "Открыть настройки",
+  "qaCameraRetake": "Переснять",
+  "qaCameraShutter": "Сделать снимок",
+  "qaCameraSwitch": "Сменить камеру",
+  "qaSkinIntro": "Фото лица и несколько вопросов помогут Системе подобрать уход. Фото необязательны.",
+  "qaSkinTipLight": "Дневной свет у окна, без фильтров и вспышки.",
+  "qaSkinTipClean": "Чистое лицо без макияжа и крема.",
+  "qaSkinTipHair": "Уберите волосы со лба и щёк.",
+  "qaSkinFacePhotos": "Фото лица",
+  "qaPoseFaceFront": "Анфас",
+  "qaPoseFaceFrontHint": "Смотрите прямо в камеру, лицо — внутри овала.",
+  "qaPoseFaceLeft": "Профиль слева",
+  "qaPoseFaceLeftHint": "Поверните голову вправо, чтобы в кадре была левая сторона лица.",
+  "qaPoseFaceRight": "Профиль справа",
+  "qaPoseFaceRightHint": "Поверните голову влево, чтобы в кадре была правая сторона лица.",
+  "qaSkinCloseups": "Проблемные зоны крупно",
+  "qaSkinCloseupsHint": "Можно несколько снимков",
+  "qaPoseCloseup": "Крупный план",
+  "qaPoseCloseupHint": "Поднесите камеру близко к зоне, дождитесь фокуса.",
+  "qaSkinAddCloseup": "Добавить",
+  "qaSkinOily": "Жирность к обеду",
+  "qaSkinOilyNo": "Нет",
+  "qaSkinOilyTzone": "Т-зона",
+  "qaSkinOilyAll": "Всё лицо",
+  "qaSkinTightness": "Стянутость после умывания",
+  "qaSkinTightNever": "Никогда",
+  "qaSkinTightSometimes": "Иногда",
+  "qaSkinTightOften": "Часто",
+  "qaSkinReactions": "Реакции на средства",
+  "qaSkinReactionsHint": "Что вызывало покраснение, зуд, высыпания",
+  "qaSkinRoutine": "Текущий уход",
+  "qaSkinRoutineHint": "Чем умываетесь, какие средства используете",
+  "qaEstSkinType": "Тип кожи",
+  "qaEstAcne": "Акне",
+  "qaEstBlackheads": "Чёрные точки",
+  "qaEstPostAcne": "Постакне",
+  "qaSkinDermTitle": "Рекомендация",
+  "qaSkinDermAdvice": "При выраженных воспалениях, болезненных высыпаниях или рубцах покажитесь дерматологу. Система подберёт уход, но не заменяет врача.",
+  "qaHealthIntro": "Всё необязательно. Ответы нужны, чтобы план был безопасным.",
+  "qaHealthChronic": "Хронические состояния",
+  "qaHealthChronicHint": "Например: гастрит, астма",
+  "qaHealthMedications": "Лекарства",
+  "qaHealthMedicationsHint": "Что принимаете постоянно",
+  "qaHealthAllergies": "Аллергии",
+  "qaHealthAllergiesHint": "Продукты, лекарства, средства",
+  "qaHealthIntolerances": "Непереносимости",
+  "qaHealthIntolerancesHint": "Например: лактоза, глютен",
+  "qaHealthInjuries": "Травмы и ограничения",
+  "qaHealthInjuriesHint": "Что нельзя или трудно делать на тренировках",
+  "qaHealthSleep": "Качество сна",
+  "qaHealthSleepHint": "1 — очень плохо, 5 — отлично",
+  "qaHealthStress": "Уровень стресса",
+  "qaHealthStressHint": "1 — почти нет, 5 — очень высокий",
+  "qaGoalsIntro": "Чего вы хотите добиться? Система построит квесты вокруг этих целей.",
+  "qaGoalsPick": "Цели",
+  "qaGoalsPickHint": "Можно выбрать несколько",
+  "qaGoalAcne": "Избавиться от прыщей",
+  "qaGoalBlackheads": "Убрать чёрные точки",
+  "qaGoalSwelling": "Убрать отёки",
+  "qaGoalWeightLoss": "Сбросить лишний вес",
+  "qaGoalMuscle": "Набрать мышцы",
+  "qaGoalDiscipline": "Дисциплина",
+  "qaGoalStudy": "Учёба",
+  "qaGoalMoney": "Деньги",
+  "qaGoalCustom": "Своя цель",
+  "qaGoalsOwn": "Свои цели",
+  "qaGoalsOwnHint": "Например: выучить турецкий",
+  "qaGoalsEmpty": "Выберите хотя бы одну цель",
+  "qaGoalPriority": "Приоритет",
+  "qaGoalPriorityHigh": "Высокий",
+  "qaGoalPriorityMedium": "Средний",
+  "qaGoalPriorityLow": "Низкий",
+  "qaGoalDeadline": "Срок",
+  "qaGoalDeadlineClear": "Убрать срок",
+  "qbScheduleIntro": "Система построит день вокруг учёбы, работы и сна. Укажите пары, дорогу, подъём и отбой.",
+  "qbNutritionIntro": "Эти данные нужны для норм калорий, меню и списка покупок.",
+  "qbMealsPerDay": "Приёмов пищи в день",
+  "qbPreferences": "Предпочтения",
+  "qbPreferencesHint": "Что любите, какую кухню, режим питания",
+  "qbExcluded": "Что не едите",
+  "qbExcludedHint": "Продукты, которые исключить из меню",
+  "qbFoodBudget": "Бюджет на еду",
+  "qbRubPerWeek": "₽/нед",
+  "qbCanCook": "Умеете готовить?",
+  "qbCookNo": "Нет",
+  "qbCookBasic": "Простое",
+  "qbCookGood": "Хорошо",
+  "qbStores": "Где покупаете продукты",
+  "qbStoresHint": "Можно выбрать несколько",
+  "qbStorePyaterochka": "Пятёрочка",
+  "qbStoreMagnit": "Магнит",
+  "qbStorePerekrestok": "Перекрёсток",
+  "qbStoreVkusvill": "ВкусВилл",
+  "qbStoreLenta": "Лента",
+  "qbStoreAuchan": "Ашан",
+  "qbStoreMarket": "Рынок",
+  "qbStoreDelivery": "Доставка",
+  "qbStoreOther": "Другое (через запятую)",
+  "qbWaterNow": "Сколько воды пьёте сейчас",
+  "qbWaterNowHint": "Примерно, в миллилитрах в день",
+  "qbWaterExact": "Точное значение",
+  "qbMlPerDay": "мл/день",
+  "qbTrainingIntro": "Тренировки — дома. Система подберёт программу под ваш инвентарь и время.",
+  "qbPlace": "Место",
+  "qbPlaceHome": "Дом",
+  "qbPlaceHomeNote": "Программа рассчитана на домашние тренировки",
+  "qbEquipment": "Инвентарь",
+  "qbEquipNone": "Нет инвентаря",
+  "qbEquipDumbbells": "Гантели",
+  "qbEquipPullupBar": "Турник",
+  "qbEquipBands": "Резинки",
+  "qbEquipMat": "Коврик",
+  "qbEquipKettlebell": "Гиря",
+  "qbEquipOther": "Другое",
+  "qbLevel": "Уровень подготовки",
+  "qbLevelBeginner": "Новичок",
+  "qbLevelIntermediate": "Средний",
+  "qbLevelAdvanced": "Опытный",
+  "qbMinutesPerDay": "Минут в день",
+  "qbMinutesExact": "Своё значение",
+  "qbMinutesUnit": "мин",
+  "qbTrainingDays": "Дни тренировок",
+  "qbDayMon": "Пн",
+  "qbDayTue": "Вт",
+  "qbDayWed": "Ср",
+  "qbDayThu": "Чт",
+  "qbDayFri": "Пт",
+  "qbDaySat": "Сб",
+  "qbDaySun": "Вс",
+  "qbFinanceIntro": "Всё необязательно. Доходы и счета помогут Системе следить за бюджетом и лимитами.",
+  "qbFinIncomes": "Доходы",
+  "qbFinIncomesHint": "Стипендия, зарплата, переводы — и когда приходят",
+  "qbFinAddIncome": "Добавить доход",
+  "qbFinAccounts": "Счета",
+  "qbFinAddAccount": "Добавить счёт",
+  "qbFinCurrencies": "Валюты",
+  "qbFinCurrenciesHint": "RUB — основная, отчёты в рублях",
+  "qbFinCrypto": "Криптовалюта",
+  "qbFinAddCrypto": "Добавить монету",
+  "qbFinDebts": "Долги",
+  "qbFinAddDebt": "Добавить долг",
+  "qbFinIncome": "Доход",
+  "qbFinAccount": "Счёт",
+  "qbFinCryptoItem": "Монета",
+  "qbFinDebt": "Долг",
+  "qbIncomeStipend": "Стипендия",
+  "qbIncomeSalary": "Зарплата",
+  "qbIncomeTransfer": "Переводы",
+  "qbIncomeOther": "Другое",
+  "qbFinIncomeKind": "Вид дохода",
+  "qbFinTitle": "Название",
+  "qbFinAmount": "Сумма",
+  "qbFinDayOfMonth": "Число месяца поступления",
+  "qbFinDayOfMonthShort": "{day}-го числа",
+  "@qbFinDayOfMonthShort": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "qbFinCash": "Наличные",
+  "qbFinCard": "Карта",
+  "qbFinBank": "Банк",
+  "qbFinCurrency": "Валюта",
+  "qbFinBalance": "Баланс",
+  "qbFinCryptoSymbol": "Тикер",
+  "qbFinCryptoAmount": "Количество",
+  "qbFinCryptoRateNote": "Количество — вручную, курс будет подтягиваться автоматически",
+  "qbFinIOwe": "Я должен",
+  "qbFinOweMe": "Мне должны",
+  "qbFinDebtToWhom": "Кому",
+  "qbFinDebtWho": "Кто",
+  "qbFinDueDate": "Срок",
+  "qbFinClearDate": "Убрать срок",
+  "qbFinDueShort": "до {date}",
+  "@qbFinDueShort": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "qbCharacterIntro": "Выберите спутника. Он будет напоминать, хвалить и ругать — в выбранном режиме.",
+  "qbArchetype": "Персонаж",
+  "qbArchetypeRequired": "Выберите персонажа, чтобы продолжить",
+  "qbArchAnimeGirl": "Аниме-девушка",
+  "qbArchAnimeGirlDesc": "Жизнерадостная и упрямая. Радуется каждой победе и не даёт сдаться.",
+  "qbArchAnimeGirlSpeech": "живая, с восклицаниями и подбадриваниями",
+  "qbArchAnimeGuy": "Аниме-парень",
+  "qbArchAnimeGuyDesc": "Соперник и напарник. Вызывает на спор и тянет вперёд.",
+  "qbArchAnimeGuySpeech": "дерзкая, с вызовом и азартом",
+  "qbArchStoicStrongman": "Невозмутимый силач",
+  "qbArchStoicStrongmanDesc": "Спокоен как скала. Верит в дисциплину и повторения.",
+  "qbArchStoicStrongmanSpeech": "короткие фразы, без лишних слов",
+  "qbArchGrimSwordsman": "Мрачный мечник",
+  "qbArchGrimSwordsmanDesc": "Суровый наставник. Каждый день — тренировка воли.",
+  "qbArchGrimSwordsmanSpeech": "сдержанная, с мрачной иронией",
+  "qbArchSpeechLabel": "Манера речи: {speech}",
+  "@qbArchSpeechLabel": {
+    "placeholders": {
+      "speech": {
+        "type": "String"
+      }
+    }
+  },
+  "qbVoice": "Голос",
+  "qbVoiceLater": "Голос подключится позже",
+  "qbVoiceBright": "Звонкий",
+  "qbVoiceSoft": "Мягкий",
+  "qbVoiceCalm": "Спокойный",
+  "qbVoiceEnergetic": "Энергичный",
+  "qbVoiceDeep": "Глубокий",
+  "qbVoiceLow": "Низкий",
+  "qbVoiceHoarse": "Хриплый",
+  "qbMotivation": "Режим мотивации",
+  "qbMotSoft": "Мягкий",
+  "qbMotSoftDesc": "Поддержка и мягкие напоминания, без давления.",
+  "qbMotNormal": "Обычный",
+  "qbMotNormalDesc": "Похвала за успехи, спокойные замечания за пропуски.",
+  "qbMotStrict": "Строгий",
+  "qbMotStrictDesc": "Чёткие требования и прямая критика за провалы.",
+  "qbMotHarsh": "Жёсткий",
+  "qbMotHarshDesc": "Ругает по всей строгости, но без унижений внешности и здоровья.",
+  "qbProfanity": "Допускать мат",
+  "qbProfanityHint": "Редко и только в жёстком режиме",
+  "qbPermissionsIntro": "Система запросит разрешения по одному. Любое можно выдать позже в настройках.",
+  "qbPermProgress": "Обработано {done} из {total}",
+  "@qbPermProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "qbPermAllow": "Разрешить",
+  "qbPermLater": "Позже",
+  "qbPermOpenSettings": "Открыть настройки",
+  "qbPermGranted": "Выдано",
+  "qbPermDenied": "Отказано",
+  "qbPermSkipped": "Позже",
+  "qbPermUnavailable": "Недоступно",
+  "qbPermAllDone": "Готово. Изменить разрешения можно в любой момент.",
+  "qbPermNoneAvailable": "На этом устройстве разрешения не требуются.",
+  "qbPermNotifications": "Уведомления",
+  "qbPermNotificationsWhy": "Напоминания о квестах, воде, сне и сообщения персонажа.",
+  "qbPermMotion": "Движение и фитнес",
+  "qbPermMotionWhy": "Подсчёт шагов и активности для квестов и калорий.",
+  "qbPermLocationAlways": "Геолокация «Всегда»",
+  "qbPermLocationAlwaysWhy": "Запись прогулок в фоне и подсказки маршрута. Сначала система спросит доступ «При использовании», затем «Всегда».",
+  "qbPermCamera": "Камера",
+  "qbPermCameraWhy": "Фото тела, кожи, еды и чеков для оценки прогресса.",
+  "qbPermMicrophone": "Микрофон",
+  "qbPermMicrophoneWhy": "Голосовое общение с персонажем.",
+  "qbPermMediaLibrary": "Медиатека",
+  "qbPermMediaLibraryWhy": "Показ текущего трека Apple Music на прогулке и тренировке.",
+  "qbPermAlarms": "Будильники",
+  "qbPermAlarmsWhy": "Точные будильники для подъёма и важных квестов.",
+  "qbPermAlarmsLater": "Настроим на этапе будильника.",
+  "schTitle": "Расписание",
+  "schInstitution": "Учебное заведение",
+  "schInstSchool": "Школа",
+  "schInstCollege": "Колледж",
+  "schInstUniversity": "Вуз",
+  "schInstNone": "Не учусь",
+  "schInstitutionName": "Название",
+  "schInstitutionNameHint": "Например: МГУ, школа № 5",
+  "schWake": "Подъём",
+  "schBed": "Отбой",
+  "schCommute": "Дорога до учёбы",
+  "schCommuteHint": "В одну сторону, в минутах",
+  "schMinutesUnit": "мин",
+  "schWeekends": "Выходные дни",
+  "schAlternation": "Чередование недель (неделя 1/2)",
+  "schAlternationHint": "Разные пары по чётным и нечётным неделям",
+  "schCurrentWeek": "Сейчас: неделя {week}",
+  "@schCurrentWeek": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
+  },
+  "schSwitchWeek": "Переключить неделю",
+  "schWeekN": "Неделя {week}",
+  "@schWeekN": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
+  },
+  "schItemsTitle": "Пункты расписания",
+  "schDayEmpty": "Нет пунктов",
+  "schAddItem": "Добавить пункт",
+  "schAddItemTo": "Добавить пункт: {day}",
+  "@schAddItemTo": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schCopyDay": "Копировать день",
+  "schCopyDayFrom": "Копировать день: {day}",
+  "@schCopyDayFrom": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schCopyDayTo": "На какой день скопировать?",
+  "schCopied": "{count, plural, one{Скопирован {count} пункт} few{Скопировано {count} пункта} many{Скопировано {count} пунктов} other{Скопировано {count} пункта}}",
+  "@schCopied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "schItemNew": "Новый пункт",
+  "schItemEdit": "Пункт расписания",
+  "schItemTitle": "Название",
+  "schItemTitleHint": "Например: Матанализ",
+  "schKind": "Тип",
+  "schKindLesson": "Пара / урок",
+  "schKindWork": "Работа",
+  "schKindOther": "Другое",
+  "schDay": "День недели",
+  "schStart": "Начало",
+  "schDuration": "Длительность, мин",
+  "schEndsAt": "Окончание: {time}",
+  "@schEndsAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "schParity": "Неделя",
+  "schParityEvery": "Каждую",
+  "schLocation": "Место",
+  "schLocationHint": "Аудитория, адрес",
+  "schRequiresCommute": "Нужна дорога",
+  "schRequiresCommuteHint": "Учитывать во времени выхода из дома",
+  "schDeleteConfirm": "Удалить пункт?",
+  "schWd1": "Пн",
+  "schWd2": "Вт",
+  "schWd3": "Ср",
+  "schWd4": "Чт",
+  "schWd5": "Пт",
+  "schWd6": "Сб",
+  "schWd7": "Вс",
+  "schWdFull1": "Понедельник",
+  "schWdFull2": "Вторник",
+  "schWdFull3": "Среда",
+  "schWdFull4": "Четверг",
+  "schWdFull5": "Пятница",
+  "schWdFull6": "Суббота",
+  "schWdFull7": "Воскресенье",
+  "schWeekend": "Выходной",
+  "schHeader": "Неделя {week} · {day}",
+  "@schHeader": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      },
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schHeaderNoAlt": "Без чередования · {day}",
+  "@schHeaderNoAlt": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schPrevWeek": "Предыдущая неделя",
+  "schNextWeek": "Следующая неделя",
+  "schToday": "Сегодня",
+  "schDayFeed": "День",
+  "schSlotSleep": "Сон",
+  "schSlotCommute": "Дорога",
+  "schSlotFree": "Свободно",
+  "schLeaveHome": "Выход из дома в {time}",
+  "@schLeaveHome": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "schNoLeave": "В этот день выходить не нужно",
+  "schFreeTotal": "Свободно: {duration}",
+  "@schFreeTotal": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "schHoursMinutes": "{hours} ч {minutes} мин",
+  "@schHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "schMinutes": "{minutes} мин",
+  "@schMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "schTimeRange": "{start}–{end}",
+  "@schTimeRange": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "schEditSchedule": "Редактировать расписание",
+  "schBack": "Назад",
+  "schWarningLabel": "Предупреждение",
+  "setSectionQuestionnaire": "Анкета",
+  "setSectionPlan": "План",
+  "setPlan": "План",
+  "setPlanHint": "Предпросмотр и принятие плана",
+  "setSchedule": "Расписание",
+  "setScheduleHint": "Пары, работа, сон",
+  "setSectionLanguage": "Язык",
+  "setLangRu": "Русский",
+  "setLangTr": "Türkçe",
+  "setLangSystem": "Как в системе",
+  "setSectionData": "Данные",
+  "setExport": "Экспорт в JSON",
+  "setExportHint": "Все данные одним файлом — сохраните его в «Файлы» или отправьте себе",
+  "setIncludePhotos": "Включить фото",
+  "setIncludePhotosHint": "Файл станет больше",
+  "setPhotosWebNote": "В браузере фото не переносятся",
+  "setImport": "Импорт из JSON",
+  "setImportHint": "Заменит все данные на этом устройстве",
+  "setRestart": "Пройти анкету заново",
+  "setRestartHint": "Ответы сохранятся, их можно будет изменить",
+  "setRestartMessage": "Анкета начнётся с первого этапа. Введённые данные не удаляются.",
+  "setRestartConfirm": "Начать заново",
+  "setSectionAbout": "О приложении",
+  "setVersion": "Версия",
+  "setPlatform": "Платформа",
+  "setPlatformOther": "Другая",
+  "setCertExpires": "Сертификат действует до",
+  "setGoalsCount": "{count, plural, one{{count} цель} few{{count} цели} many{{count} целей} other{{count} цели}}",
+  "@setGoalsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setHeightValue": "{value} см",
+  "@setHeightValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "setWeightValue": "{value} кг",
+  "@setWeightValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "setNoticeLabel": "Уведомление",
+  "setWarningLabel": "Предупреждение",
+  "setErrorLabel": "Ошибка",
+  "setExportReady": "Файл резервной копии готов",
+  "setExportFailed": "Не удалось подготовить файл. Попробуйте ещё раз.",
+  "setShareUnavailable": "Отправка файлов недоступна на этом устройстве.",
+  "setPickUnavailable": "Выбор файла недоступен на этом устройстве.",
+  "setImportPreviewTitle": "Что будет импортировано",
+  "setImportExportedAt": "Создан: {date}",
+  "@setImportExportedAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "setImportRows": "{table}: {count}",
+  "@setImportRows": {
+    "placeholders": {
+      "table": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setImportPhotos": "Файлов фото: {count}",
+  "@setImportPhotos": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setImportNoPhotos": "Фото в файле нет",
+  "setImportWarning": "Все текущие данные на этом устройстве будут заменены.",
+  "setImportReplace": "Заменить все данные",
+  "setImportHoldHint": "Удерживайте, чтобы подтвердить",
+  "setImportDone": "Данные импортированы",
+  "setImportFailed": "Импорт не удался. Данные не изменены.",
+  "setErrNotJson": "Файл не читается как JSON.",
+  "setErrWrongFormat": "Это не резервная копия Системы.",
+  "setErrFormatVersion": "Версия формата файла не поддерживается.",
+  "setErrNewerSchema": "Файл создан более новой версией приложения. Обновите приложение и повторите.",
+  "setErrInvalid": "Файл повреждён.",
+  "setTableAppSettings": "Настройки",
+  "setTableProfiles": "Профиль",
+  "setTableBodyMeasurements": "Замеры тела",
+  "setTablePhotos": "Записи фото",
+  "setTableGoals": "Цели",
+  "setTableScheduleSettings": "Параметры расписания",
+  "setTableScheduleItems": "Пункты расписания",
+  "setTablePlans": "Планы",
+  "setTableQuestionnaireSections": "Разделы анкеты"
 }

@@ -967,6 +967,3144 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Разрешения'**
   String get onbStepPermissions;
+
+  /// No description provided for @planNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление'**
+  String get planNoticeLabel;
+
+  /// No description provided for @planTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'План составлен'**
+  String get planTitle;
+
+  /// No description provided for @planDraftNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Черновой план — Система уточнит его после подключения ИИ.'**
+  String get planDraftNote;
+
+  /// No description provided for @planAcceptedAt.
+  ///
+  /// In ru, this message translates to:
+  /// **'План принят {date}'**
+  String planAcceptedAt(String date);
+
+  /// No description provided for @planAccept.
+  ///
+  /// In ru, this message translates to:
+  /// **'Принять'**
+  String get planAccept;
+
+  /// No description provided for @planEditData.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменить данные'**
+  String get planEditData;
+
+  /// No description provided for @planRecalculate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пересчитать'**
+  String get planRecalculate;
+
+  /// No description provided for @planChooseSection.
+  ///
+  /// In ru, this message translates to:
+  /// **'Какой раздел изменить?'**
+  String get planChooseSection;
+
+  /// No description provided for @planLoadError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось составить план'**
+  String get planLoadError;
+
+  /// No description provided for @planRetry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get planRetry;
+
+  /// No description provided for @planNormsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нормы'**
+  String get planNormsTitle;
+
+  /// No description provided for @planCalories.
+  ///
+  /// In ru, this message translates to:
+  /// **'Калории'**
+  String get planCalories;
+
+  /// No description provided for @planKcal.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} ккал'**
+  String planKcal(String value);
+
+  /// No description provided for @planModeDeficit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дефицит'**
+  String get planModeDeficit;
+
+  /// No description provided for @planModeSurplus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Профицит'**
+  String get planModeSurplus;
+
+  /// No description provided for @planModeMaintenance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поддержание'**
+  String get planModeMaintenance;
+
+  /// No description provided for @planBmrTdee.
+  ///
+  /// In ru, this message translates to:
+  /// **'Базовый обмен {bmr} · расход {tdee} ккал'**
+  String planBmrTdee(String bmr, String tdee);
+
+  /// No description provided for @planProtein.
+  ///
+  /// In ru, this message translates to:
+  /// **'Белки'**
+  String get planProtein;
+
+  /// No description provided for @planFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жиры'**
+  String get planFat;
+
+  /// No description provided for @planCarbs.
+  ///
+  /// In ru, this message translates to:
+  /// **'Углеводы'**
+  String get planCarbs;
+
+  /// No description provided for @planGrams.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} г'**
+  String planGrams(String value);
+
+  /// No description provided for @planWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вода'**
+  String get planWater;
+
+  /// No description provided for @planMl.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} мл'**
+  String planMl(String value);
+
+  /// No description provided for @planWaterTrainingDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'В день тренировки — {value} мл'**
+  String planWaterTrainingDay(String value);
+
+  /// No description provided for @planSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон'**
+  String get planSleep;
+
+  /// No description provided for @planHours.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} ч'**
+  String planHours(String value);
+
+  /// No description provided for @planHoursMinutes.
+  ///
+  /// In ru, this message translates to:
+  /// **'{h} ч {m} мин'**
+  String planHoursMinutes(String h, String m);
+
+  /// No description provided for @planWakeBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём {wake} · отбой {bed}'**
+  String planWakeBed(String wake, String bed);
+
+  /// No description provided for @planRoutineTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Распорядок дня'**
+  String get planRoutineTitle;
+
+  /// No description provided for @planWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя {n}'**
+  String planWeek(String n);
+
+  /// No description provided for @planWdMon.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пн'**
+  String get planWdMon;
+
+  /// No description provided for @planWdTue.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вт'**
+  String get planWdTue;
+
+  /// No description provided for @planWdWed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ср'**
+  String get planWdWed;
+
+  /// No description provided for @planWdThu.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чт'**
+  String get planWdThu;
+
+  /// No description provided for @planWdFri.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пт'**
+  String get planWdFri;
+
+  /// No description provided for @planWdSat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сб'**
+  String get planWdSat;
+
+  /// No description provided for @planWdSun.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вс'**
+  String get planWdSun;
+
+  /// No description provided for @planRoutineWake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём'**
+  String get planRoutineWake;
+
+  /// No description provided for @planRoutineSkincareAm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уход за кожей (утро)'**
+  String get planRoutineSkincareAm;
+
+  /// No description provided for @planRoutineMeal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приём пищи {n}'**
+  String planRoutineMeal(String n);
+
+  /// No description provided for @planRoutineLeaveHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выход из дома'**
+  String get planRoutineLeaveHome;
+
+  /// No description provided for @planRoutineLesson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пара'**
+  String get planRoutineLesson;
+
+  /// No description provided for @planRoutineWork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работа'**
+  String get planRoutineWork;
+
+  /// No description provided for @planRoutineOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дело'**
+  String get planRoutineOther;
+
+  /// No description provided for @planRoutineReturnHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дома'**
+  String get planRoutineReturnHome;
+
+  /// No description provided for @planRoutineTraining.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка'**
+  String get planRoutineTraining;
+
+  /// No description provided for @planRoutineSkincarePm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уход за кожей (вечер)'**
+  String get planRoutineSkincarePm;
+
+  /// No description provided for @planRoutineBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отбой'**
+  String get planRoutineBed;
+
+  /// No description provided for @planQuestsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты'**
+  String get planQuestsTitle;
+
+  /// No description provided for @planQuestsNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполнение квестов появится в следующем обновлении.'**
+  String get planQuestsNote;
+
+  /// No description provided for @planQuestLeaveHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выйти из дома к {time}'**
+  String planQuestLeaveHome(String time);
+
+  /// No description provided for @planQuestAttendLesson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пара: {title}'**
+  String planQuestAttendLesson(String title);
+
+  /// No description provided for @planQuestAttendWork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работа: {title}'**
+  String planQuestAttendWork(String title);
+
+  /// No description provided for @planQuestWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выпить {ml} мл воды'**
+  String planQuestWater(String ml);
+
+  /// No description provided for @planQuestSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лечь спать в {time} (сон {hours} ч)'**
+  String planQuestSleep(String time, String hours);
+
+  /// No description provided for @planQuestMeals.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приёмы пищи по плану: {count}'**
+  String planQuestMeals(String count);
+
+  /// No description provided for @planQuestTraining.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка {minutes} мин'**
+  String planQuestTraining(String minutes);
+
+  /// No description provided for @planQuestSkincareMorning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утренний уход за кожей'**
+  String get planQuestSkincareMorning;
+
+  /// No description provided for @planQuestSkincareEvening.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вечерний уход за кожей'**
+  String get planQuestSkincareEvening;
+
+  /// No description provided for @planQuestWakeOnTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём в {time} без отсрочек'**
+  String planQuestWakeOnTime(String time);
+
+  /// No description provided for @planQuestStudy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Учёба {minutes} мин'**
+  String planQuestStudy(String minutes);
+
+  /// No description provided for @planQuestTrackExpenses.
+  ///
+  /// In ru, this message translates to:
+  /// **'Записать траты за день'**
+  String get planQuestTrackExpenses;
+
+  /// No description provided for @planQuestEveryDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'каждый день'**
+  String get planQuestEveryDay;
+
+  /// No description provided for @planQuestWeekOnly.
+  ///
+  /// In ru, this message translates to:
+  /// **'неделя {n}'**
+  String planQuestWeekOnly(String n);
+
+  /// No description provided for @planQuestReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'+{diamonds} ◆ · +{xp} опыта'**
+  String planQuestReward(String diamonds, String xp);
+
+  /// No description provided for @planWarningsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предупреждения'**
+  String get planWarningsTitle;
+
+  /// No description provided for @planWarnSleepShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'По расписанию сна {scheduled} — меньше нормы {target}. Рекомендуемый отбой — {bed}.'**
+  String planWarnSleepShort(String scheduled, String target, String bed);
+
+  /// No description provided for @planWarnDeficitFloor.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.'**
+  String get planWarnDeficitFloor;
+
+  /// No description provided for @planWarnActivityDefaulted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень активности не указан — взят «сидячий».'**
+  String get planWarnActivityDefaulted;
+
+  /// No description provided for @planWarnNoTrainingWindow.
+  ///
+  /// In ru, this message translates to:
+  /// **'{day}: нет свободного окна для тренировки.'**
+  String planWarnNoTrainingWindow(String day);
+
+  /// No description provided for @planWarnInjuries.
+  ///
+  /// In ru, this message translates to:
+  /// **'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.'**
+  String get planWarnInjuries;
+
+  /// No description provided for @planMissingMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для расчёта калорий и БЖУ заполните: {fields}.'**
+  String planMissingMessage(String fields);
+
+  /// No description provided for @planMissingSex.
+  ///
+  /// In ru, this message translates to:
+  /// **'пол'**
+  String get planMissingSex;
+
+  /// No description provided for @planMissingBirthDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'дата рождения'**
+  String get planMissingBirthDate;
+
+  /// No description provided for @planMissingHeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'рост'**
+  String get planMissingHeight;
+
+  /// No description provided for @planMissingWeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'вес'**
+  String get planMissingWeight;
+
+  /// No description provided for @planFillSection.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заполнить: {section}'**
+  String planFillSection(String section);
+
+  /// No description provided for @qaUnitCm.
+  ///
+  /// In ru, this message translates to:
+  /// **'см'**
+  String get qaUnitCm;
+
+  /// No description provided for @qaUnitKg.
+  ///
+  /// In ru, this message translates to:
+  /// **'кг'**
+  String get qaUnitKg;
+
+  /// No description provided for @qaRangeHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Допустимо от {min} до {max}'**
+  String qaRangeHint(int min, int max);
+
+  /// No description provided for @qaProfileIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система должна знать, как к вам обращаться и где вы находитесь.'**
+  String get qaProfileIntro;
+
+  /// No description provided for @qaProfileName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Имя'**
+  String get qaProfileName;
+
+  /// No description provided for @qaProfileNameHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как к вам обращаться'**
+  String get qaProfileNameHint;
+
+  /// No description provided for @qaProfileLanguage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Язык'**
+  String get qaProfileLanguage;
+
+  /// No description provided for @qaLangRu.
+  ///
+  /// In ru, this message translates to:
+  /// **'Русский'**
+  String get qaLangRu;
+
+  /// No description provided for @qaLangTr.
+  ///
+  /// In ru, this message translates to:
+  /// **'Türkçe'**
+  String get qaLangTr;
+
+  /// No description provided for @qaLangSystem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как в системе'**
+  String get qaLangSystem;
+
+  /// No description provided for @qaProfileSex.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пол'**
+  String get qaProfileSex;
+
+  /// No description provided for @qaSexMale.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мужской'**
+  String get qaSexMale;
+
+  /// No description provided for @qaSexFemale.
+  ///
+  /// In ru, this message translates to:
+  /// **'Женский'**
+  String get qaSexFemale;
+
+  /// No description provided for @qaProfileBirthDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дата рождения'**
+  String get qaProfileBirthDate;
+
+  /// No description provided for @qaProfileTimezone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Часовой пояс'**
+  String get qaProfileTimezone;
+
+  /// No description provided for @qaProfileTimezoneHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Определён по устройству — проверьте'**
+  String get qaProfileTimezoneHint;
+
+  /// No description provided for @qaProfileCity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Город'**
+  String get qaProfileCity;
+
+  /// No description provided for @qaProfileCityHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для погоды и магазинов рядом'**
+  String get qaProfileCityHint;
+
+  /// No description provided for @qaBodyIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Исходные параметры тела. По ним Система рассчитает нормы калорий и воды.'**
+  String get qaBodyIntro;
+
+  /// No description provided for @qaBodyHeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рост'**
+  String get qaBodyHeight;
+
+  /// No description provided for @qaBodyWeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вес'**
+  String get qaBodyWeight;
+
+  /// No description provided for @qaBodyGirths.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обхваты'**
+  String get qaBodyGirths;
+
+  /// No description provided for @qaBodyGirthsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Измерьте сантиметровой лентой утром, без одежды. Можно пропустить.'**
+  String get qaBodyGirthsHint;
+
+  /// No description provided for @qaBodyWaist.
+  ///
+  /// In ru, this message translates to:
+  /// **'Талия'**
+  String get qaBodyWaist;
+
+  /// No description provided for @qaBodyHips.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бёдра'**
+  String get qaBodyHips;
+
+  /// No description provided for @qaBodyChest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Грудь'**
+  String get qaBodyChest;
+
+  /// No description provided for @qaBodyNeck.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шея'**
+  String get qaBodyNeck;
+
+  /// No description provided for @qaBodyArm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рука (бицепс)'**
+  String get qaBodyArm;
+
+  /// No description provided for @qaBodyActivity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень активности'**
+  String get qaBodyActivity;
+
+  /// No description provided for @qaActivitySedentary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Минимальный'**
+  String get qaActivitySedentary;
+
+  /// No description provided for @qaActivitySedentaryHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Почти весь день сидя, тренировок нет'**
+  String get qaActivitySedentaryHint;
+
+  /// No description provided for @qaActivityLight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Низкий'**
+  String get qaActivityLight;
+
+  /// No description provided for @qaActivityLightHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёгкие тренировки или прогулки 1–3 раза в неделю'**
+  String get qaActivityLightHint;
+
+  /// No description provided for @qaActivityModerate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Средний'**
+  String get qaActivityModerate;
+
+  /// No description provided for @qaActivityModerateHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировки 3–5 раз в неделю'**
+  String get qaActivityModerateHint;
+
+  /// No description provided for @qaActivityActive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Высокий'**
+  String get qaActivityActive;
+
+  /// No description provided for @qaActivityActiveHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Интенсивные тренировки 6–7 раз в неделю'**
+  String get qaActivityActiveHint;
+
+  /// No description provided for @qaActivityVeryActive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Очень высокий'**
+  String get qaActivityVeryActive;
+
+  /// No description provided for @qaActivityVeryActiveHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тяжёлый физический труд или по две тренировки в день'**
+  String get qaActivityVeryActiveHint;
+
+  /// No description provided for @qaBodyWorkload.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нагрузка на учёбе / работе'**
+  String get qaBodyWorkload;
+
+  /// No description provided for @qaBodyWorkloadHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как вы проводите основную часть дня'**
+  String get qaBodyWorkloadHint;
+
+  /// No description provided for @qaWorkloadSitting.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сидячая'**
+  String get qaWorkloadSitting;
+
+  /// No description provided for @qaWorkloadMixed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Смешанная'**
+  String get qaWorkloadMixed;
+
+  /// No description provided for @qaWorkloadStanding.
+  ///
+  /// In ru, this message translates to:
+  /// **'На ногах'**
+  String get qaWorkloadStanding;
+
+  /// No description provided for @qaWorkloadPhysical.
+  ///
+  /// In ru, this message translates to:
+  /// **'Физический труд'**
+  String get qaWorkloadPhysical;
+
+  /// No description provided for @qaBodyPhotosIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото помогут Системе оценить состав тела и осанку и отслеживать прогресс. Этап можно пропустить. Снимки хранятся на устройстве.'**
+  String get qaBodyPhotosIntro;
+
+  /// No description provided for @qaPhotoTipsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как снимать'**
+  String get qaPhotoTipsTitle;
+
+  /// No description provided for @qaBodyTipLight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ровный свет спереди, без яркого окна за спиной.'**
+  String get qaBodyTipLight;
+
+  /// No description provided for @qaBodyTipClothes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Облегающая одежда или бельё, волосы убраны.'**
+  String get qaBodyTipClothes;
+
+  /// No description provided for @qaBodyTipPose.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стойте прямо, руки чуть в стороны, смотрите вперёд. Тело — внутри контура.'**
+  String get qaBodyTipPose;
+
+  /// No description provided for @qaBodyTipCamera.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера на уровне пояса, в 2–3 метрах. Удобнее со штативом или с помощником.'**
+  String get qaBodyTipCamera;
+
+  /// No description provided for @qaPoseBodyFront.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спереди'**
+  String get qaPoseBodyFront;
+
+  /// No description provided for @qaPoseBodyFrontHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Встаньте лицом к камере, руки немного в стороны, ноги на ширине плеч.'**
+  String get qaPoseBodyFrontHint;
+
+  /// No description provided for @qaPoseBodySide.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сбоку'**
+  String get qaPoseBodySide;
+
+  /// No description provided for @qaPoseBodySideHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повернитесь боком, руки вдоль тела, смотрите прямо.'**
+  String get qaPoseBodySideHint;
+
+  /// No description provided for @qaPoseBodyBack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сзади'**
+  String get qaPoseBodyBack;
+
+  /// No description provided for @qaPoseBodyBackHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Встаньте спиной к камере, руки немного в стороны.'**
+  String get qaPoseBodyBackHint;
+
+  /// No description provided for @qaPhotoTap.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нажмите, чтобы снять'**
+  String get qaPhotoTap;
+
+  /// No description provided for @qaPhotoTaken.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снято'**
+  String get qaPhotoTaken;
+
+  /// No description provided for @qaPhotoNotTaken.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет фото'**
+  String get qaPhotoNotTaken;
+
+  /// No description provided for @qaPhotoRetakeHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снято · нажмите, чтобы переснять'**
+  String get qaPhotoRetakeHint;
+
+  /// No description provided for @qaEstimateTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оценка'**
+  String get qaEstimateTitle;
+
+  /// No description provided for @qaEstBodyFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'% жира'**
+  String get qaEstBodyFat;
+
+  /// No description provided for @qaEstMuscle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мышечная масса'**
+  String get qaEstMuscle;
+
+  /// No description provided for @qaEstPosture.
+  ///
+  /// In ru, this message translates to:
+  /// **'Осанка'**
+  String get qaEstPosture;
+
+  /// No description provided for @qaEstFigure.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тип фигуры'**
+  String get qaEstFigure;
+
+  /// No description provided for @qaEstFaceSwelling.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отёчность лица'**
+  String get qaEstFaceSwelling;
+
+  /// No description provided for @qaExactTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Знаю точные цифры'**
+  String get qaExactTitle;
+
+  /// No description provided for @qaExactHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Если есть данные с умных весов или от врача — укажите их, Система будет опираться на них.'**
+  String get qaExactHint;
+
+  /// No description provided for @qaExactFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'% жира'**
+  String get qaExactFat;
+
+  /// No description provided for @qaExactMuscle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мышечная масса'**
+  String get qaExactMuscle;
+
+  /// No description provided for @qaCameraWarningLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предупреждение'**
+  String get qaCameraWarningLabel;
+
+  /// No description provided for @qaCameraUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера недоступна на этом устройстве. Этап можно пропустить и вернуться к нему позже в настройках.'**
+  String get qaCameraUnavailable;
+
+  /// No description provided for @qaCameraUnavailableInline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера недоступна — фото можно сделать позже в настройках. Остальные поля работают.'**
+  String get qaCameraUnavailableInline;
+
+  /// No description provided for @qaCameraDenied.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет доступа к камере. Разрешите доступ в настройках, затем вернитесь сюда.'**
+  String get qaCameraDenied;
+
+  /// No description provided for @qaCameraOpenSettings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Открыть настройки'**
+  String get qaCameraOpenSettings;
+
+  /// No description provided for @qaCameraRetake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Переснять'**
+  String get qaCameraRetake;
+
+  /// No description provided for @qaCameraShutter.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сделать снимок'**
+  String get qaCameraShutter;
+
+  /// No description provided for @qaCameraSwitch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сменить камеру'**
+  String get qaCameraSwitch;
+
+  /// No description provided for @qaSkinIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото лица и несколько вопросов помогут Системе подобрать уход. Фото необязательны.'**
+  String get qaSkinIntro;
+
+  /// No description provided for @qaSkinTipLight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дневной свет у окна, без фильтров и вспышки.'**
+  String get qaSkinTipLight;
+
+  /// No description provided for @qaSkinTipClean.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чистое лицо без макияжа и крема.'**
+  String get qaSkinTipClean;
+
+  /// No description provided for @qaSkinTipHair.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уберите волосы со лба и щёк.'**
+  String get qaSkinTipHair;
+
+  /// No description provided for @qaSkinFacePhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото лица'**
+  String get qaSkinFacePhotos;
+
+  /// No description provided for @qaPoseFaceFront.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анфас'**
+  String get qaPoseFaceFront;
+
+  /// No description provided for @qaPoseFaceFrontHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Смотрите прямо в камеру, лицо — внутри овала.'**
+  String get qaPoseFaceFrontHint;
+
+  /// No description provided for @qaPoseFaceLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Профиль слева'**
+  String get qaPoseFaceLeft;
+
+  /// No description provided for @qaPoseFaceLeftHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поверните голову вправо, чтобы в кадре была левая сторона лица.'**
+  String get qaPoseFaceLeftHint;
+
+  /// No description provided for @qaPoseFaceRight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Профиль справа'**
+  String get qaPoseFaceRight;
+
+  /// No description provided for @qaPoseFaceRightHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поверните голову влево, чтобы в кадре была правая сторона лица.'**
+  String get qaPoseFaceRightHint;
+
+  /// No description provided for @qaSkinCloseups.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проблемные зоны крупно'**
+  String get qaSkinCloseups;
+
+  /// No description provided for @qaSkinCloseupsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Можно несколько снимков'**
+  String get qaSkinCloseupsHint;
+
+  /// No description provided for @qaPoseCloseup.
+  ///
+  /// In ru, this message translates to:
+  /// **'Крупный план'**
+  String get qaPoseCloseup;
+
+  /// No description provided for @qaPoseCloseupHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поднесите камеру близко к зоне, дождитесь фокуса.'**
+  String get qaPoseCloseupHint;
+
+  /// No description provided for @qaSkinAddCloseup.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить'**
+  String get qaSkinAddCloseup;
+
+  /// No description provided for @qaSkinOily.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жирность к обеду'**
+  String get qaSkinOily;
+
+  /// No description provided for @qaSkinOilyNo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет'**
+  String get qaSkinOilyNo;
+
+  /// No description provided for @qaSkinOilyTzone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Т-зона'**
+  String get qaSkinOilyTzone;
+
+  /// No description provided for @qaSkinOilyAll.
+  ///
+  /// In ru, this message translates to:
+  /// **'Всё лицо'**
+  String get qaSkinOilyAll;
+
+  /// No description provided for @qaSkinTightness.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стянутость после умывания'**
+  String get qaSkinTightness;
+
+  /// No description provided for @qaSkinTightNever.
+  ///
+  /// In ru, this message translates to:
+  /// **'Никогда'**
+  String get qaSkinTightNever;
+
+  /// No description provided for @qaSkinTightSometimes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Иногда'**
+  String get qaSkinTightSometimes;
+
+  /// No description provided for @qaSkinTightOften.
+  ///
+  /// In ru, this message translates to:
+  /// **'Часто'**
+  String get qaSkinTightOften;
+
+  /// No description provided for @qaSkinReactions.
+  ///
+  /// In ru, this message translates to:
+  /// **'Реакции на средства'**
+  String get qaSkinReactions;
+
+  /// No description provided for @qaSkinReactionsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что вызывало покраснение, зуд, высыпания'**
+  String get qaSkinReactionsHint;
+
+  /// No description provided for @qaSkinRoutine.
+  ///
+  /// In ru, this message translates to:
+  /// **'Текущий уход'**
+  String get qaSkinRoutine;
+
+  /// No description provided for @qaSkinRoutineHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чем умываетесь, какие средства используете'**
+  String get qaSkinRoutineHint;
+
+  /// No description provided for @qaEstSkinType.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тип кожи'**
+  String get qaEstSkinType;
+
+  /// No description provided for @qaEstAcne.
+  ///
+  /// In ru, this message translates to:
+  /// **'Акне'**
+  String get qaEstAcne;
+
+  /// No description provided for @qaEstBlackheads.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чёрные точки'**
+  String get qaEstBlackheads;
+
+  /// No description provided for @qaEstPostAcne.
+  ///
+  /// In ru, this message translates to:
+  /// **'Постакне'**
+  String get qaEstPostAcne;
+
+  /// No description provided for @qaSkinDermTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рекомендация'**
+  String get qaSkinDermTitle;
+
+  /// No description provided for @qaSkinDermAdvice.
+  ///
+  /// In ru, this message translates to:
+  /// **'При выраженных воспалениях, болезненных высыпаниях или рубцах покажитесь дерматологу. Система подберёт уход, но не заменяет врача.'**
+  String get qaSkinDermAdvice;
+
+  /// No description provided for @qaHealthIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Всё необязательно. Ответы нужны, чтобы план был безопасным.'**
+  String get qaHealthIntro;
+
+  /// No description provided for @qaHealthChronic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хронические состояния'**
+  String get qaHealthChronic;
+
+  /// No description provided for @qaHealthChronicHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: гастрит, астма'**
+  String get qaHealthChronicHint;
+
+  /// No description provided for @qaHealthMedications.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лекарства'**
+  String get qaHealthMedications;
+
+  /// No description provided for @qaHealthMedicationsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что принимаете постоянно'**
+  String get qaHealthMedicationsHint;
+
+  /// No description provided for @qaHealthAllergies.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аллергии'**
+  String get qaHealthAllergies;
+
+  /// No description provided for @qaHealthAllergiesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продукты, лекарства, средства'**
+  String get qaHealthAllergiesHint;
+
+  /// No description provided for @qaHealthIntolerances.
+  ///
+  /// In ru, this message translates to:
+  /// **'Непереносимости'**
+  String get qaHealthIntolerances;
+
+  /// No description provided for @qaHealthIntolerancesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: лактоза, глютен'**
+  String get qaHealthIntolerancesHint;
+
+  /// No description provided for @qaHealthInjuries.
+  ///
+  /// In ru, this message translates to:
+  /// **'Травмы и ограничения'**
+  String get qaHealthInjuries;
+
+  /// No description provided for @qaHealthInjuriesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что нельзя или трудно делать на тренировках'**
+  String get qaHealthInjuriesHint;
+
+  /// No description provided for @qaHealthSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Качество сна'**
+  String get qaHealthSleep;
+
+  /// No description provided for @qaHealthSleepHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'1 — очень плохо, 5 — отлично'**
+  String get qaHealthSleepHint;
+
+  /// No description provided for @qaHealthStress.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень стресса'**
+  String get qaHealthStress;
+
+  /// No description provided for @qaHealthStressHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'1 — почти нет, 5 — очень высокий'**
+  String get qaHealthStressHint;
+
+  /// No description provided for @qaGoalsIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чего вы хотите добиться? Система построит квесты вокруг этих целей.'**
+  String get qaGoalsIntro;
+
+  /// No description provided for @qaGoalsPick.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цели'**
+  String get qaGoalsPick;
+
+  /// No description provided for @qaGoalsPickHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Можно выбрать несколько'**
+  String get qaGoalsPickHint;
+
+  /// No description provided for @qaGoalAcne.
+  ///
+  /// In ru, this message translates to:
+  /// **'Избавиться от прыщей'**
+  String get qaGoalAcne;
+
+  /// No description provided for @qaGoalBlackheads.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать чёрные точки'**
+  String get qaGoalBlackheads;
+
+  /// No description provided for @qaGoalSwelling.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать отёки'**
+  String get qaGoalSwelling;
+
+  /// No description provided for @qaGoalWeightLoss.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сбросить лишний вес'**
+  String get qaGoalWeightLoss;
+
+  /// No description provided for @qaGoalMuscle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Набрать мышцы'**
+  String get qaGoalMuscle;
+
+  /// No description provided for @qaGoalDiscipline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дисциплина'**
+  String get qaGoalDiscipline;
+
+  /// No description provided for @qaGoalStudy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Учёба'**
+  String get qaGoalStudy;
+
+  /// No description provided for @qaGoalMoney.
+  ///
+  /// In ru, this message translates to:
+  /// **'Деньги'**
+  String get qaGoalMoney;
+
+  /// No description provided for @qaGoalCustom.
+  ///
+  /// In ru, this message translates to:
+  /// **'Своя цель'**
+  String get qaGoalCustom;
+
+  /// No description provided for @qaGoalsOwn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Свои цели'**
+  String get qaGoalsOwn;
+
+  /// No description provided for @qaGoalsOwnHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: выучить турецкий'**
+  String get qaGoalsOwnHint;
+
+  /// No description provided for @qaGoalsEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите хотя бы одну цель'**
+  String get qaGoalsEmpty;
+
+  /// No description provided for @qaGoalPriority.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приоритет'**
+  String get qaGoalPriority;
+
+  /// No description provided for @qaGoalPriorityHigh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Высокий'**
+  String get qaGoalPriorityHigh;
+
+  /// No description provided for @qaGoalPriorityMedium.
+  ///
+  /// In ru, this message translates to:
+  /// **'Средний'**
+  String get qaGoalPriorityMedium;
+
+  /// No description provided for @qaGoalPriorityLow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Низкий'**
+  String get qaGoalPriorityLow;
+
+  /// No description provided for @qaGoalDeadline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срок'**
+  String get qaGoalDeadline;
+
+  /// No description provided for @qaGoalDeadlineClear.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать срок'**
+  String get qaGoalDeadlineClear;
+
+  /// No description provided for @qbScheduleIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система построит день вокруг учёбы, работы и сна. Укажите пары, дорогу, подъём и отбой.'**
+  String get qbScheduleIntro;
+
+  /// No description provided for @qbNutritionIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Эти данные нужны для норм калорий, меню и списка покупок.'**
+  String get qbNutritionIntro;
+
+  /// No description provided for @qbMealsPerDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приёмов пищи в день'**
+  String get qbMealsPerDay;
+
+  /// No description provided for @qbPreferences.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предпочтения'**
+  String get qbPreferences;
+
+  /// No description provided for @qbPreferencesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что любите, какую кухню, режим питания'**
+  String get qbPreferencesHint;
+
+  /// No description provided for @qbExcluded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что не едите'**
+  String get qbExcluded;
+
+  /// No description provided for @qbExcludedHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продукты, которые исключить из меню'**
+  String get qbExcludedHint;
+
+  /// No description provided for @qbFoodBudget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бюджет на еду'**
+  String get qbFoodBudget;
+
+  /// No description provided for @qbRubPerWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'₽/нед'**
+  String get qbRubPerWeek;
+
+  /// No description provided for @qbCanCook.
+  ///
+  /// In ru, this message translates to:
+  /// **'Умеете готовить?'**
+  String get qbCanCook;
+
+  /// No description provided for @qbCookNo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет'**
+  String get qbCookNo;
+
+  /// No description provided for @qbCookBasic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Простое'**
+  String get qbCookBasic;
+
+  /// No description provided for @qbCookGood.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хорошо'**
+  String get qbCookGood;
+
+  /// No description provided for @qbStores.
+  ///
+  /// In ru, this message translates to:
+  /// **'Где покупаете продукты'**
+  String get qbStores;
+
+  /// No description provided for @qbStoresHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Можно выбрать несколько'**
+  String get qbStoresHint;
+
+  /// No description provided for @qbStorePyaterochka.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пятёрочка'**
+  String get qbStorePyaterochka;
+
+  /// No description provided for @qbStoreMagnit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магнит'**
+  String get qbStoreMagnit;
+
+  /// No description provided for @qbStorePerekrestok.
+  ///
+  /// In ru, this message translates to:
+  /// **'Перекрёсток'**
+  String get qbStorePerekrestok;
+
+  /// No description provided for @qbStoreVkusvill.
+  ///
+  /// In ru, this message translates to:
+  /// **'ВкусВилл'**
+  String get qbStoreVkusvill;
+
+  /// No description provided for @qbStoreLenta.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лента'**
+  String get qbStoreLenta;
+
+  /// No description provided for @qbStoreAuchan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ашан'**
+  String get qbStoreAuchan;
+
+  /// No description provided for @qbStoreMarket.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рынок'**
+  String get qbStoreMarket;
+
+  /// No description provided for @qbStoreDelivery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доставка'**
+  String get qbStoreDelivery;
+
+  /// No description provided for @qbStoreOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое (через запятую)'**
+  String get qbStoreOther;
+
+  /// No description provided for @qbWaterNow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сколько воды пьёте сейчас'**
+  String get qbWaterNow;
+
+  /// No description provided for @qbWaterNowHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Примерно, в миллилитрах в день'**
+  String get qbWaterNowHint;
+
+  /// No description provided for @qbWaterExact.
+  ///
+  /// In ru, this message translates to:
+  /// **'Точное значение'**
+  String get qbWaterExact;
+
+  /// No description provided for @qbMlPerDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'мл/день'**
+  String get qbMlPerDay;
+
+  /// No description provided for @qbTrainingIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировки — дома. Система подберёт программу под ваш инвентарь и время.'**
+  String get qbTrainingIntro;
+
+  /// No description provided for @qbPlace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Место'**
+  String get qbPlace;
+
+  /// No description provided for @qbPlaceHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дом'**
+  String get qbPlaceHome;
+
+  /// No description provided for @qbPlaceHomeNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Программа рассчитана на домашние тренировки'**
+  String get qbPlaceHomeNote;
+
+  /// No description provided for @qbEquipment.
+  ///
+  /// In ru, this message translates to:
+  /// **'Инвентарь'**
+  String get qbEquipment;
+
+  /// No description provided for @qbEquipNone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет инвентаря'**
+  String get qbEquipNone;
+
+  /// No description provided for @qbEquipDumbbells.
+  ///
+  /// In ru, this message translates to:
+  /// **'Гантели'**
+  String get qbEquipDumbbells;
+
+  /// No description provided for @qbEquipPullupBar.
+  ///
+  /// In ru, this message translates to:
+  /// **'Турник'**
+  String get qbEquipPullupBar;
+
+  /// No description provided for @qbEquipBands.
+  ///
+  /// In ru, this message translates to:
+  /// **'Резинки'**
+  String get qbEquipBands;
+
+  /// No description provided for @qbEquipMat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Коврик'**
+  String get qbEquipMat;
+
+  /// No description provided for @qbEquipKettlebell.
+  ///
+  /// In ru, this message translates to:
+  /// **'Гиря'**
+  String get qbEquipKettlebell;
+
+  /// No description provided for @qbEquipOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое'**
+  String get qbEquipOther;
+
+  /// No description provided for @qbLevel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень подготовки'**
+  String get qbLevel;
+
+  /// No description provided for @qbLevelBeginner.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новичок'**
+  String get qbLevelBeginner;
+
+  /// No description provided for @qbLevelIntermediate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Средний'**
+  String get qbLevelIntermediate;
+
+  /// No description provided for @qbLevelAdvanced.
+  ///
+  /// In ru, this message translates to:
+  /// **'Опытный'**
+  String get qbLevelAdvanced;
+
+  /// No description provided for @qbMinutesPerDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Минут в день'**
+  String get qbMinutesPerDay;
+
+  /// No description provided for @qbMinutesExact.
+  ///
+  /// In ru, this message translates to:
+  /// **'Своё значение'**
+  String get qbMinutesExact;
+
+  /// No description provided for @qbMinutesUnit.
+  ///
+  /// In ru, this message translates to:
+  /// **'мин'**
+  String get qbMinutesUnit;
+
+  /// No description provided for @qbTrainingDays.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дни тренировок'**
+  String get qbTrainingDays;
+
+  /// No description provided for @qbDayMon.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пн'**
+  String get qbDayMon;
+
+  /// No description provided for @qbDayTue.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вт'**
+  String get qbDayTue;
+
+  /// No description provided for @qbDayWed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ср'**
+  String get qbDayWed;
+
+  /// No description provided for @qbDayThu.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чт'**
+  String get qbDayThu;
+
+  /// No description provided for @qbDayFri.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пт'**
+  String get qbDayFri;
+
+  /// No description provided for @qbDaySat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сб'**
+  String get qbDaySat;
+
+  /// No description provided for @qbDaySun.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вс'**
+  String get qbDaySun;
+
+  /// No description provided for @qbFinanceIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Всё необязательно. Доходы и счета помогут Системе следить за бюджетом и лимитами.'**
+  String get qbFinanceIntro;
+
+  /// No description provided for @qbFinIncomes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доходы'**
+  String get qbFinIncomes;
+
+  /// No description provided for @qbFinIncomesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стипендия, зарплата, переводы — и когда приходят'**
+  String get qbFinIncomesHint;
+
+  /// No description provided for @qbFinAddIncome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить доход'**
+  String get qbFinAddIncome;
+
+  /// No description provided for @qbFinAccounts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Счета'**
+  String get qbFinAccounts;
+
+  /// No description provided for @qbFinAddAccount.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить счёт'**
+  String get qbFinAddAccount;
+
+  /// No description provided for @qbFinCurrencies.
+  ///
+  /// In ru, this message translates to:
+  /// **'Валюты'**
+  String get qbFinCurrencies;
+
+  /// No description provided for @qbFinCurrenciesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'RUB — основная, отчёты в рублях'**
+  String get qbFinCurrenciesHint;
+
+  /// No description provided for @qbFinCrypto.
+  ///
+  /// In ru, this message translates to:
+  /// **'Криптовалюта'**
+  String get qbFinCrypto;
+
+  /// No description provided for @qbFinAddCrypto.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить монету'**
+  String get qbFinAddCrypto;
+
+  /// No description provided for @qbFinDebts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Долги'**
+  String get qbFinDebts;
+
+  /// No description provided for @qbFinAddDebt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить долг'**
+  String get qbFinAddDebt;
+
+  /// No description provided for @qbFinIncome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доход'**
+  String get qbFinIncome;
+
+  /// No description provided for @qbFinAccount.
+  ///
+  /// In ru, this message translates to:
+  /// **'Счёт'**
+  String get qbFinAccount;
+
+  /// No description provided for @qbFinCryptoItem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Монета'**
+  String get qbFinCryptoItem;
+
+  /// No description provided for @qbFinDebt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Долг'**
+  String get qbFinDebt;
+
+  /// No description provided for @qbIncomeStipend.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стипендия'**
+  String get qbIncomeStipend;
+
+  /// No description provided for @qbIncomeSalary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Зарплата'**
+  String get qbIncomeSalary;
+
+  /// No description provided for @qbIncomeTransfer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Переводы'**
+  String get qbIncomeTransfer;
+
+  /// No description provided for @qbIncomeOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое'**
+  String get qbIncomeOther;
+
+  /// No description provided for @qbFinIncomeKind.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вид дохода'**
+  String get qbFinIncomeKind;
+
+  /// No description provided for @qbFinTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get qbFinTitle;
+
+  /// No description provided for @qbFinAmount.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сумма'**
+  String get qbFinAmount;
+
+  /// No description provided for @qbFinDayOfMonth.
+  ///
+  /// In ru, this message translates to:
+  /// **'Число месяца поступления'**
+  String get qbFinDayOfMonth;
+
+  /// No description provided for @qbFinDayOfMonthShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'{day}-го числа'**
+  String qbFinDayOfMonthShort(int day);
+
+  /// No description provided for @qbFinCash.
+  ///
+  /// In ru, this message translates to:
+  /// **'Наличные'**
+  String get qbFinCash;
+
+  /// No description provided for @qbFinCard.
+  ///
+  /// In ru, this message translates to:
+  /// **'Карта'**
+  String get qbFinCard;
+
+  /// No description provided for @qbFinBank.
+  ///
+  /// In ru, this message translates to:
+  /// **'Банк'**
+  String get qbFinBank;
+
+  /// No description provided for @qbFinCurrency.
+  ///
+  /// In ru, this message translates to:
+  /// **'Валюта'**
+  String get qbFinCurrency;
+
+  /// No description provided for @qbFinBalance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Баланс'**
+  String get qbFinBalance;
+
+  /// No description provided for @qbFinCryptoSymbol.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тикер'**
+  String get qbFinCryptoSymbol;
+
+  /// No description provided for @qbFinCryptoAmount.
+  ///
+  /// In ru, this message translates to:
+  /// **'Количество'**
+  String get qbFinCryptoAmount;
+
+  /// No description provided for @qbFinCryptoRateNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Количество — вручную, курс будет подтягиваться автоматически'**
+  String get qbFinCryptoRateNote;
+
+  /// No description provided for @qbFinIOwe.
+  ///
+  /// In ru, this message translates to:
+  /// **'Я должен'**
+  String get qbFinIOwe;
+
+  /// No description provided for @qbFinOweMe.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мне должны'**
+  String get qbFinOweMe;
+
+  /// No description provided for @qbFinDebtToWhom.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кому'**
+  String get qbFinDebtToWhom;
+
+  /// No description provided for @qbFinDebtWho.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кто'**
+  String get qbFinDebtWho;
+
+  /// No description provided for @qbFinDueDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срок'**
+  String get qbFinDueDate;
+
+  /// No description provided for @qbFinClearDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать срок'**
+  String get qbFinClearDate;
+
+  /// No description provided for @qbFinDueShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'до {date}'**
+  String qbFinDueShort(String date);
+
+  /// No description provided for @qbCharacterIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите спутника. Он будет напоминать, хвалить и ругать — в выбранном режиме.'**
+  String get qbCharacterIntro;
+
+  /// No description provided for @qbArchetype.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персонаж'**
+  String get qbArchetype;
+
+  /// No description provided for @qbArchetypeRequired.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите персонажа, чтобы продолжить'**
+  String get qbArchetypeRequired;
+
+  /// No description provided for @qbArchAnimeGirl.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аниме-девушка'**
+  String get qbArchAnimeGirl;
+
+  /// No description provided for @qbArchAnimeGirlDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жизнерадостная и упрямая. Радуется каждой победе и не даёт сдаться.'**
+  String get qbArchAnimeGirlDesc;
+
+  /// No description provided for @qbArchAnimeGirlSpeech.
+  ///
+  /// In ru, this message translates to:
+  /// **'живая, с восклицаниями и подбадриваниями'**
+  String get qbArchAnimeGirlSpeech;
+
+  /// No description provided for @qbArchAnimeGuy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аниме-парень'**
+  String get qbArchAnimeGuy;
+
+  /// No description provided for @qbArchAnimeGuyDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Соперник и напарник. Вызывает на спор и тянет вперёд.'**
+  String get qbArchAnimeGuyDesc;
+
+  /// No description provided for @qbArchAnimeGuySpeech.
+  ///
+  /// In ru, this message translates to:
+  /// **'дерзкая, с вызовом и азартом'**
+  String get qbArchAnimeGuySpeech;
+
+  /// No description provided for @qbArchStoicStrongman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Невозмутимый силач'**
+  String get qbArchStoicStrongman;
+
+  /// No description provided for @qbArchStoicStrongmanDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спокоен как скала. Верит в дисциплину и повторения.'**
+  String get qbArchStoicStrongmanDesc;
+
+  /// No description provided for @qbArchStoicStrongmanSpeech.
+  ///
+  /// In ru, this message translates to:
+  /// **'короткие фразы, без лишних слов'**
+  String get qbArchStoicStrongmanSpeech;
+
+  /// No description provided for @qbArchGrimSwordsman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мрачный мечник'**
+  String get qbArchGrimSwordsman;
+
+  /// No description provided for @qbArchGrimSwordsmanDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Суровый наставник. Каждый день — тренировка воли.'**
+  String get qbArchGrimSwordsmanDesc;
+
+  /// No description provided for @qbArchGrimSwordsmanSpeech.
+  ///
+  /// In ru, this message translates to:
+  /// **'сдержанная, с мрачной иронией'**
+  String get qbArchGrimSwordsmanSpeech;
+
+  /// No description provided for @qbArchSpeechLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Манера речи: {speech}'**
+  String qbArchSpeechLabel(String speech);
+
+  /// No description provided for @qbVoice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос'**
+  String get qbVoice;
+
+  /// No description provided for @qbVoiceLater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос подключится позже'**
+  String get qbVoiceLater;
+
+  /// No description provided for @qbVoiceBright.
+  ///
+  /// In ru, this message translates to:
+  /// **'Звонкий'**
+  String get qbVoiceBright;
+
+  /// No description provided for @qbVoiceSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мягкий'**
+  String get qbVoiceSoft;
+
+  /// No description provided for @qbVoiceCalm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спокойный'**
+  String get qbVoiceCalm;
+
+  /// No description provided for @qbVoiceEnergetic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Энергичный'**
+  String get qbVoiceEnergetic;
+
+  /// No description provided for @qbVoiceDeep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Глубокий'**
+  String get qbVoiceDeep;
+
+  /// No description provided for @qbVoiceLow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Низкий'**
+  String get qbVoiceLow;
+
+  /// No description provided for @qbVoiceHoarse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хриплый'**
+  String get qbVoiceHoarse;
+
+  /// No description provided for @qbMotivation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим мотивации'**
+  String get qbMotivation;
+
+  /// No description provided for @qbMotSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мягкий'**
+  String get qbMotSoft;
+
+  /// No description provided for @qbMotSoftDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поддержка и мягкие напоминания, без давления.'**
+  String get qbMotSoftDesc;
+
+  /// No description provided for @qbMotNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обычный'**
+  String get qbMotNormal;
+
+  /// No description provided for @qbMotNormalDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Похвала за успехи, спокойные замечания за пропуски.'**
+  String get qbMotNormalDesc;
+
+  /// No description provided for @qbMotStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Строгий'**
+  String get qbMotStrict;
+
+  /// No description provided for @qbMotStrictDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чёткие требования и прямая критика за провалы.'**
+  String get qbMotStrictDesc;
+
+  /// No description provided for @qbMotHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жёсткий'**
+  String get qbMotHarsh;
+
+  /// No description provided for @qbMotHarshDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ругает по всей строгости, но без унижений внешности и здоровья.'**
+  String get qbMotHarshDesc;
+
+  /// No description provided for @qbProfanity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Допускать мат'**
+  String get qbProfanity;
+
+  /// No description provided for @qbProfanityHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Редко и только в жёстком режиме'**
+  String get qbProfanityHint;
+
+  /// No description provided for @qbPermissionsIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система запросит разрешения по одному. Любое можно выдать позже в настройках.'**
+  String get qbPermissionsIntro;
+
+  /// No description provided for @qbPermProgress.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обработано {done} из {total}'**
+  String qbPermProgress(int done, int total);
+
+  /// No description provided for @qbPermAllow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешить'**
+  String get qbPermAllow;
+
+  /// No description provided for @qbPermLater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Позже'**
+  String get qbPermLater;
+
+  /// No description provided for @qbPermOpenSettings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Открыть настройки'**
+  String get qbPermOpenSettings;
+
+  /// No description provided for @qbPermGranted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выдано'**
+  String get qbPermGranted;
+
+  /// No description provided for @qbPermDenied.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отказано'**
+  String get qbPermDenied;
+
+  /// No description provided for @qbPermSkipped.
+  ///
+  /// In ru, this message translates to:
+  /// **'Позже'**
+  String get qbPermSkipped;
+
+  /// No description provided for @qbPermUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Недоступно'**
+  String get qbPermUnavailable;
+
+  /// No description provided for @qbPermAllDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Готово. Изменить разрешения можно в любой момент.'**
+  String get qbPermAllDone;
+
+  /// No description provided for @qbPermNoneAvailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'На этом устройстве разрешения не требуются.'**
+  String get qbPermNoneAvailable;
+
+  /// No description provided for @qbPermNotifications.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления'**
+  String get qbPermNotifications;
+
+  /// No description provided for @qbPermNotificationsWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания о квестах, воде, сне и сообщения персонажа.'**
+  String get qbPermNotificationsWhy;
+
+  /// No description provided for @qbPermMotion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Движение и фитнес'**
+  String get qbPermMotion;
+
+  /// No description provided for @qbPermMotionWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подсчёт шагов и активности для квестов и калорий.'**
+  String get qbPermMotionWhy;
+
+  /// No description provided for @qbPermLocationAlways.
+  ///
+  /// In ru, this message translates to:
+  /// **'Геолокация «Всегда»'**
+  String get qbPermLocationAlways;
+
+  /// No description provided for @qbPermLocationAlwaysWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Запись прогулок в фоне и подсказки маршрута. Сначала система спросит доступ «При использовании», затем «Всегда».'**
+  String get qbPermLocationAlwaysWhy;
+
+  /// No description provided for @qbPermCamera.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера'**
+  String get qbPermCamera;
+
+  /// No description provided for @qbPermCameraWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото тела, кожи, еды и чеков для оценки прогресса.'**
+  String get qbPermCameraWhy;
+
+  /// No description provided for @qbPermMicrophone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Микрофон'**
+  String get qbPermMicrophone;
+
+  /// No description provided for @qbPermMicrophoneWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голосовое общение с персонажем.'**
+  String get qbPermMicrophoneWhy;
+
+  /// No description provided for @qbPermMediaLibrary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Медиатека'**
+  String get qbPermMediaLibrary;
+
+  /// No description provided for @qbPermMediaLibraryWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Показ текущего трека Apple Music на прогулке и тренировке.'**
+  String get qbPermMediaLibraryWhy;
+
+  /// No description provided for @qbPermAlarms.
+  ///
+  /// In ru, this message translates to:
+  /// **'Будильники'**
+  String get qbPermAlarms;
+
+  /// No description provided for @qbPermAlarmsWhy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Точные будильники для подъёма и важных квестов.'**
+  String get qbPermAlarmsWhy;
+
+  /// No description provided for @qbPermAlarmsLater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Настроим на этапе будильника.'**
+  String get qbPermAlarmsLater;
+
+  /// No description provided for @schTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расписание'**
+  String get schTitle;
+
+  /// No description provided for @schInstitution.
+  ///
+  /// In ru, this message translates to:
+  /// **'Учебное заведение'**
+  String get schInstitution;
+
+  /// No description provided for @schInstSchool.
+  ///
+  /// In ru, this message translates to:
+  /// **'Школа'**
+  String get schInstSchool;
+
+  /// No description provided for @schInstCollege.
+  ///
+  /// In ru, this message translates to:
+  /// **'Колледж'**
+  String get schInstCollege;
+
+  /// No description provided for @schInstUniversity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вуз'**
+  String get schInstUniversity;
+
+  /// No description provided for @schInstNone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не учусь'**
+  String get schInstNone;
+
+  /// No description provided for @schInstitutionName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get schInstitutionName;
+
+  /// No description provided for @schInstitutionNameHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: МГУ, школа № 5'**
+  String get schInstitutionNameHint;
+
+  /// No description provided for @schWake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём'**
+  String get schWake;
+
+  /// No description provided for @schBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отбой'**
+  String get schBed;
+
+  /// No description provided for @schCommute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дорога до учёбы'**
+  String get schCommute;
+
+  /// No description provided for @schCommuteHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'В одну сторону, в минутах'**
+  String get schCommuteHint;
+
+  /// No description provided for @schMinutesUnit.
+  ///
+  /// In ru, this message translates to:
+  /// **'мин'**
+  String get schMinutesUnit;
+
+  /// No description provided for @schWeekends.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выходные дни'**
+  String get schWeekends;
+
+  /// No description provided for @schAlternation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чередование недель (неделя 1/2)'**
+  String get schAlternation;
+
+  /// No description provided for @schAlternationHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разные пары по чётным и нечётным неделям'**
+  String get schAlternationHint;
+
+  /// No description provided for @schCurrentWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сейчас: неделя {week}'**
+  String schCurrentWeek(int week);
+
+  /// No description provided for @schSwitchWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Переключить неделю'**
+  String get schSwitchWeek;
+
+  /// No description provided for @schWeekN.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя {week}'**
+  String schWeekN(int week);
+
+  /// No description provided for @schItemsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пункты расписания'**
+  String get schItemsTitle;
+
+  /// No description provided for @schDayEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет пунктов'**
+  String get schDayEmpty;
+
+  /// No description provided for @schAddItem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить пункт'**
+  String get schAddItem;
+
+  /// No description provided for @schAddItemTo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить пункт: {day}'**
+  String schAddItemTo(String day);
+
+  /// No description provided for @schCopyDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Копировать день'**
+  String get schCopyDay;
+
+  /// No description provided for @schCopyDayFrom.
+  ///
+  /// In ru, this message translates to:
+  /// **'Копировать день: {day}'**
+  String schCopyDayFrom(String day);
+
+  /// No description provided for @schCopyDayTo.
+  ///
+  /// In ru, this message translates to:
+  /// **'На какой день скопировать?'**
+  String get schCopyDayTo;
+
+  /// No description provided for @schCopied.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{Скопирован {count} пункт} few{Скопировано {count} пункта} many{Скопировано {count} пунктов} other{Скопировано {count} пункта}}'**
+  String schCopied(int count);
+
+  /// No description provided for @schItemNew.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый пункт'**
+  String get schItemNew;
+
+  /// No description provided for @schItemEdit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пункт расписания'**
+  String get schItemEdit;
+
+  /// No description provided for @schItemTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get schItemTitle;
+
+  /// No description provided for @schItemTitleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: Матанализ'**
+  String get schItemTitleHint;
+
+  /// No description provided for @schKind.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тип'**
+  String get schKind;
+
+  /// No description provided for @schKindLesson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пара / урок'**
+  String get schKindLesson;
+
+  /// No description provided for @schKindWork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работа'**
+  String get schKindWork;
+
+  /// No description provided for @schKindOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое'**
+  String get schKindOther;
+
+  /// No description provided for @schDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'День недели'**
+  String get schDay;
+
+  /// No description provided for @schStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начало'**
+  String get schStart;
+
+  /// No description provided for @schDuration.
+  ///
+  /// In ru, this message translates to:
+  /// **'Длительность, мин'**
+  String get schDuration;
+
+  /// No description provided for @schEndsAt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Окончание: {time}'**
+  String schEndsAt(String time);
+
+  /// No description provided for @schParity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя'**
+  String get schParity;
+
+  /// No description provided for @schParityEvery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Каждую'**
+  String get schParityEvery;
+
+  /// No description provided for @schLocation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Место'**
+  String get schLocation;
+
+  /// No description provided for @schLocationHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аудитория, адрес'**
+  String get schLocationHint;
+
+  /// No description provided for @schRequiresCommute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нужна дорога'**
+  String get schRequiresCommute;
+
+  /// No description provided for @schRequiresCommuteHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Учитывать во времени выхода из дома'**
+  String get schRequiresCommuteHint;
+
+  /// No description provided for @schDeleteConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить пункт?'**
+  String get schDeleteConfirm;
+
+  /// No description provided for @schWd1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пн'**
+  String get schWd1;
+
+  /// No description provided for @schWd2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вт'**
+  String get schWd2;
+
+  /// No description provided for @schWd3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ср'**
+  String get schWd3;
+
+  /// No description provided for @schWd4.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чт'**
+  String get schWd4;
+
+  /// No description provided for @schWd5.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пт'**
+  String get schWd5;
+
+  /// No description provided for @schWd6.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сб'**
+  String get schWd6;
+
+  /// No description provided for @schWd7.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вс'**
+  String get schWd7;
+
+  /// No description provided for @schWdFull1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Понедельник'**
+  String get schWdFull1;
+
+  /// No description provided for @schWdFull2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вторник'**
+  String get schWdFull2;
+
+  /// No description provided for @schWdFull3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Среда'**
+  String get schWdFull3;
+
+  /// No description provided for @schWdFull4.
+  ///
+  /// In ru, this message translates to:
+  /// **'Четверг'**
+  String get schWdFull4;
+
+  /// No description provided for @schWdFull5.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пятница'**
+  String get schWdFull5;
+
+  /// No description provided for @schWdFull6.
+  ///
+  /// In ru, this message translates to:
+  /// **'Суббота'**
+  String get schWdFull6;
+
+  /// No description provided for @schWdFull7.
+  ///
+  /// In ru, this message translates to:
+  /// **'Воскресенье'**
+  String get schWdFull7;
+
+  /// No description provided for @schWeekend.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выходной'**
+  String get schWeekend;
+
+  /// No description provided for @schHeader.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя {week} · {day}'**
+  String schHeader(int week, String day);
+
+  /// No description provided for @schHeaderNoAlt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без чередования · {day}'**
+  String schHeaderNoAlt(String day);
+
+  /// No description provided for @schPrevWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предыдущая неделя'**
+  String get schPrevWeek;
+
+  /// No description provided for @schNextWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Следующая неделя'**
+  String get schNextWeek;
+
+  /// No description provided for @schToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня'**
+  String get schToday;
+
+  /// No description provided for @schDayFeed.
+  ///
+  /// In ru, this message translates to:
+  /// **'День'**
+  String get schDayFeed;
+
+  /// No description provided for @schSlotSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон'**
+  String get schSlotSleep;
+
+  /// No description provided for @schSlotCommute.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дорога'**
+  String get schSlotCommute;
+
+  /// No description provided for @schSlotFree.
+  ///
+  /// In ru, this message translates to:
+  /// **'Свободно'**
+  String get schSlotFree;
+
+  /// No description provided for @schLeaveHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выход из дома в {time}'**
+  String schLeaveHome(String time);
+
+  /// No description provided for @schNoLeave.
+  ///
+  /// In ru, this message translates to:
+  /// **'В этот день выходить не нужно'**
+  String get schNoLeave;
+
+  /// No description provided for @schFreeTotal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Свободно: {duration}'**
+  String schFreeTotal(String duration);
+
+  /// No description provided for @schHoursMinutes.
+  ///
+  /// In ru, this message translates to:
+  /// **'{hours} ч {minutes} мин'**
+  String schHoursMinutes(int hours, int minutes);
+
+  /// No description provided for @schMinutes.
+  ///
+  /// In ru, this message translates to:
+  /// **'{minutes} мин'**
+  String schMinutes(int minutes);
+
+  /// No description provided for @schTimeRange.
+  ///
+  /// In ru, this message translates to:
+  /// **'{start}–{end}'**
+  String schTimeRange(String start, String end);
+
+  /// No description provided for @schEditSchedule.
+  ///
+  /// In ru, this message translates to:
+  /// **'Редактировать расписание'**
+  String get schEditSchedule;
+
+  /// No description provided for @schBack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назад'**
+  String get schBack;
+
+  /// No description provided for @schWarningLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предупреждение'**
+  String get schWarningLabel;
+
+  /// No description provided for @setSectionQuestionnaire.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анкета'**
+  String get setSectionQuestionnaire;
+
+  /// No description provided for @setSectionPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'План'**
+  String get setSectionPlan;
+
+  /// No description provided for @setPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'План'**
+  String get setPlan;
+
+  /// No description provided for @setPlanHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предпросмотр и принятие плана'**
+  String get setPlanHint;
+
+  /// No description provided for @setSchedule.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расписание'**
+  String get setSchedule;
+
+  /// No description provided for @setScheduleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пары, работа, сон'**
+  String get setScheduleHint;
+
+  /// No description provided for @setSectionLanguage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Язык'**
+  String get setSectionLanguage;
+
+  /// No description provided for @setLangRu.
+  ///
+  /// In ru, this message translates to:
+  /// **'Русский'**
+  String get setLangRu;
+
+  /// No description provided for @setLangTr.
+  ///
+  /// In ru, this message translates to:
+  /// **'Türkçe'**
+  String get setLangTr;
+
+  /// No description provided for @setLangSystem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как в системе'**
+  String get setLangSystem;
+
+  /// No description provided for @setSectionData.
+  ///
+  /// In ru, this message translates to:
+  /// **'Данные'**
+  String get setSectionData;
+
+  /// No description provided for @setExport.
+  ///
+  /// In ru, this message translates to:
+  /// **'Экспорт в JSON'**
+  String get setExport;
+
+  /// No description provided for @setExportHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Все данные одним файлом — сохраните его в «Файлы» или отправьте себе'**
+  String get setExportHint;
+
+  /// No description provided for @setIncludePhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включить фото'**
+  String get setIncludePhotos;
+
+  /// No description provided for @setIncludePhotosHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файл станет больше'**
+  String get setIncludePhotosHint;
+
+  /// No description provided for @setPhotosWebNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'В браузере фото не переносятся'**
+  String get setPhotosWebNote;
+
+  /// No description provided for @setImport.
+  ///
+  /// In ru, this message translates to:
+  /// **'Импорт из JSON'**
+  String get setImport;
+
+  /// No description provided for @setImportHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заменит все данные на этом устройстве'**
+  String get setImportHint;
+
+  /// No description provided for @setRestart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пройти анкету заново'**
+  String get setRestart;
+
+  /// No description provided for @setRestartHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ответы сохранятся, их можно будет изменить'**
+  String get setRestartHint;
+
+  /// No description provided for @setRestartMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анкета начнётся с первого этапа. Введённые данные не удаляются.'**
+  String get setRestartMessage;
+
+  /// No description provided for @setRestartConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать заново'**
+  String get setRestartConfirm;
+
+  /// No description provided for @setSectionAbout.
+  ///
+  /// In ru, this message translates to:
+  /// **'О приложении'**
+  String get setSectionAbout;
+
+  /// No description provided for @setVersion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Версия'**
+  String get setVersion;
+
+  /// No description provided for @setPlatform.
+  ///
+  /// In ru, this message translates to:
+  /// **'Платформа'**
+  String get setPlatform;
+
+  /// No description provided for @setPlatformOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другая'**
+  String get setPlatformOther;
+
+  /// No description provided for @setCertExpires.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сертификат действует до'**
+  String get setCertExpires;
+
+  /// No description provided for @setGoalsCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{{count} цель} few{{count} цели} many{{count} целей} other{{count} цели}}'**
+  String setGoalsCount(int count);
+
+  /// No description provided for @setHeightValue.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} см'**
+  String setHeightValue(String value);
+
+  /// No description provided for @setWeightValue.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} кг'**
+  String setWeightValue(String value);
+
+  /// No description provided for @setNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление'**
+  String get setNoticeLabel;
+
+  /// No description provided for @setWarningLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предупреждение'**
+  String get setWarningLabel;
+
+  /// No description provided for @setErrorLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка'**
+  String get setErrorLabel;
+
+  /// No description provided for @setExportReady.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файл резервной копии готов'**
+  String get setExportReady;
+
+  /// No description provided for @setExportFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось подготовить файл. Попробуйте ещё раз.'**
+  String get setExportFailed;
+
+  /// No description provided for @setShareUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отправка файлов недоступна на этом устройстве.'**
+  String get setShareUnavailable;
+
+  /// No description provided for @setPickUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выбор файла недоступен на этом устройстве.'**
+  String get setPickUnavailable;
+
+  /// No description provided for @setImportPreviewTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что будет импортировано'**
+  String get setImportPreviewTitle;
+
+  /// No description provided for @setImportExportedAt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Создан: {date}'**
+  String setImportExportedAt(String date);
+
+  /// No description provided for @setImportRows.
+  ///
+  /// In ru, this message translates to:
+  /// **'{table}: {count}'**
+  String setImportRows(String table, int count);
+
+  /// No description provided for @setImportPhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файлов фото: {count}'**
+  String setImportPhotos(int count);
+
+  /// No description provided for @setImportNoPhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото в файле нет'**
+  String get setImportNoPhotos;
+
+  /// No description provided for @setImportWarning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Все текущие данные на этом устройстве будут заменены.'**
+  String get setImportWarning;
+
+  /// No description provided for @setImportReplace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заменить все данные'**
+  String get setImportReplace;
+
+  /// No description provided for @setImportHoldHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удерживайте, чтобы подтвердить'**
+  String get setImportHoldHint;
+
+  /// No description provided for @setImportDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Данные импортированы'**
+  String get setImportDone;
+
+  /// No description provided for @setImportFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Импорт не удался. Данные не изменены.'**
+  String get setImportFailed;
+
+  /// No description provided for @setErrNotJson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файл не читается как JSON.'**
+  String get setErrNotJson;
+
+  /// No description provided for @setErrWrongFormat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Это не резервная копия Системы.'**
+  String get setErrWrongFormat;
+
+  /// No description provided for @setErrFormatVersion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Версия формата файла не поддерживается.'**
+  String get setErrFormatVersion;
+
+  /// No description provided for @setErrNewerSchema.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файл создан более новой версией приложения. Обновите приложение и повторите.'**
+  String get setErrNewerSchema;
+
+  /// No description provided for @setErrInvalid.
+  ///
+  /// In ru, this message translates to:
+  /// **'Файл повреждён.'**
+  String get setErrInvalid;
+
+  /// No description provided for @setTableAppSettings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Настройки'**
+  String get setTableAppSettings;
+
+  /// No description provided for @setTableProfiles.
+  ///
+  /// In ru, this message translates to:
+  /// **'Профиль'**
+  String get setTableProfiles;
+
+  /// No description provided for @setTableBodyMeasurements.
+  ///
+  /// In ru, this message translates to:
+  /// **'Замеры тела'**
+  String get setTableBodyMeasurements;
+
+  /// No description provided for @setTablePhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Записи фото'**
+  String get setTablePhotos;
+
+  /// No description provided for @setTableGoals.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цели'**
+  String get setTableGoals;
+
+  /// No description provided for @setTableScheduleSettings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Параметры расписания'**
+  String get setTableScheduleSettings;
+
+  /// No description provided for @setTableScheduleItems.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пункты расписания'**
+  String get setTableScheduleItems;
+
+  /// No description provided for @setTablePlans.
+  ///
+  /// In ru, this message translates to:
+  /// **'Планы'**
+  String get setTablePlans;
+
+  /// No description provided for @setTableQuestionnaireSections.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разделы анкеты'**
+  String get setTableQuestionnaireSections;
 }
 
 class _AppLocalizationsDelegate

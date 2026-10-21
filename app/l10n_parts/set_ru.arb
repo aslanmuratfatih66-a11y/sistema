@@ -1,0 +1,94 @@
+{
+  "setSectionQuestionnaire": "Анкета",
+  "setSectionPlan": "План",
+  "setPlan": "План",
+  "setPlanHint": "Предпросмотр и принятие плана",
+  "setSchedule": "Расписание",
+  "setScheduleHint": "Пары, работа, сон",
+  "setSectionLanguage": "Язык",
+  "setLangRu": "Русский",
+  "setLangTr": "Türkçe",
+  "setLangSystem": "Как в системе",
+  "setSectionData": "Данные",
+  "setExport": "Экспорт в JSON",
+  "setExportHint": "Все данные одним файлом — сохраните его в «Файлы» или отправьте себе",
+  "setIncludePhotos": "Включить фото",
+  "setIncludePhotosHint": "Файл станет больше",
+  "setPhotosWebNote": "В браузере фото не переносятся",
+  "setImport": "Импорт из JSON",
+  "setImportHint": "Заменит все данные на этом устройстве",
+  "setRestart": "Пройти анкету заново",
+  "setRestartHint": "Ответы сохранятся, их можно будет изменить",
+  "setRestartMessage": "Анкета начнётся с первого этапа. Введённые данные не удаляются.",
+  "setRestartConfirm": "Начать заново",
+  "setSectionAbout": "О приложении",
+  "setVersion": "Версия",
+  "setPlatform": "Платформа",
+  "setPlatformOther": "Другая",
+  "setCertExpires": "Сертификат действует до",
+  "setGoalsCount": "{count, plural, one{{count} цель} few{{count} цели} many{{count} целей} other{{count} цели}}",
+  "@setGoalsCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "setHeightValue": "{value} см",
+  "@setHeightValue": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "setWeightValue": "{value} кг",
+  "@setWeightValue": {
+    "placeholders": {
+      "value": {"type": "String"}
+    }
+  },
+  "setNoticeLabel": "Уведомление",
+  "setWarningLabel": "Предупреждение",
+  "setErrorLabel": "Ошибка",
+  "setExportReady": "Файл резервной копии готов",
+  "setExportFailed": "Не удалось подготовить файл. Попробуйте ещё раз.",
+  "setShareUnavailable": "Отправка файлов недоступна на этом устройстве.",
+  "setPickUnavailable": "Выбор файла недоступен на этом устройстве.",
+  "setImportPreviewTitle": "Что будет импортировано",
+  "setImportExportedAt": "Создан: {date}",
+  "@setImportExportedAt": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "setImportRows": "{table}: {count}",
+  "@setImportRows": {
+    "placeholders": {
+      "table": {"type": "String"},
+      "count": {"type": "int"}
+    }
+  },
+  "setImportPhotos": "Файлов фото: {count}",
+  "@setImportPhotos": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "setImportNoPhotos": "Фото в файле нет",
+  "setImportWarning": "Все текущие данные на этом устройстве будут заменены.",
+  "setImportReplace": "Заменить все данные",
+  "setImportHoldHint": "Удерживайте, чтобы подтвердить",
+  "setImportDone": "Данные импортированы",
+  "setImportFailed": "Импорт не удался. Данные не изменены.",
+  "setErrNotJson": "Файл не читается как JSON.",
+  "setErrWrongFormat": "Это не резервная копия Системы.",
+  "setErrFormatVersion": "Версия формата файла не поддерживается.",
+  "setErrNewerSchema": "Файл создан более новой версией приложения. Обновите приложение и повторите.",
+  "setErrInvalid": "Файл повреждён.",
+  "setTableAppSettings": "Настройки",
+  "setTableProfiles": "Профиль",
+  "setTableBodyMeasurements": "Замеры тела",
+  "setTablePhotos": "Записи фото",
+  "setTableGoals": "Цели",
+  "setTableScheduleSettings": "Параметры расписания",
+  "setTableScheduleItems": "Пункты расписания",
+  "setTablePlans": "Планы",
+  "setTableQuestionnaireSections": "Разделы анкеты"
+}

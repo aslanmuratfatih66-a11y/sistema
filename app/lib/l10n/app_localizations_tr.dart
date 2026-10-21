@@ -536,4 +536,1742 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get onbStepPermissions => 'İzinler';
+
+  @override
+  String get planNoticeLabel => 'Bildirim';
+
+  @override
+  String get planTitle => 'Plan hazırlandı';
+
+  @override
+  String get planDraftNote =>
+      'Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.';
+
+  @override
+  String planAcceptedAt(String date) {
+    return 'Plan kabul edildi: $date';
+  }
+
+  @override
+  String get planAccept => 'Kabul et';
+
+  @override
+  String get planEditData => 'Verileri değiştir';
+
+  @override
+  String get planRecalculate => 'Yeniden hesapla';
+
+  @override
+  String get planChooseSection => 'Hangi bölümü değiştirmek istersiniz?';
+
+  @override
+  String get planLoadError => 'Plan hazırlanamadı';
+
+  @override
+  String get planRetry => 'Tekrar dene';
+
+  @override
+  String get planNormsTitle => 'Normlar';
+
+  @override
+  String get planCalories => 'Kalori';
+
+  @override
+  String planKcal(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String get planModeDeficit => 'Açık';
+
+  @override
+  String get planModeSurplus => 'Fazla';
+
+  @override
+  String get planModeMaintenance => 'Koruma';
+
+  @override
+  String planBmrTdee(String bmr, String tdee) {
+    return 'Bazal metabolizma $bmr · harcama $tdee kcal';
+  }
+
+  @override
+  String get planProtein => 'Protein';
+
+  @override
+  String get planFat => 'Yağ';
+
+  @override
+  String get planCarbs => 'Karbonhidrat';
+
+  @override
+  String planGrams(String value) {
+    return '$value g';
+  }
+
+  @override
+  String get planWater => 'Su';
+
+  @override
+  String planMl(String value) {
+    return '$value ml';
+  }
+
+  @override
+  String planWaterTrainingDay(String value) {
+    return 'Antrenman gününde — $value ml';
+  }
+
+  @override
+  String get planSleep => 'Uyku';
+
+  @override
+  String planHours(String value) {
+    return '$value sa';
+  }
+
+  @override
+  String planHoursMinutes(String h, String m) {
+    return '$h sa $m dk';
+  }
+
+  @override
+  String planWakeBed(String wake, String bed) {
+    return 'Kalkış $wake · yatış $bed';
+  }
+
+  @override
+  String get planRoutineTitle => 'Günlük düzen';
+
+  @override
+  String planWeek(String n) {
+    return 'Hafta $n';
+  }
+
+  @override
+  String get planWdMon => 'Pzt';
+
+  @override
+  String get planWdTue => 'Sal';
+
+  @override
+  String get planWdWed => 'Çar';
+
+  @override
+  String get planWdThu => 'Per';
+
+  @override
+  String get planWdFri => 'Cum';
+
+  @override
+  String get planWdSat => 'Cmt';
+
+  @override
+  String get planWdSun => 'Paz';
+
+  @override
+  String get planRoutineWake => 'Kalkış';
+
+  @override
+  String get planRoutineSkincareAm => 'Cilt bakımı (sabah)';
+
+  @override
+  String planRoutineMeal(String n) {
+    return 'Öğün $n';
+  }
+
+  @override
+  String get planRoutineLeaveHome => 'Evden çıkış';
+
+  @override
+  String get planRoutineLesson => 'Ders';
+
+  @override
+  String get planRoutineWork => 'İş';
+
+  @override
+  String get planRoutineOther => 'Etkinlik';
+
+  @override
+  String get planRoutineReturnHome => 'Evde';
+
+  @override
+  String get planRoutineTraining => 'Antrenman';
+
+  @override
+  String get planRoutineSkincarePm => 'Cilt bakımı (akşam)';
+
+  @override
+  String get planRoutineBed => 'Yatış';
+
+  @override
+  String get planQuestsTitle => 'Görevler';
+
+  @override
+  String get planQuestsNote =>
+      'Görevleri tamamlama bir sonraki güncellemede gelecek.';
+
+  @override
+  String planQuestLeaveHome(String time) {
+    return '$time saatine kadar evden çık';
+  }
+
+  @override
+  String planQuestAttendLesson(String title) {
+    return 'Ders: $title';
+  }
+
+  @override
+  String planQuestAttendWork(String title) {
+    return 'İş: $title';
+  }
+
+  @override
+  String planQuestWater(String ml) {
+    return '$ml ml su iç';
+  }
+
+  @override
+  String planQuestSleep(String time, String hours) {
+    return '$time saatinde yat (uyku $hours sa)';
+  }
+
+  @override
+  String planQuestMeals(String count) {
+    return 'Plana göre öğünler: $count';
+  }
+
+  @override
+  String planQuestTraining(String minutes) {
+    return '$minutes dk antrenman';
+  }
+
+  @override
+  String get planQuestSkincareMorning => 'Sabah cilt bakımı';
+
+  @override
+  String get planQuestSkincareEvening => 'Akşam cilt bakımı';
+
+  @override
+  String planQuestWakeOnTime(String time) {
+    return '$time saatinde ertelemeden kalk';
+  }
+
+  @override
+  String planQuestStudy(String minutes) {
+    return '$minutes dk ders çalış';
+  }
+
+  @override
+  String get planQuestTrackExpenses => 'Günün harcamalarını kaydet';
+
+  @override
+  String get planQuestEveryDay => 'her gün';
+
+  @override
+  String planQuestWeekOnly(String n) {
+    return 'hafta $n';
+  }
+
+  @override
+  String planQuestReward(String diamonds, String xp) {
+    return '+$diamonds ◆ · +$xp deneyim';
+  }
+
+  @override
+  String get planWarningsTitle => 'Uyarılar';
+
+  @override
+  String planWarnSleepShort(String scheduled, String target, String bed) {
+    return 'Programa göre uyku $scheduled — norm olan $target süresinden az. Önerilen yatış saati: $bed.';
+  }
+
+  @override
+  String get planWarnDeficitFloor =>
+      'Kalori açığı güvenli alt sınırla kısıtlandı — Sistem bunun altına inmez.';
+
+  @override
+  String get planWarnActivityDefaulted =>
+      'Aktivite düzeyi belirtilmedi — «hareketsiz» kabul edildi.';
+
+  @override
+  String planWarnNoTrainingWindow(String day) {
+    return '$day: antrenman için boş zaman yok.';
+  }
+
+  @override
+  String get planWarnInjuries =>
+      'Sakatlık veya kısıtlamalar belirtildi — yükü dikkatli seçin, emin değilseniz doktora danışın.';
+
+  @override
+  String planMissingMessage(String fields) {
+    return 'Kalori ve makroları hesaplamak için doldurun: $fields.';
+  }
+
+  @override
+  String get planMissingSex => 'cinsiyet';
+
+  @override
+  String get planMissingBirthDate => 'doğum tarihi';
+
+  @override
+  String get planMissingHeight => 'boy';
+
+  @override
+  String get planMissingWeight => 'kilo';
+
+  @override
+  String planFillSection(String section) {
+    return 'Doldur: $section';
+  }
+
+  @override
+  String get qaUnitCm => 'cm';
+
+  @override
+  String get qaUnitKg => 'kg';
+
+  @override
+  String qaRangeHint(int min, int max) {
+    return '$min ile $max arasında olmalı';
+  }
+
+  @override
+  String get qaProfileIntro =>
+      'Sistem size nasıl hitap edeceğini ve nerede olduğunuzu bilmeli.';
+
+  @override
+  String get qaProfileName => 'Ad';
+
+  @override
+  String get qaProfileNameHint => 'Size nasıl hitap edelim';
+
+  @override
+  String get qaProfileLanguage => 'Dil';
+
+  @override
+  String get qaLangRu => 'Русский';
+
+  @override
+  String get qaLangTr => 'Türkçe';
+
+  @override
+  String get qaLangSystem => 'Sistem dili';
+
+  @override
+  String get qaProfileSex => 'Cinsiyet';
+
+  @override
+  String get qaSexMale => 'Erkek';
+
+  @override
+  String get qaSexFemale => 'Kadın';
+
+  @override
+  String get qaProfileBirthDate => 'Doğum tarihi';
+
+  @override
+  String get qaProfileTimezone => 'Saat dilimi';
+
+  @override
+  String get qaProfileTimezoneHint => 'Cihazdan belirlendi — kontrol edin';
+
+  @override
+  String get qaProfileCity => 'Şehir';
+
+  @override
+  String get qaProfileCityHint => 'Hava durumu ve yakındaki mağazalar için';
+
+  @override
+  String get qaBodyIntro =>
+      'Vücudunuzun başlangıç ölçüleri. Sistem bunlara göre kalori ve su ihtiyacını hesaplar.';
+
+  @override
+  String get qaBodyHeight => 'Boy';
+
+  @override
+  String get qaBodyWeight => 'Kilo';
+
+  @override
+  String get qaBodyGirths => 'Çevre ölçüleri';
+
+  @override
+  String get qaBodyGirthsHint =>
+      'Sabah, kıyafetsiz, mezura ile ölçün. Atlayabilirsiniz.';
+
+  @override
+  String get qaBodyWaist => 'Bel';
+
+  @override
+  String get qaBodyHips => 'Kalça';
+
+  @override
+  String get qaBodyChest => 'Göğüs';
+
+  @override
+  String get qaBodyNeck => 'Boyun';
+
+  @override
+  String get qaBodyArm => 'Kol (pazı)';
+
+  @override
+  String get qaBodyActivity => 'Aktivite düzeyi';
+
+  @override
+  String get qaActivitySedentary => 'Çok düşük';
+
+  @override
+  String get qaActivitySedentaryHint => 'Günün çoğu oturarak, antrenman yok';
+
+  @override
+  String get qaActivityLight => 'Düşük';
+
+  @override
+  String get qaActivityLightHint =>
+      'Haftada 1–3 kez hafif antrenman veya yürüyüş';
+
+  @override
+  String get qaActivityModerate => 'Orta';
+
+  @override
+  String get qaActivityModerateHint => 'Haftada 3–5 kez antrenman';
+
+  @override
+  String get qaActivityActive => 'Yüksek';
+
+  @override
+  String get qaActivityActiveHint => 'Haftada 6–7 kez yoğun antrenman';
+
+  @override
+  String get qaActivityVeryActive => 'Çok yüksek';
+
+  @override
+  String get qaActivityVeryActiveHint =>
+      'Ağır fiziksel iş veya günde iki antrenman';
+
+  @override
+  String get qaBodyWorkload => 'Okulda / işte yük';
+
+  @override
+  String get qaBodyWorkloadHint => 'Günün büyük kısmını nasıl geçiriyorsunuz';
+
+  @override
+  String get qaWorkloadSitting => 'Oturarak';
+
+  @override
+  String get qaWorkloadMixed => 'Karışık';
+
+  @override
+  String get qaWorkloadStanding => 'Ayakta';
+
+  @override
+  String get qaWorkloadPhysical => 'Bedensel iş';
+
+  @override
+  String get qaBodyPhotosIntro =>
+      'Fotoğraflar, Sistemin vücut yapısını ve duruşu değerlendirmesine ve ilerlemeyi takip etmesine yardımcı olur. Bu aşama atlanabilir. Fotoğraflar cihazda saklanır.';
+
+  @override
+  String get qaPhotoTipsTitle => 'Nasıl çekilir';
+
+  @override
+  String get qaBodyTipLight =>
+      'Önden eşit ışık; arkanızda parlak pencere olmasın.';
+
+  @override
+  String get qaBodyTipClothes => 'Dar kıyafet veya iç çamaşırı, saçlar toplu.';
+
+  @override
+  String get qaBodyTipPose =>
+      'Dik durun, kollar hafifçe açık, ileri bakın. Vücut çerçevenin içinde olsun.';
+
+  @override
+  String get qaBodyTipCamera =>
+      'Kamera bel hizasında, 2–3 metre uzakta. Tripod veya bir yardımcıyla daha kolay.';
+
+  @override
+  String get qaPoseBodyFront => 'Önden';
+
+  @override
+  String get qaPoseBodyFrontHint =>
+      'Kameraya dönün, kollar hafifçe yanlarda, ayaklar omuz genişliğinde.';
+
+  @override
+  String get qaPoseBodySide => 'Yandan';
+
+  @override
+  String get qaPoseBodySideHint =>
+      'Yan dönün, kollar vücudun yanında, düz bakın.';
+
+  @override
+  String get qaPoseBodyBack => 'Arkadan';
+
+  @override
+  String get qaPoseBodyBackHint =>
+      'Sırtınızı kameraya dönün, kollar hafifçe yanlarda.';
+
+  @override
+  String get qaPhotoTap => 'Çekmek için dokunun';
+
+  @override
+  String get qaPhotoTaken => 'Çekildi';
+
+  @override
+  String get qaPhotoNotTaken => 'Fotoğraf yok';
+
+  @override
+  String get qaPhotoRetakeHint => 'Çekildi · yeniden çekmek için dokunun';
+
+  @override
+  String get qaEstimateTitle => 'Değerlendirme';
+
+  @override
+  String get qaEstBodyFat => 'Yağ oranı %';
+
+  @override
+  String get qaEstMuscle => 'Kas kütlesi';
+
+  @override
+  String get qaEstPosture => 'Duruş';
+
+  @override
+  String get qaEstFigure => 'Vücut tipi';
+
+  @override
+  String get qaEstFaceSwelling => 'Yüz ödemi';
+
+  @override
+  String get qaExactTitle => 'Kesin değerleri biliyorum';
+
+  @override
+  String get qaExactHint =>
+      'Akıllı tartıdan veya doktordan verileriniz varsa girin; Sistem bunları esas alır.';
+
+  @override
+  String get qaExactFat => 'Yağ oranı %';
+
+  @override
+  String get qaExactMuscle => 'Kas kütlesi';
+
+  @override
+  String get qaCameraWarningLabel => 'Uyarı';
+
+  @override
+  String get qaCameraUnavailable =>
+      'Bu cihazda kamera kullanılamıyor. Bu aşamayı atlayıp daha sonra ayarlardan dönebilirsiniz.';
+
+  @override
+  String get qaCameraUnavailableInline =>
+      'Kamera kullanılamıyor — fotoğrafları daha sonra ayarlardan çekebilirsiniz. Diğer alanlar çalışır.';
+
+  @override
+  String get qaCameraDenied =>
+      'Kamera erişimi yok. Ayarlardan izin verin, sonra buraya dönün.';
+
+  @override
+  String get qaCameraOpenSettings => 'Ayarları aç';
+
+  @override
+  String get qaCameraRetake => 'Yeniden çek';
+
+  @override
+  String get qaCameraShutter => 'Fotoğraf çek';
+
+  @override
+  String get qaCameraSwitch => 'Kamerayı değiştir';
+
+  @override
+  String get qaSkinIntro =>
+      'Yüz fotoğrafları ve birkaç soru, Sistemin bakım rutini seçmesine yardımcı olur. Fotoğraflar isteğe bağlıdır.';
+
+  @override
+  String get qaSkinTipLight => 'Pencere yanında gün ışığı; filtre ve flaş yok.';
+
+  @override
+  String get qaSkinTipClean => 'Makyajsız ve kremsiz temiz yüz.';
+
+  @override
+  String get qaSkinTipHair => 'Saçları alından ve yanaklardan çekin.';
+
+  @override
+  String get qaSkinFacePhotos => 'Yüz fotoğrafları';
+
+  @override
+  String get qaPoseFaceFront => 'Önden';
+
+  @override
+  String get qaPoseFaceFrontHint =>
+      'Doğrudan kameraya bakın, yüzünüz ovalin içinde olsun.';
+
+  @override
+  String get qaPoseFaceLeft => 'Sol profil';
+
+  @override
+  String get qaPoseFaceLeftHint =>
+      'Başınızı sağa çevirin; kadrajda yüzün sol tarafı olsun.';
+
+  @override
+  String get qaPoseFaceRight => 'Sağ profil';
+
+  @override
+  String get qaPoseFaceRightHint =>
+      'Başınızı sola çevirin; kadrajda yüzün sağ tarafı olsun.';
+
+  @override
+  String get qaSkinCloseups => 'Sorunlu bölgeler yakından';
+
+  @override
+  String get qaSkinCloseupsHint => 'Birden fazla çekebilirsiniz';
+
+  @override
+  String get qaPoseCloseup => 'Yakın çekim';
+
+  @override
+  String get qaPoseCloseupHint =>
+      'Kamerayı bölgeye yaklaştırın, odaklanmasını bekleyin.';
+
+  @override
+  String get qaSkinAddCloseup => 'Ekle';
+
+  @override
+  String get qaSkinOily => 'Öğlene kadar yağlanma';
+
+  @override
+  String get qaSkinOilyNo => 'Yok';
+
+  @override
+  String get qaSkinOilyTzone => 'T bölgesi';
+
+  @override
+  String get qaSkinOilyAll => 'Tüm yüz';
+
+  @override
+  String get qaSkinTightness => 'Yıkadıktan sonra gerginlik';
+
+  @override
+  String get qaSkinTightNever => 'Hiç';
+
+  @override
+  String get qaSkinTightSometimes => 'Bazen';
+
+  @override
+  String get qaSkinTightOften => 'Sık';
+
+  @override
+  String get qaSkinReactions => 'Ürünlere tepkiler';
+
+  @override
+  String get qaSkinReactionsHint =>
+      'Kızarıklık, kaşıntı veya sivilceye ne yol açtı';
+
+  @override
+  String get qaSkinRoutine => 'Mevcut bakım';
+
+  @override
+  String get qaSkinRoutineHint =>
+      'Yüzünüzü neyle yıkıyorsunuz, hangi ürünleri kullanıyorsunuz';
+
+  @override
+  String get qaEstSkinType => 'Cilt tipi';
+
+  @override
+  String get qaEstAcne => 'Akne';
+
+  @override
+  String get qaEstBlackheads => 'Siyah noktalar';
+
+  @override
+  String get qaEstPostAcne => 'Akne izleri';
+
+  @override
+  String get qaSkinDermTitle => 'Öneri';
+
+  @override
+  String get qaSkinDermAdvice =>
+      'Belirgin iltihaplanma, ağrılı sivilceler veya izler varsa bir dermatoloğa görünün. Sistem bakım önerir ama doktorun yerini tutmaz.';
+
+  @override
+  String get qaHealthIntro =>
+      'Hepsi isteğe bağlı. Yanıtlar planın güvenli olması için gerekli.';
+
+  @override
+  String get qaHealthChronic => 'Kronik durumlar';
+
+  @override
+  String get qaHealthChronicHint => 'Örneğin: gastrit, astım';
+
+  @override
+  String get qaHealthMedications => 'İlaçlar';
+
+  @override
+  String get qaHealthMedicationsHint => 'Düzenli kullandıklarınız';
+
+  @override
+  String get qaHealthAllergies => 'Alerjiler';
+
+  @override
+  String get qaHealthAllergiesHint => 'Besinler, ilaçlar, ürünler';
+
+  @override
+  String get qaHealthIntolerances => 'İntoleranslar';
+
+  @override
+  String get qaHealthIntolerancesHint => 'Örneğin: laktoz, gluten';
+
+  @override
+  String get qaHealthInjuries => 'Sakatlıklar ve kısıtlamalar';
+
+  @override
+  String get qaHealthInjuriesHint =>
+      'Antrenmanda yapamadığınız veya zorlandığınız şeyler';
+
+  @override
+  String get qaHealthSleep => 'Uyku kalitesi';
+
+  @override
+  String get qaHealthSleepHint => '1 — çok kötü, 5 — mükemmel';
+
+  @override
+  String get qaHealthStress => 'Stres düzeyi';
+
+  @override
+  String get qaHealthStressHint => '1 — neredeyse yok, 5 — çok yüksek';
+
+  @override
+  String get qaGoalsIntro =>
+      'Neye ulaşmak istiyorsunuz? Sistem görevleri bu hedeflerin etrafında kuracak.';
+
+  @override
+  String get qaGoalsPick => 'Hedefler';
+
+  @override
+  String get qaGoalsPickHint => 'Birden fazla seçebilirsiniz';
+
+  @override
+  String get qaGoalAcne => 'Sivilcelerden kurtulmak';
+
+  @override
+  String get qaGoalBlackheads => 'Siyah noktaları gidermek';
+
+  @override
+  String get qaGoalSwelling => 'Ödemi azaltmak';
+
+  @override
+  String get qaGoalWeightLoss => 'Fazla kilo vermek';
+
+  @override
+  String get qaGoalMuscle => 'Kas kazanmak';
+
+  @override
+  String get qaGoalDiscipline => 'Disiplin';
+
+  @override
+  String get qaGoalStudy => 'Eğitim';
+
+  @override
+  String get qaGoalMoney => 'Para';
+
+  @override
+  String get qaGoalCustom => 'Kendi hedefim';
+
+  @override
+  String get qaGoalsOwn => 'Kendi hedefleriniz';
+
+  @override
+  String get qaGoalsOwnHint => 'Örneğin: Rusça öğrenmek';
+
+  @override
+  String get qaGoalsEmpty => 'En az bir hedef seçin';
+
+  @override
+  String get qaGoalPriority => 'Öncelik';
+
+  @override
+  String get qaGoalPriorityHigh => 'Yüksek';
+
+  @override
+  String get qaGoalPriorityMedium => 'Orta';
+
+  @override
+  String get qaGoalPriorityLow => 'Düşük';
+
+  @override
+  String get qaGoalDeadline => 'Son tarih';
+
+  @override
+  String get qaGoalDeadlineClear => 'Tarihi kaldır';
+
+  @override
+  String get qbScheduleIntro =>
+      'Sistem gününü okul, iş ve uyku etrafında kuracak. Dersleri, yolu, kalkış ve yatış saatini girin.';
+
+  @override
+  String get qbNutritionIntro =>
+      'Bu bilgiler kalori hedefleri, menü ve alışveriş listesi için gerekli.';
+
+  @override
+  String get qbMealsPerDay => 'Günlük öğün sayısı';
+
+  @override
+  String get qbPreferences => 'Tercihler';
+
+  @override
+  String get qbPreferencesHint => 'Neyi sevdiğiniz, mutfak, beslenme düzeni';
+
+  @override
+  String get qbExcluded => 'Yemedikleriniz';
+
+  @override
+  String get qbExcludedHint => 'Menüden çıkarılacak ürünler';
+
+  @override
+  String get qbFoodBudget => 'Yemek bütçesi';
+
+  @override
+  String get qbRubPerWeek => '₽/hafta';
+
+  @override
+  String get qbCanCook => 'Yemek yapabiliyor musunuz?';
+
+  @override
+  String get qbCookNo => 'Hayır';
+
+  @override
+  String get qbCookBasic => 'Basit';
+
+  @override
+  String get qbCookGood => 'İyi';
+
+  @override
+  String get qbStores => 'Alışverişi nereden yapıyorsunuz';
+
+  @override
+  String get qbStoresHint => 'Birden fazla seçilebilir';
+
+  @override
+  String get qbStorePyaterochka => 'Pyaterochka';
+
+  @override
+  String get qbStoreMagnit => 'Magnit';
+
+  @override
+  String get qbStorePerekrestok => 'Perekrestok';
+
+  @override
+  String get qbStoreVkusvill => 'VkusVill';
+
+  @override
+  String get qbStoreLenta => 'Lenta';
+
+  @override
+  String get qbStoreAuchan => 'Auchan';
+
+  @override
+  String get qbStoreMarket => 'Pazar';
+
+  @override
+  String get qbStoreDelivery => 'Teslimat';
+
+  @override
+  String get qbStoreOther => 'Diğer (virgülle)';
+
+  @override
+  String get qbWaterNow => 'Şu an ne kadar su içiyorsunuz';
+
+  @override
+  String get qbWaterNowHint => 'Yaklaşık, günlük mililitre';
+
+  @override
+  String get qbWaterExact => 'Tam değer';
+
+  @override
+  String get qbMlPerDay => 'ml/gün';
+
+  @override
+  String get qbTrainingIntro =>
+      'Antrenmanlar evde. Sistem programı ekipmanınıza ve zamanınıza göre seçecek.';
+
+  @override
+  String get qbPlace => 'Yer';
+
+  @override
+  String get qbPlaceHome => 'Ev';
+
+  @override
+  String get qbPlaceHomeNote => 'Program ev antrenmanları için hazırlanır';
+
+  @override
+  String get qbEquipment => 'Ekipman';
+
+  @override
+  String get qbEquipNone => 'Ekipman yok';
+
+  @override
+  String get qbEquipDumbbells => 'Dambıl';
+
+  @override
+  String get qbEquipPullupBar => 'Barfiks demiri';
+
+  @override
+  String get qbEquipBands => 'Direnç bandı';
+
+  @override
+  String get qbEquipMat => 'Mat';
+
+  @override
+  String get qbEquipKettlebell => 'Kettlebell';
+
+  @override
+  String get qbEquipOther => 'Diğer';
+
+  @override
+  String get qbLevel => 'Hazırlık seviyesi';
+
+  @override
+  String get qbLevelBeginner => 'Başlangıç';
+
+  @override
+  String get qbLevelIntermediate => 'Orta';
+
+  @override
+  String get qbLevelAdvanced => 'İleri';
+
+  @override
+  String get qbMinutesPerDay => 'Günde dakika';
+
+  @override
+  String get qbMinutesExact => 'Kendi değeriniz';
+
+  @override
+  String get qbMinutesUnit => 'dk';
+
+  @override
+  String get qbTrainingDays => 'Antrenman günleri';
+
+  @override
+  String get qbDayMon => 'Pzt';
+
+  @override
+  String get qbDayTue => 'Sal';
+
+  @override
+  String get qbDayWed => 'Çar';
+
+  @override
+  String get qbDayThu => 'Per';
+
+  @override
+  String get qbDayFri => 'Cum';
+
+  @override
+  String get qbDaySat => 'Cmt';
+
+  @override
+  String get qbDaySun => 'Paz';
+
+  @override
+  String get qbFinanceIntro =>
+      'Hepsi isteğe bağlı. Gelirler ve hesaplar, Sistemin bütçeyi ve limitleri takip etmesine yardım eder.';
+
+  @override
+  String get qbFinIncomes => 'Gelirler';
+
+  @override
+  String get qbFinIncomesHint =>
+      'Burs, maaş, havaleler — ve ne zaman geldikleri';
+
+  @override
+  String get qbFinAddIncome => 'Gelir ekle';
+
+  @override
+  String get qbFinAccounts => 'Hesaplar';
+
+  @override
+  String get qbFinAddAccount => 'Hesap ekle';
+
+  @override
+  String get qbFinCurrencies => 'Para birimleri';
+
+  @override
+  String get qbFinCurrenciesHint => 'RUB ana para birimi, raporlar rubleyle';
+
+  @override
+  String get qbFinCrypto => 'Kripto para';
+
+  @override
+  String get qbFinAddCrypto => 'Coin ekle';
+
+  @override
+  String get qbFinDebts => 'Borçlar';
+
+  @override
+  String get qbFinAddDebt => 'Borç ekle';
+
+  @override
+  String get qbFinIncome => 'Gelir';
+
+  @override
+  String get qbFinAccount => 'Hesap';
+
+  @override
+  String get qbFinCryptoItem => 'Coin';
+
+  @override
+  String get qbFinDebt => 'Borç';
+
+  @override
+  String get qbIncomeStipend => 'Burs';
+
+  @override
+  String get qbIncomeSalary => 'Maaş';
+
+  @override
+  String get qbIncomeTransfer => 'Havaleler';
+
+  @override
+  String get qbIncomeOther => 'Diğer';
+
+  @override
+  String get qbFinIncomeKind => 'Gelir türü';
+
+  @override
+  String get qbFinTitle => 'Ad';
+
+  @override
+  String get qbFinAmount => 'Tutar';
+
+  @override
+  String get qbFinDayOfMonth => 'Ödemenin geldiği gün';
+
+  @override
+  String qbFinDayOfMonthShort(int day) {
+    return 'Ayın $day. günü';
+  }
+
+  @override
+  String get qbFinCash => 'Nakit';
+
+  @override
+  String get qbFinCard => 'Kart';
+
+  @override
+  String get qbFinBank => 'Banka';
+
+  @override
+  String get qbFinCurrency => 'Para birimi';
+
+  @override
+  String get qbFinBalance => 'Bakiye';
+
+  @override
+  String get qbFinCryptoSymbol => 'Sembol';
+
+  @override
+  String get qbFinCryptoAmount => 'Miktar';
+
+  @override
+  String get qbFinCryptoRateNote =>
+      'Miktar elle girilir, kur otomatik olarak güncellenecek';
+
+  @override
+  String get qbFinIOwe => 'Ben borçluyum';
+
+  @override
+  String get qbFinOweMe => 'Bana borçlu';
+
+  @override
+  String get qbFinDebtToWhom => 'Kime';
+
+  @override
+  String get qbFinDebtWho => 'Kim';
+
+  @override
+  String get qbFinDueDate => 'Vade';
+
+  @override
+  String get qbFinClearDate => 'Vadeyi kaldır';
+
+  @override
+  String qbFinDueShort(String date) {
+    return '$date tarihine kadar';
+  }
+
+  @override
+  String get qbCharacterIntro =>
+      'Bir yol arkadaşı seçin. Seçtiğiniz modda hatırlatacak, övecek ve azarlayacak.';
+
+  @override
+  String get qbArchetype => 'Karakter';
+
+  @override
+  String get qbArchetypeRequired => 'Devam etmek için bir karakter seçin';
+
+  @override
+  String get qbArchAnimeGirl => 'Anime kız';
+
+  @override
+  String get qbArchAnimeGirlDesc =>
+      'Neşeli ve inatçı. Her zafere sevinir, pes etmene izin vermez.';
+
+  @override
+  String get qbArchAnimeGirlSpeech => 'canlı, ünlemler ve cesaretlendirmelerle';
+
+  @override
+  String get qbArchAnimeGuy => 'Anime erkek';
+
+  @override
+  String get qbArchAnimeGuyDesc =>
+      'Hem rakip hem ortak. Meydan okur ve ileri çeker.';
+
+  @override
+  String get qbArchAnimeGuySpeech => 'cüretkâr, meydan okuyan ve hırslı';
+
+  @override
+  String get qbArchStoicStrongman => 'Soğukkanlı güçlü adam';
+
+  @override
+  String get qbArchStoicStrongmanDesc =>
+      'Kaya gibi sakin. Disipline ve tekrara inanır.';
+
+  @override
+  String get qbArchStoicStrongmanSpeech => 'kısa cümleler, gereksiz söz yok';
+
+  @override
+  String get qbArchGrimSwordsman => 'Kasvetli kılıç ustası';
+
+  @override
+  String get qbArchGrimSwordsmanDesc =>
+      'Sert bir usta. Her gün iradenin antrenmanıdır.';
+
+  @override
+  String get qbArchGrimSwordsmanSpeech => 'ölçülü, kara mizahlı';
+
+  @override
+  String qbArchSpeechLabel(String speech) {
+    return 'Konuşma tarzı: $speech';
+  }
+
+  @override
+  String get qbVoice => 'Ses';
+
+  @override
+  String get qbVoiceLater => 'Ses daha sonra bağlanacak';
+
+  @override
+  String get qbVoiceBright => 'Tiz';
+
+  @override
+  String get qbVoiceSoft => 'Yumuşak';
+
+  @override
+  String get qbVoiceCalm => 'Sakin';
+
+  @override
+  String get qbVoiceEnergetic => 'Enerjik';
+
+  @override
+  String get qbVoiceDeep => 'Derin';
+
+  @override
+  String get qbVoiceLow => 'Kalın';
+
+  @override
+  String get qbVoiceHoarse => 'Boğuk';
+
+  @override
+  String get qbMotivation => 'Motivasyon modu';
+
+  @override
+  String get qbMotSoft => 'Yumuşak';
+
+  @override
+  String get qbMotSoftDesc => 'Destek ve nazik hatırlatmalar, baskı yok.';
+
+  @override
+  String get qbMotNormal => 'Normal';
+
+  @override
+  String get qbMotNormalDesc => 'Başarıya övgü, aksamalara sakin uyarılar.';
+
+  @override
+  String get qbMotStrict => 'Katı';
+
+  @override
+  String get qbMotStrictDesc =>
+      'Net talepler ve başarısızlıklara doğrudan eleştiri.';
+
+  @override
+  String get qbMotHarsh => 'Sert';
+
+  @override
+  String get qbMotHarshDesc =>
+      'Tüm sertliğiyle azarlar, ama görünüş ve sağlıkla aşağılamadan.';
+
+  @override
+  String get qbProfanity => 'Küfüre izin ver';
+
+  @override
+  String get qbProfanityHint => 'Nadiren ve yalnızca sert modda';
+
+  @override
+  String get qbPermissionsIntro =>
+      'Sistem izinleri tek tek isteyecek. Herhangi birini daha sonra ayarlardan verebilirsiniz.';
+
+  @override
+  String qbPermProgress(int done, int total) {
+    return '$total izinden $done tanesi işlendi';
+  }
+
+  @override
+  String get qbPermAllow => 'İzin ver';
+
+  @override
+  String get qbPermLater => 'Sonra';
+
+  @override
+  String get qbPermOpenSettings => 'Ayarları aç';
+
+  @override
+  String get qbPermGranted => 'Verildi';
+
+  @override
+  String get qbPermDenied => 'Reddedildi';
+
+  @override
+  String get qbPermSkipped => 'Sonra';
+
+  @override
+  String get qbPermUnavailable => 'Kullanılamaz';
+
+  @override
+  String get qbPermAllDone =>
+      'Hazır. İzinleri istediğiniz zaman değiştirebilirsiniz.';
+
+  @override
+  String get qbPermNoneAvailable => 'Bu cihazda izin gerekmiyor.';
+
+  @override
+  String get qbPermNotifications => 'Bildirimler';
+
+  @override
+  String get qbPermNotificationsWhy =>
+      'Görev, su ve uyku hatırlatmaları ile karakter mesajları.';
+
+  @override
+  String get qbPermMotion => 'Hareket ve fitness';
+
+  @override
+  String get qbPermMotionWhy =>
+      'Görevler ve kaloriler için adım ve aktivite sayımı.';
+
+  @override
+  String get qbPermLocationAlways => 'Konum «Her zaman»';
+
+  @override
+  String get qbPermLocationAlwaysWhy =>
+      'Yürüyüşlerin arka planda kaydı ve rota ipuçları. Sistem önce «Kullanırken», sonra «Her zaman» izni isteyecek.';
+
+  @override
+  String get qbPermCamera => 'Kamera';
+
+  @override
+  String get qbPermCameraWhy =>
+      'İlerlemeyi değerlendirmek için vücut, cilt, yemek ve fiş fotoğrafları.';
+
+  @override
+  String get qbPermMicrophone => 'Mikrofon';
+
+  @override
+  String get qbPermMicrophoneWhy => 'Karakterle sesli iletişim.';
+
+  @override
+  String get qbPermMediaLibrary => 'Medya arşivi';
+
+  @override
+  String get qbPermMediaLibraryWhy =>
+      'Yürüyüş ve antrenmanda çalan Apple Music parçasını gösterme.';
+
+  @override
+  String get qbPermAlarms => 'Alarmlar';
+
+  @override
+  String get qbPermAlarmsWhy =>
+      'Kalkış ve önemli görevler için tam zamanlı alarmlar.';
+
+  @override
+  String get qbPermAlarmsLater => 'Alarm aşamasında ayarlanacak.';
+
+  @override
+  String get schTitle => 'Ders programı';
+
+  @override
+  String get schInstitution => 'Eğitim kurumu';
+
+  @override
+  String get schInstSchool => 'Okul';
+
+  @override
+  String get schInstCollege => 'Meslek okulu';
+
+  @override
+  String get schInstUniversity => 'Üniversite';
+
+  @override
+  String get schInstNone => 'Okumuyorum';
+
+  @override
+  String get schInstitutionName => 'Adı';
+
+  @override
+  String get schInstitutionNameHint => 'Örneğin: İstanbul Üniversitesi';
+
+  @override
+  String get schWake => 'Kalkış';
+
+  @override
+  String get schBed => 'Yatış';
+
+  @override
+  String get schCommute => 'Okula yol';
+
+  @override
+  String get schCommuteHint => 'Tek yön, dakika';
+
+  @override
+  String get schMinutesUnit => 'dk';
+
+  @override
+  String get schWeekends => 'Hafta sonu günleri';
+
+  @override
+  String get schAlternation => 'Haftalar dönüşümlü (1./2. hafta)';
+
+  @override
+  String get schAlternationHint => 'Tek ve çift haftalarda farklı dersler';
+
+  @override
+  String schCurrentWeek(int week) {
+    return 'Şu an: $week. hafta';
+  }
+
+  @override
+  String get schSwitchWeek => 'Haftayı değiştir';
+
+  @override
+  String schWeekN(int week) {
+    return '$week. hafta';
+  }
+
+  @override
+  String get schItemsTitle => 'Program öğeleri';
+
+  @override
+  String get schDayEmpty => 'Öğe yok';
+
+  @override
+  String get schAddItem => 'Öğe ekle';
+
+  @override
+  String schAddItemTo(String day) {
+    return 'Öğe ekle: $day';
+  }
+
+  @override
+  String get schCopyDay => 'Günü kopyala';
+
+  @override
+  String schCopyDayFrom(String day) {
+    return 'Günü kopyala: $day';
+  }
+
+  @override
+  String get schCopyDayTo => 'Hangi güne kopyalansın?';
+
+  @override
+  String schCopied(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count öğe kopyalandı',
+      one: '$count öğe kopyalandı',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get schItemNew => 'Yeni öğe';
+
+  @override
+  String get schItemEdit => 'Program öğesi';
+
+  @override
+  String get schItemTitle => 'Başlık';
+
+  @override
+  String get schItemTitleHint => 'Örneğin: Matematik';
+
+  @override
+  String get schKind => 'Tür';
+
+  @override
+  String get schKindLesson => 'Ders';
+
+  @override
+  String get schKindWork => 'İş';
+
+  @override
+  String get schKindOther => 'Diğer';
+
+  @override
+  String get schDay => 'Haftanın günü';
+
+  @override
+  String get schStart => 'Başlangıç';
+
+  @override
+  String get schDuration => 'Süre, dk';
+
+  @override
+  String schEndsAt(String time) {
+    return 'Bitiş: $time';
+  }
+
+  @override
+  String get schParity => 'Hafta';
+
+  @override
+  String get schParityEvery => 'Her hafta';
+
+  @override
+  String get schLocation => 'Yer';
+
+  @override
+  String get schLocationHint => 'Derslik, adres';
+
+  @override
+  String get schRequiresCommute => 'Yol gerekiyor';
+
+  @override
+  String get schRequiresCommuteHint => 'Evden çıkış saatinde dikkate al';
+
+  @override
+  String get schDeleteConfirm => 'Öğe silinsin mi?';
+
+  @override
+  String get schWd1 => 'Pzt';
+
+  @override
+  String get schWd2 => 'Sal';
+
+  @override
+  String get schWd3 => 'Çar';
+
+  @override
+  String get schWd4 => 'Per';
+
+  @override
+  String get schWd5 => 'Cum';
+
+  @override
+  String get schWd6 => 'Cmt';
+
+  @override
+  String get schWd7 => 'Paz';
+
+  @override
+  String get schWdFull1 => 'Pazartesi';
+
+  @override
+  String get schWdFull2 => 'Salı';
+
+  @override
+  String get schWdFull3 => 'Çarşamba';
+
+  @override
+  String get schWdFull4 => 'Perşembe';
+
+  @override
+  String get schWdFull5 => 'Cuma';
+
+  @override
+  String get schWdFull6 => 'Cumartesi';
+
+  @override
+  String get schWdFull7 => 'Pazar';
+
+  @override
+  String get schWeekend => 'Tatil';
+
+  @override
+  String schHeader(int week, String day) {
+    return '$week. hafta · $day';
+  }
+
+  @override
+  String schHeaderNoAlt(String day) {
+    return 'Dönüşüm yok · $day';
+  }
+
+  @override
+  String get schPrevWeek => 'Önceki hafta';
+
+  @override
+  String get schNextWeek => 'Sonraki hafta';
+
+  @override
+  String get schToday => 'Bugün';
+
+  @override
+  String get schDayFeed => 'Gün';
+
+  @override
+  String get schSlotSleep => 'Uyku';
+
+  @override
+  String get schSlotCommute => 'Yol';
+
+  @override
+  String get schSlotFree => 'Boş';
+
+  @override
+  String schLeaveHome(String time) {
+    return 'Evden çıkış: $time';
+  }
+
+  @override
+  String get schNoLeave => 'Bu gün dışarı çıkmak gerekmiyor';
+
+  @override
+  String schFreeTotal(String duration) {
+    return 'Boş: $duration';
+  }
+
+  @override
+  String schHoursMinutes(int hours, int minutes) {
+    return '$hours sa $minutes dk';
+  }
+
+  @override
+  String schMinutes(int minutes) {
+    return '$minutes dk';
+  }
+
+  @override
+  String schTimeRange(String start, String end) {
+    return '$start–$end';
+  }
+
+  @override
+  String get schEditSchedule => 'Programı düzenle';
+
+  @override
+  String get schBack => 'Geri';
+
+  @override
+  String get schWarningLabel => 'Uyarı';
+
+  @override
+  String get setSectionQuestionnaire => 'Anket';
+
+  @override
+  String get setSectionPlan => 'Plan';
+
+  @override
+  String get setPlan => 'Plan';
+
+  @override
+  String get setPlanHint => 'Planı önizle ve kabul et';
+
+  @override
+  String get setSchedule => 'Program';
+
+  @override
+  String get setScheduleHint => 'Dersler, iş, uyku';
+
+  @override
+  String get setSectionLanguage => 'Dil';
+
+  @override
+  String get setLangRu => 'Русский';
+
+  @override
+  String get setLangTr => 'Türkçe';
+
+  @override
+  String get setLangSystem => 'Sistem dili';
+
+  @override
+  String get setSectionData => 'Veriler';
+
+  @override
+  String get setExport => 'JSON olarak dışa aktar';
+
+  @override
+  String get setExportHint =>
+      'Tüm veriler tek dosyada — «Dosyalar»a kaydedin veya kendinize gönderin';
+
+  @override
+  String get setIncludePhotos => 'Fotoğrafları dahil et';
+
+  @override
+  String get setIncludePhotosHint => 'Dosya daha büyük olur';
+
+  @override
+  String get setPhotosWebNote => 'Tarayıcıda fotoğraflar aktarılmaz';
+
+  @override
+  String get setImport => 'JSON\'dan içe aktar';
+
+  @override
+  String get setImportHint => 'Bu cihazdaki tüm verilerin yerini alır';
+
+  @override
+  String get setRestart => 'Anketi yeniden doldur';
+
+  @override
+  String get setRestartHint => 'Yanıtlar korunur, değiştirebilirsiniz';
+
+  @override
+  String get setRestartMessage =>
+      'Anket ilk aşamadan başlayacak. Girilen veriler silinmez.';
+
+  @override
+  String get setRestartConfirm => 'Yeniden başla';
+
+  @override
+  String get setSectionAbout => 'Uygulama hakkında';
+
+  @override
+  String get setVersion => 'Sürüm';
+
+  @override
+  String get setPlatform => 'Platform';
+
+  @override
+  String get setPlatformOther => 'Diğer';
+
+  @override
+  String get setCertExpires => 'Sertifika geçerlilik sonu';
+
+  @override
+  String setGoalsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count hedef',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String setHeightValue(String value) {
+    return '$value cm';
+  }
+
+  @override
+  String setWeightValue(String value) {
+    return '$value kg';
+  }
+
+  @override
+  String get setNoticeLabel => 'Bildirim';
+
+  @override
+  String get setWarningLabel => 'Uyarı';
+
+  @override
+  String get setErrorLabel => 'Hata';
+
+  @override
+  String get setExportReady => 'Yedek dosyası hazır';
+
+  @override
+  String get setExportFailed => 'Dosya hazırlanamadı. Tekrar deneyin.';
+
+  @override
+  String get setShareUnavailable =>
+      'Bu cihazda dosya paylaşımı kullanılamıyor.';
+
+  @override
+  String get setPickUnavailable => 'Bu cihazda dosya seçimi kullanılamıyor.';
+
+  @override
+  String get setImportPreviewTitle => 'İçe aktarılacaklar';
+
+  @override
+  String setImportExportedAt(String date) {
+    return 'Oluşturulma: $date';
+  }
+
+  @override
+  String setImportRows(String table, int count) {
+    return '$table: $count';
+  }
+
+  @override
+  String setImportPhotos(int count) {
+    return 'Fotoğraf dosyası: $count';
+  }
+
+  @override
+  String get setImportNoPhotos => 'Dosyada fotoğraf yok';
+
+  @override
+  String get setImportWarning =>
+      'Bu cihazdaki tüm mevcut verilerin yerini alacak.';
+
+  @override
+  String get setImportReplace => 'Tüm verileri değiştir';
+
+  @override
+  String get setImportHoldHint => 'Onaylamak için basılı tutun';
+
+  @override
+  String get setImportDone => 'Veriler içe aktarıldı';
+
+  @override
+  String get setImportFailed => 'İçe aktarma başarısız. Veriler değişmedi.';
+
+  @override
+  String get setErrNotJson => 'Dosya JSON olarak okunamıyor.';
+
+  @override
+  String get setErrWrongFormat => 'Bu bir Sistem yedeği değil.';
+
+  @override
+  String get setErrFormatVersion => 'Dosya biçimi sürümü desteklenmiyor.';
+
+  @override
+  String get setErrNewerSchema =>
+      'Dosya uygulamanın daha yeni bir sürümüyle oluşturulmuş. Uygulamayı güncelleyip tekrar deneyin.';
+
+  @override
+  String get setErrInvalid => 'Dosya bozuk.';
+
+  @override
+  String get setTableAppSettings => 'Ayarlar';
+
+  @override
+  String get setTableProfiles => 'Profil';
+
+  @override
+  String get setTableBodyMeasurements => 'Vücut ölçümleri';
+
+  @override
+  String get setTablePhotos => 'Fotoğraf kayıtları';
+
+  @override
+  String get setTableGoals => 'Hedefler';
+
+  @override
+  String get setTableScheduleSettings => 'Program ayarları';
+
+  @override
+  String get setTableScheduleItems => 'Program öğeleri';
+
+  @override
+  String get setTablePlans => 'Planlar';
+
+  @override
+  String get setTableQuestionnaireSections => 'Anket bölümleri';
 }

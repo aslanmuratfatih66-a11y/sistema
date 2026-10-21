@@ -1,7 +1,9 @@
 // Главный экран-эталон (вкладка «Статус», SPEC §4). Нижняя навигация — в AppShell.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../app/routes.dart';
 import 'data/demo_home_data.dart';
 import 'widgets/assistant_panel.dart';
 import 'widgets/daily_quests_panel.dart';
@@ -23,7 +25,11 @@ class HomeScreen extends ConsumerWidget {
     final data = ref.watch(homeDataProvider);
 
     final blocks = <Widget>[
-      HomeHeader(unread: data.unreadNotifications, programStart: data.programStart),
+      HomeHeader(
+        unread: data.unreadNotifications,
+        programStart: data.programStart,
+        onSettings: () => context.go(Routes.more),
+      ),
       StatusPanel(player: data.player),
       EffectsPanel(effects: data.effects),
       if (data.nextQuest != null) NextQuestPanel(quest: data.nextQuest!),

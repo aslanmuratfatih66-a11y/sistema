@@ -1,0 +1,181 @@
+{
+  "schTitle": "Расписание",
+  "schInstitution": "Учебное заведение",
+  "schInstSchool": "Школа",
+  "schInstCollege": "Колледж",
+  "schInstUniversity": "Вуз",
+  "schInstNone": "Не учусь",
+  "schInstitutionName": "Название",
+  "schInstitutionNameHint": "Например: МГУ, школа № 5",
+  "schWake": "Подъём",
+  "schBed": "Отбой",
+  "schCommute": "Дорога до учёбы",
+  "schCommuteHint": "В одну сторону, в минутах",
+  "schMinutesUnit": "мин",
+  "schWeekends": "Выходные дни",
+  "schAlternation": "Чередование недель (неделя 1/2)",
+  "schAlternationHint": "Разные пары по чётным и нечётным неделям",
+  "schCurrentWeek": "Сейчас: неделя {week}",
+  "@schCurrentWeek": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
+  },
+  "schSwitchWeek": "Переключить неделю",
+  "schWeekN": "Неделя {week}",
+  "@schWeekN": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
+  },
+  "schItemsTitle": "Пункты расписания",
+  "schDayEmpty": "Нет пунктов",
+  "schAddItem": "Добавить пункт",
+  "schAddItemTo": "Добавить пункт: {day}",
+  "@schAddItemTo": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schCopyDay": "Копировать день",
+  "schCopyDayFrom": "Копировать день: {day}",
+  "@schCopyDayFrom": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schCopyDayTo": "На какой день скопировать?",
+  "schCopied": "{count, plural, one{Скопирован {count} пункт} few{Скопировано {count} пункта} many{Скопировано {count} пунктов} other{Скопировано {count} пункта}}",
+  "@schCopied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "schItemNew": "Новый пункт",
+  "schItemEdit": "Пункт расписания",
+  "schItemTitle": "Название",
+  "schItemTitleHint": "Например: Матанализ",
+  "schKind": "Тип",
+  "schKindLesson": "Пара / урок",
+  "schKindWork": "Работа",
+  "schKindOther": "Другое",
+  "schDay": "День недели",
+  "schStart": "Начало",
+  "schDuration": "Длительность, мин",
+  "schEndsAt": "Окончание: {time}",
+  "@schEndsAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "schParity": "Неделя",
+  "schParityEvery": "Каждую",
+  "schLocation": "Место",
+  "schLocationHint": "Аудитория, адрес",
+  "schRequiresCommute": "Нужна дорога",
+  "schRequiresCommuteHint": "Учитывать во времени выхода из дома",
+  "schDeleteConfirm": "Удалить пункт?",
+  "schWd1": "Пн",
+  "schWd2": "Вт",
+  "schWd3": "Ср",
+  "schWd4": "Чт",
+  "schWd5": "Пт",
+  "schWd6": "Сб",
+  "schWd7": "Вс",
+  "schWdFull1": "Понедельник",
+  "schWdFull2": "Вторник",
+  "schWdFull3": "Среда",
+  "schWdFull4": "Четверг",
+  "schWdFull5": "Пятница",
+  "schWdFull6": "Суббота",
+  "schWdFull7": "Воскресенье",
+  "schWeekend": "Выходной",
+  "schHeader": "Неделя {week} · {day}",
+  "@schHeader": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      },
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schHeaderNoAlt": "Без чередования · {day}",
+  "@schHeaderNoAlt": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "schPrevWeek": "Предыдущая неделя",
+  "schNextWeek": "Следующая неделя",
+  "schToday": "Сегодня",
+  "schDayFeed": "День",
+  "schSlotSleep": "Сон",
+  "schSlotCommute": "Дорога",
+  "schSlotFree": "Свободно",
+  "schLeaveHome": "Выход из дома в {time}",
+  "@schLeaveHome": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "schNoLeave": "В этот день выходить не нужно",
+  "schFreeTotal": "Свободно: {duration}",
+  "@schFreeTotal": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "schHoursMinutes": "{hours} ч {minutes} мин",
+  "@schHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "schMinutes": "{minutes} мин",
+  "@schMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "schTimeRange": "{start}–{end}",
+  "@schTimeRange": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "schEditSchedule": "Редактировать расписание",
+  "schBack": "Назад",
+  "schWarningLabel": "Предупреждение"
+}

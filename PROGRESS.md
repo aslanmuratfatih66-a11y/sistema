@@ -2,24 +2,24 @@
 
 ## Сейчас
 Этап: 1 — Онбординг, профиль, расписание, план
-Статус: в работе
-Следующий шаг: дождаться отчётов сабагентов A–E (запущены параллельно), затем интеграция
+Статус: собирается в CI
+Следующий шаг: CI до зелёного (gh run watch), затем отчёт и ссылки на .ipa/.apk
 
 ## Этап 1 — чек-лист
 - [x] Каркас: схема БД v2 (Profiles, BodyMeasurements, Photos, Goals, ScheduleSettings/Items, Plans, QuestionnaireSections), enums, QuestionnaireRepository, хост анкеты (OnboardingScreen/StepFrame/StepScope/StepEditScreen), роутер с redirect на /onboarding, поля ввода ui/form_fields.dart, зависимости (camera, permission_handler, file_picker, share_plus, uuid, path), Info.plist/манифест, Drift в вебе
-- [ ] 1. Онбординг 12 этапов (A: 1–6, B: 7–12), камера с контуром, фото локально
-- [ ] 2. Расписание с чередованием недель, выход из дома (C)
-- [ ] 3. Черновой план без ИИ + экран «План» с «Принять» (D)
-- [ ] 4. Редактирование анкеты в настройках (E)
-- [ ] 5. Экспорт/импорт JSON (E)
-- [ ] 6. Юнит-тесты норм и расписания
+- [x] 1. Онбординг 12 этапов (A: 1–6, B: 7–12), камера с контуром, фото локально
+- [x] 2. Расписание с чередованием недель, выход из дома (C)
+- [x] 3. Черновой план без ИИ + экран «План» с «Принять» (D)
+- [x] 4. Редактирование анкеты в настройках (E)
+- [x] 5. Экспорт/импорт JSON (E)
+- [x] 6. Юнит-тесты норм и расписания (всего 144 теста, + интеграционный план×расписание)
 - [ ] 7. CI зелёный, отчёт
 
 ## Сабагенты (текущий этап)
 - A Анкета 1–6: готово (8 тестов) — lib/features/onboarding/questionnaire_a/
 - B Анкета 7–12: готово (8 тестов) — lib/features/onboarding/questionnaire_b/
 - C Расписание: готово (34 теста) — lib/features/schedule/
-- D План и нормы: в работе — lib/features/plan/
+- D План и нормы: готово (26 тестов) — lib/features/plan/
 - E Настройки, экспорт/импорт: готово (19 тестов) — lib/features/settings/
 
 ## Решения и договорённости
@@ -48,6 +48,10 @@
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- Камера (экран съёмки с контуром), permission_handler, share_plus/file_picker — не проверены на устройствах
+- Кнопка смены камеры — Material-иконка; добавить SysGlyph.camera/cameraSwitch в дизайн-систему
+- Даты (рождение, срок цели, якорь недели) хранятся как локальная полночь — при смене пояса на западный могут съехать на день
+- Главный экран всё ещё на демо-данных (этап 2 подключит план/расписание: acceptedPlanProvider, ScheduleLogic.dayTimeline)
 - permission_handler на iOS: при SPM разрешения включаются по ключам Info.plist (Podfile не нужен). Если в CI появится CocoaPods (плагин без SPM) — нужны макросы PERMISSION_* в Podfile post_install
 - Drift в вебе не настроен (нужны sqlite3.wasm + drift_worker.js в app/web/) — пока БД в UI не используется; понадобится, когда экраны начнут читать БД
 - iOS Swift (AppDelegate: FlutterImplicitEngineBridge.applicationRegistrar) проверяется только в CI; фолбэк — pluginRegistry.registrar(forPlugin:)?.messenger()
