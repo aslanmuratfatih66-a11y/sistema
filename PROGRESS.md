@@ -2,17 +2,18 @@
 
 ## Сейчас
 Этап: 5 — Сервер: вход, синхронизация, фото, бэкапы
-Статус: каркас готов (7d65e90), сабагенты A–E в работе; этап 4 в CI (run 39673549527)
-Следующий шаг: отчёты A–E → интеграция (main.dart: override authServiceProvider/syncServiceProvider, индикатор синхронизации, пункт «Аккаунт» в «Ещё»; openapi.yaml) → push → CI
+Статус: собирается в CI
+Следующий шаг: проверить CI (app+server); затем этап 6 — ИИ, персонаж, голос
 
 ## Этап 5 — чек-лист
 - [x] Каркас: server/internal/store (SQLite modernc, миграции user_version: users, sessions, access_tokens, records, sync_cursors, photos, fx_rates, job_runs), authctx, контракты auth/syncapi/media/jobs + проводка в main.go, httpapi.Options.Mount, config (MAX_PHOTO_BYTES, BACKUP_DIR, BACKUP_KEEP_DAYS, TRUST_PROXY, FX_URL); клиент: core/sync/sync_api.dart, /account, flutter_secure_storage, qr_flutter
-- [ ] A Auth (server/internal/auth) — в работе
-- [ ] B Sync API (server/internal/syncapi) — в работе
-- [ ] C Фото и задачи (server/internal/media, jobs) — в работе
-- [ ] D Deploy (deploy/) — в работе
-- [ ] E Клиент (core/sync, features/auth) — в работе
-- [ ] Интеграция, openapi, CI, инструкция деплоя
+- [x] A Auth (server/internal/auth) — готово
+- [x] B Sync API (server/internal/syncapi) — готово
+- [x] C Фото и задачи (server/internal/media, jobs) — готово
+- [x] D Deploy (deploy/) — готово
+- [x] E Клиент (core/sync, features/auth) — готово
+- [x] Интеграция: go.mod (x/crypto), фото ≤24 Мп и 1 поток (память 256М), openapi 0.5.0; main: syncOverrides(readPhoto), запуск syncServiceProvider; «Ещё» → панель «Аккаунт» + SyncIndicator
+- [ ] CI зелёный (этап 4: iOS-джоба не получила раннер macOS — перезапуск этим пушем)
 
 ## Этап 4 — чек-лист
 - [x] Каркас: БД v5 (WalkRoutes, Walks), WalkMode; geolocator, flutter_map+latlong2, audio_session, home_widget; контракты domain/walks/walk_api.dart, core/audio/audio_api.dart, core/live/live_api.dart; iOS: таргет SistemaWidgets (ruby ios/scripts/setup_extensions.rb, гем xcodeproj, Ruby в C:\Ruby33-x64), ios/Shared/SistemaShared.swift (App Group, SistemaActivityAttributes, AddWaterIntent), каналы MapKit/NowPlaying/LiveActivity (заготовки), entitlements App Group, Info.plist (фон location+audio, Live Activities, схема sistema://, queries spotify); Android: FOREGROUND_SERVICE_LOCATION, queries Spotify; маршрут /walks, заглушка
@@ -93,6 +94,7 @@
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- Этап 5: фото не скачиваются с сервера на второе устройство (remotePath не заполняется); TOTP нельзя отключить/перевыпустить; защита от повтора TOTP-кода — в памяти; сервер/деплой не проверены вживую — инструкция deploy/README.md
 - Этап 4: Spotify — заглушка (нужна регистрация в Spotify Dashboard, Redirect URI); прогулка после перезапуска восстанавливается на паузе; норма шагов виджета — 8000 по умолчанию; Swift/Kotlin этапа 4 проверены только сборкой
 - Тело: «сегодня» (bodyClockProvider) не пересчитывается в полночь; дневной сон не записать; удаление фото без подтверждения
 - Шаги: Health Connect без приложения-писателя (Google Fit/Samsung Health) даёт 0, фолбэка на датчик нет; датчик не видит шаги до первого опроса за день; CMPedometer — история 7 дней
@@ -115,6 +117,7 @@
 Этап 2: run 39647992929 — зелёный
 
 ## Что нужно от пользователя
+- Деплой сервера по deploy/README.md; если порт 443 занят — прислать вывод `sudo ss -ltnp 'sport = :443'`, ничего не трогать
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 - После этапа 4–5 — общая проверка на телефоне. Копим список:
   - этап 1: анкета (прервать/продолжить), разрешения, План → Принять, «Ещё»: правка разделов, язык, экспорт/импорт

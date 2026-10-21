@@ -8066,6 +8066,270 @@ abstract class AppLocalizations {
   /// **'Спокойная прогулка: {minutes} мин'**
   String dscQuestWalk(int minutes);
 
+  /// No description provided for @synTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аккаунт'**
+  String get synTitle;
+
+  /// No description provided for @synServer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Адрес сервера'**
+  String get synServer;
+
+  /// No description provided for @synName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Имя'**
+  String get synName;
+
+  /// No description provided for @synPassword.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пароль'**
+  String get synPassword;
+
+  /// No description provided for @synNewPassword.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый пароль'**
+  String get synNewPassword;
+
+  /// No description provided for @synTotpCode.
+  ///
+  /// In ru, this message translates to:
+  /// **'Код из приложения-аутентификатора'**
+  String get synTotpCode;
+
+  /// No description provided for @synLogin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Войти'**
+  String get synLogin;
+
+  /// No description provided for @synRegister.
+  ///
+  /// In ru, this message translates to:
+  /// **'Создать аккаунт'**
+  String get synRegister;
+
+  /// No description provided for @synForgot.
+  ///
+  /// In ru, this message translates to:
+  /// **'Забыли пароль?'**
+  String get synForgot;
+
+  /// No description provided for @synReset.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сбросить пароль'**
+  String get synReset;
+
+  /// No description provided for @synResetHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сброс возможен, только если включена двухфакторная защита (TOTP)'**
+  String get synResetHint;
+
+  /// No description provided for @synResetDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пароль изменён — войдите с новым'**
+  String get synResetDone;
+
+  /// No description provided for @synBackToLogin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назад ко входу'**
+  String get synBackToLogin;
+
+  /// No description provided for @synSignedInAs.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вы вошли как {name}'**
+  String synSignedInAs(String name);
+
+  /// No description provided for @synLogout.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выйти'**
+  String get synLogout;
+
+  /// No description provided for @synSectionLogin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вход'**
+  String get synSectionLogin;
+
+  /// No description provided for @synSectionTotp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Двухфакторная защита'**
+  String get synSectionTotp;
+
+  /// No description provided for @synTotpOn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включена'**
+  String get synTotpOn;
+
+  /// No description provided for @synTotpOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключена — без неё пароль не восстановить'**
+  String get synTotpOff;
+
+  /// No description provided for @synTotpSetup.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включить TOTP'**
+  String get synTotpSetup;
+
+  /// No description provided for @synTotpScan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отсканируйте QR в приложении-аутентификаторе или введите секрет вручную'**
+  String get synTotpScan;
+
+  /// No description provided for @synCopy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Скопировать'**
+  String get synCopy;
+
+  /// No description provided for @synCopied.
+  ///
+  /// In ru, this message translates to:
+  /// **'Скопировано'**
+  String get synCopied;
+
+  /// No description provided for @synTotpConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтвердить'**
+  String get synTotpConfirm;
+
+  /// No description provided for @synTotpEnabled.
+  ///
+  /// In ru, this message translates to:
+  /// **'TOTP включена'**
+  String get synTotpEnabled;
+
+  /// No description provided for @synTotpNeeded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Введите код из приложения-аутентификатора'**
+  String get synTotpNeeded;
+
+  /// No description provided for @synSectionSync.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синхронизация'**
+  String get synSectionSync;
+
+  /// No description provided for @synSyncNow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синхронизировать сейчас'**
+  String get synSyncNow;
+
+  /// No description provided for @synStatusOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выключена — войдите в аккаунт'**
+  String get synStatusOff;
+
+  /// No description provided for @synStatusIdle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синхронизировано'**
+  String get synStatusIdle;
+
+  /// No description provided for @synStatusSyncing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Синхронизация…'**
+  String get synStatusSyncing;
+
+  /// No description provided for @synStatusOffline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет связи с сервером'**
+  String get synStatusOffline;
+
+  /// No description provided for @synStatusError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка синхронизации'**
+  String get synStatusError;
+
+  /// No description provided for @synLastSync.
+  ///
+  /// In ru, this message translates to:
+  /// **'Последняя: {time}'**
+  String synLastSync(String time);
+
+  /// No description provided for @synPending.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не отправлено: {count}'**
+  String synPending(int count);
+
+  /// No description provided for @synErrNetwork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сервер недоступен — проверьте адрес и интернет'**
+  String get synErrNetwork;
+
+  /// No description provided for @synErrCredentials.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неверное имя или пароль'**
+  String get synErrCredentials;
+
+  /// No description provided for @synErrTotp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неверный код'**
+  String get synErrTotp;
+
+  /// No description provided for @synErrNameTaken.
+  ///
+  /// In ru, this message translates to:
+  /// **'Имя уже занято'**
+  String get synErrNameTaken;
+
+  /// No description provided for @synErrWeakPassword.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пароль — не короче 8 символов'**
+  String get synErrWeakPassword;
+
+  /// No description provided for @synErrRateLimited.
+  ///
+  /// In ru, this message translates to:
+  /// **'Слишком много попыток — подождите'**
+  String get synErrRateLimited;
+
+  /// No description provided for @synErrServer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка сервера — попробуйте позже'**
+  String get synErrServer;
+
+  /// No description provided for @synErrInvalidName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Имя: 3–32 символа — буквы, цифры, _ - . без пробелов'**
+  String get synErrInvalidName;
+
+  /// No description provided for @synErrFill.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заполните адрес сервера, имя и пароль'**
+  String get synErrFill;
+
   /// No description provided for @wlkTitle.
   ///
   /// In ru, this message translates to:

@@ -10,8 +10,10 @@ import '../../app/routes.dart';
 import '../../core/capabilities/capability_service.dart';
 import '../../core/data/profile_repository.dart';
 import '../../core/db/database.dart';
+import '../../core/sync/sync_api.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
+import '../auth/sync_indicator.dart';
 import '../home/widgets/finance_summary_panel.dart';
 import '../onboarding/onboarding_progress.dart';
 import '../onboarding/onboarding_step.dart';
@@ -46,6 +48,26 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
         children: [
           const FinanceSummaryPanel(),
+          const SizedBox(height: 16),
+          SysPanel(
+            title: l.synTitle,
+            child: Row(
+              children: [
+                Expanded(
+                  child: _NavRow(
+                    glyph: SysGlyph.send,
+                    title: l.synTitle,
+                    hint: switch (ref.watch(accountProvider).value) {
+                      final a? => l.synSignedInAs(a.name),
+                      null => l.synStatusOff,
+                    },
+                    onTap: () => context.push(Routes.account),
+                  ),
+                ),
+                const SyncIndicator(),
+              ],
+            ),
+          ),
           const SizedBox(height: 16),
           _questionnairePanel(l),
           const SizedBox(height: 16),

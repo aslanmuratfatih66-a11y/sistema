@@ -19,6 +19,8 @@ import 'core/live/live_api.dart';
 import 'core/live/live_providers.dart';
 import 'core/location/geolocator_location_service.dart';
 import 'core/location/walk_tracker_impl.dart';
+import 'core/sync/sync_api.dart';
+import 'core/sync/sync_providers.dart';
 import 'core/notifications/background_refresh.dart';
 import 'core/notifications/local_reminder_scheduler.dart';
 import 'core/notifications/notification_api.dart';
@@ -32,6 +34,7 @@ import 'domain/quests/section_hooks.dart';
 import 'domain/walks/walk_api.dart';
 import 'features/character/voice/flutter_tts_service.dart';
 import 'features/onboarding/onboarding_progress.dart';
+import 'features/onboarding/questionnaire_a/data/photo_repository.dart';
 import 'features/walks/data/walk_route_service.dart';
 import 'features/workouts/workouts_providers.dart';
 
@@ -63,6 +66,10 @@ Future<void> main() async {
     walkTrackerProvider.overrideWithValue(walkTracker),
     liveActivityServiceProvider.overrideWithValue(createLiveActivityService(l10n: () => reminderL10n(db))),
     widgetSyncProvider.overrideWithValue(createWidgetSync(l10n: () => reminderL10n(db))),
+    ...syncOverrides(readPhoto: (rel) async {
+      final f = await PhotoStorage().resolve(rel);
+      return await f.exists() ? f.readAsBytes() : null;
+    }),
   ]);
 
   final prefs = ReminderPrefsRepository(db);
@@ -81,6 +88,8 @@ Future<void> main() async {
   unawaited(reminders.start());
   // Виджеты из «Статуса», вода из виджета/App Intent, прогулка → Live Activity (после init уведомлений).
   LiveBridge(container, () => reminderL10n(db)).start();
+  // Синхронизация с сервером: создание сервиса запускает таймер и слежение за аккаунтом.
+  container.read(syncServiceProvider);
   // Шаги: опрос при старте, возврате и раз в 5 мин → StepLogs → квесты шагов.
   container.read(stepSyncProvider).start();
   unawaited(initBackgroundRefresh().catchError((Object e) => debugPrint('initBackgroundRefresh: $e')));

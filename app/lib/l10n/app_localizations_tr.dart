@@ -4535,6 +4535,148 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String get synTitle => 'Hesap';
+
+  @override
+  String get synServer => 'Sunucu adresi';
+
+  @override
+  String get synName => 'Ad';
+
+  @override
+  String get synPassword => 'Şifre';
+
+  @override
+  String get synNewPassword => 'Yeni şifre';
+
+  @override
+  String get synTotpCode => 'Doğrulayıcı uygulamadaki kod';
+
+  @override
+  String get synLogin => 'Giriş yap';
+
+  @override
+  String get synRegister => 'Hesap oluştur';
+
+  @override
+  String get synForgot => 'Şifrenizi mi unuttunuz?';
+
+  @override
+  String get synReset => 'Şifreyi sıfırla';
+
+  @override
+  String get synResetHint =>
+      'Sıfırlama yalnızca iki adımlı doğrulama (TOTP) açıksa mümkündür';
+
+  @override
+  String get synResetDone => 'Şifre değiştirildi — yeni şifreyle giriş yapın';
+
+  @override
+  String get synBackToLogin => 'Girişe dön';
+
+  @override
+  String synSignedInAs(String name) {
+    return '$name olarak giriş yapıldı';
+  }
+
+  @override
+  String get synLogout => 'Çıkış yap';
+
+  @override
+  String get synSectionLogin => 'Giriş';
+
+  @override
+  String get synSectionTotp => 'İki adımlı doğrulama';
+
+  @override
+  String get synTotpOn => 'Açık';
+
+  @override
+  String get synTotpOff => 'Kapalı — o olmadan şifre kurtarılamaz';
+
+  @override
+  String get synTotpSetup => 'TOTP\'yi aç';
+
+  @override
+  String get synTotpScan =>
+      'QR kodunu doğrulayıcı uygulamada tarayın veya gizli anahtarı elle girin';
+
+  @override
+  String get synCopy => 'Kopyala';
+
+  @override
+  String get synCopied => 'Kopyalandı';
+
+  @override
+  String get synTotpConfirm => 'Onayla';
+
+  @override
+  String get synTotpEnabled => 'TOTP açıldı';
+
+  @override
+  String get synTotpNeeded => 'Doğrulayıcı uygulamadaki kodu girin';
+
+  @override
+  String get synSectionSync => 'Senkronizasyon';
+
+  @override
+  String get synSyncNow => 'Şimdi senkronize et';
+
+  @override
+  String get synStatusOff => 'Kapalı — hesaba giriş yapın';
+
+  @override
+  String get synStatusIdle => 'Senkronize edildi';
+
+  @override
+  String get synStatusSyncing => 'Senkronize ediliyor…';
+
+  @override
+  String get synStatusOffline => 'Sunucuya bağlantı yok';
+
+  @override
+  String get synStatusError => 'Senkronizasyon hatası';
+
+  @override
+  String synLastSync(String time) {
+    return 'Son: $time';
+  }
+
+  @override
+  String synPending(int count) {
+    return 'Gönderilmedi: $count';
+  }
+
+  @override
+  String get synErrNetwork =>
+      'Sunucuya ulaşılamıyor — adresi ve interneti kontrol edin';
+
+  @override
+  String get synErrCredentials => 'Ad veya şifre yanlış';
+
+  @override
+  String get synErrTotp => 'Kod yanlış';
+
+  @override
+  String get synErrNameTaken => 'Bu ad zaten alınmış';
+
+  @override
+  String get synErrWeakPassword => 'Şifre en az 8 karakter olmalı';
+
+  @override
+  String get synErrRateLimited => 'Çok fazla deneme — bekleyin';
+
+  @override
+  String get synErrServer => 'Sunucu hatası — daha sonra deneyin';
+
+  @override
+  String get synErrInvalidName =>
+      'Ad: 3–32 karakter — harf, rakam, _ - . boşluksuz';
+
+  @override
+  String get synErrFill => 'Sunucu adresini, adı ve şifreyi doldurun';
+
+  @override
   String get wlkTitle => 'Yürüyüş';
 
   @override

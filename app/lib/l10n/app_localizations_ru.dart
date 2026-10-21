@@ -4555,6 +4555,147 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
+  String get synTitle => 'Аккаунт';
+
+  @override
+  String get synServer => 'Адрес сервера';
+
+  @override
+  String get synName => 'Имя';
+
+  @override
+  String get synPassword => 'Пароль';
+
+  @override
+  String get synNewPassword => 'Новый пароль';
+
+  @override
+  String get synTotpCode => 'Код из приложения-аутентификатора';
+
+  @override
+  String get synLogin => 'Войти';
+
+  @override
+  String get synRegister => 'Создать аккаунт';
+
+  @override
+  String get synForgot => 'Забыли пароль?';
+
+  @override
+  String get synReset => 'Сбросить пароль';
+
+  @override
+  String get synResetHint =>
+      'Сброс возможен, только если включена двухфакторная защита (TOTP)';
+
+  @override
+  String get synResetDone => 'Пароль изменён — войдите с новым';
+
+  @override
+  String get synBackToLogin => 'Назад ко входу';
+
+  @override
+  String synSignedInAs(String name) {
+    return 'Вы вошли как $name';
+  }
+
+  @override
+  String get synLogout => 'Выйти';
+
+  @override
+  String get synSectionLogin => 'Вход';
+
+  @override
+  String get synSectionTotp => 'Двухфакторная защита';
+
+  @override
+  String get synTotpOn => 'Включена';
+
+  @override
+  String get synTotpOff => 'Выключена — без неё пароль не восстановить';
+
+  @override
+  String get synTotpSetup => 'Включить TOTP';
+
+  @override
+  String get synTotpScan =>
+      'Отсканируйте QR в приложении-аутентификаторе или введите секрет вручную';
+
+  @override
+  String get synCopy => 'Скопировать';
+
+  @override
+  String get synCopied => 'Скопировано';
+
+  @override
+  String get synTotpConfirm => 'Подтвердить';
+
+  @override
+  String get synTotpEnabled => 'TOTP включена';
+
+  @override
+  String get synTotpNeeded => 'Введите код из приложения-аутентификатора';
+
+  @override
+  String get synSectionSync => 'Синхронизация';
+
+  @override
+  String get synSyncNow => 'Синхронизировать сейчас';
+
+  @override
+  String get synStatusOff => 'Выключена — войдите в аккаунт';
+
+  @override
+  String get synStatusIdle => 'Синхронизировано';
+
+  @override
+  String get synStatusSyncing => 'Синхронизация…';
+
+  @override
+  String get synStatusOffline => 'Нет связи с сервером';
+
+  @override
+  String get synStatusError => 'Ошибка синхронизации';
+
+  @override
+  String synLastSync(String time) {
+    return 'Последняя: $time';
+  }
+
+  @override
+  String synPending(int count) {
+    return 'Не отправлено: $count';
+  }
+
+  @override
+  String get synErrNetwork => 'Сервер недоступен — проверьте адрес и интернет';
+
+  @override
+  String get synErrCredentials => 'Неверное имя или пароль';
+
+  @override
+  String get synErrTotp => 'Неверный код';
+
+  @override
+  String get synErrNameTaken => 'Имя уже занято';
+
+  @override
+  String get synErrWeakPassword => 'Пароль — не короче 8 символов';
+
+  @override
+  String get synErrRateLimited => 'Слишком много попыток — подождите';
+
+  @override
+  String get synErrServer => 'Ошибка сервера — попробуйте позже';
+
+  @override
+  String get synErrInvalidName =>
+      'Имя: 3–32 символа — буквы, цифры, _ - . без пробелов';
+
+  @override
+  String get synErrFill => 'Заполните адрес сервера, имя и пароль';
+
+  @override
   String get wlkTitle => 'Прогулка';
 
   @override
