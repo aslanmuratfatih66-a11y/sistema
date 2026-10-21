@@ -31,16 +31,28 @@ class FakeEngine implements TtsEngine {
   Future<bool> isLanguageAvailable(String languageTag) async => languages.contains(languageTag);
 
   @override
-  Future<void> setLanguage(String languageTag) async => language = languageTag;
+  Future<void> setLanguage(String languageTag) async {
+    calls.add('setLanguage');
+    language = languageTag;
+  }
 
   @override
-  Future<void> setVoice(Map<String, String> v) async => voice = v;
+  Future<void> setVoice(Map<String, String> v) async {
+    calls.add('setVoice');
+    voice = v;
+  }
 
   @override
-  Future<void> setPitch(double p) async => pitch = p;
+  Future<void> setPitch(double p) async {
+    calls.add('setPitch');
+    pitch = p;
+  }
 
   @override
-  Future<void> setSpeechRate(double r) async => rate = r;
+  Future<void> setSpeechRate(double r) async {
+    calls.add('setRate');
+    rate = r;
+  }
 
   @override
   Future<void> speak(String text) async {
@@ -109,7 +121,24 @@ void main() {
       expect(engine.voice!['name'], 'Yuri');
       expect(engine.pitch, closeTo(.62, 1e-9));
       expect(engine.rate, closeTo(.4, 1e-9));
-      expect(engine.calls, containsAllInOrder(['speak:Новый день.', 'stop', 'speak:Ещё.']));
+      // Те же параметры повторно не применяются, договорённую фразу не останавливаем (иначе лаги отсчёта).
+      expect(engine.calls.where((c) => c.startsWith('set')), ['setLanguage', 'setVoice', 'setPitch', 'setRate']);
+      expect(engine.calls.where((c) => c.startsWith('speak') || c == 'stop'), ['speak:Новый день.', 'speak:Ещё.']);
+
+      await tts.speak('Мягко.', languageCode: 'ru', voice: const VoiceProfile(id: 'x', pitch: 1.1));
+      expect(engine.calls.where((c) => c == 'setPitch').length, 2);
+      expect(engine.pitch, closeTo(1.1, 1e-9));
+    });
+
+    test('новая фраза поверх звучащей — сначала stop', () async {
+      final engine = FakeEngine(voiceList: iosVoices)..holdSpeak = true;
+      final tts = FlutterTtsService(engine: engine, supported: true);
+      unawaited(tts.speak('Раз', languageCode: 'ru'));
+      await Future<void>.delayed(Duration.zero);
+      await Future<void>.delayed(Duration.zero);
+      engine.holdSpeak = false;
+      await tts.speak('Два', languageCode: 'ru');
+      expect(engine.calls.where((c) => c.startsWith('speak') || c == 'stop'), ['speak:Раз', 'stop', 'speak:Два']);
     });
 
     test('женский голос для турецкого', () async {

@@ -94,6 +94,13 @@ class FlutterTtsService implements TtsService {
   final _available = <String, bool>{};
   Completer<void>? _current;
 
+  /// Последние применённые язык/голос/тон/скорость. Сеттеры движка на Android синхронные и идут
+  /// в главном потоке (превью камеры замирает) — повторно с теми же значениями не вызываем.
+  String? _appliedLanguage;
+  Map<String, String>? _appliedVoice;
+  double? _appliedPitch;
+  double? _appliedRate;
+
   static String languageTag(String languageCode) => switch (languageCode) {
         'tr' => 'tr-TR',
         _ => 'ru-RU',
@@ -137,16 +144,32 @@ class FlutterTtsService implements TtsService {
   @override
   Future<void> speak(String text, {required String languageCode, VoiceProfile? voice}) async {
     if (text.trim().isEmpty || !await isAvailable(languageCode)) return;
-    await stop();
+    // Прерываем только звучащую фразу: лишний stop на iOS блокирует главный поток.
+    if (_current != null) await stop();
     final done = Completer<void>();
     _current = done;
     try {
       final tag = languageTag(languageCode);
-      await _engine.setLanguage(tag);
+      if (_appliedLanguage != tag) {
+        await _engine.setLanguage(tag);
+        _appliedLanguage = tag;
+        _appliedVoice = null; // setLanguage сбрасывает голос
+      }
       final chosen = pickVoice(await _allVoices(), languageCode, preferFemale: voice?.preferFemale);
-      if (chosen != null) await _engine.setVoice(chosen);
-      await _engine.setPitch((voice?.pitch ?? 1).clamp(.5, 2.0));
-      await _engine.setSpeechRate((voice?.rate ?? .5).clamp(0.0, 1.0));
+      if (chosen != null && !mapEquals(chosen, _appliedVoice)) {
+        await _engine.setVoice(chosen);
+        _appliedVoice = chosen;
+      }
+      final pitch = (voice?.pitch ?? 1).clamp(.5, 2.0).toDouble();
+      if (_appliedPitch != pitch) {
+        await _engine.setPitch(pitch);
+        _appliedPitch = pitch;
+      }
+      final rate = (voice?.rate ?? .5).clamp(0.0, 1.0).toDouble();
+      if (_appliedRate != rate) {
+        await _engine.setSpeechRate(rate);
+        _appliedRate = rate;
+      }
       if (done.isCompleted) return;
       // Завершаемся по окончании фразы или при прерывании (stop/новая фраза).
       await Future.any([_engine.speak(text), done.future]);

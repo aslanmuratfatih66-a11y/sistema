@@ -388,13 +388,16 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
     if (c == null || !c.value.isInitialized) {
       return const Center(child: CircularProgressIndicator(color: SysColors.accent));
     }
-    return Center(
-      child: CameraPreview(
-        c,
-        child: IgnorePointer(
-          child: CustomPaint(
-            painter: CaptureGuidePainter(guide, mirrored: previewIsMirrored(frontCamera: _front)),
-            size: Size.infinite,
+    // Отдельный слой: смена цифры отсчёта и реплик не перерисовывает превью.
+    return RepaintBoundary(
+      child: Center(
+        child: CameraPreview(
+          c,
+          child: IgnorePointer(
+            child: CustomPaint(
+              painter: CaptureGuidePainter(guide, mirrored: previewIsMirrored(frontCamera: _front)),
+              size: Size.infinite,
+            ),
           ),
         ),
       ),
@@ -490,12 +493,14 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
         ),
         if (countdown)
           Center(
-            child: Text(
-              '${s.remaining}',
-              style: SysText.monoLarge.copyWith(
-                fontSize: 140,
-                color: SysColors.accentLighter,
-                shadows: const [Shadow(color: SysColors.accent, blurRadius: 24)],
+            child: RepaintBoundary(
+              child: Text(
+                '${s.remaining}',
+                style: SysText.monoLarge.copyWith(
+                  fontSize: 140,
+                  color: SysColors.accentLighter,
+                  shadows: const [Shadow(color: SysColors.accent, blurRadius: 24)],
+                ),
               ),
             ),
           ),
