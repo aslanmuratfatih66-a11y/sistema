@@ -49,11 +49,10 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631298 (app) и …/39594631309 (server) — зелёные
+Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39598086785 (app) и …/39598087000 (server) — зелёные
 Артефакты:
-- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631298/artifacts/12342993056
-- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631298/artifacts/12344341398
-- server: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631309/artifacts/12344330517
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39598086785/artifacts/12345640839
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39598086785/artifacts/12345236473
 
 ## Что нужно от пользователя
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
