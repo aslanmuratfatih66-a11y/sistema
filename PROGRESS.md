@@ -2,8 +2,8 @@
 
 ## Сейчас
 Этап: 1 — Онбординг, профиль, расписание, план
-Статус: доработка 1.2 — собирается в CI
-Следующий шаг: дождаться зелёного CI, записать ссылки на ipa/apk, попросить проверку фото-сессии на телефоне
+Статус: доработка 1.2 — ждёт проверки на телефоне
+Следующий шаг: получить замечания владельца по 1.2; если ок — этап 1 завершён, переход к этапу 2
 
 ## Этап 1 — чек-лист
 - [x] Каркас: схема БД v2 (Profiles, BodyMeasurements, Photos, Goals, ScheduleSettings/Items, Plans, QuestionnaireSections), enums, QuestionnaireRepository, хост анкеты (OnboardingScreen/StepFrame/StepScope/StepEditScreen), роутер с redirect на /onboarding, поля ввода ui/form_fields.dart, зависимости (camera, permission_handler, file_picker, share_plus, uuid, path), Info.plist/манифест, Drift в вебе
@@ -81,10 +81,10 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39615717883 (app) и …/39615717981 (server) — зелёные
+Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39620362058 (app) и …/39620362118 (server) — зелёные
 Артефакты:
-- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39615717883/artifacts/12353125786
-- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39615717883/artifacts/12354160396
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39620362058/artifacts/12355166165
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39620362058/artifacts/12354827359
 
 ## Что нужно от пользователя
 - Проверить 1.2: овал лица, совпадение с контуром тела на ~2 м, голос выбранного ассистента в фото-сессии
