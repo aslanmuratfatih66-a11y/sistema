@@ -2,8 +2,8 @@
 
 ## Сейчас
 Этап: 3 — Питание, тело, тренировки
-Статус: интеграция сделана, 459 тестов зелёные — собирается в CI
-Следующий шаг: дождаться CI (особенно Kotlin Health Connect и Swift CMPedometer) → отчёт → этап 4
+Статус: завершён (CI зелёный; проверка на телефоне — после этапа 4–5)
+Следующий шаг: этап 4 — прочитать STAGES «Этап 4», сделать каркас
 
 ## Этап 3 — чек-лист
 - [x] Каркас: БД v4 (FoodItems, MealEntries, Recipes, WaterLogs, ShoppingItems, StepLogs, SleepLogs, CareChecks, WorkoutPrograms, WorkoutSessions), enums, core/models/daily.dart, core/activity/activity_api.dart, domain/quests/section_hooks.dart; mobile_scanner/http/fl_chart/image_picker/wakelock_plus; Health Connect (minSdk 26, FlutterFragmentActivity, манифест), канал sistema/steps (StepCounterChannel.swift/.kt — заготовки, в pbxproj); маршруты /body /workouts, заглушки
@@ -12,7 +12,7 @@
 - [x] 3. Тело: сон, замеры, графики, фото-дневник, уход за кожей (C)
 - [x] 4. Тренировки (D)
 - [x] 5. Интеграция с движком квестов, «Статус» на реальных данных
-- [ ] 6. Тесты, CI зелёный, отчёт
+- [x] 6. Тесты (459), CI зелёный, отчёт
 
 ## Сабагенты (этап 3)
 - A Питание: готово (37 тестов) — features/nutrition (nut_*); интеграция: nutritionBurnedKcalProvider ← dailyEnergyProvider, foodLookupLangProvider ← язык, «Статус»: nutritionDayProvider, waterGoalProvider
@@ -82,19 +82,21 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Этап 2: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39647992929 — зелёный
-Артефакты этапа 2:
-- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39647992929/artifacts/12368114345
-- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39647992929/artifacts/12367494460
-Каркас этапа 3: run 39649845162 (проверка Health Connect / Swift-заготовки)
+Этап 3: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537 — зелёный
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537/artifacts/12369508087
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537/artifacts/12371475811
+Этап 2: run 39647992929 — зелёный
 
 ## Что нужно от пользователя
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 - После этапа 4–5 — общая проверка на телефоне. Копим список:
   - этап 1: анкета (прервать/продолжить), разрешения, План → Принять, «Ещё»: правка разделов, язык, экспорт/импорт
+  - этап 2: квесты (выполнить/+10 мин/отказ удержанием), уведомления с кнопками, тихие часы, окна провала/уровня/штрафа, магазин, дисциплина
+  - этап 3: штрихкод (Open Food Facts), фото еды, вода, шаги (разрешение Motion / Health Connect), сон и «Энергия», замеры, фото-дневник, уход за кожей, тренировка с голосом и без гашения экрана
   - фото-сессия: отсчёт без лагов (1.3), совпадение с контуром тела на ~2 м, овал лица, голос ассистента
 
 ## История
+- 2026-10-21 — этап 3 — питание, шаги/расход, тело, тренировки; 459 тестов, CI зелёный
 - 2026-10-21 — этап 2 — интеграция A–D, 317 тестов зелёные; начат этап 3 (каркас)
 - 2026-10-21 — этап 1 — 1.3: лаг отсчёта (лишние вызовы TTS) исправлен; этап 1 завершён, начат этап 2
 - 2026-10-21 — этап 1 — доработка 1.2 (фото-сессия: овал, 2 м, голос ассистента; персонаж 2-м шагом)
