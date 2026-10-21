@@ -8,6 +8,7 @@ import '../../../core/models/enums.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../ui/ui.dart';
 import '../step_scope.dart';
+import 'data/cities.dart';
 import 'data/serial_writer.dart';
 import 'data/timezones.dart';
 
@@ -30,12 +31,24 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
   Sex? _sex;
   DateTime? _birthDate;
   String? _timezone;
-  String _city = '';
+  final _cityController = TextEditingController();
+  final _cityFocus = FocusNode();
+
+  /// Город, по которому сейчас выставлен пояс (для подписи под полем пояса).
+  City? _tzCity;
 
   @override
   void initState() {
     super.initState();
+    _cityFocus.addListener(() => setState(() {}));
     _load();
+  }
+
+  @override
+  void dispose() {
+    _cityController.dispose();
+    _cityFocus.dispose();
+    super.dispose();
   }
 
   Future<void> _load() async {
@@ -48,7 +61,9 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
       _sex = enumByName(Sex.values, p?.sex);
       _birthDate = p?.birthDate;
       _timezone = p?.timezone;
-      _city = p?.city ?? '';
+      _cityController.text = p?.city ?? '';
+      final city = findCity(_cityController.text);
+      if (city != null && _timezone == timezoneFromOffset(Duration(hours: city.utcOffsetHours))) _tzCity = city;
     });
     if (_timezone == null) {
       // По умолчанию — пояс устройства.
@@ -60,10 +75,40 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
 
   void _save(ProfilesCompanion patch) => _writer.run(() => ref.read(profileRepositoryProvider).update(patch));
 
+  void _setTimezone(String tz, {City? fromCity}) {
+    setState(() {
+      _timezone = tz;
+      _tzCity = fromCity;
+    });
+    _save(ProfilesCompanion(timezone: Value(tz)));
+  }
+
+  void _onCityChanged(String text) {
+    final c = text.trim();
+    _save(ProfilesCompanion(city: Value(c.isEmpty ? null : c)));
+    // Точное совпадение со справочником — сразу подставляем пояс города.
+    final city = findCity(c);
+    if (city != null) {
+      _setTimezone(timezoneFromOffset(Duration(hours: city.utcOffsetHours)), fromCity: city);
+    } else {
+      setState(() {});
+    }
+  }
+
+  void _pickCity(City city) {
+    final name = city.name(Localizations.localeOf(context).languageCode);
+    _cityController.value = TextEditingValue(text: name, selection: TextSelection.collapsed(offset: name.length));
+    _cityFocus.unfocus();
+    _onCityChanged(name);
+  }
+
   Future<void> _pickTimezone() async {
     final l = AppLocalizations.of(context);
     final current = _timezone;
-    final options = [...timezoneOptions];
+    final device = deviceTimezone();
+    final lang = Localizations.localeOf(context).languageCode;
+    // Текущий пояс телефона — первым, дальше по порядку.
+    final options = [device, ...timezoneOptions.where((t) => t != device)];
     if (current != null && !options.contains(current)) options.add(current);
     final picked = await showModalBottomSheet<String>(
       context: context,
@@ -90,6 +135,7 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
                           color: tz == current ? SysColors.accentLighter : SysColors.textSecondary,
                         ),
                       ),
+                      subtitle: _zoneSubtitle(l, tz, device, lang),
                       trailing: tz == current ? const SysIcon(SysGlyph.check, size: 16) : null,
                       onTap: () => Navigator.of(c).pop(tz),
                     ),
@@ -100,10 +146,17 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
         ),
       ),
     );
-    if (picked != null && picked != current) {
-      setState(() => _timezone = picked);
-      _save(ProfilesCompanion(timezone: Value(picked)));
-    }
+    if (picked != null && picked != current) _setTimezone(picked);
+  }
+
+  Widget? _zoneSubtitle(AppLocalizations l, String tz, String device, String lang) {
+    final hours = wholeHoursOf(tz);
+    final examples = hours == null ? const <City>[] : citiesForOffset(hours);
+    final parts = [
+      if (tz == device) l.qaTzDeviceBadge,
+      if (examples.isNotEmpty) examples.map((c) => c.name(lang)).join(', '),
+    ];
+    return parts.isEmpty ? null : Text(parts.join(' · '), style: SysText.caption);
   }
 
   @override
@@ -119,6 +172,16 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
     }
     final now = DateTime.now();
     final tz = _timezone;
+    final lang = Localizations.localeOf(context).languageCode;
+    final cityText = _cityController.text.trim();
+    final suggestions =
+        _cityFocus.hasFocus && findCity(cityText) == null ? suggestCities(cityText) : const <City>[];
+    final tzCity = _tzCity;
+    final String? tzNote = tzCity != null
+        ? l.qaTzFromCity(tzCity.name(lang))
+        : tz == deviceTimezone()
+            ? l.qaTzFromDevice
+            : null;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -179,23 +242,40 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
           },
         ),
         const SysFieldGap(),
-        SysFieldLabel(l.qaProfileTimezone, hint: l.qaProfileTimezoneHint),
+        SysFieldLabel(l.qaProfileCity, hint: l.qaTzCityHint, optional: true, optionalLabel: l.commonOptional),
+        TextField(
+          controller: _cityController,
+          focusNode: _cityFocus,
+          textCapitalization: TextCapitalization.words,
+          style: SysText.body,
+          cursorColor: SysColors.accentLight,
+          onChanged: _onCityChanged,
+        ),
+        if (suggestions.isNotEmpty)
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: SysChoiceChips<City>(
+              choices: [
+                for (final c in suggestions) SysChoice(c, '${c.name(lang)}  ${displayTimezone(timezoneFromOffset(Duration(hours: c.utcOffsetHours)))}'),
+              ],
+              selected: const {},
+              onChanged: (sel) {
+                if (sel.isNotEmpty) _pickCity(sel.first);
+              },
+            ),
+          ),
+        const SysFieldGap(),
+        SysFieldLabel(l.qaProfileTimezone),
         SysPickerField(
           text: tz == null ? null : displayTimezone(tz),
           glyph: SysGlyph.clock,
           onTap: _pickTimezone,
         ),
-        const SysFieldGap(),
-        SysFieldLabel(l.qaProfileCity, hint: l.qaProfileCityHint, optional: true, optionalLabel: l.commonOptional),
-        SysTextField(
-          value: _city,
-          textCapitalization: TextCapitalization.words,
-          onChanged: (v) {
-            setState(() => _city = v);
-            final c = v.trim();
-            _save(ProfilesCompanion(city: Value(c.isEmpty ? null : c)));
-          },
-        ),
+        if (tzNote != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 6),
+            child: Text(tzNote, style: SysText.caption),
+          ),
       ],
     );
   }

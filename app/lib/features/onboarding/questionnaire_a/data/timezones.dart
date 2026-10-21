@@ -19,3 +19,11 @@ final List<String> timezoneOptions = [for (var h = -12; h <= 14; h++) timezoneFr
 
 /// Для показа: типографский минус.
 String displayTimezone(String tz) => tz.replaceAll('-', '−');
+
+/// «UTC+3» → 3, «UTC-5» → −5; дробные пояса и мусор → null.
+int? wholeHoursOf(String tz) {
+  final m = RegExp(r'^UTC([+-])(\d{1,2})$').firstMatch(tz);
+  if (m == null) return null;
+  final h = int.parse(m.group(2)!);
+  return m.group(1) == '-' ? -h : h;
+}

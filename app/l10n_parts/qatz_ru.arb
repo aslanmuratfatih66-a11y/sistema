@@ -1,0 +1,11 @@
+{
+  "qaTzCityHint": "Часовой пояс подставится по городу",
+  "qaTzFromCity": "Определён по городу: {city}",
+  "@qaTzFromCity": {
+    "placeholders": {
+      "city": {"type": "String"}
+    }
+  },
+  "qaTzFromDevice": "Текущий пояс телефона",
+  "qaTzDeviceBadge": "сейчас на телефоне"
+}

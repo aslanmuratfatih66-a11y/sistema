@@ -52,4 +52,48 @@ void main() {
     await tester.pumpWidget(const SizedBox());
     await tester.pump(Duration.zero);
   });
+
+  testWidgets('город: подсказка → выбор подставляет пояс города', (tester) async {
+    final db = memoryDb();
+    addTearDown(db.close);
+    final controller = StepController(editing: false);
+    addTearDown(controller.dispose);
+    await tester.binding.setSurfaceSize(const Size(400, 1600));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.pumpWidget(ProviderScope(
+      overrides: [databaseProvider.overrideWithValue(db)],
+      child: MaterialApp(
+        locale: const Locale('ru'),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: Scaffold(
+          body: SingleChildScrollView(
+            child: StepScope(controller: controller, child: const ProfileStep()),
+          ),
+        ),
+      ),
+    ));
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.pump(const Duration(milliseconds: 100));
+
+    final cityField = find.byType(TextField).last;
+    await tester.tap(cityField);
+    await tester.enterText(cityField, 'Новоси');
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(find.textContaining('Новосибирск'), findsOneWidget);
+
+    await tester.tap(find.textContaining('Новосибирск'));
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(find.text('UTC+7'), findsOneWidget);
+    expect(find.text('Определён по городу: Новосибирск'), findsOneWidget);
+
+    final profile = await tester.runAsync(() => ProfileRepository(db).get());
+    expect(profile?.city, 'Новосибирск');
+    expect(profile?.timezone, 'UTC+7');
+
+    await tester.pumpWidget(const SizedBox());
+    await tester.pump(Duration.zero);
+  });
 }

@@ -1,0 +1,6 @@
+{
+  "qaTzCityHint": "Saat dilimi şehre göre ayarlanır",
+  "qaTzFromCity": "Şehre göre belirlendi: {city}",
+  "qaTzFromDevice": "Telefonun geçerli saat dilimi",
+  "qaTzDeviceBadge": "şu an telefonda"
+}
