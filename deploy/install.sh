@@ -2,6 +2,7 @@
 # Установка/обновление сервера «Система» на Debian.
 # Идемпотентен: можно запускать повторно (обновление бинарника и юнита).
 # Трогает ТОЛЬКО своё: пользователь sistema, /opt/sistema, /etc/systemd/system/sistema.service.
+# Порт 443 и чужие веб-серверы НЕ трогает — только печатает, кто его занял (см. https.md).
 #
 # Использование:
 #   sudo ./install.sh [путь/к/sistema-server]
@@ -13,6 +14,7 @@ APP_USER=sistema
 PREFIX=/opt/sistema
 BIN_DIR="$PREFIX/bin"
 DATA_DIR="$PREFIX/data"
+BACKUP_DIR_DEFAULT="$PREFIX/backups"
 ENV_FILE="$PREFIX/.env"
 BIN="$BIN_DIR/sistema-server"
 UNIT_DST="/etc/systemd/system/$APP.service"
@@ -21,6 +23,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SRC_BIN="${1:-$SCRIPT_DIR/sistema-server}"
 SRC_UNIT="$SCRIPT_DIR/sistema.service"
 SRC_ENV="$SCRIPT_DIR/.env.example"
+SRC_RESTORE="$SCRIPT_DIR/restore.sh"
 
 log() { printf '[install] %s\n' "$*"; }
 die() { printf '[install] ОШИБКА: %s\n' "$*" >&2; exit 1; }
@@ -40,6 +43,9 @@ ADDR="$(grep -E '^SISTEMA_ADDR=' "$env_src" | tail -n1 | cut -d= -f2- | tr -d '"
 ADDR="${ADDR:-127.0.0.1:8087}"
 PORT="${ADDR##*:}"
 [[ "$PORT" =~ ^[0-9]+$ ]] || die "не удалось определить порт из SISTEMA_ADDR=$ADDR"
+BACKUP_DIR="$(grep -E '^SISTEMA_BACKUP_DIR=' "$env_src" | tail -n1 | cut -d= -f2- | tr -d '"'"'"' ' || true)"
+BACKUP_DIR="${BACKUP_DIR:-$BACKUP_DIR_DEFAULT}"
+[[ "$BACKUP_DIR" == /* ]] || die "SISTEMA_BACKUP_DIR должен быть абсолютным путём: $BACKUP_DIR"
 
 # Порт должен быть свободен — либо занят нашим же сервисом (повторный запуск).
 if ss -Hltn "sport = :$PORT" | grep -q .; then
@@ -63,7 +69,16 @@ fi
 
 # --- Папки --------------------------------------------------------------------
 install -d -m 0755 -o root -g root "$PREFIX" "$BIN_DIR"
-install -d -m 0750 -o "$APP_USER" -g "$APP_USER" "$DATA_DIR"
+install -d -m 0750 -o "$APP_USER" -g "$APP_USER" "$DATA_DIR" "$BACKUP_DIR_DEFAULT"
+if [[ "$BACKUP_DIR" != "$BACKUP_DIR_DEFAULT" ]]; then
+  [[ -d "$BACKUP_DIR" ]] || install -d -m 0750 -o "$APP_USER" -g "$APP_USER" "$BACKUP_DIR"
+  grep -qF "$BACKUP_DIR" "$SRC_UNIT" ||     log "ВНИМАНИЕ: SISTEMA_BACKUP_DIR=$BACKUP_DIR — добавьте его в ReadWritePaths в $SRC_UNIT и запустите снова, иначе бэкапы не запишутся"
+fi
+
+# Скрипт восстановления — рядом с бинарником.
+if [[ -f "$SRC_RESTORE" ]]; then
+  install -m 0750 -o root -g root "$SRC_RESTORE" "$BIN_DIR/restore.sh"
+fi
 
 # --- Бинарник (атомарная замена) ----------------------------------------------
 bin_changed=0
@@ -101,6 +116,18 @@ if (( was_active )) && (( bin_changed || unit_changed )); then
   systemctl restart "$APP.service"
 fi
 
+# --- Порт 443 (только информация) ---------------------------------------------
+https_note() {
+  if ss -Hltn 'sport = :443' | grep -q .; then
+    log "ВНИМАНИЕ: порт 443 уже занят:"
+    ss -Hltnp 'sport = :443' | sed 's/^/[install]   /' || true
+    log "Чужие конфиги НЕ меняем. Caddy на 443 не ставить. Напишите разработчику (агенту),"
+    log "приложив вывод выше — HTTPS настроим отдельным server-блоком (deploy/https.md, вариант 2)."
+  else
+    log "порт 443 свободен — HTTPS через Caddy: deploy/https.md, вариант 1"
+  fi
+}
+
 # --- Проверка -----------------------------------------------------------------
 host="${ADDR%:*}"
 [[ -z "$host" || "$host" == "0.0.0.0" ]] && host=127.0.0.1
@@ -108,6 +135,7 @@ for _ in $(seq 1 20); do
   if command -v curl >/dev/null && curl -fsS "http://$host:$PORT/healthz" 2>/dev/null; then
     echo
     log "готово: сервис работает на $ADDR"
+    https_note
     exit 0
   fi
   sleep 0.5
