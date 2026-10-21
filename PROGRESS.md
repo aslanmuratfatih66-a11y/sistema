@@ -1,9 +1,18 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 4 — Прогулки, карта, голос, музыка, виджеты
-Статус: интеграция готова, собирается в CI
-Следующий шаг: дождаться CI (gh run watch), при ошибке Swift/Kotlin — gh run view --log-failed
+Этап: 5 — Сервер: вход, синхронизация, фото, бэкапы
+Статус: каркас готов (7d65e90), сабагенты A–E в работе; этап 4 в CI (run 39673549527)
+Следующий шаг: отчёты A–E → интеграция (main.dart: override authServiceProvider/syncServiceProvider, индикатор синхронизации, пункт «Аккаунт» в «Ещё»; openapi.yaml) → push → CI
+
+## Этап 5 — чек-лист
+- [x] Каркас: server/internal/store (SQLite modernc, миграции user_version: users, sessions, access_tokens, records, sync_cursors, photos, fx_rates, job_runs), authctx, контракты auth/syncapi/media/jobs + проводка в main.go, httpapi.Options.Mount, config (MAX_PHOTO_BYTES, BACKUP_DIR, BACKUP_KEEP_DAYS, TRUST_PROXY, FX_URL); клиент: core/sync/sync_api.dart, /account, flutter_secure_storage, qr_flutter
+- [ ] A Auth (server/internal/auth) — в работе
+- [ ] B Sync API (server/internal/syncapi) — в работе
+- [ ] C Фото и задачи (server/internal/media, jobs) — в работе
+- [ ] D Deploy (deploy/) — в работе
+- [ ] E Клиент (core/sync, features/auth) — в работе
+- [ ] Интеграция, openapi, CI, инструкция деплоя
 
 ## Этап 4 — чек-лист
 - [x] Каркас: БД v5 (WalkRoutes, Walks), WalkMode; geolocator, flutter_map+latlong2, audio_session, home_widget; контракты domain/walks/walk_api.dart, core/audio/audio_api.dart, core/live/live_api.dart; iOS: таргет SistemaWidgets (ruby ios/scripts/setup_extensions.rb, гем xcodeproj, Ruby в C:\Ruby33-x64), ios/Shared/SistemaShared.swift (App Group, SistemaActivityAttributes, AddWaterIntent), каналы MapKit/NowPlaying/LiveActivity (заготовки), entitlements App Group, Info.plist (фон location+audio, Live Activities, схема sistema://, queries spotify); Android: FOREGROUND_SERVICE_LOCATION, queries Spotify; маршрут /walks, заглушка
@@ -54,6 +63,7 @@
 - Riverpod 3: StreamProvider без слушателей на паузе — в тестах `container.listen(...)` перед `read(.future)`
 - Виджет-тесты с drift-потоками: БД закрывать через `tester.runAsync(db.close)` после снятия экрана — иначе tearDown под fake async зависает
 - Сервисы этапа 2 — через провайдеры-контракты (questServiceProvider, reminderSchedulerProvider), реализация подключается в main
+- С этапа 5 по просьбе владельца: тесты не пишем, CI не ждём блокирующе (только analyze/vet), сразу следующий этап
 - Проверка на телефоне — не после каждого этапа, а вместе после этапа 4–5 (решение владельца); после зелёного CI сразу следующий этап
 - Порядок анкеты: Профиль → Персонаж → Тело → … (ассистент озвучивает фото-сессии)
 - TTS: сеттеры движка (язык/голос/тон/скорость) применяются только при изменении, stop — только если фраза звучит (иначе лаг отсчёта на Android/iOS)
