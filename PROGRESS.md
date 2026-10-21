@@ -20,7 +20,7 @@
 - B Анкета 7–12: готово (8 тестов) — lib/features/onboarding/questionnaire_b/
 - C Расписание: готово (34 теста) — lib/features/schedule/
 - D План и нормы: в работе — lib/features/plan/
-- E Настройки, экспорт/импорт: в работе — lib/features/settings/
+- E Настройки, экспорт/импорт: готово (19 тестов) — lib/features/settings/
 
 ## Решения и договорённости
 - Репозиторий `sistema` публичный — бесплатные минуты macOS в Actions
