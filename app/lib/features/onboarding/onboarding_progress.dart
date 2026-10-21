@@ -56,6 +56,17 @@ class OnboardingProgress extends ChangeNotifier {
     await _db?.setSetting(completedKey, '1');
   }
 
+  /// Перечитать из БД (после импорта данных).
+  Future<void> reload() async {
+    final db = _db;
+    if (db == null) return;
+    final fresh = await load(db);
+    _completed = fresh._completed;
+    _stepIndex = fresh._stepIndex;
+    _introSeen = fresh._introSeen;
+    notifyListeners();
+  }
+
   /// Пройти анкету заново (из настроек). Данные не удаляются.
   Future<void> restart() async {
     _completed = false;

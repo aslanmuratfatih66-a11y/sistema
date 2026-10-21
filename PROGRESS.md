@@ -3,7 +3,7 @@
 ## Сейчас
 Этап: 1 — Онбординг, профиль, расписание, план
 Статус: в работе
-Следующий шаг: сабагенты A–E (см. ниже), затем интеграция
+Следующий шаг: дождаться отчётов сабагентов A–E (запущены параллельно), затем интеграция
 
 ## Этап 1 — чек-лист
 - [x] Каркас: схема БД v2 (Profiles, BodyMeasurements, Photos, Goals, ScheduleSettings/Items, Plans, QuestionnaireSections), enums, QuestionnaireRepository, хост анкеты (OnboardingScreen/StepFrame/StepScope/StepEditScreen), роутер с redirect на /onboarding, поля ввода ui/form_fields.dart, зависимости (camera, permission_handler, file_picker, share_plus, uuid, path), Info.plist/манифест, Drift в вебе
@@ -16,11 +16,11 @@
 - [ ] 7. CI зелёный, отчёт
 
 ## Сабагенты (текущий этап)
-- A Анкета 1–6: не начат — lib/features/onboarding/questionnaire_a/
-- B Анкета 7–12: не начат — lib/features/onboarding/questionnaire_b/
-- C Расписание: не начат — lib/features/schedule/
-- D План и нормы: не начат — lib/features/plan/
-- E Настройки, экспорт/импорт: не начат — lib/features/settings/
+- A Анкета 1–6: в работе — lib/features/onboarding/questionnaire_a/
+- B Анкета 7–12: в работе — lib/features/onboarding/questionnaire_b/
+- C Расписание: в работе — lib/features/schedule/
+- D План и нормы: в работе — lib/features/plan/
+- E Настройки, экспорт/импорт: в работе — lib/features/settings/
 
 ## Решения и договорённости
 - Репозиторий `sistema` публичный — бесплатные минуты macOS в Actions
