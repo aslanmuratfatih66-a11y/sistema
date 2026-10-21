@@ -1,25 +1,26 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 0 — Репозиторий, каркас, дизайн-система, сборка
-Статус: завершён (проверен на телефоне 2026-10-21)
-Следующий шаг: этап 1 — новая сессия с промптом этапа 1 из STAGES.md
+Этап: 1 — Онбординг, профиль, расписание, план
+Статус: в работе
+Следующий шаг: сабагенты A–E (см. ниже), затем интеграция
 
-## Этап 0 — чек-лист
-- [x] 1. Репозиторий https://github.com/aslanmuratfatih66-a11y/sistema (публичный)
-- [x] 2. Монорепо (каркас: контракты ui/, CapabilityService, Drift AppSettings, роутер 5 вкладок, go.mod): app/ (Flutter, Riverpod, go_router, Drift, l10n ru/tr), server/ (Go, /healthz, go test), deploy/, docs/
-- [x] 3. Дизайн-система (SPEC §4)
-- [x] 4. Главный экран-эталон (10 блоков) + пустые экраны разделов
-- [x] 5. CapabilityService + баннер «сертификат истекает через N дн.»
-- [x] 6. CI: ipa без подписи, apk, сервер — до зелёного
-- [x] 7. Отчёт и ссылки на .ipa/.apk
+## Этап 1 — чек-лист
+- [x] Каркас: схема БД v2 (Profiles, BodyMeasurements, Photos, Goals, ScheduleSettings/Items, Plans, QuestionnaireSections), enums, QuestionnaireRepository, хост анкеты (OnboardingScreen/StepFrame/StepScope/StepEditScreen), роутер с redirect на /onboarding, поля ввода ui/form_fields.dart, зависимости (camera, permission_handler, file_picker, share_plus, uuid, path), Info.plist/манифест, Drift в вебе
+- [ ] 1. Онбординг 12 этапов (A: 1–6, B: 7–12), камера с контуром, фото локально
+- [ ] 2. Расписание с чередованием недель, выход из дома (C)
+- [ ] 3. Черновой план без ИИ + экран «План» с «Принять» (D)
+- [ ] 4. Редактирование анкеты в настройках (E)
+- [ ] 5. Экспорт/импорт JSON (E)
+- [ ] 6. Юнит-тесты норм и расписания
+- [ ] 7. CI зелёный, отчёт
 
 ## Сабагенты (текущий этап)
-- A Дизайн-система: готово — app/lib/ui/theme, app/lib/ui/components
-- B Главный экран: готово — app/lib/features/home
-- C CI: готово — .github/workflows
-- D Сервер-заготовка: готово — server/, deploy/
-- E Платформа: готово — app/lib/core/capabilities, баннер, нативное чтение профиля
+- A Анкета 1–6: не начат — lib/features/onboarding/questionnaire_a/
+- B Анкета 7–12: не начат — lib/features/onboarding/questionnaire_b/
+- C Расписание: не начат — lib/features/schedule/
+- D План и нормы: не начат — lib/features/plan/
+- E Настройки, экспорт/импорт: не начат — lib/features/settings/
 
 ## Решения и договорённости
 - Репозиторий `sistema` публичный — бесплатные минуты macOS в Actions
@@ -32,6 +33,10 @@
 - Тексты демо-данных главного экрана — через l10n (HomeText.l10n), homeDataProvider заменим реальными данными на этапе 2
 - Компоненты дизайн-системы — публичное API в app/lib/ui/ui.dart, фичи импортируют только его
 - ARB (app/lib/l10n/*.arb) правит один агент за раз (на этапе 0 — сабагент B); после правки `flutter gen-l10n`
+- ARB: строки во фрагментах app/l10n_parts/<часть>_{ru,tr}.arb; общий lib/l10n/app_*.arb собирается `dart run tool/merge_l10n.dart` + `flutter gen-l10n` (не править руками)
+- Строки таблиц Drift — классы *Row (ProfileRow, PlanRow…), доменные имена свободны
+- Разделы анкеты без своих таблиц (кожа, здоровье, питание, тренировки, финансы, персонаж, разрешения) — JSON в QuestionnaireSections; переедут в таблицы на этапах 3/6/7
+- Язык интерфейса — Profiles.locale (appLocaleProvider), null — язык системы
 - Коммиты только с PROGRESS/docs — с `[skip ci]`, чтобы не тратить сборку iOS
 - Предпросмотр в браузере: `flutter run -d chrome -t lib/main_preview.dart` (app/). device_preview 3.0 (тулбар теперь в DevTools, вкладка device_preview); своя рамка iPhone 15 Pro = геометрия iPhone 16; Alt+L — ru/tr; нативное — PreviewCapabilityService (`--dart-define=PREVIEW_PLATFORM=android`, `PREVIEW_CERT_DAYS=N`). lib/main.dart не тронут
 - Язык: жёсткий `locale: ru` убран — язык системы (tr → турецкий, иначе русский), `SistemaApp(locale:)` для языка из профиля на этапе 1
@@ -58,5 +63,6 @@
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 
 ## История
+- 2026-10-21 — этап 1 — начат, каркас
 - 2026-10-21 — этап 0 — проверен на телефоне; добавлен веб-предпросмотр (main_preview.dart)
 - 2026-10-21 — этап 0 — каркас, дизайн-система, главный экран, CapabilityService, сервер-заготовка, CI зелёный

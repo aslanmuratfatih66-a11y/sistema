@@ -1,0 +1,394 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Система",
+  "navStatus": "Статус",
+  "navQuests": "Квесты",
+  "navNutrition": "Питание",
+  "navShop": "Магазин",
+  "navMore": "Ещё",
+  "sectionEmptyTitle": "Раздел в разработке",
+  "sectionEmptyBody": "Система откроет этот раздел на следующих этапах.",
+  "certExpiresInDays": "{days, plural, =0{Сертификат истекает сегодня} one{Сертификат истекает через {days} день} few{Сертификат истекает через {days} дня} other{Сертификат истекает через {days} дней}}",
+  "@certExpiresInDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "certExpired": "Сертификат истёк — переустановите приложение",
+  "certReinstallHint": "Переустановите приложение через Sideloadly, данные сохранятся после синхронизации.",
+  "homeSystemOnline": "Система · онлайн",
+  "homeNotificationsLabel": "Уведомления: {count}",
+  "@homeNotificationsLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeSettingsLabel": "Настройки",
+  "homeWeekDay": "Неделя {week} · день {day}",
+  "@homeWeekDay": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      },
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "homeStatusTitle": "Статус",
+  "homeLevelShort": "LV",
+  "homeLevelSemantics": "Уровень {level}",
+  "@homeLevelSemantics": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "homeRank": "Ранг {rank}",
+  "@homeRank": {
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStreakDays": "{count, plural, one{{count} день подряд} few{{count} дня подряд} many{{count} дней подряд} other{{count} дня подряд}}",
+  "@homeStreakDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeXpLabel": "Опыт · до LV {level}",
+  "@homeXpLabel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "homeXpValue": "{current} / {total} XP",
+  "@homeXpValue": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "homeEnergy": "Энергия",
+  "homeWater": "Вода",
+  "homeCalories": "Калории",
+  "homePercentValue": "{value}%",
+  "@homePercentValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "homeLitersProgress": "{current} / {total} л",
+  "@homeLitersProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "homeKcalProgress": "{current} / {total} ккал",
+  "@homeKcalProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "homeKcalValue": "{value} ккал",
+  "@homeKcalValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStatStrength": "Сила",
+  "homeStatEndurance": "Выносливость",
+  "homeStatDiscipline": "Дисциплина",
+  "homeStatIntellect": "Интеллект",
+  "homeStatHealth": "Здоровье",
+  "homeStatLooks": "Внешность",
+  "homeStatDeltaSemantics": "{stat}: {value}, за сегодня {delta}",
+  "@homeStatDeltaSemantics": {
+    "placeholders": {
+      "stat": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "homePointsLabel": "Баллы",
+  "homePointsValue": "{points} ◆",
+  "@homePointsValue": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStatPointsButton": "Очки характ.: {count}",
+  "@homeStatPointsButton": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeEffectsTitle": "Эффекты",
+  "homeEffectsEmpty": "Активных эффектов нет",
+  "homeNextQuestTitle": "Следующий квест",
+  "homeQuestDeadline": "до {time}",
+  "@homeQuestDeadline": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "homeTimeLeftSemantics": "Осталось {time}",
+  "@homeTimeLeftSemantics": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "homeRewardLabel": "Награда",
+  "homePenaltyLabel": "Штраф",
+  "homeRewardPoints": "+{points} ◆",
+  "@homeRewardPoints": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "homePenaltyPoints": "−{points} ◆",
+  "@homePenaltyPoints": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "homeRewardXp": "+{xp} XP",
+  "@homeRewardXp": {
+    "placeholders": {
+      "xp": {
+        "type": "String"
+      }
+    }
+  },
+  "homeActionDone": "Выполнено",
+  "homeActionSnooze": "+10 мин",
+  "homeActionNoWater": "Нет воды",
+  "homeActionRefuse": "Отказ",
+  "homeRefuseHint": "Отказ: удерживать 5 сек",
+  "homeNoticeLabel": "Уведомление",
+  "homeWarningLabel": "Предупреждение",
+  "homeQuestCompletedTitle": "Квест выполнен",
+  "homeQuestCompletedMessage": "Награда: +{points} ◆, +{xp} XP.",
+  "@homeQuestCompletedMessage": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      },
+      "xp": {
+        "type": "String"
+      }
+    }
+  },
+  "homeQuestFailedTitle": "Квест провален",
+  "homeQuestRefusedMessage": "Отказ от квеста «{quest}». Штраф: −{points} ◆.",
+  "@homeQuestRefusedMessage": {
+    "placeholders": {
+      "quest": {
+        "type": "String"
+      },
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "homeNoWaterMessage": "Квест отложен: Система напомнит, когда вода будет рядом.",
+  "homeOk": "Понятно",
+  "homeDayTitle": "День",
+  "homeSegSleep": "Сон",
+  "homeSegClasses": "Пары",
+  "homeSegWorkout": "Тренировка",
+  "homeSegFree": "Свободно",
+  "homeSegCommute": "Дорога",
+  "homeNow": "Сейчас {time}",
+  "@homeNow": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "homeLeaveHome": "Выход из дома: {time}",
+  "@homeLeaveHome": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "homeSegmentSemantics": "{type}: {start}–{end}",
+  "@homeSegmentSemantics": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "homeDailyTitle": "Ежедневные квесты",
+  "homeDailyCounter": "{done} / {total}",
+  "@homeDailyCounter": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDailyPenaltyTotal": "Штраф при провале: −{points} ◆",
+  "@homeDailyPenaltyTotal": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "homeMinutesProgress": "{current} / {total} мин",
+  "@homeMinutesProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStepsProgress": "{current} / {total} шагов",
+  "@homeStepsProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBossTitle": "Босс недели",
+  "homeBossTimeLeft": "{days} д {time}",
+  "@homeBossTimeLeft": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBossProgress": "{current} / {total}",
+  "@homeBossProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "homeBossReward": "Награда: +{points} ◆ и титул «{title}»",
+  "@homeBossReward": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "homeEaten": "Съедено",
+  "homeBurned": "Сожжено",
+  "homeDeficit": "Дефицит",
+  "homeFinanceTitle": "Финансы",
+  "homeFoodSpent": "Траты на еду",
+  "homeLimit": "Лимит",
+  "homeUntilStipend": "До стипендии",
+  "homeDaysCount": "{count, plural, one{{count} день} few{{count} дня} many{{count} дней} other{{count} дня}}",
+  "@homeDaysCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeAssistantTitle": "Ассистент",
+  "homeAssistantAvatar": "Персонаж-ассистент",
+  "homeAssistantSpeaking": "Ассистент говорит",
+  "homeMicLabel": "Голосовой ввод",
+  "homeReplyHint": "Ответить…",
+  "homeSendLabel": "Отправить",
+  "homeDemoPlayerName": "Мурат",
+  "homeDemoPlayerTitle": "Пробуждённый",
+  "homeDemoEffectVigor": "Бодрость +5% опыта",
+  "homeDemoEffectDehydration": "Обезвоживание −10% выносливости",
+  "homeDemoNextQuest": "Выпить 500 мл воды",
+  "homeDemoQuestWakeUp": "Подъём до 07:00",
+  "homeDemoQuestBreakfast": "Завтрак с белком",
+  "homeDemoQuestWater": "Выпить 2,5 л воды",
+  "homeDemoQuestWorkout": "Тренировка дома",
+  "homeDemoSubWarmup": "Разминка 5 мин",
+  "homeDemoSubPushups": "Отжимания 3×15",
+  "homeDemoSubPlank": "Планка 3×45 с",
+  "homeDemoQuestReading": "Читать 20 минут",
+  "homeDemoQuestSteps": "Пройти 8 000 шагов",
+  "homeDemoQuestSleep": "Отбой до 23:00",
+  "homeDemoBossGoal": "Провести 5 тренировок за неделю",
+  "homeDemoBossRewardTitle": "Несгибаемый",
+  "homeDemoAssistantLine": "Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час."
+}

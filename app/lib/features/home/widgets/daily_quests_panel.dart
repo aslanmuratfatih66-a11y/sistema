@@ -6,7 +6,6 @@ import '../../../l10n/app_localizations.dart';
 import '../../../ui/ui.dart';
 import '../data/home_providers.dart';
 import '../models/home_view_data.dart';
-import '../utils/home_format.dart';
 
 /// Сумма штрафов по невыполненным квестам.
 int pendingPenalty(List<DailyQuest> quests, Map<String, bool> checks) => quests

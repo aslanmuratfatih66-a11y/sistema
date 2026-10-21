@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sistema/features/home/data/demo_home_data.dart';
 import 'package:sistema/features/home/utils/home_format.dart';
+import 'package:sistema/ui/ui.dart' show formatMinuteOfDay;
 import 'package:sistema/features/home/widgets/daily_quests_panel.dart';
 
 void main() {

@@ -12,6 +12,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app/app.dart';
 import 'core/capabilities/capability_service.dart';
 import 'core/capabilities/preview_capability_service.dart';
+import 'core/db/database.dart';
+import 'features/onboarding/onboarding_progress.dart';
 
 /// iPhone 15 Pro: 393×852 @3x, Dynamic Island — геометрия как у iPhone 16,
 /// которого пресет есть в device_preview 3.0 (15 Pro в каталоге нет).
@@ -40,12 +42,17 @@ Future<void> main() async {
   await controller.applyPreset(iPhone15Pro);
   await controller.update((s) => s.copyWith(locales: [_locales.first]));
 
+  final db = AppDatabase();
+  final onboarding = await OnboardingProgress.load(db);
+
   HardwareKeyboard.instance.addHandler(_toggleLocaleOnAltL);
   debugPrint('Предпросмотр: Alt+L — ru/tr; остальное — вкладка device_preview в DevTools.');
 
   runApp(ProviderScope(
     overrides: [
       capabilityServiceProvider.overrideWithValue(PreviewCapabilityService()),
+      databaseProvider.overrideWithValue(db),
+      onboardingProgressProvider.overrideWithValue(onboarding),
     ],
     child: const SistemaApp(),
   ));

@@ -438,4 +438,106 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get homeDemoAssistantLine =>
       'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.';
+
+  @override
+  String get commonNext => 'Далее';
+
+  @override
+  String get commonBack => 'Назад';
+
+  @override
+  String get commonDone => 'Готово';
+
+  @override
+  String get commonClose => 'Закрыть';
+
+  @override
+  String get commonSave => 'Сохранить';
+
+  @override
+  String get commonCancel => 'Отмена';
+
+  @override
+  String get commonDelete => 'Удалить';
+
+  @override
+  String get commonAdd => 'Добавить';
+
+  @override
+  String get commonEdit => 'Изменить';
+
+  @override
+  String get commonSkip => 'Пропустить';
+
+  @override
+  String get commonOptional => 'необязательно';
+
+  @override
+  String get commonOutOfRange => 'Проверьте значение';
+
+  @override
+  String get commonRequired => 'Обязательное поле';
+
+  @override
+  String get commonEstimateNote => 'оценка по фото, не медицинское измерение';
+
+  @override
+  String get commonCalculatedBySystem => 'Будет рассчитано Системой';
+
+  @override
+  String get onbIntroLabel => 'Уведомление';
+
+  @override
+  String get onbIntroTitle => 'Вы получили право стать Игроком';
+
+  @override
+  String get onbIntroMessage =>
+      'Система соберёт сведения о вас, чтобы составить план. Ответы сохраняются сразу — можно прерваться и продолжить позже. Любой раздел можно изменить в настройках.';
+
+  @override
+  String get onbIntroAccept => 'Принять';
+
+  @override
+  String onbStepCounter(int current, int total) {
+    return 'Этап $current/$total';
+  }
+
+  @override
+  String get onbFinish => 'Завершить';
+
+  @override
+  String get onbStepProfile => 'Профиль';
+
+  @override
+  String get onbStepBody => 'Тело';
+
+  @override
+  String get onbStepBodyPhotos => 'Фото тела';
+
+  @override
+  String get onbStepSkin => 'Кожа';
+
+  @override
+  String get onbStepHealth => 'Здоровье';
+
+  @override
+  String get onbStepGoals => 'Цели';
+
+  @override
+  String get onbStepSchedule => 'Расписание';
+
+  @override
+  String get onbStepNutrition => 'Питание';
+
+  @override
+  String get onbStepTraining => 'Тренировки';
+
+  @override
+  String get onbStepFinance => 'Финансы';
+
+  @override
+  String get onbStepCharacter => 'Персонаж и голос';
+
+  @override
+  String get onbStepPermissions => 'Разрешения';
 }

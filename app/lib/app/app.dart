@@ -3,16 +3,22 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../core/data/app_locale.dart';
+import '../features/onboarding/onboarding_progress.dart';
 import '../l10n/app_localizations.dart';
 import '../ui/ui.dart';
 import 'router.dart';
 
-final routerProvider = Provider<GoRouter>((ref) => buildRouter());
+final routerProvider = Provider<GoRouter>((ref) {
+  final router = buildRouter(ref.watch(onboardingProgressProvider));
+  ref.onDispose(router.dispose);
+  return router;
+});
 
 class SistemaApp extends ConsumerWidget {
   const SistemaApp({super.key, this.locale});
 
-  /// Язык из профиля (этап 1). null — язык системы: tr → турецкий, иначе русский.
+  /// Принудительный язык (тесты). null — язык из профиля, иначе системы: tr → турецкий, иначе русский.
   final Locale? locale;
 
   @override
@@ -22,7 +28,7 @@ class SistemaApp extends ConsumerWidget {
         theme: buildSystemTheme(),
         themeMode: ThemeMode.dark,
         routerConfig: ref.watch(routerProvider),
-        locale: locale,
+        locale: locale ?? ref.watch(appLocaleProvider).value,
         localeListResolutionCallback: resolveAppLocale,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: const [

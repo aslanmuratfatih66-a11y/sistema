@@ -1,23 +1,44 @@
 // Роутер приложения. Правит только главный агент.
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/home/home_screen.dart';
+import '../features/onboarding/onboarding_progress.dart';
+import '../features/onboarding/onboarding_screen.dart';
+import '../features/onboarding/onboarding_step.dart';
+import '../features/onboarding/step_edit_screen.dart';
+import '../features/plan/plan_screen.dart';
+import '../features/schedule/schedule_screen.dart';
+import '../features/settings/settings_screen.dart';
 import '../l10n/app_localizations.dart';
 import '../ui/ui.dart';
 import 'app_shell.dart';
 import 'empty_section_screen.dart';
+import 'routes.dart';
 
-abstract final class Routes {
-  static const status = '/status';
-  static const quests = '/quests';
-  static const nutrition = '/nutrition';
-  static const shop = '/shop';
-  static const more = '/more';
-}
+export 'routes.dart';
 
-GoRouter buildRouter() => GoRouter(
+GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
       initialLocation: Routes.status,
+      refreshListenable: onboarding,
+      redirect: (context, state) {
+        final loc = state.matchedLocation;
+        final inOnboarding = loc == Routes.onboarding;
+        if (!onboarding.completed && !inOnboarding) return Routes.onboarding;
+        if (onboarding.completed && inOnboarding) return Routes.plan;
+        return null;
+      },
       routes: [
+        GoRoute(path: Routes.onboarding, builder: (_, _) => const OnboardingScreen()),
+        GoRoute(path: Routes.plan, builder: (_, _) => const PlanScreen()),
+        GoRoute(path: Routes.schedule, builder: (_, _) => const ScheduleScreen()),
+        GoRoute(
+          path: Routes.editStepPattern,
+          builder: (_, state) {
+            final step = OnboardingStep.values.asNameMap()[state.pathParameters['step']];
+            return step == null ? const SizedBox.shrink() : StepEditScreen(step: step);
+          },
+        ),
         StatefulShellRoute.indexedStack(
           builder: (context, state, shell) => AppShell(shell: shell),
           branches: [
@@ -43,10 +64,7 @@ GoRouter buildRouter() => GoRouter(
               ),
             ]),
             StatefulShellBranch(routes: [
-              GoRoute(
-                path: Routes.more,
-                builder: (c, _) => EmptySectionScreen(title: AppLocalizations.of(c).navMore, glyph: SysGlyph.more),
-              ),
+              GoRoute(path: Routes.more, builder: (_, _) => const SettingsScreen()),
             ]),
           ],
         ),

@@ -769,6 +769,204 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.'**
   String get homeDemoAssistantLine;
+
+  /// No description provided for @commonNext.
+  ///
+  /// In ru, this message translates to:
+  /// **'Далее'**
+  String get commonNext;
+
+  /// No description provided for @commonBack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назад'**
+  String get commonBack;
+
+  /// No description provided for @commonDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Готово'**
+  String get commonDone;
+
+  /// No description provided for @commonClose.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрыть'**
+  String get commonClose;
+
+  /// No description provided for @commonSave.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сохранить'**
+  String get commonSave;
+
+  /// No description provided for @commonCancel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отмена'**
+  String get commonCancel;
+
+  /// No description provided for @commonDelete.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить'**
+  String get commonDelete;
+
+  /// No description provided for @commonAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить'**
+  String get commonAdd;
+
+  /// No description provided for @commonEdit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменить'**
+  String get commonEdit;
+
+  /// No description provided for @commonSkip.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пропустить'**
+  String get commonSkip;
+
+  /// No description provided for @commonOptional.
+  ///
+  /// In ru, this message translates to:
+  /// **'необязательно'**
+  String get commonOptional;
+
+  /// No description provided for @commonOutOfRange.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проверьте значение'**
+  String get commonOutOfRange;
+
+  /// No description provided for @commonRequired.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обязательное поле'**
+  String get commonRequired;
+
+  /// No description provided for @commonEstimateNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'оценка по фото, не медицинское измерение'**
+  String get commonEstimateNote;
+
+  /// No description provided for @commonCalculatedBySystem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Будет рассчитано Системой'**
+  String get commonCalculatedBySystem;
+
+  /// No description provided for @onbIntroLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление'**
+  String get onbIntroLabel;
+
+  /// No description provided for @onbIntroTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вы получили право стать Игроком'**
+  String get onbIntroTitle;
+
+  /// No description provided for @onbIntroMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система соберёт сведения о вас, чтобы составить план. Ответы сохраняются сразу — можно прерваться и продолжить позже. Любой раздел можно изменить в настройках.'**
+  String get onbIntroMessage;
+
+  /// No description provided for @onbIntroAccept.
+  ///
+  /// In ru, this message translates to:
+  /// **'Принять'**
+  String get onbIntroAccept;
+
+  /// No description provided for @onbStepCounter.
+  ///
+  /// In ru, this message translates to:
+  /// **'Этап {current}/{total}'**
+  String onbStepCounter(int current, int total);
+
+  /// No description provided for @onbFinish.
+  ///
+  /// In ru, this message translates to:
+  /// **'Завершить'**
+  String get onbFinish;
+
+  /// No description provided for @onbStepProfile.
+  ///
+  /// In ru, this message translates to:
+  /// **'Профиль'**
+  String get onbStepProfile;
+
+  /// No description provided for @onbStepBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тело'**
+  String get onbStepBody;
+
+  /// No description provided for @onbStepBodyPhotos.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото тела'**
+  String get onbStepBodyPhotos;
+
+  /// No description provided for @onbStepSkin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кожа'**
+  String get onbStepSkin;
+
+  /// No description provided for @onbStepHealth.
+  ///
+  /// In ru, this message translates to:
+  /// **'Здоровье'**
+  String get onbStepHealth;
+
+  /// No description provided for @onbStepGoals.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цели'**
+  String get onbStepGoals;
+
+  /// No description provided for @onbStepSchedule.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расписание'**
+  String get onbStepSchedule;
+
+  /// No description provided for @onbStepNutrition.
+  ///
+  /// In ru, this message translates to:
+  /// **'Питание'**
+  String get onbStepNutrition;
+
+  /// No description provided for @onbStepTraining.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировки'**
+  String get onbStepTraining;
+
+  /// No description provided for @onbStepFinance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Финансы'**
+  String get onbStepFinance;
+
+  /// No description provided for @onbStepCharacter.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персонаж и голос'**
+  String get onbStepCharacter;
+
+  /// No description provided for @onbStepPermissions.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешения'**
+  String get onbStepPermissions;
 }
 
 class _AppLocalizationsDelegate

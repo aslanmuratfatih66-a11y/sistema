@@ -1,0 +1,41 @@
+{
+  "commonNext": "Далее",
+  "commonBack": "Назад",
+  "commonDone": "Готово",
+  "commonClose": "Закрыть",
+  "commonSave": "Сохранить",
+  "commonCancel": "Отмена",
+  "commonDelete": "Удалить",
+  "commonAdd": "Добавить",
+  "commonEdit": "Изменить",
+  "commonSkip": "Пропустить",
+  "commonOptional": "необязательно",
+  "commonOutOfRange": "Проверьте значение",
+  "commonRequired": "Обязательное поле",
+  "commonEstimateNote": "оценка по фото, не медицинское измерение",
+  "commonCalculatedBySystem": "Будет рассчитано Системой",
+  "onbIntroLabel": "Уведомление",
+  "onbIntroTitle": "Вы получили право стать Игроком",
+  "onbIntroMessage": "Система соберёт сведения о вас, чтобы составить план. Ответы сохраняются сразу — можно прерваться и продолжить позже. Любой раздел можно изменить в настройках.",
+  "onbIntroAccept": "Принять",
+  "onbStepCounter": "Этап {current}/{total}",
+  "@onbStepCounter": {
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "onbFinish": "Завершить",
+  "onbStepProfile": "Профиль",
+  "onbStepBody": "Тело",
+  "onbStepBodyPhotos": "Фото тела",
+  "onbStepSkin": "Кожа",
+  "onbStepHealth": "Здоровье",
+  "onbStepGoals": "Цели",
+  "onbStepSchedule": "Расписание",
+  "onbStepNutrition": "Питание",
+  "onbStepTraining": "Тренировки",
+  "onbStepFinance": "Финансы",
+  "onbStepCharacter": "Персонаж и голос",
+  "onbStepPermissions": "Разрешения"
+}

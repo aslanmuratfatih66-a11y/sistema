@@ -1,6 +1,7 @@
 // Публичное API дизайн-системы. Фичи импортируют только этот файл.
 export 'components/bottom_nav.dart';
 export 'components/buttons.dart';
+export 'components/form_fields.dart';
 export 'components/panel.dart';
 export 'components/pill.dart';
 export 'components/progress_ring.dart';

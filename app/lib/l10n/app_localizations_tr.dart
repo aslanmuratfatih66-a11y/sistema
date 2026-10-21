@@ -433,4 +433,107 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get homeDemoAssistantLine =>
       'Su hedefinin %48’i tamam. 11:30’a kadar bir bardak iç, «Zindelik» bir saat daha sürsün.';
+
+  @override
+  String get commonNext => 'İleri';
+
+  @override
+  String get commonBack => 'Geri';
+
+  @override
+  String get commonDone => 'Tamam';
+
+  @override
+  String get commonClose => 'Kapat';
+
+  @override
+  String get commonSave => 'Kaydet';
+
+  @override
+  String get commonCancel => 'İptal';
+
+  @override
+  String get commonDelete => 'Sil';
+
+  @override
+  String get commonAdd => 'Ekle';
+
+  @override
+  String get commonEdit => 'Düzenle';
+
+  @override
+  String get commonSkip => 'Atla';
+
+  @override
+  String get commonOptional => 'isteğe bağlı';
+
+  @override
+  String get commonOutOfRange => 'Değeri kontrol edin';
+
+  @override
+  String get commonRequired => 'Zorunlu alan';
+
+  @override
+  String get commonEstimateNote =>
+      'fotoğrafa dayalı tahmin, tıbbi ölçüm değildir';
+
+  @override
+  String get commonCalculatedBySystem => 'Sistem tarafından hesaplanacak';
+
+  @override
+  String get onbIntroLabel => 'Bildirim';
+
+  @override
+  String get onbIntroTitle => 'Oyuncu olma hakkını kazandınız';
+
+  @override
+  String get onbIntroMessage =>
+      'Sistem, size bir plan hazırlamak için bilgilerinizi toplayacak. Cevaplar hemen kaydedilir — ara verip daha sonra devam edebilirsiniz. Her bölüm ayarlardan değiştirilebilir.';
+
+  @override
+  String get onbIntroAccept => 'Kabul et';
+
+  @override
+  String onbStepCounter(int current, int total) {
+    return 'Aşama $current/$total';
+  }
+
+  @override
+  String get onbFinish => 'Bitir';
+
+  @override
+  String get onbStepProfile => 'Profil';
+
+  @override
+  String get onbStepBody => 'Vücut';
+
+  @override
+  String get onbStepBodyPhotos => 'Vücut fotoğrafları';
+
+  @override
+  String get onbStepSkin => 'Cilt';
+
+  @override
+  String get onbStepHealth => 'Sağlık';
+
+  @override
+  String get onbStepGoals => 'Hedefler';
+
+  @override
+  String get onbStepSchedule => 'Program';
+
+  @override
+  String get onbStepNutrition => 'Beslenme';
+
+  @override
+  String get onbStepTraining => 'Antrenman';
+
+  @override
+  String get onbStepFinance => 'Finans';
+
+  @override
+  String get onbStepCharacter => 'Karakter ve ses';
+
+  @override
+  String get onbStepPermissions => 'İzinler';
 }

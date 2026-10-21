@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Камера нужна для фото тела и кожи (оценка прогресса), сканирования штрихкодов и чеков.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Микрофон нужен, чтобы говорить с персонажем голосом.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Датчики движения считают шаги и дистанцию для квестов.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Геолокация нужна для маршрутов прогулок и поиска ближайших магазинов.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Геолокация «Всегда» нужна, чтобы прогулка с голосовыми подсказками работала с выключенным экраном.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Доступ к медиатеке нужен, чтобы показывать текущий трек на прогулке и тренировке.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

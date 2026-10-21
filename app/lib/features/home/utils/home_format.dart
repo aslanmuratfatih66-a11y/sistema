@@ -24,13 +24,6 @@ String formatHoursMinutes(Duration d) {
   return '$h:${m.toString().padLeft(2, '0')}';
 }
 
-/// «HH:MM» из минут от полуночи.
-String formatMinuteOfDay(int minutes) {
-  final h = (minutes ~/ 60) % 24;
-  final m = minutes % 60;
-  return '${h.toString().padLeft(2, '0')}:${m.toString().padLeft(2, '0')}';
-}
-
 int minuteOfDay(DateTime t) => t.hour * 60 + t.minute;
 
 /// Позиция момента на ленте дня [startMinute..endMinute] в долях 0..1 (с зажимом).
