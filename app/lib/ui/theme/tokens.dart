@@ -8,6 +8,9 @@ abstract final class SysColors {
   static const backgroundGlow = Color.fromRGBO(20, 70, 160, .55);
   static const gridLine = Color.fromRGBO(63, 180, 255, .045);
   static const double gridStep = 22;
+  static const scanline = Color.fromRGBO(120, 190, 255, .035);
+  static const double scanlineStep = 3;
+  static const barrier = Color.fromRGBO(1, 3, 8, .78);
 
   // Панель
   static const panelTop = Color.fromRGBO(13, 32, 68, .94);
@@ -59,6 +62,10 @@ abstract final class SysDims {
   static const double minTap = 44;
   static const Duration windowAppear = Duration(milliseconds: 250);
   static const Duration holdToConfirm = Duration(seconds: 5);
+  static const Duration barFill = Duration(milliseconds: 600);
+
+  /// Межбуквенный интервал заголовков: 0.13em.
+  static double headingSpacing(double fontSize) => fontSize * 0.13;
 }
 
 /// Смысловая тема панели/пилюли/кнопки: штрафы — красная, награды — золотая,
@@ -86,45 +93,45 @@ class TonePalette {
 
 extension PanelToneX on PanelTone {
   TonePalette get palette => switch (this) {
-        PanelTone.accent => const TonePalette(
-            main: SysColors.accent,
-            light: SysColors.accentLighter,
-            border: SysColors.panelBorder,
-            glow: SysColors.panelOuterGlow,
-            top: SysColors.panelTop,
-            bottom: SysColors.panelBottom,
-          ),
-        PanelTone.gold => const TonePalette(
-            main: SysColors.gold,
-            light: Color(0xFFFFDE95),
-            border: Color.fromRGBO(255, 200, 87, .55),
-            glow: Color.fromRGBO(255, 170, 40, .24),
-            top: Color.fromRGBO(52, 38, 12, .94),
-            bottom: Color.fromRGBO(22, 15, 4, .94),
-          ),
-        PanelTone.danger => const TonePalette(
-            main: SysColors.danger,
-            light: SysColors.dangerLight,
-            border: Color.fromRGBO(255, 77, 94, .55),
-            glow: Color.fromRGBO(255, 40, 60, .26),
-            top: Color.fromRGBO(60, 12, 20, .94),
-            bottom: Color.fromRGBO(26, 4, 8, .94),
-          ),
-        PanelTone.boss => const TonePalette(
-            main: SysColors.boss,
-            light: SysColors.bossLight,
-            border: Color.fromRGBO(176, 108, 255, .55),
-            glow: Color.fromRGBO(140, 70, 255, .28),
-            top: Color.fromRGBO(38, 18, 66, .94),
-            bottom: Color.fromRGBO(15, 6, 30, .94),
-          ),
-        PanelTone.success => const TonePalette(
-            main: SysColors.success,
-            light: Color(0xFF9CF0C6),
-            border: Color.fromRGBO(91, 227, 160, .55),
-            glow: Color.fromRGBO(40, 200, 130, .24),
-            top: Color.fromRGBO(10, 46, 34, .94),
-            bottom: Color.fromRGBO(4, 20, 14, .94),
-          ),
-      };
+    PanelTone.accent => const TonePalette(
+      main: SysColors.accent,
+      light: SysColors.accentLighter,
+      border: SysColors.panelBorder,
+      glow: SysColors.panelOuterGlow,
+      top: SysColors.panelTop,
+      bottom: SysColors.panelBottom,
+    ),
+    PanelTone.gold => const TonePalette(
+      main: SysColors.gold,
+      light: Color(0xFFFFDE95),
+      border: Color.fromRGBO(255, 200, 87, .55),
+      glow: Color.fromRGBO(255, 170, 40, .24),
+      top: Color.fromRGBO(52, 38, 12, .94),
+      bottom: Color.fromRGBO(22, 15, 4, .94),
+    ),
+    PanelTone.danger => const TonePalette(
+      main: SysColors.danger,
+      light: SysColors.dangerLight,
+      border: Color.fromRGBO(255, 77, 94, .55),
+      glow: Color.fromRGBO(255, 40, 60, .26),
+      top: Color.fromRGBO(60, 12, 20, .94),
+      bottom: Color.fromRGBO(26, 4, 8, .94),
+    ),
+    PanelTone.boss => const TonePalette(
+      main: SysColors.boss,
+      light: SysColors.bossLight,
+      border: Color.fromRGBO(176, 108, 255, .55),
+      glow: Color.fromRGBO(140, 70, 255, .28),
+      top: Color.fromRGBO(38, 18, 66, .94),
+      bottom: Color.fromRGBO(15, 6, 30, .94),
+    ),
+    PanelTone.success => const TonePalette(
+      main: SysColors.success,
+      light: Color(0xFF9CF0C6),
+      border: Color.fromRGBO(91, 227, 160, .55),
+      glow: Color.fromRGBO(40, 200, 130, .24),
+      top: Color.fromRGBO(10, 46, 34, .94),
+      bottom: Color.fromRGBO(4, 20, 14, .94),
+    ),
+  };
 }

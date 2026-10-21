@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../core/capabilities/certificate_banner.dart';
 import '../l10n/app_localizations.dart';
 import '../ui/ui.dart';
 
@@ -18,7 +19,21 @@ class AppShell extends StatelessWidget {
       body: SystemBackground(
         child: Column(
           children: [
-            Expanded(child: shell),
+            // Верхний safe area забирает оболочка: баннер + контент вкладки,
+            // чтобы у экранов не было двойного отступа.
+            Expanded(
+              child: SafeArea(
+                bottom: false,
+                child: Column(
+                  children: [
+                    const CertificateBanner(),
+                    Expanded(
+                      child: MediaQuery.removePadding(context: context, removeTop: true, child: shell),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             SysBottomNav(
               currentIndex: shell.currentIndex,
               onTap: (i) => shell.goBranch(i, initialLocation: i == shell.currentIndex),
