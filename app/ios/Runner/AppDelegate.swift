@@ -1,19 +1,36 @@
 import Flutter
 import UIKit
+import flutter_local_notifications
+import workmanager_apple
 
 @main
 @objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
   /// Канал платформенных данных (SPEC §3: CapabilityService).
   private var platformChannel: FlutterMethodChannel?
 
+  /// BGAppRefresh: перепланирование окна уведомлений (SPEC §7). Совпадает с Info.plist и Dart (notifications).
+  static let refreshTaskId = "com.sistema.sistema.refresh"
+
   override func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    // Уведомления на переднем плане и кнопки действий (flutter_local_notifications).
+    UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+    // Фоновая задача: обработчик регистрируется до конца запуска (требование BGTaskScheduler).
+    WorkmanagerPlugin.setPluginRegistrantCallback { registry in
+      GeneratedPluginRegistrant.register(with: registry)
+    }
+    WorkmanagerPlugin.registerPeriodicTask(
+      withIdentifier: AppDelegate.refreshTaskId, earliestBeginInSeconds: NSNumber(value: 15 * 60))
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
+    // Кнопки уведомлений обрабатываются в отдельном isolate — ему тоже нужны плагины.
+    FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { registry in
+      GeneratedPluginRegistrant.register(with: registry)
+    }
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
 
     let channel = FlutterMethodChannel(

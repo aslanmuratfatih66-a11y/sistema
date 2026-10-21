@@ -4831,6 +4831,36 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Разделы анкеты'**
   String get setTableQuestionnaireSections;
+
+  /// No description provided for @setSectionQuests.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты'**
+  String get setSectionQuests;
+
+  /// No description provided for @setReminders.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напоминания'**
+  String get setReminders;
+
+  /// No description provided for @setRemindersHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тихие часы, повтор, упрёки'**
+  String get setRemindersHint;
+
+  /// No description provided for @setDiscipline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режим дисциплины'**
+  String get setDiscipline;
+
+  /// No description provided for @setDisciplineHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём 6:00, отбой 22:00, доп. нагрузка'**
+  String get setDisciplineHint;
 }
 
 class _AppLocalizationsDelegate

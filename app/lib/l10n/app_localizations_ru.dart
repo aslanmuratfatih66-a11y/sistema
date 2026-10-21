@@ -2703,4 +2703,19 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get setTableQuestionnaireSections => 'Разделы анкеты';
+
+  @override
+  String get setSectionQuests => 'Квесты';
+
+  @override
+  String get setReminders => 'Напоминания';
+
+  @override
+  String get setRemindersHint => 'Тихие часы, повтор, упрёки';
+
+  @override
+  String get setDiscipline => 'Режим дисциплины';
+
+  @override
+  String get setDisciplineHint => 'Подъём 6:00, отбой 22:00, доп. нагрузка';
 }

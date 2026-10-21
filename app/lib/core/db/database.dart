@@ -1,5 +1,6 @@
 // Схема локальной БД (Drift). Правит только главный агент.
 // Этап 1: профиль, замеры, фото, цели, расписание, план, разделы анкеты.
+// Этап 2: квесты, экземпляры, журнал событий, эффекты, паузы, награды магазина, пользовательские настройки.
 // Остальные сущности SPEC §11 — на следующих этапах (миграции через schemaVersion).
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -123,6 +124,111 @@ class QuestionnaireSections extends Table with SyncColumns {
   TextColumn get payload => text()();
 }
 
+// ---- Этап 2 (SPEC §6–7) ----
+
+/// Шаблон квеста: что, когда, награда/штраф. Экземпляры на дни — [QuestInstances].
+@DataClassName('QuestRow')
+class Quests extends Table with SyncColumns {
+  TextColumn get kind => text()(); // QuestKind.name
+  TextColumn get stat => text().nullable()(); // StatKind.name — какую характеристику качает
+  TextColumn get titleKey => text().nullable()(); // QuestKey.name (квест из плана, локализуется)
+  TextColumn get title => text().nullable()(); // свой текст (custom/ai)
+  TextColumn get params => text().withDefault(const Constant('{}'))(); // JSON параметров названия
+  TextColumn get subtasks => text().withDefault(const Constant('[]'))(); // JSON: список названий подзадач
+  IntColumn get minute => integer().nullable()(); // начало, минута суток; null — в течение дня
+  IntColumn get windowMinutes => integer().withDefault(const Constant(60))(); // время на выполнение → дедлайн
+  TextColumn get weekdays => text().withDefault(const Constant(''))(); // '1,3,5'; пусто — каждый день
+  IntColumn get weekParity => integer().withDefault(const Constant(0))(); // 0 — каждую неделю, 1/2 — только эту
+  DateTimeColumn get activeFrom => dateTime().nullable()(); // разовый/временный квест: с какого дня
+  DateTimeColumn get activeUntil => dateTime().nullable()(); // по какой день включительно
+  IntColumn get rewardDiamonds => integer().withDefault(const Constant(0))();
+  IntColumn get rewardXp => integer().withDefault(const Constant(0))();
+  TextColumn get rewardStats => text().withDefault(const Constant('{}'))(); // JSON {StatKind.name: n}
+  IntColumn get penaltyDiamonds => integer().withDefault(const Constant(0))(); // за провал (игнор)
+  IntColumn get refusePenaltyDiamonds => integer().nullable()(); // за отказ; null — по формуле движка
+  TextColumn get confirm => text().withDefault(const Constant('button'))(); // ConfirmMethod.name
+  IntColumn get target => integer().nullable()(); // шаги/минуты/цель босса
+  BoolColumn get nag => boolean().withDefault(const Constant(true))(); // «надоедать» каждую минуту
+  BoolColumn get cancellable => boolean().withDefault(const Constant(true))(); // штрафные — false
+  TextColumn get source => text().withDefault(const Constant('user'))(); // QuestSource.name
+  TextColumn get planId => text().nullable()(); // из какого плана
+  BoolColumn get active => boolean().withDefault(const Constant(true))();
+}
+
+/// Экземпляр квеста на день (для босса — на неделю: day = понедельник).
+/// Награда/штраф копируются при создании: правка шаблона не меняет прошлое.
+@DataClassName('QuestInstanceRow')
+class QuestInstances extends Table with SyncColumns {
+  TextColumn get questId => text()();
+  DateTimeColumn get day => dateTime()(); // локальная полночь
+  DateTimeColumn get startsAt => dateTime().nullable()();
+  DateTimeColumn get deadlineAt => dateTime()();
+  TextColumn get status => text().withDefault(const Constant('pending'))(); // QuestStatus.name
+  DateTimeColumn get resolvedAt => dateTime().nullable()();
+  DateTimeColumn get snoozedUntil => dateTime().nullable()(); // «+10 мин»
+  IntColumn get snoozeCount => integer().withDefault(const Constant(0))();
+  IntColumn get progress => integer().withDefault(const Constant(0))(); // к Quests.target
+  TextColumn get subtasksDone => text().withDefault(const Constant('[]'))(); // JSON: индексы
+  IntColumn get rewardDiamonds => integer().withDefault(const Constant(0))();
+  IntColumn get rewardXp => integer().withDefault(const Constant(0))();
+  TextColumn get rewardStats => text().withDefault(const Constant('{}'))();
+  IntColumn get penaltyDiamonds => integer().withDefault(const Constant(0))();
+  IntColumn get refusePenaltyDiamonds => integer().withDefault(const Constant(0))();
+
+  @override
+  List<Set<Column<Object>>> get uniqueKeys => [
+        {questId, day},
+      ];
+}
+
+/// Журнал событий (SPEC §10): ◆, опыт и характеристики считаются суммой, не перезаписываются.
+@DataClassName('QuestEventRow')
+class QuestEvents extends Table with SyncColumns {
+  TextColumn get type => text()(); // QuestEventType.name
+  DateTimeColumn get occurredAt => dateTime()();
+  TextColumn get questId => text().nullable()();
+  TextColumn get instanceId => text().nullable()();
+  IntColumn get diamonds => integer().withDefault(const Constant(0))(); // ± ◆
+  IntColumn get xp => integer().withDefault(const Constant(0))(); // ± опыт (≥0 по правилам движка)
+  TextColumn get stats => text().withDefault(const Constant('{}'))(); // JSON {StatKind.name: ±n}
+  TextColumn get payload => text().withDefault(const Constant('{}'))(); // JSON: mark, rewardId, reason…
+}
+
+/// Баффы/дебаффы с таймером (SPEC §4 «Эффекты»).
+@DataClassName('EffectRow')
+class Effects extends Table with SyncColumns {
+  TextColumn get kind => text()(); // ключ эффекта (движок квестов)
+  DateTimeColumn get startsAt => dateTime()();
+  DateTimeColumn get expiresAt => dateTime()();
+  TextColumn get sourceEventId => text().nullable()();
+  TextColumn get payload => text().withDefault(const Constant('{}'))();
+}
+
+/// Пауза: болезнь/каникулы/отпуск.
+@DataClassName('PauseRow')
+class Pauses extends Table with SyncColumns {
+  TextColumn get reason => text()(); // PauseReason.name
+  DateTimeColumn get startsAt => dateTime()();
+  DateTimeColumn get endsAt => dateTime().nullable()(); // null — до ручного снятия
+}
+
+/// Награды магазина (SPEC §6): создаёт пользователь. Покупка — событие purchase в журнале.
+@DataClassName('RewardRow')
+class Rewards extends Table with SyncColumns {
+  TextColumn get title => text()();
+  IntColumn get price => integer()();
+  IntColumn get limitCount => integer().nullable()(); // сколько раз за период; null — без лимита
+  TextColumn get limitPeriod => text().nullable()(); // RewardLimitPeriod.name
+  BoolColumn get active => boolean().withDefault(const Constant(true))();
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+}
+
+/// Синхронизируемые настройки пользователя (тихие часы, режим дисциплины…). id = ключ, value — JSON.
+@DataClassName('UserSettingRow')
+class UserSettings extends Table with SyncColumns {
+  TextColumn get value => text()();
+}
+
 @DriftDatabase(tables: [
   AppSettings,
   Profiles,
@@ -133,6 +239,13 @@ class QuestionnaireSections extends Table with SyncColumns {
   ScheduleItems,
   Plans,
   QuestionnaireSections,
+  Quests,
+  QuestInstances,
+  QuestEvents,
+  Effects,
+  Pauses,
+  Rewards,
+  UserSettings,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor])
@@ -146,7 +259,7 @@ class AppDatabase extends _$AppDatabase {
             ));
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -161,6 +274,15 @@ class AppDatabase extends _$AppDatabase {
             await m.createTable(scheduleItems);
             await m.createTable(plans);
             await m.createTable(questionnaireSections);
+          }
+          if (from < 3) {
+            await m.createTable(quests);
+            await m.createTable(questInstances);
+            await m.createTable(questEvents);
+            await m.createTable(effects);
+            await m.createTable(pauses);
+            await m.createTable(rewards);
+            await m.createTable(userSettings);
           }
         },
       );

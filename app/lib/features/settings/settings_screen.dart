@@ -70,6 +70,27 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: 16),
+          SysPanel(
+            title: l.setSectionQuests,
+            appearDelay: const Duration(milliseconds: 60),
+            child: Column(
+              children: [
+                _NavRow(
+                  glyph: SysGlyph.bell,
+                  title: l.setReminders,
+                  hint: l.setRemindersHint,
+                  onTap: () => context.push(Routes.reminders),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.shield,
+                  title: l.setDiscipline,
+                  hint: l.setDisciplineHint,
+                  onTap: () => context.push(Routes.discipline),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
           _languagePanel(l),
           const SizedBox(height: 16),
           _dataPanel(l),

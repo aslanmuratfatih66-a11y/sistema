@@ -1504,5 +1504,10 @@
   "setTableScheduleSettings": "Параметры расписания",
   "setTableScheduleItems": "Пункты расписания",
   "setTablePlans": "Планы",
-  "setTableQuestionnaireSections": "Разделы анкеты"
+  "setTableQuestionnaireSections": "Разделы анкеты",
+  "setSectionQuests": "Квесты",
+  "setReminders": "Напоминания",
+  "setRemindersHint": "Тихие часы, повтор, упрёки",
+  "setDiscipline": "Режим дисциплины",
+  "setDisciplineHint": "Подъём 6:00, отбой 22:00, доп. нагрузка"
 }

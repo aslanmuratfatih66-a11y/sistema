@@ -14,6 +14,8 @@ abstract final class Routes {
   static const plan = '/plan';
   static const schedule = '/schedule';
   static const editStepPattern = '/edit/:step';
+  static const reminders = '/reminders';
+  static const discipline = '/discipline';
 
   /// Редактирование раздела анкеты из настроек.
   static String editStep(OnboardingStep step) => '/edit/${step.name}';

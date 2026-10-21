@@ -59,5 +59,10 @@
   "setTableScheduleSettings": "Program ayarları",
   "setTableScheduleItems": "Program öğeleri",
   "setTablePlans": "Planlar",
-  "setTableQuestionnaireSections": "Anket bölümleri"
+  "setTableQuestionnaireSections": "Anket bölümleri",
+  "setSectionQuests": "Görevler",
+  "setReminders": "Hatırlatmalar",
+  "setRemindersHint": "Sessiz saatler, tekrar, sitemler",
+  "setDiscipline": "Disiplin modu",
+  "setDisciplineHint": "06:00 kalkış, 22:00 yatış, ek yük"
 }

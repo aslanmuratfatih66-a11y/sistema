@@ -3,6 +3,9 @@
 import 'package:flutter/foundation.dart';
 
 import '../../../l10n/app_localizations.dart';
+import '../../../core/models/enums.dart';
+
+export '../../../core/models/enums.dart' show PlayerRank, StatKind;
 
 /// Текст, который отображается в UI: либо пользовательские данные как есть,
 /// либо ключ локализации (для тестовых/системных текстов).
@@ -21,15 +24,9 @@ class HomeText {
   String of(AppLocalizations l) => _raw ?? _l10n!(l);
 }
 
-/// Ранг игрока E → S.
-enum PlayerRank { e, d, c, b, a, s }
-
 extension PlayerRankX on PlayerRank {
   String get letter => name.toUpperCase();
 }
-
-/// Шесть характеристик (SPEC §4).
-enum StatKind { strength, endurance, discipline, intellect, health, looks }
 
 @immutable
 class StatValue {

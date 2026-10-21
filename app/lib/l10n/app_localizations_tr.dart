@@ -2688,4 +2688,19 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get setTableQuestionnaireSections => 'Anket bölümleri';
+
+  @override
+  String get setSectionQuests => 'Görevler';
+
+  @override
+  String get setReminders => 'Hatırlatmalar';
+
+  @override
+  String get setRemindersHint => 'Sessiz saatler, tekrar, sitemler';
+
+  @override
+  String get setDiscipline => 'Disiplin modu';
+
+  @override
+  String get setDisciplineHint => '06:00 kalkış, 22:00 yatış, ek yük';
 }

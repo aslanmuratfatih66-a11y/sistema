@@ -1,4 +1,4 @@
-// Перечисления домена этапа 1. В БД хранятся как `name` (строка) — переименовывать нельзя,
+// Перечисления домена (этапы 1–2). В БД хранятся как `name` (строка) — переименовывать нельзя,
 // только добавлять. Правит главный агент.
 
 enum Sex { male, female }
@@ -38,6 +38,70 @@ enum CharacterState { idle, walk, talk, happy, angry, sit, sleep, point }
 
 /// Разделы анкеты, хранимые как JSON в QuestionnaireSections (id = name).
 enum QuestionnaireSection { skin, health, nutrition, training, finance, character, permissions }
+
+// ---- Этап 2: квесты, баллы, штрафы (SPEC §6) ----
+
+/// Ранг игрока E → S.
+enum PlayerRank { e, d, c, b, a, s }
+
+/// Шесть характеристик (SPEC §4). Квест качает характеристику своей категории.
+enum StatKind { strength, endurance, discipline, intellect, health, looks }
+
+/// Вид квеста.
+enum QuestKind {
+  daily, // ежедневный
+  schedule, // из расписания (пары, выход из дома)
+  goal, // по цели
+  penalty, // штрафной — нельзя отменить
+  boss, // босс недели (прогресс за неделю)
+  intro, // знакомство
+  control, // контрольный (замер, фото)
+  discipline, // из режима дисциплины
+  custom, // свой
+}
+
+/// Состояние экземпляра квеста на конкретный день.
+enum QuestStatus {
+  pending,
+  done,
+  failed, // проигнорирован до дедлайна
+  refused, // сознательный отказ (удержание 5 с)
+  excused, // пауза: без штрафа
+}
+
+/// Способ подтверждения.
+enum ConfirmMethod { button, steps, photo, timer, geo }
+
+/// Откуда квест.
+enum QuestSource { plan, user, system, ai }
+
+/// Записи журнала событий. Баллы ◆, опыт и характеристики — сумма по журналу (SPEC §10).
+enum QuestEventType {
+  completed,
+  failed,
+  refused,
+  penalty, // отдельный штраф (упрёк, срыв)
+  bonus, // награда вне квеста (серия, титул)
+  purchase, // покупка в магазине (payload.rewardId)
+  mark, // отметка «гулял/алкоголь/сорвался» (payload.mark)
+  pauseStarted,
+  pauseEnded,
+  statPointSpent, // payload.stat
+  bossCompleted,
+  bossFailed,
+  disciplineOn,
+  disciplineOff,
+  adjustment, // ручная правка/импорт
+}
+
+/// Честные отметки (SPEC §6) — мягче скрытого срыва, на завтра усиленный план.
+enum DayMark { walkedWithFriends, alcohol, relapse }
+
+/// Причина паузы — штрафы не начисляются, серия не сгорает.
+enum PauseReason { illness, vacation, holidays, other }
+
+/// Лимит частоты награды в магазине.
+enum RewardLimitPeriod { day, week, month }
 
 /// Безопасный разбор `name` из БД/JSON: неизвестное значение → null.
 T? enumByName<T extends Enum>(List<T> values, String? name) {

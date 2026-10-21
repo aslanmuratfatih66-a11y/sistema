@@ -14,6 +14,14 @@
 	<string>Геолокация «Всегда» нужна, чтобы прогулка с голосовыми подсказками работала с выключенным экраном.</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Доступ к медиатеке нужен, чтобы показывать текущий трек на прогулке и тренировке.</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.sistema.sistema.refresh</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
