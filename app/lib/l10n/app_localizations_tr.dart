@@ -435,6 +435,373 @@ class AppLocalizationsTr extends AppLocalizations {
       'Su hedefinin %48’i tamam. 11:30’a kadar bir bardak iç, «Zindelik» bir saat daha sürsün.';
 
   @override
+  String get actStepsTitle => 'Adımlar';
+
+  @override
+  String actGoal(String goal) {
+    return 'Hedef: $goal';
+  }
+
+  @override
+  String get actDistance => 'Mesafe';
+
+  @override
+  String actDistanceKm(String km) {
+    return '$km km';
+  }
+
+  @override
+  String get actFloors => 'Katlar';
+
+  @override
+  String get actNoValue => '—';
+
+  @override
+  String get actWeek => '7 gün';
+
+  @override
+  String get actAllow => 'İzin ver';
+
+  @override
+  String get actPermissionHint =>
+      'Hareket sensörlerine erişim izni verin — adımlar otomatik sayılsın.';
+
+  @override
+  String get actUnavailableHint =>
+      'Cihazda adım sayar yok — adımları elle girin.';
+
+  @override
+  String get actManual => 'Elle gir';
+
+  @override
+  String get actManualLabel => 'Bugünkü adımlar';
+
+  @override
+  String get actManualRange => '0 ile 100.000 arası';
+
+  @override
+  String get actSave => 'Kaydet';
+
+  @override
+  String get actCancel => 'İptal';
+
+  @override
+  String actStepsSemantic(String steps, String goal) {
+    return 'Bugünkü adımlar: $steps / $goal';
+  }
+
+  @override
+  String get bdyEnergy => 'Enerji';
+
+  @override
+  String get bdyHistory => 'Geçmiş';
+
+  @override
+  String get bdyCharts => 'Grafikler';
+
+  @override
+  String get bdySleepTitle => 'Uyku';
+
+  @override
+  String get bdySleepLog => 'Uykuyu kaydet';
+
+  @override
+  String get bdySleepNotLogged => 'Dün geceki uyku kaydedilmedi.';
+
+  @override
+  String get bdySleepLastNight => 'Dün gece';
+
+  @override
+  String get bdySleepDuration => 'Süre';
+
+  @override
+  String get bdySleepTarget => 'Plan hedefi';
+
+  @override
+  String get bdySleepAverage => 'Ortalama';
+
+  @override
+  String get bdySleepVsTarget => 'Hedefe göre';
+
+  @override
+  String get bdySleepOnTarget => 'Hedefe ulaşan geceler';
+
+  @override
+  String get bdySleepEmpty => 'Henüz uyku kaydı yok.';
+
+  @override
+  String get bdySleepChartLabel =>
+      'Günlere göre uyku grafiği, çizgi plan hedefidir';
+
+  @override
+  String bdySleepHistory(int days) {
+    return 'Son $days gün uyku';
+  }
+
+  @override
+  String get bdySleepWakeDay => 'Sabah (kalkış günü)';
+
+  @override
+  String get bdySleepBed => 'Yattım';
+
+  @override
+  String get bdySleepWake => 'Kalktım';
+
+  @override
+  String get bdySleepQuality => 'Uyku kalitesi';
+
+  @override
+  String get bdySleepQualityHint => '1 — kötü, 5 — mükemmel';
+
+  @override
+  String bdySleepQualityShort(int quality) {
+    return 'kal. $quality/5';
+  }
+
+  @override
+  String get bdyMeasureTitle => 'Ölçüler';
+
+  @override
+  String get bdyMeasureAdd => 'Ölçü ekle';
+
+  @override
+  String get bdyMeasureHint =>
+      'Ölçtüklerinizi doldurun. Çevre ölçüleri — mezura ile, sabah, yemekten önce.';
+
+  @override
+  String get bdyMeasureEmpty => 'Henüz ölçü yok.';
+
+  @override
+  String get bdyMeasureNeedTwo => 'Grafik için en az iki ölçü gerekir.';
+
+  @override
+  String get bdyMeasureChangeNote => 'Parantez içinde — 30 günlük değişim';
+
+  @override
+  String bdyMeasureChartLabel(String name) {
+    return 'Grafik: $name';
+  }
+
+  @override
+  String get bdyMeasureWeight => 'Kilo';
+
+  @override
+  String get bdyMeasureWaist => 'Bel';
+
+  @override
+  String get bdyMeasureHips => 'Kalça';
+
+  @override
+  String get bdyMeasureChest => 'Göğüs';
+
+  @override
+  String get bdyMeasureNeck => 'Boyun';
+
+  @override
+  String get bdyMeasureArm => 'Kol';
+
+  @override
+  String get bdyMeasureBodyFat => 'Yağ %';
+
+  @override
+  String get bdyUnitKg => 'kg';
+
+  @override
+  String get bdyUnitCm => 'cm';
+
+  @override
+  String get bdyPeriodAll => 'Tümü';
+
+  @override
+  String bdyPeriodDays(int days) {
+    return '$days gün';
+  }
+
+  @override
+  String get bdyPhotoTitle => 'Fotoğraf günlüğü';
+
+  @override
+  String get bdyPhotoKindBody => 'Vücut';
+
+  @override
+  String get bdyPhotoKindSkin => 'Cilt';
+
+  @override
+  String get bdyPhotoLast => 'Son fotoğraf';
+
+  @override
+  String get bdyPhotoAdd => 'Yeni fotoğraf';
+
+  @override
+  String get bdyPhotoPose => 'Açı';
+
+  @override
+  String get bdyPhotoCamera => 'Çek';
+
+  @override
+  String get bdyPhotoGallery => 'Galeriden';
+
+  @override
+  String get bdyPhotoEmpty => 'Henüz fotoğraf yok.';
+
+  @override
+  String get bdyPhotoCompare => 'Karşılaştır';
+
+  @override
+  String get bdyPhotoCompareHint =>
+      '«Önce» ve «sonra»yı karşılaştırmak için iki fotoğraf seçin.';
+
+  @override
+  String get bdyPhotoCompareNeedTwo =>
+      'Karşılaştırma için en az iki fotoğraf gerekir.';
+
+  @override
+  String get bdyPoseOther => 'Diğer';
+
+  @override
+  String get bdyCompareSlider => 'Perde';
+
+  @override
+  String get bdyCompareSideBySide => 'Yan yana';
+
+  @override
+  String get bdyCompareBefore => 'Önce';
+
+  @override
+  String get bdyCompareAfter => 'Sonra';
+
+  @override
+  String get bdyCompareNote =>
+      'Aynı ışıkta ve aynı mesafeden çekin — karşılaştırma daha doğru olur.';
+
+  @override
+  String get bdyCareTitle => 'Cilt bakımı';
+
+  @override
+  String get bdyCareOpen => 'Kontrol listesi';
+
+  @override
+  String get bdyCareMorning => 'Sabah';
+
+  @override
+  String get bdyCareEvening => 'Akşam';
+
+  @override
+  String get bdyCareTemplateNote =>
+      'Ankete göre temel şablon. Cildinize uygun ürün seçimi daha sonra eklenecek.';
+
+  @override
+  String get bdyCareSensitiveNote =>
+      'Ürünlere tepki olmuş: yeni bir ürünü önce cildin küçük bir bölgesinde deneyin.';
+
+  @override
+  String get bdyCareCompleteNote => 'Rutin tamamlandı.';
+
+  @override
+  String bdyCareRoutineDone(String routine) {
+    return '$routine: bakım tamamlandı';
+  }
+
+  @override
+  String get bdyCareCleanse => 'Yumuşak bir temizleyiciyle yüzünü yıka';
+
+  @override
+  String get bdyCareCleanseGentle => 'kurutmadan';
+
+  @override
+  String get bdyCareColdRinse => 'Yüzünü serin suyla yıka';
+
+  @override
+  String get bdyCareMoisturize => 'Nemlendirici krem';
+
+  @override
+  String get bdyCareMoisturizeLight => 'hafif doku';
+
+  @override
+  String get bdyCareMoisturizeRich => 'daha yoğun, besleyici';
+
+  @override
+  String get bdyCareSunscreen => 'Güneş kremi';
+
+  @override
+  String get bdyCareRemoveSunscreen => 'SPF\'yi ve kiri temizle';
+
+  @override
+  String get bdyCareAcne => 'Sivilce karşıtı ürün (varsa)';
+
+  @override
+  String get bdyCareExfoliate => 'Nazik peeling';
+
+  @override
+  String get bdyCareHandsOff => 'Dokunma ve sıkma';
+
+  @override
+  String get bdySkinType => 'Cilt tipi (ankete göre)';
+
+  @override
+  String get bdySkinNormal => 'Normal';
+
+  @override
+  String get bdySkinOily => 'Yağlı';
+
+  @override
+  String get bdySkinCombination => 'Karma';
+
+  @override
+  String get bdySkinDry => 'Kuru';
+
+  @override
+  String get bdySkinUnknown => 'Belirlenmedi';
+
+  @override
+  String get bdySwellTitle => 'Ödem';
+
+  @override
+  String get bdySwellOpen => 'Ayrıntılar';
+
+  @override
+  String get bdySwellMorningPhoto => 'Sabah yüz fotoğrafı';
+
+  @override
+  String get bdySwellPhotoHint =>
+      'Kalkar kalkmaz önden bir fotoğraf çekin — fotoğraf akışında eğilim görünür.';
+
+  @override
+  String get bdySwellTakenToday => 'Bugünün sabah fotoğrafı var.';
+
+  @override
+  String get bdySwellTipShort =>
+      'Odak: akşam daha az tuz, gün içinde su, plana göre uyku.';
+
+  @override
+  String get bdySwellTipsTitle => 'İpuçları';
+
+  @override
+  String get bdySwellTipSalt =>
+      'Tuzlu yiyecekleri ve fast food\'u gece geç saatte yememek daha iyi.';
+
+  @override
+  String get bdySwellTipWater =>
+      'Suyu gün boyunca eşit için, hepsini yatmadan önce değil.';
+
+  @override
+  String get bdySwellTipSleep =>
+      'Yeterince uyuyun ve aynı saatte yatın — uykusuzluk sabah yüzde belli olur.';
+
+  @override
+  String get bdySwellNote =>
+      'Ödem şiddetliyse, aniden ortaya çıktıysa veya geçmiyorsa doktora görünün.';
+
+  @override
+  String get bdySwellTrend => 'Sabahlara göre eğilim';
+
+  @override
+  String get bdySwellEmpty => 'Henüz sabah fotoğrafı yok.';
+
+  @override
+  String get bdySwellCompareFirst => 'İlk ve sonuncuyu karşılaştır';
+
+  @override
   String get chrIntro =>
       'Bir yol arkadaşı seç. Fotoğraf çekimlerinde sesiyle sana rehberlik edecek, sonra ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.';
 
@@ -1029,6 +1396,380 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get ntfUnavailable => 'Bu platformda bildirimler kullanılamaz';
+
+  @override
+  String get nutYesterday => 'Dün';
+
+  @override
+  String get nutToday => 'Bugün';
+
+  @override
+  String get nutNoticeLabel => 'Bildirim';
+
+  @override
+  String get nutProtein => 'Protein';
+
+  @override
+  String get nutFat => 'Yağ';
+
+  @override
+  String get nutCarbs => 'Karbonhidrat';
+
+  @override
+  String get nutBalance => 'Denge';
+
+  @override
+  String get nutNoNorm =>
+      'Hedef yok: kalori ve makro hedeflerini görmek için planı kabul edin.';
+
+  @override
+  String get nutNoWaterNorm =>
+      'Su hedefi plan kabul edildikten sonra görünecek.';
+
+  @override
+  String nutGrams(String value) {
+    return '$value g';
+  }
+
+  @override
+  String nutGramsProgress(String current, String total) {
+    return '$current / $total g';
+  }
+
+  @override
+  String nutLiters(String value) {
+    return '$value L';
+  }
+
+  @override
+  String nutMacrosLine(String protein, String fat, String carbs) {
+    return 'P $protein · Y $fat · K $carbs';
+  }
+
+  @override
+  String nutTotalLine(String kcal, String macros) {
+    return 'Toplam: $kcal kcal · $macros';
+  }
+
+  @override
+  String nutPerServing(String kcal, String macros) {
+    return 'Porsiyon: $kcal · $macros';
+  }
+
+  @override
+  String nutWaterAdd(int ml) {
+    return '+$ml ml';
+  }
+
+  @override
+  String get nutWaterUndo => 'Son su kaydını geri al';
+
+  @override
+  String get nutTrainingDay => 'Antrenman günü';
+
+  @override
+  String get nutAddTitle => 'Yemek ekle';
+
+  @override
+  String get nutAddBarcode => 'Barkod';
+
+  @override
+  String get nutAddManual => 'Elle';
+
+  @override
+  String get nutAddPhoto => 'Fotoğraf';
+
+  @override
+  String get nutRecipes => 'Tariflerim';
+
+  @override
+  String get nutSearching => 'Aranıyor…';
+
+  @override
+  String get nutDiaryEmpty =>
+      'Bu gün için kayıt yok. Barkod, elle giriş, fotoğraf veya tarifle yemek ekleyin.';
+
+  @override
+  String get nutWithPhoto => 'fotoğraflı';
+
+  @override
+  String get nutMealBreakfast => 'Kahvaltı';
+
+  @override
+  String get nutMealLunch => 'Öğle';
+
+  @override
+  String get nutMealDinner => 'Akşam';
+
+  @override
+  String get nutMealSnack => 'Ara öğün';
+
+  @override
+  String get nutNewEntry => 'Yeni kayıt';
+
+  @override
+  String get nutEditEntry => 'Günlük kaydı';
+
+  @override
+  String get nutRecipeLineTitle => 'Tarif satırı';
+
+  @override
+  String get nutPhotoSaved => 'Fotoğraf kaydedildi';
+
+  @override
+  String get nutPhotoAiLater =>
+      'Fotoğraftan yemek tanıma daha sonra açılacak. Şimdilik adı ve besin değerlerini kendiniz girin.';
+
+  @override
+  String get nutFieldTitle => 'Ad';
+
+  @override
+  String get nutFieldTitleHint => 'Örneğin: muzlu yulaf ezmesi';
+
+  @override
+  String get nutFieldMeal => 'Öğün';
+
+  @override
+  String get nutFieldMode => 'Hesaplama';
+
+  @override
+  String get nutModePortion => 'Porsiyon';
+
+  @override
+  String get nutModePer100 => '100 g başına';
+
+  @override
+  String get nutFieldGrams => 'Porsiyon ağırlığı';
+
+  @override
+  String get nutErrorGrams => 'Ağırlığı gram olarak girin';
+
+  @override
+  String get nutValuesPer100 => '100 g başına değerler';
+
+  @override
+  String get nutValuesPortion => 'Tüm porsiyon için değerler';
+
+  @override
+  String get nutFieldKcal => 'Kalori';
+
+  @override
+  String get nutFieldProtein => 'Protein';
+
+  @override
+  String get nutFieldFat => 'Yağ';
+
+  @override
+  String get nutFieldCarbs => 'Karbonhidrat';
+
+  @override
+  String get nutUnitKcal => 'kcal';
+
+  @override
+  String get nutUnitG => 'g';
+
+  @override
+  String get nutUnitKg => 'kg';
+
+  @override
+  String get nutUnitPcs => 'adet';
+
+  @override
+  String get nutUnitL => 'L';
+
+  @override
+  String get nutUnitMl => 'ml';
+
+  @override
+  String get nutSaveToProducts => 'Ürünlerime kaydet';
+
+  @override
+  String get nutSaveToProductsHint =>
+      'Sonra aramada bulunur, tekrar girmeye gerek kalmaz';
+
+  @override
+  String get nutMyProducts => 'Ürünlerim';
+
+  @override
+  String get nutSearchHint => 'Ad veya barkoda göre ara';
+
+  @override
+  String get nutWithoutProduct => 'Ürünsüz';
+
+  @override
+  String get nutNewProduct => 'Yeni ürün';
+
+  @override
+  String get nutNoProducts =>
+      'Henüz ürün yok. Barkod okutun veya ürünü elle ekleyin.';
+
+  @override
+  String get nutPer100Short => '100 g';
+
+  @override
+  String get nutProductNameHint => 'Örneğin: sade yoğurt';
+
+  @override
+  String get nutFieldBrand => 'Marka';
+
+  @override
+  String get nutFieldBarcode => 'Barkod';
+
+  @override
+  String get nutFieldServing => 'Normal porsiyon';
+
+  @override
+  String get nutBarcodeNotFound =>
+      'Ürün Open Food Facts veritabanında yok. Ambalajdaki bilgileri girin — Sistem barkoddan hatırlayacak.';
+
+  @override
+  String get nutBarcodeOffline =>
+      'Ürün veritabanına bağlanılamadı. Ambalajdaki bilgileri girin — Sistem ürünü barkoddan hatırlayacak.';
+
+  @override
+  String get nutScanTitle => 'Barkod';
+
+  @override
+  String get nutScanHint => 'Kamerayı ambalajdaki barkoda tutun';
+
+  @override
+  String get nutScanNoCamera =>
+      'Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya ürünü elle girin.';
+
+  @override
+  String get nutPhotoTitle => 'Yemek fotoğrafı';
+
+  @override
+  String get nutPhotoMessage =>
+      'Yemeğin fotoğrafını çekin veya galeriden seçin. Fotoğraf günlük kaydına eklenecek.';
+
+  @override
+  String get nutPhotoCamera => 'Kamera';
+
+  @override
+  String get nutPhotoGallery => 'Galeri';
+
+  @override
+  String get nutPortions => 'Porsiyon';
+
+  @override
+  String get nutAddToDiary => 'Günlüğe ekle';
+
+  @override
+  String get nutRecipesEmpty =>
+      'Henüz tarif yok. Yemeği bir kez ürünlerden oluşturun — sonra tek dokunuşla ekleyin.';
+
+  @override
+  String get nutNewRecipe => 'Yeni tarif';
+
+  @override
+  String get nutEditRecipe => 'Tarif';
+
+  @override
+  String get nutRecipeTitleHint => 'Örneğin: sebzeli omlet';
+
+  @override
+  String get nutServings => 'Yemekteki porsiyon';
+
+  @override
+  String get nutIngredients => 'İçindekiler';
+
+  @override
+  String get nutIngredientsEmpty => 'En az bir ürün veya satır ekleyin.';
+
+  @override
+  String get nutFromProducts => 'Ürünlerden';
+
+  @override
+  String get nutManualLine => 'Elle';
+
+  @override
+  String get nutShopping => 'Alışveriş listesi';
+
+  @override
+  String get nutShopNothing => 'Liste boş — alışveriş eklemek için açın.';
+
+  @override
+  String nutShopRemainingCount(int count, String sum) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Alınacak: $count ürün · $sum',
+      one: 'Alınacak: $count ürün · $sum',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get nutShopAdd => 'Ürün ekle';
+
+  @override
+  String get nutShopEdit => 'Ürün';
+
+  @override
+  String get nutShopTotal => 'Toplam (yaklaşık)';
+
+  @override
+  String get nutShopRemaining => 'Henüz alınmadı';
+
+  @override
+  String get nutShopPriceNote => 'Tutarlar girdiğiniz fiyatlara göredir.';
+
+  @override
+  String get nutShopFromPlan => 'Beslenme planından';
+
+  @override
+  String get nutShopFromPlanHint =>
+      'Plan hedeflerine göre haftalık temel liste: protein, tahıllar, sebze, meyve, su. Fiyatları kendiniz girin.';
+
+  @override
+  String get nutShopNoPlan =>
+      'Planı kabul edin — Sistem haftalık temel listeyi hazırlasın.';
+
+  @override
+  String get nutShopGenerate => 'Haftalık liste oluştur';
+
+  @override
+  String get nutShopEmpty => 'Henüz ürün yok.';
+
+  @override
+  String get nutShopClearDone => 'Alınanları kaldır';
+
+  @override
+  String get nutShopTitleHint => 'Örneğin: karabuğday';
+
+  @override
+  String get nutShopQuantity => 'Miktar';
+
+  @override
+  String get nutShopPrice => 'Yaklaşık fiyat';
+
+  @override
+  String get nutGroceryChicken => 'Tavuk göğsü / hindi';
+
+  @override
+  String get nutGroceryEggs => 'Yumurta';
+
+  @override
+  String get nutGroceryCottageCheese => 'Lor peyniri';
+
+  @override
+  String get nutGroceryGrains => 'Tahıllar (karabuğday, pirinç)';
+
+  @override
+  String get nutGroceryOats => 'Yulaf ezmesi';
+
+  @override
+  String get nutGroceryVegetables => 'Sebzeler';
+
+  @override
+  String get nutGroceryFruits => 'Meyveler';
+
+  @override
+  String get nutGroceryOil => 'Bitkisel yağ';
+
+  @override
+  String get nutGroceryWater => 'İçme suyu';
 
   @override
   String get planNoticeLabel => 'Bildirim';
@@ -3726,4 +4467,478 @@ class AppLocalizationsTr extends AppLocalizations {
   String dscQuestWalk(int minutes) {
     return 'Sakin yürüyüş: $minutes dk';
   }
+
+  @override
+  String get wrkTitle => 'Antrenmanlar';
+
+  @override
+  String get wrkProgram => 'Program';
+
+  @override
+  String get wrkToday => 'Bugün';
+
+  @override
+  String wrkTodayDay(String key) {
+    return 'Programa göre — $key günü';
+  }
+
+  @override
+  String get wrkRestDay =>
+      'Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğin antrenmanı yapabilirsin.';
+
+  @override
+  String wrkDayTitle(String key) {
+    return '$key günü';
+  }
+
+  @override
+  String wrkMinutesShort(int minutes) {
+    return '$minutes dk';
+  }
+
+  @override
+  String wrkEstimate(int minutes) {
+    return '≈$minutes dk';
+  }
+
+  @override
+  String wrkExerciseCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count egzersiz',
+      one: '$count egzersiz',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String wrkSetsReps(int sets, int reps) {
+    return '$sets × $reps';
+  }
+
+  @override
+  String wrkSetsSeconds(int sets, int seconds) {
+    return '$sets × $seconds sn';
+  }
+
+  @override
+  String wrkRestShort(int seconds) {
+    return 'dinlenme $seconds sn';
+  }
+
+  @override
+  String get wrkGentle =>
+      'Hafif seçenek: zıplama ve omurgaya dikey yük yok — ankette sakatlık veya kısıtlama belirtilmiş.';
+
+  @override
+  String get wrkSafetyNote =>
+      'Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atla.';
+
+  @override
+  String get wrkLevelUnknown =>
+      'Ankette seviye belirtilmemiş — başlangıç programı.';
+
+  @override
+  String wrkProgressionWeeks(int weeks) {
+    return 'Tamamlanan hafta: $weeks';
+  }
+
+  @override
+  String get wrkProgressionNote =>
+      'Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her hafta için: +1 tekrar veya +5 sn, seviyenin üst sınırına kadar.';
+
+  @override
+  String get wrkRegenerate => 'Programı yeniden oluştur';
+
+  @override
+  String get wrkRegenerateTitle => 'Program yeniden oluşturulsun mu?';
+
+  @override
+  String get wrkRegenerateText =>
+      'Program anket ve plana göre yeniden oluşturulacak. Antrenman geçmişi korunur, ilerleme baştan başlar.';
+
+  @override
+  String get wrkAiProgram => 'Yapay zekâdan program';
+
+  @override
+  String get wrkSoon => 'yakında';
+
+  @override
+  String get wrkStart => 'Antrenmana başla';
+
+  @override
+  String wrkStartDay(String key) {
+    return '$key gününe başla';
+  }
+
+  @override
+  String get wrkHistory => 'Geçmiş';
+
+  @override
+  String get wrkHistoryEmpty => 'Henüz antrenman yok.';
+
+  @override
+  String get wrkSessionDone => 'tamamlandı';
+
+  @override
+  String get wrkSessionInterrupted => 'yarıda kaldı';
+
+  @override
+  String wrkSessionStats(int minutes, int kcal) {
+    return '$minutes dk · ≈$kcal kcal';
+  }
+
+  @override
+  String get wrkPreparing => 'Program hazırlanıyor…';
+
+  @override
+  String get wrkPhasePrepare => 'Hazırlan';
+
+  @override
+  String get wrkPhaseWork => 'Çalışma';
+
+  @override
+  String get wrkPhaseRest => 'Dinlenme';
+
+  @override
+  String get wrkPaused => 'Duraklatıldı';
+
+  @override
+  String wrkSetOf(int set, int sets) {
+    return 'Set $set / $sets';
+  }
+
+  @override
+  String wrkRepsTarget(int reps) {
+    String _temp0 = intl.Intl.pluralLogic(
+      reps,
+      locale: localeName,
+      other: '$reps tekrar',
+      one: '$reps tekrar',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get wrkDoneSet => 'Set tamam';
+
+  @override
+  String get wrkPause => 'Duraklat';
+
+  @override
+  String get wrkResume => 'Devam et';
+
+  @override
+  String get wrkSkipRest => 'Dinlenmeyi atla';
+
+  @override
+  String get wrkSkipExercise => 'Egzersizi atla';
+
+  @override
+  String get wrkStop => 'Bitir';
+
+  @override
+  String wrkNext(String name) {
+    return 'Sıradaki: $name';
+  }
+
+  @override
+  String get wrkLastExercise => 'Son egzersiz';
+
+  @override
+  String get wrkTechnique => 'Teknik';
+
+  @override
+  String get wrkVoice => 'Sesli yönlendirme';
+
+  @override
+  String get wrkProgressLabel => 'Antrenman ilerlemesi';
+
+  @override
+  String get wrkStopTitle => 'Antrenman bitirilsin mi?';
+
+  @override
+  String get wrkStopText =>
+      'Yapılanlar yarım kalan antrenman olarak kaydedilir.';
+
+  @override
+  String get wrkFinishedTitle => 'Antrenman tamamlandı';
+
+  @override
+  String wrkFinishedStats(int minutes, int kcal, int sets) {
+    return 'Süre: $minutes dk · ≈$kcal kcal · set: $sets';
+  }
+
+  @override
+  String get wrkWeightAssumed =>
+      'Harcama 70 kg kiloya göre tahmin: kilo ölçümü yok.';
+
+  @override
+  String get wrkKcalNote => 'Harcama MET ile tahmindir, ölçüm değildir.';
+
+  @override
+  String wrkSayPrepare(String name) {
+    return 'Hazırlan. $name.';
+  }
+
+  @override
+  String wrkSaySet(int set, int sets, String amount) {
+    return 'Set $set / $sets. $amount. Başla!';
+  }
+
+  @override
+  String wrkSecondsAmount(int seconds) {
+    String _temp0 = intl.Intl.pluralLogic(
+      seconds,
+      locale: localeName,
+      other: '$seconds saniye',
+      one: '$seconds saniye',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String wrkSayRest(String amount) {
+    return 'Dinlenme: $amount.';
+  }
+
+  @override
+  String wrkSayNext(String name) {
+    return 'Sıradaki: $name.';
+  }
+
+  @override
+  String get wrkSayFinished => 'Antrenman tamamlandı. Harika iş!';
+
+  @override
+  String get wrkExMarchInPlace => 'Yerinde yürüyüş';
+
+  @override
+  String get wrkExMarchInPlaceHint =>
+      'Dizlerini yükselt.\nKollar adımla birlikte çalışsın.\nDüzenli nefes al.';
+
+  @override
+  String get wrkExArmCircles => 'Kol çevirme';
+
+  @override
+  String get wrkExArmCirclesHint =>
+      'Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler.\nOmuzlar aşağıda.';
+
+  @override
+  String get wrkExJumpingJacks => 'Jumping jack';
+
+  @override
+  String get wrkExJumpingJacksHint =>
+      'Zıpla: bacaklar açık, kollar yukarı.\nGeri zıpla.\nParmak uçlarına yumuşak in.';
+
+  @override
+  String get wrkExChairSquat => 'Sandalyeye çömelme';
+
+  @override
+  String get wrkExChairSquatHint =>
+      'Sandalyenin önünde dur, ayaklar omuz genişliğinde.\nKalçayı geri iterek otur.\nSarsmadan kalk.';
+
+  @override
+  String get wrkExGluteBridge => 'Kalça köprüsü';
+
+  @override
+  String get wrkExGluteBridgeHint =>
+      'Sırtüstü yat, ayaklar yerde.\nKalçayı kaldır, kalça kaslarını sık.\nYavaşça in.';
+
+  @override
+  String get wrkExSquat => 'Squat';
+
+  @override
+  String get wrkExSquatHint =>
+      'Ayaklar omuz genişliğinde, uçlar hafif dışa.\nKalça geri, dizler parmak yönünde.\nSırt düz, topuklar yerde.';
+
+  @override
+  String get wrkExWallSit => 'Duvarda oturma';
+
+  @override
+  String get wrkExWallSitHint =>
+      'Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar in.\nPozisyonu koru.';
+
+  @override
+  String get wrkExReverseLunge => 'Geri hamle';
+
+  @override
+  String get wrkExReverseLungeHint =>
+      'Geriye adım at, arka dizi yere doğru indir.\nÖn diz ayağın üzerinde.\nGeri dön, bacak değiştir.';
+
+  @override
+  String get wrkExGobletSquat => 'Goblet squat';
+
+  @override
+  String get wrkExGobletSquatHint =>
+      'Dambılı dik olarak göğüste tut.\nÇömel, dirsekler dizlerin arasında.\nSırt düz.';
+
+  @override
+  String get wrkExKettlebellSwing => 'Kettlebell salınımı';
+
+  @override
+  String get wrkExKettlebellSwingHint =>
+      'Kettlebell iki elde, ayaklar omuzdan geniş.\nKalça geri, sonra hızla ileri.\nKettlebell kalça gücüyle göğüs hizasına çıkar.';
+
+  @override
+  String get wrkExJumpSquat => 'Zıplamalı squat';
+
+  @override
+  String get wrkExJumpSquatHint =>
+      'Normal squat.\nYukarı sıçra.\nYumuşak inip squat\'a geç.';
+
+  @override
+  String get wrkExWallPushUp => 'Duvarda şınav';
+
+  @override
+  String get wrkExWallPushUpHint =>
+      'Avuçlar omuz hizasında duvarda.\nKolları bük, gövde düz.\nİtip geri gel.';
+
+  @override
+  String get wrkExKneePushUp => 'Dizüstü şınav';
+
+  @override
+  String get wrkExKneePushUpHint =>
+      'Dizler ve avuçlar yerde.\nDizden başa gövde düz.\nGöğüs yere, sonra yukarı.';
+
+  @override
+  String get wrkExPushUp => 'Şınav';
+
+  @override
+  String get wrkExPushUpHint =>
+      'Şınav pozisyonu, eller omuzdan biraz geniş.\nGövde düz bir çizgi.\nGöğüs yere, dirsekler 45°.';
+
+  @override
+  String get wrkExDumbbellPress => 'Yerde dambıl press';
+
+  @override
+  String get wrkExDumbbellPressHint =>
+      'Yerde yat, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indir.\nYukarı it.';
+
+  @override
+  String get wrkExDiamondPushUp => 'Elmas şınav';
+
+  @override
+  String get wrkExDiamondPushUpHint =>
+      'Avuçlar göğsün altında yan yana.\nDirsekler gövdeye yakın.\nGövde düz.';
+
+  @override
+  String get wrkExSuperman => 'Süperman';
+
+  @override
+  String get wrkExSupermanHint =>
+      'Yüzüstü yat, kollar önde.\nKol ve bacakları birkaç saniye kaldır.\nYavaşça indir.';
+
+  @override
+  String get wrkExReverseSnowAngel => 'Ters kar meleği';
+
+  @override
+  String get wrkExReverseSnowAngelHint =>
+      'Yüzüstü yat, kollar yanlarda.\nGöğsü ve kolları hafif kaldır.\nKolları yay çizerek başın üstüne ve geri götür.';
+
+  @override
+  String get wrkExBandRow => 'Lastik çekiş';
+
+  @override
+  String get wrkExBandRowHint =>
+      'Lastiği göğüs hizasına sabitle.\nKürek kemiklerini sıkarak bele çek.\nYavaşça bırak.';
+
+  @override
+  String get wrkExDumbbellRow => 'Eğilerek dambıl çekiş';
+
+  @override
+  String get wrkExDumbbellRowHint =>
+      'Bir el ve diz sandalyeye dayalı.\nDambılı bele çek.\nSırt düz.';
+
+  @override
+  String get wrkExPullUp => 'Barfiks';
+
+  @override
+  String get wrkExPullUpHint =>
+      'Tutuş omuzdan biraz geniş.\nÇeneyi bara çek.\nKontrollü in.';
+
+  @override
+  String get wrkExDeadBug => 'Ölü böcek';
+
+  @override
+  String get wrkExDeadBugHint =>
+      'Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indir.\nBel yere bastırılı.';
+
+  @override
+  String get wrkExBirdDog => 'Kuş-köpek';
+
+  @override
+  String get wrkExBirdDogHint =>
+      'Eller ve dizler yerde.\nZıt kol ve bacağı uzat.\nBekle, taraf değiştir.';
+
+  @override
+  String get wrkExPlank => 'Plank';
+
+  @override
+  String get wrkExPlankHint =>
+      'Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökme.';
+
+  @override
+  String get wrkExCrunch => 'Mekik';
+
+  @override
+  String get wrkExCrunchHint =>
+      'Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldır.\nYavaşça in.';
+
+  @override
+  String get wrkExSidePlank => 'Yan plank';
+
+  @override
+  String get wrkExSidePlankHint =>
+      'Ön kol yerde, bacaklar birlikte.\nKalça yukarıda, gövde düz.\nSürenin yarısı her tarafa.';
+
+  @override
+  String get wrkExLegRaise => 'Bacak kaldırma';
+
+  @override
+  String get wrkExLegRaiseHint =>
+      'Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldır.\nBel yerde, yavaş indir.';
+
+  @override
+  String get wrkExStepTouch => 'Yana adım';
+
+  @override
+  String get wrkExStepTouchHint =>
+      'Yana adım at, ayağı birleştir.\nDiğer tarafa.\nKollar ritimle çalışsın.';
+
+  @override
+  String get wrkExShadowBoxing => 'Gölge boksu';
+
+  @override
+  String get wrkExShadowBoxingHint =>
+      'Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket et.';
+
+  @override
+  String get wrkExHighKnees => 'Yüksek diz koşusu';
+
+  @override
+  String get wrkExHighKneesHint =>
+      'Yerinde koş.\nDizler bel hizasına.\nParmak uçlarına in.';
+
+  @override
+  String get wrkExMountainClimber => 'Dağcı';
+
+  @override
+  String get wrkExMountainClimberHint =>
+      'Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çek.\nKalçayı kaldırma.';
+
+  @override
+  String get wrkExBurpee => 'Burpee';
+
+  @override
+  String get wrkExBurpeeHint =>
+      'Çömel, eller yere.\nŞınav pozisyonuna sıçra ve geri gel.\nYukarı zıpla.';
+
+  @override
+  String get wrkExFullBodyStretch => 'Esneme';
+
+  @override
+  String get wrkExFullBodyStretchHint =>
+      'Yukarı uzan, sonra öne eğil.\nUyluk ve göğsü esnet.\nYavaş nefes al, sarsma.';
 }

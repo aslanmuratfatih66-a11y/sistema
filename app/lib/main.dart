@@ -6,6 +6,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'app/app.dart';
 import 'app/routes.dart';
 import 'app/service_factory.dart';
+import 'core/activity/activity_api.dart';
+import 'core/activity/activity_providers.dart';
+import 'core/activity/channel_step_counter.dart';
 import 'core/capabilities/capability_service.dart';
 import 'core/capabilities/platform_capability_service.dart';
 import 'core/db/database.dart';
@@ -17,6 +20,8 @@ import 'core/notifications/reminder_prefs_repository.dart';
 import 'core/notifications/reminder_texts.dart';
 import 'core/voice/tts_service.dart';
 import 'domain/quests/quest_api.dart';
+import 'domain/quests/quest_section_hooks.dart';
+import 'domain/quests/section_hooks.dart';
 import 'features/character/voice/flutter_tts_service.dart';
 import 'features/onboarding/onboarding_progress.dart';
 
@@ -38,6 +43,8 @@ Future<void> main() async {
     ttsServiceProvider.overrideWithValue(FlutterTtsService()),
     questServiceProvider.overrideWithValue(quests),
     reminderSchedulerProvider.overrideWithValue(scheduler),
+    sectionQuestHooksProvider.overrideWithValue(QuestSectionHooks(quests)),
+    stepCounterProvider.overrideWithValue(ChannelStepCounter()),
   ]);
 
   final prefs = ReminderPrefsRepository(db);
@@ -54,6 +61,8 @@ Future<void> main() async {
   // Разрешение на уведомления спрашивает экран напоминаний, не старт.
   await scheduler.init(onResponse: reminders.handleResponse);
   unawaited(reminders.start());
+  // Шаги: опрос при старте, возврате и раз в 5 мин → StepLogs → квесты шагов.
+  container.read(stepSyncProvider).start();
   unawaited(initBackgroundRefresh().catchError((Object e) => debugPrint('initBackgroundRefresh: $e')));
 
   runApp(UncontrolledProviderScope(container: container, child: const SistemaApp()));

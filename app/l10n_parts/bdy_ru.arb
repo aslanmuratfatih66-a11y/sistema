@@ -1,0 +1,133 @@
+{
+  "bdyEnergy": "Энергия",
+  "bdyHistory": "История",
+  "bdyCharts": "Графики",
+  "bdySleepTitle": "Сон",
+  "bdySleepLog": "Записать сон",
+  "bdySleepNotLogged": "Сон за прошлую ночь не записан.",
+  "bdySleepLastNight": "Прошлая ночь",
+  "bdySleepDuration": "Длительность",
+  "bdySleepTarget": "Цель плана",
+  "bdySleepAverage": "В среднем",
+  "bdySleepVsTarget": "Против цели",
+  "bdySleepOnTarget": "Ночей не меньше цели",
+  "bdySleepEmpty": "Пока нет записей сна.",
+  "bdySleepChartLabel": "График сна по дням, линия — цель плана",
+  "bdySleepHistory": "Сон за {days} дн.",
+  "@bdySleepHistory": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdySleepWakeDay": "Утро (день подъёма)",
+  "bdySleepBed": "Лёг",
+  "bdySleepWake": "Встал",
+  "bdySleepQuality": "Качество сна",
+  "bdySleepQualityHint": "1 — плохо, 5 — отлично",
+  "bdySleepQualityShort": "кач. {quality}/5",
+  "@bdySleepQualityShort": {
+    "placeholders": {
+      "quality": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyMeasureTitle": "Замеры",
+  "bdyMeasureAdd": "Добавить замер",
+  "bdyMeasureHint": "Заполните то, что измерили. Обхваты — сантиметровой лентой, утром, до еды.",
+  "bdyMeasureEmpty": "Замеров пока нет.",
+  "bdyMeasureNeedTwo": "Для графика нужно хотя бы два замера.",
+  "bdyMeasureChangeNote": "В скобках — изменение за 30 дней",
+  "bdyMeasureChartLabel": "График: {name}",
+  "@bdyMeasureChartLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyMeasureWeight": "Вес",
+  "bdyMeasureWaist": "Талия",
+  "bdyMeasureHips": "Бёдра",
+  "bdyMeasureChest": "Грудь",
+  "bdyMeasureNeck": "Шея",
+  "bdyMeasureArm": "Рука",
+  "bdyMeasureBodyFat": "% жира",
+  "bdyUnitKg": "кг",
+  "bdyUnitCm": "см",
+  "bdyPeriodAll": "Всё",
+  "bdyPeriodDays": "{days} дн.",
+  "@bdyPeriodDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyPhotoTitle": "Фото-дневник",
+  "bdyPhotoKindBody": "Тело",
+  "bdyPhotoKindSkin": "Кожа",
+  "bdyPhotoLast": "Последнее фото",
+  "bdyPhotoAdd": "Новое фото",
+  "bdyPhotoPose": "Ракурс",
+  "bdyPhotoCamera": "Снять",
+  "bdyPhotoGallery": "Из галереи",
+  "bdyPhotoEmpty": "Фото пока нет.",
+  "bdyPhotoCompare": "Сравнить",
+  "bdyPhotoCompareHint": "Выберите два фото, чтобы сравнить «до» и «после».",
+  "bdyPhotoCompareNeedTwo": "Для сравнения нужно хотя бы два фото.",
+  "bdyPoseOther": "Другое",
+  "bdyCompareSlider": "Шторка",
+  "bdyCompareSideBySide": "Рядом",
+  "bdyCompareBefore": "До",
+  "bdyCompareAfter": "После",
+  "bdyCompareNote": "Снимайте при одинаковом свете и с одного расстояния — так сравнение честнее.",
+  "bdyCareTitle": "Уход за кожей",
+  "bdyCareOpen": "Чек-лист",
+  "bdyCareMorning": "Утро",
+  "bdyCareEvening": "Вечер",
+  "bdyCareTemplateNote": "Базовый шаблон по анкете. Подбор средств под вашу кожу появится позже.",
+  "bdyCareSensitiveNote": "Были реакции на средства: новое средство сначала пробуйте на небольшом участке кожи.",
+  "bdyCareCompleteNote": "Рутина выполнена.",
+  "bdyCareRoutineDone": "{routine}: уход выполнен",
+  "@bdyCareRoutineDone": {
+    "placeholders": {
+      "routine": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyCareCleanse": "Умыться мягким очищающим средством",
+  "bdyCareCleanseGentle": "без пересушивания",
+  "bdyCareColdRinse": "Умыться прохладной водой",
+  "bdyCareMoisturize": "Увлажняющий крем",
+  "bdyCareMoisturizeLight": "лёгкая текстура",
+  "bdyCareMoisturizeRich": "плотнее, питательный",
+  "bdyCareSunscreen": "Солнцезащитный крем",
+  "bdyCareRemoveSunscreen": "Смыть SPF и загрязнения",
+  "bdyCareAcne": "Средство против воспалений (если есть)",
+  "bdyCareExfoliate": "Мягкое отшелушивание",
+  "bdyCareHandsOff": "Не трогать и не выдавливать",
+  "bdySkinType": "Тип кожи (по анкете)",
+  "bdySkinNormal": "Нормальная",
+  "bdySkinOily": "Жирная",
+  "bdySkinCombination": "Комбинированная",
+  "bdySkinDry": "Сухая",
+  "bdySkinUnknown": "Не определён",
+  "bdySwellTitle": "Отёки",
+  "bdySwellOpen": "Подробнее",
+  "bdySwellMorningPhoto": "Утреннее фото лица",
+  "bdySwellPhotoHint": "Сделайте фото анфас сразу после подъёма — по ленте снимков виден тренд.",
+  "bdySwellTakenToday": "Утреннее фото на сегодня есть.",
+  "bdySwellTipShort": "Акценты: меньше соли вечером, вода днём, сон по плану.",
+  "bdySwellTipsTitle": "Подсказки",
+  "bdySwellTipSalt": "Солёное и фастфуд лучше не есть поздно вечером.",
+  "bdySwellTipWater": "Пейте воду равномерно в течение дня, а не всё перед сном.",
+  "bdySwellTipSleep": "Высыпайтесь и ложитесь в одно время — недосып заметен на лице утром.",
+  "bdySwellNote": "Если отёки сильные, появились внезапно или не проходят — покажитесь врачу.",
+  "bdySwellTrend": "Тренд по утрам",
+  "bdySwellEmpty": "Утренних фото пока нет.",
+  "bdySwellCompareFirst": "Сравнить первое и последнее"
+}

@@ -1,0 +1,291 @@
+{
+  "wrkTitle": "Тренировки",
+  "wrkProgram": "Программа",
+  "wrkToday": "Сегодня",
+  "wrkTodayDay": "По программе — день {key}",
+  "@wrkTodayDay": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkRestDay": "Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.",
+  "wrkDayTitle": "День {key}",
+  "@wrkDayTitle": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkMinutesShort": "{minutes} мин",
+  "@wrkMinutesShort": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkEstimate": "≈{minutes} мин",
+  "@wrkEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkExerciseCount": "{count, plural, one{{count} упражнение} few{{count} упражнения} many{{count} упражнений} other{{count} упражнения}}",
+  "@wrkExerciseCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsReps": "{sets} × {reps}",
+  "@wrkSetsReps": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsSeconds": "{sets} × {seconds} с",
+  "@wrkSetsSeconds": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRestShort": "отдых {seconds} с",
+  "@wrkRestShort": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkGentle": "Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.",
+  "wrkSafetyNote": "Если упражнение вызывает боль или дискомфорт — пропустите его.",
+  "wrkLevelUnknown": "Уровень в анкете не указан — программа для новичка.",
+  "wrkProgressionWeeks": "Выполненных недель: {weeks}",
+  "@wrkProgressionWeeks": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkProgressionNote": "Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.",
+  "wrkRegenerate": "Пересоздать программу",
+  "wrkRegenerateTitle": "Пересоздать программу?",
+  "wrkRegenerateText": "Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.",
+  "wrkAiProgram": "Программа от ИИ",
+  "wrkSoon": "скоро",
+  "wrkStart": "Начать тренировку",
+  "wrkStartDay": "Начать день {key}",
+  "@wrkStartDay": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkHistory": "История",
+  "wrkHistoryEmpty": "Тренировок пока нет.",
+  "wrkSessionDone": "завершена",
+  "wrkSessionInterrupted": "прервана",
+  "wrkSessionStats": "{minutes} мин · ≈{kcal} ккал",
+  "@wrkSessionStats": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkPreparing": "Программа собирается…",
+  "wrkPhasePrepare": "Приготовьтесь",
+  "wrkPhaseWork": "Работа",
+  "wrkPhaseRest": "Отдых",
+  "wrkPaused": "Пауза",
+  "wrkSetOf": "Подход {set} из {sets}",
+  "@wrkSetOf": {
+    "placeholders": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRepsTarget": "{reps, plural, one{{reps} повтор} few{{reps} повтора} many{{reps} повторов} other{{reps} повтора}}",
+  "@wrkRepsTarget": {
+    "placeholders": {
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkDoneSet": "Подход выполнен",
+  "wrkPause": "Пауза",
+  "wrkResume": "Продолжить",
+  "wrkSkipRest": "Пропустить отдых",
+  "wrkSkipExercise": "Пропустить упражнение",
+  "wrkStop": "Прервать",
+  "wrkNext": "Далее: {name}",
+  "@wrkNext": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkLastExercise": "Последнее упражнение",
+  "wrkTechnique": "Техника",
+  "wrkVoice": "Голосовые подсказки",
+  "wrkProgressLabel": "Прогресс тренировки",
+  "wrkStopTitle": "Прервать тренировку?",
+  "wrkStopText": "Сделанное сохранится как незавершённая тренировка.",
+  "wrkFinishedTitle": "Тренировка завершена",
+  "wrkFinishedStats": "Время: {minutes} мин · ≈{kcal} ккал · подходов: {sets}",
+  "@wrkFinishedStats": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkWeightAssumed": "Расход — оценка по весу 70 кг: замеров веса нет.",
+  "wrkKcalNote": "Расход — оценка по MET, не измерение.",
+  "wrkSayPrepare": "Приготовьтесь. {name}.",
+  "@wrkSayPrepare": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSaySet": "Подход {set} из {sets}. {amount}. Начали!",
+  "@wrkSaySet": {
+    "placeholders": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSecondsAmount": "{seconds, plural, one{{seconds} секунда} few{{seconds} секунды} many{{seconds} секунд} other{{seconds} секунды}}",
+  "@wrkSecondsAmount": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSayRest": "Отдых: {amount}.",
+  "@wrkSayRest": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSayNext": "Далее: {name}.",
+  "@wrkSayNext": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSayFinished": "Тренировка завершена. Отличная работа!",
+  "wrkExMarchInPlace": "Ходьба на месте",
+  "wrkExMarchInPlaceHint": "Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.",
+  "wrkExArmCircles": "Круги руками",
+  "wrkExArmCirclesHint": "Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.",
+  "wrkExJumpingJacks": "Джампинг-джек",
+  "wrkExJumpingJacksHint": "Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.",
+  "wrkExChairSquat": "Приседание на стул",
+  "wrkExChairSquatHint": "Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.",
+  "wrkExGluteBridge": "Ягодичный мост",
+  "wrkExGluteBridgeHint": "Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.",
+  "wrkExSquat": "Приседания",
+  "wrkExSquatHint": "Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.",
+  "wrkExWallSit": "Стульчик у стены",
+  "wrkExWallSitHint": "Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.",
+  "wrkExReverseLunge": "Выпады назад",
+  "wrkExReverseLungeHint": "Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.",
+  "wrkExGobletSquat": "Гоблет-присед",
+  "wrkExGobletSquatHint": "Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.",
+  "wrkExKettlebellSwing": "Махи гирей",
+  "wrkExKettlebellSwingHint": "Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.",
+  "wrkExJumpSquat": "Присед с выпрыгиванием",
+  "wrkExJumpSquatHint": "Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.",
+  "wrkExWallPushUp": "Отжимания от стены",
+  "wrkExWallPushUpHint": "Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.",
+  "wrkExKneePushUp": "Отжимания с колен",
+  "wrkExKneePushUpHint": "Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.",
+  "wrkExPushUp": "Отжимания",
+  "wrkExPushUpHint": "Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.",
+  "wrkExDumbbellPress": "Жим гантелей лёжа",
+  "wrkExDumbbellPressHint": "Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.",
+  "wrkExDiamondPushUp": "Узкие отжимания",
+  "wrkExDiamondPushUpHint": "Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.",
+  "wrkExSuperman": "Супермен",
+  "wrkExSupermanHint": "Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.",
+  "wrkExReverseSnowAngel": "Обратный снежный ангел",
+  "wrkExReverseSnowAngelHint": "Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.",
+  "wrkExBandRow": "Тяга резинки",
+  "wrkExBandRowHint": "Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.",
+  "wrkExDumbbellRow": "Тяга гантели в наклоне",
+  "wrkExDumbbellRowHint": "Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.",
+  "wrkExPullUp": "Подтягивания",
+  "wrkExPullUpHint": "Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.",
+  "wrkExDeadBug": "Мёртвый жук",
+  "wrkExDeadBugHint": "Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.",
+  "wrkExBirdDog": "Птица-собака",
+  "wrkExBirdDogHint": "Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.",
+  "wrkExPlank": "Планка",
+  "wrkExPlankHint": "Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.",
+  "wrkExCrunch": "Скручивания",
+  "wrkExCrunchHint": "Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.",
+  "wrkExSidePlank": "Боковая планка",
+  "wrkExSidePlankHint": "Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.",
+  "wrkExLegRaise": "Подъём ног лёжа",
+  "wrkExLegRaiseHint": "Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.",
+  "wrkExStepTouch": "Приставные шаги",
+  "wrkExStepTouchHint": "Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.",
+  "wrkExShadowBoxing": "Бой с тенью",
+  "wrkExShadowBoxingHint": "Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.",
+  "wrkExHighKnees": "Бег с высоким подниманием колен",
+  "wrkExHighKneesHint": "Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.",
+  "wrkExMountainClimber": "Скалолаз",
+  "wrkExMountainClimberHint": "Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.",
+  "wrkExBurpee": "Бёрпи",
+  "wrkExBurpeeHint": "Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.",
+  "wrkExFullBodyStretch": "Растяжка",
+  "wrkExFullBodyStretchHint": "Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков."
+}

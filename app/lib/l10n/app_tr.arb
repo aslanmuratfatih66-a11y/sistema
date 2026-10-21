@@ -112,6 +112,177 @@
   "homeDemoBossGoal": "Bu hafta 5 antrenman tamamla",
   "homeDemoBossRewardTitle": "Yılmaz",
   "homeDemoAssistantLine": "Su hedefinin %48’i tamam. 11:30’a kadar bir bardak iç, «Zindelik» bir saat daha sürsün.",
+  "actStepsTitle": "Adımlar",
+  "actGoal": "Hedef: {goal}",
+  "@actGoal": {
+    "placeholders": {
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "actDistance": "Mesafe",
+  "actDistanceKm": "{km} km",
+  "@actDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "actFloors": "Katlar",
+  "actNoValue": "—",
+  "actWeek": "7 gün",
+  "actAllow": "İzin ver",
+  "actPermissionHint": "Hareket sensörlerine erişim izni verin — adımlar otomatik sayılsın.",
+  "actUnavailableHint": "Cihazda adım sayar yok — adımları elle girin.",
+  "actManual": "Elle gir",
+  "actManualLabel": "Bugünkü adımlar",
+  "actManualRange": "0 ile 100.000 arası",
+  "actSave": "Kaydet",
+  "actCancel": "İptal",
+  "actStepsSemantic": "Bugünkü adımlar: {steps} / {goal}",
+  "@actStepsSemantic": {
+    "placeholders": {
+      "steps": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyEnergy": "Enerji",
+  "bdyHistory": "Geçmiş",
+  "bdyCharts": "Grafikler",
+  "bdySleepTitle": "Uyku",
+  "bdySleepLog": "Uykuyu kaydet",
+  "bdySleepNotLogged": "Dün geceki uyku kaydedilmedi.",
+  "bdySleepLastNight": "Dün gece",
+  "bdySleepDuration": "Süre",
+  "bdySleepTarget": "Plan hedefi",
+  "bdySleepAverage": "Ortalama",
+  "bdySleepVsTarget": "Hedefe göre",
+  "bdySleepOnTarget": "Hedefe ulaşan geceler",
+  "bdySleepEmpty": "Henüz uyku kaydı yok.",
+  "bdySleepChartLabel": "Günlere göre uyku grafiği, çizgi plan hedefidir",
+  "bdySleepHistory": "Son {days} gün uyku",
+  "@bdySleepHistory": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdySleepWakeDay": "Sabah (kalkış günü)",
+  "bdySleepBed": "Yattım",
+  "bdySleepWake": "Kalktım",
+  "bdySleepQuality": "Uyku kalitesi",
+  "bdySleepQualityHint": "1 — kötü, 5 — mükemmel",
+  "bdySleepQualityShort": "kal. {quality}/5",
+  "@bdySleepQualityShort": {
+    "placeholders": {
+      "quality": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyMeasureTitle": "Ölçüler",
+  "bdyMeasureAdd": "Ölçü ekle",
+  "bdyMeasureHint": "Ölçtüklerinizi doldurun. Çevre ölçüleri — mezura ile, sabah, yemekten önce.",
+  "bdyMeasureEmpty": "Henüz ölçü yok.",
+  "bdyMeasureNeedTwo": "Grafik için en az iki ölçü gerekir.",
+  "bdyMeasureChangeNote": "Parantez içinde — 30 günlük değişim",
+  "bdyMeasureChartLabel": "Grafik: {name}",
+  "@bdyMeasureChartLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyMeasureWeight": "Kilo",
+  "bdyMeasureWaist": "Bel",
+  "bdyMeasureHips": "Kalça",
+  "bdyMeasureChest": "Göğüs",
+  "bdyMeasureNeck": "Boyun",
+  "bdyMeasureArm": "Kol",
+  "bdyMeasureBodyFat": "Yağ %",
+  "bdyUnitKg": "kg",
+  "bdyUnitCm": "cm",
+  "bdyPeriodAll": "Tümü",
+  "bdyPeriodDays": "{days} gün",
+  "@bdyPeriodDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyPhotoTitle": "Fotoğraf günlüğü",
+  "bdyPhotoKindBody": "Vücut",
+  "bdyPhotoKindSkin": "Cilt",
+  "bdyPhotoLast": "Son fotoğraf",
+  "bdyPhotoAdd": "Yeni fotoğraf",
+  "bdyPhotoPose": "Açı",
+  "bdyPhotoCamera": "Çek",
+  "bdyPhotoGallery": "Galeriden",
+  "bdyPhotoEmpty": "Henüz fotoğraf yok.",
+  "bdyPhotoCompare": "Karşılaştır",
+  "bdyPhotoCompareHint": "«Önce» ve «sonra»yı karşılaştırmak için iki fotoğraf seçin.",
+  "bdyPhotoCompareNeedTwo": "Karşılaştırma için en az iki fotoğraf gerekir.",
+  "bdyPoseOther": "Diğer",
+  "bdyCompareSlider": "Perde",
+  "bdyCompareSideBySide": "Yan yana",
+  "bdyCompareBefore": "Önce",
+  "bdyCompareAfter": "Sonra",
+  "bdyCompareNote": "Aynı ışıkta ve aynı mesafeden çekin — karşılaştırma daha doğru olur.",
+  "bdyCareTitle": "Cilt bakımı",
+  "bdyCareOpen": "Kontrol listesi",
+  "bdyCareMorning": "Sabah",
+  "bdyCareEvening": "Akşam",
+  "bdyCareTemplateNote": "Ankete göre temel şablon. Cildinize uygun ürün seçimi daha sonra eklenecek.",
+  "bdyCareSensitiveNote": "Ürünlere tepki olmuş: yeni bir ürünü önce cildin küçük bir bölgesinde deneyin.",
+  "bdyCareCompleteNote": "Rutin tamamlandı.",
+  "bdyCareRoutineDone": "{routine}: bakım tamamlandı",
+  "@bdyCareRoutineDone": {
+    "placeholders": {
+      "routine": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyCareCleanse": "Yumuşak bir temizleyiciyle yüzünü yıka",
+  "bdyCareCleanseGentle": "kurutmadan",
+  "bdyCareColdRinse": "Yüzünü serin suyla yıka",
+  "bdyCareMoisturize": "Nemlendirici krem",
+  "bdyCareMoisturizeLight": "hafif doku",
+  "bdyCareMoisturizeRich": "daha yoğun, besleyici",
+  "bdyCareSunscreen": "Güneş kremi",
+  "bdyCareRemoveSunscreen": "SPF'yi ve kiri temizle",
+  "bdyCareAcne": "Sivilce karşıtı ürün (varsa)",
+  "bdyCareExfoliate": "Nazik peeling",
+  "bdyCareHandsOff": "Dokunma ve sıkma",
+  "bdySkinType": "Cilt tipi (ankete göre)",
+  "bdySkinNormal": "Normal",
+  "bdySkinOily": "Yağlı",
+  "bdySkinCombination": "Karma",
+  "bdySkinDry": "Kuru",
+  "bdySkinUnknown": "Belirlenmedi",
+  "bdySwellTitle": "Ödem",
+  "bdySwellOpen": "Ayrıntılar",
+  "bdySwellMorningPhoto": "Sabah yüz fotoğrafı",
+  "bdySwellPhotoHint": "Kalkar kalkmaz önden bir fotoğraf çekin — fotoğraf akışında eğilim görünür.",
+  "bdySwellTakenToday": "Bugünün sabah fotoğrafı var.",
+  "bdySwellTipShort": "Odak: akşam daha az tuz, gün içinde su, plana göre uyku.",
+  "bdySwellTipsTitle": "İpuçları",
+  "bdySwellTipSalt": "Tuzlu yiyecekleri ve fast food'u gece geç saatte yememek daha iyi.",
+  "bdySwellTipWater": "Suyu gün boyunca eşit için, hepsini yatmadan önce değil.",
+  "bdySwellTipSleep": "Yeterince uyuyun ve aynı saatte yatın — uykusuzluk sabah yüzde belli olur.",
+  "bdySwellNote": "Ödem şiddetliyse, aniden ortaya çıktıysa veya geçmiyorsa doktora görünün.",
+  "bdySwellTrend": "Sabahlara göre eğilim",
+  "bdySwellEmpty": "Henüz sabah fotoğrafı yok.",
+  "bdySwellCompareFirst": "İlk ve sonuncuyu karşılaştır",
   "chrIntro": "Bir yol arkadaşı seç. Fotoğraf çekimlerinde sesiyle sana rehberlik edecek, sonra ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.",
   "chrArchetype": "Karakter",
   "chrArchetypeRequired": "Devam etmek için bir karakter seç",
@@ -291,6 +462,193 @@
   "ntfPermRequest": "İzin iste",
   "ntfTest": "Bildirimi test et",
   "ntfUnavailable": "Bu platformda bildirimler kullanılamaz",
+  "nutYesterday": "Dün",
+  "nutToday": "Bugün",
+  "nutNoticeLabel": "Bildirim",
+  "nutProtein": "Protein",
+  "nutFat": "Yağ",
+  "nutCarbs": "Karbonhidrat",
+  "nutBalance": "Denge",
+  "nutNoNorm": "Hedef yok: kalori ve makro hedeflerini görmek için planı kabul edin.",
+  "nutNoWaterNorm": "Su hedefi plan kabul edildikten sonra görünecek.",
+  "nutGrams": "{value} g",
+  "@nutGrams": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutGramsProgress": "{current} / {total} g",
+  "@nutGramsProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "nutLiters": "{value} L",
+  "@nutLiters": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutMacrosLine": "P {protein} · Y {fat} · K {carbs}",
+  "@nutMacrosLine": {
+    "placeholders": {
+      "protein": {
+        "type": "String"
+      },
+      "fat": {
+        "type": "String"
+      },
+      "carbs": {
+        "type": "String"
+      }
+    }
+  },
+  "nutTotalLine": "Toplam: {kcal} kcal · {macros}",
+  "@nutTotalLine": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutPerServing": "Porsiyon: {kcal} · {macros}",
+  "@nutPerServing": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutWaterAdd": "+{ml} ml",
+  "@nutWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "nutWaterUndo": "Son su kaydını geri al",
+  "nutTrainingDay": "Antrenman günü",
+  "nutAddTitle": "Yemek ekle",
+  "nutAddBarcode": "Barkod",
+  "nutAddManual": "Elle",
+  "nutAddPhoto": "Fotoğraf",
+  "nutRecipes": "Tariflerim",
+  "nutSearching": "Aranıyor…",
+  "nutDiaryEmpty": "Bu gün için kayıt yok. Barkod, elle giriş, fotoğraf veya tarifle yemek ekleyin.",
+  "nutWithPhoto": "fotoğraflı",
+  "nutMealBreakfast": "Kahvaltı",
+  "nutMealLunch": "Öğle",
+  "nutMealDinner": "Akşam",
+  "nutMealSnack": "Ara öğün",
+  "nutNewEntry": "Yeni kayıt",
+  "nutEditEntry": "Günlük kaydı",
+  "nutRecipeLineTitle": "Tarif satırı",
+  "nutPhotoSaved": "Fotoğraf kaydedildi",
+  "nutPhotoAiLater": "Fotoğraftan yemek tanıma daha sonra açılacak. Şimdilik adı ve besin değerlerini kendiniz girin.",
+  "nutFieldTitle": "Ad",
+  "nutFieldTitleHint": "Örneğin: muzlu yulaf ezmesi",
+  "nutFieldMeal": "Öğün",
+  "nutFieldMode": "Hesaplama",
+  "nutModePortion": "Porsiyon",
+  "nutModePer100": "100 g başına",
+  "nutFieldGrams": "Porsiyon ağırlığı",
+  "nutErrorGrams": "Ağırlığı gram olarak girin",
+  "nutValuesPer100": "100 g başına değerler",
+  "nutValuesPortion": "Tüm porsiyon için değerler",
+  "nutFieldKcal": "Kalori",
+  "nutFieldProtein": "Protein",
+  "nutFieldFat": "Yağ",
+  "nutFieldCarbs": "Karbonhidrat",
+  "nutUnitKcal": "kcal",
+  "nutUnitG": "g",
+  "nutUnitKg": "kg",
+  "nutUnitPcs": "adet",
+  "nutUnitL": "L",
+  "nutUnitMl": "ml",
+  "nutSaveToProducts": "Ürünlerime kaydet",
+  "nutSaveToProductsHint": "Sonra aramada bulunur, tekrar girmeye gerek kalmaz",
+  "nutMyProducts": "Ürünlerim",
+  "nutSearchHint": "Ad veya barkoda göre ara",
+  "nutWithoutProduct": "Ürünsüz",
+  "nutNewProduct": "Yeni ürün",
+  "nutNoProducts": "Henüz ürün yok. Barkod okutun veya ürünü elle ekleyin.",
+  "nutPer100Short": "100 g",
+  "nutProductNameHint": "Örneğin: sade yoğurt",
+  "nutFieldBrand": "Marka",
+  "nutFieldBarcode": "Barkod",
+  "nutFieldServing": "Normal porsiyon",
+  "nutBarcodeNotFound": "Ürün Open Food Facts veritabanında yok. Ambalajdaki bilgileri girin — Sistem barkoddan hatırlayacak.",
+  "nutBarcodeOffline": "Ürün veritabanına bağlanılamadı. Ambalajdaki bilgileri girin — Sistem ürünü barkoddan hatırlayacak.",
+  "nutScanTitle": "Barkod",
+  "nutScanHint": "Kamerayı ambalajdaki barkoda tutun",
+  "nutScanNoCamera": "Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya ürünü elle girin.",
+  "nutPhotoTitle": "Yemek fotoğrafı",
+  "nutPhotoMessage": "Yemeğin fotoğrafını çekin veya galeriden seçin. Fotoğraf günlük kaydına eklenecek.",
+  "nutPhotoCamera": "Kamera",
+  "nutPhotoGallery": "Galeri",
+  "nutPortions": "Porsiyon",
+  "nutAddToDiary": "Günlüğe ekle",
+  "nutRecipesEmpty": "Henüz tarif yok. Yemeği bir kez ürünlerden oluşturun — sonra tek dokunuşla ekleyin.",
+  "nutNewRecipe": "Yeni tarif",
+  "nutEditRecipe": "Tarif",
+  "nutRecipeTitleHint": "Örneğin: sebzeli omlet",
+  "nutServings": "Yemekteki porsiyon",
+  "nutIngredients": "İçindekiler",
+  "nutIngredientsEmpty": "En az bir ürün veya satır ekleyin.",
+  "nutFromProducts": "Ürünlerden",
+  "nutManualLine": "Elle",
+  "nutShopping": "Alışveriş listesi",
+  "nutShopNothing": "Liste boş — alışveriş eklemek için açın.",
+  "nutShopRemainingCount": "{count, plural, one{Alınacak: {count} ürün · {sum}} other{Alınacak: {count} ürün · {sum}}}",
+  "@nutShopRemainingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "sum": {
+        "type": "String"
+      }
+    }
+  },
+  "nutShopAdd": "Ürün ekle",
+  "nutShopEdit": "Ürün",
+  "nutShopTotal": "Toplam (yaklaşık)",
+  "nutShopRemaining": "Henüz alınmadı",
+  "nutShopPriceNote": "Tutarlar girdiğiniz fiyatlara göredir.",
+  "nutShopFromPlan": "Beslenme planından",
+  "nutShopFromPlanHint": "Plan hedeflerine göre haftalık temel liste: protein, tahıllar, sebze, meyve, su. Fiyatları kendiniz girin.",
+  "nutShopNoPlan": "Planı kabul edin — Sistem haftalık temel listeyi hazırlasın.",
+  "nutShopGenerate": "Haftalık liste oluştur",
+  "nutShopEmpty": "Henüz ürün yok.",
+  "nutShopClearDone": "Alınanları kaldır",
+  "nutShopTitleHint": "Örneğin: karabuğday",
+  "nutShopQuantity": "Miktar",
+  "nutShopPrice": "Yaklaşık fiyat",
+  "nutGroceryChicken": "Tavuk göğsü / hindi",
+  "nutGroceryEggs": "Yumurta",
+  "nutGroceryCottageCheese": "Lor peyniri",
+  "nutGroceryGrains": "Tahıllar (karabuğday, pirinç)",
+  "nutGroceryOats": "Yulaf ezmesi",
+  "nutGroceryVegetables": "Sebzeler",
+  "nutGroceryFruits": "Meyveler",
+  "nutGroceryOil": "Bitkisel yağ",
+  "nutGroceryWater": "İçme suyu",
   "planNoticeLabel": "Bildirim",
   "planTitle": "Plan hazırlandı",
   "planDraftNote": "Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.",
@@ -1290,5 +1648,294 @@
         "type": "int"
       }
     }
-  }
+  },
+  "wrkTitle": "Antrenmanlar",
+  "wrkProgram": "Program",
+  "wrkToday": "Bugün",
+  "wrkTodayDay": "Programa göre — {key} günü",
+  "@wrkTodayDay": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkRestDay": "Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğin antrenmanı yapabilirsin.",
+  "wrkDayTitle": "{key} günü",
+  "@wrkDayTitle": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkMinutesShort": "{minutes} dk",
+  "@wrkMinutesShort": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkEstimate": "≈{minutes} dk",
+  "@wrkEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkExerciseCount": "{count, plural, one{{count} egzersiz} other{{count} egzersiz}}",
+  "@wrkExerciseCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsReps": "{sets} × {reps}",
+  "@wrkSetsReps": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsSeconds": "{sets} × {seconds} sn",
+  "@wrkSetsSeconds": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRestShort": "dinlenme {seconds} sn",
+  "@wrkRestShort": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkGentle": "Hafif seçenek: zıplama ve omurgaya dikey yük yok — ankette sakatlık veya kısıtlama belirtilmiş.",
+  "wrkSafetyNote": "Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atla.",
+  "wrkLevelUnknown": "Ankette seviye belirtilmemiş — başlangıç programı.",
+  "wrkProgressionWeeks": "Tamamlanan hafta: {weeks}",
+  "@wrkProgressionWeeks": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkProgressionNote": "Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her hafta için: +1 tekrar veya +5 sn, seviyenin üst sınırına kadar.",
+  "wrkRegenerate": "Programı yeniden oluştur",
+  "wrkRegenerateTitle": "Program yeniden oluşturulsun mu?",
+  "wrkRegenerateText": "Program anket ve plana göre yeniden oluşturulacak. Antrenman geçmişi korunur, ilerleme baştan başlar.",
+  "wrkAiProgram": "Yapay zekâdan program",
+  "wrkSoon": "yakında",
+  "wrkStart": "Antrenmana başla",
+  "wrkStartDay": "{key} gününe başla",
+  "@wrkStartDay": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkHistory": "Geçmiş",
+  "wrkHistoryEmpty": "Henüz antrenman yok.",
+  "wrkSessionDone": "tamamlandı",
+  "wrkSessionInterrupted": "yarıda kaldı",
+  "wrkSessionStats": "{minutes} dk · ≈{kcal} kcal",
+  "@wrkSessionStats": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkPreparing": "Program hazırlanıyor…",
+  "wrkPhasePrepare": "Hazırlan",
+  "wrkPhaseWork": "Çalışma",
+  "wrkPhaseRest": "Dinlenme",
+  "wrkPaused": "Duraklatıldı",
+  "wrkSetOf": "Set {set} / {sets}",
+  "@wrkSetOf": {
+    "placeholders": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRepsTarget": "{reps, plural, one{{reps} tekrar} other{{reps} tekrar}}",
+  "@wrkRepsTarget": {
+    "placeholders": {
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkDoneSet": "Set tamam",
+  "wrkPause": "Duraklat",
+  "wrkResume": "Devam et",
+  "wrkSkipRest": "Dinlenmeyi atla",
+  "wrkSkipExercise": "Egzersizi atla",
+  "wrkStop": "Bitir",
+  "wrkNext": "Sıradaki: {name}",
+  "@wrkNext": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkLastExercise": "Son egzersiz",
+  "wrkTechnique": "Teknik",
+  "wrkVoice": "Sesli yönlendirme",
+  "wrkProgressLabel": "Antrenman ilerlemesi",
+  "wrkStopTitle": "Antrenman bitirilsin mi?",
+  "wrkStopText": "Yapılanlar yarım kalan antrenman olarak kaydedilir.",
+  "wrkFinishedTitle": "Antrenman tamamlandı",
+  "wrkFinishedStats": "Süre: {minutes} dk · ≈{kcal} kcal · set: {sets}",
+  "@wrkFinishedStats": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkWeightAssumed": "Harcama 70 kg kiloya göre tahmin: kilo ölçümü yok.",
+  "wrkKcalNote": "Harcama MET ile tahmindir, ölçüm değildir.",
+  "wrkSayPrepare": "Hazırlan. {name}.",
+  "@wrkSayPrepare": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSaySet": "Set {set} / {sets}. {amount}. Başla!",
+  "@wrkSaySet": {
+    "placeholders": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSecondsAmount": "{seconds, plural, one{{seconds} saniye} other{{seconds} saniye}}",
+  "@wrkSecondsAmount": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSayRest": "Dinlenme: {amount}.",
+  "@wrkSayRest": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSayNext": "Sıradaki: {name}.",
+  "@wrkSayNext": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSayFinished": "Antrenman tamamlandı. Harika iş!",
+  "wrkExMarchInPlace": "Yerinde yürüyüş",
+  "wrkExMarchInPlaceHint": "Dizlerini yükselt.\nKollar adımla birlikte çalışsın.\nDüzenli nefes al.",
+  "wrkExArmCircles": "Kol çevirme",
+  "wrkExArmCirclesHint": "Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler.\nOmuzlar aşağıda.",
+  "wrkExJumpingJacks": "Jumping jack",
+  "wrkExJumpingJacksHint": "Zıpla: bacaklar açık, kollar yukarı.\nGeri zıpla.\nParmak uçlarına yumuşak in.",
+  "wrkExChairSquat": "Sandalyeye çömelme",
+  "wrkExChairSquatHint": "Sandalyenin önünde dur, ayaklar omuz genişliğinde.\nKalçayı geri iterek otur.\nSarsmadan kalk.",
+  "wrkExGluteBridge": "Kalça köprüsü",
+  "wrkExGluteBridgeHint": "Sırtüstü yat, ayaklar yerde.\nKalçayı kaldır, kalça kaslarını sık.\nYavaşça in.",
+  "wrkExSquat": "Squat",
+  "wrkExSquatHint": "Ayaklar omuz genişliğinde, uçlar hafif dışa.\nKalça geri, dizler parmak yönünde.\nSırt düz, topuklar yerde.",
+  "wrkExWallSit": "Duvarda oturma",
+  "wrkExWallSitHint": "Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar in.\nPozisyonu koru.",
+  "wrkExReverseLunge": "Geri hamle",
+  "wrkExReverseLungeHint": "Geriye adım at, arka dizi yere doğru indir.\nÖn diz ayağın üzerinde.\nGeri dön, bacak değiştir.",
+  "wrkExGobletSquat": "Goblet squat",
+  "wrkExGobletSquatHint": "Dambılı dik olarak göğüste tut.\nÇömel, dirsekler dizlerin arasında.\nSırt düz.",
+  "wrkExKettlebellSwing": "Kettlebell salınımı",
+  "wrkExKettlebellSwingHint": "Kettlebell iki elde, ayaklar omuzdan geniş.\nKalça geri, sonra hızla ileri.\nKettlebell kalça gücüyle göğüs hizasına çıkar.",
+  "wrkExJumpSquat": "Zıplamalı squat",
+  "wrkExJumpSquatHint": "Normal squat.\nYukarı sıçra.\nYumuşak inip squat'a geç.",
+  "wrkExWallPushUp": "Duvarda şınav",
+  "wrkExWallPushUpHint": "Avuçlar omuz hizasında duvarda.\nKolları bük, gövde düz.\nİtip geri gel.",
+  "wrkExKneePushUp": "Dizüstü şınav",
+  "wrkExKneePushUpHint": "Dizler ve avuçlar yerde.\nDizden başa gövde düz.\nGöğüs yere, sonra yukarı.",
+  "wrkExPushUp": "Şınav",
+  "wrkExPushUpHint": "Şınav pozisyonu, eller omuzdan biraz geniş.\nGövde düz bir çizgi.\nGöğüs yere, dirsekler 45°.",
+  "wrkExDumbbellPress": "Yerde dambıl press",
+  "wrkExDumbbellPressHint": "Yerde yat, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indir.\nYukarı it.",
+  "wrkExDiamondPushUp": "Elmas şınav",
+  "wrkExDiamondPushUpHint": "Avuçlar göğsün altında yan yana.\nDirsekler gövdeye yakın.\nGövde düz.",
+  "wrkExSuperman": "Süperman",
+  "wrkExSupermanHint": "Yüzüstü yat, kollar önde.\nKol ve bacakları birkaç saniye kaldır.\nYavaşça indir.",
+  "wrkExReverseSnowAngel": "Ters kar meleği",
+  "wrkExReverseSnowAngelHint": "Yüzüstü yat, kollar yanlarda.\nGöğsü ve kolları hafif kaldır.\nKolları yay çizerek başın üstüne ve geri götür.",
+  "wrkExBandRow": "Lastik çekiş",
+  "wrkExBandRowHint": "Lastiği göğüs hizasına sabitle.\nKürek kemiklerini sıkarak bele çek.\nYavaşça bırak.",
+  "wrkExDumbbellRow": "Eğilerek dambıl çekiş",
+  "wrkExDumbbellRowHint": "Bir el ve diz sandalyeye dayalı.\nDambılı bele çek.\nSırt düz.",
+  "wrkExPullUp": "Barfiks",
+  "wrkExPullUpHint": "Tutuş omuzdan biraz geniş.\nÇeneyi bara çek.\nKontrollü in.",
+  "wrkExDeadBug": "Ölü böcek",
+  "wrkExDeadBugHint": "Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indir.\nBel yere bastırılı.",
+  "wrkExBirdDog": "Kuş-köpek",
+  "wrkExBirdDogHint": "Eller ve dizler yerde.\nZıt kol ve bacağı uzat.\nBekle, taraf değiştir.",
+  "wrkExPlank": "Plank",
+  "wrkExPlankHint": "Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökme.",
+  "wrkExCrunch": "Mekik",
+  "wrkExCrunchHint": "Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldır.\nYavaşça in.",
+  "wrkExSidePlank": "Yan plank",
+  "wrkExSidePlankHint": "Ön kol yerde, bacaklar birlikte.\nKalça yukarıda, gövde düz.\nSürenin yarısı her tarafa.",
+  "wrkExLegRaise": "Bacak kaldırma",
+  "wrkExLegRaiseHint": "Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldır.\nBel yerde, yavaş indir.",
+  "wrkExStepTouch": "Yana adım",
+  "wrkExStepTouchHint": "Yana adım at, ayağı birleştir.\nDiğer tarafa.\nKollar ritimle çalışsın.",
+  "wrkExShadowBoxing": "Gölge boksu",
+  "wrkExShadowBoxingHint": "Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket et.",
+  "wrkExHighKnees": "Yüksek diz koşusu",
+  "wrkExHighKneesHint": "Yerinde koş.\nDizler bel hizasına.\nParmak uçlarına in.",
+  "wrkExMountainClimber": "Dağcı",
+  "wrkExMountainClimberHint": "Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çek.\nKalçayı kaldırma.",
+  "wrkExBurpee": "Burpee",
+  "wrkExBurpeeHint": "Çömel, eller yere.\nŞınav pozisyonuna sıçra ve geri gel.\nYukarı zıpla.",
+  "wrkExFullBodyStretch": "Esneme",
+  "wrkExFullBodyStretchHint": "Yukarı uzan, sonra öne eğil.\nUyluk ve göğsü esnet.\nYavaş nefes al, sarsma."
 }

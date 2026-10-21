@@ -1,0 +1,189 @@
+{
+  "nutYesterday": "Dün",
+  "nutToday": "Bugün",
+  "nutNoticeLabel": "Bildirim",
+  "nutProtein": "Protein",
+  "nutFat": "Yağ",
+  "nutCarbs": "Karbonhidrat",
+  "nutBalance": "Denge",
+  "nutNoNorm": "Hedef yok: kalori ve makro hedeflerini görmek için planı kabul edin.",
+  "nutNoWaterNorm": "Su hedefi plan kabul edildikten sonra görünecek.",
+  "nutGrams": "{value} g",
+  "@nutGrams": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutGramsProgress": "{current} / {total} g",
+  "@nutGramsProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "nutLiters": "{value} L",
+  "@nutLiters": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutMacrosLine": "P {protein} · Y {fat} · K {carbs}",
+  "@nutMacrosLine": {
+    "placeholders": {
+      "protein": {
+        "type": "String"
+      },
+      "fat": {
+        "type": "String"
+      },
+      "carbs": {
+        "type": "String"
+      }
+    }
+  },
+  "nutTotalLine": "Toplam: {kcal} kcal · {macros}",
+  "@nutTotalLine": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutPerServing": "Porsiyon: {kcal} · {macros}",
+  "@nutPerServing": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutWaterAdd": "+{ml} ml",
+  "@nutWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "nutWaterUndo": "Son su kaydını geri al",
+  "nutTrainingDay": "Antrenman günü",
+  "nutAddTitle": "Yemek ekle",
+  "nutAddBarcode": "Barkod",
+  "nutAddManual": "Elle",
+  "nutAddPhoto": "Fotoğraf",
+  "nutRecipes": "Tariflerim",
+  "nutSearching": "Aranıyor…",
+  "nutDiaryEmpty": "Bu gün için kayıt yok. Barkod, elle giriş, fotoğraf veya tarifle yemek ekleyin.",
+  "nutWithPhoto": "fotoğraflı",
+  "nutMealBreakfast": "Kahvaltı",
+  "nutMealLunch": "Öğle",
+  "nutMealDinner": "Akşam",
+  "nutMealSnack": "Ara öğün",
+  "nutNewEntry": "Yeni kayıt",
+  "nutEditEntry": "Günlük kaydı",
+  "nutRecipeLineTitle": "Tarif satırı",
+  "nutPhotoSaved": "Fotoğraf kaydedildi",
+  "nutPhotoAiLater": "Fotoğraftan yemek tanıma daha sonra açılacak. Şimdilik adı ve besin değerlerini kendiniz girin.",
+  "nutFieldTitle": "Ad",
+  "nutFieldTitleHint": "Örneğin: muzlu yulaf ezmesi",
+  "nutFieldMeal": "Öğün",
+  "nutFieldMode": "Hesaplama",
+  "nutModePortion": "Porsiyon",
+  "nutModePer100": "100 g başına",
+  "nutFieldGrams": "Porsiyon ağırlığı",
+  "nutErrorGrams": "Ağırlığı gram olarak girin",
+  "nutValuesPer100": "100 g başına değerler",
+  "nutValuesPortion": "Tüm porsiyon için değerler",
+  "nutFieldKcal": "Kalori",
+  "nutFieldProtein": "Protein",
+  "nutFieldFat": "Yağ",
+  "nutFieldCarbs": "Karbonhidrat",
+  "nutUnitKcal": "kcal",
+  "nutUnitG": "g",
+  "nutUnitKg": "kg",
+  "nutUnitPcs": "adet",
+  "nutUnitL": "L",
+  "nutUnitMl": "ml",
+  "nutSaveToProducts": "Ürünlerime kaydet",
+  "nutSaveToProductsHint": "Sonra aramada bulunur, tekrar girmeye gerek kalmaz",
+  "nutMyProducts": "Ürünlerim",
+  "nutSearchHint": "Ad veya barkoda göre ara",
+  "nutWithoutProduct": "Ürünsüz",
+  "nutNewProduct": "Yeni ürün",
+  "nutNoProducts": "Henüz ürün yok. Barkod okutun veya ürünü elle ekleyin.",
+  "nutPer100Short": "100 g",
+  "nutProductNameHint": "Örneğin: sade yoğurt",
+  "nutFieldBrand": "Marka",
+  "nutFieldBarcode": "Barkod",
+  "nutFieldServing": "Normal porsiyon",
+  "nutBarcodeNotFound": "Ürün Open Food Facts veritabanında yok. Ambalajdaki bilgileri girin — Sistem barkoddan hatırlayacak.",
+  "nutBarcodeOffline": "Ürün veritabanına bağlanılamadı. Ambalajdaki bilgileri girin — Sistem ürünü barkoddan hatırlayacak.",
+  "nutScanTitle": "Barkod",
+  "nutScanHint": "Kamerayı ambalajdaki barkoda tutun",
+  "nutScanNoCamera": "Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya ürünü elle girin.",
+  "nutPhotoTitle": "Yemek fotoğrafı",
+  "nutPhotoMessage": "Yemeğin fotoğrafını çekin veya galeriden seçin. Fotoğraf günlük kaydına eklenecek.",
+  "nutPhotoCamera": "Kamera",
+  "nutPhotoGallery": "Galeri",
+  "nutPortions": "Porsiyon",
+  "nutAddToDiary": "Günlüğe ekle",
+  "nutRecipesEmpty": "Henüz tarif yok. Yemeği bir kez ürünlerden oluşturun — sonra tek dokunuşla ekleyin.",
+  "nutNewRecipe": "Yeni tarif",
+  "nutEditRecipe": "Tarif",
+  "nutRecipeTitleHint": "Örneğin: sebzeli omlet",
+  "nutServings": "Yemekteki porsiyon",
+  "nutIngredients": "İçindekiler",
+  "nutIngredientsEmpty": "En az bir ürün veya satır ekleyin.",
+  "nutFromProducts": "Ürünlerden",
+  "nutManualLine": "Elle",
+  "nutShopping": "Alışveriş listesi",
+  "nutShopNothing": "Liste boş — alışveriş eklemek için açın.",
+  "nutShopRemainingCount": "{count, plural, one{Alınacak: {count} ürün · {sum}} other{Alınacak: {count} ürün · {sum}}}",
+  "@nutShopRemainingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "sum": {
+        "type": "String"
+      }
+    }
+  },
+  "nutShopAdd": "Ürün ekle",
+  "nutShopEdit": "Ürün",
+  "nutShopTotal": "Toplam (yaklaşık)",
+  "nutShopRemaining": "Henüz alınmadı",
+  "nutShopPriceNote": "Tutarlar girdiğiniz fiyatlara göredir.",
+  "nutShopFromPlan": "Beslenme planından",
+  "nutShopFromPlanHint": "Plan hedeflerine göre haftalık temel liste: protein, tahıllar, sebze, meyve, su. Fiyatları kendiniz girin.",
+  "nutShopNoPlan": "Planı kabul edin — Sistem haftalık temel listeyi hazırlasın.",
+  "nutShopGenerate": "Haftalık liste oluştur",
+  "nutShopEmpty": "Henüz ürün yok.",
+  "nutShopClearDone": "Alınanları kaldır",
+  "nutShopTitleHint": "Örneğin: karabuğday",
+  "nutShopQuantity": "Miktar",
+  "nutShopPrice": "Yaklaşık fiyat",
+  "nutGroceryChicken": "Tavuk göğsü / hindi",
+  "nutGroceryEggs": "Yumurta",
+  "nutGroceryCottageCheese": "Lor peyniri",
+  "nutGroceryGrains": "Tahıllar (karabuğday, pirinç)",
+  "nutGroceryOats": "Yulaf ezmesi",
+  "nutGroceryVegetables": "Sebzeler",
+  "nutGroceryFruits": "Meyveler",
+  "nutGroceryOil": "Bitkisel yağ",
+  "nutGroceryWater": "İçme suyu"
+}

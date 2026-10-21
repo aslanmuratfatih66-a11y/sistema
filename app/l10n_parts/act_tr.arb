@@ -1,0 +1,21 @@
+{
+  "actStepsTitle": "Adımlar",
+  "actGoal": "Hedef: {goal}",
+  "@actGoal": {"placeholders": {"goal": {"type": "String"}}},
+  "actDistance": "Mesafe",
+  "actDistanceKm": "{km} km",
+  "@actDistanceKm": {"placeholders": {"km": {"type": "String"}}},
+  "actFloors": "Katlar",
+  "actNoValue": "—",
+  "actWeek": "7 gün",
+  "actAllow": "İzin ver",
+  "actPermissionHint": "Hareket sensörlerine erişim izni verin — adımlar otomatik sayılsın.",
+  "actUnavailableHint": "Cihazda adım sayar yok — adımları elle girin.",
+  "actManual": "Elle gir",
+  "actManualLabel": "Bugünkü adımlar",
+  "actManualRange": "0 ile 100.000 arası",
+  "actSave": "Kaydet",
+  "actCancel": "İptal",
+  "actStepsSemantic": "Bugünkü adımlar: {steps} / {goal}",
+  "@actStepsSemantic": {"placeholders": {"steps": {"type": "String"}, "goal": {"type": "String"}}}
+}

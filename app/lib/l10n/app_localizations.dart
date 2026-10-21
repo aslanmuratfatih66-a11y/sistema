@@ -770,6 +770,678 @@ abstract class AppLocalizations {
   /// **'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.'**
   String get homeDemoAssistantLine;
 
+  /// No description provided for @actStepsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаги'**
+  String get actStepsTitle;
+
+  /// No description provided for @actGoal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цель: {goal}'**
+  String actGoal(String goal);
+
+  /// No description provided for @actDistance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дистанция'**
+  String get actDistance;
+
+  /// No description provided for @actDistanceKm.
+  ///
+  /// In ru, this message translates to:
+  /// **'{km} км'**
+  String actDistanceKm(String km);
+
+  /// No description provided for @actFloors.
+  ///
+  /// In ru, this message translates to:
+  /// **'Этажи'**
+  String get actFloors;
+
+  /// No description provided for @actNoValue.
+  ///
+  /// In ru, this message translates to:
+  /// **'—'**
+  String get actNoValue;
+
+  /// No description provided for @actWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'7 дней'**
+  String get actWeek;
+
+  /// No description provided for @actAllow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешить'**
+  String get actAllow;
+
+  /// No description provided for @actPermissionHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разрешите доступ к датчикам движения — шаги будут считаться сами.'**
+  String get actPermissionHint;
+
+  /// No description provided for @actUnavailableHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Счётчика шагов на устройстве нет — введите шаги вручную.'**
+  String get actUnavailableHint;
+
+  /// No description provided for @actManual.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ввести вручную'**
+  String get actManual;
+
+  /// No description provided for @actManualLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаги за сегодня'**
+  String get actManualLabel;
+
+  /// No description provided for @actManualRange.
+  ///
+  /// In ru, this message translates to:
+  /// **'От 0 до 100 000'**
+  String get actManualRange;
+
+  /// No description provided for @actSave.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сохранить'**
+  String get actSave;
+
+  /// No description provided for @actCancel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отмена'**
+  String get actCancel;
+
+  /// No description provided for @actStepsSemantic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаги за сегодня: {steps} из {goal}'**
+  String actStepsSemantic(String steps, String goal);
+
+  /// No description provided for @bdyEnergy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Энергия'**
+  String get bdyEnergy;
+
+  /// No description provided for @bdyHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'История'**
+  String get bdyHistory;
+
+  /// No description provided for @bdyCharts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Графики'**
+  String get bdyCharts;
+
+  /// No description provided for @bdySleepTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон'**
+  String get bdySleepTitle;
+
+  /// No description provided for @bdySleepLog.
+  ///
+  /// In ru, this message translates to:
+  /// **'Записать сон'**
+  String get bdySleepLog;
+
+  /// No description provided for @bdySleepNotLogged.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон за прошлую ночь не записан.'**
+  String get bdySleepNotLogged;
+
+  /// No description provided for @bdySleepLastNight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прошлая ночь'**
+  String get bdySleepLastNight;
+
+  /// No description provided for @bdySleepDuration.
+  ///
+  /// In ru, this message translates to:
+  /// **'Длительность'**
+  String get bdySleepDuration;
+
+  /// No description provided for @bdySleepTarget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цель плана'**
+  String get bdySleepTarget;
+
+  /// No description provided for @bdySleepAverage.
+  ///
+  /// In ru, this message translates to:
+  /// **'В среднем'**
+  String get bdySleepAverage;
+
+  /// No description provided for @bdySleepVsTarget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Против цели'**
+  String get bdySleepVsTarget;
+
+  /// No description provided for @bdySleepOnTarget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ночей не меньше цели'**
+  String get bdySleepOnTarget;
+
+  /// No description provided for @bdySleepEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пока нет записей сна.'**
+  String get bdySleepEmpty;
+
+  /// No description provided for @bdySleepChartLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'График сна по дням, линия — цель плана'**
+  String get bdySleepChartLabel;
+
+  /// No description provided for @bdySleepHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон за {days} дн.'**
+  String bdySleepHistory(int days);
+
+  /// No description provided for @bdySleepWakeDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утро (день подъёма)'**
+  String get bdySleepWakeDay;
+
+  /// No description provided for @bdySleepBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёг'**
+  String get bdySleepBed;
+
+  /// No description provided for @bdySleepWake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Встал'**
+  String get bdySleepWake;
+
+  /// No description provided for @bdySleepQuality.
+  ///
+  /// In ru, this message translates to:
+  /// **'Качество сна'**
+  String get bdySleepQuality;
+
+  /// No description provided for @bdySleepQualityHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'1 — плохо, 5 — отлично'**
+  String get bdySleepQualityHint;
+
+  /// No description provided for @bdySleepQualityShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'кач. {quality}/5'**
+  String bdySleepQualityShort(int quality);
+
+  /// No description provided for @bdyMeasureTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Замеры'**
+  String get bdyMeasureTitle;
+
+  /// No description provided for @bdyMeasureAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить замер'**
+  String get bdyMeasureAdd;
+
+  /// No description provided for @bdyMeasureHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заполните то, что измерили. Обхваты — сантиметровой лентой, утром, до еды.'**
+  String get bdyMeasureHint;
+
+  /// No description provided for @bdyMeasureEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Замеров пока нет.'**
+  String get bdyMeasureEmpty;
+
+  /// No description provided for @bdyMeasureNeedTwo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для графика нужно хотя бы два замера.'**
+  String get bdyMeasureNeedTwo;
+
+  /// No description provided for @bdyMeasureChangeNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'В скобках — изменение за 30 дней'**
+  String get bdyMeasureChangeNote;
+
+  /// No description provided for @bdyMeasureChartLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'График: {name}'**
+  String bdyMeasureChartLabel(String name);
+
+  /// No description provided for @bdyMeasureWeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вес'**
+  String get bdyMeasureWeight;
+
+  /// No description provided for @bdyMeasureWaist.
+  ///
+  /// In ru, this message translates to:
+  /// **'Талия'**
+  String get bdyMeasureWaist;
+
+  /// No description provided for @bdyMeasureHips.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бёдра'**
+  String get bdyMeasureHips;
+
+  /// No description provided for @bdyMeasureChest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Грудь'**
+  String get bdyMeasureChest;
+
+  /// No description provided for @bdyMeasureNeck.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шея'**
+  String get bdyMeasureNeck;
+
+  /// No description provided for @bdyMeasureArm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рука'**
+  String get bdyMeasureArm;
+
+  /// No description provided for @bdyMeasureBodyFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'% жира'**
+  String get bdyMeasureBodyFat;
+
+  /// No description provided for @bdyUnitKg.
+  ///
+  /// In ru, this message translates to:
+  /// **'кг'**
+  String get bdyUnitKg;
+
+  /// No description provided for @bdyUnitCm.
+  ///
+  /// In ru, this message translates to:
+  /// **'см'**
+  String get bdyUnitCm;
+
+  /// No description provided for @bdyPeriodAll.
+  ///
+  /// In ru, this message translates to:
+  /// **'Всё'**
+  String get bdyPeriodAll;
+
+  /// No description provided for @bdyPeriodDays.
+  ///
+  /// In ru, this message translates to:
+  /// **'{days} дн.'**
+  String bdyPeriodDays(int days);
+
+  /// No description provided for @bdyPhotoTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото-дневник'**
+  String get bdyPhotoTitle;
+
+  /// No description provided for @bdyPhotoKindBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тело'**
+  String get bdyPhotoKindBody;
+
+  /// No description provided for @bdyPhotoKindSkin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кожа'**
+  String get bdyPhotoKindSkin;
+
+  /// No description provided for @bdyPhotoLast.
+  ///
+  /// In ru, this message translates to:
+  /// **'Последнее фото'**
+  String get bdyPhotoLast;
+
+  /// No description provided for @bdyPhotoAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новое фото'**
+  String get bdyPhotoAdd;
+
+  /// No description provided for @bdyPhotoPose.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ракурс'**
+  String get bdyPhotoPose;
+
+  /// No description provided for @bdyPhotoCamera.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снять'**
+  String get bdyPhotoCamera;
+
+  /// No description provided for @bdyPhotoGallery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Из галереи'**
+  String get bdyPhotoGallery;
+
+  /// No description provided for @bdyPhotoEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото пока нет.'**
+  String get bdyPhotoEmpty;
+
+  /// No description provided for @bdyPhotoCompare.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сравнить'**
+  String get bdyPhotoCompare;
+
+  /// No description provided for @bdyPhotoCompareHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выберите два фото, чтобы сравнить «до» и «после».'**
+  String get bdyPhotoCompareHint;
+
+  /// No description provided for @bdyPhotoCompareNeedTwo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для сравнения нужно хотя бы два фото.'**
+  String get bdyPhotoCompareNeedTwo;
+
+  /// No description provided for @bdyPoseOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое'**
+  String get bdyPoseOther;
+
+  /// No description provided for @bdyCompareSlider.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шторка'**
+  String get bdyCompareSlider;
+
+  /// No description provided for @bdyCompareSideBySide.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рядом'**
+  String get bdyCompareSideBySide;
+
+  /// No description provided for @bdyCompareBefore.
+  ///
+  /// In ru, this message translates to:
+  /// **'До'**
+  String get bdyCompareBefore;
+
+  /// No description provided for @bdyCompareAfter.
+  ///
+  /// In ru, this message translates to:
+  /// **'После'**
+  String get bdyCompareAfter;
+
+  /// No description provided for @bdyCompareNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снимайте при одинаковом свете и с одного расстояния — так сравнение честнее.'**
+  String get bdyCompareNote;
+
+  /// No description provided for @bdyCareTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уход за кожей'**
+  String get bdyCareTitle;
+
+  /// No description provided for @bdyCareOpen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чек-лист'**
+  String get bdyCareOpen;
+
+  /// No description provided for @bdyCareMorning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утро'**
+  String get bdyCareMorning;
+
+  /// No description provided for @bdyCareEvening.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вечер'**
+  String get bdyCareEvening;
+
+  /// No description provided for @bdyCareTemplateNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Базовый шаблон по анкете. Подбор средств под вашу кожу появится позже.'**
+  String get bdyCareTemplateNote;
+
+  /// No description provided for @bdyCareSensitiveNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Были реакции на средства: новое средство сначала пробуйте на небольшом участке кожи.'**
+  String get bdyCareSensitiveNote;
+
+  /// No description provided for @bdyCareCompleteNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рутина выполнена.'**
+  String get bdyCareCompleteNote;
+
+  /// No description provided for @bdyCareRoutineDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'{routine}: уход выполнен'**
+  String bdyCareRoutineDone(String routine);
+
+  /// No description provided for @bdyCareCleanse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Умыться мягким очищающим средством'**
+  String get bdyCareCleanse;
+
+  /// No description provided for @bdyCareCleanseGentle.
+  ///
+  /// In ru, this message translates to:
+  /// **'без пересушивания'**
+  String get bdyCareCleanseGentle;
+
+  /// No description provided for @bdyCareColdRinse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Умыться прохладной водой'**
+  String get bdyCareColdRinse;
+
+  /// No description provided for @bdyCareMoisturize.
+  ///
+  /// In ru, this message translates to:
+  /// **'Увлажняющий крем'**
+  String get bdyCareMoisturize;
+
+  /// No description provided for @bdyCareMoisturizeLight.
+  ///
+  /// In ru, this message translates to:
+  /// **'лёгкая текстура'**
+  String get bdyCareMoisturizeLight;
+
+  /// No description provided for @bdyCareMoisturizeRich.
+  ///
+  /// In ru, this message translates to:
+  /// **'плотнее, питательный'**
+  String get bdyCareMoisturizeRich;
+
+  /// No description provided for @bdyCareSunscreen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Солнцезащитный крем'**
+  String get bdyCareSunscreen;
+
+  /// No description provided for @bdyCareRemoveSunscreen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Смыть SPF и загрязнения'**
+  String get bdyCareRemoveSunscreen;
+
+  /// No description provided for @bdyCareAcne.
+  ///
+  /// In ru, this message translates to:
+  /// **'Средство против воспалений (если есть)'**
+  String get bdyCareAcne;
+
+  /// No description provided for @bdyCareExfoliate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мягкое отшелушивание'**
+  String get bdyCareExfoliate;
+
+  /// No description provided for @bdyCareHandsOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не трогать и не выдавливать'**
+  String get bdyCareHandsOff;
+
+  /// No description provided for @bdySkinType.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тип кожи (по анкете)'**
+  String get bdySkinType;
+
+  /// No description provided for @bdySkinNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нормальная'**
+  String get bdySkinNormal;
+
+  /// No description provided for @bdySkinOily.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жирная'**
+  String get bdySkinOily;
+
+  /// No description provided for @bdySkinCombination.
+  ///
+  /// In ru, this message translates to:
+  /// **'Комбинированная'**
+  String get bdySkinCombination;
+
+  /// No description provided for @bdySkinDry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сухая'**
+  String get bdySkinDry;
+
+  /// No description provided for @bdySkinUnknown.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не определён'**
+  String get bdySkinUnknown;
+
+  /// No description provided for @bdySwellTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отёки'**
+  String get bdySwellTitle;
+
+  /// No description provided for @bdySwellOpen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подробнее'**
+  String get bdySwellOpen;
+
+  /// No description provided for @bdySwellMorningPhoto.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утреннее фото лица'**
+  String get bdySwellMorningPhoto;
+
+  /// No description provided for @bdySwellPhotoHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сделайте фото анфас сразу после подъёма — по ленте снимков виден тренд.'**
+  String get bdySwellPhotoHint;
+
+  /// No description provided for @bdySwellTakenToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утреннее фото на сегодня есть.'**
+  String get bdySwellTakenToday;
+
+  /// No description provided for @bdySwellTipShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'Акценты: меньше соли вечером, вода днём, сон по плану.'**
+  String get bdySwellTipShort;
+
+  /// No description provided for @bdySwellTipsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подсказки'**
+  String get bdySwellTipsTitle;
+
+  /// No description provided for @bdySwellTipSalt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Солёное и фастфуд лучше не есть поздно вечером.'**
+  String get bdySwellTipSalt;
+
+  /// No description provided for @bdySwellTipWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пейте воду равномерно в течение дня, а не всё перед сном.'**
+  String get bdySwellTipWater;
+
+  /// No description provided for @bdySwellTipSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Высыпайтесь и ложитесь в одно время — недосып заметен на лице утром.'**
+  String get bdySwellTipSleep;
+
+  /// No description provided for @bdySwellNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Если отёки сильные, появились внезапно или не проходят — покажитесь врачу.'**
+  String get bdySwellNote;
+
+  /// No description provided for @bdySwellTrend.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренд по утрам'**
+  String get bdySwellTrend;
+
+  /// No description provided for @bdySwellEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утренних фото пока нет.'**
+  String get bdySwellEmpty;
+
+  /// No description provided for @bdySwellCompareFirst.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сравнить первое и последнее'**
+  String get bdySwellCompareFirst;
+
   /// No description provided for @chrIntro.
   ///
   /// In ru, this message translates to:
@@ -1843,6 +2515,684 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Уведомления недоступны на этой платформе'**
   String get ntfUnavailable;
+
+  /// No description provided for @nutYesterday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вчера'**
+  String get nutYesterday;
+
+  /// No description provided for @nutToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня'**
+  String get nutToday;
+
+  /// No description provided for @nutNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление'**
+  String get nutNoticeLabel;
+
+  /// No description provided for @nutProtein.
+  ///
+  /// In ru, this message translates to:
+  /// **'Белки'**
+  String get nutProtein;
+
+  /// No description provided for @nutFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жиры'**
+  String get nutFat;
+
+  /// No description provided for @nutCarbs.
+  ///
+  /// In ru, this message translates to:
+  /// **'Углеводы'**
+  String get nutCarbs;
+
+  /// No description provided for @nutBalance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Баланс'**
+  String get nutBalance;
+
+  /// No description provided for @nutNoNorm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нормы нет: примите план, чтобы видеть цель по калориям и БЖУ.'**
+  String get nutNoNorm;
+
+  /// No description provided for @nutNoWaterNorm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Норма воды появится после принятия плана.'**
+  String get nutNoWaterNorm;
+
+  /// No description provided for @nutGrams.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} г'**
+  String nutGrams(String value);
+
+  /// No description provided for @nutGramsProgress.
+  ///
+  /// In ru, this message translates to:
+  /// **'{current} / {total} г'**
+  String nutGramsProgress(String current, String total);
+
+  /// No description provided for @nutLiters.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} л'**
+  String nutLiters(String value);
+
+  /// No description provided for @nutMacrosLine.
+  ///
+  /// In ru, this message translates to:
+  /// **'Б {protein} · Ж {fat} · У {carbs}'**
+  String nutMacrosLine(String protein, String fat, String carbs);
+
+  /// No description provided for @nutTotalLine.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итого: {kcal} ккал · {macros}'**
+  String nutTotalLine(String kcal, String macros);
+
+  /// No description provided for @nutPerServing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Порция: {kcal} · {macros}'**
+  String nutPerServing(String kcal, String macros);
+
+  /// No description provided for @nutWaterAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'+{ml} мл'**
+  String nutWaterAdd(int ml);
+
+  /// No description provided for @nutWaterUndo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отменить последнюю запись воды'**
+  String get nutWaterUndo;
+
+  /// No description provided for @nutTrainingDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'День тренировки'**
+  String get nutTrainingDay;
+
+  /// No description provided for @nutAddTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить еду'**
+  String get nutAddTitle;
+
+  /// No description provided for @nutAddBarcode.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штрихкод'**
+  String get nutAddBarcode;
+
+  /// No description provided for @nutAddManual.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вручную'**
+  String get nutAddManual;
+
+  /// No description provided for @nutAddPhoto.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото'**
+  String get nutAddPhoto;
+
+  /// No description provided for @nutRecipes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мои рецепты'**
+  String get nutRecipes;
+
+  /// No description provided for @nutSearching.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поиск…'**
+  String get nutSearching;
+
+  /// No description provided for @nutDiaryEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Записей за день нет. Добавьте еду — штрихкодом, вручную, фото или рецептом.'**
+  String get nutDiaryEmpty;
+
+  /// No description provided for @nutWithPhoto.
+  ///
+  /// In ru, this message translates to:
+  /// **'с фото'**
+  String get nutWithPhoto;
+
+  /// No description provided for @nutMealBreakfast.
+  ///
+  /// In ru, this message translates to:
+  /// **'Завтрак'**
+  String get nutMealBreakfast;
+
+  /// No description provided for @nutMealLunch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обед'**
+  String get nutMealLunch;
+
+  /// No description provided for @nutMealDinner.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ужин'**
+  String get nutMealDinner;
+
+  /// No description provided for @nutMealSnack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Перекус'**
+  String get nutMealSnack;
+
+  /// No description provided for @nutNewEntry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новая запись'**
+  String get nutNewEntry;
+
+  /// No description provided for @nutEditEntry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Запись дневника'**
+  String get nutEditEntry;
+
+  /// No description provided for @nutRecipeLineTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Строка рецепта'**
+  String get nutRecipeLineTitle;
+
+  /// No description provided for @nutPhotoSaved.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото сохранено'**
+  String get nutPhotoSaved;
+
+  /// No description provided for @nutPhotoAiLater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Распознавание блюда по фото Система откроет позже. Пока введите название и КБЖУ сами.'**
+  String get nutPhotoAiLater;
+
+  /// No description provided for @nutFieldTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get nutFieldTitle;
+
+  /// No description provided for @nutFieldTitleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: овсянка с бананом'**
+  String get nutFieldTitleHint;
+
+  /// No description provided for @nutFieldMeal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приём пищи'**
+  String get nutFieldMeal;
+
+  /// No description provided for @nutFieldMode.
+  ///
+  /// In ru, this message translates to:
+  /// **'Как считать'**
+  String get nutFieldMode;
+
+  /// No description provided for @nutModePortion.
+  ///
+  /// In ru, this message translates to:
+  /// **'На порцию'**
+  String get nutModePortion;
+
+  /// No description provided for @nutModePer100.
+  ///
+  /// In ru, this message translates to:
+  /// **'На 100 г'**
+  String get nutModePer100;
+
+  /// No description provided for @nutFieldGrams.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вес порции'**
+  String get nutFieldGrams;
+
+  /// No description provided for @nutErrorGrams.
+  ///
+  /// In ru, this message translates to:
+  /// **'Укажите вес в граммах'**
+  String get nutErrorGrams;
+
+  /// No description provided for @nutValuesPer100.
+  ///
+  /// In ru, this message translates to:
+  /// **'Значения на 100 г'**
+  String get nutValuesPer100;
+
+  /// No description provided for @nutValuesPortion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Значения на всю порцию'**
+  String get nutValuesPortion;
+
+  /// No description provided for @nutFieldKcal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Калории'**
+  String get nutFieldKcal;
+
+  /// No description provided for @nutFieldProtein.
+  ///
+  /// In ru, this message translates to:
+  /// **'Белки'**
+  String get nutFieldProtein;
+
+  /// No description provided for @nutFieldFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жиры'**
+  String get nutFieldFat;
+
+  /// No description provided for @nutFieldCarbs.
+  ///
+  /// In ru, this message translates to:
+  /// **'Углеводы'**
+  String get nutFieldCarbs;
+
+  /// No description provided for @nutUnitKcal.
+  ///
+  /// In ru, this message translates to:
+  /// **'ккал'**
+  String get nutUnitKcal;
+
+  /// No description provided for @nutUnitG.
+  ///
+  /// In ru, this message translates to:
+  /// **'г'**
+  String get nutUnitG;
+
+  /// No description provided for @nutUnitKg.
+  ///
+  /// In ru, this message translates to:
+  /// **'кг'**
+  String get nutUnitKg;
+
+  /// No description provided for @nutUnitPcs.
+  ///
+  /// In ru, this message translates to:
+  /// **'шт.'**
+  String get nutUnitPcs;
+
+  /// No description provided for @nutUnitL.
+  ///
+  /// In ru, this message translates to:
+  /// **'л'**
+  String get nutUnitL;
+
+  /// No description provided for @nutUnitMl.
+  ///
+  /// In ru, this message translates to:
+  /// **'мл'**
+  String get nutUnitMl;
+
+  /// No description provided for @nutSaveToProducts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сохранить в мои продукты'**
+  String get nutSaveToProducts;
+
+  /// No description provided for @nutSaveToProductsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Потом найдётся поиском — без повторного ввода'**
+  String get nutSaveToProductsHint;
+
+  /// No description provided for @nutMyProducts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мои продукты'**
+  String get nutMyProducts;
+
+  /// No description provided for @nutSearchHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поиск по названию или штрихкоду'**
+  String get nutSearchHint;
+
+  /// No description provided for @nutWithoutProduct.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без продукта'**
+  String get nutWithoutProduct;
+
+  /// No description provided for @nutNewProduct.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый продукт'**
+  String get nutNewProduct;
+
+  /// No description provided for @nutNoProducts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продуктов пока нет. Отсканируйте штрихкод или добавьте продукт вручную.'**
+  String get nutNoProducts;
+
+  /// No description provided for @nutPer100Short.
+  ///
+  /// In ru, this message translates to:
+  /// **'100 г'**
+  String get nutPer100Short;
+
+  /// No description provided for @nutProductNameHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: йогурт натуральный'**
+  String get nutProductNameHint;
+
+  /// No description provided for @nutFieldBrand.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бренд'**
+  String get nutFieldBrand;
+
+  /// No description provided for @nutFieldBarcode.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штрихкод'**
+  String get nutFieldBarcode;
+
+  /// No description provided for @nutFieldServing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обычная порция'**
+  String get nutFieldServing;
+
+  /// No description provided for @nutBarcodeNotFound.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продукта нет в Open Food Facts. Введите данные с упаковки — Система запомнит его по штрихкоду.'**
+  String get nutBarcodeNotFound;
+
+  /// No description provided for @nutBarcodeOffline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет связи с базой продуктов. Введите данные с упаковки — Система запомнит продукт по штрихкоду.'**
+  String get nutBarcodeOffline;
+
+  /// No description provided for @nutScanTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штрихкод'**
+  String get nutScanTitle;
+
+  /// No description provided for @nutScanHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Наведите камеру на штрихкод упаковки'**
+  String get nutScanHint;
+
+  /// No description provided for @nutScanNoCamera.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера недоступна. Разрешите доступ к камере в настройках или введите продукт вручную.'**
+  String get nutScanNoCamera;
+
+  /// No description provided for @nutPhotoTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото еды'**
+  String get nutPhotoTitle;
+
+  /// No description provided for @nutPhotoMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Снимите блюдо или выберите фото из галереи. Фото сохранится в записи дневника.'**
+  String get nutPhotoMessage;
+
+  /// No description provided for @nutPhotoCamera.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера'**
+  String get nutPhotoCamera;
+
+  /// No description provided for @nutPhotoGallery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Галерея'**
+  String get nutPhotoGallery;
+
+  /// No description provided for @nutPortions.
+  ///
+  /// In ru, this message translates to:
+  /// **'Порций'**
+  String get nutPortions;
+
+  /// No description provided for @nutAddToDiary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить в дневник'**
+  String get nutAddToDiary;
+
+  /// No description provided for @nutRecipesEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рецептов пока нет. Соберите блюдо из продуктов один раз — потом добавляйте его в один тап.'**
+  String get nutRecipesEmpty;
+
+  /// No description provided for @nutNewRecipe.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый рецепт'**
+  String get nutNewRecipe;
+
+  /// No description provided for @nutEditRecipe.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рецепт'**
+  String get nutEditRecipe;
+
+  /// No description provided for @nutRecipeTitleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: омлет с овощами'**
+  String get nutRecipeTitleHint;
+
+  /// No description provided for @nutServings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Порций в блюде'**
+  String get nutServings;
+
+  /// No description provided for @nutIngredients.
+  ///
+  /// In ru, this message translates to:
+  /// **'Состав'**
+  String get nutIngredients;
+
+  /// No description provided for @nutIngredientsEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавьте хотя бы один продукт или строку.'**
+  String get nutIngredientsEmpty;
+
+  /// No description provided for @nutFromProducts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Из продуктов'**
+  String get nutFromProducts;
+
+  /// No description provided for @nutManualLine.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вручную'**
+  String get nutManualLine;
+
+  /// No description provided for @nutShopping.
+  ///
+  /// In ru, this message translates to:
+  /// **'Список покупок'**
+  String get nutShopping;
+
+  /// No description provided for @nutShopNothing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Список пуст — откройте, чтобы добавить покупки.'**
+  String get nutShopNothing;
+
+  /// No description provided for @nutShopRemainingCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{Осталось купить: {count} позиция · {sum}} few{Осталось купить: {count} позиции · {sum}} many{Осталось купить: {count} позиций · {sum}} other{Осталось купить: {count} позиции · {sum}}}'**
+  String nutShopRemainingCount(int count, String sum);
+
+  /// No description provided for @nutShopAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить покупку'**
+  String get nutShopAdd;
+
+  /// No description provided for @nutShopEdit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупка'**
+  String get nutShopEdit;
+
+  /// No description provided for @nutShopTotal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Всего (примерно)'**
+  String get nutShopTotal;
+
+  /// No description provided for @nutShopRemaining.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ещё не куплено'**
+  String get nutShopRemaining;
+
+  /// No description provided for @nutShopPriceNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Суммы — по ценам, которые вы указали.'**
+  String get nutShopPriceNote;
+
+  /// No description provided for @nutShopFromPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'От плана питания'**
+  String get nutShopFromPlan;
+
+  /// No description provided for @nutShopFromPlanHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Базовый список на неделю по нормам плана: белок, крупы, овощи, фрукты, вода. Цены укажите сами.'**
+  String get nutShopFromPlanHint;
+
+  /// No description provided for @nutShopNoPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Примите план — тогда Система составит базовый список на неделю.'**
+  String get nutShopNoPlan;
+
+  /// No description provided for @nutShopGenerate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Составить на неделю'**
+  String get nutShopGenerate;
+
+  /// No description provided for @nutShopEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупок пока нет.'**
+  String get nutShopEmpty;
+
+  /// No description provided for @nutShopClearDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать купленное'**
+  String get nutShopClearDone;
+
+  /// No description provided for @nutShopTitleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: гречка'**
+  String get nutShopTitleHint;
+
+  /// No description provided for @nutShopQuantity.
+  ///
+  /// In ru, this message translates to:
+  /// **'Количество'**
+  String get nutShopQuantity;
+
+  /// No description provided for @nutShopPrice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Примерная цена'**
+  String get nutShopPrice;
+
+  /// No description provided for @nutGroceryChicken.
+  ///
+  /// In ru, this message translates to:
+  /// **'Куриная грудка / индейка'**
+  String get nutGroceryChicken;
+
+  /// No description provided for @nutGroceryEggs.
+  ///
+  /// In ru, this message translates to:
+  /// **'Яйца'**
+  String get nutGroceryEggs;
+
+  /// No description provided for @nutGroceryCottageCheese.
+  ///
+  /// In ru, this message translates to:
+  /// **'Творог'**
+  String get nutGroceryCottageCheese;
+
+  /// No description provided for @nutGroceryGrains.
+  ///
+  /// In ru, this message translates to:
+  /// **'Крупы (гречка, рис)'**
+  String get nutGroceryGrains;
+
+  /// No description provided for @nutGroceryOats.
+  ///
+  /// In ru, this message translates to:
+  /// **'Овсяные хлопья'**
+  String get nutGroceryOats;
+
+  /// No description provided for @nutGroceryVegetables.
+  ///
+  /// In ru, this message translates to:
+  /// **'Овощи'**
+  String get nutGroceryVegetables;
+
+  /// No description provided for @nutGroceryFruits.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фрукты'**
+  String get nutGroceryFruits;
+
+  /// No description provided for @nutGroceryOil.
+  ///
+  /// In ru, this message translates to:
+  /// **'Растительное масло'**
+  String get nutGroceryOil;
+
+  /// No description provided for @nutGroceryWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Питьевая вода'**
+  String get nutGroceryWater;
 
   /// No description provided for @planNoticeLabel.
   ///
@@ -6589,6 +7939,756 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Спокойная прогулка: {minutes} мин'**
   String dscQuestWalk(int minutes);
+
+  /// No description provided for @wrkTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировки'**
+  String get wrkTitle;
+
+  /// No description provided for @wrkProgram.
+  ///
+  /// In ru, this message translates to:
+  /// **'Программа'**
+  String get wrkProgram;
+
+  /// No description provided for @wrkToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня'**
+  String get wrkToday;
+
+  /// No description provided for @wrkTodayDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'По программе — день {key}'**
+  String wrkTodayDay(String key);
+
+  /// No description provided for @wrkRestDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.'**
+  String get wrkRestDay;
+
+  /// No description provided for @wrkDayTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'День {key}'**
+  String wrkDayTitle(String key);
+
+  /// No description provided for @wrkMinutesShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'{minutes} мин'**
+  String wrkMinutesShort(int minutes);
+
+  /// No description provided for @wrkEstimate.
+  ///
+  /// In ru, this message translates to:
+  /// **'≈{minutes} мин'**
+  String wrkEstimate(int minutes);
+
+  /// No description provided for @wrkExerciseCount.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{{count} упражнение} few{{count} упражнения} many{{count} упражнений} other{{count} упражнения}}'**
+  String wrkExerciseCount(int count);
+
+  /// No description provided for @wrkSetsReps.
+  ///
+  /// In ru, this message translates to:
+  /// **'{sets} × {reps}'**
+  String wrkSetsReps(int sets, int reps);
+
+  /// No description provided for @wrkSetsSeconds.
+  ///
+  /// In ru, this message translates to:
+  /// **'{sets} × {seconds} с'**
+  String wrkSetsSeconds(int sets, int seconds);
+
+  /// No description provided for @wrkRestShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'отдых {seconds} с'**
+  String wrkRestShort(int seconds);
+
+  /// No description provided for @wrkGentle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.'**
+  String get wrkGentle;
+
+  /// No description provided for @wrkSafetyNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Если упражнение вызывает боль или дискомфорт — пропустите его.'**
+  String get wrkSafetyNote;
+
+  /// No description provided for @wrkLevelUnknown.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень в анкете не указан — программа для новичка.'**
+  String get wrkLevelUnknown;
+
+  /// No description provided for @wrkProgressionWeeks.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполненных недель: {weeks}'**
+  String wrkProgressionWeeks(int weeks);
+
+  /// No description provided for @wrkProgressionNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.'**
+  String get wrkProgressionNote;
+
+  /// No description provided for @wrkRegenerate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пересоздать программу'**
+  String get wrkRegenerate;
+
+  /// No description provided for @wrkRegenerateTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пересоздать программу?'**
+  String get wrkRegenerateTitle;
+
+  /// No description provided for @wrkRegenerateText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.'**
+  String get wrkRegenerateText;
+
+  /// No description provided for @wrkAiProgram.
+  ///
+  /// In ru, this message translates to:
+  /// **'Программа от ИИ'**
+  String get wrkAiProgram;
+
+  /// No description provided for @wrkSoon.
+  ///
+  /// In ru, this message translates to:
+  /// **'скоро'**
+  String get wrkSoon;
+
+  /// No description provided for @wrkStart.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать тренировку'**
+  String get wrkStart;
+
+  /// No description provided for @wrkStartDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать день {key}'**
+  String wrkStartDay(String key);
+
+  /// No description provided for @wrkHistory.
+  ///
+  /// In ru, this message translates to:
+  /// **'История'**
+  String get wrkHistory;
+
+  /// No description provided for @wrkHistoryEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировок пока нет.'**
+  String get wrkHistoryEmpty;
+
+  /// No description provided for @wrkSessionDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'завершена'**
+  String get wrkSessionDone;
+
+  /// No description provided for @wrkSessionInterrupted.
+  ///
+  /// In ru, this message translates to:
+  /// **'прервана'**
+  String get wrkSessionInterrupted;
+
+  /// No description provided for @wrkSessionStats.
+  ///
+  /// In ru, this message translates to:
+  /// **'{minutes} мин · ≈{kcal} ккал'**
+  String wrkSessionStats(int minutes, int kcal);
+
+  /// No description provided for @wrkPreparing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Программа собирается…'**
+  String get wrkPreparing;
+
+  /// No description provided for @wrkPhasePrepare.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приготовьтесь'**
+  String get wrkPhasePrepare;
+
+  /// No description provided for @wrkPhaseWork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работа'**
+  String get wrkPhaseWork;
+
+  /// No description provided for @wrkPhaseRest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отдых'**
+  String get wrkPhaseRest;
+
+  /// No description provided for @wrkPaused.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get wrkPaused;
+
+  /// No description provided for @wrkSetOf.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подход {set} из {sets}'**
+  String wrkSetOf(int set, int sets);
+
+  /// No description provided for @wrkRepsTarget.
+  ///
+  /// In ru, this message translates to:
+  /// **'{reps, plural, one{{reps} повтор} few{{reps} повтора} many{{reps} повторов} other{{reps} повтора}}'**
+  String wrkRepsTarget(int reps);
+
+  /// No description provided for @wrkDoneSet.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подход выполнен'**
+  String get wrkDoneSet;
+
+  /// No description provided for @wrkPause.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get wrkPause;
+
+  /// No description provided for @wrkResume.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить'**
+  String get wrkResume;
+
+  /// No description provided for @wrkSkipRest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пропустить отдых'**
+  String get wrkSkipRest;
+
+  /// No description provided for @wrkSkipExercise.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пропустить упражнение'**
+  String get wrkSkipExercise;
+
+  /// No description provided for @wrkStop.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прервать'**
+  String get wrkStop;
+
+  /// No description provided for @wrkNext.
+  ///
+  /// In ru, this message translates to:
+  /// **'Далее: {name}'**
+  String wrkNext(String name);
+
+  /// No description provided for @wrkLastExercise.
+  ///
+  /// In ru, this message translates to:
+  /// **'Последнее упражнение'**
+  String get wrkLastExercise;
+
+  /// No description provided for @wrkTechnique.
+  ///
+  /// In ru, this message translates to:
+  /// **'Техника'**
+  String get wrkTechnique;
+
+  /// No description provided for @wrkVoice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голосовые подсказки'**
+  String get wrkVoice;
+
+  /// No description provided for @wrkProgressLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогресс тренировки'**
+  String get wrkProgressLabel;
+
+  /// No description provided for @wrkStopTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прервать тренировку?'**
+  String get wrkStopTitle;
+
+  /// No description provided for @wrkStopText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сделанное сохранится как незавершённая тренировка.'**
+  String get wrkStopText;
+
+  /// No description provided for @wrkFinishedTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка завершена'**
+  String get wrkFinishedTitle;
+
+  /// No description provided for @wrkFinishedStats.
+  ///
+  /// In ru, this message translates to:
+  /// **'Время: {minutes} мин · ≈{kcal} ккал · подходов: {sets}'**
+  String wrkFinishedStats(int minutes, int kcal, int sets);
+
+  /// No description provided for @wrkWeightAssumed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расход — оценка по весу 70 кг: замеров веса нет.'**
+  String get wrkWeightAssumed;
+
+  /// No description provided for @wrkKcalNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расход — оценка по MET, не измерение.'**
+  String get wrkKcalNote;
+
+  /// No description provided for @wrkSayPrepare.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приготовьтесь. {name}.'**
+  String wrkSayPrepare(String name);
+
+  /// No description provided for @wrkSaySet.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подход {set} из {sets}. {amount}. Начали!'**
+  String wrkSaySet(int set, int sets, String amount);
+
+  /// No description provided for @wrkSecondsAmount.
+  ///
+  /// In ru, this message translates to:
+  /// **'{seconds, plural, one{{seconds} секунда} few{{seconds} секунды} many{{seconds} секунд} other{{seconds} секунды}}'**
+  String wrkSecondsAmount(int seconds);
+
+  /// No description provided for @wrkSayRest.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отдых: {amount}.'**
+  String wrkSayRest(String amount);
+
+  /// No description provided for @wrkSayNext.
+  ///
+  /// In ru, this message translates to:
+  /// **'Далее: {name}.'**
+  String wrkSayNext(String name);
+
+  /// No description provided for @wrkSayFinished.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка завершена. Отличная работа!'**
+  String get wrkSayFinished;
+
+  /// No description provided for @wrkExMarchInPlace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ходьба на месте'**
+  String get wrkExMarchInPlace;
+
+  /// No description provided for @wrkExMarchInPlaceHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.'**
+  String get wrkExMarchInPlaceHint;
+
+  /// No description provided for @wrkExArmCircles.
+  ///
+  /// In ru, this message translates to:
+  /// **'Круги руками'**
+  String get wrkExArmCircles;
+
+  /// No description provided for @wrkExArmCirclesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.'**
+  String get wrkExArmCirclesHint;
+
+  /// No description provided for @wrkExJumpingJacks.
+  ///
+  /// In ru, this message translates to:
+  /// **'Джампинг-джек'**
+  String get wrkExJumpingJacks;
+
+  /// No description provided for @wrkExJumpingJacksHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.'**
+  String get wrkExJumpingJacksHint;
+
+  /// No description provided for @wrkExChairSquat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приседание на стул'**
+  String get wrkExChairSquat;
+
+  /// No description provided for @wrkExChairSquatHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.'**
+  String get wrkExChairSquatHint;
+
+  /// No description provided for @wrkExGluteBridge.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ягодичный мост'**
+  String get wrkExGluteBridge;
+
+  /// No description provided for @wrkExGluteBridgeHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.'**
+  String get wrkExGluteBridgeHint;
+
+  /// No description provided for @wrkExSquat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приседания'**
+  String get wrkExSquat;
+
+  /// No description provided for @wrkExSquatHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.'**
+  String get wrkExSquatHint;
+
+  /// No description provided for @wrkExWallSit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стульчик у стены'**
+  String get wrkExWallSit;
+
+  /// No description provided for @wrkExWallSitHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.'**
+  String get wrkExWallSitHint;
+
+  /// No description provided for @wrkExReverseLunge.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выпады назад'**
+  String get wrkExReverseLunge;
+
+  /// No description provided for @wrkExReverseLungeHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.'**
+  String get wrkExReverseLungeHint;
+
+  /// No description provided for @wrkExGobletSquat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Гоблет-присед'**
+  String get wrkExGobletSquat;
+
+  /// No description provided for @wrkExGobletSquatHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.'**
+  String get wrkExGobletSquatHint;
+
+  /// No description provided for @wrkExKettlebellSwing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Махи гирей'**
+  String get wrkExKettlebellSwing;
+
+  /// No description provided for @wrkExKettlebellSwingHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.'**
+  String get wrkExKettlebellSwingHint;
+
+  /// No description provided for @wrkExJumpSquat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Присед с выпрыгиванием'**
+  String get wrkExJumpSquat;
+
+  /// No description provided for @wrkExJumpSquatHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.'**
+  String get wrkExJumpSquatHint;
+
+  /// No description provided for @wrkExWallPushUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отжимания от стены'**
+  String get wrkExWallPushUp;
+
+  /// No description provided for @wrkExWallPushUpHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.'**
+  String get wrkExWallPushUpHint;
+
+  /// No description provided for @wrkExKneePushUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отжимания с колен'**
+  String get wrkExKneePushUp;
+
+  /// No description provided for @wrkExKneePushUpHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.'**
+  String get wrkExKneePushUpHint;
+
+  /// No description provided for @wrkExPushUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отжимания'**
+  String get wrkExPushUp;
+
+  /// No description provided for @wrkExPushUpHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.'**
+  String get wrkExPushUpHint;
+
+  /// No description provided for @wrkExDumbbellPress.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жим гантелей лёжа'**
+  String get wrkExDumbbellPress;
+
+  /// No description provided for @wrkExDumbbellPressHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.'**
+  String get wrkExDumbbellPressHint;
+
+  /// No description provided for @wrkExDiamondPushUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Узкие отжимания'**
+  String get wrkExDiamondPushUp;
+
+  /// No description provided for @wrkExDiamondPushUpHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.'**
+  String get wrkExDiamondPushUpHint;
+
+  /// No description provided for @wrkExSuperman.
+  ///
+  /// In ru, this message translates to:
+  /// **'Супермен'**
+  String get wrkExSuperman;
+
+  /// No description provided for @wrkExSupermanHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.'**
+  String get wrkExSupermanHint;
+
+  /// No description provided for @wrkExReverseSnowAngel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обратный снежный ангел'**
+  String get wrkExReverseSnowAngel;
+
+  /// No description provided for @wrkExReverseSnowAngelHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.'**
+  String get wrkExReverseSnowAngelHint;
+
+  /// No description provided for @wrkExBandRow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тяга резинки'**
+  String get wrkExBandRow;
+
+  /// No description provided for @wrkExBandRowHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.'**
+  String get wrkExBandRowHint;
+
+  /// No description provided for @wrkExDumbbellRow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тяга гантели в наклоне'**
+  String get wrkExDumbbellRow;
+
+  /// No description provided for @wrkExDumbbellRowHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.'**
+  String get wrkExDumbbellRowHint;
+
+  /// No description provided for @wrkExPullUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подтягивания'**
+  String get wrkExPullUp;
+
+  /// No description provided for @wrkExPullUpHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.'**
+  String get wrkExPullUpHint;
+
+  /// No description provided for @wrkExDeadBug.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мёртвый жук'**
+  String get wrkExDeadBug;
+
+  /// No description provided for @wrkExDeadBugHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.'**
+  String get wrkExDeadBugHint;
+
+  /// No description provided for @wrkExBirdDog.
+  ///
+  /// In ru, this message translates to:
+  /// **'Птица-собака'**
+  String get wrkExBirdDog;
+
+  /// No description provided for @wrkExBirdDogHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.'**
+  String get wrkExBirdDogHint;
+
+  /// No description provided for @wrkExPlank.
+  ///
+  /// In ru, this message translates to:
+  /// **'Планка'**
+  String get wrkExPlank;
+
+  /// No description provided for @wrkExPlankHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.'**
+  String get wrkExPlankHint;
+
+  /// No description provided for @wrkExCrunch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Скручивания'**
+  String get wrkExCrunch;
+
+  /// No description provided for @wrkExCrunchHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.'**
+  String get wrkExCrunchHint;
+
+  /// No description provided for @wrkExSidePlank.
+  ///
+  /// In ru, this message translates to:
+  /// **'Боковая планка'**
+  String get wrkExSidePlank;
+
+  /// No description provided for @wrkExSidePlankHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.'**
+  String get wrkExSidePlankHint;
+
+  /// No description provided for @wrkExLegRaise.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём ног лёжа'**
+  String get wrkExLegRaise;
+
+  /// No description provided for @wrkExLegRaiseHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.'**
+  String get wrkExLegRaiseHint;
+
+  /// No description provided for @wrkExStepTouch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приставные шаги'**
+  String get wrkExStepTouch;
+
+  /// No description provided for @wrkExStepTouchHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.'**
+  String get wrkExStepTouchHint;
+
+  /// No description provided for @wrkExShadowBoxing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бой с тенью'**
+  String get wrkExShadowBoxing;
+
+  /// No description provided for @wrkExShadowBoxingHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.'**
+  String get wrkExShadowBoxingHint;
+
+  /// No description provided for @wrkExHighKnees.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бег с высоким подниманием колен'**
+  String get wrkExHighKnees;
+
+  /// No description provided for @wrkExHighKneesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.'**
+  String get wrkExHighKneesHint;
+
+  /// No description provided for @wrkExMountainClimber.
+  ///
+  /// In ru, this message translates to:
+  /// **'Скалолаз'**
+  String get wrkExMountainClimber;
+
+  /// No description provided for @wrkExMountainClimberHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.'**
+  String get wrkExMountainClimberHint;
+
+  /// No description provided for @wrkExBurpee.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бёрпи'**
+  String get wrkExBurpee;
+
+  /// No description provided for @wrkExBurpeeHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.'**
+  String get wrkExBurpeeHint;
+
+  /// No description provided for @wrkExFullBodyStretch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Растяжка'**
+  String get wrkExFullBodyStretch;
+
+  /// No description provided for @wrkExFullBodyStretchHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков.'**
+  String get wrkExFullBodyStretchHint;
 }
 
 class _AppLocalizationsDelegate

@@ -2,23 +2,23 @@
 
 ## Сейчас
 Этап: 3 — Питание, тело, тренировки
-Статус: каркас готов, сабагенты A–D в работе
-Следующий шаг: дождаться отчётов A–D → интеграция (SectionQuestHooks над QuestService, stepCounterProvider в main, «Статус» на реальных данных питания/шагов/сна) → CI
+Статус: интеграция сделана, 459 тестов зелёные — собирается в CI
+Следующий шаг: дождаться CI (особенно Kotlin Health Connect и Swift CMPedometer) → отчёт → этап 4
 
 ## Этап 3 — чек-лист
 - [x] Каркас: БД v4 (FoodItems, MealEntries, Recipes, WaterLogs, ShoppingItems, StepLogs, SleepLogs, CareChecks, WorkoutPrograms, WorkoutSessions), enums, core/models/daily.dart, core/activity/activity_api.dart, domain/quests/section_hooks.dart; mobile_scanner/http/fl_chart/image_picker/wakelock_plus; Health Connect (minSdk 26, FlutterFragmentActivity, манифест), канал sistema/steps (StepCounterChannel.swift/.kt — заготовки, в pbxproj); маршруты /body /workouts, заглушки
-- [ ] 1. Питание §8.2 (A)
-- [ ] 2. Шаги и расход (B)
-- [ ] 3. Тело: сон, замеры, графики, фото-дневник, уход за кожей (C)
-- [ ] 4. Тренировки (D)
-- [ ] 5. Интеграция с движком квестов, «Статус» на реальных данных
+- [x] 1. Питание §8.2 (A)
+- [x] 2. Шаги и расход (B)
+- [x] 3. Тело: сон, замеры, графики, фото-дневник, уход за кожей (C)
+- [x] 4. Тренировки (D)
+- [x] 5. Интеграция с движком квестов, «Статус» на реальных данных
 - [ ] 6. Тесты, CI зелёный, отчёт
 
 ## Сабагенты (этап 3)
-- A Питание: в работе — app/lib/features/nutrition (l10n_parts/nut_*)
-- B Шаги и калории: в работе — app/lib/core/activity, StepCounterChannel.swift/.kt (l10n_parts/act_*)
-- C Тело: в работе — app/lib/features/body (l10n_parts/body_*)
-- D Тренировки: в работе — app/lib/features/workouts (l10n_parts/wrk_*)
+- A Питание: готово (37 тестов) — features/nutrition (nut_*); интеграция: nutritionBurnedKcalProvider ← dailyEnergyProvider, foodLookupLangProvider ← язык, «Статус»: nutritionDayProvider, waterGoalProvider
+- B Шаги и калории: готово (34 теста) — core/activity, features/activity (StepsPanel), StepCounterChannel.swift/.kt (act_*); main: override stepCounterProvider ChannelStepCounter(), container.read(stepSyncProvider).start()
+- C Тело: готово (33 теста) — features/body (bdy_*); интеграция: StepsPanel в слот BodyScreen (между _SleepPanel и _MeasurementsPanel), «Статус»: energyPercentProvider, sleepDayProvider
+- D Тренировки: готово (34 теста) — features/workouts (wrk_*); workoutsDayProvider
 
 ## Этап 2 — итог
 Готов: движок квестов, напоминания, экраны квестов и окна, магазин, дисциплина; 317 тестов. CI run 39647992929.
@@ -31,6 +31,11 @@
 ## Решения и договорённости
 - Этап 2: ◆/опыт/характеристики — только сумма журнала QuestEvents; покупка в магазине — событие purchase (отдельной таблицы Purchase нет); награда/штраф копируются в экземпляр
 - StatKind/PlayerRank переехали в core/models/enums.dart (home_view_data их реэкспортирует)
+- Питание: «приёмы пищи» = число разных типов за день; поиск продуктов фильтруется в Dart (lower() SQLite не знает кириллицу/турецкий); день тренировки — по распорядку принятого плана → норма waterTrainingDayMl; список «от плана» перегенерирует только некупленные пункты source plan; цена — в копейках/курушах, RUB/TRY
+- Расход энергии учитывает и прерванные тренировки (kcal пишется за сделанное)
+- Хуки разделов → квесты: QuestSectionHooks (вода по порядку квестов, еда по count, тренировка от 80% минут, уход, отбой ±15 мин, шаги — квесты с confirm=steps)
+- Android: добавлен INTERNET (Open Food Facts)
+- Riverpod 3: StreamProvider без слушателей на паузе — в тестах `container.listen(...)` перед `read(.future)`
 - Виджет-тесты с drift-потоками: БД закрывать через `tester.runAsync(db.close)` после снятия экрана — иначе tearDown под fake async зависает
 - Сервисы этапа 2 — через провайдеры-контракты (questServiceProvider, reminderSchedulerProvider), реализация подключается в main
 - Проверка на телефоне — не после каждого этапа, а вместе после этапа 4–5 (решение владельца); после зелёного CI сразу следующий этап
@@ -62,6 +67,8 @@
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- Тело: «сегодня» (bodyClockProvider) не пересчитывается в полночь; дневной сон не записать; удаление фото без подтверждения
+- Шаги: Health Connect без приложения-писателя (Google Fit/Samsung Health) даёт 0, фолбэка на датчик нет; датчик не видит шаги до первого опроса за день; CMPedometer — история 7 дней
 - Перенос шага «Персонаж» сдвинул индексы шагов анкеты (прогресс хранится индексом) — у незавершённой анкеты шаг может сместиться на 1
 - Размер контура тела (75%) подобран расчётом под FOV фронталки ~65° на 2 м — уточнить по телефону
 - Камера (экран съёмки с контуром), permission_handler, share_plus/file_picker — не проверены на устройствах
@@ -75,10 +82,11 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39620362058 (app) и …/39620362118 (server) — зелёные
-Артефакты:
-- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39620362058/artifacts/12355166165
-- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39620362058/artifacts/12354827359
+Этап 2: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39647992929 — зелёный
+Артефакты этапа 2:
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39647992929/artifacts/12368114345
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39647992929/artifacts/12367494460
+Каркас этапа 3: run 39649845162 (проверка Health Connect / Swift-заготовки)
 
 ## Что нужно от пользователя
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)

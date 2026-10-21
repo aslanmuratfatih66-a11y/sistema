@@ -1,13 +1,16 @@
 // Реальные данные вкладки «Статус»: снимок игрока и ближайший квест из движка (QuestService),
 // лента дня — из расписания и тренировок принятого плана, нормы воды/калорий — из плана.
-// Съеденное/выпитое и сон — этап 3: пока 0 / «—», без выдуманных чисел.
+// Съеденное/выпитое — из дневника питания, «Энергия» — от сна прошлой ночи (раздел «Тело»).
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/data/profile_repository.dart';
+import '../../../core/models/daily.dart';
 import '../../../domain/quests/quest_api.dart';
 import '../../../domain/quests/quest_l10n.dart';
 import '../../../l10n/app_localizations.dart';
+import '../../body/data/sleep_repository.dart';
+import '../../nutrition/nutrition_providers.dart';
 import '../../plan/data/plan_repository.dart';
 import '../../plan/model/plan.dart';
 import '../../quests/data/quest_providers.dart';
@@ -25,6 +28,8 @@ class HomeContext {
     this.playerName,
     this.waterGoalMl,
     this.kcalGoal,
+    this.nutrition = NutritionDay.empty,
+    this.energyPercent,
   });
 
   final DateTime programStart;
@@ -32,6 +37,12 @@ class HomeContext {
   final String? playerName;
   final int? waterGoalMl;
   final int? kcalGoal;
+
+  /// Съеденное/выпитое за сегодня (дневник питания).
+  final NutritionDay nutrition;
+
+  /// «Энергия» от сна прошлой ночи; null — сон не записан.
+  final int? energyPercent;
 }
 
 final homeContextProvider = Provider<HomeContext>((ref) {
@@ -51,6 +62,8 @@ final homeContextProvider = Provider<HomeContext>((ref) {
     playerName: profile?.name,
     waterGoalMl: training ? (plan?.norms.waterTrainingDayMl ?? plan?.norms.waterMl) : plan?.norms.waterMl,
     kcalGoal: plan?.norms.calories,
+    nutrition: ref.watch(nutritionDayProvider(today)).value ?? NutritionDay.empty,
+    energyPercent: ref.watch(energyPercentProvider),
   );
 });
 
@@ -141,10 +154,10 @@ HomeStatusData buildHomeStatus(PlayerSnapshot p, QuestItem? next, HomeContext ct
       streakDays: p.streakDays,
       xp: p.xpIntoLevel,
       xpForNextLevel: p.xpForNextLevel,
-      energyPercent: null,
-      waterMl: 0,
+      energyPercent: ctx.energyPercent,
+      waterMl: ctx.nutrition.waterMl,
       waterGoalMl: ctx.waterGoalMl ?? 0,
-      kcalEaten: 0,
+      kcalEaten: ctx.nutrition.kcal.round(),
       kcalGoal: ctx.kcalGoal ?? 0,
       stats: [
         for (final k in StatKind.values)

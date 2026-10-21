@@ -1,0 +1,21 @@
+{
+  "actStepsTitle": "Шаги",
+  "actGoal": "Цель: {goal}",
+  "@actGoal": {"placeholders": {"goal": {"type": "String"}}},
+  "actDistance": "Дистанция",
+  "actDistanceKm": "{km} км",
+  "@actDistanceKm": {"placeholders": {"km": {"type": "String"}}},
+  "actFloors": "Этажи",
+  "actNoValue": "—",
+  "actWeek": "7 дней",
+  "actAllow": "Разрешить",
+  "actPermissionHint": "Разрешите доступ к датчикам движения — шаги будут считаться сами.",
+  "actUnavailableHint": "Счётчика шагов на устройстве нет — введите шаги вручную.",
+  "actManual": "Ввести вручную",
+  "actManualLabel": "Шаги за сегодня",
+  "actManualRange": "От 0 до 100 000",
+  "actSave": "Сохранить",
+  "actCancel": "Отмена",
+  "actStepsSemantic": "Шаги за сегодня: {steps} из {goal}",
+  "@actStepsSemantic": {"placeholders": {"steps": {"type": "String"}, "goal": {"type": "String"}}}
+}

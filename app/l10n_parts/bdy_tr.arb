@@ -1,0 +1,133 @@
+{
+  "bdyEnergy": "Enerji",
+  "bdyHistory": "Geçmiş",
+  "bdyCharts": "Grafikler",
+  "bdySleepTitle": "Uyku",
+  "bdySleepLog": "Uykuyu kaydet",
+  "bdySleepNotLogged": "Dün geceki uyku kaydedilmedi.",
+  "bdySleepLastNight": "Dün gece",
+  "bdySleepDuration": "Süre",
+  "bdySleepTarget": "Plan hedefi",
+  "bdySleepAverage": "Ortalama",
+  "bdySleepVsTarget": "Hedefe göre",
+  "bdySleepOnTarget": "Hedefe ulaşan geceler",
+  "bdySleepEmpty": "Henüz uyku kaydı yok.",
+  "bdySleepChartLabel": "Günlere göre uyku grafiği, çizgi plan hedefidir",
+  "bdySleepHistory": "Son {days} gün uyku",
+  "@bdySleepHistory": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdySleepWakeDay": "Sabah (kalkış günü)",
+  "bdySleepBed": "Yattım",
+  "bdySleepWake": "Kalktım",
+  "bdySleepQuality": "Uyku kalitesi",
+  "bdySleepQualityHint": "1 — kötü, 5 — mükemmel",
+  "bdySleepQualityShort": "kal. {quality}/5",
+  "@bdySleepQualityShort": {
+    "placeholders": {
+      "quality": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyMeasureTitle": "Ölçüler",
+  "bdyMeasureAdd": "Ölçü ekle",
+  "bdyMeasureHint": "Ölçtüklerinizi doldurun. Çevre ölçüleri — mezura ile, sabah, yemekten önce.",
+  "bdyMeasureEmpty": "Henüz ölçü yok.",
+  "bdyMeasureNeedTwo": "Grafik için en az iki ölçü gerekir.",
+  "bdyMeasureChangeNote": "Parantez içinde — 30 günlük değişim",
+  "bdyMeasureChartLabel": "Grafik: {name}",
+  "@bdyMeasureChartLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyMeasureWeight": "Kilo",
+  "bdyMeasureWaist": "Bel",
+  "bdyMeasureHips": "Kalça",
+  "bdyMeasureChest": "Göğüs",
+  "bdyMeasureNeck": "Boyun",
+  "bdyMeasureArm": "Kol",
+  "bdyMeasureBodyFat": "Yağ %",
+  "bdyUnitKg": "kg",
+  "bdyUnitCm": "cm",
+  "bdyPeriodAll": "Tümü",
+  "bdyPeriodDays": "{days} gün",
+  "@bdyPeriodDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyPhotoTitle": "Fotoğraf günlüğü",
+  "bdyPhotoKindBody": "Vücut",
+  "bdyPhotoKindSkin": "Cilt",
+  "bdyPhotoLast": "Son fotoğraf",
+  "bdyPhotoAdd": "Yeni fotoğraf",
+  "bdyPhotoPose": "Açı",
+  "bdyPhotoCamera": "Çek",
+  "bdyPhotoGallery": "Galeriden",
+  "bdyPhotoEmpty": "Henüz fotoğraf yok.",
+  "bdyPhotoCompare": "Karşılaştır",
+  "bdyPhotoCompareHint": "«Önce» ve «sonra»yı karşılaştırmak için iki fotoğraf seçin.",
+  "bdyPhotoCompareNeedTwo": "Karşılaştırma için en az iki fotoğraf gerekir.",
+  "bdyPoseOther": "Diğer",
+  "bdyCompareSlider": "Perde",
+  "bdyCompareSideBySide": "Yan yana",
+  "bdyCompareBefore": "Önce",
+  "bdyCompareAfter": "Sonra",
+  "bdyCompareNote": "Aynı ışıkta ve aynı mesafeden çekin — karşılaştırma daha doğru olur.",
+  "bdyCareTitle": "Cilt bakımı",
+  "bdyCareOpen": "Kontrol listesi",
+  "bdyCareMorning": "Sabah",
+  "bdyCareEvening": "Akşam",
+  "bdyCareTemplateNote": "Ankete göre temel şablon. Cildinize uygun ürün seçimi daha sonra eklenecek.",
+  "bdyCareSensitiveNote": "Ürünlere tepki olmuş: yeni bir ürünü önce cildin küçük bir bölgesinde deneyin.",
+  "bdyCareCompleteNote": "Rutin tamamlandı.",
+  "bdyCareRoutineDone": "{routine}: bakım tamamlandı",
+  "@bdyCareRoutineDone": {
+    "placeholders": {
+      "routine": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyCareCleanse": "Yumuşak bir temizleyiciyle yüzünü yıka",
+  "bdyCareCleanseGentle": "kurutmadan",
+  "bdyCareColdRinse": "Yüzünü serin suyla yıka",
+  "bdyCareMoisturize": "Nemlendirici krem",
+  "bdyCareMoisturizeLight": "hafif doku",
+  "bdyCareMoisturizeRich": "daha yoğun, besleyici",
+  "bdyCareSunscreen": "Güneş kremi",
+  "bdyCareRemoveSunscreen": "SPF'yi ve kiri temizle",
+  "bdyCareAcne": "Sivilce karşıtı ürün (varsa)",
+  "bdyCareExfoliate": "Nazik peeling",
+  "bdyCareHandsOff": "Dokunma ve sıkma",
+  "bdySkinType": "Cilt tipi (ankete göre)",
+  "bdySkinNormal": "Normal",
+  "bdySkinOily": "Yağlı",
+  "bdySkinCombination": "Karma",
+  "bdySkinDry": "Kuru",
+  "bdySkinUnknown": "Belirlenmedi",
+  "bdySwellTitle": "Ödem",
+  "bdySwellOpen": "Ayrıntılar",
+  "bdySwellMorningPhoto": "Sabah yüz fotoğrafı",
+  "bdySwellPhotoHint": "Kalkar kalkmaz önden bir fotoğraf çekin — fotoğraf akışında eğilim görünür.",
+  "bdySwellTakenToday": "Bugünün sabah fotoğrafı var.",
+  "bdySwellTipShort": "Odak: akşam daha az tuz, gün içinde su, plana göre uyku.",
+  "bdySwellTipsTitle": "İpuçları",
+  "bdySwellTipSalt": "Tuzlu yiyecekleri ve fast food'u gece geç saatte yememek daha iyi.",
+  "bdySwellTipWater": "Suyu gün boyunca eşit için, hepsini yatmadan önce değil.",
+  "bdySwellTipSleep": "Yeterince uyuyun ve aynı saatte yatın — uykusuzluk sabah yüzde belli olur.",
+  "bdySwellNote": "Ödem şiddetliyse, aniden ortaya çıktıysa veya geçmiyorsa doktora görünün.",
+  "bdySwellTrend": "Sabahlara göre eğilim",
+  "bdySwellEmpty": "Henüz sabah fotoğrafı yok.",
+  "bdySwellCompareFirst": "İlk ve sonuncuyu karşılaştır"
+}

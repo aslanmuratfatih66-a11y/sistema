@@ -440,6 +440,371 @@ class AppLocalizationsRu extends AppLocalizations {
       'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.';
 
   @override
+  String get actStepsTitle => 'Шаги';
+
+  @override
+  String actGoal(String goal) {
+    return 'Цель: $goal';
+  }
+
+  @override
+  String get actDistance => 'Дистанция';
+
+  @override
+  String actDistanceKm(String km) {
+    return '$km км';
+  }
+
+  @override
+  String get actFloors => 'Этажи';
+
+  @override
+  String get actNoValue => '—';
+
+  @override
+  String get actWeek => '7 дней';
+
+  @override
+  String get actAllow => 'Разрешить';
+
+  @override
+  String get actPermissionHint =>
+      'Разрешите доступ к датчикам движения — шаги будут считаться сами.';
+
+  @override
+  String get actUnavailableHint =>
+      'Счётчика шагов на устройстве нет — введите шаги вручную.';
+
+  @override
+  String get actManual => 'Ввести вручную';
+
+  @override
+  String get actManualLabel => 'Шаги за сегодня';
+
+  @override
+  String get actManualRange => 'От 0 до 100 000';
+
+  @override
+  String get actSave => 'Сохранить';
+
+  @override
+  String get actCancel => 'Отмена';
+
+  @override
+  String actStepsSemantic(String steps, String goal) {
+    return 'Шаги за сегодня: $steps из $goal';
+  }
+
+  @override
+  String get bdyEnergy => 'Энергия';
+
+  @override
+  String get bdyHistory => 'История';
+
+  @override
+  String get bdyCharts => 'Графики';
+
+  @override
+  String get bdySleepTitle => 'Сон';
+
+  @override
+  String get bdySleepLog => 'Записать сон';
+
+  @override
+  String get bdySleepNotLogged => 'Сон за прошлую ночь не записан.';
+
+  @override
+  String get bdySleepLastNight => 'Прошлая ночь';
+
+  @override
+  String get bdySleepDuration => 'Длительность';
+
+  @override
+  String get bdySleepTarget => 'Цель плана';
+
+  @override
+  String get bdySleepAverage => 'В среднем';
+
+  @override
+  String get bdySleepVsTarget => 'Против цели';
+
+  @override
+  String get bdySleepOnTarget => 'Ночей не меньше цели';
+
+  @override
+  String get bdySleepEmpty => 'Пока нет записей сна.';
+
+  @override
+  String get bdySleepChartLabel => 'График сна по дням, линия — цель плана';
+
+  @override
+  String bdySleepHistory(int days) {
+    return 'Сон за $days дн.';
+  }
+
+  @override
+  String get bdySleepWakeDay => 'Утро (день подъёма)';
+
+  @override
+  String get bdySleepBed => 'Лёг';
+
+  @override
+  String get bdySleepWake => 'Встал';
+
+  @override
+  String get bdySleepQuality => 'Качество сна';
+
+  @override
+  String get bdySleepQualityHint => '1 — плохо, 5 — отлично';
+
+  @override
+  String bdySleepQualityShort(int quality) {
+    return 'кач. $quality/5';
+  }
+
+  @override
+  String get bdyMeasureTitle => 'Замеры';
+
+  @override
+  String get bdyMeasureAdd => 'Добавить замер';
+
+  @override
+  String get bdyMeasureHint =>
+      'Заполните то, что измерили. Обхваты — сантиметровой лентой, утром, до еды.';
+
+  @override
+  String get bdyMeasureEmpty => 'Замеров пока нет.';
+
+  @override
+  String get bdyMeasureNeedTwo => 'Для графика нужно хотя бы два замера.';
+
+  @override
+  String get bdyMeasureChangeNote => 'В скобках — изменение за 30 дней';
+
+  @override
+  String bdyMeasureChartLabel(String name) {
+    return 'График: $name';
+  }
+
+  @override
+  String get bdyMeasureWeight => 'Вес';
+
+  @override
+  String get bdyMeasureWaist => 'Талия';
+
+  @override
+  String get bdyMeasureHips => 'Бёдра';
+
+  @override
+  String get bdyMeasureChest => 'Грудь';
+
+  @override
+  String get bdyMeasureNeck => 'Шея';
+
+  @override
+  String get bdyMeasureArm => 'Рука';
+
+  @override
+  String get bdyMeasureBodyFat => '% жира';
+
+  @override
+  String get bdyUnitKg => 'кг';
+
+  @override
+  String get bdyUnitCm => 'см';
+
+  @override
+  String get bdyPeriodAll => 'Всё';
+
+  @override
+  String bdyPeriodDays(int days) {
+    return '$days дн.';
+  }
+
+  @override
+  String get bdyPhotoTitle => 'Фото-дневник';
+
+  @override
+  String get bdyPhotoKindBody => 'Тело';
+
+  @override
+  String get bdyPhotoKindSkin => 'Кожа';
+
+  @override
+  String get bdyPhotoLast => 'Последнее фото';
+
+  @override
+  String get bdyPhotoAdd => 'Новое фото';
+
+  @override
+  String get bdyPhotoPose => 'Ракурс';
+
+  @override
+  String get bdyPhotoCamera => 'Снять';
+
+  @override
+  String get bdyPhotoGallery => 'Из галереи';
+
+  @override
+  String get bdyPhotoEmpty => 'Фото пока нет.';
+
+  @override
+  String get bdyPhotoCompare => 'Сравнить';
+
+  @override
+  String get bdyPhotoCompareHint =>
+      'Выберите два фото, чтобы сравнить «до» и «после».';
+
+  @override
+  String get bdyPhotoCompareNeedTwo => 'Для сравнения нужно хотя бы два фото.';
+
+  @override
+  String get bdyPoseOther => 'Другое';
+
+  @override
+  String get bdyCompareSlider => 'Шторка';
+
+  @override
+  String get bdyCompareSideBySide => 'Рядом';
+
+  @override
+  String get bdyCompareBefore => 'До';
+
+  @override
+  String get bdyCompareAfter => 'После';
+
+  @override
+  String get bdyCompareNote =>
+      'Снимайте при одинаковом свете и с одного расстояния — так сравнение честнее.';
+
+  @override
+  String get bdyCareTitle => 'Уход за кожей';
+
+  @override
+  String get bdyCareOpen => 'Чек-лист';
+
+  @override
+  String get bdyCareMorning => 'Утро';
+
+  @override
+  String get bdyCareEvening => 'Вечер';
+
+  @override
+  String get bdyCareTemplateNote =>
+      'Базовый шаблон по анкете. Подбор средств под вашу кожу появится позже.';
+
+  @override
+  String get bdyCareSensitiveNote =>
+      'Были реакции на средства: новое средство сначала пробуйте на небольшом участке кожи.';
+
+  @override
+  String get bdyCareCompleteNote => 'Рутина выполнена.';
+
+  @override
+  String bdyCareRoutineDone(String routine) {
+    return '$routine: уход выполнен';
+  }
+
+  @override
+  String get bdyCareCleanse => 'Умыться мягким очищающим средством';
+
+  @override
+  String get bdyCareCleanseGentle => 'без пересушивания';
+
+  @override
+  String get bdyCareColdRinse => 'Умыться прохладной водой';
+
+  @override
+  String get bdyCareMoisturize => 'Увлажняющий крем';
+
+  @override
+  String get bdyCareMoisturizeLight => 'лёгкая текстура';
+
+  @override
+  String get bdyCareMoisturizeRich => 'плотнее, питательный';
+
+  @override
+  String get bdyCareSunscreen => 'Солнцезащитный крем';
+
+  @override
+  String get bdyCareRemoveSunscreen => 'Смыть SPF и загрязнения';
+
+  @override
+  String get bdyCareAcne => 'Средство против воспалений (если есть)';
+
+  @override
+  String get bdyCareExfoliate => 'Мягкое отшелушивание';
+
+  @override
+  String get bdyCareHandsOff => 'Не трогать и не выдавливать';
+
+  @override
+  String get bdySkinType => 'Тип кожи (по анкете)';
+
+  @override
+  String get bdySkinNormal => 'Нормальная';
+
+  @override
+  String get bdySkinOily => 'Жирная';
+
+  @override
+  String get bdySkinCombination => 'Комбинированная';
+
+  @override
+  String get bdySkinDry => 'Сухая';
+
+  @override
+  String get bdySkinUnknown => 'Не определён';
+
+  @override
+  String get bdySwellTitle => 'Отёки';
+
+  @override
+  String get bdySwellOpen => 'Подробнее';
+
+  @override
+  String get bdySwellMorningPhoto => 'Утреннее фото лица';
+
+  @override
+  String get bdySwellPhotoHint =>
+      'Сделайте фото анфас сразу после подъёма — по ленте снимков виден тренд.';
+
+  @override
+  String get bdySwellTakenToday => 'Утреннее фото на сегодня есть.';
+
+  @override
+  String get bdySwellTipShort =>
+      'Акценты: меньше соли вечером, вода днём, сон по плану.';
+
+  @override
+  String get bdySwellTipsTitle => 'Подсказки';
+
+  @override
+  String get bdySwellTipSalt =>
+      'Солёное и фастфуд лучше не есть поздно вечером.';
+
+  @override
+  String get bdySwellTipWater =>
+      'Пейте воду равномерно в течение дня, а не всё перед сном.';
+
+  @override
+  String get bdySwellTipSleep =>
+      'Высыпайтесь и ложитесь в одно время — недосып заметен на лице утром.';
+
+  @override
+  String get bdySwellNote =>
+      'Если отёки сильные, появились внезапно или не проходят — покажитесь врачу.';
+
+  @override
+  String get bdySwellTrend => 'Тренд по утрам';
+
+  @override
+  String get bdySwellEmpty => 'Утренних фото пока нет.';
+
+  @override
+  String get bdySwellCompareFirst => 'Сравнить первое и последнее';
+
+  @override
   String get chrIntro =>
       'Выберите спутника. Он проведёт вас через фото-сессии своим голосом, а потом будет жить внизу экрана: напоминать, хвалить и ругать — в выбранном режиме.';
 
@@ -1038,6 +1403,382 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get ntfUnavailable => 'Уведомления недоступны на этой платформе';
+
+  @override
+  String get nutYesterday => 'Вчера';
+
+  @override
+  String get nutToday => 'Сегодня';
+
+  @override
+  String get nutNoticeLabel => 'Уведомление';
+
+  @override
+  String get nutProtein => 'Белки';
+
+  @override
+  String get nutFat => 'Жиры';
+
+  @override
+  String get nutCarbs => 'Углеводы';
+
+  @override
+  String get nutBalance => 'Баланс';
+
+  @override
+  String get nutNoNorm =>
+      'Нормы нет: примите план, чтобы видеть цель по калориям и БЖУ.';
+
+  @override
+  String get nutNoWaterNorm => 'Норма воды появится после принятия плана.';
+
+  @override
+  String nutGrams(String value) {
+    return '$value г';
+  }
+
+  @override
+  String nutGramsProgress(String current, String total) {
+    return '$current / $total г';
+  }
+
+  @override
+  String nutLiters(String value) {
+    return '$value л';
+  }
+
+  @override
+  String nutMacrosLine(String protein, String fat, String carbs) {
+    return 'Б $protein · Ж $fat · У $carbs';
+  }
+
+  @override
+  String nutTotalLine(String kcal, String macros) {
+    return 'Итого: $kcal ккал · $macros';
+  }
+
+  @override
+  String nutPerServing(String kcal, String macros) {
+    return 'Порция: $kcal · $macros';
+  }
+
+  @override
+  String nutWaterAdd(int ml) {
+    return '+$ml мл';
+  }
+
+  @override
+  String get nutWaterUndo => 'Отменить последнюю запись воды';
+
+  @override
+  String get nutTrainingDay => 'День тренировки';
+
+  @override
+  String get nutAddTitle => 'Добавить еду';
+
+  @override
+  String get nutAddBarcode => 'Штрихкод';
+
+  @override
+  String get nutAddManual => 'Вручную';
+
+  @override
+  String get nutAddPhoto => 'Фото';
+
+  @override
+  String get nutRecipes => 'Мои рецепты';
+
+  @override
+  String get nutSearching => 'Поиск…';
+
+  @override
+  String get nutDiaryEmpty =>
+      'Записей за день нет. Добавьте еду — штрихкодом, вручную, фото или рецептом.';
+
+  @override
+  String get nutWithPhoto => 'с фото';
+
+  @override
+  String get nutMealBreakfast => 'Завтрак';
+
+  @override
+  String get nutMealLunch => 'Обед';
+
+  @override
+  String get nutMealDinner => 'Ужин';
+
+  @override
+  String get nutMealSnack => 'Перекус';
+
+  @override
+  String get nutNewEntry => 'Новая запись';
+
+  @override
+  String get nutEditEntry => 'Запись дневника';
+
+  @override
+  String get nutRecipeLineTitle => 'Строка рецепта';
+
+  @override
+  String get nutPhotoSaved => 'Фото сохранено';
+
+  @override
+  String get nutPhotoAiLater =>
+      'Распознавание блюда по фото Система откроет позже. Пока введите название и КБЖУ сами.';
+
+  @override
+  String get nutFieldTitle => 'Название';
+
+  @override
+  String get nutFieldTitleHint => 'Например: овсянка с бананом';
+
+  @override
+  String get nutFieldMeal => 'Приём пищи';
+
+  @override
+  String get nutFieldMode => 'Как считать';
+
+  @override
+  String get nutModePortion => 'На порцию';
+
+  @override
+  String get nutModePer100 => 'На 100 г';
+
+  @override
+  String get nutFieldGrams => 'Вес порции';
+
+  @override
+  String get nutErrorGrams => 'Укажите вес в граммах';
+
+  @override
+  String get nutValuesPer100 => 'Значения на 100 г';
+
+  @override
+  String get nutValuesPortion => 'Значения на всю порцию';
+
+  @override
+  String get nutFieldKcal => 'Калории';
+
+  @override
+  String get nutFieldProtein => 'Белки';
+
+  @override
+  String get nutFieldFat => 'Жиры';
+
+  @override
+  String get nutFieldCarbs => 'Углеводы';
+
+  @override
+  String get nutUnitKcal => 'ккал';
+
+  @override
+  String get nutUnitG => 'г';
+
+  @override
+  String get nutUnitKg => 'кг';
+
+  @override
+  String get nutUnitPcs => 'шт.';
+
+  @override
+  String get nutUnitL => 'л';
+
+  @override
+  String get nutUnitMl => 'мл';
+
+  @override
+  String get nutSaveToProducts => 'Сохранить в мои продукты';
+
+  @override
+  String get nutSaveToProductsHint =>
+      'Потом найдётся поиском — без повторного ввода';
+
+  @override
+  String get nutMyProducts => 'Мои продукты';
+
+  @override
+  String get nutSearchHint => 'Поиск по названию или штрихкоду';
+
+  @override
+  String get nutWithoutProduct => 'Без продукта';
+
+  @override
+  String get nutNewProduct => 'Новый продукт';
+
+  @override
+  String get nutNoProducts =>
+      'Продуктов пока нет. Отсканируйте штрихкод или добавьте продукт вручную.';
+
+  @override
+  String get nutPer100Short => '100 г';
+
+  @override
+  String get nutProductNameHint => 'Например: йогурт натуральный';
+
+  @override
+  String get nutFieldBrand => 'Бренд';
+
+  @override
+  String get nutFieldBarcode => 'Штрихкод';
+
+  @override
+  String get nutFieldServing => 'Обычная порция';
+
+  @override
+  String get nutBarcodeNotFound =>
+      'Продукта нет в Open Food Facts. Введите данные с упаковки — Система запомнит его по штрихкоду.';
+
+  @override
+  String get nutBarcodeOffline =>
+      'Нет связи с базой продуктов. Введите данные с упаковки — Система запомнит продукт по штрихкоду.';
+
+  @override
+  String get nutScanTitle => 'Штрихкод';
+
+  @override
+  String get nutScanHint => 'Наведите камеру на штрихкод упаковки';
+
+  @override
+  String get nutScanNoCamera =>
+      'Камера недоступна. Разрешите доступ к камере в настройках или введите продукт вручную.';
+
+  @override
+  String get nutPhotoTitle => 'Фото еды';
+
+  @override
+  String get nutPhotoMessage =>
+      'Снимите блюдо или выберите фото из галереи. Фото сохранится в записи дневника.';
+
+  @override
+  String get nutPhotoCamera => 'Камера';
+
+  @override
+  String get nutPhotoGallery => 'Галерея';
+
+  @override
+  String get nutPortions => 'Порций';
+
+  @override
+  String get nutAddToDiary => 'Добавить в дневник';
+
+  @override
+  String get nutRecipesEmpty =>
+      'Рецептов пока нет. Соберите блюдо из продуктов один раз — потом добавляйте его в один тап.';
+
+  @override
+  String get nutNewRecipe => 'Новый рецепт';
+
+  @override
+  String get nutEditRecipe => 'Рецепт';
+
+  @override
+  String get nutRecipeTitleHint => 'Например: омлет с овощами';
+
+  @override
+  String get nutServings => 'Порций в блюде';
+
+  @override
+  String get nutIngredients => 'Состав';
+
+  @override
+  String get nutIngredientsEmpty => 'Добавьте хотя бы один продукт или строку.';
+
+  @override
+  String get nutFromProducts => 'Из продуктов';
+
+  @override
+  String get nutManualLine => 'Вручную';
+
+  @override
+  String get nutShopping => 'Список покупок';
+
+  @override
+  String get nutShopNothing =>
+      'Список пуст — откройте, чтобы добавить покупки.';
+
+  @override
+  String nutShopRemainingCount(int count, String sum) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Осталось купить: $count позиции · $sum',
+      many: 'Осталось купить: $count позиций · $sum',
+      few: 'Осталось купить: $count позиции · $sum',
+      one: 'Осталось купить: $count позиция · $sum',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get nutShopAdd => 'Добавить покупку';
+
+  @override
+  String get nutShopEdit => 'Покупка';
+
+  @override
+  String get nutShopTotal => 'Всего (примерно)';
+
+  @override
+  String get nutShopRemaining => 'Ещё не куплено';
+
+  @override
+  String get nutShopPriceNote => 'Суммы — по ценам, которые вы указали.';
+
+  @override
+  String get nutShopFromPlan => 'От плана питания';
+
+  @override
+  String get nutShopFromPlanHint =>
+      'Базовый список на неделю по нормам плана: белок, крупы, овощи, фрукты, вода. Цены укажите сами.';
+
+  @override
+  String get nutShopNoPlan =>
+      'Примите план — тогда Система составит базовый список на неделю.';
+
+  @override
+  String get nutShopGenerate => 'Составить на неделю';
+
+  @override
+  String get nutShopEmpty => 'Покупок пока нет.';
+
+  @override
+  String get nutShopClearDone => 'Убрать купленное';
+
+  @override
+  String get nutShopTitleHint => 'Например: гречка';
+
+  @override
+  String get nutShopQuantity => 'Количество';
+
+  @override
+  String get nutShopPrice => 'Примерная цена';
+
+  @override
+  String get nutGroceryChicken => 'Куриная грудка / индейка';
+
+  @override
+  String get nutGroceryEggs => 'Яйца';
+
+  @override
+  String get nutGroceryCottageCheese => 'Творог';
+
+  @override
+  String get nutGroceryGrains => 'Крупы (гречка, рис)';
+
+  @override
+  String get nutGroceryOats => 'Овсяные хлопья';
+
+  @override
+  String get nutGroceryVegetables => 'Овощи';
+
+  @override
+  String get nutGroceryFruits => 'Фрукты';
+
+  @override
+  String get nutGroceryOil => 'Растительное масло';
+
+  @override
+  String get nutGroceryWater => 'Питьевая вода';
 
   @override
   String get planNoticeLabel => 'Уведомление';
@@ -3747,4 +4488,484 @@ class AppLocalizationsRu extends AppLocalizations {
   String dscQuestWalk(int minutes) {
     return 'Спокойная прогулка: $minutes мин';
   }
+
+  @override
+  String get wrkTitle => 'Тренировки';
+
+  @override
+  String get wrkProgram => 'Программа';
+
+  @override
+  String get wrkToday => 'Сегодня';
+
+  @override
+  String wrkTodayDay(String key) {
+    return 'По программе — день $key';
+  }
+
+  @override
+  String get wrkRestDay =>
+      'Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.';
+
+  @override
+  String wrkDayTitle(String key) {
+    return 'День $key';
+  }
+
+  @override
+  String wrkMinutesShort(int minutes) {
+    return '$minutes мин';
+  }
+
+  @override
+  String wrkEstimate(int minutes) {
+    return '≈$minutes мин';
+  }
+
+  @override
+  String wrkExerciseCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count упражнения',
+      many: '$count упражнений',
+      few: '$count упражнения',
+      one: '$count упражнение',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String wrkSetsReps(int sets, int reps) {
+    return '$sets × $reps';
+  }
+
+  @override
+  String wrkSetsSeconds(int sets, int seconds) {
+    return '$sets × $seconds с';
+  }
+
+  @override
+  String wrkRestShort(int seconds) {
+    return 'отдых $seconds с';
+  }
+
+  @override
+  String get wrkGentle =>
+      'Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.';
+
+  @override
+  String get wrkSafetyNote =>
+      'Если упражнение вызывает боль или дискомфорт — пропустите его.';
+
+  @override
+  String get wrkLevelUnknown =>
+      'Уровень в анкете не указан — программа для новичка.';
+
+  @override
+  String wrkProgressionWeeks(int weeks) {
+    return 'Выполненных недель: $weeks';
+  }
+
+  @override
+  String get wrkProgressionNote =>
+      'Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.';
+
+  @override
+  String get wrkRegenerate => 'Пересоздать программу';
+
+  @override
+  String get wrkRegenerateTitle => 'Пересоздать программу?';
+
+  @override
+  String get wrkRegenerateText =>
+      'Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.';
+
+  @override
+  String get wrkAiProgram => 'Программа от ИИ';
+
+  @override
+  String get wrkSoon => 'скоро';
+
+  @override
+  String get wrkStart => 'Начать тренировку';
+
+  @override
+  String wrkStartDay(String key) {
+    return 'Начать день $key';
+  }
+
+  @override
+  String get wrkHistory => 'История';
+
+  @override
+  String get wrkHistoryEmpty => 'Тренировок пока нет.';
+
+  @override
+  String get wrkSessionDone => 'завершена';
+
+  @override
+  String get wrkSessionInterrupted => 'прервана';
+
+  @override
+  String wrkSessionStats(int minutes, int kcal) {
+    return '$minutes мин · ≈$kcal ккал';
+  }
+
+  @override
+  String get wrkPreparing => 'Программа собирается…';
+
+  @override
+  String get wrkPhasePrepare => 'Приготовьтесь';
+
+  @override
+  String get wrkPhaseWork => 'Работа';
+
+  @override
+  String get wrkPhaseRest => 'Отдых';
+
+  @override
+  String get wrkPaused => 'Пауза';
+
+  @override
+  String wrkSetOf(int set, int sets) {
+    return 'Подход $set из $sets';
+  }
+
+  @override
+  String wrkRepsTarget(int reps) {
+    String _temp0 = intl.Intl.pluralLogic(
+      reps,
+      locale: localeName,
+      other: '$reps повтора',
+      many: '$reps повторов',
+      few: '$reps повтора',
+      one: '$reps повтор',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get wrkDoneSet => 'Подход выполнен';
+
+  @override
+  String get wrkPause => 'Пауза';
+
+  @override
+  String get wrkResume => 'Продолжить';
+
+  @override
+  String get wrkSkipRest => 'Пропустить отдых';
+
+  @override
+  String get wrkSkipExercise => 'Пропустить упражнение';
+
+  @override
+  String get wrkStop => 'Прервать';
+
+  @override
+  String wrkNext(String name) {
+    return 'Далее: $name';
+  }
+
+  @override
+  String get wrkLastExercise => 'Последнее упражнение';
+
+  @override
+  String get wrkTechnique => 'Техника';
+
+  @override
+  String get wrkVoice => 'Голосовые подсказки';
+
+  @override
+  String get wrkProgressLabel => 'Прогресс тренировки';
+
+  @override
+  String get wrkStopTitle => 'Прервать тренировку?';
+
+  @override
+  String get wrkStopText =>
+      'Сделанное сохранится как незавершённая тренировка.';
+
+  @override
+  String get wrkFinishedTitle => 'Тренировка завершена';
+
+  @override
+  String wrkFinishedStats(int minutes, int kcal, int sets) {
+    return 'Время: $minutes мин · ≈$kcal ккал · подходов: $sets';
+  }
+
+  @override
+  String get wrkWeightAssumed =>
+      'Расход — оценка по весу 70 кг: замеров веса нет.';
+
+  @override
+  String get wrkKcalNote => 'Расход — оценка по MET, не измерение.';
+
+  @override
+  String wrkSayPrepare(String name) {
+    return 'Приготовьтесь. $name.';
+  }
+
+  @override
+  String wrkSaySet(int set, int sets, String amount) {
+    return 'Подход $set из $sets. $amount. Начали!';
+  }
+
+  @override
+  String wrkSecondsAmount(int seconds) {
+    String _temp0 = intl.Intl.pluralLogic(
+      seconds,
+      locale: localeName,
+      other: '$seconds секунды',
+      many: '$seconds секунд',
+      few: '$seconds секунды',
+      one: '$seconds секунда',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String wrkSayRest(String amount) {
+    return 'Отдых: $amount.';
+  }
+
+  @override
+  String wrkSayNext(String name) {
+    return 'Далее: $name.';
+  }
+
+  @override
+  String get wrkSayFinished => 'Тренировка завершена. Отличная работа!';
+
+  @override
+  String get wrkExMarchInPlace => 'Ходьба на месте';
+
+  @override
+  String get wrkExMarchInPlaceHint =>
+      'Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.';
+
+  @override
+  String get wrkExArmCircles => 'Круги руками';
+
+  @override
+  String get wrkExArmCirclesHint =>
+      'Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.';
+
+  @override
+  String get wrkExJumpingJacks => 'Джампинг-джек';
+
+  @override
+  String get wrkExJumpingJacksHint =>
+      'Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.';
+
+  @override
+  String get wrkExChairSquat => 'Приседание на стул';
+
+  @override
+  String get wrkExChairSquatHint =>
+      'Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.';
+
+  @override
+  String get wrkExGluteBridge => 'Ягодичный мост';
+
+  @override
+  String get wrkExGluteBridgeHint =>
+      'Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.';
+
+  @override
+  String get wrkExSquat => 'Приседания';
+
+  @override
+  String get wrkExSquatHint =>
+      'Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.';
+
+  @override
+  String get wrkExWallSit => 'Стульчик у стены';
+
+  @override
+  String get wrkExWallSitHint =>
+      'Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.';
+
+  @override
+  String get wrkExReverseLunge => 'Выпады назад';
+
+  @override
+  String get wrkExReverseLungeHint =>
+      'Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.';
+
+  @override
+  String get wrkExGobletSquat => 'Гоблет-присед';
+
+  @override
+  String get wrkExGobletSquatHint =>
+      'Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.';
+
+  @override
+  String get wrkExKettlebellSwing => 'Махи гирей';
+
+  @override
+  String get wrkExKettlebellSwingHint =>
+      'Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.';
+
+  @override
+  String get wrkExJumpSquat => 'Присед с выпрыгиванием';
+
+  @override
+  String get wrkExJumpSquatHint =>
+      'Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.';
+
+  @override
+  String get wrkExWallPushUp => 'Отжимания от стены';
+
+  @override
+  String get wrkExWallPushUpHint =>
+      'Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.';
+
+  @override
+  String get wrkExKneePushUp => 'Отжимания с колен';
+
+  @override
+  String get wrkExKneePushUpHint =>
+      'Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.';
+
+  @override
+  String get wrkExPushUp => 'Отжимания';
+
+  @override
+  String get wrkExPushUpHint =>
+      'Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.';
+
+  @override
+  String get wrkExDumbbellPress => 'Жим гантелей лёжа';
+
+  @override
+  String get wrkExDumbbellPressHint =>
+      'Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.';
+
+  @override
+  String get wrkExDiamondPushUp => 'Узкие отжимания';
+
+  @override
+  String get wrkExDiamondPushUpHint =>
+      'Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.';
+
+  @override
+  String get wrkExSuperman => 'Супермен';
+
+  @override
+  String get wrkExSupermanHint =>
+      'Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.';
+
+  @override
+  String get wrkExReverseSnowAngel => 'Обратный снежный ангел';
+
+  @override
+  String get wrkExReverseSnowAngelHint =>
+      'Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.';
+
+  @override
+  String get wrkExBandRow => 'Тяга резинки';
+
+  @override
+  String get wrkExBandRowHint =>
+      'Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.';
+
+  @override
+  String get wrkExDumbbellRow => 'Тяга гантели в наклоне';
+
+  @override
+  String get wrkExDumbbellRowHint =>
+      'Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.';
+
+  @override
+  String get wrkExPullUp => 'Подтягивания';
+
+  @override
+  String get wrkExPullUpHint =>
+      'Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.';
+
+  @override
+  String get wrkExDeadBug => 'Мёртвый жук';
+
+  @override
+  String get wrkExDeadBugHint =>
+      'Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.';
+
+  @override
+  String get wrkExBirdDog => 'Птица-собака';
+
+  @override
+  String get wrkExBirdDogHint =>
+      'Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.';
+
+  @override
+  String get wrkExPlank => 'Планка';
+
+  @override
+  String get wrkExPlankHint =>
+      'Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.';
+
+  @override
+  String get wrkExCrunch => 'Скручивания';
+
+  @override
+  String get wrkExCrunchHint =>
+      'Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.';
+
+  @override
+  String get wrkExSidePlank => 'Боковая планка';
+
+  @override
+  String get wrkExSidePlankHint =>
+      'Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.';
+
+  @override
+  String get wrkExLegRaise => 'Подъём ног лёжа';
+
+  @override
+  String get wrkExLegRaiseHint =>
+      'Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.';
+
+  @override
+  String get wrkExStepTouch => 'Приставные шаги';
+
+  @override
+  String get wrkExStepTouchHint =>
+      'Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.';
+
+  @override
+  String get wrkExShadowBoxing => 'Бой с тенью';
+
+  @override
+  String get wrkExShadowBoxingHint =>
+      'Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.';
+
+  @override
+  String get wrkExHighKnees => 'Бег с высоким подниманием колен';
+
+  @override
+  String get wrkExHighKneesHint =>
+      'Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.';
+
+  @override
+  String get wrkExMountainClimber => 'Скалолаз';
+
+  @override
+  String get wrkExMountainClimberHint =>
+      'Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.';
+
+  @override
+  String get wrkExBurpee => 'Бёрпи';
+
+  @override
+  String get wrkExBurpeeHint =>
+      'Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.';
+
+  @override
+  String get wrkExFullBodyStretch => 'Растяжка';
+
+  @override
+  String get wrkExFullBodyStretchHint =>
+      'Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков.';
 }

@@ -391,6 +391,177 @@
   "homeDemoBossGoal": "Провести 5 тренировок за неделю",
   "homeDemoBossRewardTitle": "Несгибаемый",
   "homeDemoAssistantLine": "Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.",
+  "actStepsTitle": "Шаги",
+  "actGoal": "Цель: {goal}",
+  "@actGoal": {
+    "placeholders": {
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "actDistance": "Дистанция",
+  "actDistanceKm": "{km} км",
+  "@actDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "actFloors": "Этажи",
+  "actNoValue": "—",
+  "actWeek": "7 дней",
+  "actAllow": "Разрешить",
+  "actPermissionHint": "Разрешите доступ к датчикам движения — шаги будут считаться сами.",
+  "actUnavailableHint": "Счётчика шагов на устройстве нет — введите шаги вручную.",
+  "actManual": "Ввести вручную",
+  "actManualLabel": "Шаги за сегодня",
+  "actManualRange": "От 0 до 100 000",
+  "actSave": "Сохранить",
+  "actCancel": "Отмена",
+  "actStepsSemantic": "Шаги за сегодня: {steps} из {goal}",
+  "@actStepsSemantic": {
+    "placeholders": {
+      "steps": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyEnergy": "Энергия",
+  "bdyHistory": "История",
+  "bdyCharts": "Графики",
+  "bdySleepTitle": "Сон",
+  "bdySleepLog": "Записать сон",
+  "bdySleepNotLogged": "Сон за прошлую ночь не записан.",
+  "bdySleepLastNight": "Прошлая ночь",
+  "bdySleepDuration": "Длительность",
+  "bdySleepTarget": "Цель плана",
+  "bdySleepAverage": "В среднем",
+  "bdySleepVsTarget": "Против цели",
+  "bdySleepOnTarget": "Ночей не меньше цели",
+  "bdySleepEmpty": "Пока нет записей сна.",
+  "bdySleepChartLabel": "График сна по дням, линия — цель плана",
+  "bdySleepHistory": "Сон за {days} дн.",
+  "@bdySleepHistory": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdySleepWakeDay": "Утро (день подъёма)",
+  "bdySleepBed": "Лёг",
+  "bdySleepWake": "Встал",
+  "bdySleepQuality": "Качество сна",
+  "bdySleepQualityHint": "1 — плохо, 5 — отлично",
+  "bdySleepQualityShort": "кач. {quality}/5",
+  "@bdySleepQualityShort": {
+    "placeholders": {
+      "quality": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyMeasureTitle": "Замеры",
+  "bdyMeasureAdd": "Добавить замер",
+  "bdyMeasureHint": "Заполните то, что измерили. Обхваты — сантиметровой лентой, утром, до еды.",
+  "bdyMeasureEmpty": "Замеров пока нет.",
+  "bdyMeasureNeedTwo": "Для графика нужно хотя бы два замера.",
+  "bdyMeasureChangeNote": "В скобках — изменение за 30 дней",
+  "bdyMeasureChartLabel": "График: {name}",
+  "@bdyMeasureChartLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyMeasureWeight": "Вес",
+  "bdyMeasureWaist": "Талия",
+  "bdyMeasureHips": "Бёдра",
+  "bdyMeasureChest": "Грудь",
+  "bdyMeasureNeck": "Шея",
+  "bdyMeasureArm": "Рука",
+  "bdyMeasureBodyFat": "% жира",
+  "bdyUnitKg": "кг",
+  "bdyUnitCm": "см",
+  "bdyPeriodAll": "Всё",
+  "bdyPeriodDays": "{days} дн.",
+  "@bdyPeriodDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "bdyPhotoTitle": "Фото-дневник",
+  "bdyPhotoKindBody": "Тело",
+  "bdyPhotoKindSkin": "Кожа",
+  "bdyPhotoLast": "Последнее фото",
+  "bdyPhotoAdd": "Новое фото",
+  "bdyPhotoPose": "Ракурс",
+  "bdyPhotoCamera": "Снять",
+  "bdyPhotoGallery": "Из галереи",
+  "bdyPhotoEmpty": "Фото пока нет.",
+  "bdyPhotoCompare": "Сравнить",
+  "bdyPhotoCompareHint": "Выберите два фото, чтобы сравнить «до» и «после».",
+  "bdyPhotoCompareNeedTwo": "Для сравнения нужно хотя бы два фото.",
+  "bdyPoseOther": "Другое",
+  "bdyCompareSlider": "Шторка",
+  "bdyCompareSideBySide": "Рядом",
+  "bdyCompareBefore": "До",
+  "bdyCompareAfter": "После",
+  "bdyCompareNote": "Снимайте при одинаковом свете и с одного расстояния — так сравнение честнее.",
+  "bdyCareTitle": "Уход за кожей",
+  "bdyCareOpen": "Чек-лист",
+  "bdyCareMorning": "Утро",
+  "bdyCareEvening": "Вечер",
+  "bdyCareTemplateNote": "Базовый шаблон по анкете. Подбор средств под вашу кожу появится позже.",
+  "bdyCareSensitiveNote": "Были реакции на средства: новое средство сначала пробуйте на небольшом участке кожи.",
+  "bdyCareCompleteNote": "Рутина выполнена.",
+  "bdyCareRoutineDone": "{routine}: уход выполнен",
+  "@bdyCareRoutineDone": {
+    "placeholders": {
+      "routine": {
+        "type": "String"
+      }
+    }
+  },
+  "bdyCareCleanse": "Умыться мягким очищающим средством",
+  "bdyCareCleanseGentle": "без пересушивания",
+  "bdyCareColdRinse": "Умыться прохладной водой",
+  "bdyCareMoisturize": "Увлажняющий крем",
+  "bdyCareMoisturizeLight": "лёгкая текстура",
+  "bdyCareMoisturizeRich": "плотнее, питательный",
+  "bdyCareSunscreen": "Солнцезащитный крем",
+  "bdyCareRemoveSunscreen": "Смыть SPF и загрязнения",
+  "bdyCareAcne": "Средство против воспалений (если есть)",
+  "bdyCareExfoliate": "Мягкое отшелушивание",
+  "bdyCareHandsOff": "Не трогать и не выдавливать",
+  "bdySkinType": "Тип кожи (по анкете)",
+  "bdySkinNormal": "Нормальная",
+  "bdySkinOily": "Жирная",
+  "bdySkinCombination": "Комбинированная",
+  "bdySkinDry": "Сухая",
+  "bdySkinUnknown": "Не определён",
+  "bdySwellTitle": "Отёки",
+  "bdySwellOpen": "Подробнее",
+  "bdySwellMorningPhoto": "Утреннее фото лица",
+  "bdySwellPhotoHint": "Сделайте фото анфас сразу после подъёма — по ленте снимков виден тренд.",
+  "bdySwellTakenToday": "Утреннее фото на сегодня есть.",
+  "bdySwellTipShort": "Акценты: меньше соли вечером, вода днём, сон по плану.",
+  "bdySwellTipsTitle": "Подсказки",
+  "bdySwellTipSalt": "Солёное и фастфуд лучше не есть поздно вечером.",
+  "bdySwellTipWater": "Пейте воду равномерно в течение дня, а не всё перед сном.",
+  "bdySwellTipSleep": "Высыпайтесь и ложитесь в одно время — недосып заметен на лице утром.",
+  "bdySwellNote": "Если отёки сильные, появились внезапно или не проходят — покажитесь врачу.",
+  "bdySwellTrend": "Тренд по утрам",
+  "bdySwellEmpty": "Утренних фото пока нет.",
+  "bdySwellCompareFirst": "Сравнить первое и последнее",
   "chrIntro": "Выберите спутника. Он проведёт вас через фото-сессии своим голосом, а потом будет жить внизу экрана: напоминать, хвалить и ругать — в выбранном режиме.",
   "chrArchetype": "Персонаж",
   "chrArchetypeRequired": "Выберите персонажа, чтобы продолжить",
@@ -673,6 +844,193 @@
   "ntfPermRequest": "Запросить разрешение",
   "ntfTest": "Проверить уведомление",
   "ntfUnavailable": "Уведомления недоступны на этой платформе",
+  "nutYesterday": "Вчера",
+  "nutToday": "Сегодня",
+  "nutNoticeLabel": "Уведомление",
+  "nutProtein": "Белки",
+  "nutFat": "Жиры",
+  "nutCarbs": "Углеводы",
+  "nutBalance": "Баланс",
+  "nutNoNorm": "Нормы нет: примите план, чтобы видеть цель по калориям и БЖУ.",
+  "nutNoWaterNorm": "Норма воды появится после принятия плана.",
+  "nutGrams": "{value} г",
+  "@nutGrams": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutGramsProgress": "{current} / {total} г",
+  "@nutGramsProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "nutLiters": "{value} л",
+  "@nutLiters": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutMacrosLine": "Б {protein} · Ж {fat} · У {carbs}",
+  "@nutMacrosLine": {
+    "placeholders": {
+      "protein": {
+        "type": "String"
+      },
+      "fat": {
+        "type": "String"
+      },
+      "carbs": {
+        "type": "String"
+      }
+    }
+  },
+  "nutTotalLine": "Итого: {kcal} ккал · {macros}",
+  "@nutTotalLine": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutPerServing": "Порция: {kcal} · {macros}",
+  "@nutPerServing": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutWaterAdd": "+{ml} мл",
+  "@nutWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "nutWaterUndo": "Отменить последнюю запись воды",
+  "nutTrainingDay": "День тренировки",
+  "nutAddTitle": "Добавить еду",
+  "nutAddBarcode": "Штрихкод",
+  "nutAddManual": "Вручную",
+  "nutAddPhoto": "Фото",
+  "nutRecipes": "Мои рецепты",
+  "nutSearching": "Поиск…",
+  "nutDiaryEmpty": "Записей за день нет. Добавьте еду — штрихкодом, вручную, фото или рецептом.",
+  "nutWithPhoto": "с фото",
+  "nutMealBreakfast": "Завтрак",
+  "nutMealLunch": "Обед",
+  "nutMealDinner": "Ужин",
+  "nutMealSnack": "Перекус",
+  "nutNewEntry": "Новая запись",
+  "nutEditEntry": "Запись дневника",
+  "nutRecipeLineTitle": "Строка рецепта",
+  "nutPhotoSaved": "Фото сохранено",
+  "nutPhotoAiLater": "Распознавание блюда по фото Система откроет позже. Пока введите название и КБЖУ сами.",
+  "nutFieldTitle": "Название",
+  "nutFieldTitleHint": "Например: овсянка с бананом",
+  "nutFieldMeal": "Приём пищи",
+  "nutFieldMode": "Как считать",
+  "nutModePortion": "На порцию",
+  "nutModePer100": "На 100 г",
+  "nutFieldGrams": "Вес порции",
+  "nutErrorGrams": "Укажите вес в граммах",
+  "nutValuesPer100": "Значения на 100 г",
+  "nutValuesPortion": "Значения на всю порцию",
+  "nutFieldKcal": "Калории",
+  "nutFieldProtein": "Белки",
+  "nutFieldFat": "Жиры",
+  "nutFieldCarbs": "Углеводы",
+  "nutUnitKcal": "ккал",
+  "nutUnitG": "г",
+  "nutUnitKg": "кг",
+  "nutUnitPcs": "шт.",
+  "nutUnitL": "л",
+  "nutUnitMl": "мл",
+  "nutSaveToProducts": "Сохранить в мои продукты",
+  "nutSaveToProductsHint": "Потом найдётся поиском — без повторного ввода",
+  "nutMyProducts": "Мои продукты",
+  "nutSearchHint": "Поиск по названию или штрихкоду",
+  "nutWithoutProduct": "Без продукта",
+  "nutNewProduct": "Новый продукт",
+  "nutNoProducts": "Продуктов пока нет. Отсканируйте штрихкод или добавьте продукт вручную.",
+  "nutPer100Short": "100 г",
+  "nutProductNameHint": "Например: йогурт натуральный",
+  "nutFieldBrand": "Бренд",
+  "nutFieldBarcode": "Штрихкод",
+  "nutFieldServing": "Обычная порция",
+  "nutBarcodeNotFound": "Продукта нет в Open Food Facts. Введите данные с упаковки — Система запомнит его по штрихкоду.",
+  "nutBarcodeOffline": "Нет связи с базой продуктов. Введите данные с упаковки — Система запомнит продукт по штрихкоду.",
+  "nutScanTitle": "Штрихкод",
+  "nutScanHint": "Наведите камеру на штрихкод упаковки",
+  "nutScanNoCamera": "Камера недоступна. Разрешите доступ к камере в настройках или введите продукт вручную.",
+  "nutPhotoTitle": "Фото еды",
+  "nutPhotoMessage": "Снимите блюдо или выберите фото из галереи. Фото сохранится в записи дневника.",
+  "nutPhotoCamera": "Камера",
+  "nutPhotoGallery": "Галерея",
+  "nutPortions": "Порций",
+  "nutAddToDiary": "Добавить в дневник",
+  "nutRecipesEmpty": "Рецептов пока нет. Соберите блюдо из продуктов один раз — потом добавляйте его в один тап.",
+  "nutNewRecipe": "Новый рецепт",
+  "nutEditRecipe": "Рецепт",
+  "nutRecipeTitleHint": "Например: омлет с овощами",
+  "nutServings": "Порций в блюде",
+  "nutIngredients": "Состав",
+  "nutIngredientsEmpty": "Добавьте хотя бы один продукт или строку.",
+  "nutFromProducts": "Из продуктов",
+  "nutManualLine": "Вручную",
+  "nutShopping": "Список покупок",
+  "nutShopNothing": "Список пуст — откройте, чтобы добавить покупки.",
+  "nutShopRemainingCount": "{count, plural, one{Осталось купить: {count} позиция · {sum}} few{Осталось купить: {count} позиции · {sum}} many{Осталось купить: {count} позиций · {sum}} other{Осталось купить: {count} позиции · {sum}}}",
+  "@nutShopRemainingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "sum": {
+        "type": "String"
+      }
+    }
+  },
+  "nutShopAdd": "Добавить покупку",
+  "nutShopEdit": "Покупка",
+  "nutShopTotal": "Всего (примерно)",
+  "nutShopRemaining": "Ещё не куплено",
+  "nutShopPriceNote": "Суммы — по ценам, которые вы указали.",
+  "nutShopFromPlan": "От плана питания",
+  "nutShopFromPlanHint": "Базовый список на неделю по нормам плана: белок, крупы, овощи, фрукты, вода. Цены укажите сами.",
+  "nutShopNoPlan": "Примите план — тогда Система составит базовый список на неделю.",
+  "nutShopGenerate": "Составить на неделю",
+  "nutShopEmpty": "Покупок пока нет.",
+  "nutShopClearDone": "Убрать купленное",
+  "nutShopTitleHint": "Например: гречка",
+  "nutShopQuantity": "Количество",
+  "nutShopPrice": "Примерная цена",
+  "nutGroceryChicken": "Куриная грудка / индейка",
+  "nutGroceryEggs": "Яйца",
+  "nutGroceryCottageCheese": "Творог",
+  "nutGroceryGrains": "Крупы (гречка, рис)",
+  "nutGroceryOats": "Овсяные хлопья",
+  "nutGroceryVegetables": "Овощи",
+  "nutGroceryFruits": "Фрукты",
+  "nutGroceryOil": "Растительное масло",
+  "nutGroceryWater": "Питьевая вода",
   "planNoticeLabel": "Уведомление",
   "planTitle": "План составлен",
   "planDraftNote": "Черновой план — Система уточнит его после подключения ИИ.",
@@ -2237,5 +2595,294 @@
         "type": "int"
       }
     }
-  }
+  },
+  "wrkTitle": "Тренировки",
+  "wrkProgram": "Программа",
+  "wrkToday": "Сегодня",
+  "wrkTodayDay": "По программе — день {key}",
+  "@wrkTodayDay": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkRestDay": "Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.",
+  "wrkDayTitle": "День {key}",
+  "@wrkDayTitle": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkMinutesShort": "{minutes} мин",
+  "@wrkMinutesShort": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkEstimate": "≈{minutes} мин",
+  "@wrkEstimate": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkExerciseCount": "{count, plural, one{{count} упражнение} few{{count} упражнения} many{{count} упражнений} other{{count} упражнения}}",
+  "@wrkExerciseCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsReps": "{sets} × {reps}",
+  "@wrkSetsReps": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsSeconds": "{sets} × {seconds} с",
+  "@wrkSetsSeconds": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRestShort": "отдых {seconds} с",
+  "@wrkRestShort": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkGentle": "Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.",
+  "wrkSafetyNote": "Если упражнение вызывает боль или дискомфорт — пропустите его.",
+  "wrkLevelUnknown": "Уровень в анкете не указан — программа для новичка.",
+  "wrkProgressionWeeks": "Выполненных недель: {weeks}",
+  "@wrkProgressionWeeks": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkProgressionNote": "Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.",
+  "wrkRegenerate": "Пересоздать программу",
+  "wrkRegenerateTitle": "Пересоздать программу?",
+  "wrkRegenerateText": "Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.",
+  "wrkAiProgram": "Программа от ИИ",
+  "wrkSoon": "скоро",
+  "wrkStart": "Начать тренировку",
+  "wrkStartDay": "Начать день {key}",
+  "@wrkStartDay": {
+    "placeholders": {
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkHistory": "История",
+  "wrkHistoryEmpty": "Тренировок пока нет.",
+  "wrkSessionDone": "завершена",
+  "wrkSessionInterrupted": "прервана",
+  "wrkSessionStats": "{minutes} мин · ≈{kcal} ккал",
+  "@wrkSessionStats": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkPreparing": "Программа собирается…",
+  "wrkPhasePrepare": "Приготовьтесь",
+  "wrkPhaseWork": "Работа",
+  "wrkPhaseRest": "Отдых",
+  "wrkPaused": "Пауза",
+  "wrkSetOf": "Подход {set} из {sets}",
+  "@wrkSetOf": {
+    "placeholders": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRepsTarget": "{reps, plural, one{{reps} повтор} few{{reps} повтора} many{{reps} повторов} other{{reps} повтора}}",
+  "@wrkRepsTarget": {
+    "placeholders": {
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkDoneSet": "Подход выполнен",
+  "wrkPause": "Пауза",
+  "wrkResume": "Продолжить",
+  "wrkSkipRest": "Пропустить отдых",
+  "wrkSkipExercise": "Пропустить упражнение",
+  "wrkStop": "Прервать",
+  "wrkNext": "Далее: {name}",
+  "@wrkNext": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkLastExercise": "Последнее упражнение",
+  "wrkTechnique": "Техника",
+  "wrkVoice": "Голосовые подсказки",
+  "wrkProgressLabel": "Прогресс тренировки",
+  "wrkStopTitle": "Прервать тренировку?",
+  "wrkStopText": "Сделанное сохранится как незавершённая тренировка.",
+  "wrkFinishedTitle": "Тренировка завершена",
+  "wrkFinishedStats": "Время: {minutes} мин · ≈{kcal} ккал · подходов: {sets}",
+  "@wrkFinishedStats": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkWeightAssumed": "Расход — оценка по весу 70 кг: замеров веса нет.",
+  "wrkKcalNote": "Расход — оценка по MET, не измерение.",
+  "wrkSayPrepare": "Приготовьтесь. {name}.",
+  "@wrkSayPrepare": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSaySet": "Подход {set} из {sets}. {amount}. Начали!",
+  "@wrkSaySet": {
+    "placeholders": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSecondsAmount": "{seconds, plural, one{{seconds} секунда} few{{seconds} секунды} many{{seconds} секунд} other{{seconds} секунды}}",
+  "@wrkSecondsAmount": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSayRest": "Отдых: {amount}.",
+  "@wrkSayRest": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSayNext": "Далее: {name}.",
+  "@wrkSayNext": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "wrkSayFinished": "Тренировка завершена. Отличная работа!",
+  "wrkExMarchInPlace": "Ходьба на месте",
+  "wrkExMarchInPlaceHint": "Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.",
+  "wrkExArmCircles": "Круги руками",
+  "wrkExArmCirclesHint": "Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.",
+  "wrkExJumpingJacks": "Джампинг-джек",
+  "wrkExJumpingJacksHint": "Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.",
+  "wrkExChairSquat": "Приседание на стул",
+  "wrkExChairSquatHint": "Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.",
+  "wrkExGluteBridge": "Ягодичный мост",
+  "wrkExGluteBridgeHint": "Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.",
+  "wrkExSquat": "Приседания",
+  "wrkExSquatHint": "Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.",
+  "wrkExWallSit": "Стульчик у стены",
+  "wrkExWallSitHint": "Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.",
+  "wrkExReverseLunge": "Выпады назад",
+  "wrkExReverseLungeHint": "Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.",
+  "wrkExGobletSquat": "Гоблет-присед",
+  "wrkExGobletSquatHint": "Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.",
+  "wrkExKettlebellSwing": "Махи гирей",
+  "wrkExKettlebellSwingHint": "Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.",
+  "wrkExJumpSquat": "Присед с выпрыгиванием",
+  "wrkExJumpSquatHint": "Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.",
+  "wrkExWallPushUp": "Отжимания от стены",
+  "wrkExWallPushUpHint": "Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.",
+  "wrkExKneePushUp": "Отжимания с колен",
+  "wrkExKneePushUpHint": "Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.",
+  "wrkExPushUp": "Отжимания",
+  "wrkExPushUpHint": "Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.",
+  "wrkExDumbbellPress": "Жим гантелей лёжа",
+  "wrkExDumbbellPressHint": "Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.",
+  "wrkExDiamondPushUp": "Узкие отжимания",
+  "wrkExDiamondPushUpHint": "Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.",
+  "wrkExSuperman": "Супермен",
+  "wrkExSupermanHint": "Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.",
+  "wrkExReverseSnowAngel": "Обратный снежный ангел",
+  "wrkExReverseSnowAngelHint": "Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.",
+  "wrkExBandRow": "Тяга резинки",
+  "wrkExBandRowHint": "Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.",
+  "wrkExDumbbellRow": "Тяга гантели в наклоне",
+  "wrkExDumbbellRowHint": "Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.",
+  "wrkExPullUp": "Подтягивания",
+  "wrkExPullUpHint": "Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.",
+  "wrkExDeadBug": "Мёртвый жук",
+  "wrkExDeadBugHint": "Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.",
+  "wrkExBirdDog": "Птица-собака",
+  "wrkExBirdDogHint": "Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.",
+  "wrkExPlank": "Планка",
+  "wrkExPlankHint": "Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.",
+  "wrkExCrunch": "Скручивания",
+  "wrkExCrunchHint": "Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.",
+  "wrkExSidePlank": "Боковая планка",
+  "wrkExSidePlankHint": "Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.",
+  "wrkExLegRaise": "Подъём ног лёжа",
+  "wrkExLegRaiseHint": "Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.",
+  "wrkExStepTouch": "Приставные шаги",
+  "wrkExStepTouchHint": "Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.",
+  "wrkExShadowBoxing": "Бой с тенью",
+  "wrkExShadowBoxingHint": "Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.",
+  "wrkExHighKnees": "Бег с высоким подниманием колен",
+  "wrkExHighKneesHint": "Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.",
+  "wrkExMountainClimber": "Скалолаз",
+  "wrkExMountainClimberHint": "Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.",
+  "wrkExBurpee": "Бёрпи",
+  "wrkExBurpeeHint": "Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.",
+  "wrkExFullBodyStretch": "Растяжка",
+  "wrkExFullBodyStretchHint": "Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков."
 }

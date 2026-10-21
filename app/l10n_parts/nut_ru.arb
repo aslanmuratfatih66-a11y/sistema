@@ -1,0 +1,189 @@
+{
+  "nutYesterday": "Вчера",
+  "nutToday": "Сегодня",
+  "nutNoticeLabel": "Уведомление",
+  "nutProtein": "Белки",
+  "nutFat": "Жиры",
+  "nutCarbs": "Углеводы",
+  "nutBalance": "Баланс",
+  "nutNoNorm": "Нормы нет: примите план, чтобы видеть цель по калориям и БЖУ.",
+  "nutNoWaterNorm": "Норма воды появится после принятия плана.",
+  "nutGrams": "{value} г",
+  "@nutGrams": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutGramsProgress": "{current} / {total} г",
+  "@nutGramsProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "nutLiters": "{value} л",
+  "@nutLiters": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "nutMacrosLine": "Б {protein} · Ж {fat} · У {carbs}",
+  "@nutMacrosLine": {
+    "placeholders": {
+      "protein": {
+        "type": "String"
+      },
+      "fat": {
+        "type": "String"
+      },
+      "carbs": {
+        "type": "String"
+      }
+    }
+  },
+  "nutTotalLine": "Итого: {kcal} ккал · {macros}",
+  "@nutTotalLine": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutPerServing": "Порция: {kcal} · {macros}",
+  "@nutPerServing": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "nutWaterAdd": "+{ml} мл",
+  "@nutWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "nutWaterUndo": "Отменить последнюю запись воды",
+  "nutTrainingDay": "День тренировки",
+  "nutAddTitle": "Добавить еду",
+  "nutAddBarcode": "Штрихкод",
+  "nutAddManual": "Вручную",
+  "nutAddPhoto": "Фото",
+  "nutRecipes": "Мои рецепты",
+  "nutSearching": "Поиск…",
+  "nutDiaryEmpty": "Записей за день нет. Добавьте еду — штрихкодом, вручную, фото или рецептом.",
+  "nutWithPhoto": "с фото",
+  "nutMealBreakfast": "Завтрак",
+  "nutMealLunch": "Обед",
+  "nutMealDinner": "Ужин",
+  "nutMealSnack": "Перекус",
+  "nutNewEntry": "Новая запись",
+  "nutEditEntry": "Запись дневника",
+  "nutRecipeLineTitle": "Строка рецепта",
+  "nutPhotoSaved": "Фото сохранено",
+  "nutPhotoAiLater": "Распознавание блюда по фото Система откроет позже. Пока введите название и КБЖУ сами.",
+  "nutFieldTitle": "Название",
+  "nutFieldTitleHint": "Например: овсянка с бананом",
+  "nutFieldMeal": "Приём пищи",
+  "nutFieldMode": "Как считать",
+  "nutModePortion": "На порцию",
+  "nutModePer100": "На 100 г",
+  "nutFieldGrams": "Вес порции",
+  "nutErrorGrams": "Укажите вес в граммах",
+  "nutValuesPer100": "Значения на 100 г",
+  "nutValuesPortion": "Значения на всю порцию",
+  "nutFieldKcal": "Калории",
+  "nutFieldProtein": "Белки",
+  "nutFieldFat": "Жиры",
+  "nutFieldCarbs": "Углеводы",
+  "nutUnitKcal": "ккал",
+  "nutUnitG": "г",
+  "nutUnitKg": "кг",
+  "nutUnitPcs": "шт.",
+  "nutUnitL": "л",
+  "nutUnitMl": "мл",
+  "nutSaveToProducts": "Сохранить в мои продукты",
+  "nutSaveToProductsHint": "Потом найдётся поиском — без повторного ввода",
+  "nutMyProducts": "Мои продукты",
+  "nutSearchHint": "Поиск по названию или штрихкоду",
+  "nutWithoutProduct": "Без продукта",
+  "nutNewProduct": "Новый продукт",
+  "nutNoProducts": "Продуктов пока нет. Отсканируйте штрихкод или добавьте продукт вручную.",
+  "nutPer100Short": "100 г",
+  "nutProductNameHint": "Например: йогурт натуральный",
+  "nutFieldBrand": "Бренд",
+  "nutFieldBarcode": "Штрихкод",
+  "nutFieldServing": "Обычная порция",
+  "nutBarcodeNotFound": "Продукта нет в Open Food Facts. Введите данные с упаковки — Система запомнит его по штрихкоду.",
+  "nutBarcodeOffline": "Нет связи с базой продуктов. Введите данные с упаковки — Система запомнит продукт по штрихкоду.",
+  "nutScanTitle": "Штрихкод",
+  "nutScanHint": "Наведите камеру на штрихкод упаковки",
+  "nutScanNoCamera": "Камера недоступна. Разрешите доступ к камере в настройках или введите продукт вручную.",
+  "nutPhotoTitle": "Фото еды",
+  "nutPhotoMessage": "Снимите блюдо или выберите фото из галереи. Фото сохранится в записи дневника.",
+  "nutPhotoCamera": "Камера",
+  "nutPhotoGallery": "Галерея",
+  "nutPortions": "Порций",
+  "nutAddToDiary": "Добавить в дневник",
+  "nutRecipesEmpty": "Рецептов пока нет. Соберите блюдо из продуктов один раз — потом добавляйте его в один тап.",
+  "nutNewRecipe": "Новый рецепт",
+  "nutEditRecipe": "Рецепт",
+  "nutRecipeTitleHint": "Например: омлет с овощами",
+  "nutServings": "Порций в блюде",
+  "nutIngredients": "Состав",
+  "nutIngredientsEmpty": "Добавьте хотя бы один продукт или строку.",
+  "nutFromProducts": "Из продуктов",
+  "nutManualLine": "Вручную",
+  "nutShopping": "Список покупок",
+  "nutShopNothing": "Список пуст — откройте, чтобы добавить покупки.",
+  "nutShopRemainingCount": "{count, plural, one{Осталось купить: {count} позиция · {sum}} few{Осталось купить: {count} позиции · {sum}} many{Осталось купить: {count} позиций · {sum}} other{Осталось купить: {count} позиции · {sum}}}",
+  "@nutShopRemainingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "sum": {
+        "type": "String"
+      }
+    }
+  },
+  "nutShopAdd": "Добавить покупку",
+  "nutShopEdit": "Покупка",
+  "nutShopTotal": "Всего (примерно)",
+  "nutShopRemaining": "Ещё не куплено",
+  "nutShopPriceNote": "Суммы — по ценам, которые вы указали.",
+  "nutShopFromPlan": "От плана питания",
+  "nutShopFromPlanHint": "Базовый список на неделю по нормам плана: белок, крупы, овощи, фрукты, вода. Цены укажите сами.",
+  "nutShopNoPlan": "Примите план — тогда Система составит базовый список на неделю.",
+  "nutShopGenerate": "Составить на неделю",
+  "nutShopEmpty": "Покупок пока нет.",
+  "nutShopClearDone": "Убрать купленное",
+  "nutShopTitleHint": "Например: гречка",
+  "nutShopQuantity": "Количество",
+  "nutShopPrice": "Примерная цена",
+  "nutGroceryChicken": "Куриная грудка / индейка",
+  "nutGroceryEggs": "Яйца",
+  "nutGroceryCottageCheese": "Творог",
+  "nutGroceryGrains": "Крупы (гречка, рис)",
+  "nutGroceryOats": "Овсяные хлопья",
+  "nutGroceryVegetables": "Овощи",
+  "nutGroceryFruits": "Фрукты",
+  "nutGroceryOil": "Растительное масло",
+  "nutGroceryWater": "Питьевая вода"
+}
