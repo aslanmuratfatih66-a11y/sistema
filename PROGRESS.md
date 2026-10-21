@@ -16,7 +16,7 @@
 - [ ] 7. CI зелёный, отчёт
 
 ## Сабагенты (текущий этап)
-- A Анкета 1–6: в работе — lib/features/onboarding/questionnaire_a/
+- A Анкета 1–6: готово (8 тестов) — lib/features/onboarding/questionnaire_a/
 - B Анкета 7–12: готово (8 тестов) — lib/features/onboarding/questionnaire_b/
 - C Расписание: готово (34 теста) — lib/features/schedule/
 - D План и нормы: в работе — lib/features/plan/
