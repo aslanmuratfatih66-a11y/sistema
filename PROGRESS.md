@@ -31,6 +31,14 @@
 - Верхний safe area забирает AppShell (баннер сертификата + MediaQuery.removePadding для вкладок)
 - Тексты демо-данных главного экрана — через l10n (HomeText.l10n), homeDataProvider заменим реальными данными на этапе 2
 - Компоненты дизайн-системы — публичное API в app/lib/ui/ui.dart, фичи импортируют только его
+- ARB (app/lib/l10n/*.arb) правит один агент за раз (на этапе 0 — сабагент B); после правки `flutter gen-l10n`
+- Коммиты только с PROGRESS/docs — с `[skip ci]`, чтобы не тратить сборку iOS
+
+## Для новой сессии (окружение)
+- В bash PATH сессии может не быть инструментов: `export PATH="/c/src/flutter/bin:/c/Program Files/Go/bin:/c/Program Files/GitHub CLI:$PATH"`
+- gh залогинен (аккаунт aslanmuratfatih66-a11y), в git-конфиге репо задан автор
+- Скачать сборки локально: `gh run download <run-id> -n sistema-ipa -D dist` (и `-n sistema-apk`); dist/ в .gitignore. Сейчас там лежат sistema-7c77019.ipa/.apk
+- Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
 - iOS Swift (AppDelegate: FlutterImplicitEngineBridge.applicationRegistrar) проверяется только в CI; фолбэк — pluginRegistry.registrar(forPlugin:)?.messenger()
