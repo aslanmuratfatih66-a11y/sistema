@@ -2,8 +2,8 @@
 
 ## Сейчас
 Этап: 1 — Онбординг, профиль, расписание, план
-Статус: собирается в CI
-Следующий шаг: CI до зелёного (gh run watch), затем отчёт и ссылки на .ipa/.apk
+Статус: ждёт проверки на телефоне
+Следующий шаг: пользователь проверяет анкету, камеру, разрешения, план, настройки/экспорт на телефоне; затем этап 2
 
 ## Этап 1 — чек-лист
 - [x] Каркас: схема БД v2 (Profiles, BodyMeasurements, Photos, Goals, ScheduleSettings/Items, Plans, QuestionnaireSections), enums, QuestionnaireRepository, хост анкеты (OnboardingScreen/StepFrame/StepScope/StepEditScreen), роутер с redirect на /onboarding, поля ввода ui/form_fields.dart, зависимости (camera, permission_handler, file_picker, share_plus, uuid, path), Info.plist/манифест, Drift в вебе
@@ -13,7 +13,7 @@
 - [x] 4. Редактирование анкеты в настройках (E)
 - [x] 5. Экспорт/импорт JSON (E)
 - [x] 6. Юнит-тесты норм и расписания (всего 144 теста, + интеграционный план×расписание)
-- [ ] 7. CI зелёный, отчёт
+- [x] 7. CI зелёный, отчёт
 
 ## Сабагенты (текущий этап)
 - A Анкета 1–6: готово (8 тестов) — lib/features/onboarding/questionnaire_a/
@@ -23,6 +23,7 @@
 - E Настройки, экспорт/импорт: готово (19 тестов) — lib/features/settings/
 
 ## Решения и договорённости
+- Android compileSdk = 37 (требует permission_handler_android 14), предупреждение AGP 9.1 заглушено в gradle.properties
 - Репозиторий `sistema` публичный — бесплатные минуты macOS в Actions
 - Локально установлены: gh (winget), Go 1.27 (winget), Flutter stable в C:\src\flutter (PATH пользователя)
 - git author для репо: murat <pomidorka87nn@gmail.com>
@@ -59,15 +60,16 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39598086785 (app) и …/39598087000 (server) — зелёные
+Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39605607416 (app) и …/39605607323 (server) — зелёные
 Артефакты:
-- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39598086785/artifacts/12345640839
-- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39598086785/artifacts/12345236473
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39605607416/artifacts/12349055879
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39605607416/artifacts/12348945699
 
 ## Что нужно от пользователя
+- Проверить на телефоне этап 1: анкета (прервать/продолжить), камера с контуром, разрешения, План → Принять, «Ещё»: правка разделов, язык, экспорт/импорт JSON
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 
 ## История
-- 2026-10-21 — этап 1 — начат, каркас
+- 2026-10-21 — этап 1 — собран, CI зелёный, ждёт проверки на телефоне
 - 2026-10-21 — этап 0 — проверен на телефоне; добавлен веб-предпросмотр (main_preview.dart)
 - 2026-10-21 — этап 0 — каркас, дизайн-система, главный экран, CapabilityService, сервер-заготовка, CI зелёный
