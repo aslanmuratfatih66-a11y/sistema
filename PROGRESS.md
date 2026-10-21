@@ -18,7 +18,7 @@
 ## Сабагенты (текущий этап)
 - A Анкета 1–6: в работе — lib/features/onboarding/questionnaire_a/
 - B Анкета 7–12: в работе — lib/features/onboarding/questionnaire_b/
-- C Расписание: в работе — lib/features/schedule/
+- C Расписание: готово (34 теста) — lib/features/schedule/
 - D План и нормы: в работе — lib/features/plan/
 - E Настройки, экспорт/импорт: в работе — lib/features/settings/
 
