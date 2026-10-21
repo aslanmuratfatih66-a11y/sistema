@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"regexp"
 	"runtime/debug"
+	"strings"
 	"time"
 )
 
@@ -120,6 +121,11 @@ func limitBody(next http.Handler, max int64) http.Handler {
 		return next
 	}
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// Загрузка фото ограничивается своим лимитом (Config.MaxPhotoBytes) в media.
+		if strings.HasPrefix(r.URL.Path, UploadPathPrefix) {
+			next.ServeHTTP(w, r)
+			return
+		}
 		if r.ContentLength > max {
 			writeError(w, http.StatusRequestEntityTooLarge, "request body too large")
 			return

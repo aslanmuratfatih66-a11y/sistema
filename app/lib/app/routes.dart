@@ -19,6 +19,7 @@ abstract final class Routes {
   static const body = '/body';
   static const workouts = '/workouts';
   static const walks = '/walks';
+  static const account = '/account';
 
   /// Редактирование раздела анкеты из настроек.
   static String editStep(OnboardingStep step) => '/edit/${step.name}';

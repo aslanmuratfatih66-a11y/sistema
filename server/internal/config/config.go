@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 	"net"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"time"
@@ -18,7 +19,9 @@ const (
 	DefaultLogLevel       = "info"
 	DefaultLogFormat      = "json"
 	DefaultMemLogInterval = 15 * time.Minute
-	DefaultMaxBodyBytes   = 1 << 20 // 1 МиБ; загрузка фото (этап 5) получит отдельный лимит
+	DefaultMaxBodyBytes   = 4 << 20 // 4 МиБ (пачка синхронизации); фото — MaxPhotoBytes
+	DefaultMaxPhotoBytes  = 20 << 20
+	DefaultBackupKeepDays = 14
 )
 
 // Config — конфигурация процесса.
@@ -33,6 +36,16 @@ type Config struct {
 	MemLogInterval time.Duration
 	// MaxBodyBytes — лимит размера тела запроса (SISTEMA_MAX_BODY_BYTES).
 	MaxBodyBytes int64
+	// MaxPhotoBytes — лимит загрузки одного фото (SISTEMA_MAX_PHOTO_BYTES).
+	MaxPhotoBytes int64
+	// BackupDir — каталог бэкапов (SISTEMA_BACKUP_DIR, по умолчанию <DataDir>/../backups).
+	BackupDir string
+	// BackupKeepDays — сколько дней хранить бэкапы (SISTEMA_BACKUP_KEEP_DAYS).
+	BackupKeepDays int
+	// TrustProxy — брать IP клиента из X-Forwarded-For (за reverse-proxy; SISTEMA_TRUST_PROXY=1).
+	TrustProxy bool
+	// FXURL — источник курсов валют (SISTEMA_FX_URL; пусто — значение по умолчанию модуля jobs).
+	FXURL string
 }
 
 // Load читает конфиг через getenv (обычно os.Getenv) и валидирует его.
@@ -82,6 +95,28 @@ func Load(getenv func(string) string) (Config, error) {
 			cfg.MaxBodyBytes = n
 		}
 	}
+
+	cfg.MaxPhotoBytes = DefaultMaxPhotoBytes
+	if v := get("SISTEMA_MAX_PHOTO_BYTES", ""); v != "" {
+		n, err := strconv.ParseInt(v, 10, 64)
+		if err != nil || n <= 0 {
+			errs = append(errs, fmt.Errorf("SISTEMA_MAX_PHOTO_BYTES: positive integer expected, got %q", v))
+		} else {
+			cfg.MaxPhotoBytes = n
+		}
+	}
+	cfg.BackupDir = get("SISTEMA_BACKUP_DIR", filepath.Join(filepath.Dir(filepath.Clean(cfg.DataDir)), "backups"))
+	cfg.BackupKeepDays = DefaultBackupKeepDays
+	if v := get("SISTEMA_BACKUP_KEEP_DAYS", ""); v != "" {
+		n, err := strconv.Atoi(v)
+		if err != nil || n < 1 {
+			errs = append(errs, fmt.Errorf("SISTEMA_BACKUP_KEEP_DAYS: integer >= 1 expected, got %q", v))
+		} else {
+			cfg.BackupKeepDays = n
+		}
+	}
+	cfg.TrustProxy = get("SISTEMA_TRUST_PROXY", "0") == "1"
+	cfg.FXURL = get("SISTEMA_FX_URL", "")
 
 	if err := cfg.validate(); err != nil {
 		errs = append(errs, err)

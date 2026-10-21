@@ -11,12 +11,18 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"syscall"
 	"time"
 
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/auth"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/config"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/httpapi"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/jobs"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/media"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/memstat"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/store"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/syncapi"
 )
 
 // version подставляется при сборке: go build -ldflags "-X main.version=1.2.3".
@@ -46,7 +52,26 @@ func run() error {
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 
-	// TODO(этап 5): открыть SQLite в cfg.DataDir, миграции, планировщик фоновых задач, бэкапы.
+	db, err := store.Open(ctx, cfg.DataDir)
+	if err != nil {
+		return fmt.Errorf("db: %w", err)
+	}
+	defer db.Close()
+
+	authSvc := auth.New(db, auth.Options{Logger: logger, TrustProxy: cfg.TrustProxy})
+	syncH := syncapi.New(db, logger)
+	mediaH := media.New(db, media.Options{
+		PhotosDir: filepath.Join(cfg.DataDir, "photos"),
+		MaxBytes:  cfg.MaxPhotoBytes,
+		Logger:    logger,
+	})
+	go jobs.New(db, jobs.Options{
+		DataDir:        cfg.DataDir,
+		BackupDir:      cfg.BackupDir,
+		BackupKeepDays: cfg.BackupKeepDays,
+		FXURL:          cfg.FXURL,
+		Logger:         logger,
+	}).Run(ctx)
 
 	go memstat.Run(ctx, logger, cfg.MemLogInterval)
 
@@ -57,6 +82,11 @@ func run() error {
 			Version:      version,
 			StartedAt:    time.Now(),
 			MaxBodyBytes: cfg.MaxBodyBytes,
+			Mount: func(api *http.ServeMux) {
+				authSvc.Register(api)
+				syncH.Register(api, authSvc.Require)
+				mediaH.Register(api, authSvc.Require)
+			},
 		}),
 		ReadHeaderTimeout: 5 * time.Second,
 		ReadTimeout:       30 * time.Second,

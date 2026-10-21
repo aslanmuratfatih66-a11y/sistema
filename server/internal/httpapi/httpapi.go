@@ -16,9 +16,14 @@ type Options struct {
 	Version      string
 	StartedAt    time.Time
 	MaxBodyBytes int64
+	// Mount регистрирует маршруты модулей (auth, sync, media) в mux /api/v1/... (собирает main).
+	Mount func(api *http.ServeMux)
 	// now — для тестов; nil = time.Now.
 	now func() time.Time
 }
+
+// UploadPathPrefix — маршруты загрузки фото: общий лимит тела к ним не применяется.
+const UploadPathPrefix = "/api/v1/photos"
 
 // New собирает http.Handler со всеми маршрутами и middleware.
 func New(opts Options) http.Handler {
@@ -38,6 +43,9 @@ func New(opts Options) http.Handler {
 	// /api/v1 — версия API (SPEC §10). Этап 5: auth, sync, photos — регистрировать здесь.
 	api := http.NewServeMux()
 	api.HandleFunc("GET /api/v1/ping", ping)
+	if opts.Mount != nil {
+		opts.Mount(api)
+	}
 	mux.Handle("/api/v1/", api)
 
 	var h http.Handler = mux
