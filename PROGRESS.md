@@ -17,7 +17,7 @@
 
 ## Сабагенты (текущий этап)
 - A Анкета 1–6: в работе — lib/features/onboarding/questionnaire_a/
-- B Анкета 7–12: в работе — lib/features/onboarding/questionnaire_b/
+- B Анкета 7–12: готово (8 тестов) — lib/features/onboarding/questionnaire_b/
 - C Расписание: готово (34 теста) — lib/features/schedule/
 - D План и нормы: в работе — lib/features/plan/
 - E Настройки, экспорт/импорт: в работе — lib/features/settings/
@@ -48,6 +48,7 @@
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- permission_handler на iOS: при SPM разрешения включаются по ключам Info.plist (Podfile не нужен). Если в CI появится CocoaPods (плагин без SPM) — нужны макросы PERMISSION_* в Podfile post_install
 - Drift в вебе не настроен (нужны sqlite3.wasm + drift_worker.js в app/web/) — пока БД в UI не используется; понадобится, когда экраны начнут читать БД
 - iOS Swift (AppDelegate: FlutterImplicitEngineBridge.applicationRegistrar) проверяется только в CI; фолбэк — pluginRegistry.registrar(forPlugin:)?.messenger()
 - Визуал не проверен на устройстве (тесты на шрифте Ahem)
