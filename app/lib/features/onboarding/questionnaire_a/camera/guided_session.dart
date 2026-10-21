@@ -28,7 +28,7 @@ class SessionShot {
 
 /// Фразы сессии (текст на экране и голос). В приложении — из AppLocalizations, в тестах — фейк.
 abstract interface class SessionPhrases {
-  /// Инструкция ракурса («Отойди на ~2,5 м и встань в контур лицом к камере»). [first] — первый в серии.
+  /// Инструкция ракурса («Отойди на ~2 м и встань в контур лицом к камере»). [first] — первый в серии.
   String instruction(SessionShot shot, {required bool first});
 
   /// Число обратного отсчёта (последние 3 секунды).
@@ -87,6 +87,7 @@ class GuidedSessionController extends ChangeNotifier {
     required this.tts,
     required this.phrases,
     required this.languageCode,
+    this.voice,
     int countdownSeconds = 10,
     this.onTick,
     this.onCaptured,
@@ -102,6 +103,9 @@ class GuidedSessionController extends ChangeNotifier {
   final TtsService tts;
   final SessionPhrases phrases;
   final String languageCode;
+
+  /// Голос выбранного персонажа (null — голос по умолчанию). Можно задать после создания.
+  VoiceProfile? voice;
 
   /// Каждая секунда отсчёта (звук/вибро). Аргумент — сколько секунд осталось.
   final void Function(int remaining)? onTick;
@@ -120,6 +124,10 @@ class GuidedSessionController extends ChangeNotifier {
   int _index = 0;
   int _remaining = 0;
   String _caption = '';
+  bool _speaking = false;
+
+  /// Сейчас звучит фраза (персонаж на экране «говорит»).
+  bool get speaking => _speaking;
 
   /// Очередь ракурсов текущего прогона (вся серия или один при «переснять»).
   List<int> _queue = const [];
@@ -334,10 +342,15 @@ class GuidedSessionController extends ChangeNotifier {
   bool _alive(int gen) => !_disposed && gen == _gen && !_paused && _phase != SessionPhase.cancelled;
 
   Future<void> _say(String text) async {
+    _speaking = true;
+    _notify();
     try {
-      await tts.speak(text, languageCode: languageCode).timeout(speakTimeout, onTimeout: () {});
+      await tts.speak(text, languageCode: languageCode, voice: voice).timeout(speakTimeout, onTimeout: () {});
     } catch (e) {
       debugPrint('GuidedSession.say: $e');
+    } finally {
+      _speaking = false;
+      _notify();
     }
   }
 

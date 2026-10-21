@@ -8,12 +8,14 @@ import 'package:sistema/features/onboarding/questionnaire_a/camera/guided_sessio
 class _FakeTts implements TtsService {
   final said = <String>[];
   final langs = <String>{};
+  final voices = <String?>{};
   int stops = 0;
 
   @override
   Future<void> speak(String text, {required String languageCode, VoiceProfile? voice}) async {
     said.add(text);
     langs.add(languageCode);
+    voices.add(voice?.id);
   }
 
   @override
@@ -136,6 +138,20 @@ void main() {
     expect(tts.said.where((t) => t.startsWith('go:')), ['go:faceFront', 'go:faceLeft', 'go:faceRight']);
     final map = s.takeResults();
     expect(map, {PhotoPose.faceFront: 'shot0', PhotoPose.faceLeft: 'shot1', PhotoPose.faceRight: 'shot2'});
+    s.dispose();
+  });
+
+  test('фразы звучат голосом выбранного персонажа; speaking — пока идёт фраза', () async {
+    final s = make(shots: SessionShot.face)..voice = const VoiceProfile(id: 'v1', pitch: 1.2);
+    final speaking = <bool>[];
+    s.addListener(() {
+      if (speaking.isEmpty || speaking.last != s.speaking) speaking.add(s.speaking);
+    });
+    s.start();
+    await _settle();
+    expect(tts.voices, {'v1'});
+    expect(speaking, contains(true));
+    expect(s.speaking, isFalse);
     s.dispose();
   });
 

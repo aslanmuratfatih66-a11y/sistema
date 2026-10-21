@@ -7,18 +7,21 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import '../../../../core/data/questionnaire_repository.dart';
 import '../../../../core/db/database.dart';
 import '../../../../core/models/enums.dart';
 import '../../../../core/voice/tts_service.dart';
 import '../../../../l10n/app_localizations.dart';
 import '../../../../ui/ui.dart';
+import '../../../character/character_view.dart';
+import '../../../character/model/character_profile.dart';
 import '../data/photo_repository.dart';
 import '../widgets/tip_line.dart';
 import 'capture_guide.dart';
 import 'guided_session.dart';
 import 'mirror.dart';
 
-/// Вид сессии: тело (3 ракурса, ~2,5 м) или лицо (3 ракурса, ~50 см).
+/// Вид сессии: тело (3 ракурса, ~2 м) или лицо (3 ракурса, ~50 см).
 enum GuidedSessionKind { body, face }
 
 extension on GuidedSessionKind {
@@ -312,6 +315,10 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
     final l = AppLocalizations.of(context);
     final s = _session!;
     final total = s.shots.length;
+    // Ассистент выбран в начале анкеты — он и ведёт съёмку своим голосом.
+    final character = ref.watch(questionnaireSectionProvider(QuestionnaireSection.character)).value ?? const {};
+    final archetype = archetypeFromName(character['archetype']);
+    s.voice = archetype == null ? null : CharacterProfile.of(archetype).voiceById(character['voice'] as String?);
     return PopScope(
       canPop: !s.running,
       onPopInvokedWithResult: (didPop, _) {
@@ -342,7 +349,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
                   ],
                 ),
               ),
-              Expanded(child: _body(l, s)),
+              Expanded(child: _body(l, s, archetype)),
             ],
           ),
         ),
@@ -350,7 +357,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
     );
   }
 
-  Widget _body(AppLocalizations l, GuidedSessionController s) {
+  Widget _body(AppLocalizations l, GuidedSessionController s, CharacterArchetype? archetype) {
     if (_error != _CameraError.none) {
       final denied = _error == _CameraError.denied;
       return Center(
@@ -371,7 +378,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
     return switch (s.phase) {
       SessionPhase.preparing => _prepare(l, s),
       SessionPhase.review || SessionPhase.cancelled => _review(l, s),
-      _ => _running(l, s),
+      _ => _running(l, s, archetype),
     };
   }
 
@@ -445,7 +452,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
     );
   }
 
-  Widget _running(AppLocalizations l, GuidedSessionController s) {
+  Widget _running(AppLocalizations l, GuidedSessionController s, CharacterArchetype? archetype) {
     final countdown = s.phase == SessionPhase.countdown && !s.paused;
     return Stack(
       fit: StackFit.expand,
@@ -465,7 +472,20 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
           child: SysPanel(
             title: poseLabel(l, s.current.pose),
             animateIn: false,
-            child: Text(s.caption, style: SysText.body),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (archetype != null) ...[
+                  CharacterView(
+                    archetype: archetype,
+                    state: s.speaking ? CharacterState.talk : CharacterState.idle,
+                    height: 72,
+                  ),
+                  const SizedBox(width: 12),
+                ],
+                Expanded(child: Text(s.caption, style: SysText.body)),
+              ],
+            ),
           ),
         ),
         if (countdown)

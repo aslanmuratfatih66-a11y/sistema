@@ -45,7 +45,7 @@ void main() {
 
     await tester.runAsync(() => progress.goTo(OnboardingStep.goals.index));
     await tester.pump(const Duration(milliseconds: 400));
-    expect(find.text('ЭТАП 6/12'), findsOneWidget);
+    expect(find.text('ЭТАП 7/12'), findsOneWidget);
 
     final reloaded = await tester.runAsync(() => OnboardingProgress.load(db));
     expect(reloaded!.introSeen, isTrue);

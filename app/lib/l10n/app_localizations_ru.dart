@@ -441,7 +441,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get chrIntro =>
-      'Выберите спутника. Он будет жить внизу экрана, напоминать, хвалить и ругать — в выбранном режиме.';
+      'Выберите спутника. Он проведёт вас через фото-сессии своим голосом, а потом будет жить внизу экрана: напоминать, хвалить и ругать — в выбранном режиме.';
 
   @override
   String get chrArchetype => 'Персонаж';
@@ -1331,7 +1331,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaBodyTipCamera =>
-      'Камера на уровне пояса, в 2–3 метрах. Удобнее со штативом или с помощником.';
+      'Камера на уровне пояса, примерно в 2 метрах. Удобнее со штативом или с помощником.';
 
   @override
   String get qaPoseBodyFront => 'Спереди';
@@ -1519,7 +1519,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaShootPrepDistanceBody =>
-      'Вы встанете примерно в 2,5 метрах — так в кадр поместится всё тело.';
+      'Вы встанете примерно в 2 метрах. Подойдите или отойдите, чтобы тело совпало с контуром.';
 
   @override
   String get qaShootPrepPhoneFace =>
@@ -1594,7 +1594,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaShootSayBodyFront =>
-      'Отойди примерно на 2,5 метра и встань в контур лицом к камере. Руки немного в стороны.';
+      'Отойди примерно на 2 метра, лицом к камере. Подойди или отступи, чтобы совпасть с контуром. Руки немного в стороны.';
 
   @override
   String get qaShootSayBodySide =>
@@ -1610,11 +1610,11 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qaShootSayFaceLeft =>
-      'Повернись так, чтобы к камере была левая щека. Голову держи ровно.';
+      'Повернись так, чтобы к камере была левая щека. Голова — в овале, держи её ровно.';
 
   @override
   String get qaShootSayFaceRight =>
-      'Теперь повернись так, чтобы к камере была правая щека.';
+      'Теперь повернись так, чтобы к камере была правая щека. Голова — в овале.';
 
   @override
   String qaShootTaken(String next) {

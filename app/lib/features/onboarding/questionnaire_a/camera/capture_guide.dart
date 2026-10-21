@@ -6,8 +6,9 @@ import '../../../../ui/ui.dart';
 ///
 /// Контуры заданы так, как человека видит ДРУГОЙ (незеркальный снимок):
 /// - [bodySide] — «правым боком к камере»: человек смотрит в ПРАВУЮ сторону кадра;
-/// - [faceLeft] — «профиль слева»: к камере ЛЕВАЯ щека, нос смотрит ВЛЕВО кадра;
-/// - [faceRight] — «профиль справа»: к камере ПРАВАЯ щека, нос смотрит ВПРАВО кадра.
+/// - [faceLeft] / [faceRight] — профиль (к камере левая / правая щека); контур — тот же овал, что анфас
+///   (решение владельца: нарисованный профиль мешал, голова просто вписывается в овал).
+/// Контур тела занимает ~75% высоты кадра — так человек в ~2 м от телефона на уровне пояса совпадает с ним.
 /// Для зеркального превью фронтальной камеры передавайте `mirrored: true` (см. mirror.dart).
 enum CaptureGuide { bodyFront, bodySide, bodyBack, faceFront, faceLeft, faceRight, closeup }
 
@@ -27,14 +28,15 @@ class CaptureGuidePainter extends CustomPainter {
   /// Отразить по горизонтали (превью фронтальной камеры зеркальное).
   final bool mirrored;
 
+  /// Доля высоты кадра под контур тела.
+  static const bodyFill = .75;
+
   @override
   void paint(Canvas canvas, Size size) {
     final path = switch (guide) {
-      CaptureGuide.bodyFront || CaptureGuide.bodyBack => _bodyFront(_box(size, .46, .88)),
-      CaptureGuide.bodySide => _bodySide(_box(size, .46, .88)),
-      CaptureGuide.faceFront => _face(_box(size, .72, .7)),
-      CaptureGuide.faceLeft => _profile(_box(size, .72, .7), noseRight: false),
-      CaptureGuide.faceRight => _profile(_box(size, .72, .7), noseRight: true),
+      CaptureGuide.bodyFront || CaptureGuide.bodyBack => _bodyFront(_box(size, .46, bodyFill)),
+      CaptureGuide.bodySide => _bodySide(_box(size, .46, bodyFill)),
+      CaptureGuide.faceFront || CaptureGuide.faceLeft || CaptureGuide.faceRight => _face(_box(size, .72, .7)),
       CaptureGuide.closeup => _closeup(_box(size, 1, .6)),
     };
     if (mirrored) {
@@ -108,24 +110,9 @@ class CaptureGuidePainter extends CustomPainter {
       ..addOval(Rect.fromCenter(center: _pt(r, .5, .075), width: r.width * .26, height: r.height * .12));
   }
 
-  /// Анфас: овал лица и шея.
-  static Path _face(Rect r) => Path()
-    ..addOval(Rect.fromCenter(center: _pt(r, .5, .42), width: r.width * .66, height: r.height * .76))
-    ..addPath(_poly(r, const [(.36, .74), (.33, 1)], close: false), Offset.zero)
-    ..addPath(_poly(r, const [(.64, .74), (.67, 1)], close: false), Offset.zero);
-
-  /// Профиль головы: затылок, лоб, нос, губы, подбородок, шея и ухо. [noseRight] — нос смотрит вправо кадра.
-  static Path _profile(Rect r, {required bool noseRight}) {
-    const right = [
-      (.34, 1.0), (.35, .82), (.25, .68), (.2, .5), (.23, .3), (.32, .15), (.45, .07), (.58, .07), (.69, .13),
-      (.75, .25), (.76, .36), (.74, .41), (.85, .53), (.76, .57), (.77, .62), (.74, .65), (.76, .69), (.71, .75),
-      (.72, .81), (.63, .85), (.59, .87), (.61, 1.0),
-    ];
-    final pts = [for (final (x, y) in right) (noseRight ? x : 1 - x, y)];
-    final earX = noseRight ? .42 : .58;
-    return _poly(r, pts, close: false)
-      ..addOval(Rect.fromCenter(center: _pt(r, earX, .5), width: r.width * .1, height: r.height * .14));
-  }
+  /// Лицо (анфас и профиль): простой овал.
+  static Path _face(Rect r) =>
+      Path()..addOval(Rect.fromCenter(center: _pt(r, .5, .45), width: r.width * .7, height: r.height * .82));
 
   static Path _closeup(Rect r) {
     const c = .16;

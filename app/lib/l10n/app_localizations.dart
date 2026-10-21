@@ -773,7 +773,7 @@ abstract class AppLocalizations {
   /// No description provided for @chrIntro.
   ///
   /// In ru, this message translates to:
-  /// **'Выберите спутника. Он будет жить внизу экрана, напоминать, хвалить и ругать — в выбранном режиме.'**
+  /// **'Выберите спутника. Он проведёт вас через фото-сессии своим голосом, а потом будет жить внизу экрана: напоминать, хвалить и ругать — в выбранном режиме.'**
   String get chrIntro;
 
   /// No description provided for @chrArchetype.
@@ -2345,7 +2345,7 @@ abstract class AppLocalizations {
   /// No description provided for @qaBodyTipCamera.
   ///
   /// In ru, this message translates to:
-  /// **'Камера на уровне пояса, в 2–3 метрах. Удобнее со штативом или с помощником.'**
+  /// **'Камера на уровне пояса, примерно в 2 метрах. Удобнее со штативом или с помощником.'**
   String get qaBodyTipCamera;
 
   /// No description provided for @qaPoseBodyFront.
@@ -2687,7 +2687,7 @@ abstract class AppLocalizations {
   /// No description provided for @qaShootPrepDistanceBody.
   ///
   /// In ru, this message translates to:
-  /// **'Вы встанете примерно в 2,5 метрах — так в кадр поместится всё тело.'**
+  /// **'Вы встанете примерно в 2 метрах. Подойдите или отойдите, чтобы тело совпало с контуром.'**
   String get qaShootPrepDistanceBody;
 
   /// No description provided for @qaShootPrepPhoneFace.
@@ -2813,7 +2813,7 @@ abstract class AppLocalizations {
   /// No description provided for @qaShootSayBodyFront.
   ///
   /// In ru, this message translates to:
-  /// **'Отойди примерно на 2,5 метра и встань в контур лицом к камере. Руки немного в стороны.'**
+  /// **'Отойди примерно на 2 метра, лицом к камере. Подойди или отступи, чтобы совпасть с контуром. Руки немного в стороны.'**
   String get qaShootSayBodyFront;
 
   /// No description provided for @qaShootSayBodySide.
@@ -2837,13 +2837,13 @@ abstract class AppLocalizations {
   /// No description provided for @qaShootSayFaceLeft.
   ///
   /// In ru, this message translates to:
-  /// **'Повернись так, чтобы к камере была левая щека. Голову держи ровно.'**
+  /// **'Повернись так, чтобы к камере была левая щека. Голова — в овале, держи её ровно.'**
   String get qaShootSayFaceLeft;
 
   /// No description provided for @qaShootSayFaceRight.
   ///
   /// In ru, this message translates to:
-  /// **'Теперь повернись так, чтобы к камере была правая щека.'**
+  /// **'Теперь повернись так, чтобы к камере была правая щека. Голова — в овале.'**
   String get qaShootSayFaceRight;
 
   /// No description provided for @qaShootTaken.

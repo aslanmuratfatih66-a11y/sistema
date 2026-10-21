@@ -4,6 +4,8 @@ import '../../ui/ui.dart';
 
 enum OnboardingStep {
   profile,
+  // Ассистент — сразу после профиля: он озвучивает фото-сессии (решение владельца, 1.2).
+  character,
   body,
   bodyPhotos,
   skin,
@@ -13,7 +15,6 @@ enum OnboardingStep {
   nutrition,
   training,
   finance,
-  character,
   permissions;
 
   String title(AppLocalizations l) => switch (this) {

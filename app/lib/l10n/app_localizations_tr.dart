@@ -436,7 +436,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chrIntro =>
-      'Bir yol arkadaşı seç. Ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.';
+      'Bir yol arkadaşı seç. Fotoğraf çekimlerinde sesiyle sana rehberlik edecek, sonra ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.';
 
   @override
   String get chrArchetype => 'Karakter';
@@ -1324,7 +1324,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaBodyTipCamera =>
-      'Kamera bel hizasında, 2–3 metre uzakta. Tripod veya bir yardımcıyla daha kolay.';
+      'Kamera bel hizasında, yaklaşık 2 metre uzakta. Tripod veya bir yardımcıyla daha kolay.';
 
   @override
   String get qaPoseBodyFront => 'Önden';
@@ -1512,7 +1512,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaShootPrepDistanceBody =>
-      'Yaklaşık 2,5 metre uzakta duracaksınız — böylece tüm vücut kadraja girer.';
+      'Yaklaşık 2 metre uzakta duracaksınız. Vücudunuz çerçeveyle örtüşene kadar yaklaşın veya uzaklaşın.';
 
   @override
   String get qaShootPrepPhoneFace =>
@@ -1585,7 +1585,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaShootSayBodyFront =>
-      'Yaklaşık 2,5 metre uzaklaş ve yüzün kameraya dönük şekilde çerçeveye gir. Kollar hafif yanlara.';
+      'Yaklaşık 2 metre uzaklaş, yüzün kameraya dönük olsun. Çerçeveyle örtüşene kadar yaklaş veya geri çekil. Kollar hafif yanlara.';
 
   @override
   String get qaShootSayBodySide =>
@@ -1601,11 +1601,11 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaShootSayFaceLeft =>
-      'Kameraya sol yanağın bakacak şekilde dön. Başını dik tut.';
+      'Kameraya sol yanağın bakacak şekilde dön. Başın ovalin içinde, dik tut.';
 
   @override
   String get qaShootSayFaceRight =>
-      'Şimdi kameraya sağ yanağın bakacak şekilde dön.';
+      'Şimdi kameraya sağ yanağın bakacak şekilde dön. Başın ovalin içinde.';
 
   @override
   String qaShootTaken(String next) {
