@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../core/capabilities/certificate_banner.dart';
+import '../features/character/character_overlay.dart';
 import '../l10n/app_localizations.dart';
 import '../ui/ui.dart';
 
@@ -28,7 +29,15 @@ class AppShell extends StatelessWidget {
                   children: [
                     const CertificateBanner(),
                     Expanded(
-                      child: MediaQuery.removePadding(context: context, removeTop: true, child: shell),
+                      child: Stack(
+                        children: [
+                          Positioned.fill(
+                            child: MediaQuery.removePadding(context: context, removeTop: true, child: shell),
+                          ),
+                          // Персонаж поверх всех вкладок (SPEC §9.2): ходит вдоль низа, не мешает нажатиям.
+                          const Positioned.fill(child: CharacterOverlay()),
+                        ],
+                      ),
                     ),
                   ],
                 ),

@@ -3,11 +3,13 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/home/home_screen.dart';
+import '../features/nutrition/nutrition_screen.dart';
 import '../features/onboarding/onboarding_progress.dart';
 import '../features/onboarding/onboarding_screen.dart';
 import '../features/onboarding/onboarding_step.dart';
 import '../features/onboarding/step_edit_screen.dart';
 import '../features/plan/plan_screen.dart';
+import '../features/quests/quests_screen.dart';
 import '../features/schedule/schedule_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../l10n/app_localizations.dart';
@@ -46,16 +48,10 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
               GoRoute(path: Routes.status, builder: (_, _) => const HomeScreen()),
             ]),
             StatefulShellBranch(routes: [
-              GoRoute(
-                path: Routes.quests,
-                builder: (c, _) => EmptySectionScreen(title: AppLocalizations.of(c).navQuests, glyph: SysGlyph.quests),
-              ),
+              GoRoute(path: Routes.quests, builder: (_, _) => const QuestsScreen()),
             ]),
             StatefulShellBranch(routes: [
-              GoRoute(
-                path: Routes.nutrition,
-                builder: (c, _) => EmptySectionScreen(title: AppLocalizations.of(c).navNutrition, glyph: SysGlyph.nutrition),
-              ),
+              GoRoute(path: Routes.nutrition, builder: (_, _) => const NutritionScreen()),
             ]),
             StatefulShellBranch(routes: [
               GoRoute(

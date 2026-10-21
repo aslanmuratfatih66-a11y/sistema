@@ -30,6 +30,12 @@ enum InstitutionType { school, college, university, none }
 
 enum ScheduleItemKind { lesson, work, other }
 
+/// Персонажи-архетипы (SPEC §9.2), только оригинальные. Хранится в разделе анкеты character.archetype.
+enum CharacterArchetype { animeGirl, animeGuy, stoicStrongman, grimSwordsman }
+
+/// Состояния анимации персонажа (SPEC §9.2).
+enum CharacterState { idle, walk, talk, happy, angry, sit, sleep, point }
+
 /// Разделы анкеты, хранимые как JSON в QuestionnaireSections (id = name).
 enum QuestionnaireSection { skin, health, nutrition, training, finance, character, permissions }
 
