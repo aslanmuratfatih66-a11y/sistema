@@ -68,5 +68,7 @@
   "setBody": "Vücut ve sağlık",
   "setBodyHint": "Adımlar, uyku, ölçüler, fotoğraflar, cilt bakımı",
   "setWorkouts": "Antrenmanlar",
-  "setWorkoutsHint": "Seviyene göre program, zamanlayıcılar, ses"
+  "setWorkoutsHint": "Seviyene göre program, zamanlayıcılar, ses",
+  "setWalks": "Yürüyüşler",
+  "setWalksHint": "Dairesel rota, bölümler, müzik üstünde ses"
 }

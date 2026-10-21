@@ -128,3 +128,8 @@ enum SleepSource { manual, mark, schedule }
 
 /// Чек-лист ухода за кожей.
 enum CareRoutine { morning, evening }
+
+// ---- Этап 4 ----
+
+/// Режим отрезка прогулки (SPEC §8.5).
+enum WalkMode { walk, brisk, cardio, rest }

@@ -17885,6 +17885,1405 @@ class WorkoutSessionsCompanion extends UpdateCompanion<WorkoutSessionRow> {
   }
 }
 
+class $WalkRoutesTable extends WalkRoutes
+    with TableInfo<$WalkRoutesTable, WalkRouteRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $WalkRoutesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deviceIdMeta = const VerificationMeta(
+    'deviceId',
+  );
+  @override
+  late final GeneratedColumn<String> deviceId = GeneratedColumn<String>(
+    'device_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+    'title',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _distanceMMeta = const VerificationMeta(
+    'distanceM',
+  );
+  @override
+  late final GeneratedColumn<double> distanceM = GeneratedColumn<double>(
+    'distance_m',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _durationSMeta = const VerificationMeta(
+    'durationS',
+  );
+  @override
+  late final GeneratedColumn<int> durationS = GeneratedColumn<int>(
+    'duration_s',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _payloadMeta = const VerificationMeta(
+    'payload',
+  );
+  @override
+  late final GeneratedColumn<String> payload = GeneratedColumn<String>(
+    'payload',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    title,
+    kind,
+    distanceM,
+    durationS,
+    payload,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'walk_routes';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<WalkRouteRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('device_id')) {
+      context.handle(
+        _deviceIdMeta,
+        deviceId.isAcceptableOrUnknown(data['device_id']!, _deviceIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deviceIdMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+        _titleMeta,
+        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+      );
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('distance_m')) {
+      context.handle(
+        _distanceMMeta,
+        distanceM.isAcceptableOrUnknown(data['distance_m']!, _distanceMMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_distanceMMeta);
+    }
+    if (data.containsKey('duration_s')) {
+      context.handle(
+        _durationSMeta,
+        durationS.isAcceptableOrUnknown(data['duration_s']!, _durationSMeta),
+      );
+    }
+    if (data.containsKey('payload')) {
+      context.handle(
+        _payloadMeta,
+        payload.isAcceptableOrUnknown(data['payload']!, _payloadMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_payloadMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  WalkRouteRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return WalkRouteRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      deviceId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}device_id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      title: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title'],
+      ),
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      distanceM: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}distance_m'],
+      )!,
+      durationS: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}duration_s'],
+      ),
+      payload: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}payload'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $WalkRoutesTable createAlias(String alias) {
+    return $WalkRoutesTable(attachedDatabase, alias);
+  }
+}
+
+class WalkRouteRow extends DataClass implements Insertable<WalkRouteRow> {
+  final String id;
+  final DateTime updatedAt;
+  final DateTime? deletedAt;
+  final String deviceId;
+  final int version;
+  final String? title;
+  final String kind;
+  final double distanceM;
+  final int? durationS;
+  final String payload;
+  final DateTime createdAt;
+  const WalkRouteRow({
+    required this.id,
+    required this.updatedAt,
+    this.deletedAt,
+    required this.deviceId,
+    required this.version,
+    this.title,
+    required this.kind,
+    required this.distanceM,
+    this.durationS,
+    required this.payload,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
+    map['device_id'] = Variable<String>(deviceId);
+    map['version'] = Variable<int>(version);
+    if (!nullToAbsent || title != null) {
+      map['title'] = Variable<String>(title);
+    }
+    map['kind'] = Variable<String>(kind);
+    map['distance_m'] = Variable<double>(distanceM);
+    if (!nullToAbsent || durationS != null) {
+      map['duration_s'] = Variable<int>(durationS);
+    }
+    map['payload'] = Variable<String>(payload);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  WalkRoutesCompanion toCompanion(bool nullToAbsent) {
+    return WalkRoutesCompanion(
+      id: Value(id),
+      updatedAt: Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      deviceId: Value(deviceId),
+      version: Value(version),
+      title: title == null && nullToAbsent
+          ? const Value.absent()
+          : Value(title),
+      kind: Value(kind),
+      distanceM: Value(distanceM),
+      durationS: durationS == null && nullToAbsent
+          ? const Value.absent()
+          : Value(durationS),
+      payload: Value(payload),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory WalkRouteRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return WalkRouteRow(
+      id: serializer.fromJson<String>(json['id']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
+      deviceId: serializer.fromJson<String>(json['deviceId']),
+      version: serializer.fromJson<int>(json['version']),
+      title: serializer.fromJson<String?>(json['title']),
+      kind: serializer.fromJson<String>(json['kind']),
+      distanceM: serializer.fromJson<double>(json['distanceM']),
+      durationS: serializer.fromJson<int?>(json['durationS']),
+      payload: serializer.fromJson<String>(json['payload']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
+      'deviceId': serializer.toJson<String>(deviceId),
+      'version': serializer.toJson<int>(version),
+      'title': serializer.toJson<String?>(title),
+      'kind': serializer.toJson<String>(kind),
+      'distanceM': serializer.toJson<double>(distanceM),
+      'durationS': serializer.toJson<int?>(durationS),
+      'payload': serializer.toJson<String>(payload),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  WalkRouteRow copyWith({
+    String? id,
+    DateTime? updatedAt,
+    Value<DateTime?> deletedAt = const Value.absent(),
+    String? deviceId,
+    int? version,
+    Value<String?> title = const Value.absent(),
+    String? kind,
+    double? distanceM,
+    Value<int?> durationS = const Value.absent(),
+    String? payload,
+    DateTime? createdAt,
+  }) => WalkRouteRow(
+    id: id ?? this.id,
+    updatedAt: updatedAt ?? this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    deviceId: deviceId ?? this.deviceId,
+    version: version ?? this.version,
+    title: title.present ? title.value : this.title,
+    kind: kind ?? this.kind,
+    distanceM: distanceM ?? this.distanceM,
+    durationS: durationS.present ? durationS.value : this.durationS,
+    payload: payload ?? this.payload,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  WalkRouteRow copyWithCompanion(WalkRoutesCompanion data) {
+    return WalkRouteRow(
+      id: data.id.present ? data.id.value : this.id,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      deviceId: data.deviceId.present ? data.deviceId.value : this.deviceId,
+      version: data.version.present ? data.version.value : this.version,
+      title: data.title.present ? data.title.value : this.title,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      distanceM: data.distanceM.present ? data.distanceM.value : this.distanceM,
+      durationS: data.durationS.present ? data.durationS.value : this.durationS,
+      payload: data.payload.present ? data.payload.value : this.payload,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WalkRouteRow(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('title: $title, ')
+          ..write('kind: $kind, ')
+          ..write('distanceM: $distanceM, ')
+          ..write('durationS: $durationS, ')
+          ..write('payload: $payload, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    title,
+    kind,
+    distanceM,
+    durationS,
+    payload,
+    createdAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is WalkRouteRow &&
+          other.id == this.id &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt &&
+          other.deviceId == this.deviceId &&
+          other.version == this.version &&
+          other.title == this.title &&
+          other.kind == this.kind &&
+          other.distanceM == this.distanceM &&
+          other.durationS == this.durationS &&
+          other.payload == this.payload &&
+          other.createdAt == this.createdAt);
+}
+
+class WalkRoutesCompanion extends UpdateCompanion<WalkRouteRow> {
+  final Value<String> id;
+  final Value<DateTime> updatedAt;
+  final Value<DateTime?> deletedAt;
+  final Value<String> deviceId;
+  final Value<int> version;
+  final Value<String?> title;
+  final Value<String> kind;
+  final Value<double> distanceM;
+  final Value<int?> durationS;
+  final Value<String> payload;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const WalkRoutesCompanion({
+    this.id = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.deviceId = const Value.absent(),
+    this.version = const Value.absent(),
+    this.title = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.distanceM = const Value.absent(),
+    this.durationS = const Value.absent(),
+    this.payload = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  WalkRoutesCompanion.insert({
+    required String id,
+    required DateTime updatedAt,
+    this.deletedAt = const Value.absent(),
+    required String deviceId,
+    this.version = const Value.absent(),
+    this.title = const Value.absent(),
+    required String kind,
+    required double distanceM,
+    this.durationS = const Value.absent(),
+    required String payload,
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       updatedAt = Value(updatedAt),
+       deviceId = Value(deviceId),
+       kind = Value(kind),
+       distanceM = Value(distanceM),
+       payload = Value(payload),
+       createdAt = Value(createdAt);
+  static Insertable<WalkRouteRow> custom({
+    Expression<String>? id,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
+    Expression<String>? deviceId,
+    Expression<int>? version,
+    Expression<String>? title,
+    Expression<String>? kind,
+    Expression<double>? distanceM,
+    Expression<int>? durationS,
+    Expression<String>? payload,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (deviceId != null) 'device_id': deviceId,
+      if (version != null) 'version': version,
+      if (title != null) 'title': title,
+      if (kind != null) 'kind': kind,
+      if (distanceM != null) 'distance_m': distanceM,
+      if (durationS != null) 'duration_s': durationS,
+      if (payload != null) 'payload': payload,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  WalkRoutesCompanion copyWith({
+    Value<String>? id,
+    Value<DateTime>? updatedAt,
+    Value<DateTime?>? deletedAt,
+    Value<String>? deviceId,
+    Value<int>? version,
+    Value<String?>? title,
+    Value<String>? kind,
+    Value<double>? distanceM,
+    Value<int?>? durationS,
+    Value<String>? payload,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return WalkRoutesCompanion(
+      id: id ?? this.id,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
+      deviceId: deviceId ?? this.deviceId,
+      version: version ?? this.version,
+      title: title ?? this.title,
+      kind: kind ?? this.kind,
+      distanceM: distanceM ?? this.distanceM,
+      durationS: durationS ?? this.durationS,
+      payload: payload ?? this.payload,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
+    if (deviceId.present) {
+      map['device_id'] = Variable<String>(deviceId.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (distanceM.present) {
+      map['distance_m'] = Variable<double>(distanceM.value);
+    }
+    if (durationS.present) {
+      map['duration_s'] = Variable<int>(durationS.value);
+    }
+    if (payload.present) {
+      map['payload'] = Variable<String>(payload.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WalkRoutesCompanion(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('title: $title, ')
+          ..write('kind: $kind, ')
+          ..write('distanceM: $distanceM, ')
+          ..write('durationS: $durationS, ')
+          ..write('payload: $payload, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $WalksTable extends Walks with TableInfo<$WalksTable, WalkRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $WalksTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deviceIdMeta = const VerificationMeta(
+    'deviceId',
+  );
+  @override
+  late final GeneratedColumn<String> deviceId = GeneratedColumn<String>(
+    'device_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(1),
+  );
+  static const VerificationMeta _routeIdMeta = const VerificationMeta(
+    'routeId',
+  );
+  @override
+  late final GeneratedColumn<String> routeId = GeneratedColumn<String>(
+    'route_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _startedAtMeta = const VerificationMeta(
+    'startedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> startedAt = GeneratedColumn<DateTime>(
+    'started_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _finishedAtMeta = const VerificationMeta(
+    'finishedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> finishedAt = GeneratedColumn<DateTime>(
+    'finished_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _distanceMMeta = const VerificationMeta(
+    'distanceM',
+  );
+  @override
+  late final GeneratedColumn<double> distanceM = GeneratedColumn<double>(
+    'distance_m',
+    aliasedName,
+    false,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _activeSecondsMeta = const VerificationMeta(
+    'activeSeconds',
+  );
+  @override
+  late final GeneratedColumn<int> activeSeconds = GeneratedColumn<int>(
+    'active_seconds',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _kcalMeta = const VerificationMeta('kcal');
+  @override
+  late final GeneratedColumn<double> kcal = GeneratedColumn<double>(
+    'kcal',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _trackMeta = const VerificationMeta('track');
+  @override
+  late final GeneratedColumn<String> track = GeneratedColumn<String>(
+    'track',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('[]'),
+  );
+  static const VerificationMeta _payloadMeta = const VerificationMeta(
+    'payload',
+  );
+  @override
+  late final GeneratedColumn<String> payload = GeneratedColumn<String>(
+    'payload',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('{}'),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    routeId,
+    startedAt,
+    finishedAt,
+    distanceM,
+    activeSeconds,
+    kcal,
+    track,
+    payload,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'walks';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<WalkRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('device_id')) {
+      context.handle(
+        _deviceIdMeta,
+        deviceId.isAcceptableOrUnknown(data['device_id']!, _deviceIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deviceIdMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    }
+    if (data.containsKey('route_id')) {
+      context.handle(
+        _routeIdMeta,
+        routeId.isAcceptableOrUnknown(data['route_id']!, _routeIdMeta),
+      );
+    }
+    if (data.containsKey('started_at')) {
+      context.handle(
+        _startedAtMeta,
+        startedAt.isAcceptableOrUnknown(data['started_at']!, _startedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startedAtMeta);
+    }
+    if (data.containsKey('finished_at')) {
+      context.handle(
+        _finishedAtMeta,
+        finishedAt.isAcceptableOrUnknown(data['finished_at']!, _finishedAtMeta),
+      );
+    }
+    if (data.containsKey('distance_m')) {
+      context.handle(
+        _distanceMMeta,
+        distanceM.isAcceptableOrUnknown(data['distance_m']!, _distanceMMeta),
+      );
+    }
+    if (data.containsKey('active_seconds')) {
+      context.handle(
+        _activeSecondsMeta,
+        activeSeconds.isAcceptableOrUnknown(
+          data['active_seconds']!,
+          _activeSecondsMeta,
+        ),
+      );
+    }
+    if (data.containsKey('kcal')) {
+      context.handle(
+        _kcalMeta,
+        kcal.isAcceptableOrUnknown(data['kcal']!, _kcalMeta),
+      );
+    }
+    if (data.containsKey('track')) {
+      context.handle(
+        _trackMeta,
+        track.isAcceptableOrUnknown(data['track']!, _trackMeta),
+      );
+    }
+    if (data.containsKey('payload')) {
+      context.handle(
+        _payloadMeta,
+        payload.isAcceptableOrUnknown(data['payload']!, _payloadMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  WalkRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return WalkRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      deviceId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}device_id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      routeId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}route_id'],
+      ),
+      startedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}started_at'],
+      )!,
+      finishedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}finished_at'],
+      ),
+      distanceM: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}distance_m'],
+      )!,
+      activeSeconds: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}active_seconds'],
+      )!,
+      kcal: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}kcal'],
+      ),
+      track: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}track'],
+      )!,
+      payload: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}payload'],
+      )!,
+    );
+  }
+
+  @override
+  $WalksTable createAlias(String alias) {
+    return $WalksTable(attachedDatabase, alias);
+  }
+}
+
+class WalkRow extends DataClass implements Insertable<WalkRow> {
+  final String id;
+  final DateTime updatedAt;
+  final DateTime? deletedAt;
+  final String deviceId;
+  final int version;
+  final String? routeId;
+  final DateTime startedAt;
+  final DateTime? finishedAt;
+  final double distanceM;
+  final int activeSeconds;
+  final double? kcal;
+  final String track;
+  final String payload;
+  const WalkRow({
+    required this.id,
+    required this.updatedAt,
+    this.deletedAt,
+    required this.deviceId,
+    required this.version,
+    this.routeId,
+    required this.startedAt,
+    this.finishedAt,
+    required this.distanceM,
+    required this.activeSeconds,
+    this.kcal,
+    required this.track,
+    required this.payload,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
+    map['device_id'] = Variable<String>(deviceId);
+    map['version'] = Variable<int>(version);
+    if (!nullToAbsent || routeId != null) {
+      map['route_id'] = Variable<String>(routeId);
+    }
+    map['started_at'] = Variable<DateTime>(startedAt);
+    if (!nullToAbsent || finishedAt != null) {
+      map['finished_at'] = Variable<DateTime>(finishedAt);
+    }
+    map['distance_m'] = Variable<double>(distanceM);
+    map['active_seconds'] = Variable<int>(activeSeconds);
+    if (!nullToAbsent || kcal != null) {
+      map['kcal'] = Variable<double>(kcal);
+    }
+    map['track'] = Variable<String>(track);
+    map['payload'] = Variable<String>(payload);
+    return map;
+  }
+
+  WalksCompanion toCompanion(bool nullToAbsent) {
+    return WalksCompanion(
+      id: Value(id),
+      updatedAt: Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      deviceId: Value(deviceId),
+      version: Value(version),
+      routeId: routeId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(routeId),
+      startedAt: Value(startedAt),
+      finishedAt: finishedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(finishedAt),
+      distanceM: Value(distanceM),
+      activeSeconds: Value(activeSeconds),
+      kcal: kcal == null && nullToAbsent ? const Value.absent() : Value(kcal),
+      track: Value(track),
+      payload: Value(payload),
+    );
+  }
+
+  factory WalkRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return WalkRow(
+      id: serializer.fromJson<String>(json['id']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
+      deviceId: serializer.fromJson<String>(json['deviceId']),
+      version: serializer.fromJson<int>(json['version']),
+      routeId: serializer.fromJson<String?>(json['routeId']),
+      startedAt: serializer.fromJson<DateTime>(json['startedAt']),
+      finishedAt: serializer.fromJson<DateTime?>(json['finishedAt']),
+      distanceM: serializer.fromJson<double>(json['distanceM']),
+      activeSeconds: serializer.fromJson<int>(json['activeSeconds']),
+      kcal: serializer.fromJson<double?>(json['kcal']),
+      track: serializer.fromJson<String>(json['track']),
+      payload: serializer.fromJson<String>(json['payload']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
+      'deviceId': serializer.toJson<String>(deviceId),
+      'version': serializer.toJson<int>(version),
+      'routeId': serializer.toJson<String?>(routeId),
+      'startedAt': serializer.toJson<DateTime>(startedAt),
+      'finishedAt': serializer.toJson<DateTime?>(finishedAt),
+      'distanceM': serializer.toJson<double>(distanceM),
+      'activeSeconds': serializer.toJson<int>(activeSeconds),
+      'kcal': serializer.toJson<double?>(kcal),
+      'track': serializer.toJson<String>(track),
+      'payload': serializer.toJson<String>(payload),
+    };
+  }
+
+  WalkRow copyWith({
+    String? id,
+    DateTime? updatedAt,
+    Value<DateTime?> deletedAt = const Value.absent(),
+    String? deviceId,
+    int? version,
+    Value<String?> routeId = const Value.absent(),
+    DateTime? startedAt,
+    Value<DateTime?> finishedAt = const Value.absent(),
+    double? distanceM,
+    int? activeSeconds,
+    Value<double?> kcal = const Value.absent(),
+    String? track,
+    String? payload,
+  }) => WalkRow(
+    id: id ?? this.id,
+    updatedAt: updatedAt ?? this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    deviceId: deviceId ?? this.deviceId,
+    version: version ?? this.version,
+    routeId: routeId.present ? routeId.value : this.routeId,
+    startedAt: startedAt ?? this.startedAt,
+    finishedAt: finishedAt.present ? finishedAt.value : this.finishedAt,
+    distanceM: distanceM ?? this.distanceM,
+    activeSeconds: activeSeconds ?? this.activeSeconds,
+    kcal: kcal.present ? kcal.value : this.kcal,
+    track: track ?? this.track,
+    payload: payload ?? this.payload,
+  );
+  WalkRow copyWithCompanion(WalksCompanion data) {
+    return WalkRow(
+      id: data.id.present ? data.id.value : this.id,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      deviceId: data.deviceId.present ? data.deviceId.value : this.deviceId,
+      version: data.version.present ? data.version.value : this.version,
+      routeId: data.routeId.present ? data.routeId.value : this.routeId,
+      startedAt: data.startedAt.present ? data.startedAt.value : this.startedAt,
+      finishedAt: data.finishedAt.present
+          ? data.finishedAt.value
+          : this.finishedAt,
+      distanceM: data.distanceM.present ? data.distanceM.value : this.distanceM,
+      activeSeconds: data.activeSeconds.present
+          ? data.activeSeconds.value
+          : this.activeSeconds,
+      kcal: data.kcal.present ? data.kcal.value : this.kcal,
+      track: data.track.present ? data.track.value : this.track,
+      payload: data.payload.present ? data.payload.value : this.payload,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WalkRow(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('routeId: $routeId, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('finishedAt: $finishedAt, ')
+          ..write('distanceM: $distanceM, ')
+          ..write('activeSeconds: $activeSeconds, ')
+          ..write('kcal: $kcal, ')
+          ..write('track: $track, ')
+          ..write('payload: $payload')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    updatedAt,
+    deletedAt,
+    deviceId,
+    version,
+    routeId,
+    startedAt,
+    finishedAt,
+    distanceM,
+    activeSeconds,
+    kcal,
+    track,
+    payload,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is WalkRow &&
+          other.id == this.id &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt &&
+          other.deviceId == this.deviceId &&
+          other.version == this.version &&
+          other.routeId == this.routeId &&
+          other.startedAt == this.startedAt &&
+          other.finishedAt == this.finishedAt &&
+          other.distanceM == this.distanceM &&
+          other.activeSeconds == this.activeSeconds &&
+          other.kcal == this.kcal &&
+          other.track == this.track &&
+          other.payload == this.payload);
+}
+
+class WalksCompanion extends UpdateCompanion<WalkRow> {
+  final Value<String> id;
+  final Value<DateTime> updatedAt;
+  final Value<DateTime?> deletedAt;
+  final Value<String> deviceId;
+  final Value<int> version;
+  final Value<String?> routeId;
+  final Value<DateTime> startedAt;
+  final Value<DateTime?> finishedAt;
+  final Value<double> distanceM;
+  final Value<int> activeSeconds;
+  final Value<double?> kcal;
+  final Value<String> track;
+  final Value<String> payload;
+  final Value<int> rowid;
+  const WalksCompanion({
+    this.id = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.deviceId = const Value.absent(),
+    this.version = const Value.absent(),
+    this.routeId = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.finishedAt = const Value.absent(),
+    this.distanceM = const Value.absent(),
+    this.activeSeconds = const Value.absent(),
+    this.kcal = const Value.absent(),
+    this.track = const Value.absent(),
+    this.payload = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  WalksCompanion.insert({
+    required String id,
+    required DateTime updatedAt,
+    this.deletedAt = const Value.absent(),
+    required String deviceId,
+    this.version = const Value.absent(),
+    this.routeId = const Value.absent(),
+    required DateTime startedAt,
+    this.finishedAt = const Value.absent(),
+    this.distanceM = const Value.absent(),
+    this.activeSeconds = const Value.absent(),
+    this.kcal = const Value.absent(),
+    this.track = const Value.absent(),
+    this.payload = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       updatedAt = Value(updatedAt),
+       deviceId = Value(deviceId),
+       startedAt = Value(startedAt);
+  static Insertable<WalkRow> custom({
+    Expression<String>? id,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
+    Expression<String>? deviceId,
+    Expression<int>? version,
+    Expression<String>? routeId,
+    Expression<DateTime>? startedAt,
+    Expression<DateTime>? finishedAt,
+    Expression<double>? distanceM,
+    Expression<int>? activeSeconds,
+    Expression<double>? kcal,
+    Expression<String>? track,
+    Expression<String>? payload,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (deviceId != null) 'device_id': deviceId,
+      if (version != null) 'version': version,
+      if (routeId != null) 'route_id': routeId,
+      if (startedAt != null) 'started_at': startedAt,
+      if (finishedAt != null) 'finished_at': finishedAt,
+      if (distanceM != null) 'distance_m': distanceM,
+      if (activeSeconds != null) 'active_seconds': activeSeconds,
+      if (kcal != null) 'kcal': kcal,
+      if (track != null) 'track': track,
+      if (payload != null) 'payload': payload,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  WalksCompanion copyWith({
+    Value<String>? id,
+    Value<DateTime>? updatedAt,
+    Value<DateTime?>? deletedAt,
+    Value<String>? deviceId,
+    Value<int>? version,
+    Value<String?>? routeId,
+    Value<DateTime>? startedAt,
+    Value<DateTime?>? finishedAt,
+    Value<double>? distanceM,
+    Value<int>? activeSeconds,
+    Value<double?>? kcal,
+    Value<String>? track,
+    Value<String>? payload,
+    Value<int>? rowid,
+  }) {
+    return WalksCompanion(
+      id: id ?? this.id,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
+      deviceId: deviceId ?? this.deviceId,
+      version: version ?? this.version,
+      routeId: routeId ?? this.routeId,
+      startedAt: startedAt ?? this.startedAt,
+      finishedAt: finishedAt ?? this.finishedAt,
+      distanceM: distanceM ?? this.distanceM,
+      activeSeconds: activeSeconds ?? this.activeSeconds,
+      kcal: kcal ?? this.kcal,
+      track: track ?? this.track,
+      payload: payload ?? this.payload,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
+    if (deviceId.present) {
+      map['device_id'] = Variable<String>(deviceId.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (routeId.present) {
+      map['route_id'] = Variable<String>(routeId.value);
+    }
+    if (startedAt.present) {
+      map['started_at'] = Variable<DateTime>(startedAt.value);
+    }
+    if (finishedAt.present) {
+      map['finished_at'] = Variable<DateTime>(finishedAt.value);
+    }
+    if (distanceM.present) {
+      map['distance_m'] = Variable<double>(distanceM.value);
+    }
+    if (activeSeconds.present) {
+      map['active_seconds'] = Variable<int>(activeSeconds.value);
+    }
+    if (kcal.present) {
+      map['kcal'] = Variable<double>(kcal.value);
+    }
+    if (track.present) {
+      map['track'] = Variable<String>(track.value);
+    }
+    if (payload.present) {
+      map['payload'] = Variable<String>(payload.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('WalksCompanion(')
+          ..write('id: $id, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('deviceId: $deviceId, ')
+          ..write('version: $version, ')
+          ..write('routeId: $routeId, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('finishedAt: $finishedAt, ')
+          ..write('distanceM: $distanceM, ')
+          ..write('activeSeconds: $activeSeconds, ')
+          ..write('kcal: $kcal, ')
+          ..write('track: $track, ')
+          ..write('payload: $payload, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
@@ -17923,6 +19322,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $WorkoutSessionsTable workoutSessions = $WorkoutSessionsTable(
     this,
   );
+  late final $WalkRoutesTable walkRoutes = $WalkRoutesTable(this);
+  late final $WalksTable walks = $WalksTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -17954,6 +19355,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     careChecks,
     workoutPrograms,
     workoutSessions,
+    walkRoutes,
+    walks,
   ];
 }
 
@@ -26762,6 +28165,683 @@ typedef $$WorkoutSessionsTableProcessedTableManager =
       WorkoutSessionRow,
       PrefetchHooks Function()
     >;
+typedef $$WalkRoutesTableCreateCompanionBuilder = WalkRoutesCompanion Function({
+  required String id,
+  required DateTime updatedAt,
+  Value<DateTime?> deletedAt,
+  required String deviceId,
+  Value<int> version,
+  Value<String?> title,
+  required String kind,
+  required double distanceM,
+  Value<int?> durationS,
+  required String payload,
+  required DateTime createdAt,
+  Value<int> rowid,
+});
+typedef $$WalkRoutesTableUpdateCompanionBuilder = WalkRoutesCompanion Function({
+  Value<String> id,
+  Value<DateTime> updatedAt,
+  Value<DateTime?> deletedAt,
+  Value<String> deviceId,
+  Value<int> version,
+  Value<String?> title,
+  Value<String> kind,
+  Value<double> distanceM,
+  Value<int?> durationS,
+  Value<String> payload,
+  Value<DateTime> createdAt,
+  Value<int> rowid,
+});
+
+class $$WalkRoutesTableFilterComposer
+    extends Composer<_$AppDatabase, $WalkRoutesTable> {
+  $$WalkRoutesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get distanceM => $composableBuilder(
+    column: $table.distanceM,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get durationS => $composableBuilder(
+    column: $table.durationS,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get payload => $composableBuilder(
+    column: $table.payload,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$WalkRoutesTableOrderingComposer
+    extends Composer<_$AppDatabase, $WalkRoutesTable> {
+  $$WalkRoutesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get distanceM => $composableBuilder(
+    column: $table.distanceM,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get durationS => $composableBuilder(
+    column: $table.durationS,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get payload => $composableBuilder(
+    column: $table.payload,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$WalkRoutesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $WalkRoutesTable> {
+  $$WalkRoutesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deviceId =>
+      $composableBuilder(column: $table.deviceId, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<double> get distanceM =>
+      $composableBuilder(column: $table.distanceM, builder: (column) => column);
+
+  GeneratedColumn<int> get durationS =>
+      $composableBuilder(column: $table.durationS, builder: (column) => column);
+
+  GeneratedColumn<String> get payload =>
+      $composableBuilder(column: $table.payload, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$WalkRoutesTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $WalkRoutesTable,
+          WalkRouteRow,
+          $$WalkRoutesTableFilterComposer,
+          $$WalkRoutesTableOrderingComposer,
+          $$WalkRoutesTableAnnotationComposer,
+          $$WalkRoutesTableCreateCompanionBuilder,
+          $$WalkRoutesTableUpdateCompanionBuilder,
+          (
+            WalkRouteRow,
+            BaseReferences<_$AppDatabase, $WalkRoutesTable, WalkRouteRow>,
+          ),
+          WalkRouteRow,
+          PrefetchHooks Function()
+        > {
+  $$WalkRoutesTableTableManager(_$AppDatabase db, $WalkRoutesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$WalkRoutesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$WalkRoutesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$WalkRoutesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
+                Value<String> deviceId = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String?> title = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<double> distanceM = const Value.absent(),
+                Value<int?> durationS = const Value.absent(),
+                Value<String> payload = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WalkRoutesCompanion(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                title: title,
+                kind: kind,
+                distanceM: distanceM,
+                durationS: durationS,
+                payload: payload,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required DateTime updatedAt,
+                Value<DateTime?> deletedAt = const Value.absent(),
+                required String deviceId,
+                Value<int> version = const Value.absent(),
+                Value<String?> title = const Value.absent(),
+                required String kind,
+                required double distanceM,
+                Value<int?> durationS = const Value.absent(),
+                required String payload,
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => WalkRoutesCompanion.insert(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                title: title,
+                kind: kind,
+                distanceM: distanceM,
+                durationS: durationS,
+                payload: payload,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$WalkRoutesTable, WalkRouteRow>(table),
+                  BaseReferences<_$AppDatabase, $WalkRoutesTable, WalkRouteRow>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$WalkRoutesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $WalkRoutesTable,
+      WalkRouteRow,
+      $$WalkRoutesTableFilterComposer,
+      $$WalkRoutesTableOrderingComposer,
+      $$WalkRoutesTableAnnotationComposer,
+      $$WalkRoutesTableCreateCompanionBuilder,
+      $$WalkRoutesTableUpdateCompanionBuilder,
+      (
+        WalkRouteRow,
+        BaseReferences<_$AppDatabase, $WalkRoutesTable, WalkRouteRow>,
+      ),
+      WalkRouteRow,
+      PrefetchHooks Function()
+    >;
+typedef $$WalksTableCreateCompanionBuilder = WalksCompanion Function({
+  required String id,
+  required DateTime updatedAt,
+  Value<DateTime?> deletedAt,
+  required String deviceId,
+  Value<int> version,
+  Value<String?> routeId,
+  required DateTime startedAt,
+  Value<DateTime?> finishedAt,
+  Value<double> distanceM,
+  Value<int> activeSeconds,
+  Value<double?> kcal,
+  Value<String> track,
+  Value<String> payload,
+  Value<int> rowid,
+});
+typedef $$WalksTableUpdateCompanionBuilder = WalksCompanion Function({
+  Value<String> id,
+  Value<DateTime> updatedAt,
+  Value<DateTime?> deletedAt,
+  Value<String> deviceId,
+  Value<int> version,
+  Value<String?> routeId,
+  Value<DateTime> startedAt,
+  Value<DateTime?> finishedAt,
+  Value<double> distanceM,
+  Value<int> activeSeconds,
+  Value<double?> kcal,
+  Value<String> track,
+  Value<String> payload,
+  Value<int> rowid,
+});
+
+class $$WalksTableFilterComposer extends Composer<_$AppDatabase, $WalksTable> {
+  $$WalksTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get routeId => $composableBuilder(
+    column: $table.routeId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get finishedAt => $composableBuilder(
+    column: $table.finishedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get distanceM => $composableBuilder(
+    column: $table.distanceM,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get activeSeconds => $composableBuilder(
+    column: $table.activeSeconds,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get kcal => $composableBuilder(
+    column: $table.kcal,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get track => $composableBuilder(
+    column: $table.track,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get payload => $composableBuilder(
+    column: $table.payload,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$WalksTableOrderingComposer
+    extends Composer<_$AppDatabase, $WalksTable> {
+  $$WalksTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deviceId => $composableBuilder(
+    column: $table.deviceId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get routeId => $composableBuilder(
+    column: $table.routeId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get finishedAt => $composableBuilder(
+    column: $table.finishedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get distanceM => $composableBuilder(
+    column: $table.distanceM,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get activeSeconds => $composableBuilder(
+    column: $table.activeSeconds,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get kcal => $composableBuilder(
+    column: $table.kcal,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get track => $composableBuilder(
+    column: $table.track,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get payload => $composableBuilder(
+    column: $table.payload,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$WalksTableAnnotationComposer
+    extends Composer<_$AppDatabase, $WalksTable> {
+  $$WalksTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deviceId =>
+      $composableBuilder(column: $table.deviceId, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get routeId =>
+      $composableBuilder(column: $table.routeId, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get startedAt =>
+      $composableBuilder(column: $table.startedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get finishedAt => $composableBuilder(
+    column: $table.finishedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<double> get distanceM =>
+      $composableBuilder(column: $table.distanceM, builder: (column) => column);
+
+  GeneratedColumn<int> get activeSeconds => $composableBuilder(
+    column: $table.activeSeconds,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<double> get kcal =>
+      $composableBuilder(column: $table.kcal, builder: (column) => column);
+
+  GeneratedColumn<String> get track =>
+      $composableBuilder(column: $table.track, builder: (column) => column);
+
+  GeneratedColumn<String> get payload =>
+      $composableBuilder(column: $table.payload, builder: (column) => column);
+}
+
+class $$WalksTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $WalksTable,
+          WalkRow,
+          $$WalksTableFilterComposer,
+          $$WalksTableOrderingComposer,
+          $$WalksTableAnnotationComposer,
+          $$WalksTableCreateCompanionBuilder,
+          $$WalksTableUpdateCompanionBuilder,
+          (WalkRow, BaseReferences<_$AppDatabase, $WalksTable, WalkRow>),
+          WalkRow,
+          PrefetchHooks Function()
+        > {
+  $$WalksTableTableManager(_$AppDatabase db, $WalksTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$WalksTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$WalksTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$WalksTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
+                Value<String> deviceId = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String?> routeId = const Value.absent(),
+                Value<DateTime> startedAt = const Value.absent(),
+                Value<DateTime?> finishedAt = const Value.absent(),
+                Value<double> distanceM = const Value.absent(),
+                Value<int> activeSeconds = const Value.absent(),
+                Value<double?> kcal = const Value.absent(),
+                Value<String> track = const Value.absent(),
+                Value<String> payload = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WalksCompanion(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                routeId: routeId,
+                startedAt: startedAt,
+                finishedAt: finishedAt,
+                distanceM: distanceM,
+                activeSeconds: activeSeconds,
+                kcal: kcal,
+                track: track,
+                payload: payload,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required DateTime updatedAt,
+                Value<DateTime?> deletedAt = const Value.absent(),
+                required String deviceId,
+                Value<int> version = const Value.absent(),
+                Value<String?> routeId = const Value.absent(),
+                required DateTime startedAt,
+                Value<DateTime?> finishedAt = const Value.absent(),
+                Value<double> distanceM = const Value.absent(),
+                Value<int> activeSeconds = const Value.absent(),
+                Value<double?> kcal = const Value.absent(),
+                Value<String> track = const Value.absent(),
+                Value<String> payload = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => WalksCompanion.insert(
+                id: id,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
+                deviceId: deviceId,
+                version: version,
+                routeId: routeId,
+                startedAt: startedAt,
+                finishedAt: finishedAt,
+                distanceM: distanceM,
+                activeSeconds: activeSeconds,
+                kcal: kcal,
+                track: track,
+                payload: payload,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$WalksTable, WalkRow>(table),
+                  BaseReferences<_$AppDatabase, $WalksTable, WalkRow>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$WalksTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $WalksTable,
+      WalkRow,
+      $$WalksTableFilterComposer,
+      $$WalksTableOrderingComposer,
+      $$WalksTableAnnotationComposer,
+      $$WalksTableCreateCompanionBuilder,
+      $$WalksTableUpdateCompanionBuilder,
+      (WalkRow, BaseReferences<_$AppDatabase, $WalksTable, WalkRow>),
+      WalkRow,
+      PrefetchHooks Function()
+    >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
@@ -26818,4 +28898,8 @@ class $AppDatabaseManager {
       $$WorkoutProgramsTableTableManager(_db, _db.workoutPrograms);
   $$WorkoutSessionsTableTableManager get workoutSessions =>
       $$WorkoutSessionsTableTableManager(_db, _db.workoutSessions);
+  $$WalkRoutesTableTableManager get walkRoutes =>
+      $$WalkRoutesTableTableManager(_db, _db.walkRoutes);
+  $$WalksTableTableManager get walks =>
+      $$WalksTableTableManager(_db, _db.walks);
 }

@@ -4194,6 +4194,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get setWorkoutsHint => 'Программа под уровень, таймеры, голос';
 
   @override
+  String get setWalks => 'Прогулки';
+
+  @override
+  String get setWalksHint => 'Круговой маршрут, отрезки, голос поверх музыки';
+
+  @override
   String get shpNoticeLabel => 'Уведомление';
 
   @override

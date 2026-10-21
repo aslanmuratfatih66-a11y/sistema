@@ -8,6 +8,9 @@ import workmanager_apple
   /// Канал платформенных данных (SPEC §3: CapabilityService).
   private var platformChannel: FlutterMethodChannel?
   private var stepCounter: StepCounterChannel?
+  private var maps: MapKitChannel?
+  private var nowPlaying: NowPlayingChannel?
+  private var live: LiveActivityChannel?
 
   /// BGAppRefresh: перепланирование окна уведомлений (SPEC §7). Совпадает с Info.plist и Dart (notifications).
   static let refreshTaskId = "com.sistema.sistema.refresh"
@@ -55,6 +58,11 @@ import workmanager_apple
     platformChannel = channel
     // Шаги (этап 3): CoreMotion.
     stepCounter = StepCounterChannel(messenger: engineBridge.applicationRegistrar.messenger())
+    // Этап 4: маршруты, аудио, Live Activity.
+    let messenger = engineBridge.applicationRegistrar.messenger()
+    maps = MapKitChannel(messenger: messenger)
+    nowPlaying = NowPlayingChannel(messenger: messenger)
+    live = LiveActivityChannel(messenger: messenger)
   }
 
   /// Дата истечения профиля подписи из embedded.mobileprovision.

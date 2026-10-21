@@ -1479,6 +1479,8 @@
   "setBodyHint": "Adımlar, uyku, ölçüler, fotoğraflar, cilt bakımı",
   "setWorkouts": "Antrenmanlar",
   "setWorkoutsHint": "Seviyene göre program, zamanlayıcılar, ses",
+  "setWalks": "Yürüyüşler",
+  "setWalksHint": "Dairesel rota, bölümler, müzik üstünde ses",
   "shpNoticeLabel": "Bildirim",
   "shpWarningLabel": "Uyarı",
   "shpTitle": "Ödül mağazası",

@@ -4179,6 +4179,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get setWorkoutsHint => 'Seviyene göre program, zamanlayıcılar, ses';
 
   @override
+  String get setWalks => 'Yürüyüşler';
+
+  @override
+  String get setWalksHint => 'Dairesel rota, bölümler, müzik üstünde ses';
+
+  @override
   String get shpNoticeLabel => 'Bildirim';
 
   @override

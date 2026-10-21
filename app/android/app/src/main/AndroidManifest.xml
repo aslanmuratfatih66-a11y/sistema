@@ -11,6 +11,10 @@
     <!-- Уведомления (этап 2): перепланирование после перезагрузки, вибрация -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Прогулки (этап 4): трекинг с выключенным экраном через foreground service (geolocator) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <!-- Шаги (этап 3): Health Connect -->
     <uses-permission android:name="android.permission.health.READ_STEPS"/>
     <uses-permission android:name="android.permission.health.READ_DISTANCE"/>
@@ -83,6 +87,8 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+        <!-- Spotify App Remote (этап 4) -->
+        <package android:name="com.spotify.music"/>
         <!-- Health Connect: проверка, установлен ли провайдер -->
         <package android:name="com.google.android.apps.healthdata"/>
         <!-- flutter_tts: поиск системного движка синтеза речи (Android 11+) -->

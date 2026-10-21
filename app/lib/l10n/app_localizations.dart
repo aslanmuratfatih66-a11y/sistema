@@ -7460,6 +7460,18 @@ abstract class AppLocalizations {
   /// **'Программа под уровень, таймеры, голос'**
   String get setWorkoutsHint;
 
+  /// No description provided for @setWalks.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулки'**
+  String get setWalks;
+
+  /// No description provided for @setWalksHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Круговой маршрут, отрезки, голос поверх музыки'**
+  String get setWalksHint;
+
   /// No description provided for @shpNoticeLabel.
   ///
   /// In ru, this message translates to:

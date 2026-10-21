@@ -2,6 +2,7 @@
 // Этап 1: профиль, замеры, фото, цели, расписание, план, разделы анкеты.
 // Этап 2: квесты, экземпляры, журнал событий, эффекты, паузы, награды магазина, пользовательские настройки.
 // Этап 3: продукты, дневник питания, рецепты, вода, список покупок, шаги, сон, уход за кожей, тренировки.
+// Этап 4: прогулки и маршруты.
 // Остальные сущности SPEC §11 — на следующих этапах (миграции через schemaVersion).
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -356,6 +357,32 @@ class WorkoutSessions extends Table with SyncColumns {
   TextColumn get payload => text().withDefault(const Constant('{}'))();
 }
 
+// ---- Этап 4 (SPEC §8.5) ----
+
+/// Маршрут прогулки (сгенерированный круг или к магазину). payload — JSON RoutePlan (точки, отрезки, подсказки).
+@DataClassName('WalkRouteRow')
+class WalkRoutes extends Table with SyncColumns {
+  TextColumn get title => text().nullable()();
+  TextColumn get kind => text()(); // 'loop' / 'toPlace'
+  RealColumn get distanceM => real()();
+  IntColumn get durationS => integer().nullable()(); // оценка
+  TextColumn get payload => text()();
+  DateTimeColumn get createdAt => dateTime()();
+}
+
+/// Проведённая прогулка: трек (JSON точек, прореженный), дистанция, время, отрезки.
+@DataClassName('WalkRow')
+class Walks extends Table with SyncColumns {
+  TextColumn get routeId => text().nullable()();
+  DateTimeColumn get startedAt => dateTime()();
+  DateTimeColumn get finishedAt => dateTime().nullable()(); // null — идёт/прервана
+  RealColumn get distanceM => real().withDefault(const Constant(0))();
+  IntColumn get activeSeconds => integer().withDefault(const Constant(0))();
+  RealColumn get kcal => real().nullable()();
+  TextColumn get track => text().withDefault(const Constant('[]'))(); // [[lat, lon, tMs], …]
+  TextColumn get payload => text().withDefault(const Constant('{}'))(); // отрезки, темп по отрезкам
+}
+
 @DriftDatabase(tables: [
   AppSettings,
   Profiles,
@@ -383,6 +410,8 @@ class WorkoutSessions extends Table with SyncColumns {
   CareChecks,
   WorkoutPrograms,
   WorkoutSessions,
+  WalkRoutes,
+  Walks,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor])
@@ -396,7 +425,7 @@ class AppDatabase extends _$AppDatabase {
             ));
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -432,6 +461,10 @@ class AppDatabase extends _$AppDatabase {
             await m.createTable(careChecks);
             await m.createTable(workoutPrograms);
             await m.createTable(workoutSessions);
+          }
+          if (from < 5) {
+            await m.createTable(walkRoutes);
+            await m.createTable(walks);
           }
         },
       );

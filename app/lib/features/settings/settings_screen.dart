@@ -99,6 +99,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   hint: l.setWorkoutsHint,
                   onTap: () => context.push(Routes.workouts),
                 ),
+                _NavRow(
+                  glyph: SysGlyph.walk,
+                  title: l.setWalks,
+                  hint: l.setWalksHint,
+                  onTap: () => context.push(Routes.walks),
+                ),
               ],
             ),
           ),

@@ -17,6 +17,7 @@ import '../features/reminders/reminder_settings_screen.dart';
 import '../features/schedule/schedule_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/shop/shop_screen.dart';
+import '../features/walks/walks_screen.dart';
 import '../features/workouts/workouts_screen.dart';
 import 'app_shell.dart';
 import 'routes.dart';
@@ -41,6 +42,7 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.discipline, builder: (_, _) => const DisciplineScreen()),
         GoRoute(path: Routes.body, builder: (_, _) => const BodyScreen()),
         GoRoute(path: Routes.workouts, builder: (_, _) => const WorkoutsScreen()),
+        GoRoute(path: Routes.walks, builder: (_, _) => const WalksScreen()),
         GoRoute(
           path: Routes.editStepPattern,
           builder: (_, state) {

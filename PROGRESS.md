@@ -1,11 +1,25 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 3 — Питание, тело, тренировки
-Статус: завершён (CI зелёный; проверка на телефоне — после этапа 4–5)
-Следующий шаг: этап 4 — прочитать STAGES «Этап 4», сделать каркас
+Этап: 4 — Прогулки, карта, голос, музыка, виджеты
+Статус: каркас готов, сабагенты A–D в работе
+Следующий шаг: дождаться отчётов A–D → интеграция (override провайдеров в main, «Нет воды» → магазин, виджеты из «Статуса», вода из App Intent) → CI
 
-## Этап 3 — чек-лист
+## Этап 4 — чек-лист
+- [x] Каркас: БД v5 (WalkRoutes, Walks), WalkMode; geolocator, flutter_map+latlong2, audio_session, home_widget; контракты domain/walks/walk_api.dart, core/audio/audio_api.dart, core/live/live_api.dart; iOS: таргет SistemaWidgets (ruby ios/scripts/setup_extensions.rb, гем xcodeproj, Ruby в C:\Ruby33-x64), ios/Shared/SistemaShared.swift (App Group, SistemaActivityAttributes, AddWaterIntent), каналы MapKit/NowPlaying/LiveActivity (заготовки), entitlements App Group, Info.plist (фон location+audio, Live Activities, схема sistema://, queries spotify); Android: FOREGROUND_SERVICE_LOCATION, queries Spotify; маршрут /walks, заглушка
+- [ ] 1. Маршруты и карта, поиск магазина (A)
+- [ ] 2. Аудио: голос поверх музыки, Apple Music, Spotify (B)
+- [ ] 3. Фоновая геолокация и трекинг (C)
+- [ ] 4. Live Activity, виджеты, App Intent (D)
+- [ ] 5. Интеграция, CI, отчёт
+
+## Сабагенты (этап 4)
+- A Маршруты и карта: в работе — features/walks, ios/Runner/MapKitChannel.swift (wlk_*)
+- B Аудио: в работе — core/audio, ios/Runner/NowPlayingChannel.swift, android (aud_*)
+- C Геолокация и трекинг: в работе — core/location (loc_*)
+- D Live Activity и виджеты: в работе — core/live, ios/SistemaWidgets, ios/Runner/LiveActivityChannel.swift, android widget (liv_*)
+
+## Этап 3 — чек-лист (завершён)
 - [x] Каркас: БД v4 (FoodItems, MealEntries, Recipes, WaterLogs, ShoppingItems, StepLogs, SleepLogs, CareChecks, WorkoutPrograms, WorkoutSessions), enums, core/models/daily.dart, core/activity/activity_api.dart, domain/quests/section_hooks.dart; mobile_scanner/http/fl_chart/image_picker/wakelock_plus; Health Connect (minSdk 26, FlutterFragmentActivity, манифест), канал sistema/steps (StepCounterChannel.swift/.kt — заготовки, в pbxproj); маршруты /body /workouts, заглушки
 - [x] 1. Питание §8.2 (A)
 - [x] 2. Шаги и расход (B)
@@ -32,6 +46,7 @@
 - Этап 2: ◆/опыт/характеристики — только сумма журнала QuestEvents; покупка в магазине — событие purchase (отдельной таблицы Purchase нет); награда/штраф копируются в экземпляр
 - StatKind/PlayerRank переехали в core/models/enums.dart (home_view_data их реэкспортирует)
 - Питание: «приёмы пищи» = число разных типов за день; поиск продуктов фильтруется в Dart (lower() SQLite не знает кириллицу/турецкий); день тренировки — по распорядку принятого плана → норма waterTrainingDayMl; список «от плана» перегенерирует только некупленные пункты source plan; цена — в копейках/курушах, RUB/TRY
+- Xcode-проект правится скриптом ios/scripts/setup_extensions.rb (xcodeproj), не руками; новые Swift-файлы в Runner/расширение — через него
 - Расход энергии учитывает и прерванные тренировки (kcal пишется за сделанное)
 - Хуки разделов → квесты: QuestSectionHooks (вода по порядку квестов, еда по count, тренировка от 80% минут, уход, отбой ±15 мин, шаги — квесты с confirm=steps)
 - Android: добавлен INTERNET (Open Food Facts)
