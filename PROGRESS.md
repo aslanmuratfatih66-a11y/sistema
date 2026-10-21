@@ -17,7 +17,7 @@
 
 ## Сабагенты (этап 2)
 - A Движок квестов: в работе — app/lib/domain/quests (l10n_parts/qe_*)
-- B Уведомления: в работе — app/lib/core/notifications, app/lib/features/reminders (ntf_*)
+- B Уведомления: готово (36 тестов) — core/notifications, features/reminders (ntf_*); код для main.dart в отчёте: LocalReminderScheduler, ReminderCoordinator(onResume: markTablesUpdated), initBackgroundRefresh; разрешение запрашивать отдельно
 - C Экраны квестов и окна: в работе — app/lib/features/quests, app/lib/features/home/data (qst_*)
 - D Магазин и дисциплина: в работе — app/lib/features/shop, app/lib/features/discipline, app/lib/domain/discipline (shp_*)
 
