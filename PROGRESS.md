@@ -2,8 +2,8 @@
 
 ## Сейчас
 Этап: 0 — Репозиторий, каркас, дизайн-система, сборка
-Статус: собирается в CI
-Следующий шаг: `gh run watch` для app и server; при падении — `gh run view --log-failed`
+Статус: ждёт проверки на телефоне
+Следующий шаг: пользователь ставит .ipa через Sideloadly и .apk, проверяет главный экран и баннер сертификата; затем этап 1
 
 ## Этап 0 — чек-лист
 - [x] 1. Репозиторий https://github.com/aslanmuratfatih66-a11y/sistema (публичный)
@@ -11,8 +11,8 @@
 - [x] 3. Дизайн-система (SPEC §4)
 - [x] 4. Главный экран-эталон (10 блоков) + пустые экраны разделов
 - [x] 5. CapabilityService + баннер «сертификат истекает через N дн.»
-- [ ] 6. CI: ipa без подписи, apk, сервер — до зелёного
-- [ ] 7. Отчёт и ссылки на .ipa/.apk
+- [x] 6. CI: ipa без подписи, apk, сервер — до зелёного
+- [x] 7. Отчёт и ссылки на .ipa/.apk
 
 ## Сабагенты (текущий этап)
 - A Дизайн-система: готово — app/lib/ui/theme, app/lib/ui/components
@@ -38,11 +38,15 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
-Последний run: server зелёный; app красный на каркасе (нет test/) — исправлено интеграцией
-Артефакты: —
+Последний run: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631298 (app) и …/39594631309 (server) — зелёные
+Артефакты:
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631298/artifacts/12342993056
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631298/artifacts/12344341398
+- server: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39594631309/artifacts/12344330517
 
 ## Что нужно от пользователя
+- Установить .ipa (Sideloadly) и .apk, проверить главный экран, навигацию, баннер «Сертификат истекает через N дн.»
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 
 ## История
-- 2026-10-21 — этап 0 — начат: установлены инструменты, git init
+- 2026-10-21 — этап 0 — каркас, дизайн-система, главный экран, CapabilityService, сервер-заготовка, CI зелёный
