@@ -1,9 +1,19 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 5 — Сервер: вход, синхронизация, фото, бэкапы
-Статус: собирается в CI
-Следующий шаг: проверить CI (app+server); затем этап 6 — ИИ, персонаж, голос
+Этап: 6 — ИИ, персонаж, голос
+Статус: каркас готов (690b876), сабагенты A–F в работе; этап 5 в CI (push 664b62a)
+Следующий шаг: отчёты A–F → интеграция (main.go: RunPusher; main.dart: overrides D/E, кнопки фото-анализа в питании/теле, «План с ИИ», выбор голоса, пункты «Знания»/«ИИ» в «Ещё», «нет воды» → квест) → push
+
+## Этап 6 — чек-лист
+- [x] Каркас: server/internal/ai (контракт: Task, Provider, Client, ToolHandler; Service-заглушка), vision/messages/learning, миграция 2 (ai_usage, ai_actions, ai_cache, messages, push_tokens), config (SISTEMA_ANTHROPIC_API_KEY, GEMINI_API_KEY, AI_MODELS, AI_BUDGET_USD, TTS_API_KEY, NTFY_URL/TOKEN, FCM_KEY_FILE), jobs: GenerateMessages/WeeklyReview; клиент: БД v6 (ChatMessages, Courses, Lessons, PhotoAnalyses), core/ai/ai_api.dart (AiGateway), /chat /learning /ai, speech_to_text, just_audio, NSSpeechRecognitionUsageDescription
+- [ ] A AI-слой (server/internal/ai)
+- [ ] B Фото-анализ (server/internal/vision, app/lib/features/vision)
+- [ ] C Персонаж (features/character)
+- [ ] D Голос и чат (features/chat, ai_journal, core/voice)
+- [ ] E Сообщения наперёд, ntfy, FCM, «нет воды» (server/internal/messages, core/notifications/ai_messages*)
+- [ ] F Знания (server/internal/learning, features/learning)
+- [ ] Интеграция, .env-ключи, push
 
 ## Этап 5 — чек-лист
 - [x] Каркас: server/internal/store (SQLite modernc, миграции user_version: users, sessions, access_tokens, records, sync_cursors, photos, fx_rates, job_runs), authctx, контракты auth/syncapi/media/jobs + проводка в main.go, httpapi.Options.Mount, config (MAX_PHOTO_BYTES, BACKUP_DIR, BACKUP_KEEP_DAYS, TRUST_PROXY, FX_URL); клиент: core/sync/sync_api.dart, /account, flutter_secure_storage, qr_flutter
