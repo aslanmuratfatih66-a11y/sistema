@@ -15,7 +15,8 @@ val keystoreProperties = Properties().apply {
 
 android {
     namespace = "com.sistema.sistema"
-    compileSdk = flutter.compileSdkVersion
+    // permission_handler_android 14 требует compileSdk 37 (см. его CHANGELOG).
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
