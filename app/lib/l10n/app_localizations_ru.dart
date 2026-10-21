@@ -3441,6 +3441,18 @@ class AppLocalizationsRu extends AppLocalizations {
   String get setDisciplineHint => 'Подъём 6:00, отбой 22:00, доп. нагрузка';
 
   @override
+  String get setBody => 'Тело и здоровье';
+
+  @override
+  String get setBodyHint => 'Шаги, сон, замеры, фото, уход за кожей';
+
+  @override
+  String get setWorkouts => 'Тренировки';
+
+  @override
+  String get setWorkoutsHint => 'Программа под уровень, таймеры, голос';
+
+  @override
   String get shpNoticeLabel => 'Уведомление';
 
   @override

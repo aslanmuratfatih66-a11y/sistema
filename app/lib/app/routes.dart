@@ -16,6 +16,8 @@ abstract final class Routes {
   static const editStepPattern = '/edit/:step';
   static const reminders = '/reminders';
   static const discipline = '/discipline';
+  static const body = '/body';
+  static const workouts = '/workouts';
 
   /// Редактирование раздела анкеты из настроек.
   static String editStep(OnboardingStep step) => '/edit/${step.name}';

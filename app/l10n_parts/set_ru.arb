@@ -29,19 +29,25 @@
   "setGoalsCount": "{count, plural, one{{count} цель} few{{count} цели} many{{count} целей} other{{count} цели}}",
   "@setGoalsCount": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "setHeightValue": "{value} см",
   "@setHeightValue": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "setWeightValue": "{value} кг",
   "@setWeightValue": {
     "placeholders": {
-      "value": {"type": "String"}
+      "value": {
+        "type": "String"
+      }
     }
   },
   "setNoticeLabel": "Уведомление",
@@ -55,20 +61,28 @@
   "setImportExportedAt": "Создан: {date}",
   "@setImportExportedAt": {
     "placeholders": {
-      "date": {"type": "String"}
+      "date": {
+        "type": "String"
+      }
     }
   },
   "setImportRows": "{table}: {count}",
   "@setImportRows": {
     "placeholders": {
-      "table": {"type": "String"},
-      "count": {"type": "int"}
+      "table": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
     }
   },
   "setImportPhotos": "Файлов фото: {count}",
   "@setImportPhotos": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "setImportNoPhotos": "Фото в файле нет",
@@ -95,5 +109,9 @@
   "setReminders": "Напоминания",
   "setRemindersHint": "Тихие часы, повтор, упрёки",
   "setDiscipline": "Режим дисциплины",
-  "setDisciplineHint": "Подъём 6:00, отбой 22:00, доп. нагрузка"
+  "setDisciplineHint": "Подъём 6:00, отбой 22:00, доп. нагрузка",
+  "setBody": "Тело и здоровье",
+  "setBodyHint": "Шаги, сон, замеры, фото, уход за кожей",
+  "setWorkouts": "Тренировки",
+  "setWorkoutsHint": "Программа под уровень, таймеры, голос"
 }

@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Камера нужна для фото тела и кожи (оценка прогресса), сканирования штрихкодов и чеков.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Галерея нужна, чтобы добавить фото еды, тела или чека из уже снятых.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Микрофон нужен, чтобы говорить с персонажем голосом.</string>
 	<key>NSMotionUsageDescription</key>

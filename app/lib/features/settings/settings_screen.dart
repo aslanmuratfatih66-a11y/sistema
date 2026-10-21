@@ -87,6 +87,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   hint: l.setDisciplineHint,
                   onTap: () => context.push(Routes.discipline),
                 ),
+                _NavRow(
+                  glyph: SysGlyph.heart,
+                  title: l.setBody,
+                  hint: l.setBodyHint,
+                  onTap: () => context.push(Routes.body),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.dumbbell,
+                  title: l.setWorkouts,
+                  hint: l.setWorkoutsHint,
+                  onTap: () => context.push(Routes.workouts),
+                ),
               ],
             ),
           ),

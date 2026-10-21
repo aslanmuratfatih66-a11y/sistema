@@ -7,6 +7,7 @@ import workmanager_apple
 @objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
   /// Канал платформенных данных (SPEC §3: CapabilityService).
   private var platformChannel: FlutterMethodChannel?
+  private var stepCounter: StepCounterChannel?
 
   /// BGAppRefresh: перепланирование окна уведомлений (SPEC §7). Совпадает с Info.plist и Dart (notifications).
   static let refreshTaskId = "com.sistema.sistema.refresh"
@@ -52,6 +53,8 @@ import workmanager_apple
       }
     }
     platformChannel = channel
+    // Шаги (этап 3): CoreMotion.
+    stepCounter = StepCounterChannel(messenger: engineBridge.applicationRegistrar.messenger())
   }
 
   /// Дата истечения профиля подписи из embedded.mobileprovision.

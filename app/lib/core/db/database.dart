@@ -1,6 +1,7 @@
 // Схема локальной БД (Drift). Правит только главный агент.
 // Этап 1: профиль, замеры, фото, цели, расписание, план, разделы анкеты.
 // Этап 2: квесты, экземпляры, журнал событий, эффекты, паузы, награды магазина, пользовательские настройки.
+// Этап 3: продукты, дневник питания, рецепты, вода, список покупок, шаги, сон, уход за кожей, тренировки.
 // Остальные сущности SPEC §11 — на следующих этапах (миграции через schemaVersion).
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -229,6 +230,132 @@ class UserSettings extends Table with SyncColumns {
   TextColumn get value => text()();
 }
 
+// ---- Этап 3 (SPEC §8.2–8.4) ----
+
+/// Продукт: из Open Food Facts (кэш по штрихкоду) или введённый вручную. Значения — на 100 г.
+@DataClassName('FoodItemRow')
+class FoodItems extends Table with SyncColumns {
+  TextColumn get name => text()();
+  TextColumn get brand => text().nullable()();
+  TextColumn get barcode => text().nullable()(); // EAN/UPC; null — ручной продукт без штрихкода
+  RealColumn get kcal100 => real()();
+  RealColumn get protein100 => real().withDefault(const Constant(0))();
+  RealColumn get fat100 => real().withDefault(const Constant(0))();
+  RealColumn get carbs100 => real().withDefault(const Constant(0))();
+  RealColumn get servingG => real().nullable()(); // типичная порция
+  TextColumn get source => text().withDefault(const Constant('manual'))(); // FoodSource.name
+  BoolColumn get favorite => boolean().withDefault(const Constant(false))();
+}
+
+/// Запись дневника питания. КБЖУ копируются на момент записи (правка продукта не меняет прошлое).
+@DataClassName('MealEntryRow')
+class MealEntries extends Table with SyncColumns {
+  DateTimeColumn get eatenAt => dateTime()();
+  TextColumn get mealType => text()(); // MealType.name
+  TextColumn get title => text()(); // название/описание («овсянка с бананом»)
+  TextColumn get foodItemId => text().nullable()();
+  TextColumn get recipeId => text().nullable()();
+  RealColumn get grams => real().nullable()(); // null — ввод «порцией» без веса
+  RealColumn get kcal => real()();
+  RealColumn get protein => real().withDefault(const Constant(0))();
+  RealColumn get fat => real().withDefault(const Constant(0))();
+  RealColumn get carbs => real().withDefault(const Constant(0))();
+  TextColumn get photoId => text().nullable()(); // Photos (kind = food); распознавание — этап 5
+}
+
+/// Мои рецепты: состав JSON [{foodItemId?, title, grams, kcal, protein, fat, carbs}], итоги на всё блюдо.
+@DataClassName('RecipeRow')
+class Recipes extends Table with SyncColumns {
+  TextColumn get title => text()();
+  TextColumn get items => text().withDefault(const Constant('[]'))();
+  IntColumn get servings => integer().withDefault(const Constant(1))();
+  RealColumn get kcal => real().withDefault(const Constant(0))();
+  RealColumn get protein => real().withDefault(const Constant(0))();
+  RealColumn get fat => real().withDefault(const Constant(0))();
+  RealColumn get carbs => real().withDefault(const Constant(0))();
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+}
+
+/// Выпитая вода: строка на каждое нажатие «+250/+500» (сумма за день — по журналу).
+@DataClassName('WaterLogRow')
+class WaterLogs extends Table with SyncColumns {
+  DateTimeColumn get loggedAt => dateTime()();
+  IntColumn get ml => integer()();
+}
+
+/// Список покупок (от плана питания или вручную).
+@DataClassName('ShoppingItemRow')
+class ShoppingItems extends Table with SyncColumns {
+  TextColumn get title => text()();
+  RealColumn get quantity => real().nullable()();
+  TextColumn get unit => text().nullable()(); // 'g', 'kg', 'pcs', 'l'…
+  IntColumn get estPriceMinor => integer().nullable()(); // примерная цена в копейках/курушах
+  TextColumn get currency => text().nullable()();
+  BoolColumn get done => boolean().withDefault(const Constant(false))();
+  TextColumn get source => text().withDefault(const Constant('manual'))(); // 'manual' / 'plan'
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+}
+
+/// Шаги за день (строка на день и источник; перезаписывается при опросе датчика).
+@DataClassName('StepLogRow')
+class StepLogs extends Table with SyncColumns {
+  DateTimeColumn get day => dateTime()(); // локальная полночь
+  IntColumn get steps => integer()();
+  RealColumn get distanceM => real().nullable()();
+  IntColumn get floors => integer().nullable()();
+  TextColumn get source => text()(); // StepSourceKind.name
+
+  @override
+  List<Set<Column<Object>>> get uniqueKeys => [
+        {day, source},
+      ];
+}
+
+/// Сон: отбой → подъём. Источник — отметка, расписание или ручной ввод.
+@DataClassName('SleepLogRow')
+class SleepLogs extends Table with SyncColumns {
+  DateTimeColumn get bedAt => dateTime()();
+  DateTimeColumn get wakeAt => dateTime()();
+  IntColumn get quality => integer().nullable()(); // 1..5, субъективно
+  TextColumn get source => text().withDefault(const Constant('manual'))(); // SleepSource.name
+}
+
+/// Отметки чек-листа ухода за кожей: строка = пункт, выполненный в этот день.
+@DataClassName('CareCheckRow')
+class CareChecks extends Table with SyncColumns {
+  DateTimeColumn get day => dateTime()(); // локальная полночь
+  TextColumn get routine => text()(); // CareRoutine.name
+  TextColumn get itemKey => text()(); // ключ пункта шаблона
+  DateTimeColumn get doneAt => dateTime()();
+
+  @override
+  List<Set<Column<Object>>> get uniqueKeys => [
+        {day, routine, itemKey},
+      ];
+}
+
+/// Программа тренировок (шаблон под уровень; от ИИ — этап 5). payload — JSON дней и упражнений.
+@DataClassName('WorkoutProgramRow')
+class WorkoutPrograms extends Table with SyncColumns {
+  TextColumn get title => text()();
+  TextColumn get level => text()(); // уровень из анкеты: beginner / intermediate / advanced
+  TextColumn get source => text().withDefault(const Constant('template'))(); // 'template' / 'ai' / 'user'
+  TextColumn get payload => text()();
+  BoolColumn get active => boolean().withDefault(const Constant(true))();
+}
+
+/// Проведённая тренировка: что сделано (JSON подходов), длительность, оценка расхода.
+@DataClassName('WorkoutSessionRow')
+class WorkoutSessions extends Table with SyncColumns {
+  TextColumn get programId => text().nullable()();
+  TextColumn get dayKey => text().nullable()(); // какой день программы
+  DateTimeColumn get startedAt => dateTime()();
+  DateTimeColumn get finishedAt => dateTime().nullable()(); // null — прервана/идёт
+  IntColumn get activeSeconds => integer().withDefault(const Constant(0))();
+  RealColumn get kcal => real().nullable()();
+  TextColumn get payload => text().withDefault(const Constant('{}'))();
+}
+
 @DriftDatabase(tables: [
   AppSettings,
   Profiles,
@@ -246,6 +373,16 @@ class UserSettings extends Table with SyncColumns {
   Pauses,
   Rewards,
   UserSettings,
+  FoodItems,
+  MealEntries,
+  Recipes,
+  WaterLogs,
+  ShoppingItems,
+  StepLogs,
+  SleepLogs,
+  CareChecks,
+  WorkoutPrograms,
+  WorkoutSessions,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor])
@@ -259,7 +396,7 @@ class AppDatabase extends _$AppDatabase {
             ));
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -283,6 +420,18 @@ class AppDatabase extends _$AppDatabase {
             await m.createTable(pauses);
             await m.createTable(rewards);
             await m.createTable(userSettings);
+          }
+          if (from < 4) {
+            await m.createTable(foodItems);
+            await m.createTable(mealEntries);
+            await m.createTable(recipes);
+            await m.createTable(waterLogs);
+            await m.createTable(shoppingItems);
+            await m.createTable(stepLogs);
+            await m.createTable(sleepLogs);
+            await m.createTable(careChecks);
+            await m.createTable(workoutPrograms);
+            await m.createTable(workoutSessions);
           }
         },
       );

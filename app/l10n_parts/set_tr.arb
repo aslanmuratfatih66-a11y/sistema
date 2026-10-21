@@ -64,5 +64,9 @@
   "setReminders": "Hatırlatmalar",
   "setRemindersHint": "Sessiz saatler, tekrar, sitemler",
   "setDiscipline": "Disiplin modu",
-  "setDisciplineHint": "06:00 kalkış, 22:00 yatış, ek yük"
+  "setDisciplineHint": "06:00 kalkış, 22:00 yatış, ek yük",
+  "setBody": "Vücut ve sağlık",
+  "setBodyHint": "Adımlar, uyku, ölçüler, fotoğraflar, cilt bakımı",
+  "setWorkouts": "Antrenmanlar",
+  "setWorkoutsHint": "Seviyene göre program, zamanlayıcılar, ses"
 }

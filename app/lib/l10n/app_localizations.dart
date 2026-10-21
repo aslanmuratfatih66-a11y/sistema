@@ -6086,6 +6086,30 @@ abstract class AppLocalizations {
   /// **'Подъём 6:00, отбой 22:00, доп. нагрузка'**
   String get setDisciplineHint;
 
+  /// No description provided for @setBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тело и здоровье'**
+  String get setBody;
+
+  /// No description provided for @setBodyHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шаги, сон, замеры, фото, уход за кожей'**
+  String get setBodyHint;
+
+  /// No description provided for @setWorkouts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировки'**
+  String get setWorkouts;
+
+  /// No description provided for @setWorkoutsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Программа под уровень, таймеры, голос'**
+  String get setWorkoutsHint;
+
   /// No description provided for @shpNoticeLabel.
   ///
   /// In ru, this message translates to:

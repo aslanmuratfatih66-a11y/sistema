@@ -1,26 +1,27 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 2 — Квесты, уведомления, баллы, штрафы, магазин
-Статус: интеграция сделана, analyze чистый — прогон тестов и CI
-Следующий шаг: зелёные локальные тесты → коммит → пуш → `gh run watch`
+Этап: 3 — Питание, тело, тренировки
+Статус: каркас готов, сабагенты A–D в работе
+Следующий шаг: дождаться отчётов A–D → интеграция (SectionQuestHooks над QuestService, stepCounterProvider в main, «Статус» на реальных данных питания/шагов/сна) → CI
 
-## Этап 2 — чек-лист
-- [x] Каркас: БД v3 (Quests, QuestInstances, QuestEvents, Effects, Pauses, Rewards, UserSettings), enums §6, контракты domain/quests/quest_api.dart и core/notifications/notification_api.dart, flutter_local_notifications 22.3 / timezone / flutter_timezone / workmanager, desugaring, ресиверы манифеста, BGAppRefresh (Info.plist + AppDelegate), маршруты /reminders /discipline, заглушки экранов
-- [x] 1. Движок квестов §6 (A)
-- [x] 2. Напоминания §7 (B)
-- [x] 3. Отказ удержанием 5 с, отметки «гулял/алкоголь/сорвался», усиленный план (C)
-- [x] 4. Режим дисциплины без блокировки (D)
-- [x] 5. Магазин наград (D)
-- [x] 6. Экраны квестов и системные окна (C)
-- [x] Интеграция: createQuestService (+ DisciplineQuestSource), main (движок, планировщик, ReminderCoordinator, BG-задача), OutcomeWindowsHost вокруг AppShell, импорт квестов при «Принять» и для плана, принятого на этапе 1
-- [ ] 7. Юнит-тесты, CI зелёный, отчёт
+## Этап 3 — чек-лист
+- [x] Каркас: БД v4 (FoodItems, MealEntries, Recipes, WaterLogs, ShoppingItems, StepLogs, SleepLogs, CareChecks, WorkoutPrograms, WorkoutSessions), enums, core/models/daily.dart, core/activity/activity_api.dart, domain/quests/section_hooks.dart; mobile_scanner/http/fl_chart/image_picker/wakelock_plus; Health Connect (minSdk 26, FlutterFragmentActivity, манифест), канал sistema/steps (StepCounterChannel.swift/.kt — заготовки, в pbxproj); маршруты /body /workouts, заглушки
+- [ ] 1. Питание §8.2 (A)
+- [ ] 2. Шаги и расход (B)
+- [ ] 3. Тело: сон, замеры, графики, фото-дневник, уход за кожей (C)
+- [ ] 4. Тренировки (D)
+- [ ] 5. Интеграция с движком квестов, «Статус» на реальных данных
+- [ ] 6. Тесты, CI зелёный, отчёт
 
-## Сабагенты (этап 2)
-- A Движок квестов: готово — app/lib/domain/quests (l10n_parts/qe_*); при интеграции watchPlayer переписан (async* не отменялся)
-- B Уведомления: готово (36 тестов) — core/notifications, features/reminders (ntf_*); код для main.dart в отчёте: LocalReminderScheduler, ReminderCoordinator(onResume: markTablesUpdated), initBackgroundRefresh; разрешение запрашивать отдельно
-- C Экраны квестов и окна: готово — app/lib/features/quests, app/lib/features/home/data (qst_*)
-- D Магазин и дисциплина: готово — app/lib/features/shop, app/lib/features/discipline, app/lib/domain/discipline (shp_*)
+## Сабагенты (этап 3)
+- A Питание: в работе — app/lib/features/nutrition (l10n_parts/nut_*)
+- B Шаги и калории: в работе — app/lib/core/activity, StepCounterChannel.swift/.kt (l10n_parts/act_*)
+- C Тело: в работе — app/lib/features/body (l10n_parts/body_*)
+- D Тренировки: в работе — app/lib/features/workouts (l10n_parts/wrk_*)
+
+## Этап 2 — итог
+Готов: движок квестов, напоминания, экраны квестов и окна, магазин, дисциплина; 317 тестов. CI run 39647992929.
 
 ## Этап 1 — итог
 Завершён (проверка на телефоне — вместе после этапа 4–5). Анкета 12 шагов, камера/фото-сессия под голос ассистента,
@@ -86,6 +87,7 @@
   - фото-сессия: отсчёт без лагов (1.3), совпадение с контуром тела на ~2 м, овал лица, голос ассистента
 
 ## История
+- 2026-10-21 — этап 2 — интеграция A–D, 317 тестов зелёные; начат этап 3 (каркас)
 - 2026-10-21 — этап 1 — 1.3: лаг отсчёта (лишние вызовы TTS) исправлен; этап 1 завершён, начат этап 2
 - 2026-10-21 — этап 1 — доработка 1.2 (фото-сессия: овал, 2 м, голос ассистента; персонаж 2-м шагом)
 - 2026-10-21 — этап 1 — доработка 1.1 (сабагенты F/G/H) интегрирована, CI зелёный, ждёт проверки на телефоне

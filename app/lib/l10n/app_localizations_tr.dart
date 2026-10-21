@@ -3426,6 +3426,18 @@ class AppLocalizationsTr extends AppLocalizations {
   String get setDisciplineHint => '06:00 kalkış, 22:00 yatış, ek yük';
 
   @override
+  String get setBody => 'Vücut ve sağlık';
+
+  @override
+  String get setBodyHint => 'Adımlar, uyku, ölçüler, fotoğraflar, cilt bakımı';
+
+  @override
+  String get setWorkouts => 'Antrenmanlar';
+
+  @override
+  String get setWorkoutsHint => 'Seviyene göre program, zamanlayıcılar, ses';
+
+  @override
   String get shpNoticeLabel => 'Bildirim';
 
   @override

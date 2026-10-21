@@ -111,3 +111,20 @@ T? enumByName<T extends Enum>(List<T> values, String? name) {
   }
   return null;
 }
+
+// ---- Этап 3 ----
+
+/// Откуда продукт.
+enum FoodSource { openFoodFacts, manual, server }
+
+/// Приём пищи.
+enum MealType { breakfast, lunch, dinner, snack }
+
+/// Источник шагов.
+enum StepSourceKind { coreMotion, healthConnect, sensor, manual }
+
+/// Источник записи сна.
+enum SleepSource { manual, mark, schedule }
+
+/// Чек-лист ухода за кожей.
+enum CareRoutine { morning, evening }

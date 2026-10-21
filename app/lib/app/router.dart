@@ -2,6 +2,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/body/body_screen.dart';
 import '../features/discipline/discipline_screen.dart';
 import '../features/home/home_screen.dart';
 import '../features/nutrition/nutrition_screen.dart';
@@ -16,6 +17,7 @@ import '../features/reminders/reminder_settings_screen.dart';
 import '../features/schedule/schedule_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/shop/shop_screen.dart';
+import '../features/workouts/workouts_screen.dart';
 import 'app_shell.dart';
 import 'routes.dart';
 
@@ -37,6 +39,8 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.schedule, builder: (_, _) => const ScheduleScreen()),
         GoRoute(path: Routes.reminders, builder: (_, _) => const ReminderSettingsScreen()),
         GoRoute(path: Routes.discipline, builder: (_, _) => const DisciplineScreen()),
+        GoRoute(path: Routes.body, builder: (_, _) => const BodyScreen()),
+        GoRoute(path: Routes.workouts, builder: (_, _) => const WorkoutsScreen()),
         GoRoute(
           path: Routes.editStepPattern,
           builder: (_, state) {
