@@ -28,7 +28,7 @@ class SistemaApp extends ConsumerWidget {
         theme: buildSystemTheme(),
         themeMode: ThemeMode.dark,
         routerConfig: ref.watch(routerProvider),
-        locale: locale ?? ref.watch(appLocaleProvider).value,
+        locale: locale ?? ref.watch(appLocaleProvider),
         localeListResolutionCallback: resolveAppLocale,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: const [
