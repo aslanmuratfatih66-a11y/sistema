@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Sistema API
+  version: 0.0.0
+  description: |
+    API сервера «Система». Этап 0 — только служебные маршруты.
+    Аутентификация, синхронизация и фото появятся на этапе 5 (SPEC §10).
+servers:
+  - url: http://127.0.0.1:8087
+    description: Локально на сервере (HTTPS через reverse-proxy — этап 5)
+paths:
+  /healthz:
+    get:
+      summary: Проверка здоровья
+      operationId: healthz
+      tags: [service]
+      responses:
+        "200":
+          description: Сервер работает
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/X-Request-Id"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+  /api/v1/ping:
+    get:
+      summary: Проверка доступности API v1
+      operationId: ping
+      tags: [service]
+      responses:
+        "200":
+          description: Pong
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/X-Request-Id"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [pong]
+                properties:
+                  pong:
+                    type: string
+                    example: ok
+components:
+  headers:
+    X-Request-Id:
+      description: Идентификатор запроса (берётся из запроса, если валиден, иначе генерируется)
+      schema:
+        type: string
+        pattern: "^[A-Za-z0-9._-]{1,64}$"
+  schemas:
+    Health:
+      type: object
+      required: [status, version, uptime_s, mem_alloc_mb]
+      properties:
+        status:
+          type: string
+          example: ok
+        version:
+          type: string
+          example: 0.1.0
+        uptime_s:
+          type: integer
+          format: int64
+          description: Время работы процесса, секунды
+        mem_alloc_mb:
+          type: number
+          description: Текущая занятая куча (runtime.MemStats.Alloc), МБ
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string

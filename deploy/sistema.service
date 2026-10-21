@@ -1,0 +1,53 @@
+[Unit]
+Description=Sistema server
+Documentation=https://github.com/aslanmuratfatih66-a11y/sistema
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=sistema
+Group=sistema
+WorkingDirectory=/opt/sistema
+EnvironmentFile=/opt/sistema/.env
+ExecStart=/opt/sistema/bin/sistema-server
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=30s
+KillSignal=SIGTERM
+
+# Сервер с 1 ГБ RAM: жёсткий потолок и мягкий порог.
+MemoryHigh=200M
+MemoryMax=256M
+LimitNOFILE=4096
+TasksMax=256
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/sistema/data
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+ProtectClock=true
+ProtectHostname=true
+ProtectProc=invisible
+RestrictSUIDSGID=true
+RestrictRealtime=true
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+AmbientCapabilities=
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target
