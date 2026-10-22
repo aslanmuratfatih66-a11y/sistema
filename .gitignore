@@ -12,3 +12,7 @@ key.properties
 
 # Собранный бинарник сервера для деплоя
 deploy/sistema-server
+
+# Локальные файлы с ключами — никогда не коммитить
+/sop.txt
+*.keys.txt
