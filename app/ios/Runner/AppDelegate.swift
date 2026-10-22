@@ -11,6 +11,7 @@ import workmanager_apple
   private var maps: MapKitChannel?
   private var nowPlaying: NowPlayingChannel?
   private var live: LiveActivityChannel?
+  private var alarm: AlarmKitChannel?
 
   /// BGAppRefresh: перепланирование окна уведомлений (SPEC §7). Совпадает с Info.plist и Dart (notifications).
   static let refreshTaskId = "com.sistema.sistema.refresh"
@@ -63,6 +64,8 @@ import workmanager_apple
     maps = MapKitChannel(messenger: messenger)
     nowPlaying = NowPlayingChannel(messenger: messenger)
     live = LiveActivityChannel(messenger: messenger)
+    // Этап 7: будильник-квест (AlarmKit).
+    alarm = AlarmKitChannel(messenger: messenger)
   }
 
   /// Дата истечения профиля подписи из embedded.mobileprovision.

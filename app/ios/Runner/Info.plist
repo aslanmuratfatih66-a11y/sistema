@@ -8,6 +8,10 @@
 	<string>Галерея нужна, чтобы добавить фото еды, тела или чека из уже снятых.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Распознавание речи нужно, чтобы говорить с персонажем голосом.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Face ID защищает вход в приложение и раздел финансов.</string>
+	<key>NSAlarmKitUsageDescription</key>
+	<string>Будильник-квест звонит, пока вы не выполните задание.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Микрофон нужен, чтобы говорить с персонажем голосом.</string>
 	<key>NSMotionUsageDescription</key>

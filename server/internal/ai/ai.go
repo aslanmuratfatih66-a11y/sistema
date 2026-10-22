@@ -39,10 +39,17 @@ type Image struct {
 	Data      []byte
 }
 
-// Part — часть сообщения: текст, картинка, вызов инструмента или его результат.
+// Document — файл во входе (PDF выписки банка, этап 7). Anthropic — блок document, Gemini — inline_data.
+type Document struct {
+	MediaType string // application/pdf
+	Data      []byte
+}
+
+// Part — часть сообщения: текст, картинка, документ, вызов инструмента или его результат.
 type Part struct {
 	Text       string
 	Image      *Image
+	Document   *Document
 	ToolCall   *ToolCall
 	ToolResult *ToolResult
 }

@@ -18,9 +18,11 @@ import (
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/ai"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/auth"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/config"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/finance"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/httpapi"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/jobs"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/learning"
+	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/market"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/media"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/memstat"
 	"github.com/aslanmuratfatih66-a11y/sistema/server/internal/messages"
@@ -85,6 +87,8 @@ func run() error {
 		Logger:     logger,
 	})
 	learningH := learning.New(db, aiSvc, logger)
+	financeH := finance.New(db, aiSvc, logger)
+	marketH := market.New(db, aiSvc, logger)
 	go jobs.New(db, jobs.Options{
 		DataDir:          cfg.DataDir,
 		BackupDir:        cfg.BackupDir,
@@ -113,6 +117,8 @@ func run() error {
 				visionH.Register(api, authSvc.Require)
 				msgSvc.Register(api, authSvc.Require)
 				learningH.Register(api, authSvc.Require)
+				financeH.Register(api, authSvc.Require)
+				marketH.Register(api, authSvc.Require)
 			},
 		}),
 		ReadHeaderTimeout: 5 * time.Second,

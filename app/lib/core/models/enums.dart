@@ -133,3 +133,20 @@ enum CareRoutine { morning, evening }
 
 /// Режим отрезка прогулки (SPEC §8.5).
 enum WalkMode { walk, brisk, cardio, rest }
+
+// ---- Этап 7 ----
+
+/// Вид счёта (SPEC §8.7).
+enum FinAccountKind { cash, card, deposit, crypto }
+
+/// Вид операции.
+enum FinTxKind { expense, income, transfer }
+
+/// Откуда операция.
+enum FinTxSource { manual, receiptQr, receiptPhoto, food, bankNotification, sms, statement, subscription, market }
+
+/// Пометка маркета по финансам (SPEC §8.8).
+enum MarketBudget { ok, afterIncome, over }
+
+/// Задание для выключения будильника (SPEC §8.11).
+enum AlarmTask { squats, qr }

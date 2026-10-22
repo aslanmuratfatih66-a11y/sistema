@@ -4,6 +4,8 @@
 // Этап 3: продукты, дневник питания, рецепты, вода, список покупок, шаги, сон, уход за кожей, тренировки.
 // Этап 4: прогулки и маршруты.
 // Этап 6: чат с персонажем, знания (курсы, уроки с повторениями), анализы фото.
+// Этап 7: финансы (счета, категории, операции, лимиты, цели, подписки, долги, крипта, входящие банков),
+//         маркет покупок, блокировка приложений (список, попытки), будильники-квесты.
 // Остальные сущности SPEC §11 — на следующих этапах (миграции через schemaVersion).
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
@@ -430,6 +432,194 @@ class PhotoAnalyses extends Table with SyncColumns {
   DateTimeColumn get createdAt => dateTime()();
 }
 
+// ---- Этап 7: финансы (SPEC §8.7) ----
+// Суммы — целые в минимальных единицах валюты (копейки/куруши/центы); крипта — количество real.
+// Валюта — ISO-код (RUB, TRY, USD, EUR). Отчёты переводятся в RUB по курсам сервера.
+
+/// Счёт: наличка, карта, вклад, крипто-кошелёк.
+@DataClassName('FinAccountRow')
+class FinAccounts extends Table with SyncColumns {
+  TextColumn get name => text()();
+  TextColumn get kind => text()(); // FinAccountKind.name: cash / card / deposit / crypto
+  TextColumn get bank => text().nullable()(); // ключ банка (FinBanks: sber, vtb, tbank, alfa, ziraat, isbank, garanti…)
+  TextColumn get currency => text().withDefault(const Constant('RUB'))();
+  IntColumn get openingBalance => integer().withDefault(const Constant(0))(); // начальный остаток, мин. единицы
+  TextColumn get cardLast4 => text().nullable()(); // для сопоставления уведомлений банка
+  IntColumn get sortIndex => integer().withDefault(const Constant(0))();
+  BoolColumn get archived => boolean().withDefault(const Constant(false))();
+}
+
+/// Категория доходов/расходов. builtinKey — встроенная (название из l10n), иначе name.
+@DataClassName('FinCategoryRow')
+class FinCategories extends Table with SyncColumns {
+  TextColumn get kind => text()(); // FinTxKind.name: expense / income
+  TextColumn get builtinKey => text().nullable()(); // groceries, cafe, fastfood, transport, …
+  TextColumn get name => text().nullable()();
+  TextColumn get icon => text().nullable()(); // имя SysGlyph
+  TextColumn get parentId => text().nullable()();
+  BoolColumn get junkFood => boolean().withDefault(const Constant(false))(); // «налог на фастфуд»
+  IntColumn get sortIndex => integer().withDefault(const Constant(0))();
+  BoolColumn get archived => boolean().withDefault(const Constant(false))();
+}
+
+/// Операция: расход, доход или перевод между счетами.
+@DataClassName('FinTransactionRow')
+class FinTransactions extends Table with SyncColumns {
+  TextColumn get kind => text()(); // FinTxKind.name: expense / income / transfer
+  TextColumn get accountId => text()();
+  TextColumn get toAccountId => text().nullable()(); // для transfer
+  IntColumn get amount => integer()(); // > 0, мин. единицы валюты счёта
+  TextColumn get currency => text()();
+  IntColumn get toAmount => integer().nullable()(); // сумма зачисления при переводе в другой валюте
+  IntColumn get amountRub => integer().nullable()(); // копейки по курсу на дату (для отчётов)
+  TextColumn get categoryId => text().nullable()();
+  DateTimeColumn get occurredAt => dateTime()();
+  TextColumn get merchant => text().nullable()();
+  TextColumn get note => text().nullable()();
+  TextColumn get source => text().withDefault(const Constant('manual'))(); // FinTxSource.name
+  TextColumn get externalRef => text().nullable()(); // ключ дедупа (ФН/ФД/ФП чека, id уведомления, строка выписки)
+  TextColumn get items => text().nullable()(); // JSON позиций чека [{name, qty, price}]
+  TextColumn get photoId => text().nullable()(); // фото чека
+  TextColumn get subscriptionId => text().nullable()();
+  TextColumn get debtId => text().nullable()();
+  TextColumn get goalId => text().nullable()();
+}
+
+/// Лимит по категории на период. Предлагает ИИ после 2–4 недель, пользователь подтверждает.
+@DataClassName('FinBudgetRow')
+class FinBudgets extends Table with SyncColumns {
+  TextColumn get categoryId => text()();
+  TextColumn get period => text().withDefault(const Constant('month'))(); // week / month
+  IntColumn get limitRub => integer()(); // копейки
+  TextColumn get status => text().withDefault(const Constant('active'))(); // proposed / active / rejected
+  TextColumn get source => text().withDefault(const Constant('user'))(); // user / ai
+  TextColumn get reason => text().nullable()(); // пояснение ИИ
+  DateTimeColumn get startsOn => dateTime()();
+  IntColumn get rewardDiamonds => integer().withDefault(const Constant(10))(); // уложился
+  IntColumn get penaltyDiamonds => integer().withDefault(const Constant(10))(); // превысил
+}
+
+/// Цель накопления.
+@DataClassName('FinGoalRow')
+class FinGoals extends Table with SyncColumns {
+  TextColumn get title => text()();
+  IntColumn get target => integer()();
+  TextColumn get currency => text().withDefault(const Constant('RUB'))();
+  TextColumn get accountId => text().nullable()(); // счёт-копилка; null — взносы операциями с goalId
+  DateTimeColumn get deadline => dateTime().nullable()();
+  DateTimeColumn get reachedAt => dateTime().nullable()();
+}
+
+/// Подписка (регулярный платёж).
+@DataClassName('FinSubscriptionRow')
+class FinSubscriptions extends Table with SyncColumns {
+  TextColumn get title => text()();
+  IntColumn get amount => integer()();
+  TextColumn get currency => text().withDefault(const Constant('RUB'))();
+  TextColumn get period => text().withDefault(const Constant('month'))(); // week / month / year
+  DateTimeColumn get nextChargeOn => dateTime()();
+  TextColumn get accountId => text().nullable()();
+  TextColumn get categoryId => text().nullable()();
+  BoolColumn get active => boolean().withDefault(const Constant(true))();
+}
+
+/// Долг: я должен (owe) или мне должны (lent).
+@DataClassName('FinDebtRow')
+class FinDebts extends Table with SyncColumns {
+  TextColumn get person => text()();
+  TextColumn get direction => text()(); // owe / lent
+  IntColumn get amount => integer()();
+  TextColumn get currency => text().withDefault(const Constant('RUB'))();
+  DateTimeColumn get dueOn => dateTime().nullable()(); // напоминание
+  DateTimeColumn get settledAt => dateTime().nullable()();
+  TextColumn get note => text().nullable()();
+}
+
+/// Крипта: количество вручную, курс — с сервера (CoinGecko).
+@DataClassName('CryptoHoldingRow')
+class CryptoHoldings extends Table with SyncColumns {
+  TextColumn get symbol => text()(); // BTC
+  TextColumn get coinId => text()(); // id CoinGecko: bitcoin
+  RealColumn get amount => real()();
+  TextColumn get accountId => text().nullable()();
+}
+
+/// Входящие банков (Android: уведомления/SMS; iOS: строки выписки) до превращения в операцию.
+@DataClassName('BankInboxRow')
+class BankInbox extends Table with SyncColumns {
+  TextColumn get channel => text()(); // notification / sms / statement
+  TextColumn get sender => text()(); // пакет приложения / номер SMS / имя файла выписки
+  TextColumn get bank => text().nullable()();
+  TextColumn get body => text()();
+  DateTimeColumn get receivedAt => dateTime()();
+  TextColumn get status => text().withDefault(const Constant('pending'))(); // pending / parsed / ignored / failed
+  TextColumn get parsed => text().nullable()(); // JSON разбора (сумма, валюта, тип, мерчант, карта)
+  TextColumn get parser => text().nullable()(); // template / ai
+  TextColumn get transactionId => text().nullable()();
+}
+
+// ---- Этап 7: маркет покупок (SPEC §8.8) ----
+
+/// Товар-подборка ИИ: примерная цена (веб-поиск сервера) с датой и источником, ссылки на магазины.
+@DataClassName('MarketItemRow')
+class MarketItems extends Table with SyncColumns {
+  TextColumn get title => text()();
+  TextColumn get category => text()(); // skin / nutrition / equipment / other
+  TextColumn get reason => text().nullable()(); // зачем, под какой пункт плана
+  IntColumn get price => integer().nullable()(); // мин. единицы
+  TextColumn get currency => text().withDefault(const Constant('RUB'))();
+  TextColumn get priceSource => text().nullable()();
+  DateTimeColumn get priceAt => dateTime().nullable()();
+  TextColumn get links => text().withDefault(const Constant('[]'))(); // JSON [{store, url, search}]
+  TextColumn get budget => text().nullable()(); // MarketBudget.name: ok / afterIncome / over
+  TextColumn get status => text().withDefault(const Constant('suggested'))(); // suggested / saved / bought / dismissed
+  TextColumn get transactionId => text().nullable()(); // покупка → операция
+  DateTimeColumn get createdAt => dateTime()();
+}
+
+// ---- Этап 7: блокировка приложений (SPEC §8.6) ----
+
+/// Отвлекающее приложение. appId: Android — пакет, iOS — ключ из списка (tiktok, youtube, instagram…).
+@DataClassName('BlockedAppRow')
+class BlockedApps extends Table with SyncColumns {
+  TextColumn get platform => text()(); // android / ios
+  TextColumn get appId => text()();
+  TextColumn get name => text()();
+  BoolColumn get enabled => boolean().withDefault(const Constant(true))();
+}
+
+/// Попытка открыть заблокированное (Android — оверлей, iOS — deep link sistema://blocked?app=…).
+@DataClassName('BlockAttemptRow')
+class BlockAttempts extends Table with SyncColumns {
+  TextColumn get appId => text()();
+  DateTimeColumn get at => dateTime()();
+}
+
+// ---- Этап 7: будильник-квест (SPEC §8.11) ----
+
+/// Будильник: отключается только заданием (приседания или QR в другой комнате).
+@DataClassName('AlarmRow')
+class Alarms extends Table with SyncColumns {
+  IntColumn get minute => integer()(); // минуты от полуночи
+  IntColumn get weekdays => integer().withDefault(const Constant(127))(); // маска пн=1 … вс=64; 0 — разово
+  TextColumn get label => text().nullable()();
+  TextColumn get task => text().withDefault(const Constant('squats'))(); // AlarmTask.name: squats / qr
+  IntColumn get squats => integer().withDefault(const Constant(15))();
+  TextColumn get qrCode => text().nullable()(); // содержимое напечатанного QR
+  BoolColumn get enabled => boolean().withDefault(const Constant(true))();
+  BoolColumn get fromDiscipline => boolean().withDefault(const Constant(false))(); // подъём режима дисциплины
+}
+
+/// Срабатывание будильника и его выключение заданием.
+@DataClassName('AlarmRunRow')
+class AlarmRuns extends Table with SyncColumns {
+  TextColumn get alarmId => text()();
+  DateTimeColumn get firedAt => dateTime()();
+  DateTimeColumn get dismissedAt => dateTime().nullable()();
+  TextColumn get task => text()();
+  IntColumn get snoozes => integer().withDefault(const Constant(0))();
+}
+
 @DriftDatabase(tables: [
   AppSettings,
   Profiles,
@@ -463,6 +653,20 @@ class PhotoAnalyses extends Table with SyncColumns {
   Courses,
   Lessons,
   PhotoAnalyses,
+  FinAccounts,
+  FinCategories,
+  FinTransactions,
+  FinBudgets,
+  FinGoals,
+  FinSubscriptions,
+  FinDebts,
+  CryptoHoldings,
+  BankInbox,
+  MarketItems,
+  BlockedApps,
+  BlockAttempts,
+  Alarms,
+  AlarmRuns,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? executor])
@@ -476,7 +680,7 @@ class AppDatabase extends _$AppDatabase {
             ));
 
   @override
-  int get schemaVersion => 6;
+  int get schemaVersion => 7;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -522,6 +726,26 @@ class AppDatabase extends _$AppDatabase {
             await m.createTable(courses);
             await m.createTable(lessons);
             await m.createTable(photoAnalyses);
+          }
+          if (from < 7) {
+            for (final t in <TableInfo<Table, Object?>>[
+              finAccounts,
+              finCategories,
+              finTransactions,
+              finBudgets,
+              finGoals,
+              finSubscriptions,
+              finDebts,
+              cryptoHoldings,
+              bankInbox,
+              marketItems,
+              blockedApps,
+              blockAttempts,
+              alarms,
+              alarmRuns,
+            ]) {
+              await m.createTable(t);
+            }
           }
         },
       );

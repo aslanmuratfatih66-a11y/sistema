@@ -323,6 +323,19 @@ class FakeQuestService implements QuestService {
   Future<void> importPlanQuests({required String planId, required List<Map<String, Object?>> drafts}) async {}
 
   @override
+  Future<List<GameOutcome>> award({
+    required int diamonds,
+    int xp = 0,
+    Map<StatKind, int> stats = const {},
+    required String reasonKey,
+    required String ref,
+    DateTime? at,
+  }) async {
+    calls.add('award:$ref:$diamonds');
+    return const [];
+  }
+
+  @override
   Future<List<GameOutcome>> markDay(DayMark mark, {DateTime? at}) async {
     calls.add('mark:${mark.name}');
     marks.add(mark);

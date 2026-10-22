@@ -350,6 +350,18 @@ abstract interface class QuestService {
   /// Покупка в магазине: событие purchase (−price ◆). Возвращает false, если баланс < price или он отрицательный.
   Future<bool> purchase({required String rewardId, required String title, required int price, DateTime? at});
 
+  /// Начисление или штраф ◆ вне квестов (этап 7: лимиты бюджета, «налог на фастфуд», будильник).
+  /// [diamonds] < 0 — событие penalty (на паузе не начисляется), > 0 — bonus. [ref] — ключ идемпотентности:
+  /// повтор с тем же ref ничего не делает. Штраф возвращает [PenaltyApplied] (+ возможное включение дисциплины).
+  Future<List<GameOutcome>> award({
+    required int diamonds,
+    int xp = 0,
+    Map<StatKind, int> stats = const {},
+    required String reasonKey,
+    required String ref,
+    DateTime? at,
+  });
+
   /// Ручное включение/выключение дисциплины (D): событие disciplineOn/Off.
   Future<void> setDiscipline({required bool active, String? reasonKey, DateTime? at});
 

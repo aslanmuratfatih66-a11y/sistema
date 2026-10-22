@@ -74,6 +74,8 @@ func (g *Gemini) Complete(ctx context.Context, model string, req Request) (Respo
 		var parts []gemPart
 		for _, p := range m.Parts {
 			switch {
+			case p.Document != nil:
+				parts = append(parts, gemPart{InlineData: &gemInline{MimeType: p.Document.MediaType, Data: base64.StdEncoding.EncodeToString(p.Document.Data)}})
 			case p.Image != nil:
 				parts = append(parts, gemPart{InlineData: &gemInline{MimeType: p.Image.MediaType, Data: base64.StdEncoding.EncodeToString(p.Image.Data)}})
 			case p.ToolCall != nil:

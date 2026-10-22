@@ -27,7 +27,7 @@ end
 
 # --- Runner: каналы этапа 4 и entitlements ---
 runner_group = project.main_group.children.find { |g| g.respond_to?(:path) && g.path == 'Runner' } or abort('нет группы Runner')
-%w[MapKitChannel.swift NowPlayingChannel.swift LiveActivityChannel.swift].each do |f|
+%w[MapKitChannel.swift NowPlayingChannel.swift LiveActivityChannel.swift AlarmKitChannel.swift].each do |f|
   ensure_source(runner, ensure_file(runner_group, f))
 end
 ensure_file(runner_group, 'Runner.entitlements')

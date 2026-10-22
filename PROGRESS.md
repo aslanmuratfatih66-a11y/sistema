@@ -1,20 +1,21 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 6 — ИИ, персонаж, голос
-Статус: A–F готовы, интеграция сделана, собирается в CI
-Следующий шаг: дождаться CI (`gh run watch`), при красном — `gh run view --log-failed`; затем этап 7
+Этап: 7 — Финансы, маркет, дисциплина
+Статус: каркас готов, сабагенты A–E в работе
+Следующий шаг: отчёты A–E → интеграция (манифест Android: сервисы банков/блокировки/будильника и разрешения; MainActivity — каналы; main.dart — overrides financeLedger/fxRates/budgetAdvisor/appLock/appBlocker/alarmScheduler, AppLockGate; «Ещё» — пункты; receipt_flow → ledger; merge_l10n) → push
 
-## Этап 6 — чек-лист
-- [x] Каркас: server/internal/ai (контракт: Task, Provider, Client, ToolHandler; Service-заглушка), vision/messages/learning, миграция 2 (ai_usage, ai_actions, ai_cache, messages, push_tokens), config (SISTEMA_ANTHROPIC_API_KEY, GEMINI_API_KEY, AI_MODELS, AI_BUDGET_USD, TTS_API_KEY, NTFY_URL/TOKEN, FCM_KEY_FILE), jobs: GenerateMessages/WeeklyReview; клиент: БД v6 (ChatMessages, Courses, Lessons, PhotoAnalyses), core/ai/ai_api.dart (AiGateway), /chat /learning /ai, speech_to_text, just_audio, NSSpeechRecognitionUsageDescription
-- [x] A AI-слой (server/internal/ai: Anthropic/Gemini, бюджет, инструменты с отменой, чат, план, TTS ElevenLabs; запись в records через syncapi.ServerWrite)
-- [x] B Фото-анализ (server/internal/vision, app/lib/features/vision)
-- [x] C Персонаж (features/character)
-- [x] D Голос и чат (features/chat, ai_journal, core/voice)
-- [x] E Сообщения наперёд, ntfy, FCM, «нет воды» (server/internal/messages, core/notifications/ai_messages*, features/walks/water_quest.dart)
-- [x] F Знания (server/internal/learning, features/learning)
-- [x] Интеграция: main.go `go msgSvc.RunPusher`; main.dart: TTS сервера/STT, aiMessageSyncProvider.start, фон runAiMessagesBackground, ReminderCoordinator.templateFilter (без шаблонного упрёка, если упрекает ИИ); «План с ИИ», «Знания»/«ИИ»/«Голос» в «Ещё»; «нет воды» → квест; deploy/.env.example — ключи этапа 6
-- [ ] CI зелёный
+## Этап 7 — чек-лист
+- [x] Каркас: БД v7 (FinAccounts, FinCategories, FinTransactions, FinBudgets, FinGoals, FinSubscriptions, FinDebts, CryptoHoldings, BankInbox, MarketItems, BlockedApps, BlockAttempts, Alarms, AlarmRuns), enums (FinAccountKind, FinTxKind, FinTxSource, MarketBudget, AlarmTask); QuestService.award (◆ вне квестов, идемпотентно по ref); контракты domain/finance/finance_api.dart (FinanceLedger, FxRatesSource, BudgetAdvisor), core/security/app_lock.dart, core/alarm/alarm_api.dart; маршруты /finance /finance/receipt /finance/banks /finance/statement /market /blocker /blocked /alarms /alarm/ring (заглушки); local_auth, sensors_plus; Info.plist: NSFaceIDUsageDescription, NSAlarmKitUsageDescription; AlarmKitChannel.swift (заготовка, в pbxproj); сервер: ai.Document (PDF), пакеты finance/market (контракт эндпоинтов в doc-комментарии), проводка в main.go
+- [ ] A Финансы — ядро (features/finance, core/security)
+- [ ] B Финансы — ввод (features/finance_input, server/internal/finance, Android bank listener/SMS)
+- [ ] C Маркет (features/market, server/internal/market)
+- [ ] D Блокировка (domain/discipline/app_blocker*, features/blocker, Android blocker)
+- [ ] E Будильник (core/alarm, features/alarm, Android AlarmManager, iOS AlarmKit)
+- [ ] Интеграция, push
+
+## Этап 6 — итог
+A–F + интеграция, CI зелёный (run 39704046010 app, 39704046012 server).
 
 ## Этап 5 — чек-лист
 - [x] Каркас: server/internal/store (SQLite modernc, миграции user_version: users, sessions, access_tokens, records, sync_cursors, photos, fx_rates, job_runs), authctx, контракты auth/syncapi/media/jobs + проводка в main.go, httpapi.Options.Mount, config (MAX_PHOTO_BYTES, BACKUP_DIR, BACKUP_KEEP_DAYS, TRUST_PROXY, FX_URL); клиент: core/sync/sync_api.dart, /account, flutter_secure_storage, qr_flutter

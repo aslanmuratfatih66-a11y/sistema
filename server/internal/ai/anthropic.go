@@ -236,6 +236,9 @@ func (a *Anthropic) encodeMessage(m Message) antMessage {
 		case p.Image != nil:
 			blocks = append(blocks, antBlock{Type: "image", Source: &antSource{
 				Type: "base64", MediaType: p.Image.MediaType, Data: base64.StdEncoding.EncodeToString(p.Image.Data)}})
+		case p.Document != nil:
+			blocks = append(blocks, antBlock{Type: "document", Source: &antSource{
+				Type: "base64", MediaType: p.Document.MediaType, Data: base64.StdEncoding.EncodeToString(p.Document.Data)}})
 		case p.ToolCall != nil:
 			in := p.ToolCall.Input
 			if len(in) == 0 {

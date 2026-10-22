@@ -387,6 +387,34 @@ class LocalQuestService implements QuestService {
       });
 
   @override
+  Future<List<GameOutcome>> award({
+    required int diamonds,
+    int xp = 0,
+    Map<StatKind, int> stats = const {},
+    required String reasonKey,
+    required String ref,
+    DateTime? at,
+  }) =>
+      _act(() async {
+        final now = at ?? _clock();
+        final eventId = _sid('award:$ref');
+        if (await _eventExists(eventId)) return const [];
+        final penalty = diamonds < 0;
+        if (penalty && await _pausedAt(now)) return const [];
+        await _addEvent(
+          id: eventId,
+          type: penalty ? QuestEventType.penalty : QuestEventType.bonus,
+          at: now,
+          diamonds: diamonds,
+          xp: xp,
+          stats: stats,
+          payload: {'reason': reasonKey, 'ref': ref},
+        );
+        if (!penalty) return const [];
+        return [PenaltyApplied(reasonKey: reasonKey, diamonds: -diamonds), ...await _checkDiscipline(now)];
+      });
+
+  @override
   Future<void> startPause(PauseReason reason, {DateTime? until, DateTime? at}) => _locked(() async {
         final now = at ?? _clock();
         await _db.transaction(() async {

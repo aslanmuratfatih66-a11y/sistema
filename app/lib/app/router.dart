@@ -23,6 +23,15 @@ import '../features/auth/account_screen.dart';
 import '../features/chat/chat_screen.dart';
 import '../features/learning/learning_screen.dart';
 import '../features/workouts/workouts_screen.dart';
+import '../features/alarm/alarm_ring_screen.dart';
+import '../features/alarm/alarms_screen.dart';
+import '../features/blocker/blocked_screen.dart';
+import '../features/blocker/blocker_setup_screen.dart';
+import '../features/finance/finance_screen.dart';
+import '../features/finance_input/bank_sources_screen.dart';
+import '../features/finance_input/receipt_input_screen.dart';
+import '../features/finance_input/statement_import_screen.dart';
+import '../features/market/market_screen.dart';
 import 'app_shell.dart';
 import 'routes.dart';
 
@@ -51,6 +60,18 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.chat, builder: (_, _) => const ChatScreen()),
         GoRoute(path: Routes.learning, builder: (_, _) => const LearningScreen()),
         GoRoute(path: Routes.aiJournal, builder: (_, _) => const AiJournalScreen()),
+        GoRoute(path: Routes.finance, builder: (_, _) => const FinanceScreen()),
+        GoRoute(
+          path: Routes.financeReceipt,
+          builder: (_, state) => ReceiptInputScreen(mode: state.uri.queryParameters['mode']),
+        ),
+        GoRoute(path: Routes.financeBanks, builder: (_, _) => const BankSourcesScreen()),
+        GoRoute(path: Routes.financeStatement, builder: (_, _) => const StatementImportScreen()),
+        GoRoute(path: Routes.market, builder: (_, _) => const MarketScreen()),
+        GoRoute(path: Routes.blocker, builder: (_, _) => const BlockerSetupScreen()),
+        GoRoute(path: Routes.blocked, builder: (_, state) => BlockedScreen(app: state.uri.queryParameters['app'])),
+        GoRoute(path: Routes.alarms, builder: (_, _) => const AlarmsScreen()),
+        GoRoute(path: Routes.alarmRing, builder: (_, state) => AlarmRingScreen(alarmId: state.uri.queryParameters['id'])),
         GoRoute(
           path: Routes.editStepPattern,
           builder: (_, state) {
