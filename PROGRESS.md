@@ -2,7 +2,7 @@
 
 ## Сейчас
 Этап: 0.5 — Предпросмотр с hot reload (доработки по обновлённому SPEC/STAGES, 2026-10-22)
-Статус: готов, собирается в CI, затем ждёт проверки владельцем
+Статус: готов, CI зелёный (app 39764610352, server 39764610331), ждёт проверки владельцем
 Следующий шаг: после ответа владельца — доработки этапа 2 (§8.13 режимы дня: автоплан, занятость, адаптивная сложность, итоги дня; §8.17 вредные привычки)
 Этап 0.5 итог: main_preview.dart (ProviderContainer с веб-заглушками lib/preview/preview_fakes.dart), демо-данные lib/preview/demo_data.dart (флаг preview.demoSeeded), устройства iPhone 15 Pro / Pixel 9 / Galaxy S25 (Alt+1/2/3, платформа по устройству), Alt+L ru/tr, Alt+T шрифт 1.0/1.3/1.5, Alt+R сброс демо; README.md «Предпросмотр»; все маршруты открываются в headless Chrome без исключений
 Порядок (решение владельца): 0.5 → доработки этапа 2 (§8.13 режимы дня, §8.17 привычки) → этапа 5 (swap/проверка памяти в install.sh, MemoryMax=300M, очередь фото) → этапа 6 (ai.yaml, две роли, карточки, aibench, $27, свободная ходьба, GLB/VRM, формы, characters_private) → этап 9. После КАЖДОГО шага: зелёный CI, короткий отчёт, пауза на проверку на телефоне. Ключей ИИ нет — всё ИИ на шаблонах. МИРЭА — в самом конце.
@@ -144,6 +144,7 @@ A–F + интеграция, CI зелёный (run 39704046010 app, 3970404601
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
+Этап 0.5: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39764610352 — зелёный; ipa https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39764610352/artifacts/12420166508 , apk https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39764610352/artifacts/12419394196
 Этап 8: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39752642156 — зелёный
 - ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39752642156/artifacts/12414104260
 - apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39752642156/artifacts/12415176326
