@@ -2,8 +2,8 @@
 
 ## Сейчас
 Этап: 7 — Финансы, маркет, дисциплина
-Статус: A–E готовы, интеграция сделана, собирается в CI
-Следующий шаг: `gh run watch`; при красном — `gh run view --log-failed` (риски: AlarmKit API в AlarmKitChannel.swift, Kotlin Blocker*/Bank*/Alarm*), до 8 итераций; затем этап 8
+Статус: завершён, CI зелёный (app 39709022096, server 39709022039)
+Следующий шаг: этап 8 — Подключения и полировка (STAGES.md), начать с каркаса
 
 ## Этап 7 — чек-лист
 - [x] Каркас: БД v7 (FinAccounts, FinCategories, FinTransactions, FinBudgets, FinGoals, FinSubscriptions, FinDebts, CryptoHoldings, BankInbox, MarketItems, BlockedApps, BlockAttempts, Alarms, AlarmRuns), enums (FinAccountKind, FinTxKind, FinTxSource, MarketBudget, AlarmTask); QuestService.award (◆ вне квестов, идемпотентно по ref); контракты domain/finance/finance_api.dart (FinanceLedger, FxRatesSource, BudgetAdvisor), core/security/app_lock.dart, core/alarm/alarm_api.dart; маршруты /finance /finance/receipt /finance/banks /finance/statement /market /blocker /blocked /alarms /alarm/ring (заглушки); local_auth, sensors_plus; Info.plist: NSFaceIDUsageDescription, NSAlarmKitUsageDescription; AlarmKitChannel.swift (заготовка, в pbxproj); сервер: ai.Document (PDF), пакеты finance/market (контракт эндпоинтов в doc-комментарии), проводка в main.go
@@ -13,7 +13,7 @@
 - [x] D Блокировка: Android UsageStats + оверлей (BlockerService specialUse), iOS мастер «Команд» + sistema://app/blocked?app=…, штраф с 3-й попытки за ночь, DisciplineBlockerSync
 - [x] E Будильник: AlarmManager.setAlarmClock + full-screen + AlarmRingService; AlarmKit (iOS 26) + страховочная серия уведомлений; приседания (акселерометр) или QR; награда за подъём; будильник дисциплины
 - [x] Интеграция: манифест (SMS, usage stats, overlay, FGS specialUse/mediaPlayback, exact alarm, full-screen; сервисы/ресиверы Bank*/Blocker*/Alarm*), MainActivity (каналы, onNewIntent), main (overrides финансов/AppLock/блокировки/будильника, запуск BankInbox/BlockerSync/AlarmSync), AppLockGate в builder (SistemaApp(appLock:true)), reminder_filters.dart (упрёки ИИ + напоминания подписок/долгов 'fin:'), «Ещё»: Финансы/Маркет/Будильник/Блокировка + сводка финансов, url_launcher, photoId в ReceiptResult
-- [ ] CI зелёный
+- [x] CI зелёный (analyze-test, ios, android, server)
 
 ## Этап 6 — итог
 A–F + интеграция, CI зелёный (run 39704046010 app, 39704046012 server).
@@ -126,6 +126,7 @@ A–F + интеграция, CI зелёный (run 39704046010 app, 3970404601
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
+Этап 7: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39709022096 — зелёный (analyze-test, ios, android); server 39709022039 — зелёный
 Этапы 4–5: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39676717162 — зелёный (analyze-test, ios, android, server)
 Этап 3: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537 — зелёный
 - ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537/artifacts/12369508087
