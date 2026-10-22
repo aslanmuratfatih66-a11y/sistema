@@ -185,7 +185,7 @@ class _HabitCard extends ConsumerWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 6),
-                  child: Text(l.habDaysWithout(days), style: SysText.secondary),
+                  child: Text(l.habDaysWithout, style: SysText.secondary),
                 ),
               ),
               Text(l.habBest(habit.best(now)), style: SysText.monoSmall.copyWith(color: SysColors.textCaption)),

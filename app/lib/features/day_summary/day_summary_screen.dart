@@ -15,7 +15,6 @@ import '../../domain/quests/quest_l10n.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
 import '../character/model/character_profile.dart';
-import '../quests/data/quest_providers.dart';
 import '../schedule/widgets/schedule_common.dart';
 
 /// Префикс instanceId уведомления «Итоги дня» (ReminderRequest), чтобы открыть этот экран.
@@ -114,7 +113,8 @@ class _DaySummaryScreenState extends ConsumerState<DaySummaryScreen> {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    final day = widget.day ?? ref.watch(questTodayProvider);
+    final now = DateTime.now();
+    final day = widget.day ?? DateTime(now.year, now.month, now.day);
     final async = ref.watch(daySummaryProvider(day));
     final s = async.value;
     if (s != null && !_spoken) {
