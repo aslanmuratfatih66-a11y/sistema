@@ -5,7 +5,8 @@ import 'package:go_router/go_router.dart';
 import '../features/body/body_screen.dart';
 import '../features/discipline/discipline_screen.dart';
 import '../features/home/home_screen.dart';
-import '../features/nutrition/nutrition_screen.dart';
+import '../features/health/health_screen.dart';
+import '../features/more/more_screen.dart';
 import '../features/onboarding/onboarding_progress.dart';
 import '../features/onboarding/onboarding_screen.dart';
 import '../features/onboarding/onboarding_step.dart';
@@ -16,7 +17,7 @@ import '../features/quests/quests_screen.dart';
 import '../features/reminders/reminder_settings_screen.dart';
 import '../features/schedule/schedule_screen.dart';
 import '../features/settings/settings_screen.dart';
-import '../features/shop/shop_screen.dart';
+import '../features/shop/shop_tab_screen.dart';
 import '../features/walks/walks_screen.dart';
 import '../features/ai_journal/ai_journal_screen.dart';
 import '../features/auth/account_screen.dart';
@@ -58,6 +59,7 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.walks, builder: (_, _) => const WalksScreen()),
         GoRoute(path: Routes.account, builder: (_, _) => const AccountScreen()),
         GoRoute(path: Routes.chat, builder: (_, _) => const ChatScreen()),
+        GoRoute(path: Routes.settings, builder: (_, _) => const SettingsScreen()),
         GoRoute(path: Routes.learning, builder: (_, _) => const LearningScreen()),
         GoRoute(path: Routes.aiJournal, builder: (_, _) => const AiJournalScreen()),
         GoRoute(path: Routes.finance, builder: (_, _) => const FinanceScreen()),
@@ -89,13 +91,13 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
               GoRoute(path: Routes.quests, builder: (_, _) => const QuestsScreen()),
             ]),
             StatefulShellBranch(routes: [
-              GoRoute(path: Routes.nutrition, builder: (_, _) => const NutritionScreen()),
+              GoRoute(path: Routes.health, builder: (_, _) => const HealthScreen()),
             ]),
             StatefulShellBranch(routes: [
-              GoRoute(path: Routes.shop, builder: (_, _) => const ShopScreen()),
+              GoRoute(path: Routes.shop, builder: (_, _) => const ShopTabScreen()),
             ]),
             StatefulShellBranch(routes: [
-              GoRoute(path: Routes.more, builder: (_, _) => const SettingsScreen()),
+              GoRoute(path: Routes.more, builder: (_, _) => const MoreScreen()),
             ]),
           ],
         ),

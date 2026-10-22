@@ -134,6 +134,114 @@ abstract class AppLocalizations {
   /// **'Ещё'**
   String get navMore;
 
+  /// No description provided for @navHealth.
+  ///
+  /// In ru, this message translates to:
+  /// **'Здоровье'**
+  String get navHealth;
+
+  /// No description provided for @navSettings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Настройки'**
+  String get navSettings;
+
+  /// No description provided for @healthBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тело'**
+  String get healthBody;
+
+  /// No description provided for @shopTabPoints.
+  ///
+  /// In ru, this message translates to:
+  /// **'За баллы'**
+  String get shopTabPoints;
+
+  /// No description provided for @shopTabPurchases.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупки'**
+  String get shopTabPurchases;
+
+  /// No description provided for @moreAddExpense.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расход'**
+  String get moreAddExpense;
+
+  /// No description provided for @moreSections.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разделы'**
+  String get moreSections;
+
+  /// No description provided for @moreSettingsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Аккаунт, анкета, напоминания, голос, язык, данные'**
+  String get moreSettingsHint;
+
+  /// No description provided for @setSectionAi.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персонаж и ИИ'**
+  String get setSectionAi;
+
+  /// No description provided for @mktSettingsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Покупки'**
+  String get mktSettingsTitle;
+
+  /// No description provided for @mktSettingsHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазины и бюджет для подборки ИИ'**
+  String get mktSettingsHint;
+
+  /// No description provided for @mktSettingsStores.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазины'**
+  String get mktSettingsStores;
+
+  /// No description provided for @mktSettingsBudget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бюджет на покупки в месяц'**
+  String get mktSettingsBudget;
+
+  /// No description provided for @mktSettingsBudgetHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Товары дороже помечаются «не по бюджету». Пусто — без лимита.'**
+  String get mktSettingsBudgetHint;
+
+  /// No description provided for @homeQuickFood.
+  ///
+  /// In ru, this message translates to:
+  /// **'Еда'**
+  String get homeQuickFood;
+
+  /// No description provided for @homeQuickWorkout.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка'**
+  String get homeQuickWorkout;
+
+  /// No description provided for @homeQuickWalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прогулка'**
+  String get homeQuickWalk;
+
+  /// No description provided for @homeQuickWaterAdded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вода записана'**
+  String get homeQuickWaterAdded;
+
   /// No description provided for @sectionEmptyTitle.
   ///
   /// In ru, this message translates to:

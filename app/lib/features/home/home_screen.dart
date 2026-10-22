@@ -1,6 +1,6 @@
-// Главный экран (вкладка «Статус», SPEC §4 + уточнение 2026-10-21): только шапка, сжатый
-// статус, эффекты, следующий квест и лента дня. Квесты/босс — во вкладке «Квесты», калории —
-// в «Питании», финансы — в «Ещё». Нижняя навигация — в AppShell.
+// Главный экран (вкладка «Статус», SPEC §4 + docs/navigation.md): шапка, сжатый статус, быстрые
+// действия, эффекты, следующий квест и лента дня. Квесты/босс — во вкладке «Квесты», калории —
+// в «Здоровье», финансы — в «Ещё». Нижняя навигация — в AppShell.
 // Данные — движок квестов + расписание/план (data/home_live_data.dart).
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,6 +14,7 @@ import 'widgets/day_timeline_panel.dart';
 import 'widgets/effects_panel.dart';
 import 'widgets/home_header.dart';
 import 'widgets/next_quest_panel.dart';
+import 'widgets/quick_actions_panel.dart';
 import 'widgets/stat_points_sheet.dart';
 import 'widgets/status_panel.dart';
 
@@ -32,10 +33,11 @@ class HomeScreen extends ConsumerWidget {
       HomeHeader(
         unread: data?.unreadNotifications ?? 0,
         programStart: data?.programStart ?? ref.watch(homeContextProvider.select((c) => c.programStart)),
-        onSettings: () => context.go(Routes.more),
+        onSettings: () => context.push(Routes.settings),
       ),
       if (data != null) ...[
         StatusPanel(player: data.player, onStatPoints: () => showStatPointsSheet(context)),
+        const QuickActionsPanel(),
         EffectsPanel(effects: data.effects),
         if (data.nextQuest != null)
           NextQuestPanel(key: ValueKey('next-${data.nextQuest!.instanceId}'), quest: data.nextQuest!),

@@ -1,4 +1,5 @@
-// Вкладка «Ещё»: разделы анкеты, план/расписание, язык, данные (экспорт/импорт), о приложении.
+// Настройки (шестерёнка на главном, плитка в «Ещё»): аккаунт, анкета, напоминания/дисциплина, персонаж и ИИ
+// (голос, параметры покупок, оверлей), язык, данные (экспорт/импорт), о приложении.
 import 'package:drift/drift.dart' show Value;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
@@ -14,7 +15,9 @@ import '../../core/sync/sync_api.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
 import '../auth/sync_indicator.dart';
-import '../finance/finance_summary.dart';
+import '../common/nav_row.dart';
+import '../market/market_settings.dart';
+import '../schedule/widgets/schedule_common.dart';
 import '../onboarding/onboarding_progress.dart';
 import '../onboarding/onboarding_step.dart';
 import 'backup/backup_platform.dart';
@@ -43,20 +46,19 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    return SafeArea(
-      bottom: false,
-      child: ListView(
-        key: const Key('settings-list'),
-        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+    return ScheduleSubPage(
+      key: const Key('settings-list'),
+      title: l.navSettings,
+      onBack: () => context.canPop() ? context.pop() : context.go(Routes.more),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const FinanceSummaryPanel(),
-          const SizedBox(height: 16),
           SysPanel(
             title: l.synTitle,
             child: Row(
               children: [
                 Expanded(
-                  child: _NavRow(
+                  child: NavRow(
                     glyph: SysGlyph.send,
                     title: l.synTitle,
                     hint: switch (ref.watch(accountProvider).value) {
@@ -74,111 +76,52 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           _questionnairePanel(l),
           const SizedBox(height: 16),
           SysPanel(
-            title: l.setSectionPlan,
+            title: l.setSectionQuests,
             appearDelay: const Duration(milliseconds: 40),
             child: Column(
               children: [
-                _NavRow(
-                  glyph: SysGlyph.book,
-                  title: l.setPlan,
-                  hint: l.setPlanHint,
-                  onTap: () => context.push(Routes.plan),
+                NavRow(
+                  glyph: SysGlyph.bell,
+                  title: l.setReminders,
+                  hint: l.setRemindersHint,
+                  onTap: () => context.push(Routes.reminders),
                 ),
-                _NavRow(
-                  glyph: SysGlyph.clock,
-                  title: l.setSchedule,
-                  hint: l.setScheduleHint,
-                  onTap: () => context.push(Routes.schedule),
+                NavRow(
+                  glyph: SysGlyph.shield,
+                  title: l.setDiscipline,
+                  hint: l.setDisciplineHint,
+                  onTap: () => context.push(Routes.discipline),
                 ),
               ],
             ),
           ),
           const SizedBox(height: 16),
           SysPanel(
-            title: l.setSectionQuests,
+            title: l.setSectionAi,
             appearDelay: const Duration(milliseconds: 60),
             child: Column(
               children: [
-                _NavRow(
-                  glyph: SysGlyph.bell,
-                  title: l.setReminders,
-                  hint: l.setRemindersHint,
-                  onTap: () => context.push(Routes.reminders),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.shield,
-                  title: l.setDiscipline,
-                  hint: l.setDisciplineHint,
-                  onTap: () => context.push(Routes.discipline),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.book,
-                  title: l.int6Learning,
-                  hint: l.int6LearningHint,
-                  onTap: () => context.push(Routes.learning),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.sparkle,
-                  title: l.int6AiJournal,
-                  hint: l.int6AiJournalHint,
-                  onTap: () => context.push(Routes.aiJournal),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.wallet,
-                  title: l.int7Finance,
-                  hint: l.int7FinanceHint,
-                  onTap: () => context.push(Routes.finance),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.shop,
-                  title: l.int7Market,
-                  hint: l.int7MarketHint,
-                  onTap: () => context.push(Routes.market),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.clock,
-                  title: l.int7Alarms,
-                  hint: l.int7AlarmsHint,
-                  onTap: () => context.push(Routes.alarms),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.shield,
-                  title: l.int7Blocker,
-                  hint: l.int7BlockerHint,
-                  onTap: () => context.push(Routes.blocker),
-                ),
-                _NavRow(
+                NavRow(
                   glyph: SysGlyph.mic,
                   title: l.int6Voice,
                   hint: l.int6VoiceHint,
                   onTap: () => showVoicePicker(context),
                 ),
-                _NavRow(
-                  glyph: SysGlyph.heart,
-                  title: l.setBody,
-                  hint: l.setBodyHint,
-                  onTap: () => context.push(Routes.body),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.dumbbell,
-                  title: l.setWorkouts,
-                  hint: l.setWorkoutsHint,
-                  onTap: () => context.push(Routes.workouts),
-                ),
-                _NavRow(
-                  glyph: SysGlyph.walk,
-                  title: l.setWalks,
-                  hint: l.setWalksHint,
-                  onTap: () => context.push(Routes.walks),
+                NavRow(
+                  key: const Key('settings-market'),
+                  glyph: SysGlyph.shop,
+                  title: l.mktSettingsTitle,
+                  hint: l.mktSettingsHint,
+                  onTap: () => showMarketSettingsSheet(context),
                 ),
               ],
             ),
           ),
           const SizedBox(height: 16),
-          _languagePanel(l),
-          const SizedBox(height: 16),
           // Android: персонаж поверх других приложений (на iOS виджет пустой).
           const Padding(padding: EdgeInsets.only(bottom: 16), child: SystemOverlaySettingsTile()),
+          _languagePanel(l),
+          const SizedBox(height: 16),
           _dataPanel(l),
           const SizedBox(height: 16),
           _aboutPanel(l),
@@ -206,7 +149,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       child: Column(
         children: [
           for (final step in OnboardingStep.values)
-            _NavRow(
+            NavRow(
               key: Key('settings-step-${step.name}'),
               glyph: step.glyph,
               title: step.title(l),
@@ -256,7 +199,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _NavRow(
+            NavRow(
               key: const Key('settings-export'),
               glyph: SysGlyph.send,
               title: l.setExport,
@@ -278,14 +221,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   onChanged: (v) => setState(() => _includePhotos = v),
                 ),
               ),
-            _NavRow(
+            NavRow(
               key: const Key('settings-import'),
               glyph: SysGlyph.arrowDown,
               title: l.setImport,
               hint: l.setImportHint,
               onTap: _busy ? null : _import,
             ),
-            _NavRow(
+            NavRow(
               key: const Key('settings-restart'),
               glyph: SysGlyph.bolt,
               title: l.setRestart,
@@ -514,65 +457,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 }
 
 /// Строка-переход: иконка, название, подсказка, итог справа.
-class _NavRow extends StatelessWidget {
-  const _NavRow({super.key, required this.glyph, required this.title, required this.onTap, this.hint, this.trailing});
-
-  final SysGlyph glyph;
-  final String title;
-  final String? hint;
-  final String? trailing;
-  final VoidCallback? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final h = hint;
-    final t = trailing;
-    return MergeSemantics(
-      child: Semantics(
-        button: true,
-        child: InkWell(
-          onTap: onTap,
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(minHeight: SysDims.minTap),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 6),
-              child: Row(
-                children: [
-                  SysIcon(glyph, size: 20, color: onTap == null ? SysColors.textInactive : SysColors.accentLight),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(title, style: SysText.body),
-                        if (h != null) Text(h, style: SysText.caption),
-                      ],
-                    ),
-                  ),
-                  if (t != null) ...[
-                    const SizedBox(width: 8),
-                    Flexible(
-                      child: Text(
-                        t,
-                        style: SysText.monoSmall.copyWith(color: SysColors.textSecondary),
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.end,
-                      ),
-                    ),
-                  ],
-                  const SizedBox(width: 4),
-                  const SysIcon(SysGlyph.chevronRight, size: 20, color: SysColors.textInactive),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class _InfoRow extends StatelessWidget {
   const _InfoRow({required this.label, required this.value});
 

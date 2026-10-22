@@ -5,7 +5,8 @@ abstract final class Routes {
   // Вкладки.
   static const status = '/status';
   static const quests = '/quests';
-  static const nutrition = '/nutrition';
+  /// «Здоровье»: Питание · Тренировки · Тело · Прогулки (раздел — healthSectionProvider).
+  static const health = '/health';
   static const shop = '/shop';
   static const more = '/more';
 
@@ -21,6 +22,7 @@ abstract final class Routes {
   static const walks = '/walks';
   static const account = '/account';
   static const chat = '/chat';
+  static const settings = '/settings';
   static const learning = '/learning';
 
   /// Расходы ИИ и журнал действий ИИ (с отменой).

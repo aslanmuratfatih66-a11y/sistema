@@ -8,7 +8,9 @@ import 'package:sistema/features/nutrition/data/food_lookup.dart';
 import 'package:sistema/features/nutrition/data/recipe_repository.dart';
 import 'package:sistema/features/nutrition/domain/nutrition_math.dart';
 import 'package:sistema/features/nutrition/nutrition_providers.dart';
+import 'package:sistema/features/nutrition/nutrition_format.dart';
 import 'package:sistema/features/nutrition/nutrition_screen.dart';
+import 'package:sistema/features/nutrition/screens/shopping_screens.dart';
 import 'package:sistema/features/nutrition/platform/nutrition_platform.dart';
 import 'package:sistema/features/plan/model/plan.dart';
 import 'package:sistema/l10n/app_localizations.dart';
@@ -226,7 +228,9 @@ void main() {
     await _tap(tester, find.byTooltip(l.schBack));
     expect(find.text('Омлет'), findsOneWidget);
 
-    await _tap(tester, find.byKey(const Key('nut-open-shopping')));
+    // Список покупок переехал в «Магазин» → «Покупки»; открываем его экран напрямую.
+    pushNutrition<void>(tester.element(find.byType(NutritionScreen)), const ShoppingListScreen());
+    await tester.pump(const Duration(milliseconds: 400));
     await _tap(tester, find.byKey(const Key('nut-shop-from-plan')));
     final items = await tester.runAsync(() => db.select(db.shoppingItems).get());
     expect(items, isNotEmpty);

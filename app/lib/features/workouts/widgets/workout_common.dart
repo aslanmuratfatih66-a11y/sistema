@@ -21,6 +21,7 @@ class WorkoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final b = bottom;
+    if (EmbeddedTab.of(context)) return EmbeddedTabBody(bottom: b, actions: actions, child: child);
     return Scaffold(
       backgroundColor: SysColors.background,
       body: SystemBackground(

@@ -21,6 +21,7 @@ import 'screens/reports_screen.dart';
 import 'screens/transactions_screen.dart';
 import 'screens/tx_edit_screen.dart';
 import 'widgets/fin_common.dart';
+import '../shop/shop_tab_screen.dart';
 
 class FinanceScreen extends ConsumerStatefulWidget {
   const FinanceScreen({super.key});
@@ -157,11 +158,11 @@ class _BalancePanel extends ConsumerWidget {
   }
 }
 
-class _InputPanel extends StatelessWidget {
+class _InputPanel extends ConsumerWidget {
   const _InputPanel();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
     return SysPanel(
       title: l.finInput,
@@ -202,7 +203,10 @@ class _InputPanel extends StatelessWidget {
             SysButton.secondary(label: l.finReceiptPhoto, onPressed: () => context.push('${Routes.financeReceipt}?mode=photo')),
             SysButton.secondary(label: l.finBanks, onPressed: () => context.push(Routes.financeBanks)),
             SysButton.secondary(label: l.finStatement, onPressed: () => context.push(Routes.financeStatement)),
-            SysButton.secondary(label: l.finMarket, icon: SysGlyph.shop, onPressed: () => context.push(Routes.market)),
+            SysButton.secondary(label: l.finMarket, icon: SysGlyph.shop, onPressed: () {
+              ref.read(shopSectionProvider.notifier).set(ShopSection.purchases);
+              context.go(Routes.shop);
+            }),
           ]),
         ],
       ),

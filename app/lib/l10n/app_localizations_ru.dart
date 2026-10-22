@@ -7906,4 +7906,58 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get polHidePassword => 'Скрыть пароль';
+
+  @override
+  String get navHealth => 'Здоровье';
+
+  @override
+  String get navSettings => 'Настройки';
+
+  @override
+  String get healthBody => 'Тело';
+
+  @override
+  String get shopTabPoints => 'За баллы';
+
+  @override
+  String get shopTabPurchases => 'Покупки';
+
+  @override
+  String get moreAddExpense => 'Расход';
+
+  @override
+  String get moreSections => 'Разделы';
+
+  @override
+  String get moreSettingsHint => 'Аккаунт, анкета, напоминания, голос, язык, данные';
+
+  @override
+  String get setSectionAi => 'Персонаж и ИИ';
+
+  @override
+  String get mktSettingsTitle => 'Покупки';
+
+  @override
+  String get mktSettingsHint => 'Магазины и бюджет для подборки ИИ';
+
+  @override
+  String get mktSettingsStores => 'Магазины';
+
+  @override
+  String get mktSettingsBudget => 'Бюджет на покупки в месяц';
+
+  @override
+  String get mktSettingsBudgetHint => 'Товары дороже помечаются «не по бюджету». Пусто — без лимита.';
+
+  @override
+  String get homeQuickFood => 'Еда';
+
+  @override
+  String get homeQuickWorkout => 'Тренировка';
+
+  @override
+  String get homeQuickWalk => 'Прогулка';
+
+  @override
+  String get homeQuickWaterAdded => 'Вода записана';
 }

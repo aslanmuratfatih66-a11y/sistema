@@ -12,6 +12,7 @@ import '../../core/db/database.dart';
 import '../../core/models/enums.dart';
 import '../../domain/finance/finance_api.dart';
 import '../plan/data/plan_repository.dart';
+import 'market_settings.dart';
 
 /// Категории маркета (значение колонки MarketItems.category и параметр сервера).
 const marketCategories = ['skin', 'nutrition', 'equipment', 'other'];
@@ -273,6 +274,14 @@ class MarketContextBuilder {
 
   Future<Map<String, Object?>> build() async {
     final ctx = <String, Object?>{};
+    // Параметры из настроек: магазины и месячный бюджет на покупки.
+    try {
+      final prefs = await _ref.read(marketPrefsProvider.future);
+      final stores = prefs.stores;
+      if (stores != null) ctx['stores'] = stores.toList();
+      final budget = prefs.monthBudgetRub;
+      if (budget != null) ctx['budget_month_rub'] = budget;
+    } catch (_) {}
     try {
       final plan = await _ref.read(planRepositoryProvider).latestAccepted();
       if (plan != null) {
@@ -341,6 +350,10 @@ class MarketBudgetUpdater {
         fx = await _ref.read(fxRatesSourceProvider).latest();
       } catch (_) {}
     }
+    int? limit;
+    try {
+      limit = (await _ref.read(marketPrefsProvider.future)).monthBudgetRub;
+    } catch (_) {}
     final repo = _ref.read(marketRepositoryProvider);
     for (final r in items) {
       if (r.status == MarketStatus.bought || r.status == MarketStatus.dismissed) continue;
@@ -349,10 +362,14 @@ class MarketBudgetUpdater {
       final rub = r.currency == 'RUB' ? price : fx?.toRub(price, r.currency);
       if (rub == null) continue;
       MarketBudget? b;
-      try {
-        b = await advisor.judge(rub);
-      } catch (_) {
-        return;
+      if (limit != null && rub > limit * 100) {
+        b = MarketBudget.over;
+      } else {
+        try {
+          b = await advisor.judge(rub);
+        } catch (_) {
+          return;
+        }
       }
       if (b?.name != r.budget) await repo.setBudget(r, b);
     }

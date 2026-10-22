@@ -329,6 +329,7 @@ class _WalkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (EmbeddedTab.of(context)) return EmbeddedTabBody(child: child);
     final l = AppLocalizations.of(context);
     return Scaffold(
       backgroundColor: SysColors.background,

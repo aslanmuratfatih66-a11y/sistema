@@ -12,14 +12,12 @@ import '../../ui/ui.dart';
 import '../home/widgets/tab_section_view.dart';
 import '../onboarding/questionnaire_a/data/photo_repository.dart';
 import 'data/food_repository.dart';
-import 'data/shopping_repository.dart';
 import 'nutrition_format.dart';
 import 'nutrition_providers.dart';
 import 'platform/nutrition_platform.dart';
 import 'screens/food_screens.dart';
 import 'screens/meal_editor_screen.dart';
 import 'screens/recipe_screens.dart';
-import 'screens/shopping_screens.dart';
 import 'widgets/nutrition_panels.dart';
 import '../vision/vision.dart';
 
@@ -155,9 +153,6 @@ class _NutritionScreenState extends ConsumerState<NutritionScreen> {
     final summary = ref.watch(nutritionDayProvider(day)).value ?? NutritionDay.empty;
     final entries = ref.watch(mealEntriesProvider(day)).value ?? const <MealEntryRow>[];
     final waterLogs = ref.watch(waterLogsProvider(day)).value ?? const <WaterLogRow>[];
-    final shopping = ref.watch(shoppingItemsProvider).value ?? const <ShoppingItemRow>[];
-    final remaining = shopping.where((i) => !i.done).toList();
-    final remainingSum = ShoppingTotals.of(remaining, fallbackCurrency: defaultCurrency(l)).remaining;
 
     return TabSectionView(
       scrollKey: const Key('nutrition-scroll'),
@@ -234,30 +229,6 @@ class _NutritionScreenState extends ConsumerState<NutritionScreen> {
         DiaryPanel(
           entries: entries,
           onOpen: (e) => _openEditor(MealEditorScreen.diary(day: day, entry: e)),
-        ),
-        SysPanel(
-          title: l.nutShopping,
-          tone: PanelTone.gold,
-          child: InkWell(
-            key: const Key('nut-open-shopping'),
-            onTap: () => pushNutrition<void>(context, const ShoppingListScreen()),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(minHeight: SysDims.minTap),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      remaining.isEmpty
-                          ? l.nutShopNothing
-                          : l.nutShopRemainingCount(remaining.length, totalsText(l, remainingSum)),
-                      style: SysText.secondary,
-                    ),
-                  ),
-                  const SysIcon(SysGlyph.chevronRight, size: 18),
-                ],
-              ),
-            ),
-          ),
         ),
       ],
     );

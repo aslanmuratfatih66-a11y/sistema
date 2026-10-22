@@ -12,7 +12,9 @@ import '../../core/db/database.dart';
 import '../../core/models/enums.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
+import '../nutrition/widgets/shopping_list_panel.dart';
 import 'market_data.dart';
+import 'market_settings.dart';
 
 enum _Tab { fresh, saved, bought }
 
@@ -176,6 +178,7 @@ class _MarketScreenState extends ConsumerState<MarketScreen> {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final all = ref.watch(marketItemsProvider).value ?? const <MarketItemRow>[];
+    final prefs = ref.watch(marketPrefsProvider).value ?? const MarketPrefs();
     bool inTab(MarketItemRow r, _Tab t) => switch (t) {
           _Tab.fresh => r.status == MarketStatus.suggested,
           _Tab.saved => r.status == MarketStatus.saved,
@@ -185,24 +188,27 @@ class _MarketScreenState extends ConsumerState<MarketScreen> {
     final items = [for (final r in byCat) if (inTab(r, _tab)) r];
     int count(_Tab t) => byCat.where((r) => inTab(r, t)).length;
 
-    return Scaffold(
-      backgroundColor: SysColors.background,
-      body: SystemBackground(
-        child: SafeArea(
-          child: ListView(
+    // Во вкладке «Магазин» → «Покупки»: без своей шапки, сверху — список покупок.
+    final embedded = EmbeddedTab.of(context);
+    final list = ListView(
+            key: const Key('market-list'),
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
             children: [
-              Row(
-                children: [
-                  const SysBackButton(),
-                  Expanded(
-                    child: Semantics(
-                      header: true,
-                      child: Text(l.mktTitle.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis),
+              if (embedded) ...[
+                const ShoppingListPanel(),
+                const SizedBox(height: 12),
+              ] else
+                Row(
+                  children: [
+                    const SysBackButton(),
+                    Expanded(
+                      child: Semantics(
+                        header: true,
+                        child: Text(l.mktTitle.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis),
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
               const SizedBox(height: 8),
               SysButton.primary(
                 label: _suggesting ? l.mktSuggesting : l.mktSuggest,
@@ -266,6 +272,7 @@ class _MarketScreenState extends ConsumerState<MarketScreen> {
                   _ItemCard(
                     row: r,
                     pricing: _pricing.contains(r.id),
+                    prefs: prefs,
                     onSave: () => ref.read(marketRepositoryProvider).setStatus(r, MarketStatus.saved),
                     onHide: () => ref.read(marketRepositoryProvider).setStatus(r, MarketStatus.dismissed),
                     onBought: () => _bought(r),
@@ -278,9 +285,11 @@ class _MarketScreenState extends ConsumerState<MarketScreen> {
                 Text(l.mktEstimateNote, style: SysText.caption, textAlign: TextAlign.center),
               ],
             ],
-          ),
-        ),
-      ),
+          );
+    if (embedded) return Material(type: MaterialType.transparency, child: list);
+    return Scaffold(
+      backgroundColor: SysColors.background,
+      body: SystemBackground(child: SafeArea(child: list)),
     );
   }
 }
@@ -346,6 +355,7 @@ class _ItemCard extends StatelessWidget {
   const _ItemCard({
     required this.row,
     required this.pricing,
+    required this.prefs,
     required this.onSave,
     required this.onHide,
     required this.onBought,
@@ -356,6 +366,7 @@ class _ItemCard extends StatelessWidget {
 
   final MarketItemRow row;
   final bool pricing;
+  final MarketPrefs prefs;
   final VoidCallback onSave;
   final VoidCallback onHide;
   final VoidCallback onBought;
@@ -368,7 +379,10 @@ class _ItemCard extends StatelessWidget {
     final l = AppLocalizations.of(context);
     final locale = l.localeName;
     final bought = row.status == MarketStatus.bought;
-    final links = MarketLink.decode(row.links);
+    // Только выбранные в настройках магазины; если ни одного не осталось — все ссылки.
+    final allLinks = MarketLink.decode(row.links);
+    final picked = [for (final x in allLinks) if (prefs.allows(x.store)) x];
+    final links = picked.isEmpty ? allLinks : picked;
     final price = row.price;
     final at = row.priceAt;
     final String priceText;

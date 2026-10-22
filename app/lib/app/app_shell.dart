@@ -49,7 +49,7 @@ class AppShell extends StatelessWidget {
               items: [
                 SysNavItem(glyph: SysGlyph.status, label: l.navStatus),
                 SysNavItem(glyph: SysGlyph.quests, label: l.navQuests),
-                SysNavItem(glyph: SysGlyph.nutrition, label: l.navNutrition),
+                SysNavItem(glyph: SysGlyph.heart, label: l.navHealth),
                 SysNavItem(glyph: SysGlyph.shop, label: l.navShop),
                 SysNavItem(glyph: SysGlyph.more, label: l.navMore),
               ],

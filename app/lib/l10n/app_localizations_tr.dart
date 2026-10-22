@@ -7852,4 +7852,58 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get polHidePassword => 'Şifreyi gizle';
+
+  @override
+  String get navHealth => 'Sağlık';
+
+  @override
+  String get navSettings => 'Ayarlar';
+
+  @override
+  String get healthBody => 'Vücut';
+
+  @override
+  String get shopTabPoints => 'Puanla';
+
+  @override
+  String get shopTabPurchases => 'Alışveriş';
+
+  @override
+  String get moreAddExpense => 'Harcama';
+
+  @override
+  String get moreSections => 'Bölümler';
+
+  @override
+  String get moreSettingsHint => 'Hesap, anket, hatırlatıcılar, ses, dil, veriler';
+
+  @override
+  String get setSectionAi => 'Karakter ve yapay zekâ';
+
+  @override
+  String get mktSettingsTitle => 'Alışveriş';
+
+  @override
+  String get mktSettingsHint => 'Yapay zekâ önerileri için mağazalar ve bütçe';
+
+  @override
+  String get mktSettingsStores => 'Mağazalar';
+
+  @override
+  String get mktSettingsBudget => 'Aylık alışveriş bütçesi';
+
+  @override
+  String get mktSettingsBudgetHint => 'Daha pahalı ürünler «bütçe dışı» olarak işaretlenir. Boş — sınırsız.';
+
+  @override
+  String get homeQuickFood => 'Yemek';
+
+  @override
+  String get homeQuickWorkout => 'Antrenman';
+
+  @override
+  String get homeQuickWalk => 'Yürüyüş';
+
+  @override
+  String get homeQuickWaterAdded => 'Su kaydedildi';
 }

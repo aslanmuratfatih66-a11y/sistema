@@ -24,35 +24,41 @@ class TabSectionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locale = Localizations.localeOf(context);
+    // Внутри вкладки с переключателем заголовок рисует сама вкладка.
+    final embedded = EmbeddedTab.of(context);
     return Material(
       type: MaterialType.transparency,
       child: SafeArea(
         bottom: false,
         child: ListView(
           key: scrollKey,
-          padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+          padding: EdgeInsets.fromLTRB(16, embedded ? 8 : 12, 16, 24),
           children: [
-            Semantics(
-              header: true,
-              child: Row(
-                children: [
-                  SysIcon(glyph, size: 22, color: SysColors.accentLight),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      upperFor(title, locale),
-                      style: SysText.heading.copyWith(
-                        fontSize: 20,
-                        letterSpacing: 2.4,
-                        color: SysColors.accentLighter,
-                        shadows: const [Shadow(color: SysColors.accent, blurRadius: 8)],
+            if (!embedded)
+              Semantics(
+                header: true,
+                child: Row(
+                  children: [
+                    SysIcon(glyph, size: 22, color: SysColors.accentLight),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        upperFor(title, locale),
+                        style: SysText.heading.copyWith(
+                          fontSize: 20,
+                          letterSpacing: 2.4,
+                          color: SysColors.accentLighter,
+                          shadows: const [Shadow(color: SysColors.accent, blurRadius: 8)],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            for (final c in children) ...[const SizedBox(height: gap), c],
+            for (var i = 0; i < children.length; i++) ...[
+              if (!embedded || i > 0) const SizedBox(height: gap),
+              children[i],
+            ],
           ],
         ),
       ),
