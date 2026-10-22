@@ -6,6 +6,7 @@ import '../../core/models/enums.dart';
 import '../../domain/quests/quest_api.dart';
 import '../../domain/quests/quest_l10n.dart';
 import '../../l10n/app_localizations.dart';
+import 'model/character_profile.dart' show tapLines;
 
 /// Реакция на событие: состояние + реплика.
 typedef CharacterLine = ({CharacterState state, String line});
@@ -40,13 +41,8 @@ String idleLine(AppLocalizations l, String mode, String name, math.Random rnd) =
       _ => [l.chrIdleNormal1(name), l.chrIdleNormal2(name)],
     });
 
-/// Короткая реплика на обычный тап по персонажу (без чата).
-String tapLine(AppLocalizations l, String mode, String name, math.Random rnd) => _pick(rnd, switch (mode) {
-      'soft' => [l.chrTapSoft1(name), l.chrTapSoft2(name), l.chrTapSoft3],
-      'strict' => [l.chrTapStrict1(name), l.chrTapStrict2(name), l.chrTapStrict3],
-      'harsh' => [l.chrTapHarsh1(name), l.chrTapHarsh2(name), l.chrTapHarsh3],
-      _ => [l.chrTapNormal1(name), l.chrTapNormal2(name), l.chrTapNormal3],
-    });
+/// Короткая реплика на обычный тап по персонажу (без чата): готовые фразы + подсказка про удержание.
+String tapLine(AppLocalizations l, String mode, math.Random rnd) => _pick(rnd, [...tapLines(l, mode), l.chrTapHoldHint]);
 
 /// Провал/штраф в мягком режиме — разочарование (talk), иначе злость (angry).
 CharacterState _upset(String mode) => mode == 'soft' ? CharacterState.talk : CharacterState.angry;

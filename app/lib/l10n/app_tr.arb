@@ -3352,5 +3352,6 @@
   "talkPaused": "Duraklatıldı. Devam etmek için ekrana dokunun.",
   "talkOfflineHint": "Yapay zekâ şu an kullanılamıyor — hazır yanıt veriyorum.",
   "talkExitHint": "Çıkmak için aşağı kaydırın. Sözümü kesmek için dokunun.",
-  "chrSemanticsTalk": "{name}: dokunun — kısa bir söz; 3 saniye basılı tutun — canlı sohbet; kaldırmak için aşağı kaydırın"
+  "chrSemanticsTalk": "{name}: dokunun — kısa bir söz; 3 saniye basılı tutun — canlı sohbet; kaldırmak için aşağı kaydırın",
+  "chrTapHoldHint": "Üç saniye basılı tut — konuşalım."
 }

@@ -134,6 +134,12 @@ abstract class AppLocalizations {
   /// **'Ещё'**
   String get navMore;
 
+  /// No description provided for @chrTapHoldHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подержи меня три секунды — поговорим.'**
+  String get chrTapHoldHint;
+
   /// No description provided for @talkTitle.
   ///
   /// In ru, this message translates to:

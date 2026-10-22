@@ -8077,4 +8077,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String chrSemanticsTalk(String name) {
     return '$name: dokunun — kısa bir söz; 3 saniye basılı tutun — canlı sohbet; kaldırmak için aşağı kaydırın';
   }
+
+  @override
+  String get chrTapHoldHint => 'Üç saniye basılı tut — konuşalım.';
 }

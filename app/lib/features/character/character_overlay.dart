@@ -274,7 +274,7 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Ticker
     }
     if (!_active) return;
     final l = AppLocalizations.of(context);
-    _say(tapLine(l, _mode, _playerName(l), _rnd), CharacterState.happy);
+    _say(tapLine(l, _mode, _rnd), CharacterState.happy);
   }
 
   void _holdStart() {

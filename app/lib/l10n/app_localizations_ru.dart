@@ -8131,4 +8131,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String chrSemanticsTalk(String name) {
     return '$name: нажмите — короткая реплика; удерживайте 3 секунды — живой разговор; смахните вниз, чтобы убрать';
   }
+
+  @override
+  String get chrTapHoldHint => 'Подержи меня три секунды — поговорим.';
 }
