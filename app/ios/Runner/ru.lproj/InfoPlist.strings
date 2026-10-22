@@ -1,0 +1,12 @@
+/* Русские описания разрешений (совпадают с Info.plist). */
+"CFBundleDisplayName" = "Система";
+"NSCameraUsageDescription" = "Камера нужна для фото тела и кожи (оценка прогресса), сканирования штрихкодов и чеков.";
+"NSPhotoLibraryUsageDescription" = "Галерея нужна, чтобы добавить фото еды, тела или чека из уже снятых.";
+"NSSpeechRecognitionUsageDescription" = "Распознавание речи нужно, чтобы говорить с персонажем голосом.";
+"NSFaceIDUsageDescription" = "Face ID защищает вход в приложение и раздел финансов.";
+"NSAlarmKitUsageDescription" = "Будильник-квест звонит, пока вы не выполните задание.";
+"NSMicrophoneUsageDescription" = "Микрофон нужен, чтобы говорить с персонажем голосом.";
+"NSMotionUsageDescription" = "Датчики движения считают шаги и дистанцию для квестов.";
+"NSLocationWhenInUseUsageDescription" = "Геолокация нужна для маршрутов прогулок и поиска ближайших магазинов.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Геолокация «Всегда» нужна, чтобы прогулка с голосовыми подсказками работала с выключенным экраном.";
+"NSAppleMusicUsageDescription" = "Доступ к медиатеке нужен, чтобы показывать текущий трек на прогулке и тренировке.";

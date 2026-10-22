@@ -25,7 +25,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get navShop => 'Mağaza';
 
   @override
-  String get navMore => 'Daha fazla';
+  String get navMore => 'Diğer';
 
   @override
   String get sectionEmptyTitle => 'Bölüm geliştiriliyor';
@@ -39,7 +39,6 @@ class AppLocalizationsTr extends AppLocalizations {
       days,
       locale: localeName,
       other: 'Sertifikanın süresi $days gün içinde doluyor',
-      one: 'Sertifikanın süresi $days gün içinde doluyor',
       zero: 'Sertifikanın süresi bugün doluyor',
     );
     return '$_temp0';
@@ -73,7 +72,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeStatusTitle => 'Durum';
 
   @override
-  String get homeLevelShort => 'SV';
+  String get homeLevelShort => 'LV';
 
   @override
   String homeLevelSemantics(int level) {
@@ -91,14 +90,13 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: '$count günlük seri',
-      one: '$count günlük seri',
     );
     return '$_temp0';
   }
 
   @override
   String homeXpLabel(int level) {
-    return 'Deneyim · SV $level hedefi';
+    return 'Deneyim · sonraki: LV $level';
   }
 
   @override
@@ -245,12 +243,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String homeQuestRefusedMessage(String quest, String points) {
-    return '«$quest» görevi reddedildi. Ceza: −$points ◆.';
+    return '“$quest” görevi reddedildi. Ceza: −$points ◆.';
   }
 
   @override
   String get homeNoWaterMessage =>
-      'Görev ertelendi: su yakınında olduğunda Sistem hatırlatacak.';
+      'Görev ertelendi: su yakında olduğunda Sistem hatırlatacak.';
 
   @override
   String get homeOk => 'Anladım';
@@ -312,7 +310,7 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get homeBossTitle => 'Haftanın patronu';
+  String get homeBossTitle => 'Haftanın bossu';
 
   @override
   String homeBossTimeLeft(String days, String time) {
@@ -326,7 +324,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String homeBossReward(String points, String title) {
-    return 'Ödül: +$points ◆ ve «$title» unvanı';
+    return 'Ödül: +$points ◆ ve “$title” unvanı';
   }
 
   @override
@@ -348,7 +346,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeLimit => 'Limit';
 
   @override
-  String get homeUntilStipend => 'Bursa kalan';
+  String get homeUntilStipend => 'Burs gününe';
 
   @override
   String homeDaysCount(int count) {
@@ -356,7 +354,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: '$count gün',
-      one: '$count gün',
     );
     return '$_temp0';
   }
@@ -386,16 +383,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeDemoPlayerTitle => 'Uyanmış';
 
   @override
-  String get homeDemoEffectVigor => 'Zindelik +%5 deneyim';
+  String get homeDemoEffectVigor => 'Zindelik: +%5 deneyim';
 
   @override
-  String get homeDemoEffectDehydration => 'Susuzluk −%10 dayanıklılık';
+  String get homeDemoEffectDehydration => 'Susuzluk: −%10 dayanıklılık';
 
   @override
   String get homeDemoNextQuest => '500 ml su iç';
 
   @override
-  String get homeDemoQuestWakeUp => '07:00’den önce kalk';
+  String get homeDemoQuestWakeUp => '07:00\'den önce kalk';
 
   @override
   String get homeDemoQuestBreakfast => 'Proteinli kahvaltı';
@@ -422,7 +419,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeDemoQuestSteps => '8.000 adım yürü';
 
   @override
-  String get homeDemoQuestSleep => '23:00’ten önce yat';
+  String get homeDemoQuestSleep => '23:00\'ten önce yat';
 
   @override
   String get homeDemoBossGoal => 'Bu hafta 5 antrenman tamamla';
@@ -432,7 +429,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get homeDemoAssistantLine =>
-      'Su hedefinin %48’i tamam. 11:30’a kadar bir bardak iç, «Zindelik» bir saat daha sürsün.';
+      'Su hedefinin %48\'i tamam. 11:30\'a kadar bir bardak iç, “Zindelik” bir saat daha sürsün.';
 
   @override
   String get hqStatStrengthShort => 'GÜÇ';
@@ -517,10 +514,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get bdySleepWakeDay => 'Sabah (kalkış günü)';
 
   @override
-  String get bdySleepBed => 'Yattım';
+  String get bdySleepBed => 'Yatış';
 
   @override
-  String get bdySleepWake => 'Kalktım';
+  String get bdySleepWake => 'Kalkış';
 
   @override
   String get bdySleepQuality => 'Uyku kalitesi';
@@ -624,7 +621,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get bdyPhotoCompareHint =>
-      '«Önce» ve «sonra»yı karşılaştırmak için iki fotoğraf seçin.';
+      '“Önce” ve “sonra”yı karşılaştırmak için iki fotoğraf seçin.';
 
   @override
   String get bdyPhotoCompareNeedTwo =>
@@ -634,7 +631,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get bdyPoseOther => 'Diğer';
 
   @override
-  String get bdyCompareSlider => 'Perde';
+  String get bdyCompareSlider => 'Kaydırıcı';
 
   @override
   String get bdyCompareSideBySide => 'Yan yana';
@@ -784,7 +781,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String blkOverlayBody(String time) {
-    return 'Uyku zamanı. Eğlence $time saatine kadar kapalı. Telefonu bırak — yarın berrak bir zihin gerek.';
+    return 'Uyku zamanı. Eğlence $time saatine kadar kapalı. Telefonu bırakın — yarın berrak bir zihin gerek.';
   }
 
   @override
@@ -800,7 +797,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String blkIntro(String diamonds) {
-    return 'Disiplin modunda yatma saatinden sonra dikkat dağıtan uygulamalar «Sistem: yatma vakti» ekranıyla kapatılır. Denemeler kaydedilir; gecenin üçüncüsünden itibaren ceza $diamonds ◆.';
+    return 'Disiplin modunda yatma saatinden sonra dikkat dağıtan uygulamalar “Sistem: yatma vakti” ekranıyla kapatılır. Denemeler kaydedilir; gecenin üçüncüsünden itibaren ceza $diamonds ◆.';
   }
 
   @override
@@ -843,7 +840,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get blkOverlayPermHint =>
-      '«Sistem: yatma vakti» ekranını göstermek için.';
+      '“Sistem: yatma vakti” ekranını göstermek için.';
 
   @override
   String get blkGranted => 'Verildi';
@@ -895,7 +892,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get blkIosIntro =>
-      'iPhone\'da doğrudan engelleme yok. «Kestirmeler» uygulamasında kişisel otomasyonlar kurun: uygulama açılınca hemen Sistem açılır. Yatma saatinden sonra «Sistem: yatma vakti» gösterir ve denemeyi kaydeder, gündüz «Şimdi serbest» der.';
+      'iPhone\'da doğrudan engelleme yok. “Kestirmeler” uygulamasında kişisel otomasyonlar kurun: uygulama açılınca hemen Sistem açılır. Yatma saatinden sonra “Sistem: yatma vakti” gösterir ve denemeyi kaydeder, gündüz “Şimdi serbest” der.';
 
   @override
   String get blkIosPickTitle => '1. Hangi uygulamalar';
@@ -908,23 +905,23 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get blkIosStep1 =>
-      '«Kestirmeler» uygulamasını açın → «Otomasyon» sekmesi → «+» («Yeni Otomasyon»).';
+      '“Kestirmeler” uygulamasını açın → “Otomasyon” sekmesi → “+” (“Yeni Otomasyon”).';
 
   @override
   String get blkIosStep2 =>
-      '«Uygulama»yı seçin, «Seç»e dokunun ve uygulamayı işaretleyin (birkaçını birden seçebilirsiniz — o zaman tek bağlantı, örneğin oyunlar için).';
+      '“Uygulama”yı seçin, “Seç”e dokunun ve uygulamayı işaretleyin (birkaçını birden seçebilirsiniz — o zaman tek bağlantı, örneğin oyunlar için).';
 
   @override
   String get blkIosStep3 =>
-      '«Açıldığında»yı işaretleyin, «Hemen Çalıştır»ı seçin ve «Sonraki»ye dokunun.';
+      '“Açıldığında”yı işaretleyin, “Hemen Çalıştır”ı seçin ve “Sonraki”ye dokunun.';
 
   @override
   String get blkIosStep4 =>
-      '«Yeni Boş Otomasyon» → «Eylem Ekle» → «URL\'yi Aç» eylemini bulun.';
+      '“Yeni Boş Otomasyon” → “Eylem Ekle” → “URL\'yi Aç” eylemini bulun.';
 
   @override
   String get blkIosStep5 =>
-      'Bu uygulamanın bağlantısını yapıştırın (aşağıdaki «Kopyala» düğmesi) ve «Bitti»ye dokunun.';
+      'Bu uygulamanın bağlantısını yapıştırın (aşağıdaki “Kopyala” düğmesi) ve “Bitti”ye dokunun.';
 
   @override
   String get blkIosStep6 =>
@@ -945,11 +942,11 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get blkIosFocusTitle => 'İpucu: «Uyku» odak modu';
+  String get blkIosFocusTitle => 'İpucu: “Uyku” odak modu';
 
   @override
   String get blkIosFocusBody =>
-      'Ayarlar → Odak → «Uyku»: yatma saatinden kalkışa kadar zamanlayın, dikkat dağıtan uygulamaların bildirimlerini gizleyin ve ana ekranda yalnızca gerekenleri bırakın.';
+      'Ayarlar → Odak → “Uyku”: yatma saatinden kalkışa kadar zamanlayın, dikkat dağıtan uygulamaların bildirimlerini gizleyin ve ana ekranda yalnızca gerekenleri bırakın.';
 
   @override
   String get blkIosAlwaysNote =>
@@ -963,12 +960,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String blkBlockedMessageApp(String app, String time) {
-    return '$app $time saatine kadar kapalı. Uyku da bir antrenmandır. Telefonu bırak.';
+    return '$app $time saatine kadar kapalı. Uyku da bir antrenmandır. Telefonu bırakın.';
   }
 
   @override
   String blkBlockedMessage(String time) {
-    return 'Eğlence $time saatine kadar kapalı. Uyku da bir antrenmandır. Telefonu bırak.';
+    return 'Eğlence $time saatine kadar kapalı. Uyku da bir antrenmandır. Telefonu bırakın.';
   }
 
   @override
@@ -989,7 +986,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get blkAllowedMessage =>
-      'Engelleme şu an geçerli değil. Dinlen — ölçülü.';
+      'Engelleme şu an geçerli değil. Dinlenin — ama ölçülü.';
 
   @override
   String get blkChecking => 'Kontrol ediliyor…';
@@ -1000,7 +997,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String chrSemanticsChat(String name) {
-    return '$name: sohbeti açmak için dokun; menü için basılı tut; kaldırmak için aşağı kaydır';
+    return '$name: sohbeti açmak için dokunun; menü için basılı tutun; kaldırmak için aşağı kaydırın';
   }
 
   @override
@@ -1014,82 +1011,82 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String chrDoneSoft1(String name, String quest) {
-    return '$name, «$quest» tamam! Seninle gurur duyuyorum.';
+    return '$name, “$quest” tamam! Seninle gurur duyuyorum.';
   }
 
   @override
   String chrDoneSoft2(String name, String quest) {
-    return 'Gördün mü, oldu! «$quest» tamamlandı, $name.';
+    return 'Gördün mü, oldu! “$quest” tamamlandı, $name.';
   }
 
   @override
   String chrDoneNormal1(String name, String quest) {
-    return '«$quest» tamamlandı. Harika, $name!';
+    return '“$quest” tamamlandı. Harika, $name!';
   }
 
   @override
   String chrDoneNormal2(String name, String quest) {
-    return 'İşte bu! «$quest» kapandı. Devam, $name.';
+    return 'İşte bu! “$quest” kapandı. Devam, $name.';
   }
 
   @override
   String chrDoneStrict1(String name, String quest) {
-    return '«$quest» sayıldı. Böyle devam, $name.';
+    return '“$quest” sayıldı. Böyle devam, $name.';
   }
 
   @override
   String chrDoneStrict2(String name, String quest) {
-    return 'Kabul: «$quest». Sıradaki görev bekliyor.';
+    return 'Kabul: “$quest”. Sıradaki görev bekliyor.';
   }
 
   @override
   String chrDoneHarsh1(String name, String quest) {
-    return '«$quest» bitti. Nihayet. Tempoyu düşürme, $name.';
+    return '“$quest” bitti. Nihayet. Tempoyu düşürme, $name.';
   }
 
   @override
   String chrDoneHarsh2(String name, String quest) {
-    return 'Sayıldı: «$quest». Bu asgari, $name. Devam.';
+    return 'Sayıldı: “$quest”. Bu asgari, $name. Devam.';
   }
 
   @override
   String chrFailSoft1(String name, String quest) {
-    return '«$quest» olmadı — sorun değil, $name. Yarın olur.';
+    return '“$quest” olmadı — sorun değil, $name. Yarın olur.';
   }
 
   @override
   String chrFailSoft2(String name, String quest) {
-    return 'Yazık, «$quest» kaçtı. Dinlen, sonra tekrar deneriz.';
+    return 'Yazık, “$quest” kaçtı. Dinlen, sonra tekrar deneriz.';
   }
 
   @override
   String chrFailNormal1(String name, String quest) {
-    return '«$quest» başarısız. Üzücü, $name. Toparlan.';
+    return '“$quest” başarısız. Üzücü, $name. Toparlan.';
   }
 
   @override
   String chrFailNormal2(String name, String quest) {
-    return 'Eh, «$quest» sayılmadı. Bir dahakine kaçırma.';
+    return 'Eh, “$quest” sayılmadı. Bir dahakine kaçırma.';
   }
 
   @override
   String chrFailStrict1(String name, String quest) {
-    return '«$quest» başarısız, $name. Böyle olmaz. Düzelt.';
+    return '“$quest” başarısız, $name. Böyle olmaz. Düzelt.';
   }
 
   @override
   String chrFailStrict2(String name, String quest) {
-    return 'Başarısız: «$quest». Söz verdiysen tut.';
+    return 'Başarısız: “$quest”. Söz verdiysen tut.';
   }
 
   @override
   String chrFailHarsh1(String name, String quest) {
-    return '«$quest» — başarısız! $name, disiplin nerede? Bahane yok!';
+    return '“$quest” — başarısız! $name, disiplin nerede? Bahane yok!';
   }
 
   @override
   String chrFailHarsh2(String name, String quest) {
-    return 'Yine mi «$quest»?! Tembelliğe yer yok. Yarın taviz yok.';
+    return '“$quest” yine mi yapılmadı?! Tembelliğe yer yok. Yarın taviz yok.';
   }
 
   @override
@@ -1121,7 +1118,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String chrIdleNormal1(String name) {
-    return '$name, orada mısın? Görevler kendiliğinden yapılmaz.';
+    return '$name, orada mısın? Görevler kendi kendine yapılmaz.';
   }
 
   @override
@@ -1151,13 +1148,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chrIntro =>
-      'Bir yol arkadaşı seç. Fotoğraf çekimlerinde sesiyle sana rehberlik edecek, sonra ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.';
+      'Bir yol arkadaşı seçin. Fotoğraf çekimlerinde sesiyle size rehberlik edecek, sonra ekranın altında yaşayacak: hatırlatacak, övecek ve azarlayacak — seçtiğiniz modda.';
 
   @override
   String get chrArchetype => 'Karakter';
 
   @override
-  String get chrArchetypeRequired => 'Devam etmek için bir karakter seç';
+  String get chrArchetypeRequired => 'Devam etmek için bir karakter seçin';
 
   @override
   String get chrNameAnimeGirl => 'Anime kız';
@@ -1196,7 +1193,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Yine mi erteliyorsun?! Bahane yok — hemen git ve yap!';
 
   @override
-  String get chrNameAnimeGuy => 'Anime çocuk';
+  String get chrNameAnimeGuy => 'Anime genç';
 
   @override
   String get chrDescAnimeGuy =>
@@ -1232,7 +1229,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Ciddi misin? Tüm yapabildiğin bu mu? Kalk ve yap, sızlanmak yok!';
 
   @override
-  String get chrNameStoicStrongman => 'Soğukkanlı güçlü adam';
+  String get chrNameStoicStrongman => 'Soğukkanlı pehlivan';
 
   @override
   String get chrDescStoicStrongman =>
@@ -1267,7 +1264,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chrDescGrimSwordsman =>
-      'Sert bir usta. Her gün iradeyi eğitmektir.';
+      'Sert bir usta. Her gün iradenin eğitimidir.';
 
   @override
   String get chrSpeechGrimSwordsman => 'ölçülü, karanlık bir ironiyle';
@@ -1368,7 +1365,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chrTtsUnavailable =>
-      'Bu cihazda arayüz dili için konuşma sentezi yok — sesi daha sonra dinleyebilirsin.';
+      'Bu cihazda arayüz dili için konuşma sentezi yok — sesi daha sonra dinleyebilirsiniz.';
 
   @override
   String get chrMotivation => 'Motivasyon modu';
@@ -1386,7 +1383,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get chrModeNormalDesc => 'Başarıya övgü, aksatmalara sakin uyarılar.';
 
   @override
-  String get chrModeStrict => 'Sıkı';
+  String get chrModeStrict => 'Katı';
 
   @override
   String get chrModeStrictDesc =>
@@ -1397,7 +1394,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chrModeHarshDesc =>
-      'Tüm sertliğiyle azarlar, ama görünüş ve sağlıkla aşağılamadan.';
+      'Tüm sertliğiyle azarlar ama görünüş ve sağlık üzerinden aşağılamaz.';
 
   @override
   String get chrModeExample => 'Örnek replik';
@@ -1452,7 +1449,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String chrSemantics(String name) {
-    return '$name: replik için dokun; kaldırmak için aşağı kaydır';
+    return '$name: replik için dokunun; kaldırmak için aşağı kaydırın';
   }
 
   @override
@@ -1506,11 +1503,11 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chtErrNotSignedIn =>
-      'Yapay zekâ ile konuşmak için hesabına giriş yap: Daha fazla → Hesap.';
+      'Yapay zekâ ile konuşmak için hesabına giriş yap: Diğer → Hesap.';
 
   @override
   String get chtErrOffline =>
-      'Sunucuya bağlantı yok. Mesaj kaydedildi — internet gelince «Tekrar dene»ye bas.';
+      'Sunucuya bağlantı yok. Mesaj kaydedildi — internet gelince “Tekrar dene”ye bas.';
 
   @override
   String get chtErrBudget =>
@@ -1532,7 +1529,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chtFallbackNormal =>
-      'Sistemle bağlantı yok. Plan geçerli — görevlerini yap, sonra konuşuruz.';
+      'Sistem\'le bağlantı yok. Plan geçerli — görevlerini yap, sonra konuşuruz.';
 
   @override
   String get chtFallbackStrict =>
@@ -1586,7 +1583,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get chtTaskPlanEdit => 'Plan değişikliği';
 
   @override
-  String get chtTaskShort => 'Kısa sözler';
+  String get chtTaskShort => 'Kısa replikler';
 
   @override
   String get chtTaskBankParse => 'Banka bildirimleri';
@@ -1604,7 +1601,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get chtTaskTts => 'Ses';
 
   @override
-  String get chtActionsTitle => 'Yapay zekâ işlemleri';
+  String get chtActionsTitle => 'Yapay zekâ eylemleri';
 
   @override
   String get chtActionsEmpty => 'Yapay zekâ henüz hiçbir şeyi değiştirmedi.';
@@ -1763,7 +1760,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get almChannelName => 'Alarm';
 
   @override
-  String get almChannelDesc => 'Görevli alarmın çalması';
+  String get almChannelDesc => 'Görev alarmının çalması';
 
   @override
   String get almFallbackBody =>
@@ -1777,7 +1774,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get almPermReady =>
-      'Alarm hazır: kilit ekranının üzerinde çalar ve sadece görevle kapanır.';
+      'Alarm hazır: kilit ekranının üzerinde çalar ve yalnızca görevle kapanır.';
 
   @override
   String get almPermExact => 'Tam zamanlı alarmlar';
@@ -1793,11 +1790,11 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get almPermFallback =>
-      'Sistem alarmı kullanılamıyor — bir dizi yüksek sesli bildirim çalacak. Gece sessiz modu ve «Odak»ı açmayın.';
+      'Sistem alarmı kullanılamıyor — bir dizi yüksek sesli bildirim çalacak. Gece sessiz modu ve “Odak” modunu açmayın.';
 
   @override
   String get almPermBackup =>
-      'Alarmı «Durdur» ile kapatırsanız, 3 dakika sonra görevi yapana kadar bildirimler gelir.';
+      'Alarmı “Durdur” ile kapatırsanız, 3 dakika sonra görevi yapana kadar bildirimler gelir.';
 
   @override
   String get almPermGrant => 'İzin ver';
@@ -1810,7 +1807,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get almEmpty =>
-      'Henüz alarm yok. İlkini ekleyin — sadece görevle kapatılabilecek.';
+      'Henüz alarm yok. İlkini ekleyin — yalnızca görevle kapatılabilecek.';
 
   @override
   String get almAdd => 'Alarm ekle';
@@ -1892,7 +1889,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get almQrShareText =>
-      '«Sistem» alarmının QR kodu. Başka bir odaya asın.';
+      '“Sistem” alarmının QR kodu. Başka bir odaya asın.';
 
   @override
   String get almQrRegenerate => 'Yeni kod';
@@ -1908,7 +1905,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Disiplin modunun kalkış alarmı: saat ve günleri mod belirler, görev değiştirilebilir.';
 
   @override
-  String get almTest => '1 dk sonra dene';
+  String get almTest => '1 dk sonra test et';
 
   @override
   String get almTestScheduled =>
@@ -1986,7 +1983,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finCryptoValue => 'Kripto';
 
   @override
-  String get finFreeToMonthEnd => 'Ay sonuna kadar serbest';
+  String get finFreeToMonthEnd => 'Ay sonuna kadar harcanabilir';
 
   @override
   String get finNextIncome => 'Sıradaki gelir';
@@ -2043,7 +2040,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finBanks => 'Bankalar';
 
   @override
-  String get finStatement => 'Hesap özeti';
+  String get finStatement => 'Ekstre';
 
   @override
   String get finMarket => 'Market';
@@ -2053,7 +2050,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get finNoAccounts =>
-      'Henüz hesap yok. Nakit veya kart ekleyin ya da bir gider girin; «Nakit» hesabı otomatik oluşur.';
+      'Henüz hesap yok. Nakit veya kart ekleyin ya da bir gider girin; “Nakit” hesabı otomatik oluşur.';
 
   @override
   String get finManageAccounts => 'Hesaplar ve kripto';
@@ -2153,7 +2150,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get finNoAccountsAutoHint =>
-      '«Nakit · RUB» hesabı otomatik oluşturulacak.';
+      '“Nakit · RUB” hesabı otomatik oluşturulacak.';
 
   @override
   String get finCategory => 'Kategori';
@@ -2318,7 +2315,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get finJunkFoodHint =>
-      'Buradaki alışverişlere «fast food vergisi» (◆) uygulanır';
+      'Buradaki alışverişlere “fast food vergisi” (◆) uygulanır';
 
   @override
   String get finHide => 'Gizle';
@@ -2330,7 +2327,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finHideHint => 'Girişte gösterme';
 
   @override
-  String get finCatGroceries => 'Market alışverişi';
+  String get finCatGroceries => 'Market';
 
   @override
   String get finCatCafe => 'Kafe ve kahve';
@@ -2559,10 +2556,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finDebtEdit => 'Borç';
 
   @override
-  String get finDebtOwe => 'Ben borçluyum';
+  String get finDebtOwe => 'Borçluyum';
 
   @override
-  String get finDebtLent => 'Bana borçlular';
+  String get finDebtLent => 'Alacaklıyım';
 
   @override
   String get finDebtPerson => 'Kim';
@@ -2629,10 +2626,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finSrcBank => 'banka bildirimi';
 
   @override
-  String get finSrcSms => 'banka SMS';
+  String get finSrcSms => 'banka SMS\'i';
 
   @override
-  String get finSrcStatement => 'hesap özeti';
+  String get finSrcStatement => 'ekstre';
 
   @override
   String get finSrcSubscription => 'abonelik';
@@ -2653,7 +2650,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finLockTitle => 'Sistem kilitli';
 
   @override
-  String get finLockReason => 'Sisteme girişi onaylayın';
+  String get finLockReason => '“Sistem”e girişi onaylayın';
 
   @override
   String get finLockEnterPin => 'PIN girin';
@@ -2724,7 +2721,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finLockNewPin => 'Yeni PIN';
 
   @override
-  String get finLockRepeatPin => 'PIN tekrar';
+  String get finLockRepeatPin => 'PIN\'i tekrar girin';
 
   @override
   String get finLockPinMismatch => 'PIN kodları eşleşmedi';
@@ -2749,7 +2746,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get finJunkTaxHint =>
-      '«Abur cubur» kategorilerindeki her alışveriş için';
+      '“Abur cubur” kategorilerindeki her alışveriş için';
 
   @override
   String get finJunkTaxAmount => 'Alışveriş başına vergi';
@@ -2779,7 +2776,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get finRemindDebtOweTitle => 'Borç vadesi';
 
   @override
-  String get finRemindDebtLentTitle => 'Size geri ödenecek';
+  String get finRemindDebtLentTitle => 'Alacağınızın vadesi';
 
   @override
   String finRemindDebtBody(String person, String amount, String date) {
@@ -2830,7 +2827,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get fniQrNoItems =>
-      'Fiş kalemleri şu an alınamıyor — QR\'daki tutar kaydedilecek.';
+      'Fiş kalemleri şu an alınamıyor — QR\'daki tutar kaydedildi.';
 
   @override
   String get fniAdd => 'Ekle';
@@ -2977,7 +2974,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get fniFixInFinance =>
-      'Bu işlemi «Finans» bölümünde düzenleyin veya silin.';
+      'Bu işlemi “Finans” bölümünde düzenleyin veya silin.';
 
   @override
   String get fniIgnore => 'Yok say';
@@ -3106,7 +3103,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get int6LearningHint => 'Kurslar, günün dersleri ve tekrarlar';
 
   @override
-  String get int6AiJournal => 'Yapay zekâ: harcama ve işlemler';
+  String get int6AiJournal => 'Yapay zekâ: harcamalar ve eylemler';
 
   @override
   String get int6AiJournalHint =>
@@ -3125,7 +3122,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get int7FinanceHint => 'Hesaplar, işlemler, limitler, raporlar';
 
   @override
-  String get int7Market => 'Alışveriş pazarı';
+  String get int7Market => 'Alışveriş marketi';
 
   @override
   String get int7MarketHint => 'Plana göre seçki ve fiyatlar';
@@ -3137,7 +3134,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get int7BlockerHint => 'Disiplin modunda yatma saatinden sonra';
 
   @override
-  String get int7Alarms => 'Görevli alarm';
+  String get int7Alarms => 'Görev alarmı';
 
   @override
   String get int7AlarmsHint => 'Yalnızca görevle kapanır';
@@ -3270,7 +3267,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String lrnDeleteConfirm(String title) {
-    return '«$title» kursu silinsin mi? İlerleme kaybolacak.';
+    return '“$title” kursu silinsin mi? İlerleme kaybolacak.';
   }
 
   @override
@@ -3319,7 +3316,6 @@ class AppLocalizationsTr extends AppLocalizations {
       days,
       locale: localeName,
       other: 'Tekrar $days gün sonra',
-      one: 'Tekrar $days gün sonra',
     );
     return '$_temp0';
   }
@@ -3353,7 +3349,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get lrnErrNotSignedIn =>
-      'Sistem\'in kurs ve ders oluşturması için hesabınıza giriş yapın (Daha fazla → Hesap).';
+      'Sistem\'in kurs ve ders oluşturması için hesabınıza giriş yapın (Diğer → Hesap).';
 
   @override
   String get lrnErrBudget => 'Yapay zekâ limiti doldu. Daha sonra deneyin.';
@@ -3399,7 +3395,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get mktEmptyNew =>
-      'Henüz boş. «Öner (YZ)» düğmesine basın — Sistem planınıza uygun ürünler seçsin.';
+      'Henüz boş. “Öner (YZ)” düğmesine basın — Sistem planınıza uygun ürünler seçsin.';
 
   @override
   String get mktEmptySaved => 'Kaydedilmiş ürün yok.';
@@ -3436,7 +3432,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get mktBudgetAfterIncome => 'Para gelince';
 
   @override
-  String get mktBudgetOver => 'Bütçeye uygun değil';
+  String get mktBudgetOver => 'Bütçe dışı';
 
   @override
   String get mktSave => 'Kaydet';
@@ -3470,7 +3466,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String mktBoughtMessage(String title) {
-    return '«$title» kaça mal oldu?';
+    return '“$title” kaça mal oldu?';
   }
 
   @override
@@ -3480,11 +3476,11 @@ class AppLocalizationsTr extends AppLocalizations {
   String get mktBoughtConfirm => 'Kaydet';
 
   @override
-  String get mktBoughtRecorded => 'Alışveriş finanslara kaydedildi.';
+  String get mktBoughtRecorded => 'Alışveriş finansa kaydedildi.';
 
   @override
   String get mktBoughtNoFinance =>
-      'Alındı olarak işaretlendi. Finanslara kaydedilmedi — bölüm henüz kullanılamıyor.';
+      'Alındı olarak işaretlendi. Finansa kaydedilmedi — bölüm henüz kullanılamıyor.';
 
   @override
   String get mktNoticeLabel => 'Sistem';
@@ -3504,13 +3500,14 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get mktErrNotSignedIn =>
-      'Sistemin ürün seçmesi için hesabınıza giriş yapın («Daha fazla» → «Hesap»).';
+      'Sistem\'in ürün seçmesi için hesabınıza giriş yapın (“Diğer” → “Hesap”).';
 
   @override
-  String get mktErrBudget => 'YZ limiti şu an doldu. Daha sonra deneyin.';
+  String get mktErrBudget =>
+      'Yapay zekâ limiti şu an doldu. Daha sonra deneyin.';
 
   @override
-  String get mktErrUnavailable => 'Sunucudaki YZ şu an kullanılamıyor.';
+  String get mktErrUnavailable => 'Sunucudaki yapay zekâ şu an kullanılamıyor.';
 
   @override
   String get mktErrRateLimited => 'Çok fazla istek. Bir süre sonra deneyin.';
@@ -3570,7 +3567,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String ntfBossTitle(String title) {
-    return '[ Haftanın patronu ] $title';
+    return '[ Haftanın bossu ] $title';
   }
 
   @override
@@ -3593,7 +3590,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String ntfReproachBody(String title) {
-    return '«$title» gecikti. Sistem eylemsizliği kaydetti. Hemen tamamla.';
+    return '“$title” gecikti. Sistem eylemsizliği kaydetti. Hemen tamamla.';
   }
 
   @override
@@ -3620,7 +3617,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String ntfFailedBody(String title, int diamonds) {
-    return '«$title»: −$diamonds ◆';
+    return '“$title”: −$diamonds ◆';
   }
 
   @override
@@ -3655,20 +3652,20 @@ class AppLocalizationsTr extends AppLocalizations {
   String get ntfEnabledHint => 'Görevler için yerel bildirimler';
 
   @override
-  String get ntfNag => 'Her dakika ısrar et';
+  String get ntfNag => 'Her dakika hatırlat';
 
   @override
-  String get ntfNagHint => '«Tamamlandı»ya basana kadar tekrar';
+  String get ntfNagHint => '“Tamamlandı”ya basana kadar tekrar';
 
   @override
   String get ntfReproach => 'Sitemler';
 
   @override
   String get ntfReproachHint =>
-      'Süre dolduktan 15 dk sonra, görev yapılmadıysa';
+      'Süre dolduktan 15 dk sonra, görev tamamlanmadıysa';
 
   @override
-  String get ntfVoice => 'Ses olarak karakterin sesi';
+  String get ntfVoice => 'Bildirim sesi olarak karakterin sesi';
 
   @override
   String get ntfVoiceHint => '6. aşamada gelecek — şimdilik standart ses';
@@ -4012,7 +4009,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: 'Alınacak: $count ürün · $sum',
-      one: 'Alınacak: $count ürün · $sum',
     );
     return '$_temp0';
   }
@@ -4089,6 +4085,319 @@ class AppLocalizationsTr extends AppLocalizations {
   String get nutGroceryWater => 'İçme suyu';
 
   @override
+  String get ovlSettingTitle => 'Karakter uygulamaların üzerinde';
+
+  @override
+  String get ovlSettingHint =>
+      'Sistem arka plandayken karakter ekranın kenarında durur ve mesajları gösterir. Dokunursanız Sistem açılır, basılı tutarsanız gizlenir.';
+
+  @override
+  String get ovlPermissionDenied =>
+      '“Diğer uygulamaların üzerinde göster” izni gerekli.';
+
+  @override
+  String get ovlNotificationTitle => 'Karakter ekranda';
+
+  @override
+  String get ovlNotificationBody => 'Sistem\'i açmak için dokunun';
+
+  @override
+  String get ovlHideAction => 'Gizle';
+
+  @override
+  String ovlAvatarLabel(String name) {
+    return '$name: Sistem\'i açmak için dokunun; gizlemek için basılı tutun';
+  }
+
+  @override
+  String get planNoticeLabel => 'Bildirim';
+
+  @override
+  String get planTitle => 'Plan hazırlandı';
+
+  @override
+  String get planDraftNote =>
+      'Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.';
+
+  @override
+  String planAcceptedAt(String date) {
+    return 'Plan kabul edildi: $date';
+  }
+
+  @override
+  String get planAccept => 'Kabul et';
+
+  @override
+  String get planEditData => 'Verileri değiştir';
+
+  @override
+  String get planRecalculate => 'Yeniden hesapla';
+
+  @override
+  String get planChooseSection => 'Hangi bölüm değiştirilsin?';
+
+  @override
+  String get planLoadError => 'Plan hazırlanamadı';
+
+  @override
+  String get planRetry => 'Tekrar dene';
+
+  @override
+  String get planNormsTitle => 'Normlar';
+
+  @override
+  String get planCalories => 'Kalori';
+
+  @override
+  String planKcal(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String get planModeDeficit => 'Kalori açığı';
+
+  @override
+  String get planModeSurplus => 'Kalori fazlası';
+
+  @override
+  String get planModeMaintenance => 'Kilo koruma';
+
+  @override
+  String planBmrTdee(String bmr, String tdee) {
+    return 'Bazal metabolizma $bmr · harcama $tdee kcal';
+  }
+
+  @override
+  String get planProtein => 'Protein';
+
+  @override
+  String get planFat => 'Yağ';
+
+  @override
+  String get planCarbs => 'Karbonhidrat';
+
+  @override
+  String planGrams(String value) {
+    return '$value g';
+  }
+
+  @override
+  String get planWater => 'Su';
+
+  @override
+  String planMl(String value) {
+    return '$value ml';
+  }
+
+  @override
+  String planWaterTrainingDay(String value) {
+    return 'Antrenman gününde — $value ml';
+  }
+
+  @override
+  String get planSleep => 'Uyku';
+
+  @override
+  String planHours(String value) {
+    return '$value sa';
+  }
+
+  @override
+  String planHoursMinutes(String h, String m) {
+    return '$h sa $m dk';
+  }
+
+  @override
+  String planWakeBed(String wake, String bed) {
+    return 'Kalkış $wake · yatış $bed';
+  }
+
+  @override
+  String get planRoutineTitle => 'Günlük düzen';
+
+  @override
+  String planWeek(String n) {
+    return 'Hafta $n';
+  }
+
+  @override
+  String get planWdMon => 'Pzt';
+
+  @override
+  String get planWdTue => 'Sal';
+
+  @override
+  String get planWdWed => 'Çar';
+
+  @override
+  String get planWdThu => 'Per';
+
+  @override
+  String get planWdFri => 'Cum';
+
+  @override
+  String get planWdSat => 'Cmt';
+
+  @override
+  String get planWdSun => 'Paz';
+
+  @override
+  String get planRoutineWake => 'Kalkış';
+
+  @override
+  String get planRoutineSkincareAm => 'Cilt bakımı (sabah)';
+
+  @override
+  String planRoutineMeal(String n) {
+    return 'Öğün $n';
+  }
+
+  @override
+  String get planRoutineLeaveHome => 'Evden çıkış';
+
+  @override
+  String get planRoutineLesson => 'Ders';
+
+  @override
+  String get planRoutineWork => 'İş';
+
+  @override
+  String get planRoutineOther => 'Etkinlik';
+
+  @override
+  String get planRoutineReturnHome => 'Evde';
+
+  @override
+  String get planRoutineTraining => 'Antrenman';
+
+  @override
+  String get planRoutineSkincarePm => 'Cilt bakımı (akşam)';
+
+  @override
+  String get planRoutineBed => 'Yatış';
+
+  @override
+  String get planQuestsTitle => 'Görevler';
+
+  @override
+  String get planQuestsNote =>
+      'Görevleri tamamlama bir sonraki güncellemede gelecek.';
+
+  @override
+  String planQuestLeaveHome(String time) {
+    return '$time saatine kadar evden çık';
+  }
+
+  @override
+  String planQuestAttendLesson(String title) {
+    return 'Ders: $title';
+  }
+
+  @override
+  String planQuestAttendWork(String title) {
+    return 'İş: $title';
+  }
+
+  @override
+  String planQuestWater(String ml) {
+    return '$ml ml su iç';
+  }
+
+  @override
+  String planQuestSleep(String time, String hours) {
+    return '$time saatinde yat (uyku $hours sa)';
+  }
+
+  @override
+  String planQuestMeals(String count) {
+    return 'Plana göre öğünler: $count';
+  }
+
+  @override
+  String planQuestTraining(String minutes) {
+    return '$minutes dk antrenman';
+  }
+
+  @override
+  String get planQuestSkincareMorning => 'Sabah cilt bakımı';
+
+  @override
+  String get planQuestSkincareEvening => 'Akşam cilt bakımı';
+
+  @override
+  String planQuestWakeOnTime(String time) {
+    return '$time saatinde ertelemeden kalk';
+  }
+
+  @override
+  String planQuestStudy(String minutes) {
+    return '$minutes dk ders çalış';
+  }
+
+  @override
+  String get planQuestTrackExpenses => 'Günün harcamalarını kaydet';
+
+  @override
+  String get planQuestEveryDay => 'her gün';
+
+  @override
+  String planQuestWeekOnly(String n) {
+    return 'hafta $n';
+  }
+
+  @override
+  String planQuestReward(String diamonds, String xp) {
+    return '+$diamonds ◆ · +$xp deneyim';
+  }
+
+  @override
+  String get planWarningsTitle => 'Uyarılar';
+
+  @override
+  String planWarnSleepShort(String scheduled, String target, String bed) {
+    return 'Programa göre uyku $scheduled — norm olan $target süresinden az. Önerilen yatış saati: $bed.';
+  }
+
+  @override
+  String get planWarnDeficitFloor =>
+      'Kalori açığı güvenli alt sınırla kısıtlandı — Sistem bunun altına inmez.';
+
+  @override
+  String get planWarnActivityDefaulted =>
+      'Aktivite düzeyi belirtilmedi — “hareketsiz” kabul edildi.';
+
+  @override
+  String planWarnNoTrainingWindow(String day) {
+    return '$day: antrenman için boş zaman yok.';
+  }
+
+  @override
+  String get planWarnInjuries =>
+      'Sakatlık veya kısıtlamalar belirtildi — yükü dikkatli seçin, emin değilseniz doktora danışın.';
+
+  @override
+  String planMissingMessage(String fields) {
+    return 'Kalori ve makroları hesaplamak için doldurun: $fields.';
+  }
+
+  @override
+  String get planMissingSex => 'cinsiyet';
+
+  @override
+  String get planMissingBirthDate => 'doğum tarihi';
+
+  @override
+  String get planMissingHeight => 'boy';
+
+  @override
+  String get planMissingWeight => 'kilo';
+
+  @override
+  String planFillSection(String section) {
+    return 'Doldur: $section';
+  }
+
+  @override
   String get wrkTitle => 'Antrenmanlar';
 
   @override
@@ -4104,7 +4413,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkRestDay =>
-      'Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğin antrenmanı yapabilirsin.';
+      'Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğiniz antrenmanı yapabilirsiniz.';
 
   @override
   String wrkDayTitle(String key) {
@@ -4127,7 +4436,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: '$count egzersiz',
-      one: '$count egzersiz',
     );
     return '$_temp0';
   }
@@ -4153,7 +4461,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkSafetyNote =>
-      'Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atla.';
+      'Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atlayın.';
 
   @override
   String get wrkLevelUnknown =>
@@ -4166,7 +4474,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkProgressionNote =>
-      'Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her hafta için: +1 tekrar veya +5 sn, seviyenin üst sınırına kadar.';
+      'Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her biri için: +1 tekrar veya +5 sn, seviyenizin üst sınırına kadar.';
 
   @override
   String get wrkRegenerate => 'Programı yeniden oluştur';
@@ -4213,7 +4521,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get wrkPreparing => 'Program hazırlanıyor…';
 
   @override
-  String get wrkPhasePrepare => 'Hazırlan';
+  String get wrkPhasePrepare => 'Hazırlanın';
 
   @override
   String get wrkPhaseWork => 'Çalışma';
@@ -4235,7 +4543,6 @@ class AppLocalizationsTr extends AppLocalizations {
       reps,
       locale: localeName,
       other: '$reps tekrar',
-      one: '$reps tekrar',
     );
     return '$_temp0';
   }
@@ -4256,7 +4563,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get wrkSkipExercise => 'Egzersizi atla';
 
   @override
-  String get wrkStop => 'Bitir';
+  String get wrkStop => 'Sonlandır';
 
   @override
   String wrkNext(String name) {
@@ -4276,7 +4583,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get wrkProgressLabel => 'Antrenman ilerlemesi';
 
   @override
-  String get wrkStopTitle => 'Antrenman bitirilsin mi?';
+  String get wrkStopTitle => 'Antrenman sonlandırılsın mı?';
 
   @override
   String get wrkStopText =>
@@ -4304,7 +4611,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String wrkSaySet(int set, int sets, String amount) {
-    return 'Set $set / $sets. $amount. Başla!';
+    return 'Set $set / $sets. $amount. Başlıyoruz!';
   }
 
   @override
@@ -4313,7 +4620,6 @@ class AppLocalizationsTr extends AppLocalizations {
       seconds,
       locale: localeName,
       other: '$seconds saniye',
-      one: '$seconds saniye',
     );
     return '$_temp0';
   }
@@ -4336,35 +4642,35 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkExMarchInPlaceHint =>
-      'Dizlerini yükselt.\nKollar adımla birlikte çalışsın.\nDüzenli nefes al.';
+      'Dizlerinizi yükseğe kaldırın.\nKollar adımla birlikte çalışsın.\nDüzenli nefes alın.';
 
   @override
   String get wrkExArmCircles => 'Kol çevirme';
 
   @override
   String get wrkExArmCirclesHint =>
-      'Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler.\nOmuzlar aşağıda.';
+      'Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler çizin.\nOmuzlar aşağıda.';
 
   @override
   String get wrkExJumpingJacks => 'Jumping jack';
 
   @override
   String get wrkExJumpingJacksHint =>
-      'Zıpla: bacaklar açık, kollar yukarı.\nGeri zıpla.\nParmak uçlarına yumuşak in.';
+      'Zıplayın: bacaklar açık, kollar yukarı.\nGeri zıplayın.\nParmak uçlarına yumuşak inin.';
 
   @override
   String get wrkExChairSquat => 'Sandalyeye çömelme';
 
   @override
   String get wrkExChairSquatHint =>
-      'Sandalyenin önünde dur, ayaklar omuz genişliğinde.\nKalçayı geri iterek otur.\nSarsmadan kalk.';
+      'Sandalyenin önünde durun, ayaklar omuz genişliğinde.\nKalçayı geri iterek oturun.\nSarsmadan kalkın.';
 
   @override
   String get wrkExGluteBridge => 'Kalça köprüsü';
 
   @override
   String get wrkExGluteBridgeHint =>
-      'Sırtüstü yat, ayaklar yerde.\nKalçayı kaldır, kalça kaslarını sık.\nYavaşça in.';
+      'Sırtüstü yatın, ayaklar yerde.\nKalçayı kaldırın, kalça kaslarını sıkın.\nYavaşça inin.';
 
   @override
   String get wrkExSquat => 'Squat';
@@ -4378,21 +4684,21 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkExWallSitHint =>
-      'Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar in.\nPozisyonu koru.';
+      'Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar inin.\nPozisyonu koruyun.';
 
   @override
-  String get wrkExReverseLunge => 'Geri hamle';
+  String get wrkExReverseLunge => 'Geri lunge';
 
   @override
   String get wrkExReverseLungeHint =>
-      'Geriye adım at, arka dizi yere doğru indir.\nÖn diz ayağın üzerinde.\nGeri dön, bacak değiştir.';
+      'Geriye adım atın, arka dizi yere doğru indirin.\nÖn diz ayağın üzerinde.\nGeri dönün, bacak değiştirin.';
 
   @override
   String get wrkExGobletSquat => 'Goblet squat';
 
   @override
   String get wrkExGobletSquatHint =>
-      'Dambılı dik olarak göğüste tut.\nÇömel, dirsekler dizlerin arasında.\nSırt düz.';
+      'Dambılı dik olarak göğsünüzde tutun.\nÇömelin, dirsekler dizlerin arasında.\nSırt düz.';
 
   @override
   String get wrkExKettlebellSwing => 'Kettlebell salınımı';
@@ -4406,14 +4712,14 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkExJumpSquatHint =>
-      'Normal squat.\nYukarı sıçra.\nYumuşak inip squat\'a geç.';
+      'Normal squat.\nYukarı sıçrayın.\nYumuşak inip doğrudan squat pozisyonuna geçin.';
 
   @override
   String get wrkExWallPushUp => 'Duvarda şınav';
 
   @override
   String get wrkExWallPushUpHint =>
-      'Avuçlar omuz hizasında duvarda.\nKolları bük, gövde düz.\nİtip geri gel.';
+      'Avuçlar omuz hizasında duvarda.\nKolları bükün, gövde düz.\nİterek geri gelin.';
 
   @override
   String get wrkExKneePushUp => 'Dizüstü şınav';
@@ -4430,11 +4736,11 @@ class AppLocalizationsTr extends AppLocalizations {
       'Şınav pozisyonu, eller omuzdan biraz geniş.\nGövde düz bir çizgi.\nGöğüs yere, dirsekler 45°.';
 
   @override
-  String get wrkExDumbbellPress => 'Yerde dambıl press';
+  String get wrkExDumbbellPress => 'Yerde dambıl pres';
 
   @override
   String get wrkExDumbbellPressHint =>
-      'Yerde yat, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indir.\nYukarı it.';
+      'Yere yatın, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indirin.\nYukarı itin.';
 
   @override
   String get wrkExDiamondPushUp => 'Elmas şınav';
@@ -4448,63 +4754,63 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkExSupermanHint =>
-      'Yüzüstü yat, kollar önde.\nKol ve bacakları birkaç saniye kaldır.\nYavaşça indir.';
+      'Yüzüstü yatın, kollar önde.\nKol ve bacakları birkaç saniye kaldırın.\nYavaşça indirin.';
 
   @override
   String get wrkExReverseSnowAngel => 'Ters kar meleği';
 
   @override
   String get wrkExReverseSnowAngelHint =>
-      'Yüzüstü yat, kollar yanlarda.\nGöğsü ve kolları hafif kaldır.\nKolları yay çizerek başın üstüne ve geri götür.';
+      'Yüzüstü yatın, kollar yanlarda.\nGöğsü ve kolları hafifçe kaldırın.\nKolları yay çizerek başın üstüne ve geri götürün.';
 
   @override
-  String get wrkExBandRow => 'Lastik çekiş';
+  String get wrkExBandRow => 'Direnç bandı çekişi';
 
   @override
   String get wrkExBandRowHint =>
-      'Lastiği göğüs hizasına sabitle.\nKürek kemiklerini sıkarak bele çek.\nYavaşça bırak.';
+      'Bandı göğüs hizasına sabitleyin.\nKürek kemiklerini sıkarak bele çekin.\nYavaşça bırakın.';
 
   @override
   String get wrkExDumbbellRow => 'Eğilerek dambıl çekiş';
 
   @override
   String get wrkExDumbbellRowHint =>
-      'Bir el ve diz sandalyeye dayalı.\nDambılı bele çek.\nSırt düz.';
+      'Bir el ve diz sandalyeye dayalı.\nDambılı bele çekin.\nSırt düz.';
 
   @override
   String get wrkExPullUp => 'Barfiks';
 
   @override
   String get wrkExPullUpHint =>
-      'Tutuş omuzdan biraz geniş.\nÇeneyi bara çek.\nKontrollü in.';
+      'Tutuş omuzdan biraz geniş.\nÇeneyi bara kadar çekin.\nKontrollü inin.';
 
   @override
   String get wrkExDeadBug => 'Ölü böcek';
 
   @override
   String get wrkExDeadBugHint =>
-      'Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indir.\nBel yere bastırılı.';
+      'Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indirin.\nBel yere bastırılı.';
 
   @override
   String get wrkExBirdDog => 'Kuş-köpek';
 
   @override
   String get wrkExBirdDogHint =>
-      'Eller ve dizler yerde.\nZıt kol ve bacağı uzat.\nBekle, taraf değiştir.';
+      'Eller ve dizler yerde.\nZıt kol ve bacağı uzatın.\nBekleyin, taraf değiştirin.';
 
   @override
   String get wrkExPlank => 'Plank';
 
   @override
   String get wrkExPlankHint =>
-      'Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökme.';
+      'Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökmeyin.';
 
   @override
   String get wrkExCrunch => 'Mekik';
 
   @override
   String get wrkExCrunchHint =>
-      'Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldır.\nYavaşça in.';
+      'Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldırın.\nYavaşça inin.';
 
   @override
   String get wrkExSidePlank => 'Yan plank';
@@ -4518,49 +4824,49 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get wrkExLegRaiseHint =>
-      'Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldır.\nBel yerde, yavaş indir.';
+      'Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldırın.\nBel yerde, yavaşça indirin.';
 
   @override
   String get wrkExStepTouch => 'Yana adım';
 
   @override
   String get wrkExStepTouchHint =>
-      'Yana adım at, ayağı birleştir.\nDiğer tarafa.\nKollar ritimle çalışsın.';
+      'Yana adım atın, ayağı birleştirin.\nDiğer tarafa.\nKollar ritimle çalışsın.';
 
   @override
   String get wrkExShadowBoxing => 'Gölge boksu';
 
   @override
   String get wrkExShadowBoxingHint =>
-      'Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket et.';
+      'Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket edin.';
 
   @override
   String get wrkExHighKnees => 'Yüksek diz koşusu';
 
   @override
   String get wrkExHighKneesHint =>
-      'Yerinde koş.\nDizler bel hizasına.\nParmak uçlarına in.';
+      'Yerinde koşun.\nDizler bel hizasına.\nParmak uçlarına inin.';
 
   @override
   String get wrkExMountainClimber => 'Dağcı';
 
   @override
   String get wrkExMountainClimberHint =>
-      'Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çek.\nKalçayı kaldırma.';
+      'Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çekin.\nKalçayı kaldırmayın.';
 
   @override
   String get wrkExBurpee => 'Burpee';
 
   @override
   String get wrkExBurpeeHint =>
-      'Çömel, eller yere.\nŞınav pozisyonuna sıçra ve geri gel.\nYukarı zıpla.';
+      'Çömelin, eller yere.\nŞınav pozisyonuna sıçrayın ve geri gelin.\nYukarı zıplayın.';
 
   @override
   String get wrkExFullBodyStretch => 'Esneme';
 
   @override
   String get wrkExFullBodyStretchHint =>
-      'Yukarı uzan, sonra öne eğil.\nUyluk ve göğsü esnet.\nYavaş nefes al, sarsma.';
+      'Yukarı uzanın, sonra öne eğilin.\nUyluk ve göğsü esnetin.\nYavaş nefes alın, sarsmayın.';
 
   @override
   String get qaUnitCm => 'cm';
@@ -4706,7 +5012,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaBodyPhotosIntro =>
-      'Fotoğraflar, Sistemin vücut yapısını ve duruşu değerlendirmesine ve ilerlemeyi takip etmesine yardımcı olur. Bu aşama atlanabilir. Fotoğraflar cihazda saklanır.';
+      'Fotoğraflar, Sistem\'in vücut yapısını ve duruşu değerlendirmesine ve ilerlemeyi takip etmesine yardımcı olur. Bu aşama atlanabilir. Fotoğraflar cihazda saklanır.';
 
   @override
   String get qaPhotoTipsTitle => 'Nasıl çekilir';
@@ -4763,7 +5069,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qaEstimateTitle => 'Değerlendirme';
 
   @override
-  String get qaEstBodyFat => 'Yağ oranı %';
+  String get qaEstBodyFat => 'Yağ %';
 
   @override
   String get qaEstMuscle => 'Kas kütlesi';
@@ -4785,7 +5091,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Akıllı tartıdan veya doktordan verileriniz varsa girin; Sistem bunları esas alır.';
 
   @override
-  String get qaExactFat => 'Yağ oranı %';
+  String get qaExactFat => 'Yağ %';
 
   @override
   String get qaExactMuscle => 'Kas kütlesi';
@@ -4819,7 +5125,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaSkinIntro =>
-      'Yüz fotoğrafları ve birkaç soru, Sistemin bakım rutini seçmesine yardımcı olur. Fotoğraflar isteğe bağlıdır.';
+      'Yüz fotoğrafları ve birkaç soru, Sistem\'in bakım rutini seçmesine yardımcı olur. Fotoğraflar isteğe bağlıdır.';
 
   @override
   String get qaSkinTipLight => 'Pencere yanında gün ışığı; filtre ve flaş yok.';
@@ -4884,7 +5190,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qaShootCardHint =>
-      'Telefonu yerleştirip «Başla»ya basın — gerisini Sistem sesli anlatır ve fotoğrafları kendisi çeker.';
+      'Telefonu yerleştirip “Başla”ya dokunun — gerisini Sistem sesli anlatır ve fotoğrafları kendisi çeker.';
 
   @override
   String get qaShootStartSession => 'Seansı başlat';
@@ -4960,7 +5266,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qaShootPausedHint => 'Geçerli açı baştan başlayacak.';
 
   @override
-  String get qaShootStop => 'Bitir';
+  String get qaShootStop => 'Sonlandır';
 
   @override
   String qaShootShotOf(int n, int total) {
@@ -5402,7 +5708,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qbFinanceIntro =>
-      'Hepsi isteğe bağlı. Gelirler ve hesaplar, Sistemin bütçeyi ve limitleri takip etmesine yardım eder.';
+      'Hepsi isteğe bağlı. Gelirler ve hesaplar, Sistem\'in bütçeyi ve limitleri takip etmesine yardım eder.';
 
   @override
   String get qbFinIncomes => 'Gelirler';
@@ -5505,10 +5811,10 @@ class AppLocalizationsTr extends AppLocalizations {
       'Miktar elle girilir, kur otomatik olarak güncellenecek';
 
   @override
-  String get qbFinIOwe => 'Ben borçluyum';
+  String get qbFinIOwe => 'Borçluyum';
 
   @override
-  String get qbFinOweMe => 'Bana borçlu';
+  String get qbFinOweMe => 'Alacaklıyım';
 
   @override
   String get qbFinDebtToWhom => 'Kime';
@@ -5579,11 +5885,11 @@ class AppLocalizationsTr extends AppLocalizations {
       'Görevler ve kaloriler için adım ve aktivite sayımı.';
 
   @override
-  String get qbPermLocationAlways => 'Konum «Her zaman»';
+  String get qbPermLocationAlways => 'Konum “Her zaman”';
 
   @override
   String get qbPermLocationAlwaysWhy =>
-      'Yürüyüşlerin arka planda kaydı ve rota ipuçları. Sistem önce «Kullanırken», sonra «Her zaman» izni isteyecek.';
+      'Yürüyüşlerin arka planda kaydı ve rota ipuçları. Telefon önce “Kullanırken”, sonra “Her zaman” iznini soracak.';
 
   @override
   String get qbPermCamera => 'Kamera';
@@ -5693,17 +5999,17 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String qeEffectVigor(String pct) {
-    return 'Zindelik +$pct% deneyim';
+    return 'Zindelik: +%$pct deneyim';
   }
 
   @override
   String qeEffectDehydration(String pct) {
-    return 'Susuzluk −$pct% dayanıklılık';
+    return 'Susuzluk: −%$pct dayanıklılık';
   }
 
   @override
   String qeEffectBossAura(String pct) {
-    return 'Galip aurası +$pct% ◆';
+    return 'Zafer aurası: +%$pct ◆';
   }
 
   @override
@@ -5729,24 +6035,23 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qeReasonFailedQuests =>
-      'Günün başarısızlıkları. Ceza görevi atandı';
+      'Günün başarısız görevleri. Ceza görevi verildi';
 
   @override
   String get qeReasonMarkWalked =>
-      'İşaret: arkadaşlarla gezdin. Dürüstlük cezayı hafifletir';
+      'Beyan: arkadaşlarla dışarı çıktın. Dürüstlük cezayı hafifletir';
 
   @override
-  String get qeReasonMarkAlcohol => 'İşaret: alkol. Yarın güçlendirilmiş plan';
+  String get qeReasonMarkAlcohol => 'Beyan: alkol. Yarın güçlendirilmiş plan';
 
   @override
-  String get qeReasonMarkRelapse =>
-      'İşaret: kaçamak. Yarın güçlendirilmiş plan';
+  String get qeReasonMarkRelapse => 'Beyan: kaçamak. Yarın güçlendirilmiş plan';
 
   @override
   String get qeReasonBossFailed => 'Haftanın bossu yenilmedi';
 
   @override
-  String get qeReasonReproach => 'Görev yapılmadı. Sistem memnun değil';
+  String get qeReasonReproach => 'Görev tamamlanmadı. Sistem memnun değil';
 
   @override
   String get qeReasonOther => 'Sistem cezası';
@@ -5901,7 +6206,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qstHistPurchase => 'Satın alma';
 
   @override
-  String get qstHistMark => 'Gün işareti';
+  String get qstHistMark => 'Günün beyanı';
 
   @override
   String get qstHistPauseStarted => 'Mola';
@@ -5928,14 +6233,14 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qstHistAdjustment => 'Düzeltme';
 
   @override
-  String get qstMarksTitle => 'Dürüst işaretler';
+  String get qstMarksTitle => 'Dürüst beyanlar';
 
   @override
   String get qstMarksHint =>
-      'Dürüst işaret, gizli bir kaçamaktan daha hafiftir. Yarın — güçlendirilmiş plan.';
+      'Dürüst beyan, gizlenen kaçamaktan daha hafiftir. Yarın güçlendirilmiş plan.';
 
   @override
-  String get qstMarkWalked => 'Arkadaşlarla gezdim';
+  String get qstMarkWalked => 'Arkadaşlarla dışarı çıktım';
 
   @override
   String get qstMarkAlcohol => 'Alkol';
@@ -5945,15 +6250,15 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String qstMarkConfirmTitle(String mark) {
-    return 'İşaretle: $mark?';
+    return 'Beyan et: $mark?';
   }
 
   @override
   String get qstMarkConfirmMessage =>
-      'Dürüst işaret gizli kaçamaktan daha hafiftir: şimdi küçük bir ceza, yarın güçlendirilmiş plan.';
+      'Dürüst beyan, gizlenen kaçamaktan daha hafiftir: şimdi küçük bir ceza, yarın güçlendirilmiş plan.';
 
   @override
-  String get qstMarkConfirm => 'İşaretle';
+  String get qstMarkConfirm => 'Beyan et';
 
   @override
   String get qstPauseTitle => 'Mola';
@@ -5997,7 +6302,7 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get qstPauseUntilRemoved => 'Bitirene kadar';
+  String get qstPauseUntilRemoved => 'Kaldırılana kadar';
 
   @override
   String get qstPauseUntilDate => 'Tarihe kadar';
@@ -6019,7 +6324,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String qstStatPointsLeft(int count) {
-    return 'Boş: $count';
+    return 'Serbest: $count';
   }
 
   @override
@@ -6029,7 +6334,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String qstWindowFailedMessage(String quest, String points) {
-    return '«$quest». Ceza: −$points ◆.';
+    return '“$quest”. Ceza: −$points ◆.';
   }
 
   @override
@@ -6050,7 +6355,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String qstWindowPenaltyQuest(String quest) {
-    return 'Ceza görevi verildi: «$quest».';
+    return 'Ceza görevi verildi: “$quest”.';
   }
 
   @override
@@ -6068,12 +6373,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String qstLevelUpPoints(int count) {
-    return 'Boş özellik puanı: $count';
+    return 'Serbest özellik puanı: $count';
   }
 
   @override
   String qstTitleGot(String title) {
-    return 'Unvan: «$title»';
+    return 'Unvan: “$title”';
   }
 
   @override
@@ -6084,14 +6389,14 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qstBossLostMessage =>
-      'Hafta zafersiz kapandı. Yeni boss — pazartesi.';
+      'Hafta zafersiz kapandı. Yeni boss pazartesi geliyor.';
 
   @override
   String get qstDisciplineOnTitle => 'Disiplin modu açık';
 
   @override
   String get qstDisciplineOnMessage =>
-      'Kalkış 6:00, yatış 22:00, plan sınırları içinde ek yük. Bakiye ◆ pozitif olunca mod kapanır.';
+      'Kalkış 6:00, yatış 22:00, plan sınırları içinde ek egzersiz. ◆ bakiyesi artıya geçince mod kapanır.';
 
   @override
   String get qstDisciplineOffTitle => 'Disiplin modu kapandı';
@@ -6133,7 +6438,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qstFormWeekdaysHint => 'Seçilmezse her gün';
 
   @override
-  String get qstFormWeekParity => 'Hafta dönüşümü';
+  String get qstFormWeekParity => 'Dönüşümlü haftalar';
 
   @override
   String get qstWeekEvery => 'Her hafta';
@@ -6175,13 +6480,13 @@ class AppLocalizationsTr extends AppLocalizations {
   String get qstFormPenalty => 'Başarısızlık cezası, ◆';
 
   @override
-  String get qstFormNag => 'Israr et';
+  String get qstFormNag => 'Israrla hatırlat';
 
   @override
   String get qstFormNagHint => 'Tamamlanana kadar her dakika hatırlat';
 
   @override
-  String get schTitle => 'Ders programı';
+  String get schTitle => 'Program';
 
   @override
   String get schInstitution => 'Eğitim kurumu';
@@ -6272,7 +6577,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: '$count öğe kopyalandı',
-      one: '$count öğe kopyalandı',
     );
     return '$_temp0';
   }
@@ -6487,7 +6791,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get setExportHint =>
-      'Tüm veriler tek dosyada — «Dosyalar»a kaydedin veya kendinize gönderin';
+      'Tüm veriler tek dosyada — “Dosyalar”a kaydedin veya kendinize gönderin';
 
   @override
   String get setIncludePhotos => 'Fotoğrafları dahil et';
@@ -6667,7 +6971,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get setDiscipline => 'Disiplin modu';
 
   @override
-  String get setDisciplineHint => '06:00 kalkış, 22:00 yatış, ek yük';
+  String get setDisciplineHint => '06:00 kalkış, 22:00 yatış, ek egzersiz';
 
   @override
   String get setBody => 'Vücut ve sağlık';
@@ -6679,13 +6983,13 @@ class AppLocalizationsTr extends AppLocalizations {
   String get setWorkouts => 'Antrenmanlar';
 
   @override
-  String get setWorkoutsHint => 'Seviyene göre program, zamanlayıcılar, ses';
+  String get setWorkoutsHint => 'Seviyeye göre program, zamanlayıcılar, ses';
 
   @override
   String get setWalks => 'Yürüyüşler';
 
   @override
-  String get setWalksHint => 'Dairesel rota, bölümler, müzik üstünde ses';
+  String get setWalksHint => 'Dairesel rota, bölümler, müziğin üstünde ses';
 
   @override
   String get shpNoticeLabel => 'Bildirim';
@@ -6704,7 +7008,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get shpClosedHint =>
-      'Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten atandı.';
+      'Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten açıldı.';
 
   @override
   String get shpRewards => 'Ödüller';
@@ -6743,7 +7047,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: 'Günde $count kez',
-      one: 'Günde $count kez',
     );
     return '$_temp0';
   }
@@ -6754,7 +7057,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: 'Haftada $count kez',
-      one: 'Haftada $count kez',
     );
     return '$_temp0';
   }
@@ -6765,7 +7067,6 @@ class AppLocalizationsTr extends AppLocalizations {
       count,
       locale: localeName,
       other: 'Ayda $count kez',
-      one: 'Ayda $count kez',
     );
     return '$_temp0';
   }
@@ -6790,12 +7091,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String shpConfirmMessage(String title, int price, int after) {
-    return '«$title» — $price ◆. Satın alma sonrası bakiye: $after ◆.';
+    return '“$title” — $price ◆. Satın alma sonrası bakiye: $after ◆.';
   }
 
   @override
   String shpBoughtMessage(String title) {
-    return '«$title» ödülü alındı. Sistem satın almayı kaydetti.';
+    return '“$title” ödülü alındı. Sistem satın almayı kaydetti.';
   }
 
   @override
@@ -6842,7 +7143,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get shpFieldPrice => 'Fiyat';
 
   @override
-  String get shpFieldPriceHint => 'Ödülün kaç ◆ tuttuğu';
+  String get shpFieldPriceHint => 'Ödül kaç ◆ değerinde';
 
   @override
   String get shpFieldLimit => 'Sıklık sınırı';
@@ -6863,7 +7164,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get shpFieldLimitCount => 'Dönem başına kaç kez';
 
   @override
-  String get shpToArchive => 'Arşive taşı';
+  String get shpToArchive => 'Arşivle';
 
   @override
   String get shpErrorPrice => '1 ile 100000 arası';
@@ -6893,7 +7194,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get dscReasonManual => 'elle açıldı';
 
   @override
-  String get dscReasonAi => 'bir aksamadan sonra Sistem kararı';
+  String get dscReasonAi => 'kaçamaktan sonra Sistem kararı';
 
   @override
   String get dscExitLabel => 'Kapanacak';
@@ -6909,7 +7210,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get dscOffText =>
-      'Bakiye ◆ eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.';
+      '◆ bakiyesi eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.';
 
   @override
   String get dscBalance => 'Bakiye';
@@ -6932,7 +7233,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get dscBlockerText =>
-      'Disiplin modunda yatma saatinden sonra eğlence uygulamaları engellenir: Android\'de «Sistem: yatma saati» ekranıyla, iPhone\'da Kestirmeler otomasyonuyla.';
+      'Disiplin modunda yatma saatinden sonra eğlence uygulamaları engellenir: Android\'de “Sistem: yatma vakti” ekranıyla, iPhone\'da Kestirmeler otomasyonuyla.';
 
   @override
   String get dscBlockerSoon => 'Sonra';
@@ -6959,12 +7260,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String dscQuestWake(String time) {
-    return '$time kalkış';
+    return 'Kalkış: $time';
   }
 
   @override
   String dscQuestBed(String time) {
-    return '$time yatış';
+    return 'Yatış: $time';
   }
 
   @override
@@ -7146,7 +7447,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get visErrNotSignedIn =>
-      'Fotoğraf analizi için hesabınıza giriş yapın (\"Daha fazla\" → \"Hesap\").';
+      'Fotoğraf analizi için hesabınıza giriş yapın (“Diğer” → “Hesap”).';
 
   @override
   String get visErrBudget =>
@@ -7547,290 +7848,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get wlkMapAttribution => '© OpenStreetMap katkıcıları';
 
   @override
-  String get planNoticeLabel => 'Bildirim';
+  String get polShowPassword => 'Şifreyi göster';
 
   @override
-  String get planTitle => 'Plan hazırlandı';
-
-  @override
-  String get planDraftNote =>
-      'Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.';
-
-  @override
-  String planAcceptedAt(String date) {
-    return 'Plan kabul edildi: $date';
-  }
-
-  @override
-  String get planAccept => 'Kabul et';
-
-  @override
-  String get planEditData => 'Verileri değiştir';
-
-  @override
-  String get planRecalculate => 'Yeniden hesapla';
-
-  @override
-  String get planChooseSection => 'Hangi bölümü değiştirmek istersiniz?';
-
-  @override
-  String get planLoadError => 'Plan hazırlanamadı';
-
-  @override
-  String get planRetry => 'Tekrar dene';
-
-  @override
-  String get planNormsTitle => 'Normlar';
-
-  @override
-  String get planCalories => 'Kalori';
-
-  @override
-  String planKcal(String value) {
-    return '$value kcal';
-  }
-
-  @override
-  String get planModeDeficit => 'Açık';
-
-  @override
-  String get planModeSurplus => 'Fazla';
-
-  @override
-  String get planModeMaintenance => 'Koruma';
-
-  @override
-  String planBmrTdee(String bmr, String tdee) {
-    return 'Bazal metabolizma $bmr · harcama $tdee kcal';
-  }
-
-  @override
-  String get planProtein => 'Protein';
-
-  @override
-  String get planFat => 'Yağ';
-
-  @override
-  String get planCarbs => 'Karbonhidrat';
-
-  @override
-  String planGrams(String value) {
-    return '$value g';
-  }
-
-  @override
-  String get planWater => 'Su';
-
-  @override
-  String planMl(String value) {
-    return '$value ml';
-  }
-
-  @override
-  String planWaterTrainingDay(String value) {
-    return 'Antrenman gününde — $value ml';
-  }
-
-  @override
-  String get planSleep => 'Uyku';
-
-  @override
-  String planHours(String value) {
-    return '$value sa';
-  }
-
-  @override
-  String planHoursMinutes(String h, String m) {
-    return '$h sa $m dk';
-  }
-
-  @override
-  String planWakeBed(String wake, String bed) {
-    return 'Kalkış $wake · yatış $bed';
-  }
-
-  @override
-  String get planRoutineTitle => 'Günlük düzen';
-
-  @override
-  String planWeek(String n) {
-    return 'Hafta $n';
-  }
-
-  @override
-  String get planWdMon => 'Pzt';
-
-  @override
-  String get planWdTue => 'Sal';
-
-  @override
-  String get planWdWed => 'Çar';
-
-  @override
-  String get planWdThu => 'Per';
-
-  @override
-  String get planWdFri => 'Cum';
-
-  @override
-  String get planWdSat => 'Cmt';
-
-  @override
-  String get planWdSun => 'Paz';
-
-  @override
-  String get planRoutineWake => 'Kalkış';
-
-  @override
-  String get planRoutineSkincareAm => 'Cilt bakımı (sabah)';
-
-  @override
-  String planRoutineMeal(String n) {
-    return 'Öğün $n';
-  }
-
-  @override
-  String get planRoutineLeaveHome => 'Evden çıkış';
-
-  @override
-  String get planRoutineLesson => 'Ders';
-
-  @override
-  String get planRoutineWork => 'İş';
-
-  @override
-  String get planRoutineOther => 'Etkinlik';
-
-  @override
-  String get planRoutineReturnHome => 'Evde';
-
-  @override
-  String get planRoutineTraining => 'Antrenman';
-
-  @override
-  String get planRoutineSkincarePm => 'Cilt bakımı (akşam)';
-
-  @override
-  String get planRoutineBed => 'Yatış';
-
-  @override
-  String get planQuestsTitle => 'Görevler';
-
-  @override
-  String get planQuestsNote =>
-      'Görevleri tamamlama bir sonraki güncellemede gelecek.';
-
-  @override
-  String planQuestLeaveHome(String time) {
-    return '$time saatine kadar evden çık';
-  }
-
-  @override
-  String planQuestAttendLesson(String title) {
-    return 'Ders: $title';
-  }
-
-  @override
-  String planQuestAttendWork(String title) {
-    return 'İş: $title';
-  }
-
-  @override
-  String planQuestWater(String ml) {
-    return '$ml ml su iç';
-  }
-
-  @override
-  String planQuestSleep(String time, String hours) {
-    return '$time saatinde yat (uyku $hours sa)';
-  }
-
-  @override
-  String planQuestMeals(String count) {
-    return 'Plana göre öğünler: $count';
-  }
-
-  @override
-  String planQuestTraining(String minutes) {
-    return '$minutes dk antrenman';
-  }
-
-  @override
-  String get planQuestSkincareMorning => 'Sabah cilt bakımı';
-
-  @override
-  String get planQuestSkincareEvening => 'Akşam cilt bakımı';
-
-  @override
-  String planQuestWakeOnTime(String time) {
-    return '$time saatinde ertelemeden kalk';
-  }
-
-  @override
-  String planQuestStudy(String minutes) {
-    return '$minutes dk ders çalış';
-  }
-
-  @override
-  String get planQuestTrackExpenses => 'Günün harcamalarını kaydet';
-
-  @override
-  String get planQuestEveryDay => 'her gün';
-
-  @override
-  String planQuestWeekOnly(String n) {
-    return 'hafta $n';
-  }
-
-  @override
-  String planQuestReward(String diamonds, String xp) {
-    return '+$diamonds ◆ · +$xp deneyim';
-  }
-
-  @override
-  String get planWarningsTitle => 'Uyarılar';
-
-  @override
-  String planWarnSleepShort(String scheduled, String target, String bed) {
-    return 'Programa göre uyku $scheduled — norm olan $target süresinden az. Önerilen yatış saati: $bed.';
-  }
-
-  @override
-  String get planWarnDeficitFloor =>
-      'Kalori açığı güvenli alt sınırla kısıtlandı — Sistem bunun altına inmez.';
-
-  @override
-  String get planWarnActivityDefaulted =>
-      'Aktivite düzeyi belirtilmedi — «hareketsiz» kabul edildi.';
-
-  @override
-  String planWarnNoTrainingWindow(String day) {
-    return '$day: antrenman için boş zaman yok.';
-  }
-
-  @override
-  String get planWarnInjuries =>
-      'Sakatlık veya kısıtlamalar belirtildi — yükü dikkatli seçin, emin değilseniz doktora danışın.';
-
-  @override
-  String planMissingMessage(String fields) {
-    return 'Kalori ve makroları hesaplamak için doldurun: $fields.';
-  }
-
-  @override
-  String get planMissingSex => 'cinsiyet';
-
-  @override
-  String get planMissingBirthDate => 'doğum tarihi';
-
-  @override
-  String get planMissingHeight => 'boy';
-
-  @override
-  String get planMissingWeight => 'kilo';
-
-  @override
-  String planFillSection(String section) {
-    return 'Doldur: $section';
-  }
+  String get polHidePassword => 'Şifreyi gizle';
 }

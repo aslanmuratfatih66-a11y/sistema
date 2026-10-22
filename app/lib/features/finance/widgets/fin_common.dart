@@ -118,10 +118,7 @@ class FinEmpty extends StatelessWidget {
   final String text;
 
   @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6),
-        child: Text(text, style: SysText.secondary),
-      );
+  Widget build(BuildContext context) => SysEmptyState.inline(text, glyph: SysGlyph.wallet);
 }
 
 /// Подтверждение удаления (системное окно).

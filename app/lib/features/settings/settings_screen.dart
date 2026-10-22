@@ -21,6 +21,7 @@ import 'backup/backup_platform.dart';
 import 'backup/backup_service.dart';
 import 'settings_summaries.dart';
 import '../chat/voice_picker.dart';
+import '../character/system_overlay_settings.dart';
 
 /// Версия приложения. CI может передать `--dart-define=APP_VERSION=…`; без package_info.
 const kAppVersion = String.fromEnvironment('APP_VERSION', defaultValue: '1.0.0');
@@ -176,6 +177,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           const SizedBox(height: 16),
           _languagePanel(l),
           const SizedBox(height: 16),
+          // Android: персонаж поверх других приложений (на iOS виджет пустой).
+          const Padding(padding: EdgeInsets.only(bottom: 16), child: SystemOverlaySettingsTile()),
           _dataPanel(l),
           const SizedBox(height: 16),
           _aboutPanel(l),
@@ -559,7 +562,7 @@ class _NavRow extends StatelessWidget {
                     ),
                   ],
                   const SizedBox(width: 4),
-                  const Icon(Icons.chevron_right, size: 20, color: SysColors.textInactive),
+                  const SysIcon(SysGlyph.chevronRight, size: 20, color: SysColors.textInactive),
                 ],
               ),
             ),

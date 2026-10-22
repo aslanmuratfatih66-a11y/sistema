@@ -85,7 +85,7 @@ class ShoppingListScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 14),
           if (items.isEmpty)
-            SysPanel(child: Text(l.nutShopEmpty, style: SysText.secondary))
+            SysPanel(child: SysEmptyState.inline(l.nutShopEmpty, glyph: SysGlyph.shop))
           else
             SysPanel(
               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),

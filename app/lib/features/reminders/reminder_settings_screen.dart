@@ -91,7 +91,7 @@ class _ReminderSettingsScreenState extends ConsumerState<ReminderSettingsScreen>
       child: prefs == null
           ? const Padding(
               padding: EdgeInsets.all(32),
-              child: Center(child: CircularProgressIndicator(color: SysColors.accentLight)),
+              child: Center(child: SysLoader()),
             )
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,

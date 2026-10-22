@@ -20,7 +20,7 @@ class HistoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     if (entries.isEmpty) {
-      return SysPanel(title: l.qstViewHistory, child: Text(l.qstEmptyHistory, style: SysText.secondary));
+      return SysPanel(title: l.qstViewHistory, child: SysEmptyState.inline(l.qstEmptyHistory, glyph: SysGlyph.clock));
     }
     final days = <DateTime, List<HistoryEntry>>{};
     for (final e in entries) {

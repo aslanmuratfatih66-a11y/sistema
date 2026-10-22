@@ -6,6 +6,7 @@ import '../../core/ai/ai_api.dart';
 import '../../core/models/enums.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
+import '../common/ai_error_view.dart';
 import '../nutrition/platform/nutrition_platform.dart';
 import '../onboarding/questionnaire_a/data/photo_repository.dart';
 
@@ -79,13 +80,7 @@ class VisionBusy extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 32),
-        child: Column(
-          children: [
-            const SizedBox.square(dimension: 28, child: CircularProgressIndicator(strokeWidth: 2)),
-            const SizedBox(height: 12),
-            Text(text ?? AppLocalizations.of(context).visAnalyzing, style: SysText.secondary, textAlign: TextAlign.center),
-          ],
-        ),
+        child: Center(child: SysLoader(label: text ?? AppLocalizations.of(context).visAnalyzing)),
       );
 }
 
@@ -99,16 +94,12 @@ class VisionError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    return SysPanel(
-      tone: PanelTone.danger,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(visionErrorText(l, error), style: SysText.body),
-          const SizedBox(height: 12),
-          SysButton.secondary(label: l.visRetry, onPressed: onRetry),
-        ],
-      ),
+    return AiErrorView.fromError(
+      error,
+      message: visionErrorText(l, error),
+      retryLabel: l.visRetry,
+      onRetry: onRetry,
+      alwaysRetry: true,
     );
   }
 }

@@ -18,6 +18,7 @@
 		781DFEBC90DF37D44D40C699 /* WidgetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D51400E8888715B8CD25C /* WidgetData.swift */; };
 		7884E8682EC3CC0700C636F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884E8672EC3CC0400C636F2 /* SceneDelegate.swift */; };
 		78A318202AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 78A3181F2AECB46A00862997 /* FlutterGeneratedPluginSwiftPackage */; };
+		7E5BEB02466B18B84215DB53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3695B904032C8B343BFE /* InfoPlist.strings */; };
 		80184C1BEDA90DDA16519C1A /* SistemaShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5567BD2F7C3179CE61802B3 /* SistemaShared.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -100,9 +101,11 @@
 		A1B2C3D4E5F60718293A4B02 /* StepCounterChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCounterChannel.swift; sourceTree = "<group>"; };
 		A6167841DE9DCED0806BA828 /* SistemaWidgets.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = SistemaWidgets.entitlements; sourceTree = "<group>"; };
 		B5567BD2F7C3179CE61802B3 /* SistemaShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SistemaShared.swift; sourceTree = "<group>"; };
+		B6B898ED47D55E2887DCDB05 /* ru */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB4BB7F1E27D4C34E8C4C859 /* SistemaWidgetsBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SistemaWidgetsBundle.swift; sourceTree = "<group>"; };
 		BF6E12E73C6FA4705C0C732C /* AlarmKitChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlarmKitChannel.swift; sourceTree = "<group>"; };
 		C23630AEE8DDA1FD1C20E751 /* MapKitChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapKitChannel.swift; sourceTree = "<group>"; };
+		E1D4E255C37DC68F32821BE5 /* tr */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E75AB1C47EDDC1673A49F458 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9E77EBAF6D19A8C94E62897 /* Runner.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +205,7 @@
 				3831377F72D12DEE722D02D3 /* LiveActivityChannel.swift */,
 				E9E77EBAF6D19A8C94E62897 /* Runner.entitlements */,
 				BF6E12E73C6FA4705C0C732C /* AlarmKitChannel.swift */,
+				42ED3695B904032C8B343BFE /* InfoPlist.strings */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -320,6 +324,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				tr,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
 			packageReferences = (
@@ -352,6 +358,7 @@
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+				7E5BEB02466B18B84215DB53 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +459,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		42ED3695B904032C8B343BFE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6B898ED47D55E2887DCDB05 /* ru */,
+				E1D4E255C37DC68F32821BE5 /* tr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

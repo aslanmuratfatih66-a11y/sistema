@@ -130,7 +130,7 @@ class _NearbyShopSheetState extends ConsumerState<NearbyShopSheet> {
               else if (_error != null)
                 Text(_error!, key: const Key('wlk-shop-error'), style: SysText.secondary)
               else if (places != null && places.isEmpty)
-                Text(l.wlkNothingNearby, key: const Key('wlk-shop-empty'), style: SysText.secondary)
+                SysEmptyState.inline(l.wlkNothingNearby, key: const Key('wlk-shop-empty'), glyph: SysGlyph.shop)
               else if (places != null)
                 ConstrainedBox(
                   constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.5),

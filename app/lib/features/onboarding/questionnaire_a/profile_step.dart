@@ -167,7 +167,7 @@ class _ProfileStepState extends ConsumerState<ProfileStep> {
     if (!_loaded) {
       return const Padding(
         padding: EdgeInsets.all(24),
-        child: Center(child: CircularProgressIndicator(color: SysColors.accent)),
+        child: Center(child: SysLoader(color: SysColors.accent)),
       );
     }
     final now = DateTime.now();

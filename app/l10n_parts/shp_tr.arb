@@ -4,7 +4,7 @@
   "shpTitle": "Ödül mağazası",
   "shpBalance": "Bakiye",
   "shpClosedMessage": "Mağaza kapalı: bakiye eksi",
-  "shpClosedHint": "Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten atandı.",
+  "shpClosedHint": "Bakiyeyi artıya çevirmek için görevleri tamamlayın. Disiplin modu zaten açıldı.",
   "shpRewards": "Ödüller",
   "shpAdd": "Yeni ödül",
   "shpEmptyTitle": "Henüz ödül yok",
@@ -15,7 +15,7 @@
   "shpExampleFreeEvening": "Görevsiz bir akşam",
   "shpBuy": "Satın al",
   "shpLimitNone": "Sınırsız",
-  "shpLimitDay": "{count, plural, one{Günde {count} kez} other{Günde {count} kez}}",
+  "shpLimitDay": "{count, plural, other{Günde {count} kez}}",
   "@shpLimitDay": {
     "placeholders": {
       "count": {
@@ -23,7 +23,7 @@
       }
     }
   },
-  "shpLimitWeek": "{count, plural, one{Haftada {count} kez} other{Haftada {count} kez}}",
+  "shpLimitWeek": "{count, plural, other{Haftada {count} kez}}",
   "@shpLimitWeek": {
     "placeholders": {
       "count": {
@@ -31,7 +31,7 @@
       }
     }
   },
-  "shpLimitMonth": "{count, plural, one{Ayda {count} kez} other{Ayda {count} kez}}",
+  "shpLimitMonth": "{count, plural, other{Ayda {count} kez}}",
   "@shpLimitMonth": {
     "placeholders": {
       "count": {
@@ -64,7 +64,7 @@
     }
   },
   "shpConfirmTitle": "Satın almayı onaylayın",
-  "shpConfirmMessage": "«{title}» — {price} ◆. Satın alma sonrası bakiye: {after} ◆.",
+  "shpConfirmMessage": "“{title}” — {price} ◆. Satın alma sonrası bakiye: {after} ◆.",
   "@shpConfirmMessage": {
     "placeholders": {
       "title": {
@@ -78,7 +78,7 @@
       }
     }
   },
-  "shpBoughtMessage": "«{title}» ödülü alındı. Sistem satın almayı kaydetti.",
+  "shpBoughtMessage": "“{title}” ödülü alındı. Sistem satın almayı kaydetti.",
   "@shpBoughtMessage": {
     "placeholders": {
       "title": {
@@ -100,17 +100,16 @@
   "shpFieldTitle": "Ad",
   "shpFieldTitleHint": "Örneğin: bir saat oyun",
   "shpFieldPrice": "Fiyat",
-  "shpFieldPriceHint": "Ödülün kaç ◆ tuttuğu",
+  "shpFieldPriceHint": "Ödül kaç ◆ değerinde",
   "shpFieldLimit": "Sıklık sınırı",
   "shpPeriodNone": "Yok",
   "shpPeriodDay": "Gün",
   "shpPeriodWeek": "Hafta",
   "shpPeriodMonth": "Ay",
   "shpFieldLimitCount": "Dönem başına kaç kez",
-  "shpToArchive": "Arşive taşı",
+  "shpToArchive": "Arşivle",
   "shpErrorPrice": "1 ile 100000 arası",
   "shpErrorCount": "1 ile 99 arası",
-
   "dscTitle": "Disiplin modu",
   "dscStatus": "Durum",
   "dscOn": "Açık",
@@ -118,19 +117,19 @@
   "dscReasonLabel": "Neden",
   "dscReasonDebt": "eksi bakiye",
   "dscReasonManual": "elle açıldı",
-  "dscReasonAi": "bir aksamadan sonra Sistem kararı",
+  "dscReasonAi": "kaçamaktan sonra Sistem kararı",
   "dscExitLabel": "Kapanacak",
   "dscExitBalancePositive": "bakiye artıya geçtiğinde",
   "dscExitManual": "elle, bakiye eksi değilken",
   "dscSinceLabel": "Başlangıç",
-  "dscOffText": "Bakiye ◆ eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.",
+  "dscOffText": "◆ bakiyesi eksiye düşerse mod kendiliğinden açılır. Elle de açılabilir.",
   "dscBalance": "Bakiye",
   "dscToday": "Bugünün kuralları",
   "dscRulesNote": "Yük seviyenizi aşmaz. Yemek ve uyku kısılmaz: yatış ve kalkış her zamankinden geç olmaz.",
   "dscCannotRefuse": "Mod görevleri iptal edilemez.",
   "dscPreviewNote": "Disiplin modunda bir gün böyle görünecek.",
   "dscBlockerTitle": "Uygulama engelleme",
-  "dscBlockerText": "Disiplin modunda yatma saatinden sonra eğlence uygulamaları engellenir: Android'de «Sistem: yatma saati» ekranıyla, iPhone'da Kestirmeler otomasyonuyla.",
+  "dscBlockerText": "Disiplin modunda yatma saatinden sonra eğlence uygulamaları engellenir: Android'de “Sistem: yatma vakti” ekranıyla, iPhone'da Kestirmeler otomasyonuyla.",
   "dscBlockerSoon": "Sonra",
   "dscEnable": "Modu aç",
   "dscDisable": "Modu kapat",
@@ -138,7 +137,7 @@
   "dscDisableLocked": "Bakiye eksiyken kapatılamaz.",
   "dscChangedOnMessage": "Disiplin modu açıldı. Kalkış 6:00, yatış 22:00, ek egzersiz.",
   "dscChangedOffMessage": "Disiplin modu kapatıldı.",
-  "dscQuestWake": "{time} kalkış",
+  "dscQuestWake": "Kalkış: {time}",
   "@dscQuestWake": {
     "placeholders": {
       "time": {
@@ -146,7 +145,7 @@
       }
     }
   },
-  "dscQuestBed": "{time} yatış",
+  "dscQuestBed": "Yatış: {time}",
   "@dscQuestBed": {
     "placeholders": {
       "time": {

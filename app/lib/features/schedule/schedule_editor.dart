@@ -24,7 +24,7 @@ class ScheduleEditor extends ConsumerWidget {
     if (config == null || entries == null) {
       return const Padding(
         padding: EdgeInsets.all(24),
-        child: Center(child: CircularProgressIndicator(color: SysColors.accentLight)),
+        child: Center(child: SysLoader()),
       );
     }
     final repo = ref.read(scheduleRepositoryProvider);

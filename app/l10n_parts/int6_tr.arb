@@ -4,7 +4,7 @@
   "int6PlanAiError": "Yapay zekâ ile plan oluşturulamadı. Hesap girişini ve bağlantıyı kontrol edin.",
   "int6Learning": "Bilgi",
   "int6LearningHint": "Kurslar, günün dersleri ve tekrarlar",
-  "int6AiJournal": "Yapay zekâ: harcama ve işlemler",
+  "int6AiJournal": "Yapay zekâ: harcamalar ve eylemler",
   "int6AiJournalHint": "Bütçe ve Sistem'in yaptığı değişiklikler (geri alınabilir)",
   "int6Voice": "Karakter sesi",
   "int6VoiceHint": "Sunucudaki hazır sesler, dinle"

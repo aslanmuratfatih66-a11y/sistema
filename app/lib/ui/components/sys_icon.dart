@@ -40,6 +40,23 @@ enum SysGlyph {
   info,
   send,
   sparkle,
+  arrowLeft,
+  arrowRight,
+  chevronLeft,
+  chevronRight,
+  camera,
+  cameraSwitch,
+  refresh,
+  trash,
+  eye,
+  eyeOff,
+  volume,
+  volumeOff,
+  play,
+  offline,
+  lock,
+  search,
+  inbox,
 }
 
 /// Линейная иконка (stroke 1.7 на сетке 24×24, масштабируется по [size]).
@@ -358,6 +375,113 @@ class SysGlyphPainter extends CustomPainter {
         );
         _line(c, p, 19, 2.5, 19, 6.5);
         _line(c, p, 17, 4.5, 21, 4.5);
+      case SysGlyph.arrowLeft:
+        _line(c, p, 19, 12, 5, 12);
+        c.drawPath(_poly([11, 6, 5, 12, 11, 18]), p);
+      case SysGlyph.arrowRight:
+        _line(c, p, 5, 12, 19, 12);
+        c.drawPath(_poly([13, 6, 19, 12, 13, 18]), p);
+      case SysGlyph.chevronLeft:
+        c.drawPath(_poly([15, 5.5, 8.5, 12, 15, 18.5]), p);
+      case SysGlyph.chevronRight:
+        c.drawPath(_poly([9, 5.5, 15.5, 12, 9, 18.5]), p);
+      case SysGlyph.camera:
+        c.drawPath(_poly([3, 8, 7, 8, 8.8, 5.5, 15.2, 5.5, 17, 8, 21, 8, 21, 19, 3, 19], close: true), p);
+        c.drawCircle(const Offset(12, 13), 3.5, p);
+      case SysGlyph.cameraSwitch:
+        c.drawPath(_poly([3, 8, 7, 8, 8.8, 5.5, 15.2, 5.5, 17, 8, 21, 8, 21, 19, 3, 19], close: true), p);
+        // Две стрелки по кругу — смена камеры.
+        c.drawPath(
+          Path()
+            ..moveTo(8.5, 12.2)
+            ..arcToPoint(const Offset(15, 11), radius: const Radius.circular(3.6)),
+          p,
+        );
+        c.drawPath(_poly([15.6, 9.2, 15, 11, 13.2, 10.6]), p);
+        c.drawPath(
+          Path()
+            ..moveTo(15.5, 13.8)
+            ..arcToPoint(const Offset(9, 15), radius: const Radius.circular(3.6)),
+          p,
+        );
+        c.drawPath(_poly([8.4, 16.8, 9, 15, 10.8, 15.4]), p);
+      case SysGlyph.refresh:
+        c.drawPath(
+          Path()
+            ..moveTo(19, 12)
+            ..arcToPoint(const Offset(7.2, 6.6), radius: const Radius.circular(7), largeArc: true),
+          p,
+        );
+        c.drawPath(_poly([7, 3, 7, 6.8, 10.8, 6.8]), p);
+      case SysGlyph.trash:
+        _line(c, p, 4, 6.5, 20, 6.5);
+        c.drawPath(_poly([9, 6.5, 9.5, 3.5, 14.5, 3.5, 15, 6.5]), p);
+        c.drawPath(_poly([6, 6.5, 7, 20.5, 17, 20.5, 18, 6.5]), p);
+        _line(c, p, 10, 10, 10, 17);
+        _line(c, p, 14, 10, 14, 17);
+      case SysGlyph.eye:
+      case SysGlyph.eyeOff:
+        c.drawPath(
+          Path()
+            ..moveTo(2.5, 12)
+            ..quadraticBezierTo(12, 2, 21.5, 12)
+            ..quadraticBezierTo(12, 22, 2.5, 12)
+            ..close(),
+          p,
+        );
+        c.drawCircle(const Offset(12, 12), 3, p);
+        if (glyph == SysGlyph.eyeOff) _line(c, p, 4, 20, 20, 4);
+      case SysGlyph.volume:
+      case SysGlyph.volumeOff:
+        c.drawPath(_poly([3.5, 9.5, 7, 9.5, 11.5, 5, 11.5, 19, 7, 14.5, 3.5, 14.5], close: true), p);
+        if (glyph == SysGlyph.volume) {
+          c.drawPath(
+            Path()
+              ..moveTo(15, 9)
+              ..quadraticBezierTo(17, 12, 15, 15),
+            p,
+          );
+          c.drawPath(
+            Path()
+              ..moveTo(17.5, 6.5)
+              ..quadraticBezierTo(21.5, 12, 17.5, 17.5),
+            p,
+          );
+        } else {
+          _line(c, p, 15, 9.5, 20, 14.5);
+          _line(c, p, 20, 9.5, 15, 14.5);
+        }
+      case SysGlyph.play:
+        c.drawPath(_poly([7.5, 4.5, 19, 12, 7.5, 19.5], close: true), p);
+      case SysGlyph.offline:
+        // Облако, перечёркнутое.
+        c.drawPath(
+          Path()
+            ..moveTo(7, 18)
+            ..arcToPoint(const Offset(7.5, 10.5), radius: const Radius.circular(3.8))
+            ..arcToPoint(const Offset(17, 11), radius: const Radius.circular(5))
+            ..arcToPoint(const Offset(17, 18), radius: const Radius.circular(3.5))
+            ..close(),
+          p,
+        );
+        _line(c, p, 4, 3.5, 20, 21);
+      case SysGlyph.lock:
+        c.drawRRect(RRect.fromLTRBR(5, 10.5, 19, 20.5, const Radius.circular(2)), p);
+        c.drawPath(
+          Path()
+            ..moveTo(8, 10.5)
+            ..lineTo(8, 7.5)
+            ..arcToPoint(const Offset(16, 7.5), radius: const Radius.circular(4))
+            ..lineTo(16, 10.5),
+          p,
+        );
+        _line(c, p, 12, 14, 12, 17);
+      case SysGlyph.search:
+        c.drawCircle(const Offset(10.5, 10.5), 6.5, p);
+        _line(c, p, 15.2, 15.2, 20.5, 20.5);
+      case SysGlyph.inbox:
+        c.drawPath(_poly([3.5, 13, 6.5, 4.5, 17.5, 4.5, 20.5, 13, 20.5, 19.5, 3.5, 19.5], close: true), p);
+        c.drawPath(_poly([3.5, 13, 8.5, 13, 9.5, 15.5, 14.5, 15.5, 15.5, 13, 20.5, 13]), p);
     }
   }
 

@@ -153,7 +153,7 @@ class _PlanScreenState extends ConsumerState<PlanScreen> {
       body: SystemBackground(
         child: SafeArea(
           child: _loading
-              ? const Center(child: CircularProgressIndicator())
+              ? const SysLoadingView()
               : plan == null
                   ? _ErrorView(onRetry: _load)
                   : _PlanBody(

@@ -1,10 +1,22 @@
 {
   "actStepsTitle": "Adımlar",
   "actGoal": "Hedef: {goal}",
-  "@actGoal": {"placeholders": {"goal": {"type": "String"}}},
+  "@actGoal": {
+    "placeholders": {
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
   "actDistance": "Mesafe",
   "actDistanceKm": "{km} km",
-  "@actDistanceKm": {"placeholders": {"km": {"type": "String"}}},
+  "@actDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
   "actFloors": "Katlar",
   "actNoValue": "—",
   "actWeek": "7 gün",
@@ -17,5 +29,14 @@
   "actSave": "Kaydet",
   "actCancel": "İptal",
   "actStepsSemantic": "Bugünkü adımlar: {steps} / {goal}",
-  "@actStepsSemantic": {"placeholders": {"steps": {"type": "String"}, "goal": {"type": "String"}}}
+  "@actStepsSemantic": {
+    "placeholders": {
+      "steps": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  }
 }

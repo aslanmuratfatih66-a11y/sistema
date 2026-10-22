@@ -125,7 +125,7 @@ class _MeasurementsPanel extends ConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (shown.isEmpty) Text(l.bdyMeasureEmpty, style: SysText.secondary),
+          if (shown.isEmpty) SysEmptyState.inline(l.bdyMeasureEmpty, glyph: SysGlyph.heart),
           for (final (f, latest) in shown.take(4))
             BodyInfoRow(
               label: measureLabel(l, f),

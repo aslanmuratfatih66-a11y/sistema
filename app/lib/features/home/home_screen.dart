@@ -31,7 +31,7 @@ class HomeScreen extends ConsumerWidget {
     final blocks = <Widget>[
       HomeHeader(
         unread: data?.unreadNotifications ?? 0,
-        programStart: data?.programStart ?? ref.watch(homeContextProvider).programStart,
+        programStart: data?.programStart ?? ref.watch(homeContextProvider.select((c) => c.programStart)),
         onSettings: () => context.go(Routes.more),
       ),
       if (data != null) ...[
@@ -41,12 +41,11 @@ class HomeScreen extends ConsumerWidget {
           NextQuestPanel(key: ValueKey('next-${data.nextQuest!.instanceId}'), quest: data.nextQuest!),
         DayTimelinePanel(plan: data.day),
       ] else if (status.hasError)
-        SysPanel(tone: PanelTone.danger, child: Text(l.qstLoadError, style: SysText.secondary))
-      else
-        const Padding(
-          padding: EdgeInsets.all(24),
-          child: Center(child: CircularProgressIndicator(color: SysColors.accentLight)),
-        ),
+        SysErrorState(message: l.qstLoadError)
+      else ...[
+        const SysSkeletonPanel(lines: 4),
+        const SysSkeletonPanel(lines: 2),
+      ],
     ];
 
     // Material-предок нужен для InkResponse/TextField; фон рисует оболочка.

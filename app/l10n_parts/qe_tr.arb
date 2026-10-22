@@ -1,40 +1,142 @@
 {
   "qeQuestPenaltyCleaning": "Ceza: {minutes} dk temizlik",
-  "@qeQuestPenaltyCleaning": {"placeholders": {"minutes": {"type": "String"}}},
+  "@qeQuestPenaltyCleaning": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestPenaltyReading": "Ceza: {minutes} dk okuma",
-  "@qeQuestPenaltyReading": {"placeholders": {"minutes": {"type": "String"}}},
+  "@qeQuestPenaltyReading": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestPenaltyPlank": "Ceza: {seconds} sn plank",
-  "@qeQuestPenaltyPlank": {"placeholders": {"seconds": {"type": "String"}}},
+  "@qeQuestPenaltyPlank": {
+    "placeholders": {
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestPenaltyWalk": "Ceza: {minutes} dk yürüyüş",
-  "@qeQuestPenaltyWalk": {"placeholders": {"minutes": {"type": "String"}}},
+  "@qeQuestPenaltyWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestPenaltyNoGames": "Ceza: oyunsuz ve sosyal medyasız akşam",
   "qeQuestBoostWalk": "Güçlendirme: {minutes} dk yürüyüş",
-  "@qeQuestBoostWalk": {"placeholders": {"minutes": {"type": "String"}}},
+  "@qeQuestBoostWalk": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBoostWater": "Güçlendirme: {ml} ml ek su",
-  "@qeQuestBoostWater": {"placeholders": {"ml": {"type": "String"}}},
+  "@qeQuestBoostWater": {
+    "placeholders": {
+      "ml": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBoostBedOnTime": "Güçlendirme: en geç {time} yatış",
-  "@qeQuestBoostBedOnTime": {"placeholders": {"time": {"type": "String"}}},
+  "@qeQuestBoostBedOnTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBoostPlanTomorrow": "Güçlendirme: yarını planla",
   "qeQuestBossAll": "Bu hafta {count} görev tamamla",
-  "@qeQuestBossAll": {"placeholders": {"count": {"type": "String"}}},
+  "@qeQuestBossAll": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBossStrength": "{count} güç görevi tamamla",
-  "@qeQuestBossStrength": {"placeholders": {"count": {"type": "String"}}},
+  "@qeQuestBossStrength": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBossEndurance": "{count} dayanıklılık görevi tamamla",
-  "@qeQuestBossEndurance": {"placeholders": {"count": {"type": "String"}}},
+  "@qeQuestBossEndurance": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBossDiscipline": "{count} disiplin görevi tamamla",
-  "@qeQuestBossDiscipline": {"placeholders": {"count": {"type": "String"}}},
+  "@qeQuestBossDiscipline": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBossIntellect": "{count} zekâ görevi tamamla",
-  "@qeQuestBossIntellect": {"placeholders": {"count": {"type": "String"}}},
+  "@qeQuestBossIntellect": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBossHealth": "{count} sağlık görevi tamamla",
-  "@qeQuestBossHealth": {"placeholders": {"count": {"type": "String"}}},
+  "@qeQuestBossHealth": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
   "qeQuestBossLooks": "{count} görünüm görevi tamamla",
-  "@qeQuestBossLooks": {"placeholders": {"count": {"type": "String"}}},
-  "qeEffectVigor": "Zindelik +{pct}% deneyim",
-  "@qeEffectVigor": {"placeholders": {"pct": {"type": "String"}}},
-  "qeEffectDehydration": "Susuzluk −{pct}% dayanıklılık",
-  "@qeEffectDehydration": {"placeholders": {"pct": {"type": "String"}}},
-  "qeEffectBossAura": "Galip aurası +{pct}% ◆",
-  "@qeEffectBossAura": {"placeholders": {"pct": {"type": "String"}}},
+  "@qeQuestBossLooks": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectVigor": "Zindelik: +%{pct} deneyim",
+  "@qeEffectVigor": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectDehydration": "Susuzluk: −%{pct} dayanıklılık",
+  "@qeEffectDehydration": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "qeEffectBossAura": "Zafer aurası: +%{pct} ◆",
+  "@qeEffectBossAura": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
   "qeTitleStreak7": "Yılmaz",
   "qeTitleStreak30": "Demir İrade",
   "qeTitleBossSlayer": "Boss Galibi",
@@ -42,11 +144,11 @@
   "qeTitleLevel10": "Uyanmış",
   "qeTitleLevel25": "Çelikleşmiş",
   "qeTitleLevel50": "Sistem Efsanesi",
-  "qeReasonFailedQuests": "Günün başarısızlıkları. Ceza görevi atandı",
-  "qeReasonMarkWalked": "İşaret: arkadaşlarla gezdin. Dürüstlük cezayı hafifletir",
-  "qeReasonMarkAlcohol": "İşaret: alkol. Yarın güçlendirilmiş plan",
-  "qeReasonMarkRelapse": "İşaret: kaçamak. Yarın güçlendirilmiş plan",
+  "qeReasonFailedQuests": "Günün başarısız görevleri. Ceza görevi verildi",
+  "qeReasonMarkWalked": "Beyan: arkadaşlarla dışarı çıktın. Dürüstlük cezayı hafifletir",
+  "qeReasonMarkAlcohol": "Beyan: alkol. Yarın güçlendirilmiş plan",
+  "qeReasonMarkRelapse": "Beyan: kaçamak. Yarın güçlendirilmiş plan",
   "qeReasonBossFailed": "Haftanın bossu yenilmedi",
-  "qeReasonReproach": "Görev yapılmadı. Sistem memnun değil",
+  "qeReasonReproach": "Görev tamamlanmadı. Sistem memnun değil",
   "qeReasonOther": "Sistem cezası"
 }

@@ -158,14 +158,6 @@ class FniBusy extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 32),
-        child: Column(
-          children: [
-            const SizedBox.square(dimension: 28, child: CircularProgressIndicator(strokeWidth: 2)),
-            if (text != null) ...[
-              const SizedBox(height: 12),
-              Text(text!, style: SysText.secondary, textAlign: TextAlign.center),
-            ],
-          ],
-        ),
+        child: Center(child: SysLoader(label: text)),
       );
 }

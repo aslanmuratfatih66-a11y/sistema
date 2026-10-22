@@ -45,6 +45,7 @@ import 'domain/quests/quest_api.dart';
 import 'domain/quests/quest_section_hooks.dart';
 import 'domain/quests/section_hooks.dart';
 import 'domain/walks/walk_api.dart';
+import 'features/character/system_overlay_controller.dart';
 import 'features/finance/finance_providers.dart';
 import 'features/finance_input/bank_inbox_service.dart';
 import 'features/character/voice/flutter_tts_service.dart';
@@ -113,6 +114,8 @@ Future<void> main() async {
   unawaited(reminders.start());
   // Сообщения Системы наперёд (этап 6): пачка с сервера → локальные уведомления, облачко персонажа.
   unawaited(container.read(aiMessageSyncProvider).start());
+  // Этап 8: персонаж поверх других приложений (Android, по настройке и разрешению).
+  container.read(systemOverlayControllerProvider).start();
   // Виджеты из «Статуса», вода из виджета/App Intent, прогулка → Live Activity (после init уведомлений).
   LiveBridge(container, () => reminderL10n(db)).start();
   // Синхронизация с сервером: создание сервиса запускает таймер и слежение за аккаунтом.

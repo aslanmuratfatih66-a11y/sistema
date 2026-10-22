@@ -176,7 +176,7 @@ class _AlarmRingScreenState extends ConsumerState<AlarmRingScreen> {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
               child: _loading
-                  ? const Center(child: CircularProgressIndicator())
+                  ? const SysLoadingView()
                   : _alarm == null
                       ? _notFound(l)
                       : _done

@@ -344,10 +344,7 @@ class _WalkPage extends StatelessWidget {
                       onPressed: () => Navigator.of(context).maybePop(),
                       tooltip: l.commonBack,
                       constraints: const BoxConstraints(minWidth: SysDims.minTap, minHeight: SysDims.minTap),
-                      icon: const RotatedBox(
-                        quarterTurns: 3,
-                        child: SysIcon(SysGlyph.arrowUp, size: 22, color: SysColors.accentLight),
-                      ),
+                      icon: const SysIcon(SysGlyph.arrowLeft, size: 22, color: SysColors.accentLight),
                     ),
                     const SizedBox(width: 4),
                     Expanded(
@@ -625,7 +622,7 @@ class _HistoryPanel extends StatelessWidget {
       key: const Key('wlk-history'),
       title: l.wlkHistory,
       child: walks.isEmpty
-          ? Text(l.wlkHistoryEmpty, key: const Key('wlk-history-empty'), style: SysText.secondary)
+          ? SysEmptyState.inline(l.wlkHistoryEmpty, key: const Key('wlk-history-empty'), glyph: SysGlyph.walk)
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [

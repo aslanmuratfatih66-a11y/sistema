@@ -7,7 +7,7 @@
   "visGallery": "Galeri",
   "visAnalyzing": "Fotoğraf analiz ediliyor…",
   "visErrOffline": "Sunucuya bağlanılamadı. Daha sonra tekrar deneyin.",
-  "visErrNotSignedIn": "Fotoğraf analizi için hesabınıza giriş yapın (\"Daha fazla\" → \"Hesap\").",
+  "visErrNotSignedIn": "Fotoğraf analizi için hesabınıza giriş yapın (“Diğer” → “Hesap”).",
   "visErrBudget": "Yapay zekâ limiti şu an dolu. Daha sonra tekrar deneyin.",
   "visErrUnavailable": "Sunucudaki yapay zekâ şu an kullanılamıyor.",
   "visErrServer": "Fotoğraf çözümlenemedi. Tekrar deneyin.",
@@ -23,8 +23,12 @@
   "visFoodItemLine": "{name} — {grams} g",
   "@visFoodItemLine": {
     "placeholders": {
-      "name": {"type": "String"},
-      "grams": {"type": "String"}
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
     }
   },
   "visFoodAddItem": "Öğe ekle",
@@ -39,14 +43,20 @@
   "visFoodPer100": "100 g'da: {kcal} · {macros}",
   "@visFoodPer100": {
     "placeholders": {
-      "kcal": {"type": "String"},
-      "macros": {"type": "String"}
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
     }
   },
   "visFoodSource": "Kaynak: {title}",
   "@visFoodSource": {
     "placeholders": {
-      "title": {"type": "String"}
+      "title": {
+        "type": "String"
+      }
     }
   },
   "visFoodCached": "kayıtlı veriden",
@@ -60,8 +70,12 @@
   "visFatRange": "%{min}–{max}",
   "@visFatRange": {
     "placeholders": {
-      "min": {"type": "String"},
-      "max": {"type": "String"}
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
     }
   },
   "visMuscle": "Kas",
@@ -77,7 +91,9 @@
   "visPreviousAt": "Önceki fotoğraf: {date}",
   "@visPreviousAt": {
     "placeholders": {
-      "date": {"type": "String"}
+      "date": {
+        "type": "String"
+      }
     }
   },
   "visSkinType": "Cilt tipi",
@@ -90,7 +106,9 @@
   "visAcneScore": "10 üzerinden {score}",
   "@visAcneScore": {
     "placeholders": {
-      "score": {"type": "String"}
+      "score": {
+        "type": "String"
+      }
     }
   },
   "visDisclaimer": "Fotoğraftan tahmin: ışık, açı ve kamera sonucu etkiler. Tıbbi bir değerlendirme değildir.",

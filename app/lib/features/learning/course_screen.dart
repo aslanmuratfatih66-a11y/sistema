@@ -64,17 +64,22 @@ class CourseScreen extends ConsumerWidget {
               const SizedBox(height: 12),
               Row(
                 children: [
-                  if (course.status == 'active')
-                    SysButton.secondary(label: l.lrnPause, onPressed: () => repo.setCourseStatus(course.id, 'paused'))
-                  else if (course.status == 'paused')
-                    SysButton.primary(label: l.lrnResume, onPressed: () => repo.setCourseStatus(course.id, 'active'))
-                  else
-                    SysPill(label: l.lrnStatusDone, tone: PanelTone.success),
+                  Flexible(
+                    child: course.status == 'active'
+                        ? SysButton.secondary(label: l.lrnPause, onPressed: () => repo.setCourseStatus(course.id, 'paused'))
+                        : course.status == 'paused'
+                            ? SysButton.primary(
+                                label: l.lrnResume,
+                                onPressed: () => repo.setCourseStatus(course.id, 'active'),
+                              )
+                            : SysPill(label: l.lrnStatusDone, tone: PanelTone.success),
+                  ),
                   const Spacer(),
-                  IconButton(
+                  SysIconButton(
+                    glyph: SysGlyph.trash,
                     tooltip: l.lrnDelete,
+                    color: SysColors.dangerLight,
                     onPressed: () => _delete(context, ref, course),
-                    icon: const Icon(Icons.delete_outline, color: SysColors.dangerLight),
                   ),
                 ],
               ),
@@ -103,8 +108,7 @@ class _LessonTile extends StatelessWidget {
     final l = AppLocalizations.of(context);
     final done = lesson.completedAt != null;
     final goal = LessonContent.decode(lesson.content).goal;
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
+    return SysPressable(
       onTap: () =>
           Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => LessonScreen(lessonId: lesson.id))),
       child: SysPanel(

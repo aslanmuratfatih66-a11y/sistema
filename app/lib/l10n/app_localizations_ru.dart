@@ -4115,6 +4115,319 @@ class AppLocalizationsRu extends AppLocalizations {
   String get nutGroceryWater => 'Питьевая вода';
 
   @override
+  String get ovlSettingTitle => 'Персонаж поверх приложений';
+
+  @override
+  String get ovlSettingHint =>
+      'Когда Система свёрнута, персонаж висит у края экрана и показывает сообщения. Тап — открыть Систему, удержание — скрыть.';
+
+  @override
+  String get ovlPermissionDenied =>
+      'Нужно разрешение «Поверх других приложений».';
+
+  @override
+  String get ovlNotificationTitle => 'Персонаж на экране';
+
+  @override
+  String get ovlNotificationBody => 'Нажмите, чтобы открыть Систему';
+
+  @override
+  String get ovlHideAction => 'Скрыть';
+
+  @override
+  String ovlAvatarLabel(String name) {
+    return '$name: нажмите, чтобы открыть Систему; удерживайте, чтобы скрыть';
+  }
+
+  @override
+  String get planNoticeLabel => 'Уведомление';
+
+  @override
+  String get planTitle => 'План составлен';
+
+  @override
+  String get planDraftNote =>
+      'Черновой план — Система уточнит его после подключения ИИ.';
+
+  @override
+  String planAcceptedAt(String date) {
+    return 'План принят $date';
+  }
+
+  @override
+  String get planAccept => 'Принять';
+
+  @override
+  String get planEditData => 'Изменить данные';
+
+  @override
+  String get planRecalculate => 'Пересчитать';
+
+  @override
+  String get planChooseSection => 'Какой раздел изменить?';
+
+  @override
+  String get planLoadError => 'Не удалось составить план';
+
+  @override
+  String get planRetry => 'Повторить';
+
+  @override
+  String get planNormsTitle => 'Нормы';
+
+  @override
+  String get planCalories => 'Калории';
+
+  @override
+  String planKcal(String value) {
+    return '$value ккал';
+  }
+
+  @override
+  String get planModeDeficit => 'Дефицит';
+
+  @override
+  String get planModeSurplus => 'Профицит';
+
+  @override
+  String get planModeMaintenance => 'Поддержание';
+
+  @override
+  String planBmrTdee(String bmr, String tdee) {
+    return 'Базовый обмен $bmr · расход $tdee ккал';
+  }
+
+  @override
+  String get planProtein => 'Белки';
+
+  @override
+  String get planFat => 'Жиры';
+
+  @override
+  String get planCarbs => 'Углеводы';
+
+  @override
+  String planGrams(String value) {
+    return '$value г';
+  }
+
+  @override
+  String get planWater => 'Вода';
+
+  @override
+  String planMl(String value) {
+    return '$value мл';
+  }
+
+  @override
+  String planWaterTrainingDay(String value) {
+    return 'В день тренировки — $value мл';
+  }
+
+  @override
+  String get planSleep => 'Сон';
+
+  @override
+  String planHours(String value) {
+    return '$value ч';
+  }
+
+  @override
+  String planHoursMinutes(String h, String m) {
+    return '$h ч $m мин';
+  }
+
+  @override
+  String planWakeBed(String wake, String bed) {
+    return 'Подъём $wake · отбой $bed';
+  }
+
+  @override
+  String get planRoutineTitle => 'Распорядок дня';
+
+  @override
+  String planWeek(String n) {
+    return 'Неделя $n';
+  }
+
+  @override
+  String get planWdMon => 'Пн';
+
+  @override
+  String get planWdTue => 'Вт';
+
+  @override
+  String get planWdWed => 'Ср';
+
+  @override
+  String get planWdThu => 'Чт';
+
+  @override
+  String get planWdFri => 'Пт';
+
+  @override
+  String get planWdSat => 'Сб';
+
+  @override
+  String get planWdSun => 'Вс';
+
+  @override
+  String get planRoutineWake => 'Подъём';
+
+  @override
+  String get planRoutineSkincareAm => 'Уход за кожей (утро)';
+
+  @override
+  String planRoutineMeal(String n) {
+    return 'Приём пищи $n';
+  }
+
+  @override
+  String get planRoutineLeaveHome => 'Выход из дома';
+
+  @override
+  String get planRoutineLesson => 'Пара';
+
+  @override
+  String get planRoutineWork => 'Работа';
+
+  @override
+  String get planRoutineOther => 'Дело';
+
+  @override
+  String get planRoutineReturnHome => 'Дома';
+
+  @override
+  String get planRoutineTraining => 'Тренировка';
+
+  @override
+  String get planRoutineSkincarePm => 'Уход за кожей (вечер)';
+
+  @override
+  String get planRoutineBed => 'Отбой';
+
+  @override
+  String get planQuestsTitle => 'Квесты';
+
+  @override
+  String get planQuestsNote =>
+      'Выполнение квестов появится в следующем обновлении.';
+
+  @override
+  String planQuestLeaveHome(String time) {
+    return 'Выйти из дома к $time';
+  }
+
+  @override
+  String planQuestAttendLesson(String title) {
+    return 'Пара: $title';
+  }
+
+  @override
+  String planQuestAttendWork(String title) {
+    return 'Работа: $title';
+  }
+
+  @override
+  String planQuestWater(String ml) {
+    return 'Выпить $ml мл воды';
+  }
+
+  @override
+  String planQuestSleep(String time, String hours) {
+    return 'Лечь спать в $time (сон $hours ч)';
+  }
+
+  @override
+  String planQuestMeals(String count) {
+    return 'Приёмы пищи по плану: $count';
+  }
+
+  @override
+  String planQuestTraining(String minutes) {
+    return 'Тренировка $minutes мин';
+  }
+
+  @override
+  String get planQuestSkincareMorning => 'Утренний уход за кожей';
+
+  @override
+  String get planQuestSkincareEvening => 'Вечерний уход за кожей';
+
+  @override
+  String planQuestWakeOnTime(String time) {
+    return 'Подъём в $time без отсрочек';
+  }
+
+  @override
+  String planQuestStudy(String minutes) {
+    return 'Учёба $minutes мин';
+  }
+
+  @override
+  String get planQuestTrackExpenses => 'Записать траты за день';
+
+  @override
+  String get planQuestEveryDay => 'каждый день';
+
+  @override
+  String planQuestWeekOnly(String n) {
+    return 'неделя $n';
+  }
+
+  @override
+  String planQuestReward(String diamonds, String xp) {
+    return '+$diamonds ◆ · +$xp опыта';
+  }
+
+  @override
+  String get planWarningsTitle => 'Предупреждения';
+
+  @override
+  String planWarnSleepShort(String scheduled, String target, String bed) {
+    return 'По расписанию сна $scheduled — меньше нормы $target. Рекомендуемый отбой — $bed.';
+  }
+
+  @override
+  String get planWarnDeficitFloor =>
+      'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.';
+
+  @override
+  String get planWarnActivityDefaulted =>
+      'Уровень активности не указан — взят «сидячий».';
+
+  @override
+  String planWarnNoTrainingWindow(String day) {
+    return '$day: нет свободного окна для тренировки.';
+  }
+
+  @override
+  String get planWarnInjuries =>
+      'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.';
+
+  @override
+  String planMissingMessage(String fields) {
+    return 'Для расчёта калорий и БЖУ заполните: $fields.';
+  }
+
+  @override
+  String get planMissingSex => 'пол';
+
+  @override
+  String get planMissingBirthDate => 'дата рождения';
+
+  @override
+  String get planMissingHeight => 'рост';
+
+  @override
+  String get planMissingWeight => 'вес';
+
+  @override
+  String planFillSection(String section) {
+    return 'Заполнить: $section';
+  }
+
+  @override
   String get wrkTitle => 'Тренировки';
 
   @override
@@ -7589,290 +7902,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get wlkMapAttribution => '© участники OpenStreetMap';
 
   @override
-  String get planNoticeLabel => 'Уведомление';
+  String get polShowPassword => 'Показать пароль';
 
   @override
-  String get planTitle => 'План составлен';
-
-  @override
-  String get planDraftNote =>
-      'Черновой план — Система уточнит его после подключения ИИ.';
-
-  @override
-  String planAcceptedAt(String date) {
-    return 'План принят $date';
-  }
-
-  @override
-  String get planAccept => 'Принять';
-
-  @override
-  String get planEditData => 'Изменить данные';
-
-  @override
-  String get planRecalculate => 'Пересчитать';
-
-  @override
-  String get planChooseSection => 'Какой раздел изменить?';
-
-  @override
-  String get planLoadError => 'Не удалось составить план';
-
-  @override
-  String get planRetry => 'Повторить';
-
-  @override
-  String get planNormsTitle => 'Нормы';
-
-  @override
-  String get planCalories => 'Калории';
-
-  @override
-  String planKcal(String value) {
-    return '$value ккал';
-  }
-
-  @override
-  String get planModeDeficit => 'Дефицит';
-
-  @override
-  String get planModeSurplus => 'Профицит';
-
-  @override
-  String get planModeMaintenance => 'Поддержание';
-
-  @override
-  String planBmrTdee(String bmr, String tdee) {
-    return 'Базовый обмен $bmr · расход $tdee ккал';
-  }
-
-  @override
-  String get planProtein => 'Белки';
-
-  @override
-  String get planFat => 'Жиры';
-
-  @override
-  String get planCarbs => 'Углеводы';
-
-  @override
-  String planGrams(String value) {
-    return '$value г';
-  }
-
-  @override
-  String get planWater => 'Вода';
-
-  @override
-  String planMl(String value) {
-    return '$value мл';
-  }
-
-  @override
-  String planWaterTrainingDay(String value) {
-    return 'В день тренировки — $value мл';
-  }
-
-  @override
-  String get planSleep => 'Сон';
-
-  @override
-  String planHours(String value) {
-    return '$value ч';
-  }
-
-  @override
-  String planHoursMinutes(String h, String m) {
-    return '$h ч $m мин';
-  }
-
-  @override
-  String planWakeBed(String wake, String bed) {
-    return 'Подъём $wake · отбой $bed';
-  }
-
-  @override
-  String get planRoutineTitle => 'Распорядок дня';
-
-  @override
-  String planWeek(String n) {
-    return 'Неделя $n';
-  }
-
-  @override
-  String get planWdMon => 'Пн';
-
-  @override
-  String get planWdTue => 'Вт';
-
-  @override
-  String get planWdWed => 'Ср';
-
-  @override
-  String get planWdThu => 'Чт';
-
-  @override
-  String get planWdFri => 'Пт';
-
-  @override
-  String get planWdSat => 'Сб';
-
-  @override
-  String get planWdSun => 'Вс';
-
-  @override
-  String get planRoutineWake => 'Подъём';
-
-  @override
-  String get planRoutineSkincareAm => 'Уход за кожей (утро)';
-
-  @override
-  String planRoutineMeal(String n) {
-    return 'Приём пищи $n';
-  }
-
-  @override
-  String get planRoutineLeaveHome => 'Выход из дома';
-
-  @override
-  String get planRoutineLesson => 'Пара';
-
-  @override
-  String get planRoutineWork => 'Работа';
-
-  @override
-  String get planRoutineOther => 'Дело';
-
-  @override
-  String get planRoutineReturnHome => 'Дома';
-
-  @override
-  String get planRoutineTraining => 'Тренировка';
-
-  @override
-  String get planRoutineSkincarePm => 'Уход за кожей (вечер)';
-
-  @override
-  String get planRoutineBed => 'Отбой';
-
-  @override
-  String get planQuestsTitle => 'Квесты';
-
-  @override
-  String get planQuestsNote =>
-      'Выполнение квестов появится в следующем обновлении.';
-
-  @override
-  String planQuestLeaveHome(String time) {
-    return 'Выйти из дома к $time';
-  }
-
-  @override
-  String planQuestAttendLesson(String title) {
-    return 'Пара: $title';
-  }
-
-  @override
-  String planQuestAttendWork(String title) {
-    return 'Работа: $title';
-  }
-
-  @override
-  String planQuestWater(String ml) {
-    return 'Выпить $ml мл воды';
-  }
-
-  @override
-  String planQuestSleep(String time, String hours) {
-    return 'Лечь спать в $time (сон $hours ч)';
-  }
-
-  @override
-  String planQuestMeals(String count) {
-    return 'Приёмы пищи по плану: $count';
-  }
-
-  @override
-  String planQuestTraining(String minutes) {
-    return 'Тренировка $minutes мин';
-  }
-
-  @override
-  String get planQuestSkincareMorning => 'Утренний уход за кожей';
-
-  @override
-  String get planQuestSkincareEvening => 'Вечерний уход за кожей';
-
-  @override
-  String planQuestWakeOnTime(String time) {
-    return 'Подъём в $time без отсрочек';
-  }
-
-  @override
-  String planQuestStudy(String minutes) {
-    return 'Учёба $minutes мин';
-  }
-
-  @override
-  String get planQuestTrackExpenses => 'Записать траты за день';
-
-  @override
-  String get planQuestEveryDay => 'каждый день';
-
-  @override
-  String planQuestWeekOnly(String n) {
-    return 'неделя $n';
-  }
-
-  @override
-  String planQuestReward(String diamonds, String xp) {
-    return '+$diamonds ◆ · +$xp опыта';
-  }
-
-  @override
-  String get planWarningsTitle => 'Предупреждения';
-
-  @override
-  String planWarnSleepShort(String scheduled, String target, String bed) {
-    return 'По расписанию сна $scheduled — меньше нормы $target. Рекомендуемый отбой — $bed.';
-  }
-
-  @override
-  String get planWarnDeficitFloor =>
-      'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.';
-
-  @override
-  String get planWarnActivityDefaulted =>
-      'Уровень активности не указан — взят «сидячий».';
-
-  @override
-  String planWarnNoTrainingWindow(String day) {
-    return '$day: нет свободного окна для тренировки.';
-  }
-
-  @override
-  String get planWarnInjuries =>
-      'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.';
-
-  @override
-  String planMissingMessage(String fields) {
-    return 'Для расчёта калорий и БЖУ заполните: $fields.';
-  }
-
-  @override
-  String get planMissingSex => 'пол';
-
-  @override
-  String get planMissingBirthDate => 'дата рождения';
-
-  @override
-  String get planMissingHeight => 'рост';
-
-  @override
-  String get planMissingWeight => 'вес';
-
-  @override
-  String planFillSection(String section) {
-    return 'Заполнить: $section';
-  }
+  String get polHidePassword => 'Скрыть пароль';
 }

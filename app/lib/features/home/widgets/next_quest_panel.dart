@@ -127,6 +127,7 @@ class _NextQuestPanelState extends ConsumerState<NextQuestPanel> {
     );
 
     return SysPanel(
+      appearDelay: const Duration(milliseconds: 120),
       title: l.homeNextQuestTitle,
       tone: PanelTone.gold,
       padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),

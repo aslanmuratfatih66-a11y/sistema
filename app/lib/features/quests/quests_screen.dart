@@ -59,11 +59,11 @@ Widget _async<T>(AppLocalizations l, AsyncValue<T> v, Widget Function(T data) da
   final value = v.value;
   if (value != null) return data(value);
   if (v.hasError) {
-    return SysPanel(tone: PanelTone.danger, child: Text(l.qstLoadError, style: SysText.secondary));
+    return SysErrorState(message: l.qstLoadError);
   }
-  return const Padding(
-    padding: EdgeInsets.all(24),
-    child: Center(child: CircularProgressIndicator(color: SysColors.accentLight)),
+  return const Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [SysSkeletonPanel(lines: 3), SizedBox(height: 12), SysSkeletonPanel(lines: 3)],
   );
 }
 
@@ -97,7 +97,7 @@ class _TodayView extends ConsumerWidget {
           WeeklyBossPanel(key: ValueKey('boss-${b.instanceId}'), boss: b),
         ],
         if (onlyBoss && bosses.isEmpty)
-          SysPanel(title: l.homeBossTitle, tone: PanelTone.boss, child: Text(l.qstEmptyFiltered, style: SysText.secondary)),
+          SysPanel(title: l.homeBossTitle, tone: PanelTone.boss, child: SysEmptyState.inline(l.qstEmptyFiltered, glyph: SysGlyph.crown)),
         const SizedBox(height: TabSectionView.gap),
         SysButton.secondary(
           key: const Key('quest-new'),

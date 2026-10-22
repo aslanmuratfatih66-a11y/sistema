@@ -113,7 +113,7 @@ class _BodyStepState extends ConsumerState<BodyStep> {
     if (!_loaded) {
       return const Padding(
         padding: EdgeInsets.all(24),
-        child: Center(child: CircularProgressIndicator(color: SysColors.accent)),
+        child: Center(child: SysLoader(color: SysColors.accent)),
       );
     }
     Widget pair(Widget a, Widget b) => Row(

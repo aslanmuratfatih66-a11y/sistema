@@ -205,11 +205,12 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> with WidgetsB
               padding: const EdgeInsets.fromLTRB(16, 8, 8, 4),
               child: Row(
                 children: [
-                  Expanded(child: Text(widget.title.toUpperCase(), style: SysText.heading)),
-                  IconButton(
+                  Expanded(child: Text(widget.title.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis)),
+                  SysIconButton(
+                    glyph: SysGlyph.close,
                     tooltip: l.commonClose,
+                    size: 20,
                     onPressed: () => Navigator.of(context).maybePop(),
-                    icon: const SysIcon(SysGlyph.close, size: 20),
                   ),
                 ],
               ),
@@ -251,7 +252,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> with WidgetsB
     }
     final c = _controller;
     if (c == null || !c.value.isInitialized) {
-      return const Center(child: CircularProgressIndicator(color: SysColors.accent));
+      return const Center(child: SysLoader(color: SysColors.accent));
     }
     return Center(
       child: CameraPreview(
@@ -320,10 +321,11 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> with WidgetsB
             width: 56,
             height: 56,
             child: canSwitch
-                ? IconButton(
+                ? SysIconButton(
+                    glyph: SysGlyph.cameraSwitch,
                     tooltip: l.qaCameraSwitch,
+                    size: 26,
                     onPressed: ready ? _switchCamera : null,
-                    icon: const Icon(Icons.cameraswitch_outlined, color: SysColors.accentLight),
                   )
                 : null,
           ),

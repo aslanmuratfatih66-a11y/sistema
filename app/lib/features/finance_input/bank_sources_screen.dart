@@ -282,7 +282,7 @@ class _InboxList extends ConsumerWidget {
     return SysPanel(
       title: l.fniInbox,
       child: rows.isEmpty
-          ? Text(l.fniInboxEmpty, style: SysText.secondary)
+          ? SysEmptyState.inline(l.fniInboxEmpty, glyph: SysGlyph.inbox)
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [for (final r in rows) _InboxTile(row: r)],

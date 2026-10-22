@@ -270,7 +270,7 @@ class _FoodPhotoFlowScreenState extends ConsumerState<FoodPhotoFlowScreen> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (_description.isNotEmpty) Text(_description, style: SysText.body),
-          if (_items.isEmpty) Text(l.visFoodNothing, style: SysText.secondary),
+          if (_items.isEmpty) SysEmptyState.inline(l.visFoodNothing, glyph: SysGlyph.nutrition),
           for (final (i, it) in _items.indexed)
             if (editable)
               Padding(

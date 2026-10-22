@@ -12,7 +12,16 @@
   "lrnTodayEmpty": "Bugünlük bu kadar: dersler ve tekrarlar tamam.",
   "lrnNoCourses": "Henüz kurs yok. Ne öğrenmek istediğinizi yazın, Sistem kursu oluştursun.",
   "lrnLessonOf": "Ders {n} / {total}",
-  "@lrnLessonOf": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "@lrnLessonOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "lrnReview": "Tekrar",
   "lrnLessonDay": "Günün dersi",
   "lrnStatusPaused": "Duraklatıldı",
@@ -20,8 +29,14 @@
   "lrnPause": "Duraklat",
   "lrnResume": "Devam et",
   "lrnDelete": "Kursu sil",
-  "lrnDeleteConfirm": "«{title}» kursu silinsin mi? İlerleme kaybolacak.",
-  "@lrnDeleteConfirm": {"placeholders": {"title": {"type": "String"}}},
+  "lrnDeleteConfirm": "“{title}” kursu silinsin mi? İlerleme kaybolacak.",
+  "@lrnDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
   "lrnLoading": "Ders yükleniyor…",
   "lrnGoal": "Hedef",
   "lrnExample": "Örnek",
@@ -29,25 +44,52 @@
   "lrnStartQuiz": "Teste geç",
   "lrnFinish": "Dersi bitir",
   "lrnQuestion": "Soru {n} / {total}",
-  "@lrnQuestion": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "@lrnQuestion": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "lrnNext": "İleri",
   "lrnCorrect": "Doğru",
   "lrnWrong": "Yanlış",
   "lrnResult": "Sonuç",
   "lrnScore": "Doğru: %{p}",
-  "@lrnScore": {"placeholders": {"p": {"type": "int"}}},
-  "lrnNextReview": "{days, plural, one{Tekrar {days} gün sonra} other{Tekrar {days} gün sonra}}",
-  "@lrnNextReview": {"placeholders": {"days": {"type": "int"}}},
+  "@lrnScore": {
+    "placeholders": {
+      "p": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnNextReview": "{days, plural, other{Tekrar {days} gün sonra}}",
+  "@lrnNextReview": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "lrnMastered": "Konu pekişti — başka tekrar yok.",
   "lrnPassed": "Ders tamamlandı.",
   "lrnFailed": "Geçmek için %{p} gerekli — tekrar deneyin.",
-  "@lrnFailed": {"placeholders": {"p": {"type": "int"}}},
+  "@lrnFailed": {
+    "placeholders": {
+      "p": {
+        "type": "int"
+      }
+    }
+  },
   "lrnReviewPassed": "Tekrar başarılı.",
   "lrnReviewFailed": "Tekrar başarısız — aralık kısaltıldı.",
   "lrnRetry": "Yeniden dene",
   "lrnLessonDone": "Tamamlandı",
   "lrnErrOffline": "Sunucuya bağlantı yok. Yüklenmiş dersler çevrimdışı kullanılabilir.",
-  "lrnErrNotSignedIn": "Sistem'in kurs ve ders oluşturması için hesabınıza giriş yapın (Daha fazla → Hesap).",
+  "lrnErrNotSignedIn": "Sistem'in kurs ve ders oluşturması için hesabınıza giriş yapın (Diğer → Hesap).",
   "lrnErrBudget": "Yapay zekâ limiti doldu. Daha sonra deneyin.",
   "lrnErrUnavailable": "Yapay zekâ şu anda sunucuda kullanılamıyor.",
   "lrnErrServer": "Yanıt alınamadı. Tekrar deneyin."

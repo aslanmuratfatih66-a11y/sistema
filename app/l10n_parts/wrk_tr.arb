@@ -10,7 +10,7 @@
       }
     }
   },
-  "wrkRestDay": "Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğin antrenmanı yapabilirsin.",
+  "wrkRestDay": "Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğiniz antrenmanı yapabilirsiniz.",
   "wrkDayTitle": "{key} günü",
   "@wrkDayTitle": {
     "placeholders": {
@@ -35,7 +35,7 @@
       }
     }
   },
-  "wrkExerciseCount": "{count, plural, one{{count} egzersiz} other{{count} egzersiz}}",
+  "wrkExerciseCount": "{count, plural, other{{count} egzersiz}}",
   "@wrkExerciseCount": {
     "placeholders": {
       "count": {
@@ -74,7 +74,7 @@
     }
   },
   "wrkGentle": "Hafif seçenek: zıplama ve omurgaya dikey yük yok — ankette sakatlık veya kısıtlama belirtilmiş.",
-  "wrkSafetyNote": "Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atla.",
+  "wrkSafetyNote": "Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atlayın.",
   "wrkLevelUnknown": "Ankette seviye belirtilmemiş — başlangıç programı.",
   "wrkProgressionWeeks": "Tamamlanan hafta: {weeks}",
   "@wrkProgressionWeeks": {
@@ -84,7 +84,7 @@
       }
     }
   },
-  "wrkProgressionNote": "Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her hafta için: +1 tekrar veya +5 sn, seviyenin üst sınırına kadar.",
+  "wrkProgressionNote": "Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her biri için: +1 tekrar veya +5 sn, seviyenizin üst sınırına kadar.",
   "wrkRegenerate": "Programı yeniden oluştur",
   "wrkRegenerateTitle": "Program yeniden oluşturulsun mu?",
   "wrkRegenerateText": "Program anket ve plana göre yeniden oluşturulacak. Antrenman geçmişi korunur, ilerleme baştan başlar.",
@@ -115,7 +115,7 @@
     }
   },
   "wrkPreparing": "Program hazırlanıyor…",
-  "wrkPhasePrepare": "Hazırlan",
+  "wrkPhasePrepare": "Hazırlanın",
   "wrkPhaseWork": "Çalışma",
   "wrkPhaseRest": "Dinlenme",
   "wrkPaused": "Duraklatıldı",
@@ -130,7 +130,7 @@
       }
     }
   },
-  "wrkRepsTarget": "{reps, plural, one{{reps} tekrar} other{{reps} tekrar}}",
+  "wrkRepsTarget": "{reps, plural, other{{reps} tekrar}}",
   "@wrkRepsTarget": {
     "placeholders": {
       "reps": {
@@ -143,7 +143,7 @@
   "wrkResume": "Devam et",
   "wrkSkipRest": "Dinlenmeyi atla",
   "wrkSkipExercise": "Egzersizi atla",
-  "wrkStop": "Bitir",
+  "wrkStop": "Sonlandır",
   "wrkNext": "Sıradaki: {name}",
   "@wrkNext": {
     "placeholders": {
@@ -156,7 +156,7 @@
   "wrkTechnique": "Teknik",
   "wrkVoice": "Sesli yönlendirme",
   "wrkProgressLabel": "Antrenman ilerlemesi",
-  "wrkStopTitle": "Antrenman bitirilsin mi?",
+  "wrkStopTitle": "Antrenman sonlandırılsın mı?",
   "wrkStopText": "Yapılanlar yarım kalan antrenman olarak kaydedilir.",
   "wrkFinishedTitle": "Antrenman tamamlandı",
   "wrkFinishedStats": "Süre: {minutes} dk · ≈{kcal} kcal · set: {sets}",
@@ -183,7 +183,7 @@
       }
     }
   },
-  "wrkSaySet": "Set {set} / {sets}. {amount}. Başla!",
+  "wrkSaySet": "Set {set} / {sets}. {amount}. Başlıyoruz!",
   "@wrkSaySet": {
     "placeholders": {
       "set": {
@@ -197,7 +197,7 @@
       }
     }
   },
-  "wrkSecondsAmount": "{seconds, plural, one{{seconds} saniye} other{{seconds} saniye}}",
+  "wrkSecondsAmount": "{seconds, plural, other{{seconds} saniye}}",
   "@wrkSecondsAmount": {
     "placeholders": {
       "seconds": {
@@ -223,69 +223,69 @@
   },
   "wrkSayFinished": "Antrenman tamamlandı. Harika iş!",
   "wrkExMarchInPlace": "Yerinde yürüyüş",
-  "wrkExMarchInPlaceHint": "Dizlerini yükselt.\nKollar adımla birlikte çalışsın.\nDüzenli nefes al.",
+  "wrkExMarchInPlaceHint": "Dizlerinizi yükseğe kaldırın.\nKollar adımla birlikte çalışsın.\nDüzenli nefes alın.",
   "wrkExArmCircles": "Kol çevirme",
-  "wrkExArmCirclesHint": "Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler.\nOmuzlar aşağıda.",
+  "wrkExArmCirclesHint": "Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler çizin.\nOmuzlar aşağıda.",
   "wrkExJumpingJacks": "Jumping jack",
-  "wrkExJumpingJacksHint": "Zıpla: bacaklar açık, kollar yukarı.\nGeri zıpla.\nParmak uçlarına yumuşak in.",
+  "wrkExJumpingJacksHint": "Zıplayın: bacaklar açık, kollar yukarı.\nGeri zıplayın.\nParmak uçlarına yumuşak inin.",
   "wrkExChairSquat": "Sandalyeye çömelme",
-  "wrkExChairSquatHint": "Sandalyenin önünde dur, ayaklar omuz genişliğinde.\nKalçayı geri iterek otur.\nSarsmadan kalk.",
+  "wrkExChairSquatHint": "Sandalyenin önünde durun, ayaklar omuz genişliğinde.\nKalçayı geri iterek oturun.\nSarsmadan kalkın.",
   "wrkExGluteBridge": "Kalça köprüsü",
-  "wrkExGluteBridgeHint": "Sırtüstü yat, ayaklar yerde.\nKalçayı kaldır, kalça kaslarını sık.\nYavaşça in.",
+  "wrkExGluteBridgeHint": "Sırtüstü yatın, ayaklar yerde.\nKalçayı kaldırın, kalça kaslarını sıkın.\nYavaşça inin.",
   "wrkExSquat": "Squat",
   "wrkExSquatHint": "Ayaklar omuz genişliğinde, uçlar hafif dışa.\nKalça geri, dizler parmak yönünde.\nSırt düz, topuklar yerde.",
   "wrkExWallSit": "Duvarda oturma",
-  "wrkExWallSitHint": "Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar in.\nPozisyonu koru.",
-  "wrkExReverseLunge": "Geri hamle",
-  "wrkExReverseLungeHint": "Geriye adım at, arka dizi yere doğru indir.\nÖn diz ayağın üzerinde.\nGeri dön, bacak değiştir.",
+  "wrkExWallSitHint": "Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar inin.\nPozisyonu koruyun.",
+  "wrkExReverseLunge": "Geri lunge",
+  "wrkExReverseLungeHint": "Geriye adım atın, arka dizi yere doğru indirin.\nÖn diz ayağın üzerinde.\nGeri dönün, bacak değiştirin.",
   "wrkExGobletSquat": "Goblet squat",
-  "wrkExGobletSquatHint": "Dambılı dik olarak göğüste tut.\nÇömel, dirsekler dizlerin arasında.\nSırt düz.",
+  "wrkExGobletSquatHint": "Dambılı dik olarak göğsünüzde tutun.\nÇömelin, dirsekler dizlerin arasında.\nSırt düz.",
   "wrkExKettlebellSwing": "Kettlebell salınımı",
   "wrkExKettlebellSwingHint": "Kettlebell iki elde, ayaklar omuzdan geniş.\nKalça geri, sonra hızla ileri.\nKettlebell kalça gücüyle göğüs hizasına çıkar.",
   "wrkExJumpSquat": "Zıplamalı squat",
-  "wrkExJumpSquatHint": "Normal squat.\nYukarı sıçra.\nYumuşak inip squat'a geç.",
+  "wrkExJumpSquatHint": "Normal squat.\nYukarı sıçrayın.\nYumuşak inip doğrudan squat pozisyonuna geçin.",
   "wrkExWallPushUp": "Duvarda şınav",
-  "wrkExWallPushUpHint": "Avuçlar omuz hizasında duvarda.\nKolları bük, gövde düz.\nİtip geri gel.",
+  "wrkExWallPushUpHint": "Avuçlar omuz hizasında duvarda.\nKolları bükün, gövde düz.\nİterek geri gelin.",
   "wrkExKneePushUp": "Dizüstü şınav",
   "wrkExKneePushUpHint": "Dizler ve avuçlar yerde.\nDizden başa gövde düz.\nGöğüs yere, sonra yukarı.",
   "wrkExPushUp": "Şınav",
   "wrkExPushUpHint": "Şınav pozisyonu, eller omuzdan biraz geniş.\nGövde düz bir çizgi.\nGöğüs yere, dirsekler 45°.",
-  "wrkExDumbbellPress": "Yerde dambıl press",
-  "wrkExDumbbellPressHint": "Yerde yat, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indir.\nYukarı it.",
+  "wrkExDumbbellPress": "Yerde dambıl pres",
+  "wrkExDumbbellPressHint": "Yere yatın, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indirin.\nYukarı itin.",
   "wrkExDiamondPushUp": "Elmas şınav",
   "wrkExDiamondPushUpHint": "Avuçlar göğsün altında yan yana.\nDirsekler gövdeye yakın.\nGövde düz.",
   "wrkExSuperman": "Süperman",
-  "wrkExSupermanHint": "Yüzüstü yat, kollar önde.\nKol ve bacakları birkaç saniye kaldır.\nYavaşça indir.",
+  "wrkExSupermanHint": "Yüzüstü yatın, kollar önde.\nKol ve bacakları birkaç saniye kaldırın.\nYavaşça indirin.",
   "wrkExReverseSnowAngel": "Ters kar meleği",
-  "wrkExReverseSnowAngelHint": "Yüzüstü yat, kollar yanlarda.\nGöğsü ve kolları hafif kaldır.\nKolları yay çizerek başın üstüne ve geri götür.",
-  "wrkExBandRow": "Lastik çekiş",
-  "wrkExBandRowHint": "Lastiği göğüs hizasına sabitle.\nKürek kemiklerini sıkarak bele çek.\nYavaşça bırak.",
+  "wrkExReverseSnowAngelHint": "Yüzüstü yatın, kollar yanlarda.\nGöğsü ve kolları hafifçe kaldırın.\nKolları yay çizerek başın üstüne ve geri götürün.",
+  "wrkExBandRow": "Direnç bandı çekişi",
+  "wrkExBandRowHint": "Bandı göğüs hizasına sabitleyin.\nKürek kemiklerini sıkarak bele çekin.\nYavaşça bırakın.",
   "wrkExDumbbellRow": "Eğilerek dambıl çekiş",
-  "wrkExDumbbellRowHint": "Bir el ve diz sandalyeye dayalı.\nDambılı bele çek.\nSırt düz.",
+  "wrkExDumbbellRowHint": "Bir el ve diz sandalyeye dayalı.\nDambılı bele çekin.\nSırt düz.",
   "wrkExPullUp": "Barfiks",
-  "wrkExPullUpHint": "Tutuş omuzdan biraz geniş.\nÇeneyi bara çek.\nKontrollü in.",
+  "wrkExPullUpHint": "Tutuş omuzdan biraz geniş.\nÇeneyi bara kadar çekin.\nKontrollü inin.",
   "wrkExDeadBug": "Ölü böcek",
-  "wrkExDeadBugHint": "Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indir.\nBel yere bastırılı.",
+  "wrkExDeadBugHint": "Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indirin.\nBel yere bastırılı.",
   "wrkExBirdDog": "Kuş-köpek",
-  "wrkExBirdDogHint": "Eller ve dizler yerde.\nZıt kol ve bacağı uzat.\nBekle, taraf değiştir.",
+  "wrkExBirdDogHint": "Eller ve dizler yerde.\nZıt kol ve bacağı uzatın.\nBekleyin, taraf değiştirin.",
   "wrkExPlank": "Plank",
-  "wrkExPlankHint": "Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökme.",
+  "wrkExPlankHint": "Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökmeyin.",
   "wrkExCrunch": "Mekik",
-  "wrkExCrunchHint": "Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldır.\nYavaşça in.",
+  "wrkExCrunchHint": "Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldırın.\nYavaşça inin.",
   "wrkExSidePlank": "Yan plank",
   "wrkExSidePlankHint": "Ön kol yerde, bacaklar birlikte.\nKalça yukarıda, gövde düz.\nSürenin yarısı her tarafa.",
   "wrkExLegRaise": "Bacak kaldırma",
-  "wrkExLegRaiseHint": "Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldır.\nBel yerde, yavaş indir.",
+  "wrkExLegRaiseHint": "Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldırın.\nBel yerde, yavaşça indirin.",
   "wrkExStepTouch": "Yana adım",
-  "wrkExStepTouchHint": "Yana adım at, ayağı birleştir.\nDiğer tarafa.\nKollar ritimle çalışsın.",
+  "wrkExStepTouchHint": "Yana adım atın, ayağı birleştirin.\nDiğer tarafa.\nKollar ritimle çalışsın.",
   "wrkExShadowBoxing": "Gölge boksu",
-  "wrkExShadowBoxingHint": "Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket et.",
+  "wrkExShadowBoxingHint": "Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket edin.",
   "wrkExHighKnees": "Yüksek diz koşusu",
-  "wrkExHighKneesHint": "Yerinde koş.\nDizler bel hizasına.\nParmak uçlarına in.",
+  "wrkExHighKneesHint": "Yerinde koşun.\nDizler bel hizasına.\nParmak uçlarına inin.",
   "wrkExMountainClimber": "Dağcı",
-  "wrkExMountainClimberHint": "Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çek.\nKalçayı kaldırma.",
+  "wrkExMountainClimberHint": "Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çekin.\nKalçayı kaldırmayın.",
   "wrkExBurpee": "Burpee",
-  "wrkExBurpeeHint": "Çömel, eller yere.\nŞınav pozisyonuna sıçra ve geri gel.\nYukarı zıpla.",
+  "wrkExBurpeeHint": "Çömelin, eller yere.\nŞınav pozisyonuna sıçrayın ve geri gelin.\nYukarı zıplayın.",
   "wrkExFullBodyStretch": "Esneme",
-  "wrkExFullBodyStretchHint": "Yukarı uzan, sonra öne eğil.\nUyluk ve göğsü esnet.\nYavaş nefes al, sarsma."
+  "wrkExFullBodyStretchHint": "Yukarı uzanın, sonra öne eğilin.\nUyluk ve göğsü esnetin.\nYavaş nefes alın, sarsmayın."
 }

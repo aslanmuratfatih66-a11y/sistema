@@ -433,7 +433,7 @@ class _HistoryPanel extends StatelessWidget {
       title: l.shpHistory,
       appearDelay: const Duration(milliseconds: 120),
       child: history.isEmpty
-          ? Text(l.shpHistoryEmpty, style: SysText.caption)
+          ? SysEmptyState.inline(l.shpHistoryEmpty, glyph: SysGlyph.clock)
           : Column(
               children: [
                 for (final p in history)

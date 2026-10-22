@@ -128,13 +128,7 @@ class _LearningScreenState extends ConsumerState<LearningScreen> {
             if (_error != null) LearningMessage(_error!, color: SysColors.dangerLight),
             const SizedBox(height: 12),
             if (_creating)
-              Row(
-                children: [
-                  const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2)),
-                  const SizedBox(width: 10),
-                  Expanded(child: Text(l.lrnCreating, style: SysText.secondary)),
-                ],
-              )
+              LearningBusy(l.lrnCreating)
             else
               SysButton.primary(
                 label: l.lrnCreate,
@@ -154,8 +148,7 @@ class _TodayTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
+    return SysPressable(
       onTap: () => Navigator.of(context)
           .push(MaterialPageRoute<void>(builder: (_) => LessonScreen(lessonId: item.lesson.id))),
       child: SysPanel(
@@ -200,8 +193,7 @@ class _CourseTile extends StatelessWidget {
       'done' => l.lrnStatusDone,
       _ => null,
     };
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
+    return SysPressable(
       onTap: () =>
           Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => CourseScreen(courseId: course.id))),
       child: SysPanel(

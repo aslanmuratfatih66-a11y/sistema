@@ -35,10 +35,7 @@ class WorkoutPage extends StatelessWidget {
                       onPressed: onBack ?? () => Navigator.of(context).maybePop(),
                       tooltip: l.commonBack,
                       constraints: const BoxConstraints(minWidth: SysDims.minTap, minHeight: SysDims.minTap),
-                      icon: const RotatedBox(
-                        quarterTurns: 3,
-                        child: SysIcon(SysGlyph.arrowUp, size: 22, color: SysColors.accentLight),
-                      ),
+                      icon: const SysIcon(SysGlyph.arrowLeft, size: 22, color: SysColors.accentLight),
                     ),
                     const SizedBox(width: 4),
                     Expanded(

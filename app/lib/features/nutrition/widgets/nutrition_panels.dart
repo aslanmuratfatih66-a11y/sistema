@@ -189,7 +189,7 @@ class DiaryPanel extends StatelessWidget {
       key: const Key('nut-diary'),
       title: l.hqNutritionDiaryTitle,
       child: entries.isEmpty
-          ? Text(l.nutDiaryEmpty, style: SysText.secondary)
+          ? SysEmptyState.inline(l.nutDiaryEmpty, glyph: SysGlyph.nutrition)
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [

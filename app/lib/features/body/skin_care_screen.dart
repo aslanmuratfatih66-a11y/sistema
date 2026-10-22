@@ -110,7 +110,7 @@ class SkinCareScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
     final day = ref.watch(bodyTodayProvider);
-    final profile = ref.watch(careTemplateProvider).profile;
+    final profile = ref.watch(careTemplateProvider.select((t) => t.profile));
     return ScheduleSubPage(
       title: l.bdyCareTitle,
       onBack: () => Navigator.of(context).maybePop(),

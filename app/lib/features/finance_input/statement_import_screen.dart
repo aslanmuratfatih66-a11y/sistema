@@ -204,7 +204,7 @@ class _StatementImportScreenState extends ConsumerState<StatementImportScreen> {
           if (rows != null) ...[
             const SizedBox(height: 12),
             if (rows.isEmpty)
-              Text(l.fniStatementEmpty, style: SysText.secondary)
+              SysEmptyState.inline(l.fniStatementEmpty, glyph: SysGlyph.wallet)
             else ...[
               FniAccountCategory(
                 kind: FinTxKind.expense,

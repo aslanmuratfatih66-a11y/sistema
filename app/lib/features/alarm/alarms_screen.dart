@@ -90,10 +90,7 @@ class _AlarmsScreenState extends ConsumerState<AlarmsScreen> with WidgetsBinding
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () => Navigator.of(context).maybePop(),
-                    icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
-                  ),
+                  const SysBackButton(),
                   Expanded(child: Text(l.almTitle.toUpperCase(), style: SysText.heading)),
                 ],
               ),
@@ -103,7 +100,7 @@ class _AlarmsScreenState extends ConsumerState<AlarmsScreen> with WidgetsBinding
               ...alarms.when(
                 data: (list) => [
                   if (list.isEmpty)
-                    SysPanel(child: Text(l.almEmpty, style: SysText.secondary))
+                    SysPanel(child: SysEmptyState(title: l.almTitle, hint: l.almEmpty, glyph: SysGlyph.clock))
                   else
                     for (final a in list) ...[
                       _AlarmTile(
@@ -117,8 +114,8 @@ class _AlarmsScreenState extends ConsumerState<AlarmsScreen> with WidgetsBinding
                       const SizedBox(height: 12),
                     ],
                 ],
-                loading: () => const [Center(child: CircularProgressIndicator())],
-                error: (e, _) => [Text('$e', style: SysText.secondary)],
+                loading: () => const [SysSkeletonPanel(lines: 2)],
+                error: (e, _) => [SysErrorState(message: '$e')],
               ),
               const SizedBox(height: 8),
               SysButton.primary(label: l.almAdd, icon: SysGlyph.plus, expand: true, onPressed: () => _open()),
@@ -195,9 +192,8 @@ class _AlarmTile extends StatelessWidget {
     final l = AppLocalizations.of(context);
     final a = alarm;
     final label = a.label?.trim();
-    return GestureDetector(
+    return SysPressable(
       onTap: onTap,
-      behavior: HitTestBehavior.opaque,
       child: SysPanel(
         tone: a.fromDiscipline ? PanelTone.boss : PanelTone.accent,
         child: Column(

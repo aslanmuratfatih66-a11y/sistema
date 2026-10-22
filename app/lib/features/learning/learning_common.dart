@@ -34,12 +34,12 @@ class LearningFrame extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    IconButton(
-                      onPressed: () => Navigator.of(context).maybePop(),
-                      icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
-                    ),
+                    const SysBackButton(),
                     Expanded(
-                      child: Text(title.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis),
+                      child: Semantics(
+                        header: true,
+                        child: Text(title.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis),
+                      ),
                     ),
                     ?trailing,
                   ],
@@ -53,15 +53,39 @@ class LearningFrame extends StatelessWidget {
       );
 }
 
+/// Сообщение-состояние (пусто / готово / ошибка) в едином стиле дизайн-системы.
 class LearningMessage extends StatelessWidget {
-  const LearningMessage(this.text, {super.key, this.color = SysColors.textSecondary});
+  const LearningMessage(this.text, {super.key, this.color = SysColors.textSecondary, this.glyph});
 
   final String text;
   final Color color;
+  final SysGlyph? glyph;
 
   @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        child: Text(text, style: SysText.body.copyWith(color: color)),
+  Widget build(BuildContext context) => SysEmptyState.inline(
+        text,
+        color: color,
+        glyph: glyph ??
+            switch (color) {
+              SysColors.dangerLight => SysGlyph.warning,
+              SysColors.success => SysGlyph.check,
+              _ => SysGlyph.book,
+            },
+      );
+}
+
+/// Индикатор загрузки с подписью (строкой).
+class LearningBusy extends StatelessWidget {
+  const LearningBusy(this.text, {super.key});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) => Row(
+        children: [
+          const SysLoader(size: 18),
+          const SizedBox(width: 10),
+          Expanded(child: Text(text, style: SysText.secondary)),
+        ],
       );
 }

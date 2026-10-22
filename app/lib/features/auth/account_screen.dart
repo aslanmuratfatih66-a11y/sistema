@@ -134,10 +134,7 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () => Navigator.of(context).maybePop(),
-                    icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
-                  ),
+                  const SysBackButton(),
                   Expanded(child: Text(l.synTitle.toUpperCase(), style: SysText.heading)),
                   const SyncIndicator(),
                 ],
@@ -410,10 +407,12 @@ class _PasswordFieldState extends State<_PasswordField> {
         cursorColor: SysColors.accentLight,
         decoration: InputDecoration(
           labelText: widget.label,
-          suffixIcon: IconButton(
+          suffixIcon: SysIconButton(
+            glyph: _hidden ? SysGlyph.eye : SysGlyph.eyeOff,
+            tooltip: _hidden ? AppLocalizations.of(context).polShowPassword : AppLocalizations.of(context).polHidePassword,
+            color: SysColors.textCaption,
+            size: 20,
             onPressed: () => setState(() => _hidden = !_hidden),
-            icon: Icon(_hidden ? Icons.visibility_outlined : Icons.visibility_off_outlined,
-                color: SysColors.textCaption, size: 20),
           ),
         ),
       );

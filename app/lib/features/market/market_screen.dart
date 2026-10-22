@@ -194,11 +194,13 @@ class _MarketScreenState extends ConsumerState<MarketScreen> {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () => Navigator.of(context).maybePop(),
-                    icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
+                  const SysBackButton(),
+                  Expanded(
+                    child: Semantics(
+                      header: true,
+                      child: Text(l.mktTitle.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis),
+                    ),
                   ),
-                  Expanded(child: Text(l.mktTitle.toUpperCase(), style: SysText.heading)),
                 ],
               ),
               const SizedBox(height: 8),
@@ -246,17 +248,18 @@ class _MarketScreenState extends ConsumerState<MarketScreen> {
               ),
               const SizedBox(height: 12),
               if (items.isEmpty)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24),
-                  child: Text(
-                    switch (_tab) {
-                      _Tab.fresh => l.mktEmptyNew,
-                      _Tab.saved => l.mktEmptySaved,
-                      _Tab.bought => l.mktEmptyBought,
-                    },
-                    style: SysText.secondary,
-                    textAlign: TextAlign.center,
-                  ),
+                SysEmptyState(
+                  title: l.mktTitle,
+                  hint: switch (_tab) {
+                    _Tab.fresh => l.mktEmptyNew,
+                    _Tab.saved => l.mktEmptySaved,
+                    _Tab.bought => l.mktEmptyBought,
+                  },
+                  glyph: switch (_tab) {
+                    _Tab.fresh => SysGlyph.sparkle,
+                    _Tab.saved => SysGlyph.star,
+                    _Tab.bought => SysGlyph.check,
+                  },
                 )
               else ...[
                 for (final r in items) ...[
@@ -329,8 +332,11 @@ class _Chip extends StatelessWidget {
           behavior: HitTestBehavior.opaque,
           onTap: onTap,
           child: ConstrainedBox(
-            constraints: const BoxConstraints(minHeight: 32),
-            child: Opacity(opacity: selected ? 1 : .45, child: SysPill(label: label, tone: tone)),
+            constraints: const BoxConstraints(minHeight: SysDims.minTap),
+            child: Align(
+              widthFactor: 1,
+              child: Opacity(opacity: selected ? 1 : .7, child: SysPill(label: label, tone: tone)),
+            ),
           ),
         ),
       );
@@ -397,15 +403,11 @@ class _ItemCard extends StatelessWidget {
               Expanded(child: Text(priceText, style: SysText.monoSmall)),
               if (!bought)
                 pricing
-                    ? const Padding(
-                        padding: EdgeInsets.all(12),
-                        child: SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2)),
+                    ? Padding(
+                        padding: const EdgeInsets.all(14),
+                        child: SysLoader(size: 20, semanticLabel: l.mktRefreshPrice),
                       )
-                    : IconButton(
-                        tooltip: l.mktRefreshPrice,
-                        onPressed: onRefreshPrice,
-                        icon: const Icon(Icons.refresh, color: SysColors.accentLight),
-                      ),
+                    : SysIconButton(glyph: SysGlyph.refresh, tooltip: l.mktRefreshPrice, onPressed: onRefreshPrice),
             ],
           ),
           if (!bought && budget != null) ...[
@@ -430,15 +432,21 @@ class _ItemCard extends StatelessWidget {
               runSpacing: 8,
               children: [
                 for (final link in links)
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => onOpen(link),
-                    onLongPress: () => onCopy(link),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(minHeight: 36),
-                      child: SysPill(
-                        label: link.search ? '${storeName(link.store)} · ${l.mktSearchSuffix}' : storeName(link.store),
-                        tone: link.search ? PanelTone.accent : PanelTone.boss,
+                  Semantics(
+                    button: true,
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () => onOpen(link),
+                      onLongPress: () => onCopy(link),
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(minHeight: SysDims.minTap),
+                        child: Align(
+                          widthFactor: 1,
+                          child: SysPill(
+                            label: link.search ? '${storeName(link.store)} · ${l.mktSearchSuffix}' : storeName(link.store),
+                            tone: link.search ? PanelTone.accent : PanelTone.boss,
+                          ),
+                        ),
                       ),
                     ),
                   ),

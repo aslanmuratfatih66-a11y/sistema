@@ -65,7 +65,7 @@ class SleepScreen extends ConsumerWidget {
                 BodyInfoRow(label: l.bdySleepOnTarget, value: '${stats.nightsOnTarget}/${stats.nights}'),
                 const SizedBox(height: 12),
                 if (stats.nights == 0)
-                  Text(l.bdySleepEmpty, style: SysText.secondary)
+                  SysEmptyState.inline(l.bdySleepEmpty, glyph: SysGlyph.moon)
                 else
                   SleepBarChart(
                     firstDay: firstDay,

@@ -162,7 +162,7 @@ class _PhotoDiaryScreenState extends ConsumerState<PhotoDiaryScreen> {
           const SizedBox(height: 12),
           Text(feed.length < 2 ? l.bdyPhotoCompareNeedTwo : l.bdyPhotoCompareHint, style: SysText.caption),
           const SizedBox(height: 10),
-          if (feed.isEmpty) Text(l.bdyPhotoEmpty, style: SysText.secondary),
+          if (feed.isEmpty) SysEmptyState.inline(l.bdyPhotoEmpty, glyph: SysGlyph.camera),
           for (final (day, photos) in days) ...[
             Padding(
               padding: const EdgeInsets.only(top: 6, bottom: 6),

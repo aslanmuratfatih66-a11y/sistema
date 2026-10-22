@@ -40,7 +40,7 @@ class _ScheduleScreenState extends ConsumerState<ScheduleScreen> {
       child: config == null || entries == null
           ? const Padding(
               padding: EdgeInsets.all(32),
-              child: Center(child: CircularProgressIndicator(color: SysColors.accentLight)),
+              child: Center(child: SysLoader()),
             )
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -140,12 +140,9 @@ class _DayStrip extends StatelessWidget {
     Widget arrow(int delta) => IconButton(
           tooltip: delta < 0 ? l.schPrevWeek : l.schNextWeek,
           onPressed: () => onWeek(delta),
-          constraints: const BoxConstraints(minWidth: 36, minHeight: SysDims.minTap),
+          constraints: const BoxConstraints(minWidth: 40, minHeight: SysDims.minTap),
           padding: EdgeInsets.zero,
-          icon: RotatedBox(
-            quarterTurns: delta < 0 ? 3 : 1,
-            child: const SysIcon(SysGlyph.arrowUp, size: 18, color: SysColors.accentLight),
-          ),
+          icon: SysIcon(delta < 0 ? SysGlyph.chevronLeft : SysGlyph.chevronRight, size: 20, color: SysColors.accentLight),
         );
     return Row(
       children: [

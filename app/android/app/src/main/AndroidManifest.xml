@@ -129,6 +129,15 @@
                 <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
             </intent-filter>
         </receiver>
+        <!-- Персонаж поверх других приложений (этап 8) -->
+        <service
+            android:name=".OverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Shows the user's companion character over other apps while the app is minimized (user-enabled)"/>
+        </service>
         <!-- Будильник-квест (этап 7) -->
         <receiver android:name=".AlarmReceiver" android:exported="false"/>
         <receiver android:name=".AlarmBootReceiver" android:exported="false">

@@ -14,6 +14,7 @@ import '../../ui/ui.dart';
 import '../ai_journal/ai_journal_api.dart';
 import '../character/character_reaction.dart';
 import '../character/model/character_profile.dart';
+import '../common/ai_error_view.dart';
 import 'chat_repository.dart';
 import 'chat_texts.dart';
 
@@ -170,18 +171,25 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                 child: Row(
                   children: [
-                    IconButton(
-                      onPressed: () => Navigator.of(context).maybePop(),
-                      icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
+                    const SysBackButton(),
+                    Expanded(
+                      child: Semantics(
+                        header: true,
+                        child: Text(
+                          l.chtTitle.toUpperCase(),
+                          style: SysText.heading,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                     ),
-                    Expanded(child: Text(l.chtTitle.toUpperCase(), style: SysText.heading)),
-                    IconButton(
+                    SysIconButton(
+                      glyph: _speak ? SysGlyph.volume : SysGlyph.volumeOff,
                       tooltip: _speak ? l.chtVoiceOn : l.chtVoiceOff,
                       onPressed: () {
                         setState(() => _speak = !_speak);
                         if (!_speak) _tts.stop();
                       },
-                      icon: Icon(_speak ? Icons.volume_up : Icons.volume_off, color: SysColors.accentLight),
                     ),
                   ],
                 ),
@@ -189,9 +197,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               Expanded(
                 child: messages.isEmpty
                     ? Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(32),
-                          child: Text(l.chtEmpty, style: SysText.secondary, textAlign: TextAlign.center),
+                        child: SingleChildScrollView(
+                          child: SysEmptyState(title: l.chtTitle, hint: l.chtEmpty, glyph: SysGlyph.mic),
                         ),
                       )
                     : ListView.builder(
@@ -212,30 +219,28 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                         },
                       ),
               ),
-              if (_busy) Padding(padding: const EdgeInsets.all(8), child: Text(l.chtThinking, style: SysText.caption)),
+              if (_busy)
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SysLoader(size: 14),
+                      const SizedBox(width: 8),
+                      Flexible(child: Text(l.chtThinking, style: SysText.caption)),
+                    ],
+                  ),
+                ),
               if (failure != null)
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-                  child: SysPanel(
-                    tone: failure == AiFailure.budget ? PanelTone.gold : PanelTone.danger,
+                  child: AiErrorView(
+                    failure: failure,
+                    message: aiFailureText(l, failure),
                     animateIn: false,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Text(aiFailureText(l, failure), style: SysText.secondary),
-                        if (_fallbackLine != null) ...[
-                          const SizedBox(height: 8),
-                          Text('«$_fallbackLine»', style: SysText.body),
-                        ],
-                        if (failure != AiFailure.notSignedIn && failure != AiFailure.budget) ...[
-                          const SizedBox(height: 8),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: SysButton.secondary(label: l.chtRetry, onPressed: _busy ? null : _ask),
-                          ),
-                        ],
-                      ],
-                    ),
+                    extra: _fallbackLine == null ? null : Text('«$_fallbackLine»', style: SysText.body),
+                    retryLabel: l.chtRetry,
+                    onRetry: _busy ? null : _ask,
                   ),
                 ),
               _inputRow(l),
@@ -287,10 +292,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 ),
               ),
             ),
-            IconButton(
+            SysIconButton(
+              glyph: SysGlyph.send,
               tooltip: l.chtSend,
               onPressed: _busy ? null : () => _send(),
-              icon: const SysIcon(SysGlyph.send, size: 22),
             ),
           ],
         ),

@@ -1,5 +1,5 @@
 {
-  "schTitle": "Ders programı",
+  "schTitle": "Program",
   "schInstitution": "Eğitim kurumu",
   "schInstSchool": "Okul",
   "schInstCollege": "Meslek okulu",
@@ -25,7 +25,7 @@
   "schCopyDay": "Günü kopyala",
   "schCopyDayFrom": "Günü kopyala: {day}",
   "schCopyDayTo": "Hangi güne kopyalansın?",
-  "schCopied": "{count, plural, one{{count} öğe kopyalandı} other{{count} öğe kopyalandı}}",
+  "schCopied": "{count, plural, other{{count} öğe kopyalandı}}",
   "schItemNew": "Yeni öğe",
   "schItemEdit": "Program öğesi",
   "schItemTitle": "Başlık",

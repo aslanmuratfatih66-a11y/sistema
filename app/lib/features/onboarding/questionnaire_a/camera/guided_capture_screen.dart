@@ -341,11 +341,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
                       ),
                     ),
                     if (s.running) Text(l.qaShootShotOf(s.index + 1, total), style: SysText.monoSmall),
-                    IconButton(
-                      tooltip: l.commonClose,
-                      onPressed: _close,
-                      icon: const SysIcon(SysGlyph.close, size: 20),
-                    ),
+                    SysIconButton(glyph: SysGlyph.close, tooltip: l.commonClose, size: 20, onPressed: _close),
                   ],
                 ),
               ),
@@ -386,7 +382,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
   Widget _preview(CaptureGuide guide) {
     final c = _camera;
     if (c == null || !c.value.isInitialized) {
-      return const Center(child: CircularProgressIndicator(color: SysColors.accent));
+      return const Center(child: SysLoader(color: SysColors.accent));
     }
     // Отдельный слой: смена цифры отсчёта и реплик не перерисовывает превью.
     return RepaintBoundary(
@@ -505,7 +501,7 @@ class _GuidedCaptureScreenState extends ConsumerState<GuidedCaptureScreen>
             ),
           ),
         if (s.phase == SessionPhase.capturing)
-          const Center(child: CircularProgressIndicator(color: SysColors.accentLighter)),
+          const Center(child: SysLoader(size: 40, color: SysColors.accentLighter)),
         if (s.paused)
           Center(
             child: Padding(

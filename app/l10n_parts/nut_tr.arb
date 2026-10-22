@@ -152,7 +152,7 @@
   "nutManualLine": "Elle",
   "nutShopping": "Alışveriş listesi",
   "nutShopNothing": "Liste boş — alışveriş eklemek için açın.",
-  "nutShopRemainingCount": "{count, plural, one{Alınacak: {count} ürün · {sum}} other{Alınacak: {count} ürün · {sum}}}",
+  "nutShopRemainingCount": "{count, plural, other{Alınacak: {count} ürün · {sum}}}",
   "@nutShopRemainingCount": {
     "placeholders": {
       "count": {

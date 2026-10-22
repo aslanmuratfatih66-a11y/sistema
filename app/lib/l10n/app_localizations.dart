@@ -7334,6 +7334,510 @@ abstract class AppLocalizations {
   /// **'Питьевая вода'**
   String get nutGroceryWater;
 
+  /// No description provided for @ovlSettingTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персонаж поверх приложений'**
+  String get ovlSettingTitle;
+
+  /// No description provided for @ovlSettingHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Когда Система свёрнута, персонаж висит у края экрана и показывает сообщения. Тап — открыть Систему, удержание — скрыть.'**
+  String get ovlSettingHint;
+
+  /// No description provided for @ovlPermissionDenied.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нужно разрешение «Поверх других приложений».'**
+  String get ovlPermissionDenied;
+
+  /// No description provided for @ovlNotificationTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Персонаж на экране'**
+  String get ovlNotificationTitle;
+
+  /// No description provided for @ovlNotificationBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нажмите, чтобы открыть Систему'**
+  String get ovlNotificationBody;
+
+  /// No description provided for @ovlHideAction.
+  ///
+  /// In ru, this message translates to:
+  /// **'Скрыть'**
+  String get ovlHideAction;
+
+  /// No description provided for @ovlAvatarLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}: нажмите, чтобы открыть Систему; удерживайте, чтобы скрыть'**
+  String ovlAvatarLabel(String name);
+
+  /// No description provided for @planNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление'**
+  String get planNoticeLabel;
+
+  /// No description provided for @planTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'План составлен'**
+  String get planTitle;
+
+  /// No description provided for @planDraftNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Черновой план — Система уточнит его после подключения ИИ.'**
+  String get planDraftNote;
+
+  /// No description provided for @planAcceptedAt.
+  ///
+  /// In ru, this message translates to:
+  /// **'План принят {date}'**
+  String planAcceptedAt(String date);
+
+  /// No description provided for @planAccept.
+  ///
+  /// In ru, this message translates to:
+  /// **'Принять'**
+  String get planAccept;
+
+  /// No description provided for @planEditData.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменить данные'**
+  String get planEditData;
+
+  /// No description provided for @planRecalculate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пересчитать'**
+  String get planRecalculate;
+
+  /// No description provided for @planChooseSection.
+  ///
+  /// In ru, this message translates to:
+  /// **'Какой раздел изменить?'**
+  String get planChooseSection;
+
+  /// No description provided for @planLoadError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось составить план'**
+  String get planLoadError;
+
+  /// No description provided for @planRetry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get planRetry;
+
+  /// No description provided for @planNormsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нормы'**
+  String get planNormsTitle;
+
+  /// No description provided for @planCalories.
+  ///
+  /// In ru, this message translates to:
+  /// **'Калории'**
+  String get planCalories;
+
+  /// No description provided for @planKcal.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} ккал'**
+  String planKcal(String value);
+
+  /// No description provided for @planModeDeficit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дефицит'**
+  String get planModeDeficit;
+
+  /// No description provided for @planModeSurplus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Профицит'**
+  String get planModeSurplus;
+
+  /// No description provided for @planModeMaintenance.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поддержание'**
+  String get planModeMaintenance;
+
+  /// No description provided for @planBmrTdee.
+  ///
+  /// In ru, this message translates to:
+  /// **'Базовый обмен {bmr} · расход {tdee} ккал'**
+  String planBmrTdee(String bmr, String tdee);
+
+  /// No description provided for @planProtein.
+  ///
+  /// In ru, this message translates to:
+  /// **'Белки'**
+  String get planProtein;
+
+  /// No description provided for @planFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жиры'**
+  String get planFat;
+
+  /// No description provided for @planCarbs.
+  ///
+  /// In ru, this message translates to:
+  /// **'Углеводы'**
+  String get planCarbs;
+
+  /// No description provided for @planGrams.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} г'**
+  String planGrams(String value);
+
+  /// No description provided for @planWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вода'**
+  String get planWater;
+
+  /// No description provided for @planMl.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} мл'**
+  String planMl(String value);
+
+  /// No description provided for @planWaterTrainingDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'В день тренировки — {value} мл'**
+  String planWaterTrainingDay(String value);
+
+  /// No description provided for @planSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сон'**
+  String get planSleep;
+
+  /// No description provided for @planHours.
+  ///
+  /// In ru, this message translates to:
+  /// **'{value} ч'**
+  String planHours(String value);
+
+  /// No description provided for @planHoursMinutes.
+  ///
+  /// In ru, this message translates to:
+  /// **'{h} ч {m} мин'**
+  String planHoursMinutes(String h, String m);
+
+  /// No description provided for @planWakeBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём {wake} · отбой {bed}'**
+  String planWakeBed(String wake, String bed);
+
+  /// No description provided for @planRoutineTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Распорядок дня'**
+  String get planRoutineTitle;
+
+  /// No description provided for @planWeek.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неделя {n}'**
+  String planWeek(String n);
+
+  /// No description provided for @planWdMon.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пн'**
+  String get planWdMon;
+
+  /// No description provided for @planWdTue.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вт'**
+  String get planWdTue;
+
+  /// No description provided for @planWdWed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ср'**
+  String get planWdWed;
+
+  /// No description provided for @planWdThu.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чт'**
+  String get planWdThu;
+
+  /// No description provided for @planWdFri.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пт'**
+  String get planWdFri;
+
+  /// No description provided for @planWdSat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сб'**
+  String get planWdSat;
+
+  /// No description provided for @planWdSun.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вс'**
+  String get planWdSun;
+
+  /// No description provided for @planRoutineWake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём'**
+  String get planRoutineWake;
+
+  /// No description provided for @planRoutineSkincareAm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уход за кожей (утро)'**
+  String get planRoutineSkincareAm;
+
+  /// No description provided for @planRoutineMeal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приём пищи {n}'**
+  String planRoutineMeal(String n);
+
+  /// No description provided for @planRoutineLeaveHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выход из дома'**
+  String get planRoutineLeaveHome;
+
+  /// No description provided for @planRoutineLesson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пара'**
+  String get planRoutineLesson;
+
+  /// No description provided for @planRoutineWork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работа'**
+  String get planRoutineWork;
+
+  /// No description provided for @planRoutineOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дело'**
+  String get planRoutineOther;
+
+  /// No description provided for @planRoutineReturnHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дома'**
+  String get planRoutineReturnHome;
+
+  /// No description provided for @planRoutineTraining.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка'**
+  String get planRoutineTraining;
+
+  /// No description provided for @planRoutineSkincarePm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уход за кожей (вечер)'**
+  String get planRoutineSkincarePm;
+
+  /// No description provided for @planRoutineBed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отбой'**
+  String get planRoutineBed;
+
+  /// No description provided for @planQuestsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты'**
+  String get planQuestsTitle;
+
+  /// No description provided for @planQuestsNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выполнение квестов появится в следующем обновлении.'**
+  String get planQuestsNote;
+
+  /// No description provided for @planQuestLeaveHome.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выйти из дома к {time}'**
+  String planQuestLeaveHome(String time);
+
+  /// No description provided for @planQuestAttendLesson.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пара: {title}'**
+  String planQuestAttendLesson(String title);
+
+  /// No description provided for @planQuestAttendWork.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работа: {title}'**
+  String planQuestAttendWork(String title);
+
+  /// No description provided for @planQuestWater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Выпить {ml} мл воды'**
+  String planQuestWater(String ml);
+
+  /// No description provided for @planQuestSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лечь спать в {time} (сон {hours} ч)'**
+  String planQuestSleep(String time, String hours);
+
+  /// No description provided for @planQuestMeals.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приёмы пищи по плану: {count}'**
+  String planQuestMeals(String count);
+
+  /// No description provided for @planQuestTraining.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тренировка {minutes} мин'**
+  String planQuestTraining(String minutes);
+
+  /// No description provided for @planQuestSkincareMorning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Утренний уход за кожей'**
+  String get planQuestSkincareMorning;
+
+  /// No description provided for @planQuestSkincareEvening.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вечерний уход за кожей'**
+  String get planQuestSkincareEvening;
+
+  /// No description provided for @planQuestWakeOnTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подъём в {time} без отсрочек'**
+  String planQuestWakeOnTime(String time);
+
+  /// No description provided for @planQuestStudy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Учёба {minutes} мин'**
+  String planQuestStudy(String minutes);
+
+  /// No description provided for @planQuestTrackExpenses.
+  ///
+  /// In ru, this message translates to:
+  /// **'Записать траты за день'**
+  String get planQuestTrackExpenses;
+
+  /// No description provided for @planQuestEveryDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'каждый день'**
+  String get planQuestEveryDay;
+
+  /// No description provided for @planQuestWeekOnly.
+  ///
+  /// In ru, this message translates to:
+  /// **'неделя {n}'**
+  String planQuestWeekOnly(String n);
+
+  /// No description provided for @planQuestReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'+{diamonds} ◆ · +{xp} опыта'**
+  String planQuestReward(String diamonds, String xp);
+
+  /// No description provided for @planWarningsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Предупреждения'**
+  String get planWarningsTitle;
+
+  /// No description provided for @planWarnSleepShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'По расписанию сна {scheduled} — меньше нормы {target}. Рекомендуемый отбой — {bed}.'**
+  String planWarnSleepShort(String scheduled, String target, String bed);
+
+  /// No description provided for @planWarnDeficitFloor.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.'**
+  String get planWarnDeficitFloor;
+
+  /// No description provided for @planWarnActivityDefaulted.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень активности не указан — взят «сидячий».'**
+  String get planWarnActivityDefaulted;
+
+  /// No description provided for @planWarnNoTrainingWindow.
+  ///
+  /// In ru, this message translates to:
+  /// **'{day}: нет свободного окна для тренировки.'**
+  String planWarnNoTrainingWindow(String day);
+
+  /// No description provided for @planWarnInjuries.
+  ///
+  /// In ru, this message translates to:
+  /// **'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.'**
+  String get planWarnInjuries;
+
+  /// No description provided for @planMissingMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для расчёта калорий и БЖУ заполните: {fields}.'**
+  String planMissingMessage(String fields);
+
+  /// No description provided for @planMissingSex.
+  ///
+  /// In ru, this message translates to:
+  /// **'пол'**
+  String get planMissingSex;
+
+  /// No description provided for @planMissingBirthDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'дата рождения'**
+  String get planMissingBirthDate;
+
+  /// No description provided for @planMissingHeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'рост'**
+  String get planMissingHeight;
+
+  /// No description provided for @planMissingWeight.
+  ///
+  /// In ru, this message translates to:
+  /// **'вес'**
+  String get planMissingWeight;
+
+  /// No description provided for @planFillSection.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заполнить: {section}'**
+  String planFillSection(String section);
+
   /// No description provided for @wrkTitle.
   ///
   /// In ru, this message translates to:
@@ -13430,467 +13934,17 @@ abstract class AppLocalizations {
   /// **'© участники OpenStreetMap'**
   String get wlkMapAttribution;
 
-  /// No description provided for @planNoticeLabel.
+  /// No description provided for @polShowPassword.
   ///
   /// In ru, this message translates to:
-  /// **'Уведомление'**
-  String get planNoticeLabel;
+  /// **'Показать пароль'**
+  String get polShowPassword;
 
-  /// No description provided for @planTitle.
+  /// No description provided for @polHidePassword.
   ///
   /// In ru, this message translates to:
-  /// **'План составлен'**
-  String get planTitle;
-
-  /// No description provided for @planDraftNote.
-  ///
-  /// In ru, this message translates to:
-  /// **'Черновой план — Система уточнит его после подключения ИИ.'**
-  String get planDraftNote;
-
-  /// No description provided for @planAcceptedAt.
-  ///
-  /// In ru, this message translates to:
-  /// **'План принят {date}'**
-  String planAcceptedAt(String date);
-
-  /// No description provided for @planAccept.
-  ///
-  /// In ru, this message translates to:
-  /// **'Принять'**
-  String get planAccept;
-
-  /// No description provided for @planEditData.
-  ///
-  /// In ru, this message translates to:
-  /// **'Изменить данные'**
-  String get planEditData;
-
-  /// No description provided for @planRecalculate.
-  ///
-  /// In ru, this message translates to:
-  /// **'Пересчитать'**
-  String get planRecalculate;
-
-  /// No description provided for @planChooseSection.
-  ///
-  /// In ru, this message translates to:
-  /// **'Какой раздел изменить?'**
-  String get planChooseSection;
-
-  /// No description provided for @planLoadError.
-  ///
-  /// In ru, this message translates to:
-  /// **'Не удалось составить план'**
-  String get planLoadError;
-
-  /// No description provided for @planRetry.
-  ///
-  /// In ru, this message translates to:
-  /// **'Повторить'**
-  String get planRetry;
-
-  /// No description provided for @planNormsTitle.
-  ///
-  /// In ru, this message translates to:
-  /// **'Нормы'**
-  String get planNormsTitle;
-
-  /// No description provided for @planCalories.
-  ///
-  /// In ru, this message translates to:
-  /// **'Калории'**
-  String get planCalories;
-
-  /// No description provided for @planKcal.
-  ///
-  /// In ru, this message translates to:
-  /// **'{value} ккал'**
-  String planKcal(String value);
-
-  /// No description provided for @planModeDeficit.
-  ///
-  /// In ru, this message translates to:
-  /// **'Дефицит'**
-  String get planModeDeficit;
-
-  /// No description provided for @planModeSurplus.
-  ///
-  /// In ru, this message translates to:
-  /// **'Профицит'**
-  String get planModeSurplus;
-
-  /// No description provided for @planModeMaintenance.
-  ///
-  /// In ru, this message translates to:
-  /// **'Поддержание'**
-  String get planModeMaintenance;
-
-  /// No description provided for @planBmrTdee.
-  ///
-  /// In ru, this message translates to:
-  /// **'Базовый обмен {bmr} · расход {tdee} ккал'**
-  String planBmrTdee(String bmr, String tdee);
-
-  /// No description provided for @planProtein.
-  ///
-  /// In ru, this message translates to:
-  /// **'Белки'**
-  String get planProtein;
-
-  /// No description provided for @planFat.
-  ///
-  /// In ru, this message translates to:
-  /// **'Жиры'**
-  String get planFat;
-
-  /// No description provided for @planCarbs.
-  ///
-  /// In ru, this message translates to:
-  /// **'Углеводы'**
-  String get planCarbs;
-
-  /// No description provided for @planGrams.
-  ///
-  /// In ru, this message translates to:
-  /// **'{value} г'**
-  String planGrams(String value);
-
-  /// No description provided for @planWater.
-  ///
-  /// In ru, this message translates to:
-  /// **'Вода'**
-  String get planWater;
-
-  /// No description provided for @planMl.
-  ///
-  /// In ru, this message translates to:
-  /// **'{value} мл'**
-  String planMl(String value);
-
-  /// No description provided for @planWaterTrainingDay.
-  ///
-  /// In ru, this message translates to:
-  /// **'В день тренировки — {value} мл'**
-  String planWaterTrainingDay(String value);
-
-  /// No description provided for @planSleep.
-  ///
-  /// In ru, this message translates to:
-  /// **'Сон'**
-  String get planSleep;
-
-  /// No description provided for @planHours.
-  ///
-  /// In ru, this message translates to:
-  /// **'{value} ч'**
-  String planHours(String value);
-
-  /// No description provided for @planHoursMinutes.
-  ///
-  /// In ru, this message translates to:
-  /// **'{h} ч {m} мин'**
-  String planHoursMinutes(String h, String m);
-
-  /// No description provided for @planWakeBed.
-  ///
-  /// In ru, this message translates to:
-  /// **'Подъём {wake} · отбой {bed}'**
-  String planWakeBed(String wake, String bed);
-
-  /// No description provided for @planRoutineTitle.
-  ///
-  /// In ru, this message translates to:
-  /// **'Распорядок дня'**
-  String get planRoutineTitle;
-
-  /// No description provided for @planWeek.
-  ///
-  /// In ru, this message translates to:
-  /// **'Неделя {n}'**
-  String planWeek(String n);
-
-  /// No description provided for @planWdMon.
-  ///
-  /// In ru, this message translates to:
-  /// **'Пн'**
-  String get planWdMon;
-
-  /// No description provided for @planWdTue.
-  ///
-  /// In ru, this message translates to:
-  /// **'Вт'**
-  String get planWdTue;
-
-  /// No description provided for @planWdWed.
-  ///
-  /// In ru, this message translates to:
-  /// **'Ср'**
-  String get planWdWed;
-
-  /// No description provided for @planWdThu.
-  ///
-  /// In ru, this message translates to:
-  /// **'Чт'**
-  String get planWdThu;
-
-  /// No description provided for @planWdFri.
-  ///
-  /// In ru, this message translates to:
-  /// **'Пт'**
-  String get planWdFri;
-
-  /// No description provided for @planWdSat.
-  ///
-  /// In ru, this message translates to:
-  /// **'Сб'**
-  String get planWdSat;
-
-  /// No description provided for @planWdSun.
-  ///
-  /// In ru, this message translates to:
-  /// **'Вс'**
-  String get planWdSun;
-
-  /// No description provided for @planRoutineWake.
-  ///
-  /// In ru, this message translates to:
-  /// **'Подъём'**
-  String get planRoutineWake;
-
-  /// No description provided for @planRoutineSkincareAm.
-  ///
-  /// In ru, this message translates to:
-  /// **'Уход за кожей (утро)'**
-  String get planRoutineSkincareAm;
-
-  /// No description provided for @planRoutineMeal.
-  ///
-  /// In ru, this message translates to:
-  /// **'Приём пищи {n}'**
-  String planRoutineMeal(String n);
-
-  /// No description provided for @planRoutineLeaveHome.
-  ///
-  /// In ru, this message translates to:
-  /// **'Выход из дома'**
-  String get planRoutineLeaveHome;
-
-  /// No description provided for @planRoutineLesson.
-  ///
-  /// In ru, this message translates to:
-  /// **'Пара'**
-  String get planRoutineLesson;
-
-  /// No description provided for @planRoutineWork.
-  ///
-  /// In ru, this message translates to:
-  /// **'Работа'**
-  String get planRoutineWork;
-
-  /// No description provided for @planRoutineOther.
-  ///
-  /// In ru, this message translates to:
-  /// **'Дело'**
-  String get planRoutineOther;
-
-  /// No description provided for @planRoutineReturnHome.
-  ///
-  /// In ru, this message translates to:
-  /// **'Дома'**
-  String get planRoutineReturnHome;
-
-  /// No description provided for @planRoutineTraining.
-  ///
-  /// In ru, this message translates to:
-  /// **'Тренировка'**
-  String get planRoutineTraining;
-
-  /// No description provided for @planRoutineSkincarePm.
-  ///
-  /// In ru, this message translates to:
-  /// **'Уход за кожей (вечер)'**
-  String get planRoutineSkincarePm;
-
-  /// No description provided for @planRoutineBed.
-  ///
-  /// In ru, this message translates to:
-  /// **'Отбой'**
-  String get planRoutineBed;
-
-  /// No description provided for @planQuestsTitle.
-  ///
-  /// In ru, this message translates to:
-  /// **'Квесты'**
-  String get planQuestsTitle;
-
-  /// No description provided for @planQuestsNote.
-  ///
-  /// In ru, this message translates to:
-  /// **'Выполнение квестов появится в следующем обновлении.'**
-  String get planQuestsNote;
-
-  /// No description provided for @planQuestLeaveHome.
-  ///
-  /// In ru, this message translates to:
-  /// **'Выйти из дома к {time}'**
-  String planQuestLeaveHome(String time);
-
-  /// No description provided for @planQuestAttendLesson.
-  ///
-  /// In ru, this message translates to:
-  /// **'Пара: {title}'**
-  String planQuestAttendLesson(String title);
-
-  /// No description provided for @planQuestAttendWork.
-  ///
-  /// In ru, this message translates to:
-  /// **'Работа: {title}'**
-  String planQuestAttendWork(String title);
-
-  /// No description provided for @planQuestWater.
-  ///
-  /// In ru, this message translates to:
-  /// **'Выпить {ml} мл воды'**
-  String planQuestWater(String ml);
-
-  /// No description provided for @planQuestSleep.
-  ///
-  /// In ru, this message translates to:
-  /// **'Лечь спать в {time} (сон {hours} ч)'**
-  String planQuestSleep(String time, String hours);
-
-  /// No description provided for @planQuestMeals.
-  ///
-  /// In ru, this message translates to:
-  /// **'Приёмы пищи по плану: {count}'**
-  String planQuestMeals(String count);
-
-  /// No description provided for @planQuestTraining.
-  ///
-  /// In ru, this message translates to:
-  /// **'Тренировка {minutes} мин'**
-  String planQuestTraining(String minutes);
-
-  /// No description provided for @planQuestSkincareMorning.
-  ///
-  /// In ru, this message translates to:
-  /// **'Утренний уход за кожей'**
-  String get planQuestSkincareMorning;
-
-  /// No description provided for @planQuestSkincareEvening.
-  ///
-  /// In ru, this message translates to:
-  /// **'Вечерний уход за кожей'**
-  String get planQuestSkincareEvening;
-
-  /// No description provided for @planQuestWakeOnTime.
-  ///
-  /// In ru, this message translates to:
-  /// **'Подъём в {time} без отсрочек'**
-  String planQuestWakeOnTime(String time);
-
-  /// No description provided for @planQuestStudy.
-  ///
-  /// In ru, this message translates to:
-  /// **'Учёба {minutes} мин'**
-  String planQuestStudy(String minutes);
-
-  /// No description provided for @planQuestTrackExpenses.
-  ///
-  /// In ru, this message translates to:
-  /// **'Записать траты за день'**
-  String get planQuestTrackExpenses;
-
-  /// No description provided for @planQuestEveryDay.
-  ///
-  /// In ru, this message translates to:
-  /// **'каждый день'**
-  String get planQuestEveryDay;
-
-  /// No description provided for @planQuestWeekOnly.
-  ///
-  /// In ru, this message translates to:
-  /// **'неделя {n}'**
-  String planQuestWeekOnly(String n);
-
-  /// No description provided for @planQuestReward.
-  ///
-  /// In ru, this message translates to:
-  /// **'+{diamonds} ◆ · +{xp} опыта'**
-  String planQuestReward(String diamonds, String xp);
-
-  /// No description provided for @planWarningsTitle.
-  ///
-  /// In ru, this message translates to:
-  /// **'Предупреждения'**
-  String get planWarningsTitle;
-
-  /// No description provided for @planWarnSleepShort.
-  ///
-  /// In ru, this message translates to:
-  /// **'По расписанию сна {scheduled} — меньше нормы {target}. Рекомендуемый отбой — {bed}.'**
-  String planWarnSleepShort(String scheduled, String target, String bed);
-
-  /// No description provided for @planWarnDeficitFloor.
-  ///
-  /// In ru, this message translates to:
-  /// **'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.'**
-  String get planWarnDeficitFloor;
-
-  /// No description provided for @planWarnActivityDefaulted.
-  ///
-  /// In ru, this message translates to:
-  /// **'Уровень активности не указан — взят «сидячий».'**
-  String get planWarnActivityDefaulted;
-
-  /// No description provided for @planWarnNoTrainingWindow.
-  ///
-  /// In ru, this message translates to:
-  /// **'{day}: нет свободного окна для тренировки.'**
-  String planWarnNoTrainingWindow(String day);
-
-  /// No description provided for @planWarnInjuries.
-  ///
-  /// In ru, this message translates to:
-  /// **'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.'**
-  String get planWarnInjuries;
-
-  /// No description provided for @planMissingMessage.
-  ///
-  /// In ru, this message translates to:
-  /// **'Для расчёта калорий и БЖУ заполните: {fields}.'**
-  String planMissingMessage(String fields);
-
-  /// No description provided for @planMissingSex.
-  ///
-  /// In ru, this message translates to:
-  /// **'пол'**
-  String get planMissingSex;
-
-  /// No description provided for @planMissingBirthDate.
-  ///
-  /// In ru, this message translates to:
-  /// **'дата рождения'**
-  String get planMissingBirthDate;
-
-  /// No description provided for @planMissingHeight.
-  ///
-  /// In ru, this message translates to:
-  /// **'рост'**
-  String get planMissingHeight;
-
-  /// No description provided for @planMissingWeight.
-  ///
-  /// In ru, this message translates to:
-  /// **'вес'**
-  String get planMissingWeight;
-
-  /// No description provided for @planFillSection.
-  ///
-  /// In ru, this message translates to:
-  /// **'Заполнить: {section}'**
-  String planFillSection(String section);
+  /// **'Скрыть пароль'**
+  String get polHidePassword;
 }
 
 class _AppLocalizationsDelegate

@@ -83,7 +83,7 @@ class _RecipesScreenState extends ConsumerState<RecipesScreen> {
           ),
           const SizedBox(height: 14),
           if (recipes.isEmpty)
-            SysPanel(child: Text(l.nutRecipesEmpty, style: SysText.secondary))
+            SysPanel(child: SysEmptyState.inline(l.nutRecipesEmpty, glyph: SysGlyph.book))
           else
             SysPanel(
               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 12),

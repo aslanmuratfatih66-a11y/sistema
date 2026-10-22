@@ -116,10 +116,7 @@ class _AlarmEditScreenState extends ConsumerState<AlarmEditScreen> {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () => Navigator.of(context).maybePop(),
-                    icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
-                  ),
+                  const SysBackButton(),
                   Expanded(
                     child: Text((widget.alarm == null ? l.almNew : l.almEditTitle).toUpperCase(), style: SysText.heading),
                   ),

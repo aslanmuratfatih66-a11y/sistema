@@ -1,0 +1,12 @@
+/* Türkçe izin açıklamaları (Info.plist'teki Rusça metinlerin karşılığı). */
+"CFBundleDisplayName" = "Sistem";
+"NSCameraUsageDescription" = "Kamera; ilerlemeyi değerlendirmek için vücut ve cilt fotoğrafları, barkod ve fiş taraması için gerekli.";
+"NSPhotoLibraryUsageDescription" = "Galeri; önceden çekilmiş yemek, vücut veya fiş fotoğraflarını eklemek için gerekli.";
+"NSSpeechRecognitionUsageDescription" = "Konuşma tanıma, karakterle sesli konuşmak için gerekli.";
+"NSFaceIDUsageDescription" = "Face ID uygulamaya ve finans bölümüne girişi korur.";
+"NSAlarmKitUsageDescription" = "Görevli alarm, görevi tamamlayana kadar çalar.";
+"NSMicrophoneUsageDescription" = "Mikrofon, karakterle sesli konuşmak için gerekli.";
+"NSMotionUsageDescription" = "Hareket sensörleri görevler için adım ve mesafeyi sayar.";
+"NSLocationWhenInUseUsageDescription" = "Konum, yürüyüş rotaları ve yakındaki marketleri bulmak için gerekli.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "“Her zaman” konum izni, sesli yönlendirmeli yürüyüşün ekran kapalıyken çalışması için gerekli.";
+"NSAppleMusicUsageDescription" = "Medya arşivine erişim, yürüyüş ve antrenman sırasında çalan parçayı göstermek için gerekli.";

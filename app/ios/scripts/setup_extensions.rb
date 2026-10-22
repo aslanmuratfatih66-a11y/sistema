@@ -35,6 +35,22 @@ runner.build_configurations.each do |c|
   c.build_settings['CODE_SIGN_ENTITLEMENTS'] = 'Runner/Runner.entitlements'
 end
 
+# --- Этап 8: локализация Info.plist (ru, tr) — вариантная группа InfoPlist.strings ---
+%w[ru tr].each { |r| project.root_object.known_regions << r unless project.root_object.known_regions.include?(r) }
+strings = runner_group.children.find { |c| c.isa == 'PBXVariantGroup' && c.name == 'InfoPlist.strings' }
+unless strings
+  strings = project.new(Xcodeproj::Project::Object::PBXVariantGroup)
+  strings.name = 'InfoPlist.strings'
+  strings.source_tree = '<group>'
+  runner_group.children << strings
+end
+%w[ru tr].each do |r|
+  next if strings.children.any? { |f| f.path == "#{r}.lproj/InfoPlist.strings" }
+  f = strings.new_reference("#{r}.lproj/InfoPlist.strings")
+  f.name = r
+end
+runner.resources_build_phase.add_file_reference(strings, true)
+
 # --- Общий код: оба таргета ---
 shared_group = group_for(project, 'Shared', 'Shared')
 shared_ref = ensure_file(shared_group, 'SistemaShared.swift')

@@ -7,6 +7,7 @@ import '../../core/ai/ai_api.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
 import '../chat/chat_texts.dart';
+import '../common/ai_error_view.dart';
 import 'ai_journal_api.dart';
 
 class AiJournalScreen extends ConsumerWidget {
@@ -30,11 +31,13 @@ class AiJournalScreen extends ConsumerWidget {
               children: [
                 Row(
                   children: [
-                    IconButton(
-                      onPressed: () => Navigator.of(context).maybePop(),
-                      icon: const Icon(Icons.arrow_back, color: SysColors.accentLight),
+                    const SysBackButton(),
+                    Expanded(
+                      child: Semantics(
+                        header: true,
+                        child: Text(l.chtJournal.toUpperCase(), style: SysText.heading, maxLines: 2, overflow: TextOverflow.ellipsis),
+                      ),
                     ),
-                    Expanded(child: Text(l.chtJournal.toUpperCase(), style: SysText.heading)),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -66,8 +69,13 @@ String _taskName(AppLocalizations l, String task) => switch (task) {
       _ => task,
     };
 
-Widget _errorText(AppLocalizations l, Object e) =>
-    Text(e is AiException ? aiFailureText(l, e.failure) : l.chtLoadFailed, style: SysText.secondary);
+Widget _errorText(AppLocalizations l, Object e, VoidCallback onRetry) => SysEmptyState.inline(
+      e is AiException ? aiFailureText(l, e.failure) : l.chtLoadFailed,
+      glyph: aiFailureGlyph(aiFailureOf(e)),
+      color: SysColors.dangerLight,
+      actionLabel: e is AiException && !aiFailureRetryable(e.failure) ? null : l.chtRetry,
+      onAction: onRetry,
+    );
 
 class _UsagePanel extends ConsumerWidget {
   const _UsagePanel();
@@ -79,8 +87,8 @@ class _UsagePanel extends ConsumerWidget {
     return SysPanel(
       title: l.chtUsageTitle,
       child: usage.when(
-        loading: () => const Center(child: Padding(padding: EdgeInsets.all(12), child: CircularProgressIndicator())),
-        error: (e, _) => _errorText(l, e),
+        loading: () => const SysLoadingView(padding: EdgeInsets.all(12)),
+        error: (e, _) => _errorText(l, e, () => ref.invalidate(aiUsageProvider)),
         data: (u) {
           final share = u.budgetUsd > 0 ? u.monthUsd / u.budgetUsd : 0.0;
           final color = share >= .9
@@ -110,14 +118,14 @@ class _UsagePanel extends ConsumerWidget {
               const SizedBox(height: 14),
               Text(l.chtUsageByTask.toUpperCase(), style: SysText.label),
               const SizedBox(height: 6),
-              if (u.byTask.isEmpty) Text(l.chtUsageEmpty, style: SysText.secondary),
+              if (u.byTask.isEmpty) SysEmptyState.inline(l.chtUsageEmpty, glyph: SysGlyph.diamond),
               for (final t in u.byTask)
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 3),
                   child: Row(
                     children: [
                       Expanded(child: Text(_taskName(l, t.task), style: SysText.body)),
-                      Text(l.chtUsageCalls(t.calls), style: SysText.caption),
+                      Flexible(child: Text(l.chtUsageCalls(t.calls), style: SysText.caption, textAlign: TextAlign.right)),
                       const SizedBox(width: 12),
                       SizedBox(
                         width: 64,
@@ -159,10 +167,10 @@ class _ActionsPanel extends ConsumerWidget {
     return SysPanel(
       title: l.chtActionsTitle,
       child: actions.when(
-        loading: () => const Center(child: Padding(padding: EdgeInsets.all(12), child: CircularProgressIndicator())),
-        error: (e, _) => _errorText(l, e),
+        loading: () => const SysLoadingView(padding: EdgeInsets.all(12)),
+        error: (e, _) => _errorText(l, e, () => ref.invalidate(aiActionsProvider)),
         data: (list) => list.isEmpty
-            ? Text(l.chtActionsEmpty, style: SysText.secondary)
+            ? SysEmptyState.inline(l.chtActionsEmpty, glyph: SysGlyph.sparkle)
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [

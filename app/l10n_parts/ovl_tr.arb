@@ -1,0 +1,16 @@
+{
+  "ovlSettingTitle": "Karakter uygulamaların üzerinde",
+  "ovlSettingHint": "Sistem arka plandayken karakter ekranın kenarında durur ve mesajları gösterir. Dokunursanız Sistem açılır, basılı tutarsanız gizlenir.",
+  "ovlPermissionDenied": "“Diğer uygulamaların üzerinde göster” izni gerekli.",
+  "ovlNotificationTitle": "Karakter ekranda",
+  "ovlNotificationBody": "Sistem'i açmak için dokunun",
+  "ovlHideAction": "Gizle",
+  "ovlAvatarLabel": "{name}: Sistem'i açmak için dokunun; gizlemek için basılı tutun",
+  "@ovlAvatarLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

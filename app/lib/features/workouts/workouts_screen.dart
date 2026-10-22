@@ -270,7 +270,7 @@ class _HistoryPanel extends StatelessWidget {
       key: const Key('wrk-history'),
       title: l.wrkHistory,
       child: sessions.isEmpty
-          ? Text(l.wrkHistoryEmpty, style: SysText.secondary)
+          ? SysEmptyState.inline(l.wrkHistoryEmpty, glyph: SysGlyph.dumbbell)
           : Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [

@@ -253,7 +253,7 @@ class _NutritionScreenState extends ConsumerState<NutritionScreen> {
                       style: SysText.secondary,
                     ),
                   ),
-                  const RotatedBox(quarterTurns: 1, child: SysIcon(SysGlyph.arrowUp, size: 18)),
+                  const SysIcon(SysGlyph.chevronRight, size: 18),
                 ],
               ),
             ),

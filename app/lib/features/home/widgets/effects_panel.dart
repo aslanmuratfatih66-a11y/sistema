@@ -20,10 +20,11 @@ class EffectsPanel extends ConsumerWidget {
     final active = effects.where((e) => e.expiresAt.isAfter(now)).toList();
 
     return SysPanel(
+      appearDelay: const Duration(milliseconds: 60),
       title: l.homeEffectsTitle,
       padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
       child: active.isEmpty
-          ? Text(l.homeEffectsEmpty, style: SysText.secondary)
+          ? SysEmptyState.inline(l.homeEffectsEmpty, glyph: SysGlyph.sparkle)
           // Одна строка с горизонтальной прокруткой — блок не растёт по высоте.
           : SingleChildScrollView(
               key: const Key('effects-scroll'),

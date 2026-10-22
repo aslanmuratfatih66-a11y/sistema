@@ -180,16 +180,12 @@ class StepFrame extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           if (c != null) Text(c.toUpperCase(), style: SysText.monoSmall),
-                          Text(step.title(l).toUpperCase(), style: SysText.heading),
+                          Semantics(header: true, child: Text(step.title(l).toUpperCase(), style: SysText.heading)),
                         ],
                       ),
                     ),
                     if (close != null)
-                      IconButton(
-                        tooltip: l.commonClose,
-                        onPressed: close,
-                        icon: const SysIcon(SysGlyph.close, size: 20),
-                      ),
+                      SysIconButton(glyph: SysGlyph.close, tooltip: l.commonClose, size: 20, onPressed: close),
                   ],
                 ),
               ),

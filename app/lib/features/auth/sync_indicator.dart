@@ -34,10 +34,10 @@ class SyncIndicator extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final phase = ref.watch(syncStatusProvider).value?.phase ?? SyncPhase.off;
+    final phase = ref.watch(syncStatusProvider.select((s) => s.value?.phase)) ?? SyncPhase.off;
     final color = colorOf(phase);
     final Widget dot = phase == SyncPhase.syncing
-        ? SizedBox.square(dimension: size, child: CircularProgressIndicator(strokeWidth: 1.6, color: color))
+        ? SysLoader(size: size, color: color)
         : Container(
             width: size,
             height: size,

@@ -52,6 +52,7 @@ class DayTimelinePanel extends ConsumerWidget {
         .join('; ');
 
     return SysPanel(
+      appearDelay: const Duration(milliseconds: 180),
       title: l.homeDayTitle,
       trailing: leave == null
           ? null

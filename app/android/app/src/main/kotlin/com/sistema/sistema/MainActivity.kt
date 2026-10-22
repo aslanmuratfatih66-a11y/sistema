@@ -12,6 +12,7 @@ class MainActivity : FlutterFragmentActivity() {
     private var blocker: BlockerChannel? = null
     private var alarm: AlarmChannel? = null
     private var bank: BankChannel? = null
+    private var overlay: OverlayChannel? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -29,6 +30,8 @@ class MainActivity : FlutterFragmentActivity() {
         blocker = BlockerChannel(this, flutterEngine.dartExecutor.binaryMessenger)
         alarm = AlarmChannel(this, flutterEngine.dartExecutor.binaryMessenger)
         bank = BankChannel(applicationContext, flutterEngine.dartExecutor.binaryMessenger)
+        // Этап 8: персонаж поверх других приложений.
+        overlay = OverlayChannel(this, flutterEngine.dartExecutor.binaryMessenger)
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -46,6 +49,8 @@ class MainActivity : FlutterFragmentActivity() {
         alarm = null
         bank?.dispose()
         bank = null
+        overlay?.dispose()
+        overlay = null
         super.cleanUpFlutterEngine(flutterEngine)
     }
 

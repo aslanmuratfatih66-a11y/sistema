@@ -11,6 +11,7 @@ import '../../core/voice/tts_service.dart';
 import '../../core/voice/voice_providers.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
+import '../common/ai_error_view.dart';
 import '../character/model/character_profile.dart';
 import 'chat_texts.dart';
 
@@ -105,14 +106,17 @@ class _VoicePickerState extends ConsumerState<VoicePicker> {
           _tile(l, id: null, title: l.chtVoiceSystem, subtitle: l.chtVoiceSystemDesc, selected: selected == null),
           const Divider(color: SysColors.panelBorder),
           voices.when(
-            loading: () => const Center(child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator())),
-            error: (e, _) => Padding(
-              padding: const EdgeInsets.all(8),
-              child: Text(e is AiException ? aiFailureText(l, e.failure) : l.chtLoadFailed, style: SysText.secondary),
+            loading: () => const SysLoadingView(padding: EdgeInsets.all(16)),
+            error: (e, _) => SysEmptyState.inline(
+              e is AiException ? aiFailureText(l, e.failure) : l.chtLoadFailed,
+              glyph: aiFailureGlyph(aiFailureOf(e)),
+              color: SysColors.dangerLight,
+              actionLabel: l.chtRetry,
+              onAction: () => ref.invalidate(_serverVoicesProvider),
             ),
             data: (all) {
               final list = [for (final v in all) if (v.lang.isEmpty || v.lang == lang) v];
-              if (list.isEmpty) return Text(l.chtVoiceEmpty, style: SysText.secondary);
+              if (list.isEmpty) return SysEmptyState.inline(l.chtVoiceEmpty, glyph: SysGlyph.mic);
               return Column(
                 children: [
                   for (final v in list)
@@ -141,19 +145,43 @@ class _VoicePickerState extends ConsumerState<VoicePicker> {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       onTap: () => _select(id),
-      leading: Icon(
-        selected ? Icons.radio_button_checked : Icons.radio_button_off,
-        color: selected ? SysColors.accent : SysColors.textInactive,
-      ),
+      selected: selected,
+      leading: _RadioMark(selected: selected),
       title: Text(title, style: SysText.body),
       subtitle: subtitle == null ? null : Text(subtitle, style: SysText.caption),
-      trailing: IconButton(
-        tooltip: l.chtVoiceListen,
-        onPressed: _playing != null ? null : () => _listen(id),
-        icon: playing
-            ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
-            : const Icon(Icons.play_arrow, color: SysColors.accentLight),
-      ),
+      trailing: playing
+          ? const SizedBox.square(dimension: 48, child: Center(child: SysLoader(size: 20)))
+          : SysIconButton(
+              glyph: SysGlyph.play,
+              tooltip: l.chtVoiceListen,
+              onPressed: _playing != null ? null : () => _listen(id),
+            ),
     );
   }
+}
+
+/// Отметка выбора (радио) в стиле дизайн-системы.
+class _RadioMark extends StatelessWidget {
+  const _RadioMark({required this.selected});
+
+  final bool selected;
+
+  @override
+  Widget build(BuildContext context) => AnimatedContainer(
+        duration: sysReduceMotion(context) ? Duration.zero : const Duration(milliseconds: 160),
+        width: 22,
+        height: 22,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color: selected ? SysColors.accentLight : SysColors.textInactive, width: 1.7),
+          boxShadow: selected ? const [BoxShadow(color: SysColors.panelOuterGlow, blurRadius: 8)] : null,
+        ),
+        child: selected
+            ? const DecoratedBox(
+                decoration: BoxDecoration(shape: BoxShape.circle, color: SysColors.accent),
+                child: SizedBox.square(dimension: 10),
+              )
+            : null,
+      );
 }

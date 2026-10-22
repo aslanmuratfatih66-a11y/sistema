@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/db/database.dart';
 import '../../l10n/app_localizations.dart';
+import '../common/ai_error_view.dart';
 import '../../ui/ui.dart';
 import 'learning_common.dart';
 import 'learning_logic.dart';
@@ -131,18 +132,10 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
       title: lesson?.title ?? l.lrnTitle,
       children: [
         if (_loading)
-          Row(
-            children: [
-              const SizedBox.square(dimension: 18, child: CircularProgressIndicator(strokeWidth: 2)),
-              const SizedBox(width: 10),
-              Expanded(child: Text(l.lrnLoading, style: SysText.secondary)),
-            ],
-          )
-        else if (_error != null) ...[
-          LearningMessage(learningError(l, _error!), color: SysColors.dangerLight),
-          const SizedBox(height: 8),
-          SysButton.secondary(label: l.lrnRetry, onPressed: _load),
-        ] else if (lesson != null)
+          LearningBusy(l.lrnLoading)
+        else if (_error != null)
+          AiErrorView.fromError(_error!, message: learningError(l, _error!), retryLabel: l.lrnRetry, onRetry: _load, alwaysRetry: true)
+        else if (lesson != null)
           ...switch (_stage) {
             _Stage.read => _read(l, lesson),
             _Stage.quiz => _quizView(l),
@@ -275,8 +268,7 @@ class _Option extends StatelessWidget {
       _OptState.correct => SysColors.success,
       _OptState.wrong => SysColors.danger,
     };
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
+    return SysPressable(
       onTap: onTap,
       child: Container(
         constraints: const BoxConstraints(minHeight: SysDims.minTap),

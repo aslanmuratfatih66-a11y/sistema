@@ -13,7 +13,13 @@
   "synResetDone": "Şifre değiştirildi — yeni şifreyle giriş yapın",
   "synBackToLogin": "Girişe dön",
   "synSignedInAs": "{name} olarak giriş yapıldı",
-  "@synSignedInAs": {"placeholders": {"name": {"type": "String"}}},
+  "@synSignedInAs": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "synLogout": "Çıkış yap",
   "synSectionLogin": "Giriş",
   "synSectionTotp": "İki adımlı doğrulama",
@@ -34,9 +40,21 @@
   "synStatusOffline": "Sunucuya bağlantı yok",
   "synStatusError": "Senkronizasyon hatası",
   "synLastSync": "Son: {time}",
-  "@synLastSync": {"placeholders": {"time": {"type": "String"}}},
+  "@synLastSync": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
   "synPending": "Gönderilmedi: {count}",
-  "@synPending": {"placeholders": {"count": {"type": "int"}}},
+  "@synPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "synErrNetwork": "Sunucuya ulaşılamıyor — adresi ve interneti kontrol edin",
   "synErrCredentials": "Ad veya şifre yanlış",
   "synErrTotp": "Kod yanlış",

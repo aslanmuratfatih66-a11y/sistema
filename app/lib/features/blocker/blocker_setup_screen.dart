@@ -67,7 +67,7 @@ class _StatusPanel extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final active = ref.watch(disciplinePlayerProvider).value?.disciplineActive ?? false;
+    final active = ref.watch(disciplinePlayerProvider.select((p) => p.value?.disciplineActive)) ?? false;
     final ctx = ref.watch(disciplineContextProvider).value ?? DisciplineContext.fallback;
     final now = DateTime.now();
     final w = disciplineBlockWindow(now, usualBedMinute: ctx.bedMinute, usualWakeMinute: ctx.wakeMinute);
@@ -252,7 +252,7 @@ class _AndroidSetupState extends ConsumerState<_AndroidSetup> with WidgetsBindin
         ...shown.where((a) => !enabled.contains(a.packageName)),
       ];
       list = shown.isEmpty
-          ? Text(l.blkAppsEmpty, style: SysText.secondary)
+          ? SysEmptyState.inline(l.blkAppsEmpty, glyph: SysGlyph.shield)
           : Column(
               children: [
                 for (final a in shown)
@@ -451,7 +451,7 @@ class _IosSetupState extends ConsumerState<_IosSetup> {
           title: l.blkIosLinksTitle,
           appearDelay: const Duration(milliseconds: 180),
           child: chosen.isEmpty
-              ? Text(l.blkIosLinksEmpty, style: SysText.secondary)
+              ? SysEmptyState.inline(l.blkIosLinksEmpty, glyph: SysGlyph.shield)
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [

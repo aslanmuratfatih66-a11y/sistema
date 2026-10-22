@@ -1,0 +1,10 @@
+{
+  "ovlSettingTitle": "Персонаж поверх приложений",
+  "ovlSettingHint": "Когда Система свёрнута, персонаж висит у края экрана и показывает сообщения. Тап — открыть Систему, удержание — скрыть.",
+  "ovlPermissionDenied": "Нужно разрешение «Поверх других приложений».",
+  "ovlNotificationTitle": "Персонаж на экране",
+  "ovlNotificationBody": "Нажмите, чтобы открыть Систему",
+  "ovlHideAction": "Скрыть",
+  "ovlAvatarLabel": "{name}: нажмите, чтобы открыть Систему; удерживайте, чтобы скрыть",
+  "@ovlAvatarLabel": {"placeholders": {"name": {"type": "String"}}}
+}

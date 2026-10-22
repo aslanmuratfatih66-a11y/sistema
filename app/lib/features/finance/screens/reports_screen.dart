@@ -125,19 +125,12 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
           ),
           const SizedBox(height: 8),
           Row(children: [
-            IconButton(
-              tooltip: l.finPrevPeriod,
-              onPressed: () => _shift(-1),
-              icon: const RotatedBox(quarterTurns: 3, child: SysIcon(SysGlyph.arrowUp, size: 20)),
-            ),
+            SysIconButton(glyph: SysGlyph.chevronLeft, tooltip: l.finPrevPeriod, onPressed: () => _shift(-1)),
             Expanded(child: Text(_rangeLabel(r), textAlign: TextAlign.center, style: SysText.mono)),
-            IconButton(
+            SysIconButton(
+              glyph: SysGlyph.chevronRight,
               tooltip: l.finNextPeriod,
               onPressed: _offset < 0 ? () => _shift(1) : null,
-              icon: RotatedBox(
-                quarterTurns: 1,
-                child: SysIcon(SysGlyph.arrowUp, size: 20, color: _offset < 0 ? SysColors.accentLight : SysColors.textInactive),
-              ),
             ),
           ]),
           const SizedBox(height: 8),
@@ -215,14 +208,13 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
               children: [
                 _IncomeExpenseChart(items: history, semanticLabel: l.finDynamics),
                 const SizedBox(height: 6),
-                Row(children: [
-                  Container(width: 10, height: 10, color: SysColors.success),
-                  const SizedBox(width: 6),
-                  Text(l.finIncomes, style: SysText.caption),
-                  const SizedBox(width: 14),
-                  Container(width: 10, height: 10, color: SysColors.dangerLight),
-                  const SizedBox(width: 6),
-                  Text(l.finExpenses, style: SysText.caption),
+                Wrap(spacing: 14, runSpacing: 4, children: [
+                  for (final (color, text) in [(SysColors.success, l.finIncomes), (SysColors.dangerLight, l.finExpenses)])
+                    Row(mainAxisSize: MainAxisSize.min, children: [
+                      Container(width: 10, height: 10, color: color),
+                      const SizedBox(width: 6),
+                      Text(text, style: SysText.caption),
+                    ]),
                 ]),
               ],
             ),
@@ -245,7 +237,8 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 if (_comment case final c?) Text(c, style: SysText.body),
-                if (_commentError case final e?) Text(e, style: SysText.secondary.copyWith(color: SysColors.dangerLight)),
+                if (_commentError case final e?)
+                  SysEmptyState.inline(e, glyph: SysGlyph.warning, color: SysColors.dangerLight),
                 if (_comment == null && _commentError == null) Text(l.finAiCommentHint, style: SysText.secondary),
                 FinActions(children: [
                   SysButton.secondary(

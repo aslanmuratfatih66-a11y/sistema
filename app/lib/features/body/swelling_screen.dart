@@ -108,7 +108,7 @@ class SwellingScreen extends ConsumerWidget {
             title: l.bdySwellTrend,
             animateIn: false,
             child: feed.isEmpty
-                ? Text(l.bdySwellEmpty, style: SysText.secondary)
+                ? SysEmptyState.inline(l.bdySwellEmpty, glyph: SysGlyph.water)
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
