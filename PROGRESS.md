@@ -2,15 +2,15 @@
 
 ## Сейчас
 Этап: 8 — Подключения и полировка
-Статус: B, C, D готовы и интегрированы, собирается в CI; МИРЭА — в самом конце (решение владельца, вопрос о варианте отложен)
-Следующий шаг: дождаться CI (`gh run watch`); затем, когда владелец скажет, — МИРЭА (см. «Решения»)
+Статус: B, C, D готовы, CI зелёный (app 39752642156, server 39752642161); этапов после 8 нет; МИРЭА — в самом конце (вариант не выбран)
+Следующий шаг: ждём владельца — МИРЭА или проверка на телефоне (список в «Что нужно от пользователя»)
 
 ## Этап 8 — чек-лист
 - [x] B Оверлей персонажа Android: OverlayService (specialUse) + OverlayBubble (аватар 64dp, перетаскивание, облачко 7 с), SystemOverlayController (показ при сворачивании, реплики/сообщения ИИ), переключатель в «Ещё» (SystemOverlaySettingsTile)
 - [x] C Полировка: ui/components/states.dart (SysLoader, SysSkeleton*, SysEmptyState, SysErrorState, SysIconButton, SysBackButton, SysPressable, sysReduceMotion), features/common/ai_error_view.dart (AiErrorView), новые SysGlyph (camera, cameraSwitch, …), доступность (подсказки, зоны 44+, шрифт ×1.5), select вместо watch
 - [x] D Турецкий: 216 правок, глоссарий (siz в интерфейсе, sen — голос персонажа; puan, görev, rütbe, disiplin modu…); iOS: tr.lproj/ru.lproj InfoPlist.strings (описания разрешений, «Sistem»)
 - [x] Интеграция B/C/D
-- [ ] CI зелёный
+- [x] CI зелёный (analyze-test 533 теста, ios, android, server)
 - [ ] A МИРЭА (в самом конце, вариант не выбран)
 - [ ] Финальный прогон тестов, сборка, отчёт
 
@@ -138,6 +138,9 @@ A–F + интеграция, CI зелёный (run 39704046010 app, 3970404601
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
+Этап 8: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39752642156 — зелёный
+- ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39752642156/artifacts/12414104260
+- apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39752642156/artifacts/12415176326
 Этап 7: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39709022096 — зелёный (analyze-test, ios, android); server 39709022039 — зелёный
 Этапы 4–5: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39676717162 — зелёный (analyze-test, ios, android, server)
 Этап 3: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537 — зелёный
@@ -156,6 +159,7 @@ A–F + интеграция, CI зелёный (run 39704046010 app, 3970404601
   - фото-сессия: отсчёт без лагов (1.3), совпадение с контуром тела на ~2 м, овал лица, голос ассистента
 
 ## История
+- 2026-10-22 — этап 8 — оверлей персонажа, полировка, турецкий; CI зелёный; МИРЭА отложена
 - 2026-10-22 — этап 7 — финансы, ввод, маркет, блокировка, будильник; интеграция
 - 2026-10-22 — этап 6 — ИИ-слой, фото-анализ, персонаж, голос/чат, сообщения наперёд, знания; интеграция
 - 2026-10-21 — этап 3 — питание, шаги/расход, тело, тренировки; 459 тестов, CI зелёный
