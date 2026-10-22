@@ -31,8 +31,8 @@ const (
 	thumbSide   = 320
 	quality     = 80
 	thumbQ      = 75
-	maxPixels   = 24_000_000 // защита от «бомб» распаковки и MemoryMax=256M (~24 Мп)
-	parallelism = 1          // одновременных обработок (память ≤256 МБ)
+	maxPixels   = 24_000_000 // защита от «бомб» распаковки и MemoryMax=300M (~24 Мп)
+	parallelism = 1          // одновременных обработок: строго по очереди (SPEC §10, память ≤300 МБ)
 )
 
 var idRe = regexp.MustCompile(`^[A-Za-z0-9-]{1,64}$`)

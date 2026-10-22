@@ -5,7 +5,7 @@
 
 ## Файлы
 
-- `sistema.service` — systemd-юнит (MemoryMax=256M, hardening, запись только в `/opt/sistema/data` и `/opt/sistema/backups`).
+- `sistema.service` — systemd-юнит (MemoryMax=300M, hardening, запись только в `/opt/sistema/data` и `/opt/sistema/backups`).
 - `.env.example` — шаблон `/opt/sistema/.env` (все настройки с комментариями, без секретов).
 - `install.sh` — установка/обновление (идемпотентный).
 - `restore.sh` — восстановление из бэкапа.
@@ -53,6 +53,8 @@ sudo ./install.sh ./sistema-server
 ```
 
 Скрипт:
+- печатает `free -h` и занятые порты; если доступно < 300 МБ и swap нет — спрашивает, создать ли
+  swap-файл 2 ГБ (`/swapfile`, запись в `/etc/fstab`). Без вопроса: `SISTEMA_SWAP=y` (создать) / `SISTEMA_SWAP=n`;
 - проверяет, что порт из `SISTEMA_ADDR` свободен; если занят чужим процессом — останавливается;
 - создаёт пользователя `sistema` и папки `/opt/sistema/{bin,data,backups}`;
 - кладёт бинарник и `restore.sh` в `/opt/sistema/bin/`;

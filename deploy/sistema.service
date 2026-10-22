@@ -17,8 +17,8 @@ TimeoutStopSec=30s
 KillSignal=SIGTERM
 
 # Сервер с 1 ГБ RAM: жёсткий потолок и мягкий порог.
-MemoryHigh=200M
-MemoryMax=256M
+MemoryHigh=240M
+MemoryMax=300M
 LimitNOFILE=4096
 TasksMax=256
 

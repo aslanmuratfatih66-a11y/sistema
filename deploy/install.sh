@@ -3,6 +3,8 @@
 # Идемпотентен: можно запускать повторно (обновление бинарника и юнита).
 # Трогает ТОЛЬКО своё: пользователь sistema, /opt/sistema, /etc/systemd/system/sistema.service.
 # Порт 443 и чужие веб-серверы НЕ трогает — только печатает, кто его занял (см. https.md).
+# Перед установкой печатает память и занятые порты; если доступно < 300 МБ и swap нет — предлагает
+# swap-файл 2 ГБ (только с подтверждением: вопрос в терминале или SISTEMA_SWAP=y).
 #
 # Использование:
 #   sudo ./install.sh [путь/к/sistema-server]
@@ -56,6 +58,36 @@ if ss -Hltn "sport = :$PORT" | grep -q .; then
     ss -Hltnp "sport = :$PORT" >&2 || true
     die "порт $PORT занят другим процессом. Чужое не трогаем: выберите другой порт в SISTEMA_ADDR ($env_src) и запустите снова"
   fi
+fi
+
+# --- Память и порты: отчёт, при нехватке — swap по согласию (SPEC §10) ---------
+log "память:"
+free -h | sed 's/^/[install]   /'
+log "занятые TCP-порты (слушают):"
+ss -Hltn | awk '{print $4}' | sort -u | tr '
+' ' ' | sed 's/^/[install]   /'; echo
+avail_mb="$(awk '/MemAvailable/ {print int($2/1024)}' /proc/meminfo)"
+swap_mb="$(awk '/SwapTotal/ {print int($2/1024)}' /proc/meminfo)"
+if (( avail_mb < 300 )) && (( swap_mb == 0 )); then
+  log "доступно ${avail_mb} МБ памяти и swap нет — при обработке фото сервису может не хватить памяти"
+  answer="${SISTEMA_SWAP:-}"
+  if [[ -z "$answer" && -t 0 ]]; then
+    read -r -p "[install] Создать swap-файл 2 ГБ (/swapfile)? [y/N] " answer
+  fi
+  if [[ "$answer" =~ ^[YyДд] ]]; then
+    [[ -e /swapfile ]] && die "/swapfile уже существует — не трогаю, разберитесь вручную"
+    log "создаю /swapfile 2 ГБ"
+    fallocate -l 2G /swapfile 2>/dev/null || dd if=/dev/zero of=/swapfile bs=1M count=2048 status=none
+    chmod 600 /swapfile
+    mkswap /swapfile >/dev/null
+    swapon /swapfile
+    grep -qE '^/swapfile\s' /etc/fstab || echo '/swapfile none swap sw 0 0' >> /etc/fstab
+    log "swap включён"
+  else
+    log "swap не создаю (можно позже: SISTEMA_SWAP=y sudo ./install.sh)"
+  fi
+else
+  log "память в порядке (доступно ${avail_mb} МБ, swap ${swap_mb} МБ)"
 fi
 
 # --- Пользователь -------------------------------------------------------------
