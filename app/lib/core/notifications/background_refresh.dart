@@ -2,6 +2,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:workmanager/workmanager.dart';
 
+import 'ai_messages_sync.dart';
 import 'local_reminder_scheduler.dart';
 import 'notification_api.dart';
 
@@ -27,6 +28,8 @@ void callbackDispatcher() {
   Workmanager().executeTask((task, input) async {
     try {
       await runReminderBackground((c) => c.refresh());
+      // Сообщения Системы наперёд: пачка с сервера → локальные уведомления (без сети — шаблоны).
+      await runAiMessagesBackground();
       return true;
     } catch (e, st) {
       debugPrint('callbackDispatcher($task): $e\n$st');

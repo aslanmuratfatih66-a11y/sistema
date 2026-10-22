@@ -24,6 +24,7 @@ class ReminderCoordinator with WidgetsBindingObserver {
     this._foreground = true,
     this.onResume,
     this.onOpen,
+    this.templateFilter,
   }) : _clock = clock ?? DateTime.now;
 
   final QuestService _quests;
@@ -44,6 +45,9 @@ class ReminderCoordinator with WidgetsBindingObserver {
 
   /// Нажатие на само уведомление (не на кнопку).
   final void Function(String instanceId)? onOpen;
+
+  /// Правка запросов окна перед планированием (например, убрать шаблонный упрёк, если есть упрёк ИИ).
+  final Future<List<ReminderRequest>> Function(List<ReminderRequest> requests)? templateFilter;
 
   bool _foreground;
   bool _started = false;
@@ -104,9 +108,10 @@ class ReminderCoordinator with WidgetsBindingObserver {
       final prefs = await _loadPrefs();
       final l = await _l10n();
       final items = await _quests.upcoming(now, horizon);
-      final requests = [
+      var requests = [
         for (final q in items) ?reminderRequestFor(l, q),
       ];
+      if (templateFilter != null) requests = await templateFilter!(requests);
       await _scheduler.sync(requests, prefs, now: now);
     } catch (e, st) {
       _log(e, st);

@@ -1,20 +1,27 @@
-// Персонаж поверх всех вкладок (SPEC §9.2). Минимальная версия этапа 1.1: живёт внизу над нижней
-// навигацией, гуляет, садится, засыпает без касаний, по тапу говорит реплику, свайпом вниз прячется в «карман».
+// Персонаж поверх всех вкладок (SPEC §9.2): живёт внизу над нижней навигацией, гуляет, садится,
+// засыпает без касаний; реагирует на итоги квестов (радость/злость + реплика), после долгого простоя
+// подходит и указывает (point + реплика). Тап — чат, удержание — меню, свайп вниз — «карман».
 import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../app/routes.dart';
+import '../../core/data/profile_repository.dart';
 import '../../core/data/questionnaire_repository.dart';
 import '../../core/db/database.dart';
 import '../../core/models/enums.dart';
 import '../../core/voice/tts_service.dart';
+import '../../core/voice/voice_providers.dart';
+import '../../domain/quests/quest_api.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
+import 'character_lines.dart';
 import 'character_reaction.dart';
-import 'character_view.dart';
+import 'character_renderer.dart';
 import 'model/character_profile.dart';
 
 /// Оверлей персонажа. Не перехватывает нажатия вне самого персонажа и его облачка:
@@ -24,6 +31,7 @@ class CharacterOverlay extends ConsumerStatefulWidget {
     super.key,
     this.characterHeight = 90,
     this.sleepAfter = const Duration(minutes: 2),
+    this.nudgeAfter = const Duration(minutes: 20),
     this.autonomous = true,
     this.random,
   });
@@ -32,6 +40,9 @@ class CharacterOverlay extends ConsumerStatefulWidget {
 
   /// Через сколько без касаний персонаж засыпает.
   final Duration sleepAfter;
+
+  /// Через сколько без касаний персонаж просыпается, подходит и напоминает о себе (один раз до касания).
+  final Duration nudgeAfter;
 
   /// Сам ли гуляет/садится (в тестах можно выключить).
   final bool autonomous;
@@ -66,11 +77,22 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
   Timer? _sleepTimer;
   Timer? _bubbleTimer;
   Timer? _stateTimer;
+  Timer? _nudgeTimer;
+  Timer? _outcomeTimer;
+  StreamSubscription<GameOutcome>? _outcomeSub;
+  final List<GameOutcome> _pendingOutcomes = [];
+  final GlobalKey _characterKey = GlobalKey();
 
   @override
   void initState() {
     super.initState();
-    _tts = ref.read(ttsServiceProvider);
+    _tts = ref.read(characterTtsProvider);
+    try {
+      _outcomeSub = ref.read(questServiceProvider).outcomes.listen(_onOutcome);
+    } on Object catch (e) {
+      // Движок не подключён (предпросмотр/тест без override) — без реакций на квесты.
+      debugPrint('CharacterOverlay: нет QuestService ($e)');
+    }
     ref.read(databaseProvider).getSetting(CharacterOverlay.pocketSettingKey).then((v) {
       if (mounted) setState(() => _pocketed = v == 'true');
     }, onError: (Object _) {
@@ -95,6 +117,9 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
     _sleepTimer?.cancel();
     _bubbleTimer?.cancel();
     _stateTimer?.cancel();
+    _nudgeTimer?.cancel();
+    _outcomeTimer?.cancel();
+    _outcomeSub?.cancel();
     _walk.dispose();
     if (_speaking) _tts.stop();
     super.dispose();
@@ -110,6 +135,8 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
   }
 
   void _resetSleep() {
+    _nudgeTimer?.cancel();
+    _nudgeTimer = Timer(widget.nudgeAfter, _nudge);
     _sleepTimer?.cancel();
     _sleepTimer = Timer(widget.sleepAfter, () {
       if (!mounted || _bubble != null) return;
@@ -178,19 +205,96 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
   Map<String, Object?> get _section =>
       ref.read(questionnaireSectionProvider(QuestionnaireSection.character)).value ?? const {};
 
-  void _onTap() {
-    _resetSleep();
+  bool get _active => _pocketed == false && archetypeFromName(_section['archetype']) != null;
+
+  String get _mode => motivationOf(_section['motivation']);
+
+  String _playerName(AppLocalizations l) {
+    final n = ref.read(profileProvider).value?.name.trim() ?? '';
+    return n.isEmpty ? l.chrPlayerFallback : n;
+  }
+
+  // ---- События квестов ----
+
+  /// Итоги приходят пачкой (tick) — копим 600 мс и реагируем на самое значимое.
+  void _onOutcome(GameOutcome o) {
+    if (outcomeWeight(o) == 0) return;
+    _pendingOutcomes.add(o);
+    _outcomeTimer?.cancel();
+    _outcomeTimer = Timer(const Duration(milliseconds: 600), _flushOutcomes);
+  }
+
+  void _flushOutcomes() {
+    if (!mounted || _pendingOutcomes.isEmpty) return;
+    final top = _pendingOutcomes.reduce((a, b) => outcomeWeight(b) > outcomeWeight(a) ? b : a);
+    _pendingOutcomes.clear();
+    if (!_active) return;
     final l = AppLocalizations.of(context);
-    final lines = tapLines(l, motivationOf(_section['motivation']));
-    _say(lines[_rnd.nextInt(lines.length)], CharacterState.talk);
+    final r = outcomeLine(l, top, _mode, _playerName(l), _rnd);
+    if (r != null) _react(CharacterReaction(r.state, line: r.line, serial: 0));
+  }
+
+  // ---- Долгий простой ----
+
+  void _nudge() {
+    if (!mounted || !_active || _bubble != null) return;
+    if (WidgetsBinding.instance.lifecycleState != AppLifecycleState.resumed) return;
+    final l = AppLocalizations.of(context);
+    final line = idleLine(l, _mode, _playerName(l), _rnd);
+    _sleepTimer?.cancel();
+    _stateTimer?.cancel();
+    if (_state == CharacterState.sleep || _state == CharacterState.sit) _setState(CharacterState.idle);
+    if (!_still) _walkToX(.5);
+    final walking = _state == CharacterState.walk;
+    final serial = _speechSerial;
+    _stateTimer = Timer(walking ? (_walk.duration ?? Duration.zero) : Duration.zero, () {
+      if (mounted && serial == _speechSerial && _active) _say(line, CharacterState.point);
+    });
+  }
+
+  // ---- Жесты ----
+
+  void _openChat() {
+    _resetSleep();
+    GoRouter.maybeOf(context)?.push(Routes.chat);
+  }
+
+  Future<void> _showMenu() async {
+    _resetSleep();
+    final box = _characterKey.currentContext?.findRenderObject() as RenderBox?;
+    final overlay = Overlay.maybeOf(context)?.context.findRenderObject() as RenderBox?;
+    if (box == null || overlay == null) return;
+    final l = AppLocalizations.of(context);
+    final topLeft = box.localToGlobal(Offset.zero, ancestor: overlay);
+    final rect = RelativeRect.fromRect(topLeft & box.size, Offset.zero & overlay.size);
+    final choice = await showMenu<String>(
+      context: context,
+      position: rect,
+      color: SysColors.panelBottom,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(SysDims.radius),
+        side: const BorderSide(color: SysColors.panelBorder),
+      ),
+      items: [
+        PopupMenuItem(value: 'chat', child: Text(l.chrMenuChat, style: SysText.body)),
+        PopupMenuItem(value: 'pocket', child: Text(l.chrMenuPocket, style: SysText.body)),
+      ],
+    );
+    if (!mounted) return;
+    switch (choice) {
+      case 'chat':
+        _openChat();
+      case 'pocket':
+        _setPocketed(true);
+    }
   }
 
   void _react(CharacterReaction r) {
-    if (_pocketed != false || archetypeFromName(_section['archetype']) == null) return;
+    if (!_active) return;
     _resetSleep();
     final line = r.line;
     if (line != null && line.trim().isNotEmpty) {
-      _say(line, r.state);
+      _say(line, r.state, voice: r.voice);
     } else {
       _stopWalking();
       _setState(r.state);
@@ -200,17 +304,18 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
   }
 
   /// Реплика в облачке + озвучка. Персонаж в состоянии [state] минимум ~2.5 с и до конца фразы.
-  void _say(String line, CharacterState state) {
+  void _say(String line, CharacterState state, {bool voice = true}) {
     _stopWalking();
     final archetype = archetypeFromName(_section['archetype']);
     if (archetype == null) return;
-    final voice = CharacterProfile.of(archetype).voiceById(_section['voice'] as String?);
+    final profileVoice = CharacterProfile.of(archetype).voiceById(_section['voice'] as String?);
     final lang = Localizations.localeOf(context).languageCode;
     final serial = ++_speechSerial;
+    if (!voice && _speaking) _tts.stop();
     setState(() {
       _state = state;
       _bubble = line;
-      _speaking = true;
+      _speaking = voice;
     });
     var minElapsed = false;
     var spoken = false;
@@ -227,7 +332,8 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
     _bubbleTimer = Timer(Duration(milliseconds: math.max(4000, line.length * 70)), () {
       if (mounted && serial == _speechSerial) setState(() => _bubble = null);
     });
-    _tts.speak(line, languageCode: lang, voice: voice).catchError((Object _) {}).whenComplete(() {
+    final speech = voice ? _tts.speak(line, languageCode: lang, voice: profileVoice) : Future<void>.value();
+    speech.catchError((Object _) {}).whenComplete(() {
       if (!mounted || serial != _speechSerial) return;
       _speaking = false;
       spoken = true;
@@ -272,7 +378,8 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
 
     final l = AppLocalizations.of(context);
     final h = widget.characterHeight;
-    final w = CharacterView.widthFor(h);
+    final renderer = ref.watch(characterRendererProvider);
+    final w = renderer.widthFor(h);
 
     if (pocketed) {
       return Stack(
@@ -320,11 +427,12 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
                     offset: Offset(0, _dragDy),
                     child: Semantics(
                       button: true,
-                      label: l.chrSemantics(archetypeName(l, archetype)),
+                      label: l.chrSemanticsChat(archetypeName(l, archetype)),
                       child: GestureDetector(
                         key: const ValueKey('chrOverlayCharacter'),
                         behavior: HitTestBehavior.opaque,
-                        onTap: _onTap,
+                        onTap: _openChat,
+                        onLongPress: _showMenu,
                         onVerticalDragUpdate: (d) => setState(() => _dragDy = math.max(0.0, _dragDy + d.delta.dy)),
                         onVerticalDragEnd: (d) {
                           if (_dragDy > 28 || (d.primaryVelocity ?? 0) > 400) {
@@ -334,11 +442,9 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
                           }
                         },
                         child: ExcludeSemantics(
-                          child: CharacterView(
-                            archetype: archetype,
-                            state: _state,
-                            height: h,
-                            facingLeft: _facingLeft,
+                          child: renderer.build(
+                            CharacterRenderSpec(archetype: archetype, state: _state, height: h, facingLeft: _facingLeft),
+                            key: _characterKey,
                           ),
                         ),
                       ),

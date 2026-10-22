@@ -1,0 +1,14 @@
+{
+  "msgChannelName": "Sistem mesajları",
+  "msgChannelDesc": "Karakterden brifingler, moral ve sitemler",
+  "msgTplBriefingTitle": "[ Sistem ] Sabah brifingi",
+  "msgTplBriefing1": "Yeni gün, yeni görevler. Listeyi aç ve ilkinden başla.",
+  "msgTplBriefing2": "Oyuncu, kalk. Bugünün planı seni bekliyor.",
+  "msgTplBriefing3": "Sistem çevrimiçi. Bugünün görevleri kendi kendine tamamlanmaz.",
+  "msgTplCheerTitle": "[ Sistem ]",
+  "msgTplCheer1": "Tempoyu koruyorsun. Yavaşlama.",
+  "msgTplCheer2": "Tamamlanan her görev bir sonraki rütbeye bir adım.",
+  "msgTplCheer3": "Görevlere bak: şu an neyi kapatabilirsin?",
+  "msgTplCheer4": "Bir yudum su ve devam. Sistem ilerlemeni izliyor.",
+  "msgWaterQuestTitle": "Su için markete yürü"
+}

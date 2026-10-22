@@ -95,6 +95,7 @@ func run() error {
 		WeeklyReview:     aiSvc.WeeklyReview,
 	}).Run(ctx)
 
+	go msgSvc.RunPusher(ctx)
 	go memstat.Run(ctx, logger, cfg.MemLogInterval)
 
 	srv := &http.Server{

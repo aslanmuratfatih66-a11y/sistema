@@ -802,6 +802,157 @@ class AppLocalizationsTr extends AppLocalizations {
   String get bdySwellCompareFirst => 'İlk ve sonuncuyu karşılaştır';
 
   @override
+  String chrSemanticsChat(String name) {
+    return '$name: sohbeti açmak için dokun; menü için basılı tut; kaldırmak için aşağı kaydır';
+  }
+
+  @override
+  String get chrMenuChat => 'Sohbet';
+
+  @override
+  String get chrMenuPocket => 'Cebe koy';
+
+  @override
+  String get chrPlayerFallback => 'Oyuncu';
+
+  @override
+  String chrDoneSoft1(String name, String quest) {
+    return '$name, «$quest» tamam! Seninle gurur duyuyorum.';
+  }
+
+  @override
+  String chrDoneSoft2(String name, String quest) {
+    return 'Gördün mü, oldu! «$quest» tamamlandı, $name.';
+  }
+
+  @override
+  String chrDoneNormal1(String name, String quest) {
+    return '«$quest» tamamlandı. Harika, $name!';
+  }
+
+  @override
+  String chrDoneNormal2(String name, String quest) {
+    return 'İşte bu! «$quest» kapandı. Devam, $name.';
+  }
+
+  @override
+  String chrDoneStrict1(String name, String quest) {
+    return '«$quest» sayıldı. Böyle devam, $name.';
+  }
+
+  @override
+  String chrDoneStrict2(String name, String quest) {
+    return 'Kabul: «$quest». Sıradaki görev bekliyor.';
+  }
+
+  @override
+  String chrDoneHarsh1(String name, String quest) {
+    return '«$quest» bitti. Nihayet. Tempoyu düşürme, $name.';
+  }
+
+  @override
+  String chrDoneHarsh2(String name, String quest) {
+    return 'Sayıldı: «$quest». Bu asgari, $name. Devam.';
+  }
+
+  @override
+  String chrFailSoft1(String name, String quest) {
+    return '«$quest» olmadı — sorun değil, $name. Yarın olur.';
+  }
+
+  @override
+  String chrFailSoft2(String name, String quest) {
+    return 'Yazık, «$quest» kaçtı. Dinlen, sonra tekrar deneriz.';
+  }
+
+  @override
+  String chrFailNormal1(String name, String quest) {
+    return '«$quest» başarısız. Üzücü, $name. Toparlan.';
+  }
+
+  @override
+  String chrFailNormal2(String name, String quest) {
+    return 'Eh, «$quest» sayılmadı. Bir dahakine kaçırma.';
+  }
+
+  @override
+  String chrFailStrict1(String name, String quest) {
+    return '«$quest» başarısız, $name. Böyle olmaz. Düzelt.';
+  }
+
+  @override
+  String chrFailStrict2(String name, String quest) {
+    return 'Başarısız: «$quest». Söz verdiysen tut.';
+  }
+
+  @override
+  String chrFailHarsh1(String name, String quest) {
+    return '«$quest» — başarısız! $name, disiplin nerede? Bahane yok!';
+  }
+
+  @override
+  String chrFailHarsh2(String name, String quest) {
+    return 'Yine mi «$quest»?! Tembelliğe yer yok. Yarın taviz yok.';
+  }
+
+  @override
+  String get chrPenaltySoft => 'Ceza… Önemli değil, telafi ederiz.';
+
+  @override
+  String get chrPenaltyNormal => 'Ceza. Tekrarlanmasın.';
+
+  @override
+  String get chrPenaltyStrict => 'Ceza hak edildi. Ders çıkarıldı mı?';
+
+  @override
+  String get chrPenaltyHarsh => 'Ceza! Tembelliğin bedeli. Çalış!';
+
+  @override
+  String chrLevelUp(int level, String name) {
+    return 'Seviye $level! Böyle devam, $name!';
+  }
+
+  @override
+  String chrIdleSoft1(String name) {
+    return '$name, buradayım. Küçük bir şey yapalım mı?';
+  }
+
+  @override
+  String chrIdleSoft2(String name) {
+    return 'Uzun zamandır görüşmedik, $name. Hazır olunca görevlere bak.';
+  }
+
+  @override
+  String chrIdleNormal1(String name) {
+    return '$name, orada mısın? Görevler kendiliğinden yapılmaz.';
+  }
+
+  @override
+  String chrIdleNormal2(String name) {
+    return 'Hey, $name! Bugün için ne kaldı, bir bak.';
+  }
+
+  @override
+  String chrIdleStrict1(String name) {
+    return '$name, mola uzadı. İşe dön.';
+  }
+
+  @override
+  String chrIdleStrict2(String name) {
+    return 'Zaman geçiyor, $name. Görev listesi burada.';
+  }
+
+  @override
+  String chrIdleHarsh1(String name) {
+    return '$name! Daha ne kadar boş duracaksın? Kalk ve yap!';
+  }
+
+  @override
+  String chrIdleHarsh2(String name) {
+    return 'Oyalanmayı bırak, $name. Görevler bekliyor — hemen!';
+  }
+
+  @override
   String get chrIntro =>
       'Bir yol arkadaşı seç. Fotoğraf çekimlerinde sesiyle sana rehberlik edecek, sonra ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.';
 
@@ -1108,6 +1259,187 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String get chtTitle => 'Sohbet';
+
+  @override
+  String get chtHint => 'Karakterine yaz…';
+
+  @override
+  String get chtEmpty =>
+      'Sohbete başla: planı sor, yardım iste ya da sadece nasıl olduğunu anlat.';
+
+  @override
+  String get chtSend => 'Gönder';
+
+  @override
+  String get chtMic => 'Sesli giriş: dokun veya basılı tut';
+
+  @override
+  String get chtListening => 'Dinliyorum…';
+
+  @override
+  String get chtMicUnavailable =>
+      'Konuşma tanıma kullanılamıyor — mikrofon ve konuşma iznini kontrol et';
+
+  @override
+  String get chtThinking => 'Yazıyor…';
+
+  @override
+  String chtAction(String summary) {
+    return 'Sistem planı değiştirdi: $summary';
+  }
+
+  @override
+  String get chtUndo => 'Geri al';
+
+  @override
+  String get chtUndone => 'Geri alındı';
+
+  @override
+  String get chtUndoFailed => 'Geri alınamadı';
+
+  @override
+  String get chtRetry => 'Tekrar dene';
+
+  @override
+  String get chtVoiceOn => 'Yanıtların seslendirilmesi açık';
+
+  @override
+  String get chtVoiceOff => 'Yanıtların seslendirilmesi kapalı';
+
+  @override
+  String get chtErrNotSignedIn =>
+      'Yapay zekâ ile konuşmak için hesabına giriş yap: Daha fazla → Hesap.';
+
+  @override
+  String get chtErrOffline =>
+      'Sunucuya bağlantı yok. Mesaj kaydedildi — internet gelince «Tekrar dene»ye bas.';
+
+  @override
+  String get chtErrBudget =>
+      'Bu ayın yapay zekâ bütçesi doldu. Gelecek aya kadar karakter hazır cevaplarla konuşacak.';
+
+  @override
+  String get chtErrUnavailable =>
+      'Yapay zekâ şu an kullanılamıyor. Biraz sonra tekrar dene.';
+
+  @override
+  String get chtErrRateLimited => 'Çok fazla istek. Biraz bekle.';
+
+  @override
+  String get chtErrServer => 'Yapay zekâ sunucusu hatası. Tekrar dene.';
+
+  @override
+  String get chtFallbackSoft =>
+      'Şu an düzgün cevap veremiyorum ama yanındayım. Plana adım adım devam et — gayet iyi gidiyorsun.';
+
+  @override
+  String get chtFallbackNormal =>
+      'Sistemle bağlantı yok. Plan geçerli — görevlerini yap, sonra konuşuruz.';
+
+  @override
+  String get chtFallbackStrict =>
+      'Bağlantı yok — bu gevşemek için bahane değil. Görevleri aç ve yap.';
+
+  @override
+  String get chtFallbackHarsh =>
+      'Sunucu sessiz, sen neyi bekliyorsun? Görevler kendi kendine yapılmaz. Hadi.';
+
+  @override
+  String get chtJournal => 'Yapay zekâ günlüğü';
+
+  @override
+  String get chtUsageTitle => 'Yapay zekâ harcamaları';
+
+  @override
+  String chtUsageMonth(String spent, String budget) {
+    return 'Bu ay $spent / $budget';
+  }
+
+  @override
+  String chtUsageToday(String usd) {
+    return 'Bugün: $usd';
+  }
+
+  @override
+  String get chtUsageDegraded =>
+      'Tasarruf modu: bütçe neredeyse doldu, yapay zekâ daha ucuz modellerle çalışıyor';
+
+  @override
+  String get chtUsageByTask => 'Görevlere göre';
+
+  @override
+  String chtUsageCalls(int count) {
+    return '$count çağrı';
+  }
+
+  @override
+  String get chtUsageEmpty => 'Bu ay yapay zekâ henüz kullanılmadı.';
+
+  @override
+  String get chtTaskChat => 'Sohbet';
+
+  @override
+  String get chtTaskAnalysis => 'Gün ve hafta analizi';
+
+  @override
+  String get chtTaskPlan => 'Plan oluşturma';
+
+  @override
+  String get chtTaskPlanEdit => 'Plan değişikliği';
+
+  @override
+  String get chtTaskShort => 'Kısa sözler';
+
+  @override
+  String get chtTaskBankParse => 'Banka bildirimleri';
+
+  @override
+  String get chtTaskFoodVision => 'Fotoğraftan yemek ve fiş';
+
+  @override
+  String get chtTaskBodyVision => 'Vücut ve cilt fotoğrafları';
+
+  @override
+  String get chtTaskLearning => 'Öğrenme';
+
+  @override
+  String get chtTaskTts => 'Ses';
+
+  @override
+  String get chtActionsTitle => 'Yapay zekâ işlemleri';
+
+  @override
+  String get chtActionsEmpty => 'Yapay zekâ henüz hiçbir şeyi değiştirmedi.';
+
+  @override
+  String get chtLoadFailed => 'Yüklenemedi';
+
+  @override
+  String get chtVoiceTitle => 'Karakterin sesi';
+
+  @override
+  String get chtVoiceSystem => 'Telefonun sistem sesi';
+
+  @override
+  String get chtVoiceSystemDesc => 'İnternetsiz ve ücretsiz çalışır';
+
+  @override
+  String get chtVoiceListen => 'Dinle';
+
+  @override
+  String get chtVoiceEmpty => 'Sunucuda bu dil için ses yok.';
+
+  @override
+  String get chtVoiceListenFailed => 'Ses çalınamadı';
+
+  @override
+  String get chtVoiceFemale => 'kadın';
+
+  @override
+  String get chtVoiceMale => 'erkek';
+
+  @override
   String get commonNext => 'İleri';
 
   @override
@@ -1242,6 +1574,32 @@ class AppLocalizationsTr extends AppLocalizations {
   String get hqFinanceFoodTitle => 'Yemek bütçesi';
 
   @override
+  String get int6PlanAi => 'Yapay zekâ ile plan oluştur';
+
+  @override
+  String get int6PlanAiError =>
+      'Yapay zekâ ile plan oluşturulamadı. Hesap girişini ve bağlantıyı kontrol edin.';
+
+  @override
+  String get int6Learning => 'Bilgi';
+
+  @override
+  String get int6LearningHint => 'Kurslar, günün dersleri ve tekrarlar';
+
+  @override
+  String get int6AiJournal => 'Yapay zekâ: harcama ve işlemler';
+
+  @override
+  String get int6AiJournalHint =>
+      'Bütçe ve Sistem\'in yaptığı değişiklikler (geri alınabilir)';
+
+  @override
+  String get int6Voice => 'Karakter sesi';
+
+  @override
+  String get int6VoiceHint => 'Sunucudaki hazır sesler, dinle';
+
+  @override
   String get livNextQuest => 'Sıradaki görev';
 
   @override
@@ -1300,6 +1658,205 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get locNotifChannel => 'Yürüyüş';
+
+  @override
+  String get lrnTitle => 'Bilgi';
+
+  @override
+  String get lrnToday => 'Bugün';
+
+  @override
+  String get lrnCourses => 'Kurslar';
+
+  @override
+  String get lrnNewCourse => 'Yeni kurs';
+
+  @override
+  String get lrnTopic => 'Ne öğrenmek istiyorsunuz?';
+
+  @override
+  String get lrnTopicHint => 'Örneğin: nunçaku, C++, Rusça';
+
+  @override
+  String get lrnPerDay => 'Günlük ders';
+
+  @override
+  String get lrnLength => 'Kurstaki ders sayısı';
+
+  @override
+  String get lrnCreate => 'Kursu oluştur';
+
+  @override
+  String get lrnCreating => 'Sistem kursu oluşturuyor…';
+
+  @override
+  String get lrnTodayEmpty => 'Bugünlük bu kadar: dersler ve tekrarlar tamam.';
+
+  @override
+  String get lrnNoCourses =>
+      'Henüz kurs yok. Ne öğrenmek istediğinizi yazın, Sistem kursu oluştursun.';
+
+  @override
+  String lrnLessonOf(int n, int total) {
+    return 'Ders $n / $total';
+  }
+
+  @override
+  String get lrnReview => 'Tekrar';
+
+  @override
+  String get lrnLessonDay => 'Günün dersi';
+
+  @override
+  String get lrnStatusPaused => 'Duraklatıldı';
+
+  @override
+  String get lrnStatusDone => 'Kurs tamamlandı';
+
+  @override
+  String get lrnPause => 'Duraklat';
+
+  @override
+  String get lrnResume => 'Devam et';
+
+  @override
+  String get lrnDelete => 'Kursu sil';
+
+  @override
+  String lrnDeleteConfirm(String title) {
+    return '«$title» kursu silinsin mi? İlerleme kaybolacak.';
+  }
+
+  @override
+  String get lrnLoading => 'Ders yükleniyor…';
+
+  @override
+  String get lrnGoal => 'Hedef';
+
+  @override
+  String get lrnExample => 'Örnek';
+
+  @override
+  String get lrnTip => 'İpucu';
+
+  @override
+  String get lrnStartQuiz => 'Teste geç';
+
+  @override
+  String get lrnFinish => 'Dersi bitir';
+
+  @override
+  String lrnQuestion(int n, int total) {
+    return 'Soru $n / $total';
+  }
+
+  @override
+  String get lrnNext => 'İleri';
+
+  @override
+  String get lrnCorrect => 'Doğru';
+
+  @override
+  String get lrnWrong => 'Yanlış';
+
+  @override
+  String get lrnResult => 'Sonuç';
+
+  @override
+  String lrnScore(int p) {
+    return 'Doğru: %$p';
+  }
+
+  @override
+  String lrnNextReview(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'Tekrar $days gün sonra',
+      one: 'Tekrar $days gün sonra',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lrnMastered => 'Konu pekişti — başka tekrar yok.';
+
+  @override
+  String get lrnPassed => 'Ders tamamlandı.';
+
+  @override
+  String lrnFailed(int p) {
+    return 'Geçmek için %$p gerekli — tekrar deneyin.';
+  }
+
+  @override
+  String get lrnReviewPassed => 'Tekrar başarılı.';
+
+  @override
+  String get lrnReviewFailed => 'Tekrar başarısız — aralık kısaltıldı.';
+
+  @override
+  String get lrnRetry => 'Yeniden dene';
+
+  @override
+  String get lrnLessonDone => 'Tamamlandı';
+
+  @override
+  String get lrnErrOffline =>
+      'Sunucuya bağlantı yok. Yüklenmiş dersler çevrimdışı kullanılabilir.';
+
+  @override
+  String get lrnErrNotSignedIn =>
+      'Sistem\'in kurs ve ders oluşturması için hesabınıza giriş yapın (Daha fazla → Hesap).';
+
+  @override
+  String get lrnErrBudget => 'Yapay zekâ limiti doldu. Daha sonra deneyin.';
+
+  @override
+  String get lrnErrUnavailable => 'Yapay zekâ şu anda sunucuda kullanılamıyor.';
+
+  @override
+  String get lrnErrServer => 'Yanıt alınamadı. Tekrar deneyin.';
+
+  @override
+  String get msgChannelName => 'Sistem mesajları';
+
+  @override
+  String get msgChannelDesc => 'Karakterden brifingler, moral ve sitemler';
+
+  @override
+  String get msgTplBriefingTitle => '[ Sistem ] Sabah brifingi';
+
+  @override
+  String get msgTplBriefing1 =>
+      'Yeni gün, yeni görevler. Listeyi aç ve ilkinden başla.';
+
+  @override
+  String get msgTplBriefing2 => 'Oyuncu, kalk. Bugünün planı seni bekliyor.';
+
+  @override
+  String get msgTplBriefing3 =>
+      'Sistem çevrimiçi. Bugünün görevleri kendi kendine tamamlanmaz.';
+
+  @override
+  String get msgTplCheerTitle => '[ Sistem ]';
+
+  @override
+  String get msgTplCheer1 => 'Tempoyu koruyorsun. Yavaşlama.';
+
+  @override
+  String get msgTplCheer2 =>
+      'Tamamlanan her görev bir sonraki rütbeye bir adım.';
+
+  @override
+  String get msgTplCheer3 => 'Görevlere bak: şu an neyi kapatabilirsin?';
+
+  @override
+  String get msgTplCheer4 =>
+      'Bir yudum su ve devam. Sistem ilerlemeni izliyor.';
+
+  @override
+  String get msgWaterQuestTitle => 'Su için markete yürü';
 
   @override
   String ntfQuestTitle(String title) {
@@ -4675,6 +5232,221 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get synErrFill => 'Sunucu adresini, adı ve şifreyi doldurun';
+
+  @override
+  String get visEstimate => 'Tahmin';
+
+  @override
+  String get visNoticeLabel => 'Sistem';
+
+  @override
+  String get visSourceTitle => 'Fotoğraf';
+
+  @override
+  String get visSourceMessage => 'Fotoğraf çekilsin mi, galeriden mi seçilsin?';
+
+  @override
+  String get visCamera => 'Kamera';
+
+  @override
+  String get visGallery => 'Galeri';
+
+  @override
+  String get visAnalyzing => 'Fotoğraf analiz ediliyor…';
+
+  @override
+  String get visErrOffline =>
+      'Sunucuya bağlanılamadı. Daha sonra tekrar deneyin.';
+
+  @override
+  String get visErrNotSignedIn =>
+      'Fotoğraf analizi için hesabınıza giriş yapın (\"Daha fazla\" → \"Hesap\").';
+
+  @override
+  String get visErrBudget =>
+      'Yapay zekâ limiti şu an dolu. Daha sonra tekrar deneyin.';
+
+  @override
+  String get visErrUnavailable => 'Sunucudaki yapay zekâ şu an kullanılamıyor.';
+
+  @override
+  String get visErrServer => 'Fotoğraf çözümlenemedi. Tekrar deneyin.';
+
+  @override
+  String get visRetry => 'Tekrar dene';
+
+  @override
+  String get visRemove => 'Kaldır';
+
+  @override
+  String get visBack => 'Geri';
+
+  @override
+  String get visDone => 'Tamam';
+
+  @override
+  String get visFoodTitle => 'Yemek fotoğrafı';
+
+  @override
+  String get visFoodSeen => 'Fotoğrafta ne var';
+
+  @override
+  String get visFoodNothing => 'Yemek tanınmadı — öğeleri elle ekleyin.';
+
+  @override
+  String get visFoodItemName => 'Ad';
+
+  @override
+  String get visFoodGrams => 'Gram';
+
+  @override
+  String visFoodItemLine(String name, String grams) {
+    return '$name — $grams g';
+  }
+
+  @override
+  String get visFoodAddItem => 'Öğe ekle';
+
+  @override
+  String get visFoodQuestion => 'Satın mı aldın, kendin mi yaptın?';
+
+  @override
+  String get visFoodBought => 'Satın aldım';
+
+  @override
+  String get visFoodCooked => 'Kendim yaptım';
+
+  @override
+  String get visFoodWhere => 'Nereden aldın?';
+
+  @override
+  String get visFoodWhereHint => 'Kafe, market, zincir — boş bırakılabilir';
+
+  @override
+  String get visFoodFind => 'Besin değerlerini bul';
+
+  @override
+  String get visFoodScanHint => 'Paketi var mı? Barkod daha doğru.';
+
+  @override
+  String get visFoodScan => 'Barkod tara';
+
+  @override
+  String visFoodPer100(String kcal, String macros) {
+    return '100 g\'da: $kcal · $macros';
+  }
+
+  @override
+  String visFoodSource(String title) {
+    return 'Kaynak: $title';
+  }
+
+  @override
+  String get visFoodCached => 'kayıtlı veriden';
+
+  @override
+  String get visFoodSaveDiary => 'Günlüğe yaz';
+
+  @override
+  String get visFoodRecipeName => 'Yemeğin adı';
+
+  @override
+  String get visFoodSaveRecipe => 'Tariflerime ve günlüğe';
+
+  @override
+  String get visFoodTotal => 'Toplam';
+
+  @override
+  String get visBodyTitle => 'Vücut analizi';
+
+  @override
+  String get visSkinTitle => 'Cilt analizi';
+
+  @override
+  String get visBodyFat => 'Yağ oranı';
+
+  @override
+  String visFatRange(String min, String max) {
+    return '%$min–$max';
+  }
+
+  @override
+  String get visMuscle => 'Kas';
+
+  @override
+  String get visLevelLow => 'ortalamanın altında';
+
+  @override
+  String get visLevelMedium => 'orta';
+
+  @override
+  String get visLevelHigh => 'ortalamanın üstünde';
+
+  @override
+  String get visSwelling => 'Ödem';
+
+  @override
+  String get visSwellingNone => 'görünmüyor';
+
+  @override
+  String get visSwellingMild => 'hafif';
+
+  @override
+  String get visSwellingNoticeable => 'belirgin';
+
+  @override
+  String get visPosture => 'Duruş';
+
+  @override
+  String get visComparison => 'Öncekiyle karşılaştırma';
+
+  @override
+  String visPreviousAt(String date) {
+    return 'Önceki fotoğraf: $date';
+  }
+
+  @override
+  String get visSkinType => 'Cilt tipi';
+
+  @override
+  String get visSkinDry => 'kuru';
+
+  @override
+  String get visSkinNormal => 'normal';
+
+  @override
+  String get visSkinOily => 'yağlı';
+
+  @override
+  String get visSkinCombination => 'karma';
+
+  @override
+  String get visSkinSensitive => 'hassas';
+
+  @override
+  String get visAcne => 'Sivilce';
+
+  @override
+  String visAcneScore(String score) {
+    return '10 üzerinden $score';
+  }
+
+  @override
+  String get visDisclaimer =>
+      'Fotoğraftan tahmin: ışık, açı ve kamera sonucu etkiler. Tıbbi bir değerlendirme değildir.';
+
+  @override
+  String get visReceiptTitle => 'Fiş';
+
+  @override
+  String get visReceiptStore => 'Mağaza';
+
+  @override
+  String get visReceiptDate => 'Tarih';
+
+  @override
+  String get visReceiptFinanceLater =>
+      'Fiş kaydedildi. Finansa kayıt bir sonraki güncellemede gelecek.';
 
   @override
   String get wlkTitle => 'Yürüyüş';

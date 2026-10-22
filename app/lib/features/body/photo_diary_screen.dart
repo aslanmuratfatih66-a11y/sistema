@@ -14,6 +14,7 @@ import '../onboarding/questionnaire_a/data/photo_repository.dart';
 import 'data/body_photos.dart';
 import 'data/sleep_repository.dart' show bodyClockProvider;
 import 'widgets/body_common.dart';
+import '../vision/vision.dart';
 
 /// Откуда добавить снимок.
 enum _Origin { camera, gallery }
@@ -81,6 +82,13 @@ class _PhotoDiaryScreenState extends ConsumerState<PhotoDiaryScreen> {
         }
       });
 
+  Future<void> _analyze() async {
+    final p = _selected.single;
+    final file = await ref.read(photoStorageProvider).resolve(p.localPath);
+    if (!mounted) return;
+    await showPhotoAnalysis(context, photoPath: file.path, photoId: p.id, skin: _kind == PhotoKind.skin);
+  }
+
   void _compare() {
     final pair = [..._selected]..sort((a, b) => a.takenAt.compareTo(b.takenAt));
     PhotoCompareScreen.open(context, before: pair.first, after: pair.last);
@@ -96,9 +104,17 @@ class _PhotoDiaryScreenState extends ConsumerState<PhotoDiaryScreen> {
     return ScheduleSubPage(
       title: l.bdyPhotoTitle,
       onBack: () => Navigator.of(context).maybePop(),
-      bottom: _selected.length == 2
-          ? SysButton.primary(key: const Key('bdy-photo-compare'), label: l.bdyPhotoCompare, expand: true, onPressed: _compare)
-          : null,
+      bottom: switch (_selected.length) {
+        2 => SysButton.primary(key: const Key('bdy-photo-compare'), label: l.bdyPhotoCompare, expand: true, onPressed: _compare),
+        // Одно фото — анализ ИИ (оценка, SPEC §9.4).
+        1 => SysButton.secondary(
+            key: const Key('bdy-photo-analyze'),
+            label: _kind == PhotoKind.skin ? l.visSkinTitle : l.visBodyTitle,
+            expand: true,
+            onPressed: _analyze,
+          ),
+        _ => null,
+      },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

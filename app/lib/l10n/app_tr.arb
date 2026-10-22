@@ -283,6 +283,39 @@
   "bdySwellTrend": "Sabahlara göre eğilim",
   "bdySwellEmpty": "Henüz sabah fotoğrafı yok.",
   "bdySwellCompareFirst": "İlk ve sonuncuyu karşılaştır",
+  "chrSemanticsChat": "{name}: sohbeti açmak için dokun; menü için basılı tut; kaldırmak için aşağı kaydır",
+  "chrMenuChat": "Sohbet",
+  "chrMenuPocket": "Cebe koy",
+  "chrPlayerFallback": "Oyuncu",
+  "chrDoneSoft1": "{name}, «{quest}» tamam! Seninle gurur duyuyorum.",
+  "chrDoneSoft2": "Gördün mü, oldu! «{quest}» tamamlandı, {name}.",
+  "chrDoneNormal1": "«{quest}» tamamlandı. Harika, {name}!",
+  "chrDoneNormal2": "İşte bu! «{quest}» kapandı. Devam, {name}.",
+  "chrDoneStrict1": "«{quest}» sayıldı. Böyle devam, {name}.",
+  "chrDoneStrict2": "Kabul: «{quest}». Sıradaki görev bekliyor.",
+  "chrDoneHarsh1": "«{quest}» bitti. Nihayet. Tempoyu düşürme, {name}.",
+  "chrDoneHarsh2": "Sayıldı: «{quest}». Bu asgari, {name}. Devam.",
+  "chrFailSoft1": "«{quest}» olmadı — sorun değil, {name}. Yarın olur.",
+  "chrFailSoft2": "Yazık, «{quest}» kaçtı. Dinlen, sonra tekrar deneriz.",
+  "chrFailNormal1": "«{quest}» başarısız. Üzücü, {name}. Toparlan.",
+  "chrFailNormal2": "Eh, «{quest}» sayılmadı. Bir dahakine kaçırma.",
+  "chrFailStrict1": "«{quest}» başarısız, {name}. Böyle olmaz. Düzelt.",
+  "chrFailStrict2": "Başarısız: «{quest}». Söz verdiysen tut.",
+  "chrFailHarsh1": "«{quest}» — başarısız! {name}, disiplin nerede? Bahane yok!",
+  "chrFailHarsh2": "Yine mi «{quest}»?! Tembelliğe yer yok. Yarın taviz yok.",
+  "chrPenaltySoft": "Ceza… Önemli değil, telafi ederiz.",
+  "chrPenaltyNormal": "Ceza. Tekrarlanmasın.",
+  "chrPenaltyStrict": "Ceza hak edildi. Ders çıkarıldı mı?",
+  "chrPenaltyHarsh": "Ceza! Tembelliğin bedeli. Çalış!",
+  "chrLevelUp": "Seviye {level}! Böyle devam, {name}!",
+  "chrIdleSoft1": "{name}, buradayım. Küçük bir şey yapalım mı?",
+  "chrIdleSoft2": "Uzun zamandır görüşmedik, {name}. Hazır olunca görevlere bak.",
+  "chrIdleNormal1": "{name}, orada mısın? Görevler kendiliğinden yapılmaz.",
+  "chrIdleNormal2": "Hey, {name}! Bugün için ne kaldı, bir bak.",
+  "chrIdleStrict1": "{name}, mola uzadı. İşe dön.",
+  "chrIdleStrict2": "Zaman geçiyor, {name}. Görev listesi burada.",
+  "chrIdleHarsh1": "{name}! Daha ne kadar boş duracaksın? Kalk ve yap!",
+  "chrIdleHarsh2": "Oyalanmayı bırak, {name}. Görevler bekliyor — hemen!",
   "chrIntro": "Bir yol arkadaşı seç. Fotoğraf çekimlerinde sesiyle sana rehberlik edecek, sonra ekranın altında yaşayacak; hatırlatacak, övecek ve azarlayacak — seçtiğin modda.",
   "chrArchetype": "Karakter",
   "chrArchetypeRequired": "Devam etmek için bir karakter seç",
@@ -375,6 +408,91 @@
   "chrTapHarsh3": "Gün uzamıyor. Harekete geç.",
   "chrPocketTab": "Karakteri geri getir",
   "chrSemantics": "{name}: replik için dokun; kaldırmak için aşağı kaydır",
+  "chtTitle": "Sohbet",
+  "chtHint": "Karakterine yaz…",
+  "chtEmpty": "Sohbete başla: planı sor, yardım iste ya da sadece nasıl olduğunu anlat.",
+  "chtSend": "Gönder",
+  "chtMic": "Sesli giriş: dokun veya basılı tut",
+  "chtListening": "Dinliyorum…",
+  "chtMicUnavailable": "Konuşma tanıma kullanılamıyor — mikrofon ve konuşma iznini kontrol et",
+  "chtThinking": "Yazıyor…",
+  "chtAction": "Sistem planı değiştirdi: {summary}",
+  "@chtAction": {
+    "placeholders": {
+      "summary": {
+        "type": "String"
+      }
+    }
+  },
+  "chtUndo": "Geri al",
+  "chtUndone": "Geri alındı",
+  "chtUndoFailed": "Geri alınamadı",
+  "chtRetry": "Tekrar dene",
+  "chtVoiceOn": "Yanıtların seslendirilmesi açık",
+  "chtVoiceOff": "Yanıtların seslendirilmesi kapalı",
+  "chtErrNotSignedIn": "Yapay zekâ ile konuşmak için hesabına giriş yap: Daha fazla → Hesap.",
+  "chtErrOffline": "Sunucuya bağlantı yok. Mesaj kaydedildi — internet gelince «Tekrar dene»ye bas.",
+  "chtErrBudget": "Bu ayın yapay zekâ bütçesi doldu. Gelecek aya kadar karakter hazır cevaplarla konuşacak.",
+  "chtErrUnavailable": "Yapay zekâ şu an kullanılamıyor. Biraz sonra tekrar dene.",
+  "chtErrRateLimited": "Çok fazla istek. Biraz bekle.",
+  "chtErrServer": "Yapay zekâ sunucusu hatası. Tekrar dene.",
+  "chtFallbackSoft": "Şu an düzgün cevap veremiyorum ama yanındayım. Plana adım adım devam et — gayet iyi gidiyorsun.",
+  "chtFallbackNormal": "Sistemle bağlantı yok. Plan geçerli — görevlerini yap, sonra konuşuruz.",
+  "chtFallbackStrict": "Bağlantı yok — bu gevşemek için bahane değil. Görevleri aç ve yap.",
+  "chtFallbackHarsh": "Sunucu sessiz, sen neyi bekliyorsun? Görevler kendi kendine yapılmaz. Hadi.",
+  "chtJournal": "Yapay zekâ günlüğü",
+  "chtUsageTitle": "Yapay zekâ harcamaları",
+  "chtUsageMonth": "Bu ay {spent} / {budget}",
+  "@chtUsageMonth": {
+    "placeholders": {
+      "spent": {
+        "type": "String"
+      },
+      "budget": {
+        "type": "String"
+      }
+    }
+  },
+  "chtUsageToday": "Bugün: {usd}",
+  "@chtUsageToday": {
+    "placeholders": {
+      "usd": {
+        "type": "String"
+      }
+    }
+  },
+  "chtUsageDegraded": "Tasarruf modu: bütçe neredeyse doldu, yapay zekâ daha ucuz modellerle çalışıyor",
+  "chtUsageByTask": "Görevlere göre",
+  "chtUsageCalls": "{count} çağrı",
+  "@chtUsageCalls": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chtUsageEmpty": "Bu ay yapay zekâ henüz kullanılmadı.",
+  "chtTaskChat": "Sohbet",
+  "chtTaskAnalysis": "Gün ve hafta analizi",
+  "chtTaskPlan": "Plan oluşturma",
+  "chtTaskPlanEdit": "Plan değişikliği",
+  "chtTaskShort": "Kısa sözler",
+  "chtTaskBankParse": "Banka bildirimleri",
+  "chtTaskFoodVision": "Fotoğraftan yemek ve fiş",
+  "chtTaskBodyVision": "Vücut ve cilt fotoğrafları",
+  "chtTaskLearning": "Öğrenme",
+  "chtTaskTts": "Ses",
+  "chtActionsTitle": "Yapay zekâ işlemleri",
+  "chtActionsEmpty": "Yapay zekâ henüz hiçbir şeyi değiştirmedi.",
+  "chtLoadFailed": "Yüklenemedi",
+  "chtVoiceTitle": "Karakterin sesi",
+  "chtVoiceSystem": "Telefonun sistem sesi",
+  "chtVoiceSystemDesc": "İnternetsiz ve ücretsiz çalışır",
+  "chtVoiceListen": "Dinle",
+  "chtVoiceEmpty": "Sunucuda bu dil için ses yok.",
+  "chtVoiceListenFailed": "Ses çalınamadı",
+  "chtVoiceFemale": "kadın",
+  "chtVoiceMale": "erkek",
   "commonNext": "İleri",
   "commonBack": "Geri",
   "commonDone": "Tamam",
@@ -418,6 +536,14 @@
   "hqNutritionDiaryTitle": "Beslenme günlüğü",
   "hqNutritionDiarySoon": "Beslenme günlüğünü, yemek fotoğraflarını ve makro takibini Sistem bir sonraki aşamada açacak.",
   "hqFinanceFoodTitle": "Yemek bütçesi",
+  "int6PlanAi": "Yapay zekâ ile plan oluştur",
+  "int6PlanAiError": "Yapay zekâ ile plan oluşturulamadı. Hesap girişini ve bağlantıyı kontrol edin.",
+  "int6Learning": "Bilgi",
+  "int6LearningHint": "Kurslar, günün dersleri ve tekrarlar",
+  "int6AiJournal": "Yapay zekâ: harcama ve işlemler",
+  "int6AiJournalHint": "Bütçe ve Sistem'in yaptığı değişiklikler (geri alınabilir)",
+  "int6Voice": "Karakter sesi",
+  "int6VoiceHint": "Sunucudaki hazır sesler, dinle",
   "livNextQuest": "Sıradaki görev",
   "livNoQuest": "Görev yok",
   "livOverdue": "Süresi geçti",
@@ -437,6 +563,112 @@
   "locNotifTitle": "Sistem · yürüyüş",
   "locNotifText": "Rota kaydediliyor",
   "locNotifChannel": "Yürüyüş",
+  "lrnTitle": "Bilgi",
+  "lrnToday": "Bugün",
+  "lrnCourses": "Kurslar",
+  "lrnNewCourse": "Yeni kurs",
+  "lrnTopic": "Ne öğrenmek istiyorsunuz?",
+  "lrnTopicHint": "Örneğin: nunçaku, C++, Rusça",
+  "lrnPerDay": "Günlük ders",
+  "lrnLength": "Kurstaki ders sayısı",
+  "lrnCreate": "Kursu oluştur",
+  "lrnCreating": "Sistem kursu oluşturuyor…",
+  "lrnTodayEmpty": "Bugünlük bu kadar: dersler ve tekrarlar tamam.",
+  "lrnNoCourses": "Henüz kurs yok. Ne öğrenmek istediğinizi yazın, Sistem kursu oluştursun.",
+  "lrnLessonOf": "Ders {n} / {total}",
+  "@lrnLessonOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnReview": "Tekrar",
+  "lrnLessonDay": "Günün dersi",
+  "lrnStatusPaused": "Duraklatıldı",
+  "lrnStatusDone": "Kurs tamamlandı",
+  "lrnPause": "Duraklat",
+  "lrnResume": "Devam et",
+  "lrnDelete": "Kursu sil",
+  "lrnDeleteConfirm": "«{title}» kursu silinsin mi? İlerleme kaybolacak.",
+  "@lrnDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "lrnLoading": "Ders yükleniyor…",
+  "lrnGoal": "Hedef",
+  "lrnExample": "Örnek",
+  "lrnTip": "İpucu",
+  "lrnStartQuiz": "Teste geç",
+  "lrnFinish": "Dersi bitir",
+  "lrnQuestion": "Soru {n} / {total}",
+  "@lrnQuestion": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnNext": "İleri",
+  "lrnCorrect": "Doğru",
+  "lrnWrong": "Yanlış",
+  "lrnResult": "Sonuç",
+  "lrnScore": "Doğru: %{p}",
+  "@lrnScore": {
+    "placeholders": {
+      "p": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnNextReview": "{days, plural, one{Tekrar {days} gün sonra} other{Tekrar {days} gün sonra}}",
+  "@lrnNextReview": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnMastered": "Konu pekişti — başka tekrar yok.",
+  "lrnPassed": "Ders tamamlandı.",
+  "lrnFailed": "Geçmek için %{p} gerekli — tekrar deneyin.",
+  "@lrnFailed": {
+    "placeholders": {
+      "p": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnReviewPassed": "Tekrar başarılı.",
+  "lrnReviewFailed": "Tekrar başarısız — aralık kısaltıldı.",
+  "lrnRetry": "Yeniden dene",
+  "lrnLessonDone": "Tamamlandı",
+  "lrnErrOffline": "Sunucuya bağlantı yok. Yüklenmiş dersler çevrimdışı kullanılabilir.",
+  "lrnErrNotSignedIn": "Sistem'in kurs ve ders oluşturması için hesabınıza giriş yapın (Daha fazla → Hesap).",
+  "lrnErrBudget": "Yapay zekâ limiti doldu. Daha sonra deneyin.",
+  "lrnErrUnavailable": "Yapay zekâ şu anda sunucuda kullanılamıyor.",
+  "lrnErrServer": "Yanıt alınamadı. Tekrar deneyin.",
+  "msgChannelName": "Sistem mesajları",
+  "msgChannelDesc": "Karakterden brifingler, moral ve sitemler",
+  "msgTplBriefingTitle": "[ Sistem ] Sabah brifingi",
+  "msgTplBriefing1": "Yeni gün, yeni görevler. Listeyi aç ve ilkinden başla.",
+  "msgTplBriefing2": "Oyuncu, kalk. Bugünün planı seni bekliyor.",
+  "msgTplBriefing3": "Sistem çevrimiçi. Bugünün görevleri kendi kendine tamamlanmaz.",
+  "msgTplCheerTitle": "[ Sistem ]",
+  "msgTplCheer1": "Tempoyu koruyorsun. Yavaşlama.",
+  "msgTplCheer2": "Tamamlanan her görev bir sonraki rütbeye bir adım.",
+  "msgTplCheer3": "Görevlere bak: şu an neyi kapatabilirsin?",
+  "msgTplCheer4": "Bir yudum su ve devam. Sistem ilerlemeni izliyor.",
+  "msgWaterQuestTitle": "Su için markete yürü",
   "ntfQuestTitle": "[ Görev ] {title}",
   "ntfPenaltyQuestTitle": "[ Ceza görevi ] {title}",
   "ntfBossTitle": "[ Haftanın patronu ] {title}",
@@ -1735,6 +1967,123 @@
   "synErrServer": "Sunucu hatası — daha sonra deneyin",
   "synErrInvalidName": "Ad: 3–32 karakter — harf, rakam, _ - . boşluksuz",
   "synErrFill": "Sunucu adresini, adı ve şifreyi doldurun",
+  "visEstimate": "Tahmin",
+  "visNoticeLabel": "Sistem",
+  "visSourceTitle": "Fotoğraf",
+  "visSourceMessage": "Fotoğraf çekilsin mi, galeriden mi seçilsin?",
+  "visCamera": "Kamera",
+  "visGallery": "Galeri",
+  "visAnalyzing": "Fotoğraf analiz ediliyor…",
+  "visErrOffline": "Sunucuya bağlanılamadı. Daha sonra tekrar deneyin.",
+  "visErrNotSignedIn": "Fotoğraf analizi için hesabınıza giriş yapın (\"Daha fazla\" → \"Hesap\").",
+  "visErrBudget": "Yapay zekâ limiti şu an dolu. Daha sonra tekrar deneyin.",
+  "visErrUnavailable": "Sunucudaki yapay zekâ şu an kullanılamıyor.",
+  "visErrServer": "Fotoğraf çözümlenemedi. Tekrar deneyin.",
+  "visRetry": "Tekrar dene",
+  "visRemove": "Kaldır",
+  "visBack": "Geri",
+  "visDone": "Tamam",
+  "visFoodTitle": "Yemek fotoğrafı",
+  "visFoodSeen": "Fotoğrafta ne var",
+  "visFoodNothing": "Yemek tanınmadı — öğeleri elle ekleyin.",
+  "visFoodItemName": "Ad",
+  "visFoodGrams": "Gram",
+  "visFoodItemLine": "{name} — {grams} g",
+  "@visFoodItemLine": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "visFoodAddItem": "Öğe ekle",
+  "visFoodQuestion": "Satın mı aldın, kendin mi yaptın?",
+  "visFoodBought": "Satın aldım",
+  "visFoodCooked": "Kendim yaptım",
+  "visFoodWhere": "Nereden aldın?",
+  "visFoodWhereHint": "Kafe, market, zincir — boş bırakılabilir",
+  "visFoodFind": "Besin değerlerini bul",
+  "visFoodScanHint": "Paketi var mı? Barkod daha doğru.",
+  "visFoodScan": "Barkod tara",
+  "visFoodPer100": "100 g'da: {kcal} · {macros}",
+  "@visFoodPer100": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "visFoodSource": "Kaynak: {title}",
+  "@visFoodSource": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "visFoodCached": "kayıtlı veriden",
+  "visFoodSaveDiary": "Günlüğe yaz",
+  "visFoodRecipeName": "Yemeğin adı",
+  "visFoodSaveRecipe": "Tariflerime ve günlüğe",
+  "visFoodTotal": "Toplam",
+  "visBodyTitle": "Vücut analizi",
+  "visSkinTitle": "Cilt analizi",
+  "visBodyFat": "Yağ oranı",
+  "visFatRange": "%{min}–{max}",
+  "@visFatRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "visMuscle": "Kas",
+  "visLevelLow": "ortalamanın altında",
+  "visLevelMedium": "orta",
+  "visLevelHigh": "ortalamanın üstünde",
+  "visSwelling": "Ödem",
+  "visSwellingNone": "görünmüyor",
+  "visSwellingMild": "hafif",
+  "visSwellingNoticeable": "belirgin",
+  "visPosture": "Duruş",
+  "visComparison": "Öncekiyle karşılaştırma",
+  "visPreviousAt": "Önceki fotoğraf: {date}",
+  "@visPreviousAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "visSkinType": "Cilt tipi",
+  "visSkinDry": "kuru",
+  "visSkinNormal": "normal",
+  "visSkinOily": "yağlı",
+  "visSkinCombination": "karma",
+  "visSkinSensitive": "hassas",
+  "visAcne": "Sivilce",
+  "visAcneScore": "10 üzerinden {score}",
+  "@visAcneScore": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "visDisclaimer": "Fotoğraftan tahmin: ışık, açı ve kamera sonucu etkiler. Tıbbi bir değerlendirme değildir.",
+  "visReceiptTitle": "Fiş",
+  "visReceiptStore": "Mağaza",
+  "visReceiptDate": "Tarih",
+  "visReceiptFinanceLater": "Fiş kaydedildi. Finansa kayıt bir sonraki güncellemede gelecek.",
   "wlkTitle": "Yürüyüş",
   "wlkPlan": "Rota",
   "wlkByDistance": "Kilometre",

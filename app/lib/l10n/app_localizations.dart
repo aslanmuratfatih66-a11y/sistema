@@ -1442,6 +1442,204 @@ abstract class AppLocalizations {
   /// **'Сравнить первое и последнее'**
   String get bdySwellCompareFirst;
 
+  /// No description provided for @chrSemanticsChat.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}: нажмите, чтобы открыть чат; удерживайте — меню; смахните вниз, чтобы убрать'**
+  String chrSemanticsChat(String name);
+
+  /// No description provided for @chrMenuChat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чат'**
+  String get chrMenuChat;
+
+  /// No description provided for @chrMenuPocket.
+  ///
+  /// In ru, this message translates to:
+  /// **'В карман'**
+  String get chrMenuPocket;
+
+  /// No description provided for @chrPlayerFallback.
+  ///
+  /// In ru, this message translates to:
+  /// **'Игрок'**
+  String get chrPlayerFallback;
+
+  /// No description provided for @chrDoneSoft1.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}, «{quest}» готово! Я тобой горжусь.'**
+  String chrDoneSoft1(String name, String quest);
+
+  /// No description provided for @chrDoneSoft2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Видишь, получилось! «{quest}» выполнено, {name}.'**
+  String chrDoneSoft2(String name, String quest);
+
+  /// No description provided for @chrDoneNormal1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» — выполнено. Отлично, {name}!'**
+  String chrDoneNormal1(String name, String quest);
+
+  /// No description provided for @chrDoneNormal2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Есть! «{quest}» закрыт. Идём дальше, {name}.'**
+  String chrDoneNormal2(String name, String quest);
+
+  /// No description provided for @chrDoneStrict1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» засчитано. Так и держать, {name}.'**
+  String chrDoneStrict1(String name, String quest);
+
+  /// No description provided for @chrDoneStrict2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Принято: «{quest}». Следующий квест ждёт.'**
+  String chrDoneStrict2(String name, String quest);
+
+  /// No description provided for @chrDoneHarsh1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» сделано. Наконец-то. Не сбавляй темп, {name}.'**
+  String chrDoneHarsh1(String name, String quest);
+
+  /// No description provided for @chrDoneHarsh2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Засчитано: «{quest}». Это минимум, {name}. Дальше.'**
+  String chrDoneHarsh2(String name, String quest);
+
+  /// No description provided for @chrFailSoft1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» не вышло — ничего, {name}. Завтра получится.'**
+  String chrFailSoft1(String name, String quest);
+
+  /// No description provided for @chrFailSoft2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Жаль, «{quest}» сорвался. Отдохни и попробуем снова.'**
+  String chrFailSoft2(String name, String quest);
+
+  /// No description provided for @chrFailNormal1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» провален. Обидно, {name}. Соберись.'**
+  String chrFailNormal1(String name, String quest);
+
+  /// No description provided for @chrFailNormal2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Эх, «{quest}» не засчитан. В следующий раз — не упускай.'**
+  String chrFailNormal2(String name, String quest);
+
+  /// No description provided for @chrFailStrict1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» провален, {name}. Так не пойдёт. Исправляй.'**
+  String chrFailStrict1(String name, String quest);
+
+  /// No description provided for @chrFailStrict2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Провал: «{quest}». Слово дал — слово держи.'**
+  String chrFailStrict2(String name, String quest);
+
+  /// No description provided for @chrFailHarsh1.
+  ///
+  /// In ru, this message translates to:
+  /// **'«{quest}» — провал! {name}, где дисциплина? Хватит оправданий!'**
+  String chrFailHarsh1(String name, String quest);
+
+  /// No description provided for @chrFailHarsh2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Опять сорвал «{quest}»?! Позор лени. Завтра — без поблажек.'**
+  String chrFailHarsh2(String name, String quest);
+
+  /// No description provided for @chrPenaltySoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф… Ничего, отыграемся.'**
+  String get chrPenaltySoft;
+
+  /// No description provided for @chrPenaltyNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф. Давай без повторов.'**
+  String get chrPenaltyNormal;
+
+  /// No description provided for @chrPenaltyStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф заслужен. Выводы сделаны?'**
+  String get chrPenaltyStrict;
+
+  /// No description provided for @chrPenaltyHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Штраф! Расплата за лень. Отрабатывай!'**
+  String get chrPenaltyHarsh;
+
+  /// No description provided for @chrLevelUp.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень {level}! Так держать, {name}!'**
+  String chrLevelUp(int level, String name);
+
+  /// No description provided for @chrIdleSoft1.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}, я тут. Может, сделаем что-нибудь маленькое?'**
+  String chrIdleSoft1(String name);
+
+  /// No description provided for @chrIdleSoft2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Давно не виделись, {name}. Загляни в квесты, когда будешь готов.'**
+  String chrIdleSoft2(String name);
+
+  /// No description provided for @chrIdleNormal1.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}, ты здесь? Квесты сами себя не сделают.'**
+  String chrIdleNormal1(String name);
+
+  /// No description provided for @chrIdleNormal2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Эй, {name}! Посмотри, что осталось на сегодня.'**
+  String chrIdleNormal2(String name);
+
+  /// No description provided for @chrIdleStrict1.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}, перерыв затянулся. За дело.'**
+  String chrIdleStrict1(String name);
+
+  /// No description provided for @chrIdleStrict2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Время идёт, {name}. Список квестов — вот он.'**
+  String chrIdleStrict2(String name);
+
+  /// No description provided for @chrIdleHarsh1.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}! Сколько можно бездельничать? Встал и пошёл выполнять!'**
+  String chrIdleHarsh1(String name);
+
+  /// No description provided for @chrIdleHarsh2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хватит прохлаждаться, {name}. Квесты ждут — живо!'**
+  String chrIdleHarsh2(String name);
+
   /// No description provided for @chrIntro.
   ///
   /// In ru, this message translates to:
@@ -1994,6 +2192,330 @@ abstract class AppLocalizations {
   /// **'{name}: нажмите, чтобы услышать реплику; смахните вниз, чтобы убрать'**
   String chrSemantics(String name);
 
+  /// No description provided for @chtTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чат'**
+  String get chtTitle;
+
+  /// No description provided for @chtHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Напиши персонажу…'**
+  String get chtHint;
+
+  /// No description provided for @chtEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начни разговор: спроси о плане, попроси помочь или просто расскажи, как дела.'**
+  String get chtEmpty;
+
+  /// No description provided for @chtSend.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отправить'**
+  String get chtSend;
+
+  /// No description provided for @chtMic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голосовой ввод: нажми или удерживай'**
+  String get chtMic;
+
+  /// No description provided for @chtListening.
+  ///
+  /// In ru, this message translates to:
+  /// **'Слушаю…'**
+  String get chtListening;
+
+  /// No description provided for @chtMicUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'Распознавание речи недоступно — проверь разрешение на микрофон и речь'**
+  String get chtMicUnavailable;
+
+  /// No description provided for @chtThinking.
+  ///
+  /// In ru, this message translates to:
+  /// **'Печатает…'**
+  String get chtThinking;
+
+  /// No description provided for @chtAction.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система изменила план: {summary}'**
+  String chtAction(String summary);
+
+  /// No description provided for @chtUndo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отменить'**
+  String get chtUndo;
+
+  /// No description provided for @chtUndone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отменено'**
+  String get chtUndone;
+
+  /// No description provided for @chtUndoFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось отменить'**
+  String get chtUndoFailed;
+
+  /// No description provided for @chtRetry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get chtRetry;
+
+  /// No description provided for @chtVoiceOn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Озвучка ответов включена'**
+  String get chtVoiceOn;
+
+  /// No description provided for @chtVoiceOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Озвучка ответов выключена'**
+  String get chtVoiceOff;
+
+  /// No description provided for @chtErrNotSignedIn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чтобы говорить с ИИ, войди в аккаунт: Ещё → Аккаунт.'**
+  String get chtErrNotSignedIn;
+
+  /// No description provided for @chtErrOffline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет связи с сервером. Сообщение сохранено — нажми «Повторить», когда появится сеть.'**
+  String get chtErrOffline;
+
+  /// No description provided for @chtErrBudget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бюджет ИИ на этот месяц исчерпан. До следующего месяца персонаж отвечает шаблонами.'**
+  String get chtErrBudget;
+
+  /// No description provided for @chtErrUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИИ сейчас недоступен. Попробуй чуть позже.'**
+  String get chtErrUnavailable;
+
+  /// No description provided for @chtErrRateLimited.
+  ///
+  /// In ru, this message translates to:
+  /// **'Слишком много запросов. Подожди немного.'**
+  String get chtErrRateLimited;
+
+  /// No description provided for @chtErrServer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибка сервера ИИ. Попробуй ещё раз.'**
+  String get chtErrServer;
+
+  /// No description provided for @chtFallbackSoft.
+  ///
+  /// In ru, this message translates to:
+  /// **'Я сейчас не могу толком ответить, но я рядом. Делай по плану, шаг за шагом — у тебя получается.'**
+  String get chtFallbackSoft;
+
+  /// No description provided for @chtFallbackNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Связи с Системой нет. План в силе — выполняй задания, поговорим позже.'**
+  String get chtFallbackNormal;
+
+  /// No description provided for @chtFallbackStrict.
+  ///
+  /// In ru, this message translates to:
+  /// **'Связи нет — это не повод расслабляться. Открой квесты и делай.'**
+  String get chtFallbackStrict;
+
+  /// No description provided for @chtFallbackHarsh.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сервер молчит, а ты чего ждёшь? Задания сами себя не сделают. Вперёд.'**
+  String get chtFallbackHarsh;
+
+  /// No description provided for @chtJournal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Журнал ИИ'**
+  String get chtJournal;
+
+  /// No description provided for @chtUsageTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Расходы ИИ'**
+  String get chtUsageTitle;
+
+  /// No description provided for @chtUsageMonth.
+  ///
+  /// In ru, this message translates to:
+  /// **'{spent} из {budget} за месяц'**
+  String chtUsageMonth(String spent, String budget);
+
+  /// No description provided for @chtUsageToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня: {usd}'**
+  String chtUsageToday(String usd);
+
+  /// No description provided for @chtUsageDegraded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Экономный режим: бюджет почти исчерпан, ИИ работает на более дешёвых моделях'**
+  String get chtUsageDegraded;
+
+  /// No description provided for @chtUsageByTask.
+  ///
+  /// In ru, this message translates to:
+  /// **'По задачам'**
+  String get chtUsageByTask;
+
+  /// No description provided for @chtUsageCalls.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count} выз.'**
+  String chtUsageCalls(int count);
+
+  /// No description provided for @chtUsageEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'В этом месяце ИИ ещё не использовался.'**
+  String get chtUsageEmpty;
+
+  /// No description provided for @chtTaskChat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разговор'**
+  String get chtTaskChat;
+
+  /// No description provided for @chtTaskAnalysis.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анализ дня и недели'**
+  String get chtTaskAnalysis;
+
+  /// No description provided for @chtTaskPlan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Построение плана'**
+  String get chtTaskPlan;
+
+  /// No description provided for @chtTaskPlanEdit.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменение плана'**
+  String get chtTaskPlanEdit;
+
+  /// No description provided for @chtTaskShort.
+  ///
+  /// In ru, this message translates to:
+  /// **'Короткие реплики'**
+  String get chtTaskShort;
+
+  /// No description provided for @chtTaskBankParse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомления банков'**
+  String get chtTaskBankParse;
+
+  /// No description provided for @chtTaskFoodVision.
+  ///
+  /// In ru, this message translates to:
+  /// **'Еда и чеки по фото'**
+  String get chtTaskFoodVision;
+
+  /// No description provided for @chtTaskBodyVision.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото тела и кожи'**
+  String get chtTaskBodyVision;
+
+  /// No description provided for @chtTaskLearning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Обучение'**
+  String get chtTaskLearning;
+
+  /// No description provided for @chtTaskTts.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос'**
+  String get chtTaskTts;
+
+  /// No description provided for @chtActionsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Действия ИИ'**
+  String get chtActionsTitle;
+
+  /// No description provided for @chtActionsEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИИ пока ничего не менял.'**
+  String get chtActionsEmpty;
+
+  /// No description provided for @chtLoadFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось загрузить'**
+  String get chtLoadFailed;
+
+  /// No description provided for @chtVoiceTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос персонажа'**
+  String get chtVoiceTitle;
+
+  /// No description provided for @chtVoiceSystem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Системный голос телефона'**
+  String get chtVoiceSystem;
+
+  /// No description provided for @chtVoiceSystemDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работает без интернета и бесплатно'**
+  String get chtVoiceSystemDesc;
+
+  /// No description provided for @chtVoiceListen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прослушать'**
+  String get chtVoiceListen;
+
+  /// No description provided for @chtVoiceEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'На сервере нет голосов для этого языка.'**
+  String get chtVoiceEmpty;
+
+  /// No description provided for @chtVoiceListenFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось воспроизвести голос'**
+  String get chtVoiceListenFailed;
+
+  /// No description provided for @chtVoiceFemale.
+  ///
+  /// In ru, this message translates to:
+  /// **'женский'**
+  String get chtVoiceFemale;
+
+  /// No description provided for @chtVoiceMale.
+  ///
+  /// In ru, this message translates to:
+  /// **'мужской'**
+  String get chtVoiceMale;
+
   /// No description provided for @commonNext.
   ///
   /// In ru, this message translates to:
@@ -2252,6 +2774,54 @@ abstract class AppLocalizations {
   /// **'Финансы на еду'**
   String get hqFinanceFoodTitle;
 
+  /// No description provided for @int6PlanAi.
+  ///
+  /// In ru, this message translates to:
+  /// **'Построить план с ИИ'**
+  String get int6PlanAi;
+
+  /// No description provided for @int6PlanAiError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось построить план с ИИ. Проверьте вход в аккаунт и сеть.'**
+  String get int6PlanAiError;
+
+  /// No description provided for @int6Learning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Знания'**
+  String get int6Learning;
+
+  /// No description provided for @int6LearningHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Курсы, уроки дня и повторения'**
+  String get int6LearningHint;
+
+  /// No description provided for @int6AiJournal.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИИ: расходы и действия'**
+  String get int6AiJournal;
+
+  /// No description provided for @int6AiJournalHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бюджет и что Система меняла (с отменой)'**
+  String get int6AiJournalHint;
+
+  /// No description provided for @int6Voice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голос персонажа'**
+  String get int6Voice;
+
+  /// No description provided for @int6VoiceHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Готовые голоса сервера, прослушать'**
+  String get int6VoiceHint;
+
   /// No description provided for @livNextQuest.
   ///
   /// In ru, this message translates to:
@@ -2365,6 +2935,354 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Прогулка'**
   String get locNotifChannel;
+
+  /// No description provided for @lrnTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Знания'**
+  String get lrnTitle;
+
+  /// No description provided for @lrnToday.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня'**
+  String get lrnToday;
+
+  /// No description provided for @lrnCourses.
+  ///
+  /// In ru, this message translates to:
+  /// **'Курсы'**
+  String get lrnCourses;
+
+  /// No description provided for @lrnNewCourse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый курс'**
+  String get lrnNewCourse;
+
+  /// No description provided for @lrnTopic.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что хотите выучить?'**
+  String get lrnTopic;
+
+  /// No description provided for @lrnTopicHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Например: нунчаки, C++, турецкий'**
+  String get lrnTopicHint;
+
+  /// No description provided for @lrnPerDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уроков в день'**
+  String get lrnPerDay;
+
+  /// No description provided for @lrnLength.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уроков в курсе'**
+  String get lrnLength;
+
+  /// No description provided for @lrnCreate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Построить курс'**
+  String get lrnCreate;
+
+  /// No description provided for @lrnCreating.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система строит курс…'**
+  String get lrnCreating;
+
+  /// No description provided for @lrnTodayEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'На сегодня всё: уроки и повторения выполнены.'**
+  String get lrnTodayEmpty;
+
+  /// No description provided for @lrnNoCourses.
+  ///
+  /// In ru, this message translates to:
+  /// **'Курсов пока нет. Напишите, что хотите выучить, — Система построит курс.'**
+  String get lrnNoCourses;
+
+  /// No description provided for @lrnLessonOf.
+  ///
+  /// In ru, this message translates to:
+  /// **'Урок {n} из {total}'**
+  String lrnLessonOf(int n, int total);
+
+  /// No description provided for @lrnReview.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторение'**
+  String get lrnReview;
+
+  /// No description provided for @lrnLessonDay.
+  ///
+  /// In ru, this message translates to:
+  /// **'Урок дня'**
+  String get lrnLessonDay;
+
+  /// No description provided for @lrnStatusPaused.
+  ///
+  /// In ru, this message translates to:
+  /// **'На паузе'**
+  String get lrnStatusPaused;
+
+  /// No description provided for @lrnStatusDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Курс пройден'**
+  String get lrnStatusDone;
+
+  /// No description provided for @lrnPause.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза'**
+  String get lrnPause;
+
+  /// No description provided for @lrnResume.
+  ///
+  /// In ru, this message translates to:
+  /// **'Продолжить'**
+  String get lrnResume;
+
+  /// No description provided for @lrnDelete.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить курс'**
+  String get lrnDelete;
+
+  /// No description provided for @lrnDeleteConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить курс «{title}»? Прогресс будет потерян.'**
+  String lrnDeleteConfirm(String title);
+
+  /// No description provided for @lrnLoading.
+  ///
+  /// In ru, this message translates to:
+  /// **'Загружаю урок…'**
+  String get lrnLoading;
+
+  /// No description provided for @lrnGoal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цель'**
+  String get lrnGoal;
+
+  /// No description provided for @lrnExample.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пример'**
+  String get lrnExample;
+
+  /// No description provided for @lrnTip.
+  ///
+  /// In ru, this message translates to:
+  /// **'Совет'**
+  String get lrnTip;
+
+  /// No description provided for @lrnStartQuiz.
+  ///
+  /// In ru, this message translates to:
+  /// **'К проверке'**
+  String get lrnStartQuiz;
+
+  /// No description provided for @lrnFinish.
+  ///
+  /// In ru, this message translates to:
+  /// **'Завершить урок'**
+  String get lrnFinish;
+
+  /// No description provided for @lrnQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вопрос {n} из {total}'**
+  String lrnQuestion(int n, int total);
+
+  /// No description provided for @lrnNext.
+  ///
+  /// In ru, this message translates to:
+  /// **'Далее'**
+  String get lrnNext;
+
+  /// No description provided for @lrnCorrect.
+  ///
+  /// In ru, this message translates to:
+  /// **'Верно'**
+  String get lrnCorrect;
+
+  /// No description provided for @lrnWrong.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неверно'**
+  String get lrnWrong;
+
+  /// No description provided for @lrnResult.
+  ///
+  /// In ru, this message translates to:
+  /// **'Результат'**
+  String get lrnResult;
+
+  /// No description provided for @lrnScore.
+  ///
+  /// In ru, this message translates to:
+  /// **'Правильно: {p}%'**
+  String lrnScore(int p);
+
+  /// No description provided for @lrnNextReview.
+  ///
+  /// In ru, this message translates to:
+  /// **'{days, plural, one{Повторение через {days} день} few{Повторение через {days} дня} many{Повторение через {days} дней} other{Повторение через {days} дня}}'**
+  String lrnNextReview(int days);
+
+  /// No description provided for @lrnMastered.
+  ///
+  /// In ru, this message translates to:
+  /// **'Материал закреплён — повторений больше нет.'**
+  String get lrnMastered;
+
+  /// No description provided for @lrnPassed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Урок засчитан.'**
+  String get lrnPassed;
+
+  /// No description provided for @lrnFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Для зачёта нужно {p}% — попробуйте ещё раз.'**
+  String lrnFailed(int p);
+
+  /// No description provided for @lrnReviewPassed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторение засчитано.'**
+  String get lrnReviewPassed;
+
+  /// No description provided for @lrnReviewFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторение не засчитано — интервал сокращён.'**
+  String get lrnReviewFailed;
+
+  /// No description provided for @lrnRetry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пройти снова'**
+  String get lrnRetry;
+
+  /// No description provided for @lrnLessonDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пройден'**
+  String get lrnLessonDone;
+
+  /// No description provided for @lrnErrOffline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет связи с сервером. Уже загруженные уроки доступны офлайн.'**
+  String get lrnErrOffline;
+
+  /// No description provided for @lrnErrNotSignedIn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Войдите в аккаунт (Ещё → Аккаунт), чтобы Система строила курсы и уроки.'**
+  String get lrnErrNotSignedIn;
+
+  /// No description provided for @lrnErrBudget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лимит ИИ исчерпан. Попробуйте позже.'**
+  String get lrnErrBudget;
+
+  /// No description provided for @lrnErrUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИИ сейчас недоступен на сервере.'**
+  String get lrnErrUnavailable;
+
+  /// No description provided for @lrnErrServer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось получить ответ. Попробуйте ещё раз.'**
+  String get lrnErrServer;
+
+  /// No description provided for @msgChannelName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сообщения Системы'**
+  String get msgChannelName;
+
+  /// No description provided for @msgChannelDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Брифинги, подбадривания и упрёки персонажа'**
+  String get msgChannelDesc;
+
+  /// No description provided for @msgTplBriefingTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Система ] Утренний брифинг'**
+  String get msgTplBriefingTitle;
+
+  /// No description provided for @msgTplBriefing1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Новый день — новые квесты. Открой список и начни с первого.'**
+  String get msgTplBriefing1;
+
+  /// No description provided for @msgTplBriefing2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Игрок, подъём. План на сегодня уже ждёт.'**
+  String get msgTplBriefing2;
+
+  /// No description provided for @msgTplBriefing3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система на связи. Сегодняшние квесты сами себя не выполнят.'**
+  String get msgTplBriefing3;
+
+  /// No description provided for @msgTplCheerTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'[ Система ]'**
+  String get msgTplCheerTitle;
+
+  /// No description provided for @msgTplCheer1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ты держишь темп. Не сбавляй.'**
+  String get msgTplCheer1;
+
+  /// No description provided for @msgTplCheer2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Каждый выполненный квест — шаг к следующему рангу.'**
+  String get msgTplCheer2;
+
+  /// No description provided for @msgTplCheer3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проверь квесты: что можно закрыть прямо сейчас?'**
+  String get msgTplCheer3;
+
+  /// No description provided for @msgTplCheer4.
+  ///
+  /// In ru, this message translates to:
+  /// **'Глоток воды и вперёд. Система следит за прогрессом.'**
+  String get msgTplCheer4;
+
+  /// No description provided for @msgWaterQuestTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дойти до магазина за водой'**
+  String get msgWaterQuestTitle;
 
   /// No description provided for @ntfQuestTitle.
   ///
@@ -8329,6 +9247,402 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Заполните адрес сервера, имя и пароль'**
   String get synErrFill;
+
+  /// No description provided for @visEstimate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оценка'**
+  String get visEstimate;
+
+  /// No description provided for @visNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система'**
+  String get visNoticeLabel;
+
+  /// No description provided for @visSourceTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото'**
+  String get visSourceTitle;
+
+  /// No description provided for @visSourceMessage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сделать снимок или выбрать из галереи?'**
+  String get visSourceMessage;
+
+  /// No description provided for @visCamera.
+  ///
+  /// In ru, this message translates to:
+  /// **'Камера'**
+  String get visCamera;
+
+  /// No description provided for @visGallery.
+  ///
+  /// In ru, this message translates to:
+  /// **'Галерея'**
+  String get visGallery;
+
+  /// No description provided for @visAnalyzing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анализирую фото…'**
+  String get visAnalyzing;
+
+  /// No description provided for @visErrOffline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет связи с сервером. Попробуйте позже.'**
+  String get visErrOffline;
+
+  /// No description provided for @visErrNotSignedIn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы анализировать фото.'**
+  String get visErrNotSignedIn;
+
+  /// No description provided for @visErrBudget.
+  ///
+  /// In ru, this message translates to:
+  /// **'Лимит ИИ сейчас исчерпан. Попробуйте позже.'**
+  String get visErrBudget;
+
+  /// No description provided for @visErrUnavailable.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИИ на сервере сейчас недоступен.'**
+  String get visErrUnavailable;
+
+  /// No description provided for @visErrServer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось разобрать фото. Попробуйте ещё раз.'**
+  String get visErrServer;
+
+  /// No description provided for @visRetry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get visRetry;
+
+  /// No description provided for @visRemove.
+  ///
+  /// In ru, this message translates to:
+  /// **'Убрать'**
+  String get visRemove;
+
+  /// No description provided for @visBack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назад'**
+  String get visBack;
+
+  /// No description provided for @visDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Готово'**
+  String get visDone;
+
+  /// No description provided for @visFoodTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фото еды'**
+  String get visFoodTitle;
+
+  /// No description provided for @visFoodSeen.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что на фото'**
+  String get visFoodSeen;
+
+  /// No description provided for @visFoodNothing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Еда не распознана — добавьте позиции вручную.'**
+  String get visFoodNothing;
+
+  /// No description provided for @visFoodItemName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get visFoodItemName;
+
+  /// No description provided for @visFoodGrams.
+  ///
+  /// In ru, this message translates to:
+  /// **'Граммы'**
+  String get visFoodGrams;
+
+  /// No description provided for @visFoodItemLine.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name} — {grams} г'**
+  String visFoodItemLine(String name, String grams);
+
+  /// No description provided for @visFoodAddItem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить позицию'**
+  String get visFoodAddItem;
+
+  /// No description provided for @visFoodQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Купил или приготовил?'**
+  String get visFoodQuestion;
+
+  /// No description provided for @visFoodBought.
+  ///
+  /// In ru, this message translates to:
+  /// **'Купил'**
+  String get visFoodBought;
+
+  /// No description provided for @visFoodCooked.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приготовил'**
+  String get visFoodCooked;
+
+  /// No description provided for @visFoodWhere.
+  ///
+  /// In ru, this message translates to:
+  /// **'Где купил?'**
+  String get visFoodWhere;
+
+  /// No description provided for @visFoodWhereHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кафе, магазин, сеть — можно оставить пустым'**
+  String get visFoodWhereHint;
+
+  /// No description provided for @visFoodFind.
+  ///
+  /// In ru, this message translates to:
+  /// **'Найти КБЖУ'**
+  String get visFoodFind;
+
+  /// No description provided for @visFoodScanHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Есть упаковка? Штрихкод точнее.'**
+  String get visFoodScanHint;
+
+  /// No description provided for @visFoodScan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сканировать штрихкод'**
+  String get visFoodScan;
+
+  /// No description provided for @visFoodPer100.
+  ///
+  /// In ru, this message translates to:
+  /// **'На 100 г: {kcal} · {macros}'**
+  String visFoodPer100(String kcal, String macros);
+
+  /// No description provided for @visFoodSource.
+  ///
+  /// In ru, this message translates to:
+  /// **'Источник: {title}'**
+  String visFoodSource(String title);
+
+  /// No description provided for @visFoodCached.
+  ///
+  /// In ru, this message translates to:
+  /// **'из сохранённого'**
+  String get visFoodCached;
+
+  /// No description provided for @visFoodSaveDiary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Записать в дневник'**
+  String get visFoodSaveDiary;
+
+  /// No description provided for @visFoodRecipeName.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название блюда'**
+  String get visFoodRecipeName;
+
+  /// No description provided for @visFoodSaveRecipe.
+  ///
+  /// In ru, this message translates to:
+  /// **'В мои рецепты и дневник'**
+  String get visFoodSaveRecipe;
+
+  /// No description provided for @visFoodTotal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итого'**
+  String get visFoodTotal;
+
+  /// No description provided for @visBodyTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анализ тела'**
+  String get visBodyTitle;
+
+  /// No description provided for @visSkinTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Анализ кожи'**
+  String get visSkinTitle;
+
+  /// No description provided for @visBodyFat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доля жира'**
+  String get visBodyFat;
+
+  /// No description provided for @visFatRange.
+  ///
+  /// In ru, this message translates to:
+  /// **'{min}–{max}%'**
+  String visFatRange(String min, String max);
+
+  /// No description provided for @visMuscle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мышцы'**
+  String get visMuscle;
+
+  /// No description provided for @visLevelLow.
+  ///
+  /// In ru, this message translates to:
+  /// **'ниже среднего'**
+  String get visLevelLow;
+
+  /// No description provided for @visLevelMedium.
+  ///
+  /// In ru, this message translates to:
+  /// **'средне'**
+  String get visLevelMedium;
+
+  /// No description provided for @visLevelHigh.
+  ///
+  /// In ru, this message translates to:
+  /// **'выше среднего'**
+  String get visLevelHigh;
+
+  /// No description provided for @visSwelling.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отёки'**
+  String get visSwelling;
+
+  /// No description provided for @visSwellingNone.
+  ///
+  /// In ru, this message translates to:
+  /// **'не видны'**
+  String get visSwellingNone;
+
+  /// No description provided for @visSwellingMild.
+  ///
+  /// In ru, this message translates to:
+  /// **'лёгкие'**
+  String get visSwellingMild;
+
+  /// No description provided for @visSwellingNoticeable.
+  ///
+  /// In ru, this message translates to:
+  /// **'заметные'**
+  String get visSwellingNoticeable;
+
+  /// No description provided for @visPosture.
+  ///
+  /// In ru, this message translates to:
+  /// **'Осанка'**
+  String get visPosture;
+
+  /// No description provided for @visComparison.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сравнение с прошлым'**
+  String get visComparison;
+
+  /// No description provided for @visPreviousAt.
+  ///
+  /// In ru, this message translates to:
+  /// **'Прошлое фото: {date}'**
+  String visPreviousAt(String date);
+
+  /// No description provided for @visSkinType.
+  ///
+  /// In ru, this message translates to:
+  /// **'Тип кожи'**
+  String get visSkinType;
+
+  /// No description provided for @visSkinDry.
+  ///
+  /// In ru, this message translates to:
+  /// **'сухая'**
+  String get visSkinDry;
+
+  /// No description provided for @visSkinNormal.
+  ///
+  /// In ru, this message translates to:
+  /// **'нормальная'**
+  String get visSkinNormal;
+
+  /// No description provided for @visSkinOily.
+  ///
+  /// In ru, this message translates to:
+  /// **'жирная'**
+  String get visSkinOily;
+
+  /// No description provided for @visSkinCombination.
+  ///
+  /// In ru, this message translates to:
+  /// **'комбинированная'**
+  String get visSkinCombination;
+
+  /// No description provided for @visSkinSensitive.
+  ///
+  /// In ru, this message translates to:
+  /// **'чувствительная'**
+  String get visSkinSensitive;
+
+  /// No description provided for @visAcne.
+  ///
+  /// In ru, this message translates to:
+  /// **'Высыпания'**
+  String get visAcne;
+
+  /// No description provided for @visAcneScore.
+  ///
+  /// In ru, this message translates to:
+  /// **'{score} из 10'**
+  String visAcneScore(String score);
+
+  /// No description provided for @visDisclaimer.
+  ///
+  /// In ru, this message translates to:
+  /// **'Оценка по фото: свет, ракурс и камера влияют на результат. Это не медицинское заключение.'**
+  String get visDisclaimer;
+
+  /// No description provided for @visReceiptTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чек'**
+  String get visReceiptTitle;
+
+  /// No description provided for @visReceiptStore.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазин'**
+  String get visReceiptStore;
+
+  /// No description provided for @visReceiptDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дата'**
+  String get visReceiptDate;
+
+  /// No description provided for @visReceiptFinanceLater.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чек сохранён. Запись в финансы появится в следующем обновлении.'**
+  String get visReceiptFinanceLater;
 
   /// No description provided for @wlkTitle.
   ///

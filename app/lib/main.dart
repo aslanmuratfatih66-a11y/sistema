@@ -24,11 +24,14 @@ import 'core/sync/sync_api.dart';
 import 'core/sync/sync_providers.dart';
 import 'core/notifications/background_refresh.dart';
 import 'core/notifications/local_reminder_scheduler.dart';
+import 'core/notifications/ai_messages_sync.dart';
 import 'core/notifications/notification_api.dart';
 import 'core/notifications/reminder_coordinator.dart';
 import 'core/notifications/reminder_prefs_repository.dart';
 import 'core/notifications/reminder_texts.dart';
+import 'core/voice/speech_input.dart';
 import 'core/voice/tts_service.dart';
+import 'core/voice/voice_providers.dart';
 import 'domain/quests/quest_api.dart';
 import 'domain/quests/quest_section_hooks.dart';
 import 'domain/quests/section_hooks.dart';
@@ -68,6 +71,8 @@ Future<void> main() async {
     liveActivityServiceProvider.overrideWithValue(createLiveActivityService(l10n: () => reminderL10n(db))),
     widgetSyncProvider.overrideWithValue(createWidgetSync(l10n: () => reminderL10n(db))),
     httpAiGatewayOverride,
+    characterTtsProvider.overrideWith(buildServerTts),
+    speechInputProvider.overrideWith((ref) => SttSpeechInput()),
     ...syncOverrides(readPhoto: (rel) async {
       final f = await PhotoStorage().resolve(rel);
       return await f.exists() ? f.readAsBytes() : null;
@@ -84,10 +89,13 @@ Future<void> main() async {
     // Кнопки уведомлений в фоне писали через своё соединение — потоки этого не видели.
     onResume: () async => db.markTablesUpdated(db.allTables),
     onOpen: (_) => container.read(routerProvider).go(Routes.quests),
+    templateFilter: aiReproachFilter(db),
   );
   // Разрешение на уведомления спрашивает экран напоминаний, не старт.
   await scheduler.init(onResponse: reminders.handleResponse);
   unawaited(reminders.start());
+  // Сообщения Системы наперёд (этап 6): пачка с сервера → локальные уведомления, облачко персонажа.
+  unawaited(container.read(aiMessageSyncProvider).start());
   // Виджеты из «Статуса», вода из виджета/App Intent, прогулка → Live Activity (после init уведомлений).
   LiveBridge(container, () => reminderL10n(db)).start();
   // Синхронизация с сервером: создание сервиса запускает таймер и слежение за аккаунтом.

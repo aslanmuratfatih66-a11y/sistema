@@ -1,0 +1,101 @@
+{
+  "visEstimate": "Оценка",
+  "visNoticeLabel": "Система",
+  "visSourceTitle": "Фото",
+  "visSourceMessage": "Сделать снимок или выбрать из галереи?",
+  "visCamera": "Камера",
+  "visGallery": "Галерея",
+  "visAnalyzing": "Анализирую фото…",
+  "visErrOffline": "Нет связи с сервером. Попробуйте позже.",
+  "visErrNotSignedIn": "Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы анализировать фото.",
+  "visErrBudget": "Лимит ИИ сейчас исчерпан. Попробуйте позже.",
+  "visErrUnavailable": "ИИ на сервере сейчас недоступен.",
+  "visErrServer": "Не удалось разобрать фото. Попробуйте ещё раз.",
+  "visRetry": "Повторить",
+  "visRemove": "Убрать",
+  "visBack": "Назад",
+  "visDone": "Готово",
+  "visFoodTitle": "Фото еды",
+  "visFoodSeen": "Что на фото",
+  "visFoodNothing": "Еда не распознана — добавьте позиции вручную.",
+  "visFoodItemName": "Название",
+  "visFoodGrams": "Граммы",
+  "visFoodItemLine": "{name} — {grams} г",
+  "@visFoodItemLine": {
+    "placeholders": {
+      "name": {"type": "String"},
+      "grams": {"type": "String"}
+    }
+  },
+  "visFoodAddItem": "Добавить позицию",
+  "visFoodQuestion": "Купил или приготовил?",
+  "visFoodBought": "Купил",
+  "visFoodCooked": "Приготовил",
+  "visFoodWhere": "Где купил?",
+  "visFoodWhereHint": "Кафе, магазин, сеть — можно оставить пустым",
+  "visFoodFind": "Найти КБЖУ",
+  "visFoodScanHint": "Есть упаковка? Штрихкод точнее.",
+  "visFoodScan": "Сканировать штрихкод",
+  "visFoodPer100": "На 100 г: {kcal} · {macros}",
+  "@visFoodPer100": {
+    "placeholders": {
+      "kcal": {"type": "String"},
+      "macros": {"type": "String"}
+    }
+  },
+  "visFoodSource": "Источник: {title}",
+  "@visFoodSource": {
+    "placeholders": {
+      "title": {"type": "String"}
+    }
+  },
+  "visFoodCached": "из сохранённого",
+  "visFoodSaveDiary": "Записать в дневник",
+  "visFoodRecipeName": "Название блюда",
+  "visFoodSaveRecipe": "В мои рецепты и дневник",
+  "visFoodTotal": "Итого",
+  "visBodyTitle": "Анализ тела",
+  "visSkinTitle": "Анализ кожи",
+  "visBodyFat": "Доля жира",
+  "visFatRange": "{min}–{max}%",
+  "@visFatRange": {
+    "placeholders": {
+      "min": {"type": "String"},
+      "max": {"type": "String"}
+    }
+  },
+  "visMuscle": "Мышцы",
+  "visLevelLow": "ниже среднего",
+  "visLevelMedium": "средне",
+  "visLevelHigh": "выше среднего",
+  "visSwelling": "Отёки",
+  "visSwellingNone": "не видны",
+  "visSwellingMild": "лёгкие",
+  "visSwellingNoticeable": "заметные",
+  "visPosture": "Осанка",
+  "visComparison": "Сравнение с прошлым",
+  "visPreviousAt": "Прошлое фото: {date}",
+  "@visPreviousAt": {
+    "placeholders": {
+      "date": {"type": "String"}
+    }
+  },
+  "visSkinType": "Тип кожи",
+  "visSkinDry": "сухая",
+  "visSkinNormal": "нормальная",
+  "visSkinOily": "жирная",
+  "visSkinCombination": "комбинированная",
+  "visSkinSensitive": "чувствительная",
+  "visAcne": "Высыпания",
+  "visAcneScore": "{score} из 10",
+  "@visAcneScore": {
+    "placeholders": {
+      "score": {"type": "String"}
+    }
+  },
+  "visDisclaimer": "Оценка по фото: свет, ракурс и камера влияют на результат. Это не медицинское заключение.",
+  "visReceiptTitle": "Чек",
+  "visReceiptStore": "Магазин",
+  "visReceiptDate": "Дата",
+  "visReceiptFinanceLater": "Чек сохранён. Запись в финансы появится в следующем обновлении."
+}

@@ -15,6 +15,8 @@ import 'data/plan_repository.dart';
 import 'model/plan.dart';
 import 'norms/plan_calculator.dart';
 import 'plan_l10n.dart';
+import '../../core/ai/ai_api.dart';
+import '../../core/sync/sync_api.dart';
 
 class PlanScreen extends ConsumerStatefulWidget {
   const PlanScreen({super.key});
@@ -75,6 +77,24 @@ class _PlanScreenState extends ConsumerState<PlanScreen> {
           _busy = false;
         });
       }
+    }
+  }
+
+  /// Черновик плана от ИИ: синхронизация → сервер строит план → синхронизация → показать черновик.
+  Future<void> _aiPlan() async {
+    final sync = ref.read(syncServiceProvider);
+    final lang = Localizations.localeOf(context).languageCode;
+    await _run(() async {
+      await sync.syncNow();
+      await ref.read(aiGatewayProvider).json('POST', '/api/v1/ai/plan/generate',
+          body: {'lang': lang});
+      await sync.syncNow();
+      final draft = await ref.read(planRepositoryProvider).latestDraft();
+      if (draft == null) throw StateError('no ai draft');
+      return draft;
+    });
+    if (mounted && _error != null) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context).int6PlanAiError)));
     }
   }
 
@@ -143,6 +163,7 @@ class _PlanScreenState extends ConsumerState<PlanScreen> {
                       onAccept: _accept,
                       onEditData: _chooseSection,
                       onRecalculate: _recalculate,
+                      onAiPlan: ref.watch(accountProvider).value == null ? null : _aiPlan,
                       onFill: _edit,
                     ),
         ),
@@ -181,6 +202,7 @@ class _PlanBody extends StatelessWidget {
     required this.onEditData,
     required this.onRecalculate,
     required this.onFill,
+    this.onAiPlan,
   });
 
   final StoredPlan stored;
@@ -189,6 +211,9 @@ class _PlanBody extends StatelessWidget {
   final VoidCallback onAccept;
   final VoidCallback onEditData;
   final VoidCallback onRecalculate;
+
+  /// null — нет аккаунта (ИИ только через сервер).
+  final VoidCallback? onAiPlan;
   final ValueChanged<OnboardingStep> onFill;
 
   @override
@@ -239,6 +264,10 @@ class _PlanBody extends StatelessWidget {
           const SizedBox(height: 10),
         ] else ...[
           SysButton.primary(label: l.planRecalculate, expand: true, onPressed: busy ? null : onRecalculate),
+          const SizedBox(height: 10),
+        ],
+        if (onAiPlan != null) ...[
+          SysButton.secondary(label: l.int6PlanAi, icon: SysGlyph.sparkle, expand: true, onPressed: busy ? null : onAiPlan),
           const SizedBox(height: 10),
         ],
         SysButton.secondary(label: l.planEditData, expand: true, onPressed: busy ? null : onEditData),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/db/database.dart';
+import '../../core/sync/sync_api.dart';
 import '../../core/models/daily.dart';
 import '../../core/models/enums.dart';
 import '../../l10n/app_localizations.dart';
@@ -20,6 +21,7 @@ import 'screens/meal_editor_screen.dart';
 import 'screens/recipe_screens.dart';
 import 'screens/shopping_screens.dart';
 import 'widgets/nutrition_panels.dart';
+import '../vision/vision.dart';
 
 class NutritionScreen extends ConsumerStatefulWidget {
   const NutritionScreen({super.key});
@@ -77,6 +79,11 @@ class _NutritionScreenState extends ConsumerState<NutritionScreen> {
 
   Future<void> _photo() async {
     if (_busy) return;
+    // Вошли в аккаунт — распознавание ИИ (SPEC §9.4); иначе — фото + ручной ввод.
+    if (ref.read(accountProvider).value != null) {
+      await showFoodPhotoFlow(context, day: _day(_now), mealType: _defaultMeal);
+      return;
+    }
     final l = AppLocalizations.of(context);
     final day = _day(_now);
     final camera = await showSystemWindow<bool>(
@@ -120,7 +127,6 @@ class _NutritionScreenState extends ConsumerState<NutritionScreen> {
       if (mounted) setState(() => _busy = false);
     }
     if (!mounted) return;
-    // TODO(этап 5): распознавание блюда ИИ (SPEC §9.4) — предзаполнить название и КБЖУ.
     final saved = await pushNutrition<bool>(
       context,
       MealEditorScreen.diary(day: day, mealType: _defaultMeal, photoId: photoId),

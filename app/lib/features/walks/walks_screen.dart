@@ -18,6 +18,7 @@ import 'domain/walk_segments.dart';
 import 'domain/walk_voice.dart';
 import 'nearby_shop_sheet.dart';
 import 'walk_l10n.dart';
+import 'water_quest.dart';
 import 'widgets/walk_map.dart';
 
 const List<double> walkKmChoices = [1, 2, 3, 5, 8];
@@ -135,6 +136,10 @@ class _WalksScreenState extends ConsumerState<WalksScreen> {
     if (_tracking) return;
     final plan = await showNearbyShopSheet(context, category: category);
     if (!mounted || plan == null) return;
+    // «Нет воды» (SPEC §9.3): маршрут к магазину → разовый квест-прогулка.
+    if (category == PlaceCategory.water) {
+      unawaited(startWaterShopQuest(ref, plan).then<void>((_) {}, onError: (Object e) => debugPrint('Walks: water quest: $e')));
+    }
     setState(() {
       _plan = plan;
       _error = null;

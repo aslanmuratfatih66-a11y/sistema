@@ -805,6 +805,157 @@ class AppLocalizationsRu extends AppLocalizations {
   String get bdySwellCompareFirst => 'Сравнить первое и последнее';
 
   @override
+  String chrSemanticsChat(String name) {
+    return '$name: нажмите, чтобы открыть чат; удерживайте — меню; смахните вниз, чтобы убрать';
+  }
+
+  @override
+  String get chrMenuChat => 'Чат';
+
+  @override
+  String get chrMenuPocket => 'В карман';
+
+  @override
+  String get chrPlayerFallback => 'Игрок';
+
+  @override
+  String chrDoneSoft1(String name, String quest) {
+    return '$name, «$quest» готово! Я тобой горжусь.';
+  }
+
+  @override
+  String chrDoneSoft2(String name, String quest) {
+    return 'Видишь, получилось! «$quest» выполнено, $name.';
+  }
+
+  @override
+  String chrDoneNormal1(String name, String quest) {
+    return '«$quest» — выполнено. Отлично, $name!';
+  }
+
+  @override
+  String chrDoneNormal2(String name, String quest) {
+    return 'Есть! «$quest» закрыт. Идём дальше, $name.';
+  }
+
+  @override
+  String chrDoneStrict1(String name, String quest) {
+    return '«$quest» засчитано. Так и держать, $name.';
+  }
+
+  @override
+  String chrDoneStrict2(String name, String quest) {
+    return 'Принято: «$quest». Следующий квест ждёт.';
+  }
+
+  @override
+  String chrDoneHarsh1(String name, String quest) {
+    return '«$quest» сделано. Наконец-то. Не сбавляй темп, $name.';
+  }
+
+  @override
+  String chrDoneHarsh2(String name, String quest) {
+    return 'Засчитано: «$quest». Это минимум, $name. Дальше.';
+  }
+
+  @override
+  String chrFailSoft1(String name, String quest) {
+    return '«$quest» не вышло — ничего, $name. Завтра получится.';
+  }
+
+  @override
+  String chrFailSoft2(String name, String quest) {
+    return 'Жаль, «$quest» сорвался. Отдохни и попробуем снова.';
+  }
+
+  @override
+  String chrFailNormal1(String name, String quest) {
+    return '«$quest» провален. Обидно, $name. Соберись.';
+  }
+
+  @override
+  String chrFailNormal2(String name, String quest) {
+    return 'Эх, «$quest» не засчитан. В следующий раз — не упускай.';
+  }
+
+  @override
+  String chrFailStrict1(String name, String quest) {
+    return '«$quest» провален, $name. Так не пойдёт. Исправляй.';
+  }
+
+  @override
+  String chrFailStrict2(String name, String quest) {
+    return 'Провал: «$quest». Слово дал — слово держи.';
+  }
+
+  @override
+  String chrFailHarsh1(String name, String quest) {
+    return '«$quest» — провал! $name, где дисциплина? Хватит оправданий!';
+  }
+
+  @override
+  String chrFailHarsh2(String name, String quest) {
+    return 'Опять сорвал «$quest»?! Позор лени. Завтра — без поблажек.';
+  }
+
+  @override
+  String get chrPenaltySoft => 'Штраф… Ничего, отыграемся.';
+
+  @override
+  String get chrPenaltyNormal => 'Штраф. Давай без повторов.';
+
+  @override
+  String get chrPenaltyStrict => 'Штраф заслужен. Выводы сделаны?';
+
+  @override
+  String get chrPenaltyHarsh => 'Штраф! Расплата за лень. Отрабатывай!';
+
+  @override
+  String chrLevelUp(int level, String name) {
+    return 'Уровень $level! Так держать, $name!';
+  }
+
+  @override
+  String chrIdleSoft1(String name) {
+    return '$name, я тут. Может, сделаем что-нибудь маленькое?';
+  }
+
+  @override
+  String chrIdleSoft2(String name) {
+    return 'Давно не виделись, $name. Загляни в квесты, когда будешь готов.';
+  }
+
+  @override
+  String chrIdleNormal1(String name) {
+    return '$name, ты здесь? Квесты сами себя не сделают.';
+  }
+
+  @override
+  String chrIdleNormal2(String name) {
+    return 'Эй, $name! Посмотри, что осталось на сегодня.';
+  }
+
+  @override
+  String chrIdleStrict1(String name) {
+    return '$name, перерыв затянулся. За дело.';
+  }
+
+  @override
+  String chrIdleStrict2(String name) {
+    return 'Время идёт, $name. Список квестов — вот он.';
+  }
+
+  @override
+  String chrIdleHarsh1(String name) {
+    return '$name! Сколько можно бездельничать? Встал и пошёл выполнять!';
+  }
+
+  @override
+  String chrIdleHarsh2(String name) {
+    return 'Хватит прохлаждаться, $name. Квесты ждут — живо!';
+  }
+
+  @override
   String get chrIntro =>
       'Выберите спутника. Он проведёт вас через фото-сессии своим голосом, а потом будет жить внизу экрана: напоминать, хвалить и ругать — в выбранном режиме.';
 
@@ -1114,6 +1265,186 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
+  String get chtTitle => 'Чат';
+
+  @override
+  String get chtHint => 'Напиши персонажу…';
+
+  @override
+  String get chtEmpty =>
+      'Начни разговор: спроси о плане, попроси помочь или просто расскажи, как дела.';
+
+  @override
+  String get chtSend => 'Отправить';
+
+  @override
+  String get chtMic => 'Голосовой ввод: нажми или удерживай';
+
+  @override
+  String get chtListening => 'Слушаю…';
+
+  @override
+  String get chtMicUnavailable =>
+      'Распознавание речи недоступно — проверь разрешение на микрофон и речь';
+
+  @override
+  String get chtThinking => 'Печатает…';
+
+  @override
+  String chtAction(String summary) {
+    return 'Система изменила план: $summary';
+  }
+
+  @override
+  String get chtUndo => 'Отменить';
+
+  @override
+  String get chtUndone => 'Отменено';
+
+  @override
+  String get chtUndoFailed => 'Не удалось отменить';
+
+  @override
+  String get chtRetry => 'Повторить';
+
+  @override
+  String get chtVoiceOn => 'Озвучка ответов включена';
+
+  @override
+  String get chtVoiceOff => 'Озвучка ответов выключена';
+
+  @override
+  String get chtErrNotSignedIn =>
+      'Чтобы говорить с ИИ, войди в аккаунт: Ещё → Аккаунт.';
+
+  @override
+  String get chtErrOffline =>
+      'Нет связи с сервером. Сообщение сохранено — нажми «Повторить», когда появится сеть.';
+
+  @override
+  String get chtErrBudget =>
+      'Бюджет ИИ на этот месяц исчерпан. До следующего месяца персонаж отвечает шаблонами.';
+
+  @override
+  String get chtErrUnavailable => 'ИИ сейчас недоступен. Попробуй чуть позже.';
+
+  @override
+  String get chtErrRateLimited => 'Слишком много запросов. Подожди немного.';
+
+  @override
+  String get chtErrServer => 'Ошибка сервера ИИ. Попробуй ещё раз.';
+
+  @override
+  String get chtFallbackSoft =>
+      'Я сейчас не могу толком ответить, но я рядом. Делай по плану, шаг за шагом — у тебя получается.';
+
+  @override
+  String get chtFallbackNormal =>
+      'Связи с Системой нет. План в силе — выполняй задания, поговорим позже.';
+
+  @override
+  String get chtFallbackStrict =>
+      'Связи нет — это не повод расслабляться. Открой квесты и делай.';
+
+  @override
+  String get chtFallbackHarsh =>
+      'Сервер молчит, а ты чего ждёшь? Задания сами себя не сделают. Вперёд.';
+
+  @override
+  String get chtJournal => 'Журнал ИИ';
+
+  @override
+  String get chtUsageTitle => 'Расходы ИИ';
+
+  @override
+  String chtUsageMonth(String spent, String budget) {
+    return '$spent из $budget за месяц';
+  }
+
+  @override
+  String chtUsageToday(String usd) {
+    return 'Сегодня: $usd';
+  }
+
+  @override
+  String get chtUsageDegraded =>
+      'Экономный режим: бюджет почти исчерпан, ИИ работает на более дешёвых моделях';
+
+  @override
+  String get chtUsageByTask => 'По задачам';
+
+  @override
+  String chtUsageCalls(int count) {
+    return '$count выз.';
+  }
+
+  @override
+  String get chtUsageEmpty => 'В этом месяце ИИ ещё не использовался.';
+
+  @override
+  String get chtTaskChat => 'Разговор';
+
+  @override
+  String get chtTaskAnalysis => 'Анализ дня и недели';
+
+  @override
+  String get chtTaskPlan => 'Построение плана';
+
+  @override
+  String get chtTaskPlanEdit => 'Изменение плана';
+
+  @override
+  String get chtTaskShort => 'Короткие реплики';
+
+  @override
+  String get chtTaskBankParse => 'Уведомления банков';
+
+  @override
+  String get chtTaskFoodVision => 'Еда и чеки по фото';
+
+  @override
+  String get chtTaskBodyVision => 'Фото тела и кожи';
+
+  @override
+  String get chtTaskLearning => 'Обучение';
+
+  @override
+  String get chtTaskTts => 'Голос';
+
+  @override
+  String get chtActionsTitle => 'Действия ИИ';
+
+  @override
+  String get chtActionsEmpty => 'ИИ пока ничего не менял.';
+
+  @override
+  String get chtLoadFailed => 'Не удалось загрузить';
+
+  @override
+  String get chtVoiceTitle => 'Голос персонажа';
+
+  @override
+  String get chtVoiceSystem => 'Системный голос телефона';
+
+  @override
+  String get chtVoiceSystemDesc => 'Работает без интернета и бесплатно';
+
+  @override
+  String get chtVoiceListen => 'Прослушать';
+
+  @override
+  String get chtVoiceEmpty => 'На сервере нет голосов для этого языка.';
+
+  @override
+  String get chtVoiceListenFailed => 'Не удалось воспроизвести голос';
+
+  @override
+  String get chtVoiceFemale => 'женский';
+
+  @override
+  String get chtVoiceMale => 'мужской';
+
+  @override
   String get commonNext => 'Далее';
 
   @override
@@ -1247,6 +1578,31 @@ class AppLocalizationsRu extends AppLocalizations {
   String get hqFinanceFoodTitle => 'Финансы на еду';
 
   @override
+  String get int6PlanAi => 'Построить план с ИИ';
+
+  @override
+  String get int6PlanAiError =>
+      'Не удалось построить план с ИИ. Проверьте вход в аккаунт и сеть.';
+
+  @override
+  String get int6Learning => 'Знания';
+
+  @override
+  String get int6LearningHint => 'Курсы, уроки дня и повторения';
+
+  @override
+  String get int6AiJournal => 'ИИ: расходы и действия';
+
+  @override
+  String get int6AiJournalHint => 'Бюджет и что Система меняла (с отменой)';
+
+  @override
+  String get int6Voice => 'Голос персонажа';
+
+  @override
+  String get int6VoiceHint => 'Готовые голоса сервера, прослушать';
+
+  @override
   String get livNextQuest => 'Следующий квест';
 
   @override
@@ -1304,6 +1660,207 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get locNotifChannel => 'Прогулка';
+
+  @override
+  String get lrnTitle => 'Знания';
+
+  @override
+  String get lrnToday => 'Сегодня';
+
+  @override
+  String get lrnCourses => 'Курсы';
+
+  @override
+  String get lrnNewCourse => 'Новый курс';
+
+  @override
+  String get lrnTopic => 'Что хотите выучить?';
+
+  @override
+  String get lrnTopicHint => 'Например: нунчаки, C++, турецкий';
+
+  @override
+  String get lrnPerDay => 'Уроков в день';
+
+  @override
+  String get lrnLength => 'Уроков в курсе';
+
+  @override
+  String get lrnCreate => 'Построить курс';
+
+  @override
+  String get lrnCreating => 'Система строит курс…';
+
+  @override
+  String get lrnTodayEmpty => 'На сегодня всё: уроки и повторения выполнены.';
+
+  @override
+  String get lrnNoCourses =>
+      'Курсов пока нет. Напишите, что хотите выучить, — Система построит курс.';
+
+  @override
+  String lrnLessonOf(int n, int total) {
+    return 'Урок $n из $total';
+  }
+
+  @override
+  String get lrnReview => 'Повторение';
+
+  @override
+  String get lrnLessonDay => 'Урок дня';
+
+  @override
+  String get lrnStatusPaused => 'На паузе';
+
+  @override
+  String get lrnStatusDone => 'Курс пройден';
+
+  @override
+  String get lrnPause => 'Пауза';
+
+  @override
+  String get lrnResume => 'Продолжить';
+
+  @override
+  String get lrnDelete => 'Удалить курс';
+
+  @override
+  String lrnDeleteConfirm(String title) {
+    return 'Удалить курс «$title»? Прогресс будет потерян.';
+  }
+
+  @override
+  String get lrnLoading => 'Загружаю урок…';
+
+  @override
+  String get lrnGoal => 'Цель';
+
+  @override
+  String get lrnExample => 'Пример';
+
+  @override
+  String get lrnTip => 'Совет';
+
+  @override
+  String get lrnStartQuiz => 'К проверке';
+
+  @override
+  String get lrnFinish => 'Завершить урок';
+
+  @override
+  String lrnQuestion(int n, int total) {
+    return 'Вопрос $n из $total';
+  }
+
+  @override
+  String get lrnNext => 'Далее';
+
+  @override
+  String get lrnCorrect => 'Верно';
+
+  @override
+  String get lrnWrong => 'Неверно';
+
+  @override
+  String get lrnResult => 'Результат';
+
+  @override
+  String lrnScore(int p) {
+    return 'Правильно: $p%';
+  }
+
+  @override
+  String lrnNextReview(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'Повторение через $days дня',
+      many: 'Повторение через $days дней',
+      few: 'Повторение через $days дня',
+      one: 'Повторение через $days день',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lrnMastered => 'Материал закреплён — повторений больше нет.';
+
+  @override
+  String get lrnPassed => 'Урок засчитан.';
+
+  @override
+  String lrnFailed(int p) {
+    return 'Для зачёта нужно $p% — попробуйте ещё раз.';
+  }
+
+  @override
+  String get lrnReviewPassed => 'Повторение засчитано.';
+
+  @override
+  String get lrnReviewFailed => 'Повторение не засчитано — интервал сокращён.';
+
+  @override
+  String get lrnRetry => 'Пройти снова';
+
+  @override
+  String get lrnLessonDone => 'Пройден';
+
+  @override
+  String get lrnErrOffline =>
+      'Нет связи с сервером. Уже загруженные уроки доступны офлайн.';
+
+  @override
+  String get lrnErrNotSignedIn =>
+      'Войдите в аккаунт (Ещё → Аккаунт), чтобы Система строила курсы и уроки.';
+
+  @override
+  String get lrnErrBudget => 'Лимит ИИ исчерпан. Попробуйте позже.';
+
+  @override
+  String get lrnErrUnavailable => 'ИИ сейчас недоступен на сервере.';
+
+  @override
+  String get lrnErrServer => 'Не удалось получить ответ. Попробуйте ещё раз.';
+
+  @override
+  String get msgChannelName => 'Сообщения Системы';
+
+  @override
+  String get msgChannelDesc => 'Брифинги, подбадривания и упрёки персонажа';
+
+  @override
+  String get msgTplBriefingTitle => '[ Система ] Утренний брифинг';
+
+  @override
+  String get msgTplBriefing1 =>
+      'Новый день — новые квесты. Открой список и начни с первого.';
+
+  @override
+  String get msgTplBriefing2 => 'Игрок, подъём. План на сегодня уже ждёт.';
+
+  @override
+  String get msgTplBriefing3 =>
+      'Система на связи. Сегодняшние квесты сами себя не выполнят.';
+
+  @override
+  String get msgTplCheerTitle => '[ Система ]';
+
+  @override
+  String get msgTplCheer1 => 'Ты держишь темп. Не сбавляй.';
+
+  @override
+  String get msgTplCheer2 =>
+      'Каждый выполненный квест — шаг к следующему рангу.';
+
+  @override
+  String get msgTplCheer3 => 'Проверь квесты: что можно закрыть прямо сейчас?';
+
+  @override
+  String get msgTplCheer4 =>
+      'Глоток воды и вперёд. Система следит за прогрессом.';
+
+  @override
+  String get msgWaterQuestTitle => 'Дойти до магазина за водой';
 
   @override
   String ntfQuestTitle(String title) {
@@ -4694,6 +5251,219 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get synErrFill => 'Заполните адрес сервера, имя и пароль';
+
+  @override
+  String get visEstimate => 'Оценка';
+
+  @override
+  String get visNoticeLabel => 'Система';
+
+  @override
+  String get visSourceTitle => 'Фото';
+
+  @override
+  String get visSourceMessage => 'Сделать снимок или выбрать из галереи?';
+
+  @override
+  String get visCamera => 'Камера';
+
+  @override
+  String get visGallery => 'Галерея';
+
+  @override
+  String get visAnalyzing => 'Анализирую фото…';
+
+  @override
+  String get visErrOffline => 'Нет связи с сервером. Попробуйте позже.';
+
+  @override
+  String get visErrNotSignedIn =>
+      'Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы анализировать фото.';
+
+  @override
+  String get visErrBudget => 'Лимит ИИ сейчас исчерпан. Попробуйте позже.';
+
+  @override
+  String get visErrUnavailable => 'ИИ на сервере сейчас недоступен.';
+
+  @override
+  String get visErrServer => 'Не удалось разобрать фото. Попробуйте ещё раз.';
+
+  @override
+  String get visRetry => 'Повторить';
+
+  @override
+  String get visRemove => 'Убрать';
+
+  @override
+  String get visBack => 'Назад';
+
+  @override
+  String get visDone => 'Готово';
+
+  @override
+  String get visFoodTitle => 'Фото еды';
+
+  @override
+  String get visFoodSeen => 'Что на фото';
+
+  @override
+  String get visFoodNothing => 'Еда не распознана — добавьте позиции вручную.';
+
+  @override
+  String get visFoodItemName => 'Название';
+
+  @override
+  String get visFoodGrams => 'Граммы';
+
+  @override
+  String visFoodItemLine(String name, String grams) {
+    return '$name — $grams г';
+  }
+
+  @override
+  String get visFoodAddItem => 'Добавить позицию';
+
+  @override
+  String get visFoodQuestion => 'Купил или приготовил?';
+
+  @override
+  String get visFoodBought => 'Купил';
+
+  @override
+  String get visFoodCooked => 'Приготовил';
+
+  @override
+  String get visFoodWhere => 'Где купил?';
+
+  @override
+  String get visFoodWhereHint => 'Кафе, магазин, сеть — можно оставить пустым';
+
+  @override
+  String get visFoodFind => 'Найти КБЖУ';
+
+  @override
+  String get visFoodScanHint => 'Есть упаковка? Штрихкод точнее.';
+
+  @override
+  String get visFoodScan => 'Сканировать штрихкод';
+
+  @override
+  String visFoodPer100(String kcal, String macros) {
+    return 'На 100 г: $kcal · $macros';
+  }
+
+  @override
+  String visFoodSource(String title) {
+    return 'Источник: $title';
+  }
+
+  @override
+  String get visFoodCached => 'из сохранённого';
+
+  @override
+  String get visFoodSaveDiary => 'Записать в дневник';
+
+  @override
+  String get visFoodRecipeName => 'Название блюда';
+
+  @override
+  String get visFoodSaveRecipe => 'В мои рецепты и дневник';
+
+  @override
+  String get visFoodTotal => 'Итого';
+
+  @override
+  String get visBodyTitle => 'Анализ тела';
+
+  @override
+  String get visSkinTitle => 'Анализ кожи';
+
+  @override
+  String get visBodyFat => 'Доля жира';
+
+  @override
+  String visFatRange(String min, String max) {
+    return '$min–$max%';
+  }
+
+  @override
+  String get visMuscle => 'Мышцы';
+
+  @override
+  String get visLevelLow => 'ниже среднего';
+
+  @override
+  String get visLevelMedium => 'средне';
+
+  @override
+  String get visLevelHigh => 'выше среднего';
+
+  @override
+  String get visSwelling => 'Отёки';
+
+  @override
+  String get visSwellingNone => 'не видны';
+
+  @override
+  String get visSwellingMild => 'лёгкие';
+
+  @override
+  String get visSwellingNoticeable => 'заметные';
+
+  @override
+  String get visPosture => 'Осанка';
+
+  @override
+  String get visComparison => 'Сравнение с прошлым';
+
+  @override
+  String visPreviousAt(String date) {
+    return 'Прошлое фото: $date';
+  }
+
+  @override
+  String get visSkinType => 'Тип кожи';
+
+  @override
+  String get visSkinDry => 'сухая';
+
+  @override
+  String get visSkinNormal => 'нормальная';
+
+  @override
+  String get visSkinOily => 'жирная';
+
+  @override
+  String get visSkinCombination => 'комбинированная';
+
+  @override
+  String get visSkinSensitive => 'чувствительная';
+
+  @override
+  String get visAcne => 'Высыпания';
+
+  @override
+  String visAcneScore(String score) {
+    return '$score из 10';
+  }
+
+  @override
+  String get visDisclaimer =>
+      'Оценка по фото: свет, ракурс и камера влияют на результат. Это не медицинское заключение.';
+
+  @override
+  String get visReceiptTitle => 'Чек';
+
+  @override
+  String get visReceiptStore => 'Магазин';
+
+  @override
+  String get visReceiptDate => 'Дата';
+
+  @override
+  String get visReceiptFinanceLater =>
+      'Чек сохранён. Запись в финансы появится в следующем обновлении.';
 
   @override
   String get wlkTitle => 'Прогулка';

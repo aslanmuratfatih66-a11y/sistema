@@ -562,6 +562,272 @@
   "bdySwellTrend": "Тренд по утрам",
   "bdySwellEmpty": "Утренних фото пока нет.",
   "bdySwellCompareFirst": "Сравнить первое и последнее",
+  "chrSemanticsChat": "{name}: нажмите, чтобы открыть чат; удерживайте — меню; смахните вниз, чтобы убрать",
+  "@chrSemanticsChat": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrMenuChat": "Чат",
+  "chrMenuPocket": "В карман",
+  "chrPlayerFallback": "Игрок",
+  "chrDoneSoft1": "{name}, «{quest}» готово! Я тобой горжусь.",
+  "@chrDoneSoft1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneSoft2": "Видишь, получилось! «{quest}» выполнено, {name}.",
+  "@chrDoneSoft2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneNormal1": "«{quest}» — выполнено. Отлично, {name}!",
+  "@chrDoneNormal1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneNormal2": "Есть! «{quest}» закрыт. Идём дальше, {name}.",
+  "@chrDoneNormal2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneStrict1": "«{quest}» засчитано. Так и держать, {name}.",
+  "@chrDoneStrict1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneStrict2": "Принято: «{quest}». Следующий квест ждёт.",
+  "@chrDoneStrict2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneHarsh1": "«{quest}» сделано. Наконец-то. Не сбавляй темп, {name}.",
+  "@chrDoneHarsh1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrDoneHarsh2": "Засчитано: «{quest}». Это минимум, {name}. Дальше.",
+  "@chrDoneHarsh2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailSoft1": "«{quest}» не вышло — ничего, {name}. Завтра получится.",
+  "@chrFailSoft1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailSoft2": "Жаль, «{quest}» сорвался. Отдохни и попробуем снова.",
+  "@chrFailSoft2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailNormal1": "«{quest}» провален. Обидно, {name}. Соберись.",
+  "@chrFailNormal1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailNormal2": "Эх, «{quest}» не засчитан. В следующий раз — не упускай.",
+  "@chrFailNormal2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailStrict1": "«{quest}» провален, {name}. Так не пойдёт. Исправляй.",
+  "@chrFailStrict1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailStrict2": "Провал: «{quest}». Слово дал — слово держи.",
+  "@chrFailStrict2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailHarsh1": "«{quest}» — провал! {name}, где дисциплина? Хватит оправданий!",
+  "@chrFailHarsh1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrFailHarsh2": "Опять сорвал «{quest}»?! Позор лени. Завтра — без поблажек.",
+  "@chrFailHarsh2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "quest": {
+        "type": "String"
+      }
+    }
+  },
+  "chrPenaltySoft": "Штраф… Ничего, отыграемся.",
+  "chrPenaltyNormal": "Штраф. Давай без повторов.",
+  "chrPenaltyStrict": "Штраф заслужен. Выводы сделаны?",
+  "chrPenaltyHarsh": "Штраф! Расплата за лень. Отрабатывай!",
+  "chrLevelUp": "Уровень {level}! Так держать, {name}!",
+  "@chrLevelUp": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleSoft1": "{name}, я тут. Может, сделаем что-нибудь маленькое?",
+  "@chrIdleSoft1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleSoft2": "Давно не виделись, {name}. Загляни в квесты, когда будешь готов.",
+  "@chrIdleSoft2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleNormal1": "{name}, ты здесь? Квесты сами себя не сделают.",
+  "@chrIdleNormal1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleNormal2": "Эй, {name}! Посмотри, что осталось на сегодня.",
+  "@chrIdleNormal2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleStrict1": "{name}, перерыв затянулся. За дело.",
+  "@chrIdleStrict1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleStrict2": "Время идёт, {name}. Список квестов — вот он.",
+  "@chrIdleStrict2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleHarsh1": "{name}! Сколько можно бездельничать? Встал и пошёл выполнять!",
+  "@chrIdleHarsh1": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chrIdleHarsh2": "Хватит прохлаждаться, {name}. Квесты ждут — живо!",
+  "@chrIdleHarsh2": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "chrIntro": "Выберите спутника. Он проведёт вас через фото-сессии своим голосом, а потом будет жить внизу экрана: напоминать, хвалить и ругать — в выбранном режиме.",
   "chrArchetype": "Персонаж",
   "chrArchetypeRequired": "Выберите персонажа, чтобы продолжить",
@@ -668,6 +934,91 @@
       }
     }
   },
+  "chtTitle": "Чат",
+  "chtHint": "Напиши персонажу…",
+  "chtEmpty": "Начни разговор: спроси о плане, попроси помочь или просто расскажи, как дела.",
+  "chtSend": "Отправить",
+  "chtMic": "Голосовой ввод: нажми или удерживай",
+  "chtListening": "Слушаю…",
+  "chtMicUnavailable": "Распознавание речи недоступно — проверь разрешение на микрофон и речь",
+  "chtThinking": "Печатает…",
+  "chtAction": "Система изменила план: {summary}",
+  "@chtAction": {
+    "placeholders": {
+      "summary": {
+        "type": "String"
+      }
+    }
+  },
+  "chtUndo": "Отменить",
+  "chtUndone": "Отменено",
+  "chtUndoFailed": "Не удалось отменить",
+  "chtRetry": "Повторить",
+  "chtVoiceOn": "Озвучка ответов включена",
+  "chtVoiceOff": "Озвучка ответов выключена",
+  "chtErrNotSignedIn": "Чтобы говорить с ИИ, войди в аккаунт: Ещё → Аккаунт.",
+  "chtErrOffline": "Нет связи с сервером. Сообщение сохранено — нажми «Повторить», когда появится сеть.",
+  "chtErrBudget": "Бюджет ИИ на этот месяц исчерпан. До следующего месяца персонаж отвечает шаблонами.",
+  "chtErrUnavailable": "ИИ сейчас недоступен. Попробуй чуть позже.",
+  "chtErrRateLimited": "Слишком много запросов. Подожди немного.",
+  "chtErrServer": "Ошибка сервера ИИ. Попробуй ещё раз.",
+  "chtFallbackSoft": "Я сейчас не могу толком ответить, но я рядом. Делай по плану, шаг за шагом — у тебя получается.",
+  "chtFallbackNormal": "Связи с Системой нет. План в силе — выполняй задания, поговорим позже.",
+  "chtFallbackStrict": "Связи нет — это не повод расслабляться. Открой квесты и делай.",
+  "chtFallbackHarsh": "Сервер молчит, а ты чего ждёшь? Задания сами себя не сделают. Вперёд.",
+  "chtJournal": "Журнал ИИ",
+  "chtUsageTitle": "Расходы ИИ",
+  "chtUsageMonth": "{spent} из {budget} за месяц",
+  "@chtUsageMonth": {
+    "placeholders": {
+      "spent": {
+        "type": "String"
+      },
+      "budget": {
+        "type": "String"
+      }
+    }
+  },
+  "chtUsageToday": "Сегодня: {usd}",
+  "@chtUsageToday": {
+    "placeholders": {
+      "usd": {
+        "type": "String"
+      }
+    }
+  },
+  "chtUsageDegraded": "Экономный режим: бюджет почти исчерпан, ИИ работает на более дешёвых моделях",
+  "chtUsageByTask": "По задачам",
+  "chtUsageCalls": "{count} выз.",
+  "@chtUsageCalls": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chtUsageEmpty": "В этом месяце ИИ ещё не использовался.",
+  "chtTaskChat": "Разговор",
+  "chtTaskAnalysis": "Анализ дня и недели",
+  "chtTaskPlan": "Построение плана",
+  "chtTaskPlanEdit": "Изменение плана",
+  "chtTaskShort": "Короткие реплики",
+  "chtTaskBankParse": "Уведомления банков",
+  "chtTaskFoodVision": "Еда и чеки по фото",
+  "chtTaskBodyVision": "Фото тела и кожи",
+  "chtTaskLearning": "Обучение",
+  "chtTaskTts": "Голос",
+  "chtActionsTitle": "Действия ИИ",
+  "chtActionsEmpty": "ИИ пока ничего не менял.",
+  "chtLoadFailed": "Не удалось загрузить",
+  "chtVoiceTitle": "Голос персонажа",
+  "chtVoiceSystem": "Системный голос телефона",
+  "chtVoiceSystemDesc": "Работает без интернета и бесплатно",
+  "chtVoiceListen": "Прослушать",
+  "chtVoiceEmpty": "На сервере нет голосов для этого языка.",
+  "chtVoiceListenFailed": "Не удалось воспроизвести голос",
+  "chtVoiceFemale": "женский",
+  "chtVoiceMale": "мужской",
   "commonNext": "Далее",
   "commonBack": "Назад",
   "commonDone": "Готово",
@@ -721,6 +1072,14 @@
   "hqNutritionDiaryTitle": "Дневник питания",
   "hqNutritionDiarySoon": "Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.",
   "hqFinanceFoodTitle": "Финансы на еду",
+  "int6PlanAi": "Построить план с ИИ",
+  "int6PlanAiError": "Не удалось построить план с ИИ. Проверьте вход в аккаунт и сеть.",
+  "int6Learning": "Знания",
+  "int6LearningHint": "Курсы, уроки дня и повторения",
+  "int6AiJournal": "ИИ: расходы и действия",
+  "int6AiJournalHint": "Бюджет и что Система меняла (с отменой)",
+  "int6Voice": "Голос персонажа",
+  "int6VoiceHint": "Готовые голоса сервера, прослушать",
   "livNextQuest": "Следующий квест",
   "livNoQuest": "Квестов нет",
   "livOverdue": "Просрочен",
@@ -747,6 +1106,112 @@
   "locNotifTitle": "Система · прогулка",
   "locNotifText": "Идёт запись маршрута",
   "locNotifChannel": "Прогулка",
+  "lrnTitle": "Знания",
+  "lrnToday": "Сегодня",
+  "lrnCourses": "Курсы",
+  "lrnNewCourse": "Новый курс",
+  "lrnTopic": "Что хотите выучить?",
+  "lrnTopicHint": "Например: нунчаки, C++, турецкий",
+  "lrnPerDay": "Уроков в день",
+  "lrnLength": "Уроков в курсе",
+  "lrnCreate": "Построить курс",
+  "lrnCreating": "Система строит курс…",
+  "lrnTodayEmpty": "На сегодня всё: уроки и повторения выполнены.",
+  "lrnNoCourses": "Курсов пока нет. Напишите, что хотите выучить, — Система построит курс.",
+  "lrnLessonOf": "Урок {n} из {total}",
+  "@lrnLessonOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnReview": "Повторение",
+  "lrnLessonDay": "Урок дня",
+  "lrnStatusPaused": "На паузе",
+  "lrnStatusDone": "Курс пройден",
+  "lrnPause": "Пауза",
+  "lrnResume": "Продолжить",
+  "lrnDelete": "Удалить курс",
+  "lrnDeleteConfirm": "Удалить курс «{title}»? Прогресс будет потерян.",
+  "@lrnDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "lrnLoading": "Загружаю урок…",
+  "lrnGoal": "Цель",
+  "lrnExample": "Пример",
+  "lrnTip": "Совет",
+  "lrnStartQuiz": "К проверке",
+  "lrnFinish": "Завершить урок",
+  "lrnQuestion": "Вопрос {n} из {total}",
+  "@lrnQuestion": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnNext": "Далее",
+  "lrnCorrect": "Верно",
+  "lrnWrong": "Неверно",
+  "lrnResult": "Результат",
+  "lrnScore": "Правильно: {p}%",
+  "@lrnScore": {
+    "placeholders": {
+      "p": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnNextReview": "{days, plural, one{Повторение через {days} день} few{Повторение через {days} дня} many{Повторение через {days} дней} other{Повторение через {days} дня}}",
+  "@lrnNextReview": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnMastered": "Материал закреплён — повторений больше нет.",
+  "lrnPassed": "Урок засчитан.",
+  "lrnFailed": "Для зачёта нужно {p}% — попробуйте ещё раз.",
+  "@lrnFailed": {
+    "placeholders": {
+      "p": {
+        "type": "int"
+      }
+    }
+  },
+  "lrnReviewPassed": "Повторение засчитано.",
+  "lrnReviewFailed": "Повторение не засчитано — интервал сокращён.",
+  "lrnRetry": "Пройти снова",
+  "lrnLessonDone": "Пройден",
+  "lrnErrOffline": "Нет связи с сервером. Уже загруженные уроки доступны офлайн.",
+  "lrnErrNotSignedIn": "Войдите в аккаунт (Ещё → Аккаунт), чтобы Система строила курсы и уроки.",
+  "lrnErrBudget": "Лимит ИИ исчерпан. Попробуйте позже.",
+  "lrnErrUnavailable": "ИИ сейчас недоступен на сервере.",
+  "lrnErrServer": "Не удалось получить ответ. Попробуйте ещё раз.",
+  "msgChannelName": "Сообщения Системы",
+  "msgChannelDesc": "Брифинги, подбадривания и упрёки персонажа",
+  "msgTplBriefingTitle": "[ Система ] Утренний брифинг",
+  "msgTplBriefing1": "Новый день — новые квесты. Открой список и начни с первого.",
+  "msgTplBriefing2": "Игрок, подъём. План на сегодня уже ждёт.",
+  "msgTplBriefing3": "Система на связи. Сегодняшние квесты сами себя не выполнят.",
+  "msgTplCheerTitle": "[ Система ]",
+  "msgTplCheer1": "Ты держишь темп. Не сбавляй.",
+  "msgTplCheer2": "Каждый выполненный квест — шаг к следующему рангу.",
+  "msgTplCheer3": "Проверь квесты: что можно закрыть прямо сейчас?",
+  "msgTplCheer4": "Глоток воды и вперёд. Система следит за прогрессом.",
+  "msgWaterQuestTitle": "Дойти до магазина за водой",
   "ntfQuestTitle": "[ Квест ] {title}",
   "@ntfQuestTitle": {
     "placeholders": {
@@ -2689,6 +3154,123 @@
   "synErrServer": "Ошибка сервера — попробуйте позже",
   "synErrInvalidName": "Имя: 3–32 символа — буквы, цифры, _ - . без пробелов",
   "synErrFill": "Заполните адрес сервера, имя и пароль",
+  "visEstimate": "Оценка",
+  "visNoticeLabel": "Система",
+  "visSourceTitle": "Фото",
+  "visSourceMessage": "Сделать снимок или выбрать из галереи?",
+  "visCamera": "Камера",
+  "visGallery": "Галерея",
+  "visAnalyzing": "Анализирую фото…",
+  "visErrOffline": "Нет связи с сервером. Попробуйте позже.",
+  "visErrNotSignedIn": "Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы анализировать фото.",
+  "visErrBudget": "Лимит ИИ сейчас исчерпан. Попробуйте позже.",
+  "visErrUnavailable": "ИИ на сервере сейчас недоступен.",
+  "visErrServer": "Не удалось разобрать фото. Попробуйте ещё раз.",
+  "visRetry": "Повторить",
+  "visRemove": "Убрать",
+  "visBack": "Назад",
+  "visDone": "Готово",
+  "visFoodTitle": "Фото еды",
+  "visFoodSeen": "Что на фото",
+  "visFoodNothing": "Еда не распознана — добавьте позиции вручную.",
+  "visFoodItemName": "Название",
+  "visFoodGrams": "Граммы",
+  "visFoodItemLine": "{name} — {grams} г",
+  "@visFoodItemLine": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
+  "visFoodAddItem": "Добавить позицию",
+  "visFoodQuestion": "Купил или приготовил?",
+  "visFoodBought": "Купил",
+  "visFoodCooked": "Приготовил",
+  "visFoodWhere": "Где купил?",
+  "visFoodWhereHint": "Кафе, магазин, сеть — можно оставить пустым",
+  "visFoodFind": "Найти КБЖУ",
+  "visFoodScanHint": "Есть упаковка? Штрихкод точнее.",
+  "visFoodScan": "Сканировать штрихкод",
+  "visFoodPer100": "На 100 г: {kcal} · {macros}",
+  "@visFoodPer100": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "macros": {
+        "type": "String"
+      }
+    }
+  },
+  "visFoodSource": "Источник: {title}",
+  "@visFoodSource": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "visFoodCached": "из сохранённого",
+  "visFoodSaveDiary": "Записать в дневник",
+  "visFoodRecipeName": "Название блюда",
+  "visFoodSaveRecipe": "В мои рецепты и дневник",
+  "visFoodTotal": "Итого",
+  "visBodyTitle": "Анализ тела",
+  "visSkinTitle": "Анализ кожи",
+  "visBodyFat": "Доля жира",
+  "visFatRange": "{min}–{max}%",
+  "@visFatRange": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "visMuscle": "Мышцы",
+  "visLevelLow": "ниже среднего",
+  "visLevelMedium": "средне",
+  "visLevelHigh": "выше среднего",
+  "visSwelling": "Отёки",
+  "visSwellingNone": "не видны",
+  "visSwellingMild": "лёгкие",
+  "visSwellingNoticeable": "заметные",
+  "visPosture": "Осанка",
+  "visComparison": "Сравнение с прошлым",
+  "visPreviousAt": "Прошлое фото: {date}",
+  "@visPreviousAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "visSkinType": "Тип кожи",
+  "visSkinDry": "сухая",
+  "visSkinNormal": "нормальная",
+  "visSkinOily": "жирная",
+  "visSkinCombination": "комбинированная",
+  "visSkinSensitive": "чувствительная",
+  "visAcne": "Высыпания",
+  "visAcneScore": "{score} из 10",
+  "@visAcneScore": {
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "visDisclaimer": "Оценка по фото: свет, ракурс и камера влияют на результат. Это не медицинское заключение.",
+  "visReceiptTitle": "Чек",
+  "visReceiptStore": "Магазин",
+  "visReceiptDate": "Дата",
+  "visReceiptFinanceLater": "Чек сохранён. Запись в финансы появится в следующем обновлении.",
   "wlkTitle": "Прогулка",
   "wlkPlan": "Маршрут",
   "wlkByDistance": "Километры",

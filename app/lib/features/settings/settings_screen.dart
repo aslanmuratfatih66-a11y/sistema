@@ -20,6 +20,7 @@ import '../onboarding/onboarding_step.dart';
 import 'backup/backup_platform.dart';
 import 'backup/backup_service.dart';
 import 'settings_summaries.dart';
+import '../chat/voice_picker.dart';
 
 /// Версия приложения. CI может передать `--dart-define=APP_VERSION=…`; без package_info.
 const kAppVersion = String.fromEnvironment('APP_VERSION', defaultValue: '1.0.0');
@@ -108,6 +109,24 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   title: l.setDiscipline,
                   hint: l.setDisciplineHint,
                   onTap: () => context.push(Routes.discipline),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.book,
+                  title: l.int6Learning,
+                  hint: l.int6LearningHint,
+                  onTap: () => context.push(Routes.learning),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.sparkle,
+                  title: l.int6AiJournal,
+                  hint: l.int6AiJournalHint,
+                  onTap: () => context.push(Routes.aiJournal),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.mic,
+                  title: l.int6Voice,
+                  hint: l.int6VoiceHint,
+                  onTap: () => showVoicePicker(context),
                 ),
                 _NavRow(
                   glyph: SysGlyph.heart,

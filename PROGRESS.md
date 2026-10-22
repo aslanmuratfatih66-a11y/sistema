@@ -2,18 +2,19 @@
 
 ## Сейчас
 Этап: 6 — ИИ, персонаж, голос
-Статус: каркас готов (690b876), сабагенты A–F в работе; этап 5 в CI (push 664b62a)
-Следующий шаг: отчёты A–F → интеграция (main.go: RunPusher; main.dart: overrides D/E, кнопки фото-анализа в питании/теле, «План с ИИ», выбор голоса, пункты «Знания»/«ИИ» в «Ещё», «нет воды» → квест) → push
+Статус: A–F готовы, интеграция сделана, собирается в CI
+Следующий шаг: дождаться CI (`gh run watch`), при красном — `gh run view --log-failed`; затем этап 7
 
 ## Этап 6 — чек-лист
 - [x] Каркас: server/internal/ai (контракт: Task, Provider, Client, ToolHandler; Service-заглушка), vision/messages/learning, миграция 2 (ai_usage, ai_actions, ai_cache, messages, push_tokens), config (SISTEMA_ANTHROPIC_API_KEY, GEMINI_API_KEY, AI_MODELS, AI_BUDGET_USD, TTS_API_KEY, NTFY_URL/TOKEN, FCM_KEY_FILE), jobs: GenerateMessages/WeeklyReview; клиент: БД v6 (ChatMessages, Courses, Lessons, PhotoAnalyses), core/ai/ai_api.dart (AiGateway), /chat /learning /ai, speech_to_text, just_audio, NSSpeechRecognitionUsageDescription
-- [ ] A AI-слой (server/internal/ai)
-- [ ] B Фото-анализ (server/internal/vision, app/lib/features/vision)
-- [ ] C Персонаж (features/character)
-- [ ] D Голос и чат (features/chat, ai_journal, core/voice)
-- [ ] E Сообщения наперёд, ntfy, FCM, «нет воды» (server/internal/messages, core/notifications/ai_messages*)
-- [ ] F Знания (server/internal/learning, features/learning)
-- [ ] Интеграция, .env-ключи, push
+- [x] A AI-слой (server/internal/ai: Anthropic/Gemini, бюджет, инструменты с отменой, чат, план, TTS ElevenLabs; запись в records через syncapi.ServerWrite)
+- [x] B Фото-анализ (server/internal/vision, app/lib/features/vision)
+- [x] C Персонаж (features/character)
+- [x] D Голос и чат (features/chat, ai_journal, core/voice)
+- [x] E Сообщения наперёд, ntfy, FCM, «нет воды» (server/internal/messages, core/notifications/ai_messages*, features/walks/water_quest.dart)
+- [x] F Знания (server/internal/learning, features/learning)
+- [x] Интеграция: main.go `go msgSvc.RunPusher`; main.dart: TTS сервера/STT, aiMessageSyncProvider.start, фон runAiMessagesBackground, ReminderCoordinator.templateFilter (без шаблонного упрёка, если упрекает ИИ); «План с ИИ», «Знания»/«ИИ»/«Голос» в «Ещё»; «нет воды» → квест; deploy/.env.example — ключи этапа 6
+- [ ] CI зелёный
 
 ## Этап 5 — чек-лист
 - [x] Каркас: server/internal/store (SQLite modernc, миграции user_version: users, sessions, access_tokens, records, sync_cursors, photos, fx_rates, job_runs), authctx, контракты auth/syncapi/media/jobs + проводка в main.go, httpapi.Options.Mount, config (MAX_PHOTO_BYTES, BACKUP_DIR, BACKUP_KEEP_DAYS, TRUST_PROXY, FX_URL); клиент: core/sync/sync_api.dart, /account, flutter_secure_storage, qr_flutter
@@ -104,6 +105,7 @@
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- Этап 6: FCM-токен — заглушка NoPushTokenSource (нужен google-services.json и firebase_messaging); id моделей Gemini и формат ElevenLabs — сверить при подключении ключей; пояс пользователя для сообщений по умолчанию UTC+3
 - Этап 5: фото не скачиваются с сервера на второе устройство (remotePath не заполняется); TOTP нельзя отключить/перевыпустить; защита от повтора TOTP-кода — в памяти; сервер/деплой не проверены вживую — инструкция deploy/README.md
 - Этап 4: Spotify — заглушка (нужна регистрация в Spotify Dashboard, Redirect URI); прогулка после перезапуска восстанавливается на паузе; норма шагов виджета — 8000 по умолчанию; Swift/Kotlin этапа 4 проверены только сборкой
 - Тело: «сегодня» (bodyClockProvider) не пересчитывается в полночь; дневной сон не записать; удаление фото без подтверждения
@@ -121,12 +123,14 @@
 - deploy/sistema.service: жёсткий hardening, MemoryMax=256M — проверить на Debian на этапе 5
 
 ## CI
+Этапы 4–5: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39676717162 — зелёный (analyze-test, ios, android, server)
 Этап 3: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537 — зелёный
 - ipa: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537/artifacts/12369508087
 - apk: https://github.com/aslanmuratfatih66-a11y/sistema/actions/runs/39652915537/artifacts/12371475811
 Этап 2: run 39647992929 — зелёный
 
 ## Что нужно от пользователя
+- Этап 6: ключи в /opt/sistema/.env (SISTEMA_ANTHROPIC_API_KEY, по желанию GEMINI/TTS/NTFY/FCM) — см. deploy/.env.example
 - Деплой сервера по deploy/README.md; если порт 443 занят — прислать вывод `sudo ss -ltnp 'sport = :443'`, ничего не трогать
 - Сохранить в надёжном месте %USERPROFILE%\sistema-keys (ключ подписи Android)
 - После этапа 4–5 — общая проверка на телефоне. Копим список:
@@ -136,6 +140,7 @@
   - фото-сессия: отсчёт без лагов (1.3), совпадение с контуром тела на ~2 м, овал лица, голос ассистента
 
 ## История
+- 2026-10-22 — этап 6 — ИИ-слой, фото-анализ, персонаж, голос/чат, сообщения наперёд, знания; интеграция
 - 2026-10-21 — этап 3 — питание, шаги/расход, тело, тренировки; 459 тестов, CI зелёный
 - 2026-10-21 — этап 2 — интеграция A–D, 317 тестов зелёные; начат этап 3 (каркас)
 - 2026-10-21 — этап 1 — 1.3: лаг отсчёта (лишние вызовы TTS) исправлен; этап 1 завершён, начат этап 2
