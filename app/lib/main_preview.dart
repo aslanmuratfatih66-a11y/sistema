@@ -1,77 +1,90 @@
-// Режим предпросмотра в браузере: `flutter run -d chrome -t lib/main_preview.dart`.
-// Рамка iPhone 15 Pro (device_preview), заглушки нативных функций, Alt+L — ru/tr.
-// В релизную сборку телефона не попадает: там точка входа lib/main.dart.
-import 'dart:ui' as ui;
+// Режим предпросмотра в браузере: `flutter run -d chrome -t lib/main_preview.dart` (из app/).
+// Рамки iPhone 15 Pro / Pixel 9 / Galaxy S25 (device_preview), заглушки нативных функций, демо-данные.
+// Горячие клавиши — PreviewDevices.help. В релизную сборку телефона не попадает: там точка входа lib/main.dart,
+// которая не импортирует ни device_preview, ни lib/preview/.
+import 'dart:js_interop';
 
 import 'package:device_preview/device_preview.dart';
-import 'package:device_preview/presets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app/app.dart';
 import 'app/service_factory.dart';
+import 'core/alarm/alarm_api.dart';
 import 'core/capabilities/capability_service.dart';
 import 'core/capabilities/preview_capability_service.dart';
 import 'core/db/database.dart';
+import 'core/location/walk_repository.dart';
+import 'core/notifications/notification_api.dart';
+import 'core/security/app_lock.dart';
 import 'domain/quests/quest_api.dart';
+import 'domain/quests/quest_section_hooks.dart';
+import 'domain/quests/section_hooks.dart';
+import 'domain/walks/walk_api.dart';
+import 'features/finance/finance_providers.dart';
+import 'features/finance_input/bank_inbox_service.dart';
+import 'features/learning/learning_repository.dart';
 import 'features/onboarding/onboarding_progress.dart';
-
-/// iPhone 15 Pro: 393×852 @3x, Dynamic Island — геометрия как у iPhone 16,
-/// которого пресет есть в device_preview 3.0 (15 Pro в каталоге нет).
-final DevicePreset iPhone15Pro = DevicePreset(
-  id: 'apple-iphone-15-pro',
-  name: 'iPhone 15 Pro',
-  brand: 'Apple',
-  year: 2023,
-  platform: TargetPlatform.iOS,
-  portraitSize: const ui.Size(393, 852),
-  devicePixelRatio: 3.0,
-  portraitPadding: const EdgeInsets.only(top: 59, bottom: 34),
-  landscapePadding: const EdgeInsets.only(left: 59, right: 59, bottom: 20),
-  portraitKeyboardHeight: 335,
-  landscapeKeyboardHeight: 208,
-  frame: DevicePresets.iPhone16.frame,
-  systemUi: DevicePresets.iPhone16.systemUi,
-);
-
-const _locales = [Locale('ru'), Locale('tr')];
+import 'preview/demo_data.dart';
+import 'preview/preview_devices.dart';
+import 'preview/preview_fakes.dart';
 
 Future<void> main() async {
   DevicePreview.enable(enabled: true);
-  final controller = DevicePreview.controller;
-  controller.registerPreset(iPhone15Pro);
-  await controller.applyPreset(iPhone15Pro);
-  await controller.update((s) => s.copyWith(locales: [_locales.first]));
+  final devices = PreviewDevices(DevicePreview.controller);
+  await devices.init(android: const String.fromEnvironment('PREVIEW_PLATFORM') == 'android');
 
   final db = AppDatabase();
+  final demo = DemoData(db);
+  await demo.seedIfNeeded();
   final onboarding = await OnboardingProgress.load(db);
-  final quests = await createQuestService(db);
+  final quests = await createQuestService(db, watch: true);
 
-  HardwareKeyboard.instance.addHandler(_toggleLocaleOnAltL);
-  debugPrint('Предпросмотр: Alt+L — ru/tr; остальное — вкладка device_preview в DevTools.');
+  // Как в lib/main.dart, но всё нативное — заглушки (lib/preview/preview_fakes.dart).
+  // Без переопределения остаются «недоступные» реализации по умолчанию: шаги, TTS, распознавание речи,
+  // музыка, Live Activity/виджеты, блокировщик (Noop), ИИ («не вошли» → шаблоны), синхронизация.
+  final container = ProviderContainer(overrides: [
+    capabilityServiceProvider.overrideWithValue(PreviewCapabilityService(platformOf: () => devices.platform)),
+    databaseProvider.overrideWithValue(db),
+    onboardingProgressProvider.overrideWithValue(onboarding),
+    questServiceProvider.overrideWithValue(quests),
+    reminderSchedulerProvider.overrideWithValue(PreviewReminderScheduler()),
+    sectionQuestHooksProvider.overrideWithValue(QuestSectionHooks(quests)),
+    routeServiceProvider.overrideWithValue(const PreviewRouteService()),
+    locationServiceProvider.overrideWithValue(const PreviewLocationService()),
+    walkTrackerProvider.overrideWithValue(PreviewWalkTracker(WalkRepository(db))),
+    learningRepositoryProvider.overrideWith((ref) => LearningRepository(
+          ref.watch(databaseProvider),
+          const PreviewLearningApi(),
+          clock: ref.watch(learningClockProvider),
+        )),
+    ...financeOverrides,
+    appLockProvider.overrideWithValue(PreviewAppLock()),
+    bankTxRemoverProvider.overrideWith((ref) => ref.read(financeRepositoryProvider).removeTransaction),
+    alarmSchedulerProvider.overrideWithValue(PreviewAlarmScheduler()),
+  ]);
 
-  runApp(ProviderScope(
-    overrides: [
-      capabilityServiceProvider.overrideWithValue(PreviewCapabilityService()),
-      databaseProvider.overrideWithValue(db),
-      onboardingProgressProvider.overrideWithValue(onboarding),
-      questServiceProvider.overrideWithValue(quests),
-    ],
-    child: const SistemaApp(),
-  ));
+  devices
+    ..onPlatformChanged = (() => container.invalidate(deviceCapabilitiesProvider))
+    ..onReset = () async {
+      await demo.clear();
+      await db.close();
+      _reloadPage(); // main засеет заново
+    };
+
+  runApp(UncontrolledProviderScope(container: container, child: const _PreviewApp()));
 }
 
-bool _toggleLocaleOnAltL(KeyEvent event) {
-  if (event is! KeyDownEvent ||
-      event.logicalKey != LogicalKeyboardKey.keyL ||
-      !HardwareKeyboard.instance.isAltPressed) {
-    return false;
-  }
-  final controller = DevicePreview.controller;
-  final current = controller.simulation?.locales?.first ?? _locales.first;
-  final next = current.languageCode == 'ru' ? _locales[1] : _locales[0];
-  controller.update((s) => s.copyWith(locales: [next]));
-  debugPrint('Предпросмотр: язык ${next.languageCode}');
-  return true;
+@JS('window.location.reload')
+external void _reloadPage();
+
+/// Язык — из симуляции device_preview (Alt+L), поверх языка профиля. Вход по Face ID/PIN выключен.
+class _PreviewApp extends StatelessWidget {
+  const _PreviewApp();
+
+  @override
+  Widget build(BuildContext context) => ValueListenableBuilder(
+        valueListenable: DevicePreview.controller.simulationListenable,
+        builder: (context, sim, _) => SistemaApp(locale: sim?.locales?.firstOrNull),
+      );
 }
