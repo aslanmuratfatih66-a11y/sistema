@@ -1,9 +1,17 @@
 # PROGRESS
 
 ## Сейчас
-Этап: 7 — Финансы, маркет, дисциплина
-Статус: завершён, CI зелёный (app 39709022096, server 39709022039)
-Следующий шаг: этап 8 — Подключения и полировка (STAGES.md), начать с каркаса
+Этап: 8 — Подключения и полировка
+Статус: сабагенты B, C, D в работе; A (МИРЭА) — в конце этапа (решение владельца)
+Следующий шаг: отчёты B/C/D → интеграция (манифест: OverlayService; MainActivity; main: оверлей) → МИРЭА: исследовать способы, предложить владельцу, затем реализовать
+
+## Этап 8 — чек-лист
+- [ ] B Оверлей персонажа Android (features/character/system_overlay_*, Overlay*.kt)
+- [ ] C Полировка UI и доступность (ui/, визуал features/*, pol_*.arb)
+- [ ] D Турецкая локализация (l10n_parts/*_tr.arb)
+- [ ] Интеграция B/C/D, CI
+- [ ] A МИРЭА: исследование → вариант владельцу → модуль features/connections (в конце)
+- [ ] Финальный прогон тестов, сборка, отчёт
 
 ## Этап 7 — чек-лист
 - [x] Каркас: БД v7 (FinAccounts, FinCategories, FinTransactions, FinBudgets, FinGoals, FinSubscriptions, FinDebts, CryptoHoldings, BankInbox, MarketItems, BlockedApps, BlockAttempts, Alarms, AlarmRuns), enums (FinAccountKind, FinTxKind, FinTxSource, MarketBudget, AlarmTask); QuestService.award (◆ вне квестов, идемпотентно по ref); контракты domain/finance/finance_api.dart (FinanceLedger, FxRatesSource, BudgetAdvisor), core/security/app_lock.dart, core/alarm/alarm_api.dart; маршруты /finance /finance/receipt /finance/banks /finance/statement /market /blocker /blocked /alarms /alarm/ring (заглушки); local_auth, sensors_plus; Info.plist: NSFaceIDUsageDescription, NSAlarmKitUsageDescription; AlarmKitChannel.swift (заготовка, в pbxproj); сервер: ai.Document (PDF), пакеты finance/market (контракт эндпоинтов в doc-комментарии), проводка в main.go
