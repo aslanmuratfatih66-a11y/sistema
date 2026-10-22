@@ -7906,4 +7906,146 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get homeQuickWaterAdded => 'Su kaydedildi';
+
+  @override
+  String get lvlPathTitle => 'Seviye yolu';
+
+  @override
+  String get lvlPathOpenHint => 'Seviye yolunu aç';
+
+  @override
+  String get lvlPathCurrent => 'Şimdi';
+
+  @override
+  String lvlPathLevel(int level) {
+    return 'Seviye $level';
+  }
+
+  @override
+  String lvlPathRank(String rank) {
+    return 'Rütbe $rank';
+  }
+
+  @override
+  String lvlPathXp(int into, int need) {
+    return '$into / $need TP';
+  }
+
+  @override
+  String lvlPathXpLeft(int xp) {
+    return 'Sonraki seviyeye: $xp TP';
+  }
+
+  @override
+  String lvlPathXpTotal(int xp) {
+    return 'Toplam TP: $xp';
+  }
+
+  @override
+  String lvlPathNextReward(int level) {
+    return 'Sıradaki ödül — seviye $level';
+  }
+
+  @override
+  String lvlPathPassedSemantics(int level) {
+    return 'Seviye $level, geçildi';
+  }
+
+  @override
+  String lvlPathCurrentSemantics(int level) {
+    return 'Seviye $level, şu anki';
+  }
+
+  @override
+  String lvlPathLockedSemantics(int level) {
+    return 'Seviye $level, ileride';
+  }
+
+  @override
+  String lvlRewardDiamonds(int n) {
+    return '+$n ◆';
+  }
+
+  @override
+  String lvlRewardStatPoints(int n) {
+    return '+$n özellik puanı';
+  }
+
+  @override
+  String lvlRewardSkin(String name) {
+    return 'Görünüm: $name';
+  }
+
+  @override
+  String lvlRewardFeature(String name) {
+    return 'Açılır: $name';
+  }
+
+  @override
+  String lvlRewardBoss(String name) {
+    return 'Boss: $name';
+  }
+
+  @override
+  String get lvlSkinAura => 'Mavi aura';
+
+  @override
+  String get lvlSkinCloak => 'Gölge pelerini';
+
+  @override
+  String get lvlSkinArmor => 'Avcı zırhı';
+
+  @override
+  String get lvlSkinWings => 'Işık kanatları';
+
+  @override
+  String get lvlSkinCrown => 'S rütbesi tacı';
+
+  @override
+  String get lvlSkinMonarch => 'Hükümdar görünümü';
+
+  @override
+  String get lvlFeatAutoplan => '«Otomatik plan» modu';
+
+  @override
+  String get lvlFeatHunt => 'canavar avı';
+
+  @override
+  String get lvlFeatFriends => 'arkadaşlarla ortak görevler';
+
+  @override
+  String get lvlFeatRareHunt => 'avda nadir canavarlar';
+
+  @override
+  String get lvlFeatGlobalRating => 'küresel sıralama';
+
+  @override
+  String get lvlBossShadowWolf => 'Gölge kurt';
+
+  @override
+  String get lvlBossIronGolem => 'Demir golem';
+
+  @override
+  String get lvlBossStormDrake => 'Fırtına ejderi';
+
+  @override
+  String get lvlBossFrostWarden => 'Buz muhafızı';
+
+  @override
+  String get lvlBossAbyssLord => 'Uçurum efendisi';
+
+  @override
+  String get qeTitleLevel5 => 'Sistem çaylağı';
+
+  @override
+  String get qeTitleLevel20 => 'Avcı';
+
+  @override
+  String get qeTitleLevel35 => 'Durdurulamaz';
+
+  @override
+  String get qeTitleLevel75 => 'Yaşayan efsane';
+
+  @override
+  String get qeTitleLevel100 => 'Hükümdar';
 }

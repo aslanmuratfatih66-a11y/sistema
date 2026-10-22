@@ -10,10 +10,13 @@ import 'level_hexagon.dart';
 /// Блок 2: сжатый статус игрока — уровень/имя/ранг/серия, опыт и «Очки характ.»,
 /// три шкалы в ряд, 6 характеристик в 2 ряда, баллы ◆ в шапке панели.
 class StatusPanel extends StatelessWidget {
-  const StatusPanel({super.key, required this.player, this.onStatPoints});
+  const StatusPanel({super.key, required this.player, this.onStatPoints, this.onLevel});
 
   final PlayerStatus player;
   final VoidCallback? onStatPoints;
+
+  /// Нажатие на значок уровня — «Путь уровней».
+  final VoidCallback? onLevel;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +54,15 @@ class StatusPanel extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              LevelHexagon(level: p.level, size: 50),
+              Semantics(
+                button: onLevel != null,
+                hint: onLevel != null ? l.lvlPathOpenHint : null,
+                child: SysPressable(
+                  key: const Key('home-level'),
+                  onTap: onLevel,
+                  child: LevelHexagon(level: p.level, size: 50),
+                ),
+              ),
               const SizedBox(width: 10),
               Expanded(
                 child: Column(

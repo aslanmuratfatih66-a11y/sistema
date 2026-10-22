@@ -13,11 +13,61 @@ abstract final class GameTitles {
   static const streak30 = 'streak30'; // серия 30 дней
   static const bossSlayer = 'bossSlayer'; // первый побеждённый босс
   static const bossHunter = 'bossHunter'; // 4 побеждённых босса
+  static const level5 = 'level5';
   static const level10 = 'level10';
+  static const level20 = 'level20';
   static const level25 = 'level25';
+  static const level35 = 'level35';
   static const level50 = 'level50';
+  static const level75 = 'level75';
+  static const level100 = 'level100';
 
-  static const all = [streak7, streak30, bossSlayer, bossHunter, level10, level25, level50];
+  static const all = [
+    streak7, streak30, bossSlayer, bossHunter, //
+    level5, level10, level20, level25, level35, level50, level75, level100,
+  ];
+}
+
+/// Ключи форм/скинов персонажа за уровни (`levelSkinLabel`). Сами модели — этап персонажа (§9.2), пока подписи.
+abstract final class LevelSkins {
+  static const aura = 'aura';
+  static const cloak = 'cloak';
+  static const armor = 'armor';
+  static const wings = 'wings';
+  static const crown = 'crown';
+  static const monarch = 'monarch';
+}
+
+/// Ключи функций, открываемых уровнем (`levelFeatureLabel`).
+// TODO(levels): реальная блокировка функций до уровня — когда появятся сами разделы (§8.13, §8.18, §8.19).
+abstract final class LevelFeatures {
+  static const autoplan = 'autoplan';
+  static const hunt = 'hunt';
+  static const friends = 'friends';
+  static const rareHunt = 'rareHunt';
+  static const globalRating = 'globalRating';
+}
+
+/// Ключи монстров-боссов (`levelBossLabel`). Все монстры оригинальные; появляются в «Охоте» (§8.19).
+abstract final class LevelBosses {
+  static const shadowWolf = 'shadowWolf';
+  static const ironGolem = 'ironGolem';
+  static const stormDrake = 'stormDrake';
+  static const frostWarden = 'frostWarden';
+  static const abyssLord = 'abyssLord';
+}
+
+/// Награда за достижение уровня (таблица — [GameConfig.levelRewards]). Титул — в [GameConfig.levelTitles].
+@immutable
+class LevelReward {
+  const LevelReward({this.diamonds = 0, this.skin, this.feature, this.boss});
+
+  final int diamonds;
+  final String? skin;
+  final String? feature;
+  final String? boss;
+
+  bool get isEmpty => diamonds == 0 && skin == null && feature == null && boss == null;
 }
 
 /// Ключи эффектов (`effectLabel` в quest_l10n.dart).
@@ -107,7 +157,32 @@ class GameConfig {
       PlayerRank.a: 35,
       PlayerRank.s: 50,
     },
-    this.levelTitles = const {10: GameTitles.level10, 25: GameTitles.level25, 50: GameTitles.level50},
+    this.levelTitles = const {
+      5: GameTitles.level5,
+      10: GameTitles.level10,
+      20: GameTitles.level20,
+      25: GameTitles.level25,
+      35: GameTitles.level35,
+      50: GameTitles.level50,
+      75: GameTitles.level75,
+      100: GameTitles.level100,
+    },
+    this.levelRewards = const {
+      5: LevelReward(diamonds: 30, skin: LevelSkins.aura),
+      8: LevelReward(diamonds: 30, feature: LevelFeatures.autoplan),
+      10: LevelReward(diamonds: 50, feature: LevelFeatures.hunt, boss: LevelBosses.shadowWolf),
+      15: LevelReward(diamonds: 60, skin: LevelSkins.cloak, feature: LevelFeatures.friends),
+      20: LevelReward(diamonds: 80, boss: LevelBosses.ironGolem),
+      25: LevelReward(diamonds: 100, skin: LevelSkins.armor),
+      30: LevelReward(diamonds: 100, feature: LevelFeatures.rareHunt, boss: LevelBosses.stormDrake),
+      35: LevelReward(diamonds: 120, skin: LevelSkins.wings),
+      40: LevelReward(diamonds: 120, boss: LevelBosses.frostWarden),
+      50: LevelReward(diamonds: 200, skin: LevelSkins.crown, feature: LevelFeatures.globalRating),
+      60: LevelReward(diamonds: 150),
+      75: LevelReward(diamonds: 250, boss: LevelBosses.abyssLord),
+      90: LevelReward(diamonds: 200),
+      100: LevelReward(diamonds: 500, skin: LevelSkins.monarch),
+    },
     this.statPointsPerLevel = 3,
     this.baseStat = 10,
     this.statPerQuest = 1,
@@ -162,6 +237,9 @@ class GameConfig {
 
   /// Титулы за уровень: {уровень: ключ}.
   final Map<int, String> levelTitles;
+
+  /// Награды за уровень (◆, форма/скин, функция, монстр-босс): {уровень: награда}. Экран «Путь уровней».
+  final Map<int, LevelReward> levelRewards;
   final int statPointsPerLevel;
 
   /// Стартовое значение характеристики (снимок = baseStat + сумма журнала).
@@ -260,6 +338,20 @@ class GameRules {
         for (final e in config.levelTitles.entries)
           if (e.key > from && e.key <= to) e.value,
       ];
+
+  /// Награды за уровни в (from, to] — по возрастанию уровня.
+  List<(int, LevelReward)> levelRewardsBetween(int from, int to) => [
+        for (final e in (config.levelRewards.entries.toList()..sort((a, b) => a.key.compareTo(b.key))))
+          if (e.key > from && e.key <= to) (e.key, e.value),
+      ];
+
+  /// Ранг, который открывается ровно на уровне [level]; null — нет.
+  PlayerRank? rankAt(int level) {
+    for (final e in config.rankLevels.entries) {
+      if (e.value == level && level > 1) return e.key;
+    }
+    return null;
+  }
 
   // ---- Характеристики ----
 

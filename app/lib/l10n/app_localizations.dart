@@ -134,6 +134,234 @@ abstract class AppLocalizations {
   /// **'Ещё'**
   String get navMore;
 
+  /// No description provided for @lvlPathTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Путь уровней'**
+  String get lvlPathTitle;
+
+  /// No description provided for @lvlPathOpenHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Открыть путь уровней'**
+  String get lvlPathOpenHint;
+
+  /// No description provided for @lvlPathCurrent.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сейчас'**
+  String get lvlPathCurrent;
+
+  /// No description provided for @lvlPathLevel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень {level}'**
+  String lvlPathLevel(int level);
+
+  /// No description provided for @lvlPathRank.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ранг {rank}'**
+  String lvlPathRank(String rank);
+
+  /// No description provided for @lvlPathXp.
+  ///
+  /// In ru, this message translates to:
+  /// **'{into} / {need} опыта'**
+  String lvlPathXp(int into, int need);
+
+  /// No description provided for @lvlPathXpLeft.
+  ///
+  /// In ru, this message translates to:
+  /// **'До следующего уровня: {xp} опыта'**
+  String lvlPathXpLeft(int xp);
+
+  /// No description provided for @lvlPathXpTotal.
+  ///
+  /// In ru, this message translates to:
+  /// **'Всего опыта: {xp}'**
+  String lvlPathXpTotal(int xp);
+
+  /// No description provided for @lvlPathNextReward.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ближайшая награда — уровень {level}'**
+  String lvlPathNextReward(int level);
+
+  /// No description provided for @lvlPathPassedSemantics.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень {level}, пройден'**
+  String lvlPathPassedSemantics(int level);
+
+  /// No description provided for @lvlPathCurrentSemantics.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень {level}, текущий'**
+  String lvlPathCurrentSemantics(int level);
+
+  /// No description provided for @lvlPathLockedSemantics.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уровень {level}, впереди'**
+  String lvlPathLockedSemantics(int level);
+
+  /// No description provided for @lvlRewardDiamonds.
+  ///
+  /// In ru, this message translates to:
+  /// **'+{n} ◆'**
+  String lvlRewardDiamonds(int n);
+
+  /// No description provided for @lvlRewardStatPoints.
+  ///
+  /// In ru, this message translates to:
+  /// **'+{n} очка характеристик'**
+  String lvlRewardStatPoints(int n);
+
+  /// No description provided for @lvlRewardSkin.
+  ///
+  /// In ru, this message translates to:
+  /// **'Форма: {name}'**
+  String lvlRewardSkin(String name);
+
+  /// No description provided for @lvlRewardFeature.
+  ///
+  /// In ru, this message translates to:
+  /// **'Открывается: {name}'**
+  String lvlRewardFeature(String name);
+
+  /// No description provided for @lvlRewardBoss.
+  ///
+  /// In ru, this message translates to:
+  /// **'Босс: {name}'**
+  String lvlRewardBoss(String name);
+
+  /// No description provided for @lvlSkinAura.
+  ///
+  /// In ru, this message translates to:
+  /// **'Голубая аура'**
+  String get lvlSkinAura;
+
+  /// No description provided for @lvlSkinCloak.
+  ///
+  /// In ru, this message translates to:
+  /// **'Плащ теней'**
+  String get lvlSkinCloak;
+
+  /// No description provided for @lvlSkinArmor.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доспех охотника'**
+  String get lvlSkinArmor;
+
+  /// No description provided for @lvlSkinWings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Крылья света'**
+  String get lvlSkinWings;
+
+  /// No description provided for @lvlSkinCrown.
+  ///
+  /// In ru, this message translates to:
+  /// **'Корона ранга S'**
+  String get lvlSkinCrown;
+
+  /// No description provided for @lvlSkinMonarch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Облик Монарха'**
+  String get lvlSkinMonarch;
+
+  /// No description provided for @lvlFeatAutoplan.
+  ///
+  /// In ru, this message translates to:
+  /// **'режим «Автоплан»'**
+  String get lvlFeatAutoplan;
+
+  /// No description provided for @lvlFeatHunt.
+  ///
+  /// In ru, this message translates to:
+  /// **'охота на монстров'**
+  String get lvlFeatHunt;
+
+  /// No description provided for @lvlFeatFriends.
+  ///
+  /// In ru, this message translates to:
+  /// **'совместные квесты с друзьями'**
+  String get lvlFeatFriends;
+
+  /// No description provided for @lvlFeatRareHunt.
+  ///
+  /// In ru, this message translates to:
+  /// **'редкие монстры в охоте'**
+  String get lvlFeatRareHunt;
+
+  /// No description provided for @lvlFeatGlobalRating.
+  ///
+  /// In ru, this message translates to:
+  /// **'глобальный рейтинг'**
+  String get lvlFeatGlobalRating;
+
+  /// No description provided for @lvlBossShadowWolf.
+  ///
+  /// In ru, this message translates to:
+  /// **'Теневой волк'**
+  String get lvlBossShadowWolf;
+
+  /// No description provided for @lvlBossIronGolem.
+  ///
+  /// In ru, this message translates to:
+  /// **'Железный голем'**
+  String get lvlBossIronGolem;
+
+  /// No description provided for @lvlBossStormDrake.
+  ///
+  /// In ru, this message translates to:
+  /// **'Грозовой дракон'**
+  String get lvlBossStormDrake;
+
+  /// No description provided for @lvlBossFrostWarden.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ледяной страж'**
+  String get lvlBossFrostWarden;
+
+  /// No description provided for @lvlBossAbyssLord.
+  ///
+  /// In ru, this message translates to:
+  /// **'Владыка бездны'**
+  String get lvlBossAbyssLord;
+
+  /// No description provided for @qeTitleLevel5.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пробуждённый'**
+  String get qeTitleLevel5;
+
+  /// No description provided for @qeTitleLevel20.
+  ///
+  /// In ru, this message translates to:
+  /// **'Закалённый'**
+  String get qeTitleLevel20;
+
+  /// No description provided for @qeTitleLevel35.
+  ///
+  /// In ru, this message translates to:
+  /// **'Неудержимый'**
+  String get qeTitleLevel35;
+
+  /// No description provided for @qeTitleLevel75.
+  ///
+  /// In ru, this message translates to:
+  /// **'Легенда'**
+  String get qeTitleLevel75;
+
+  /// No description provided for @qeTitleLevel100.
+  ///
+  /// In ru, this message translates to:
+  /// **'Монарх'**
+  String get qeTitleLevel100;
+
   /// No description provided for @navHealth.
   ///
   /// In ru, this message translates to:

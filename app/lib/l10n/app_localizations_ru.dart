@@ -7960,4 +7960,146 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get homeQuickWaterAdded => 'Вода записана';
+
+  @override
+  String get lvlPathTitle => 'Путь уровней';
+
+  @override
+  String get lvlPathOpenHint => 'Открыть путь уровней';
+
+  @override
+  String get lvlPathCurrent => 'Сейчас';
+
+  @override
+  String lvlPathLevel(int level) {
+    return 'Уровень $level';
+  }
+
+  @override
+  String lvlPathRank(String rank) {
+    return 'Ранг $rank';
+  }
+
+  @override
+  String lvlPathXp(int into, int need) {
+    return '$into / $need опыта';
+  }
+
+  @override
+  String lvlPathXpLeft(int xp) {
+    return 'До следующего уровня: $xp опыта';
+  }
+
+  @override
+  String lvlPathXpTotal(int xp) {
+    return 'Всего опыта: $xp';
+  }
+
+  @override
+  String lvlPathNextReward(int level) {
+    return 'Ближайшая награда — уровень $level';
+  }
+
+  @override
+  String lvlPathPassedSemantics(int level) {
+    return 'Уровень $level, пройден';
+  }
+
+  @override
+  String lvlPathCurrentSemantics(int level) {
+    return 'Уровень $level, текущий';
+  }
+
+  @override
+  String lvlPathLockedSemantics(int level) {
+    return 'Уровень $level, впереди';
+  }
+
+  @override
+  String lvlRewardDiamonds(int n) {
+    return '+$n ◆';
+  }
+
+  @override
+  String lvlRewardStatPoints(int n) {
+    return '+$n очка характеристик';
+  }
+
+  @override
+  String lvlRewardSkin(String name) {
+    return 'Форма: $name';
+  }
+
+  @override
+  String lvlRewardFeature(String name) {
+    return 'Открывается: $name';
+  }
+
+  @override
+  String lvlRewardBoss(String name) {
+    return 'Босс: $name';
+  }
+
+  @override
+  String get lvlSkinAura => 'Голубая аура';
+
+  @override
+  String get lvlSkinCloak => 'Плащ теней';
+
+  @override
+  String get lvlSkinArmor => 'Доспех охотника';
+
+  @override
+  String get lvlSkinWings => 'Крылья света';
+
+  @override
+  String get lvlSkinCrown => 'Корона ранга S';
+
+  @override
+  String get lvlSkinMonarch => 'Облик Монарха';
+
+  @override
+  String get lvlFeatAutoplan => 'режим «Автоплан»';
+
+  @override
+  String get lvlFeatHunt => 'охота на монстров';
+
+  @override
+  String get lvlFeatFriends => 'совместные квесты с друзьями';
+
+  @override
+  String get lvlFeatRareHunt => 'редкие монстры в охоте';
+
+  @override
+  String get lvlFeatGlobalRating => 'глобальный рейтинг';
+
+  @override
+  String get lvlBossShadowWolf => 'Теневой волк';
+
+  @override
+  String get lvlBossIronGolem => 'Железный голем';
+
+  @override
+  String get lvlBossStormDrake => 'Грозовой дракон';
+
+  @override
+  String get lvlBossFrostWarden => 'Ледяной страж';
+
+  @override
+  String get lvlBossAbyssLord => 'Владыка бездны';
+
+  @override
+  String get qeTitleLevel5 => 'Новичок Системы';
+
+  @override
+  String get qeTitleLevel20 => 'Охотник';
+
+  @override
+  String get qeTitleLevel35 => 'Неудержимый';
+
+  @override
+  String get qeTitleLevel75 => 'Живая легенда';
+
+  @override
+  String get qeTitleLevel100 => 'Монарх';
 }

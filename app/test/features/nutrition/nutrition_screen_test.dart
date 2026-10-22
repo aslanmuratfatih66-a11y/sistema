@@ -230,7 +230,7 @@ void main() {
 
     // Список покупок переехал в «Магазин» → «Покупки»; открываем его экран напрямую.
     pushNutrition<void>(tester.element(find.byType(NutritionScreen)), const ShoppingListScreen());
-    await tester.pump(const Duration(milliseconds: 400));
+    await _settle(tester);
     await _tap(tester, find.byKey(const Key('nut-shop-from-plan')));
     final items = await tester.runAsync(() => db.select(db.shoppingItems).get());
     expect(items, isNotEmpty);

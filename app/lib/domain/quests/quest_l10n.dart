@@ -77,10 +77,46 @@ String? titleLabel(AppLocalizations l, String? titleKey) => switch (titleKey) {
       GameTitles.streak30 => l.qeTitleStreak30,
       GameTitles.bossSlayer => l.qeTitleBossSlayer,
       GameTitles.bossHunter => l.qeTitleBossHunter,
+      GameTitles.level5 => l.qeTitleLevel5,
       GameTitles.level10 => l.qeTitleLevel10,
+      GameTitles.level20 => l.qeTitleLevel20,
       GameTitles.level25 => l.qeTitleLevel25,
+      GameTitles.level35 => l.qeTitleLevel35,
       GameTitles.level50 => l.qeTitleLevel50,
+      GameTitles.level75 => l.qeTitleLevel75,
+      GameTitles.level100 => l.qeTitleLevel100,
       _ => titleKey,
+    };
+
+/// Форма/скин персонажа за уровень.
+String levelSkinLabel(AppLocalizations l, String key) => switch (key) {
+      LevelSkins.aura => l.lvlSkinAura,
+      LevelSkins.cloak => l.lvlSkinCloak,
+      LevelSkins.armor => l.lvlSkinArmor,
+      LevelSkins.wings => l.lvlSkinWings,
+      LevelSkins.crown => l.lvlSkinCrown,
+      LevelSkins.monarch => l.lvlSkinMonarch,
+      _ => key,
+    };
+
+/// Функция, открываемая уровнем.
+String levelFeatureLabel(AppLocalizations l, String key) => switch (key) {
+      LevelFeatures.autoplan => l.lvlFeatAutoplan,
+      LevelFeatures.hunt => l.lvlFeatHunt,
+      LevelFeatures.friends => l.lvlFeatFriends,
+      LevelFeatures.rareHunt => l.lvlFeatRareHunt,
+      LevelFeatures.globalRating => l.lvlFeatGlobalRating,
+      _ => key,
+    };
+
+/// Монстр-босс за уровень.
+String levelBossLabel(AppLocalizations l, String key) => switch (key) {
+      LevelBosses.shadowWolf => l.lvlBossShadowWolf,
+      LevelBosses.ironGolem => l.lvlBossIronGolem,
+      LevelBosses.stormDrake => l.lvlBossStormDrake,
+      LevelBosses.frostWarden => l.lvlBossFrostWarden,
+      LevelBosses.abyssLord => l.lvlBossAbyssLord,
+      _ => key,
     };
 
 /// Причина отдельного штрафа (PenaltyApplied.reasonKey).

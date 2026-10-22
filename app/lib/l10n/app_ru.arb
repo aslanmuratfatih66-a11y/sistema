@@ -4585,5 +4585,144 @@
   "homeQuickFood": "Еда",
   "homeQuickWorkout": "Тренировка",
   "homeQuickWalk": "Прогулка",
-  "homeQuickWaterAdded": "Вода записана"
+  "homeQuickWaterAdded": "Вода записана",
+  "lvlPathTitle": "Путь уровней",
+  "lvlPathOpenHint": "Открыть путь уровней",
+  "lvlPathCurrent": "Сейчас",
+  "lvlPathLevel": "Уровень {level}",
+  "@lvlPathLevel": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathRank": "Ранг {rank}",
+  "@lvlPathRank": {
+    "placeholders": {
+      "rank": {
+        "type": "String"
+      }
+    }
+  },
+  "lvlPathXp": "{into} / {need} опыта",
+  "@lvlPathXp": {
+    "placeholders": {
+      "into": {
+        "type": "int"
+      },
+      "need": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathXpLeft": "До следующего уровня: {xp} опыта",
+  "@lvlPathXpLeft": {
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathXpTotal": "Всего опыта: {xp}",
+  "@lvlPathXpTotal": {
+    "placeholders": {
+      "xp": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathNextReward": "Ближайшая награда — уровень {level}",
+  "@lvlPathNextReward": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathPassedSemantics": "Уровень {level}, пройден",
+  "@lvlPathPassedSemantics": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathCurrentSemantics": "Уровень {level}, текущий",
+  "@lvlPathCurrentSemantics": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlPathLockedSemantics": "Уровень {level}, впереди",
+  "@lvlPathLockedSemantics": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlRewardDiamonds": "+{n} ◆",
+  "@lvlRewardDiamonds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlRewardStatPoints": "+{n} очка характеристик",
+  "@lvlRewardStatPoints": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "lvlRewardSkin": "Форма: {name}",
+  "@lvlRewardSkin": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "lvlRewardFeature": "Открывается: {name}",
+  "@lvlRewardFeature": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "lvlRewardBoss": "Босс: {name}",
+  "@lvlRewardBoss": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "lvlSkinAura": "Голубая аура",
+  "lvlSkinCloak": "Плащ теней",
+  "lvlSkinArmor": "Доспех охотника",
+  "lvlSkinWings": "Крылья света",
+  "lvlSkinCrown": "Корона ранга S",
+  "lvlSkinMonarch": "Облик Монарха",
+  "lvlFeatAutoplan": "режим «Автоплан»",
+  "lvlFeatHunt": "охота на монстров",
+  "lvlFeatFriends": "совместные квесты с друзьями",
+  "lvlFeatRareHunt": "редкие монстры в охоте",
+  "lvlFeatGlobalRating": "глобальный рейтинг",
+  "lvlBossShadowWolf": "Теневой волк",
+  "lvlBossIronGolem": "Железный голем",
+  "lvlBossStormDrake": "Грозовой дракон",
+  "lvlBossFrostWarden": "Ледяной страж",
+  "lvlBossAbyssLord": "Владыка бездны",
+  "qeTitleLevel5": "Новичок Системы",
+  "qeTitleLevel20": "Охотник",
+  "qeTitleLevel35": "Неудержимый",
+  "qeTitleLevel75": "Живая легенда",
+  "qeTitleLevel100": "Монарх"
 }

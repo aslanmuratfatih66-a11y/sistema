@@ -36,11 +36,15 @@ class HomeScreen extends ConsumerWidget {
         onSettings: () => context.push(Routes.settings),
       ),
       if (data != null) ...[
-        StatusPanel(player: data.player, onStatPoints: () => showStatPointsSheet(context)),
-        const QuickActionsPanel(),
+        StatusPanel(
+          player: data.player,
+          onStatPoints: () => showStatPointsSheet(context),
+          onLevel: () => context.push(Routes.levels),
+        ),
         EffectsPanel(effects: data.effects),
         if (data.nextQuest != null)
           NextQuestPanel(key: ValueKey('next-${data.nextQuest!.instanceId}'), quest: data.nextQuest!),
+        const QuickActionsPanel(),
         DayTimelinePanel(plan: data.day),
       ] else if (status.hasError)
         SysErrorState(message: l.qstLoadError)

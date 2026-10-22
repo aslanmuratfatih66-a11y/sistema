@@ -732,6 +732,17 @@ class LocalQuestService implements QuestService {
     for (final t in rules.levelTitlesBetween(before.level, after.level)) {
       if (await _awardTitle(t, now)) title = t;
     }
+    // Награды за уровни (◆) — один раз на уровень (детерминированный id события).
+    for (final (level, reward) in rules.levelRewardsBetween(before.level, after.level)) {
+      if (reward.diamonds <= 0) continue;
+      await _addEvent(
+        id: _sid('levelReward:$level'),
+        type: QuestEventType.bonus,
+        at: now,
+        diamonds: reward.diamonds,
+        payload: {'reason': 'level', 'level': level},
+      );
+    }
     final spent = await _countEvents(QuestEventType.statPointSpent);
     return [
       LevelUp(

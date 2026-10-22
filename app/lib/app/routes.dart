@@ -23,6 +23,9 @@ abstract final class Routes {
   static const account = '/account';
   static const chat = '/chat';
   static const settings = '/settings';
+
+  /// «Путь уровней» (нажатие на LVL на главном).
+  static const levels = '/levels';
   static const learning = '/learning';
 
   /// Расходы ИИ и журнал действий ИИ (с отменой).
