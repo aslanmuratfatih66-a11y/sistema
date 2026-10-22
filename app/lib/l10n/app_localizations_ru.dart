@@ -8102,4 +8102,33 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get qeTitleLevel100 => 'Монарх';
+
+  @override
+  String get talkTitle => 'Разговор';
+
+  @override
+  String get talkTextChat => 'Текст';
+
+  @override
+  String get talkStarting => 'Включаю микрофон…';
+
+  @override
+  String get talkListening => 'Слушаю…';
+
+  @override
+  String get talkSpeaking => 'Отвечаю…';
+
+  @override
+  String get talkPaused => 'Пауза. Коснитесь экрана, чтобы продолжить.';
+
+  @override
+  String get talkOfflineHint => 'ИИ сейчас недоступен — отвечаю заготовкой.';
+
+  @override
+  String get talkExitHint => 'Смахните вниз, чтобы выйти. Коснитесь, чтобы перебить.';
+
+  @override
+  String chrSemanticsTalk(String name) {
+    return '$name: нажмите — короткая реплика; удерживайте 3 секунды — живой разговор; смахните вниз, чтобы убрать';
+  }
 }

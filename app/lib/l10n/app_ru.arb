@@ -4724,5 +4724,21 @@
   "qeTitleLevel20": "Охотник",
   "qeTitleLevel35": "Неудержимый",
   "qeTitleLevel75": "Живая легенда",
-  "qeTitleLevel100": "Монарх"
+  "qeTitleLevel100": "Монарх",
+  "talkTitle": "Разговор",
+  "talkTextChat": "Текст",
+  "talkStarting": "Включаю микрофон…",
+  "talkListening": "Слушаю…",
+  "talkSpeaking": "Отвечаю…",
+  "talkPaused": "Пауза. Коснитесь экрана, чтобы продолжить.",
+  "talkOfflineHint": "ИИ сейчас недоступен — отвечаю заготовкой.",
+  "talkExitHint": "Смахните вниз, чтобы выйти. Коснитесь, чтобы перебить.",
+  "chrSemanticsTalk": "{name}: нажмите — короткая реплика; удерживайте 3 секунды — живой разговор; смахните вниз, чтобы убрать",
+  "@chrSemanticsTalk": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
 }

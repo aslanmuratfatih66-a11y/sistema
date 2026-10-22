@@ -1,11 +1,13 @@
 // Персонаж поверх всех вкладок (SPEC §9.2): живёт внизу над нижней навигацией, гуляет, садится,
 // засыпает без касаний; реагирует на итоги квестов (радость/злость + реплика), после долгого простоя
-// подходит и указывает (point + реплика). Тап — чат, удержание — меню, свайп вниз — «карман».
+// подходит и указывает (point + реплика). Тап — короткая реплика (облачко + голос), удержание 3 с
+// (кольцо заполнения вокруг персонажа) — живой голосовой разговор (/talk), свайп вниз — «карман».
 import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -34,6 +36,7 @@ class CharacterOverlay extends ConsumerStatefulWidget {
     this.nudgeAfter = const Duration(minutes: 20),
     this.autonomous = true,
     this.random,
+    this.holdToTalk = const Duration(seconds: 3),
   });
 
   final double characterHeight;
@@ -48,6 +51,9 @@ class CharacterOverlay extends ConsumerStatefulWidget {
   final bool autonomous;
   final math.Random? random;
 
+  /// Сколько держать палец на персонаже, чтобы начать живой разговор.
+  final Duration holdToTalk;
+
   /// Ключ AppSettings: персонаж убран в карман ('true'/'false').
   static const pocketSettingKey = 'character.pocketed';
 
@@ -55,9 +61,13 @@ class CharacterOverlay extends ConsumerStatefulWidget {
   ConsumerState<CharacterOverlay> createState() => _CharacterOverlayState();
 }
 
-class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with SingleTickerProviderStateMixin {
+class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with TickerProviderStateMixin {
   late final math.Random _rnd = widget.random ?? math.Random();
   late final AnimationController _walk = AnimationController(vsync: this)..addStatusListener(_onWalkStatus);
+  // Удержание для живого разговора: заполняется за holdToTalk, по завершении — /talk.
+  late final AnimationController _hold = AnimationController(vsync: this, duration: widget.holdToTalk)
+    ..addStatusListener(_onHoldStatus);
+  bool _holdFired = false;
   // Фиксируем сервис в initState: ref нельзя использовать в dispose.
   late final TtsService _tts;
 
@@ -121,6 +131,7 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
     _outcomeTimer?.cancel();
     _outcomeSub?.cancel();
     _walk.dispose();
+    _hold.dispose();
     if (_speaking) _tts.stop();
     super.dispose();
   }
@@ -254,39 +265,42 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
 
   // ---- Жесты ----
 
-  void _openChat() {
+  /// Обычный тап: короткая реплика (облачко + голос), чат не открывается.
+  void _tapTalk() {
     _resetSleep();
-    GoRouter.maybeOf(context)?.push(Routes.chat);
+    if (_holdFired) {
+      _holdFired = false;
+      return;
+    }
+    if (!_active) return;
+    final l = AppLocalizations.of(context);
+    _say(tapLine(l, _mode, _playerName(l), _rnd), CharacterState.happy);
   }
 
-  Future<void> _showMenu() async {
+  void _holdStart() {
+    _holdFired = false;
+    _hold.forward(from: 0);
+  }
+
+  void _holdCancel() {
+    if (_hold.isAnimating || (_hold.value > 0 && !_holdFired)) _hold.reset();
+  }
+
+  void _onHoldStatus(AnimationStatus s) {
+    if (s != AnimationStatus.completed || !mounted) return;
+    _holdFired = true;
+    _hold.reset();
+    HapticFeedback.mediumImpact();
+    _openTalk();
+  }
+
+  /// Живой голосовой разговор (экран /talk; оттуда доступен и текстовый чат).
+  void _openTalk() {
     _resetSleep();
-    final box = _characterKey.currentContext?.findRenderObject() as RenderBox?;
-    final overlay = Overlay.maybeOf(context)?.context.findRenderObject() as RenderBox?;
-    if (box == null || overlay == null) return;
-    final l = AppLocalizations.of(context);
-    final topLeft = box.localToGlobal(Offset.zero, ancestor: overlay);
-    final rect = RelativeRect.fromRect(topLeft & box.size, Offset.zero & overlay.size);
-    final choice = await showMenu<String>(
-      context: context,
-      position: rect,
-      color: SysColors.panelBottom,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(SysDims.radius),
-        side: const BorderSide(color: SysColors.panelBorder),
-      ),
-      items: [
-        PopupMenuItem(value: 'chat', child: Text(l.chrMenuChat, style: SysText.body)),
-        PopupMenuItem(value: 'pocket', child: Text(l.chrMenuPocket, style: SysText.body)),
-      ],
-    );
-    if (!mounted) return;
-    switch (choice) {
-      case 'chat':
-        _openChat();
-      case 'pocket':
-        _setPocketed(true);
-    }
+    if (_speaking) _tts.stop();
+    _speechSerial++;
+    if (_bubble != null) setState(() => _bubble = null);
+    GoRouter.maybeOf(context)?.push(Routes.talk);
   }
 
   void _react(CharacterReaction r) {
@@ -404,6 +418,7 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
             const bubbleW = 220.0;
             final bubbleLeft = (left + w / 2 - bubbleW / 2).clamp(4.0, math.max(4.0, c.maxWidth - bubbleW - 4)).toDouble();
             final bubble = _bubble;
+            final ring = h + 16;
             return Stack(
               clipBehavior: Clip.none,
               children: [
@@ -418,6 +433,21 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
                       onTap: _hideBubble,
                     ),
                   ),
+                // Кольцо удержания вокруг персонажа (появляется не сразу, чтобы не мигать на тапах).
+                Positioned(
+                  left: left + w / 2 - ring / 2,
+                  bottom: h / 2 - ring / 2,
+                  width: ring,
+                  height: ring,
+                  child: IgnorePointer(
+                    child: AnimatedBuilder(
+                      animation: _hold,
+                      builder: (context, _) => _hold.value < .08
+                          ? const SizedBox.shrink()
+                          : CustomPaint(key: const ValueKey('chrHoldRing'), painter: _HoldRingPainter(_hold.value)),
+                    ),
+                  ),
+                ),
                 Positioned(
                   left: left,
                   bottom: 0,
@@ -427,24 +457,32 @@ class _CharacterOverlayState extends ConsumerState<CharacterOverlay> with Single
                     offset: Offset(0, _dragDy),
                     child: Semantics(
                       button: true,
-                      label: l.chrSemanticsChat(archetypeName(l, archetype)),
-                      child: GestureDetector(
-                        key: const ValueKey('chrOverlayCharacter'),
-                        behavior: HitTestBehavior.opaque,
-                        onTap: _openChat,
-                        onLongPress: _showMenu,
-                        onVerticalDragUpdate: (d) => setState(() => _dragDy = math.max(0.0, _dragDy + d.delta.dy)),
-                        onVerticalDragEnd: (d) {
-                          if (_dragDy > 28 || (d.primaryVelocity ?? 0) > 400) {
-                            _setPocketed(true);
-                          } else {
-                            setState(() => _dragDy = 0);
-                          }
-                        },
-                        child: ExcludeSemantics(
-                          child: renderer.build(
-                            CharacterRenderSpec(archetype: archetype, state: _state, height: h, facingLeft: _facingLeft),
-                            key: _characterKey,
+                      label: l.chrSemanticsTalk(archetypeName(l, archetype)),
+                      onTap: _tapTalk,
+                      onLongPress: _openTalk,
+                      child: Listener(
+                        onPointerDown: (_) => _holdStart(),
+                        onPointerUp: (_) => _holdCancel(),
+                        onPointerCancel: (_) => _holdCancel(),
+                        child: GestureDetector(
+                          key: const ValueKey('chrOverlayCharacter'),
+                          behavior: HitTestBehavior.opaque,
+                          excludeFromSemantics: true,
+                          onTap: _tapTalk,
+                          onVerticalDragStart: (_) => _holdCancel(),
+                          onVerticalDragUpdate: (d) => setState(() => _dragDy = math.max(0.0, _dragDy + d.delta.dy)),
+                          onVerticalDragEnd: (d) {
+                            if (_dragDy > 28 || (d.primaryVelocity ?? 0) > 400) {
+                              _setPocketed(true);
+                            } else {
+                              setState(() => _dragDy = 0);
+                            }
+                          },
+                          child: ExcludeSemantics(
+                            child: renderer.build(
+                              CharacterRenderSpec(archetype: archetype, state: _state, height: h, facingLeft: _facingLeft),
+                              key: _characterKey,
+                            ),
                           ),
                         ),
                       ),
@@ -534,4 +572,31 @@ class _PocketTab extends StatelessWidget {
           ),
         ),
       );
+}
+
+/// Кольцо заполнения при удержании персонажа: тонкий трек + светящаяся дуга по часовой.
+class _HoldRingPainter extends CustomPainter {
+  const _HoldRingPainter(this.value);
+
+  final double value;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rect = (Offset.zero & size).deflate(3);
+    final track = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3
+      ..color = SysColors.accent.withValues(alpha: .18);
+    canvas.drawOval(rect, track);
+    final arc = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3
+      ..strokeCap = StrokeCap.round
+      ..color = SysColors.accentLighter
+      ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 3);
+    canvas.drawArc(rect, -math.pi / 2, 2 * math.pi * value.clamp(0.0, 1.0), false, arc);
+  }
+
+  @override
+  bool shouldRepaint(_HoldRingPainter old) => old.value != value;
 }

@@ -23,6 +23,7 @@ import '../features/walks/walks_screen.dart';
 import '../features/ai_journal/ai_journal_screen.dart';
 import '../features/auth/account_screen.dart';
 import '../features/chat/chat_screen.dart';
+import '../features/chat/live_talk_screen.dart';
 import '../features/learning/learning_screen.dart';
 import '../features/workouts/workouts_screen.dart';
 import '../features/alarm/alarm_ring_screen.dart';
@@ -60,6 +61,7 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.walks, builder: (_, _) => const WalksScreen()),
         GoRoute(path: Routes.account, builder: (_, _) => const AccountScreen()),
         GoRoute(path: Routes.chat, builder: (_, _) => const ChatScreen()),
+        GoRoute(path: Routes.talk, builder: (_, _) => const LiveTalkScreen()),
         GoRoute(path: Routes.settings, builder: (_, _) => const SettingsScreen()),
         GoRoute(path: Routes.levels, builder: (_, _) => const LevelPathScreen()),
         GoRoute(path: Routes.learning, builder: (_, _) => const LearningScreen()),

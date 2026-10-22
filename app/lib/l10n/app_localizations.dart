@@ -134,6 +134,60 @@ abstract class AppLocalizations {
   /// **'Ещё'**
   String get navMore;
 
+  /// No description provided for @talkTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Разговор'**
+  String get talkTitle;
+
+  /// No description provided for @talkTextChat.
+  ///
+  /// In ru, this message translates to:
+  /// **'Текст'**
+  String get talkTextChat;
+
+  /// No description provided for @talkStarting.
+  ///
+  /// In ru, this message translates to:
+  /// **'Включаю микрофон…'**
+  String get talkStarting;
+
+  /// No description provided for @talkListening.
+  ///
+  /// In ru, this message translates to:
+  /// **'Слушаю…'**
+  String get talkListening;
+
+  /// No description provided for @talkSpeaking.
+  ///
+  /// In ru, this message translates to:
+  /// **'Отвечаю…'**
+  String get talkSpeaking;
+
+  /// No description provided for @talkPaused.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пауза. Коснитесь экрана, чтобы продолжить.'**
+  String get talkPaused;
+
+  /// No description provided for @talkOfflineHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'ИИ сейчас недоступен — отвечаю заготовкой.'**
+  String get talkOfflineHint;
+
+  /// No description provided for @talkExitHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Смахните вниз, чтобы выйти. Коснитесь, чтобы перебить.'**
+  String get talkExitHint;
+
+  /// No description provided for @chrSemanticsTalk.
+  ///
+  /// In ru, this message translates to:
+  /// **'{name}: нажмите — короткая реплика; удерживайте 3 секунды — живой разговор; смахните вниз, чтобы убрать'**
+  String chrSemanticsTalk(String name);
+
   /// No description provided for @lvlPathTitle.
   ///
   /// In ru, this message translates to:

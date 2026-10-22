@@ -8048,4 +8048,33 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get qeTitleLevel100 => 'Hükümdar';
+
+  @override
+  String get talkTitle => 'Sohbet';
+
+  @override
+  String get talkTextChat => 'Metin';
+
+  @override
+  String get talkStarting => 'Mikrofon açılıyor…';
+
+  @override
+  String get talkListening => 'Dinliyorum…';
+
+  @override
+  String get talkSpeaking => 'Yanıtlıyorum…';
+
+  @override
+  String get talkPaused => 'Duraklatıldı. Devam etmek için ekrana dokunun.';
+
+  @override
+  String get talkOfflineHint => 'Yapay zekâ şu an kullanılamıyor — hazır yanıt veriyorum.';
+
+  @override
+  String get talkExitHint => 'Çıkmak için aşağı kaydırın. Sözümü kesmek için dokunun.';
+
+  @override
+  String chrSemanticsTalk(String name) {
+    return '$name: dokunun — kısa bir söz; 3 saniye basılı tutun — canlı sohbet; kaldırmak için aşağı kaydırın';
+  }
 }

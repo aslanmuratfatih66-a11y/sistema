@@ -22,6 +22,9 @@ abstract final class Routes {
   static const walks = '/walks';
   static const account = '/account';
   static const chat = '/chat';
+
+  /// Живой голосовой разговор с персонажем (удержание персонажа 3 с).
+  static const talk = '/talk';
   static const settings = '/settings';
 
   /// «Путь уровней» (нажатие на LVL на главном).
