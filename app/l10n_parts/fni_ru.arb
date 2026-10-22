@@ -1,0 +1,127 @@
+{
+  "fniAccount": "Счёт",
+  "fniAuto": "Автоматически",
+  "fniCategory": "Категория",
+  "fniQrNotReceipt": "Это не QR-код кассового чека.",
+  "fniDuplicate": "Эта операция уже есть.",
+  "fniAdded": "Операция добавлена.",
+  "fniSaveFailed": "Не удалось сохранить операцию.",
+  "fniRetry": "Ещё раз",
+  "fniReceiptTitle": "Чек",
+  "fniStore": "Магазин",
+  "fniDate": "Дата",
+  "fniKind": "Тип",
+  "fniRefund": "Возврат",
+  "fniTotal": "Итого",
+  "fniQrNoItems": "Позиции чека из ФНС пока недоступны — записана сумма из QR.",
+  "fniAdd": "Добавить",
+  "fniReceiptQrTitle": "Чек по QR",
+  "fniReceiptPhotoTitle": "Чек по фото",
+  "fniNoCamera": "Камера недоступна. Разрешите доступ в настройках.",
+  "fniClose": "Закрыть",
+  "fniQrHint": "Наведите камеру на QR-код чека",
+  "fniFileFailed": "Не удалось открыть файл.",
+  "fniFileTooLarge": "Файл больше 3 МБ. Выгрузите выписку за меньший период.",
+  "fniStatementTitle": "Импорт выписки",
+  "fniStatementFile": "Файл выписки",
+  "fniStatementHint": "Выгрузите выписку в банковском приложении (CSV или PDF) и выберите файл.",
+  "fniPickFile": "Выбрать файл",
+  "fniStatementParsing": "Разбираю выписку…",
+  "fniStatementEmpty": "Операций в файле не найдено.",
+  "fniBank": "Банк",
+  "fniSelectAll": "Все",
+  "fniAlreadyImported": "уже есть",
+  "fniBanksTitle": "Банки",
+  "fniBanksAndroidOnly": "Чтение уведомлений и SMS банков доступно только на Android. На iPhone используйте импорт выписки.",
+  "fniAccess": "Доступ",
+  "fniAccessNotifications": "Уведомления банков",
+  "fniOpenSettings": "Открыть настройки",
+  "fniAccessSms": "SMS банков",
+  "fniAllow": "Разрешить",
+  "fniAccessHint": "Читаются только сообщения выбранных банков. Тексты хранятся в приложении и синхронизируются с вашим сервером.",
+  "fniBanksList": "Мои банки",
+  "fniProcessNow": "Обработать",
+  "fniSmsHistory": "SMS за 30 дней",
+  "fniGranted": "Есть",
+  "fniOtherBank": "Другой банк",
+  "fniSourceNotifications": "Уведомления приложения",
+  "fniSourceSms": "SMS",
+  "fniPackages": "Пакеты приложений",
+  "fniExtraSenders": "Свои отправители SMS",
+  "fniExtraSendersHint": "Имя или номер, через запятую",
+  "fniInbox": "Входящие",
+  "fniInboxEmpty": "Пока ничего. Новые уведомления и SMS банков появятся здесь.",
+  "fniStatusReview": "Проверьте",
+  "fniStatusAdded": "Добавлено",
+  "fniStatusDuplicate": "Дубль",
+  "fniStatusIgnored": "Не операция",
+  "fniStatusFailed": "Ошибка",
+  "fniStatusPending": "Ожидает",
+  "fniConfirm": "Верно",
+  "fniFix": "Исправить",
+  "fniAddManually": "Добавить вручную",
+  "fniFixInFinance": "Измените или удалите эту операцию в разделе «Финансы».",
+  "fniIgnore": "Игнор",
+  "fniEditTitle": "Операция",
+  "fniExpense": "Расход",
+  "fniIncome": "Доход",
+  "fniTransfer": "Перевод",
+  "fniAmount": "Сумма",
+  "fniMerchant": "Где / от кого",
+  "fniCancel": "Отмена",
+  "fniSave": "Сохранить",
+  "fniImported": "Добавлено: {added}, уже было: {dup}",
+  "@fniImported": {
+    "placeholders": {
+      "added": {
+        "type": "int"
+      },
+      "dup": {
+        "type": "int"
+      }
+    }
+  },
+  "fniImporting": "Импорт {done} / {total}",
+  "@fniImporting": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "fniImportN": "Импортировать ({n})",
+  "@fniImportN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniRows": "Операции: {n}",
+  "@fniRows": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniSmsFound": "Найдено SMS: {n}",
+  "@fniSmsFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniSenders": "Отправители: {list}",
+  "@fniSenders": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  }
+}

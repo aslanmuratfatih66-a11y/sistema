@@ -1,0 +1,127 @@
+{
+  "fniAccount": "Hesap",
+  "fniAuto": "Otomatik",
+  "fniCategory": "Kategori",
+  "fniQrNotReceipt": "Bu bir fiş QR kodu değil.",
+  "fniDuplicate": "Bu işlem zaten kayıtlı.",
+  "fniAdded": "İşlem eklendi.",
+  "fniSaveFailed": "İşlem kaydedilemedi.",
+  "fniRetry": "Tekrar dene",
+  "fniReceiptTitle": "Fiş",
+  "fniStore": "Mağaza",
+  "fniDate": "Tarih",
+  "fniKind": "Tür",
+  "fniRefund": "İade",
+  "fniTotal": "Toplam",
+  "fniQrNoItems": "Fiş kalemleri şu an alınamıyor — QR'daki tutar kaydedilecek.",
+  "fniAdd": "Ekle",
+  "fniReceiptQrTitle": "QR ile fiş",
+  "fniReceiptPhotoTitle": "Fotoğrafla fiş",
+  "fniNoCamera": "Kamera kullanılamıyor. Ayarlardan izin verin.",
+  "fniClose": "Kapat",
+  "fniQrHint": "Kamerayı fişteki QR koduna tutun",
+  "fniFileFailed": "Dosya açılamadı.",
+  "fniFileTooLarge": "Dosya 3 MB'den büyük. Daha kısa bir dönem için ekstre alın.",
+  "fniStatementTitle": "Ekstre içe aktarma",
+  "fniStatementFile": "Ekstre dosyası",
+  "fniStatementHint": "Banka uygulamasından ekstreyi (CSV veya PDF) indirin ve dosyayı seçin.",
+  "fniPickFile": "Dosya seç",
+  "fniStatementParsing": "Ekstre okunuyor…",
+  "fniStatementEmpty": "Dosyada işlem bulunamadı.",
+  "fniBank": "Banka",
+  "fniSelectAll": "Tümü",
+  "fniAlreadyImported": "zaten var",
+  "fniBanksTitle": "Bankalar",
+  "fniBanksAndroidOnly": "Banka bildirimleri ve SMS okuma yalnızca Android'de var. iPhone'da ekstre içe aktarmayı kullanın.",
+  "fniAccess": "Erişim",
+  "fniAccessNotifications": "Banka bildirimleri",
+  "fniOpenSettings": "Ayarları aç",
+  "fniAccessSms": "Banka SMS'leri",
+  "fniAllow": "İzin ver",
+  "fniAccessHint": "Yalnızca seçili bankaların mesajları okunur. Metinler uygulamada saklanır ve sunucunuzla eşitlenir.",
+  "fniBanksList": "Bankalarım",
+  "fniProcessNow": "İşle",
+  "fniSmsHistory": "Son 30 gün SMS",
+  "fniGranted": "Var",
+  "fniOtherBank": "Diğer banka",
+  "fniSourceNotifications": "Uygulama bildirimleri",
+  "fniSourceSms": "SMS",
+  "fniPackages": "Uygulama paketleri",
+  "fniExtraSenders": "Ek SMS göndericileri",
+  "fniExtraSendersHint": "Ad veya numara, virgülle",
+  "fniInbox": "Gelenler",
+  "fniInboxEmpty": "Henüz bir şey yok. Yeni banka bildirimleri ve SMS'ler burada görünecek.",
+  "fniStatusReview": "Kontrol edin",
+  "fniStatusAdded": "Eklendi",
+  "fniStatusDuplicate": "Tekrar",
+  "fniStatusIgnored": "İşlem değil",
+  "fniStatusFailed": "Hata",
+  "fniStatusPending": "Bekliyor",
+  "fniConfirm": "Doğru",
+  "fniFix": "Düzelt",
+  "fniAddManually": "Elle ekle",
+  "fniFixInFinance": "Bu işlemi «Finans» bölümünde düzenleyin veya silin.",
+  "fniIgnore": "Yok say",
+  "fniEditTitle": "İşlem",
+  "fniExpense": "Gider",
+  "fniIncome": "Gelir",
+  "fniTransfer": "Transfer",
+  "fniAmount": "Tutar",
+  "fniMerchant": "Nerede / kimden",
+  "fniCancel": "İptal",
+  "fniSave": "Kaydet",
+  "fniImported": "Eklendi: {added}, zaten vardı: {dup}",
+  "@fniImported": {
+    "placeholders": {
+      "added": {
+        "type": "int"
+      },
+      "dup": {
+        "type": "int"
+      }
+    }
+  },
+  "fniImporting": "İçe aktarılıyor {done} / {total}",
+  "@fniImporting": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "fniImportN": "İçe aktar ({n})",
+  "@fniImportN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniRows": "İşlemler: {n}",
+  "@fniRows": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniSmsFound": "Bulunan SMS: {n}",
+  "@fniSmsFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniSenders": "Göndericiler: {list}",
+  "@fniSenders": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  }
+}

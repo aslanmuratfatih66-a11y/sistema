@@ -1,0 +1,100 @@
+{
+  "almTitle": "Alarmlar",
+  "almRingTitle": "Kalk!",
+  "almRingBodySquats": "Kapatmak için {count} squat yapın",
+  "@almRingBodySquats": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "almRingBodyQr": "Kapatmak için başka odadaki QR kodu okutun",
+  "almDoTask": "Görevi yap",
+  "almStop": "Durdur",
+  "almChannelName": "Alarm",
+  "almChannelDesc": "Görevli alarmın çalması",
+  "almFallbackBody": "Alarm kapatılmadı — uygulamayı açın ve görevi yapın.",
+  "almReasonWake": "Alarmla kalkış",
+  "almPermTitle": "İzinler",
+  "almPermReady": "Alarm hazır: kilit ekranının üzerinde çalar ve sadece görevle kapanır.",
+  "almPermExact": "Tam zamanlı alarmlar",
+  "almPermFullScreen": "Kilit ekranında gösterme",
+  "almPermNotifications": "Bildirimler",
+  "almPermAlarmKit": "Sistem alarmı (AlarmKit)",
+  "almPermFallback": "Sistem alarmı kullanılamıyor — bir dizi yüksek sesli bildirim çalacak. Gece sessiz modu ve «Odak»ı açmayın.",
+  "almPermBackup": "Alarmı «Durdur» ile kapatırsanız, 3 dakika sonra görevi yapana kadar bildirimler gelir.",
+  "almPermGrant": "İzin ver",
+  "almPermOn": "var",
+  "almPermOff": "yok",
+  "almEmpty": "Henüz alarm yok. İlkini ekleyin — sadece görevle kapatılabilecek.",
+  "almAdd": "Alarm ekle",
+  "almNew": "Yeni alarm",
+  "almEditTitle": "Alarm",
+  "almDaysEveryday": "Her gün",
+  "almDaysWeekdays": "Hafta içi",
+  "almDaysWeekend": "Hafta sonu",
+  "almDaysOnce": "Bir kez",
+  "almDayMon": "Pzt",
+  "almDayTue": "Sal",
+  "almDayWed": "Çar",
+  "almDayThu": "Per",
+  "almDayFri": "Cum",
+  "almDaySat": "Cmt",
+  "almDaySun": "Paz",
+  "almDaysHint": "Hiç gün seçilmedi — alarm bir kez çalacak.",
+  "almTime": "Saat",
+  "almDays": "Günler",
+  "almLabel": "Etiket",
+  "almTask": "Görev",
+  "almTaskSquats": "Squat",
+  "almTaskQr": "QR kod",
+  "almTaskSquatsShort": "{count} squat",
+  "@almTaskSquatsShort": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "almSquatsCount": "Squat sayısı",
+  "almQrHint": "Kodu yazdırıp başka bir odaya asın — örneğin mutfağa veya banyoya. Alarmı kapatmak için kalkıp yanına gitmeniz gerekecek.",
+  "almQrShare": "Yazdırmak için paylaş",
+  "almQrShareText": "«Sistem» alarmının QR kodu. Başka bir odaya asın.",
+  "almQrRegenerate": "Yeni kod",
+  "almQrShareFailed": "Kod paylaşılamadı.",
+  "almDiscipline": "Disiplin modu",
+  "almDisciplineHint": "Disiplin modunun kalkış alarmı: saat ve günleri mod belirler, görev değiştirilebilir.",
+  "almTest": "1 dk sonra dene",
+  "almTestScheduled": "Deneme alarmı bir dakika sonra çalacak. Ekranı kilitleyebilirsiniz.",
+  "almTestRing": "Deneme",
+  "almDeleteConfirm": "Alarm silinsin mi?",
+  "almNotFound": "Alarm bulunamadı.",
+  "almSquatsHint": "Telefonu göğsünüzde tutun ve tam squat yapın — aşağı ve yukarı.",
+  "almSquatsProgress": "{done} / {total}",
+  "@almSquatsProgress": {
+    "placeholders": {
+      "done": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "almSensorError": "Hareket sensörü kullanılamıyor.",
+  "almHoldFallback": "Kapatmak için basılı tutun",
+  "almScanQr": "QR okut",
+  "almScanTitle": "Alarm QR kodu",
+  "almScanHint": "Kamerayı yazdırılmış koda tutun.",
+  "almScanNoCamera": "Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin.",
+  "almQrWrong": "Bu doğru kod değil.",
+  "almQrMissing": "Bu alarm için kod oluşturulmadı — squat yapın.",
+  "almSnooze": "5 dk ertele ({left} kaldı)",
+  "@almSnooze": {
+    "placeholders": {
+      "left": {"type": "int"}
+    }
+  },
+  "almSnoozeNone": "Artık ertelenemez.",
+  "almReward": "Zamanında kalkış için +{count} ◆",
+  "@almReward": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "almDone": "Kalkış sayıldı",
+  "almDoneBody": "Alarm kapatıldı. Günaydın!"
+}

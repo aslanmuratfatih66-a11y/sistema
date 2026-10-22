@@ -97,5 +97,5 @@
   "visReceiptTitle": "Чек",
   "visReceiptStore": "Магазин",
   "visReceiptDate": "Дата",
-  "visReceiptFinanceLater": "Чек сохранён. Запись в финансы появится в следующем обновлении."
+  "visReceiptFinanceLater": "Проверьте позиции — дальше чек можно записать в финансы."
 }

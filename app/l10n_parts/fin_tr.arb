@@ -1,0 +1,379 @@
+{
+  "finTitle": "Finans",
+  "finBalance": "Bakiye",
+  "finCryptoValue": "Kripto",
+  "finFreeToMonthEnd": "Ay sonuna kadar serbest",
+  "finNextIncome": "Sıradaki gelir",
+  "finMonthExpenses": "Bu ayki giderler",
+  "finMonthIncome": "Bu ayki gelirler",
+  "finMissingRates": "Bazı tutarların kuru yok, toplama dahil edilmedi. Kurları güncelleyin.",
+  "finRatesNever": "Kurlar henüz yüklenmedi",
+  "finRatesUpdated": "Kurlar: {time}",
+  "@finRatesUpdated": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "finRefreshRates": "Kurları güncelle",
+  "finRefreshing": "Güncelleniyor…",
+  "finInput": "Giriş",
+  "finExpense": "Gider",
+  "finIncome": "Gelir",
+  "finTransfer": "Transfer",
+  "finExpenses": "Giderler",
+  "finIncomes": "Gelirler",
+  "finReceiptQr": "Fiş QR",
+  "finReceiptPhoto": "Fiş fotoğrafı",
+  "finBanks": "Bankalar",
+  "finStatement": "Hesap özeti",
+  "finMarket": "Market",
+  "finAccounts": "Hesaplar",
+  "finNoAccounts": "Henüz hesap yok. Nakit veya kart ekleyin ya da bir gider girin; «Nakit» hesabı otomatik oluşur.",
+  "finManageAccounts": "Hesaplar ve kripto",
+  "finBudgets": "Limitler",
+  "finBudgetsEmptyShort": "Limit yok.",
+  "finBudgetsProposed": "Yapay zekâ önerisi: {n} — onay bekliyor",
+  "@finBudgetsProposed": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finManageBudgets": "Limitleri ayarla",
+  "finSoon": "Yakında",
+  "finChargeSoon": "yakında ödeme",
+  "finRecent": "Son işlemler",
+  "finNoOperations": "İşlem yok.",
+  "finAllOperations": "Tüm işlemler",
+  "finMore": "Bölümler",
+  "finReports": "Raporlar",
+  "finGoals": "Birikim hedefleri",
+  "finSubscriptions": "Abonelikler",
+  "finDebts": "Borçlar",
+  "finSettings": "Finans ayarları",
+  "finWarning": "Uyarı",
+  "finSaveError": "Kaydedilemedi",
+  "finAll": "Tümü",
+  "finChoose": "Seç",
+  "finTxNew": "Yeni işlem",
+  "finTxEdit": "İşlem",
+  "finTxDeleteConfirm": "İşlem silinsin mi?",
+  "finAmount": "Tutar",
+  "finAccount": "Hesap",
+  "finFromAccount": "Hesaptan",
+  "finToAccount": "Hesaba",
+  "finToAmount": "Yatırılan tutar",
+  "finToAmountHint": "Hesaplar farklı para biriminde: yatırılan tutarı girin, yoksa kurdan hesaplanır.",
+  "finTransferNeedsTwo": "İki farklı hesap seçin",
+  "finNoAccountsAuto": "Nakit (oluşturulacak)",
+  "finNoAccountsAutoHint": "«Nakit · RUB» hesabı otomatik oluşturulacak.",
+  "finCategory": "Kategori",
+  "finCategoryAutoHint": "seçilmedi — Sistem satıcıya göre tahmin eder",
+  "finMerchant": "Nerede",
+  "finPayer": "Kimden",
+  "finDate": "Tarih",
+  "finTime": "Saat",
+  "finNote": "Not",
+  "finSource": "Kaynak",
+  "finNoCategory": "Kategorisiz",
+  "finOperations": "İşlemler",
+  "finAddOperation": "İşlem ekle",
+  "finOperationsCount": "İşlem: {n}",
+  "@finOperationsCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finShowMore": "Daha fazla",
+  "finPeriodWeek": "Hafta",
+  "finPeriodMonth": "Ay",
+  "finPeriodYear": "Yıl",
+  "finPeriodAll": "Tümü",
+  "finAccountAdd": "Hesap ekle",
+  "finAccountNew": "Yeni hesap",
+  "finAccountEdit": "Hesap",
+  "finAccountDeleteConfirm": "Hesap silinsin mi? İşlemler kalır ama hesapsız.",
+  "finAccountKind": "Tür",
+  "finAccKindCash": "Nakit",
+  "finAccKindCard": "Kart",
+  "finAccKindDeposit": "Mevduat",
+  "finAccKindCrypto": "Kripto cüzdan",
+  "finAccountName": "Ad",
+  "finCurrency": "Para birimi",
+  "finOpeningBalance": "Başlangıç bakiyesi",
+  "finOpeningBalanceHint": "Kayda başlamadan önce hesaptaki tutar.",
+  "finBank": "Banka",
+  "finBankHint": "Örneğin: Ziraat, Garanti, İş Bankası",
+  "finCardLast4": "Kartın son 4 hanesi",
+  "finCardLast4Hint": "Banka bildirimlerini eşleştirmek için",
+  "finArchive": "Arşivde",
+  "finArchiveHint": "Listelerden ve toplamdan gizle",
+  "finArchived": "Arşiv",
+  "finCrypto": "Kripto",
+  "finCryptoEmpty": "Coin yok.",
+  "finCryptoRateNote": "Miktar elle girilir, kur otomatik (sunucu üzerinden CoinGecko).",
+  "finCryptoAdd": "Coin ekle",
+  "finCryptoEdit": "Coin",
+  "finCryptoSymbol": "Sembol",
+  "finCryptoCoinId": "CoinGecko id",
+  "finCryptoCoinIdHint": "bitcoin, ethereum, the-open-network…",
+  "finCryptoAmount": "Miktar",
+  "finNoRate": "kur yok",
+  "finCategories": "Kategoriler",
+  "finCategoryAdd": "Yeni kategori",
+  "finCategoryName": "Ad",
+  "finCategoryIcon": "Simge",
+  "finJunkFood": "Abur cubur",
+  "finJunkFoodHint": "Buradaki alışverişlere «fast food vergisi» (◆) uygulanır",
+  "finHide": "Gizle",
+  "finHidden": "gizli",
+  "finHideHint": "Girişte gösterme",
+  "finCatGroceries": "Market alışverişi",
+  "finCatCafe": "Kafe ve kahve",
+  "finCatFastfood": "Fast food",
+  "finCatTransport": "Ulaşım",
+  "finCatHousing": "Konut",
+  "finCatUtilities": "Faturalar",
+  "finCatPhone": "Telefon ve internet",
+  "finCatHealth": "Sağlık ve eczane",
+  "finCatBeauty": "Bakım ve güzellik",
+  "finCatClothes": "Giyim",
+  "finCatEducation": "Eğitim ve kitap",
+  "finCatSport": "Spor",
+  "finCatFun": "Eğlence",
+  "finCatSubscriptions": "Abonelikler",
+  "finCatGifts": "Hediyeler",
+  "finCatMarketplace": "Pazaryerleri",
+  "finCatOther": "Diğer",
+  "finCatStipend": "Burs",
+  "finCatSalary": "Maaş",
+  "finCatGiftIncome": "Hediye geliri",
+  "finCatCashback": "Nakit iade",
+  "finCatOtherIncome": "Diğer gelirler",
+  "finBudgetsActive": "Aktif limitler",
+  "finBudgetsEmpty": "Limit yok. Elle ekleyin veya yapay zekâdan öneri isteyin.",
+  "finBudgetsRule": "Limiti aştınız — ◆ ceza, dönemi limit içinde bitirdiniz — ◆ ödül.",
+  "finBudgetAdd": "Limit ekle",
+  "finBudgetEdit": "Limit",
+  "finLimit": "Limit",
+  "finRewardDiamonds": "Ödül",
+  "finPenaltyDiamonds": "Ceza",
+  "finBudgetsAi": "Yapay zekâ planı",
+  "finBudgetsAiReady": "Gözlem: {days} gün — yapay zekâdan limit önerisi isteyebilirsiniz.",
+  "@finBudgetsAiReady": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "finBudgetsAiNeedMore": "2–4 haftalık gözlem gerekli (şu an {days} gün). Harcamalarınızı kaydedin — yapay zekâ alışkanlıklarınıza göre limit önerecek.",
+  "@finBudgetsAiNeedMore": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "finBudgetsAiAsk": "Limit öner (YZ)",
+  "finAiSuggested": "Önerilen limit: {n}. Onaylayın veya reddedin.",
+  "@finAiSuggested": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finAiNoSuggestions": "Yapay zekâ limit önermedi — veri henüz az.",
+  "finAccept": "Kabul et",
+  "finReject": "Reddet",
+  "finAiThinking": "Sistem düşünüyor…",
+  "finAiNotSignedIn": "Yapay zekâ hesaba giriş yapınca kullanılabilir. Diğer her şey çevrimdışı çalışır.",
+  "finAiOffline": "Ağ yok. Daha sonra deneyin — veriler cihazda kayıtlı.",
+  "finAiBudget": "Yapay zekâ harcama limiti doldu.",
+  "finAiRateLimited": "Çok fazla istek. Biraz bekleyin.",
+  "finAiUnavailable": "Yapay zekâ şu an kullanılamıyor. Daha sonra deneyin.",
+  "finGoalsEmpty": "Hedef yok.",
+  "finGoalsHint": "İlerleme — seçilen birikim hesabının bakiyesi.",
+  "finGoalAdd": "Yeni hedef",
+  "finGoalEdit": "Hedef",
+  "finGoalTitle": "Ne için biriktiriyoruz",
+  "finGoalTarget": "Gereken tutar",
+  "finGoalAccount": "Birikim hesabı",
+  "finGoalAccountHint": "Bu hesabın bakiyesi — biriken tutar",
+  "finGoalDeadline": "Hangi tarihe kadar",
+  "finGoalNoAccount": "İlerlemeyi görmek için birikim hesabı seçin.",
+  "finGoalReached": "Hedefe ulaşıldı!",
+  "finUntil": "{date} tarihine kadar",
+  "@finUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "finSubscriptionsEmpty": "Abonelik yok.",
+  "finSubscriptionsHint": "Ödeme gününde Sistem gideri kendisi kaydeder ve tarihi kaydırır.",
+  "finSubscriptionsMonthly": "Aylık",
+  "finSubscriptionAdd": "Yeni abonelik",
+  "finSubscriptionEdit": "Abonelik",
+  "finSubscriptionTitle": "Ad",
+  "finNextCharge": "ödeme {date}",
+  "@finNextCharge": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "finNextChargeDate": "Sonraki ödeme tarihi",
+  "finPaused": "duraklatıldı",
+  "finActive": "Aktif",
+  "finDebtsOpen": "Açık borçlar",
+  "finDebtsClosed": "Kapanan",
+  "finDebtsEmpty": "Borç yok.",
+  "finDebtAdd": "Yeni borç",
+  "finDebtEdit": "Borç",
+  "finDebtOwe": "Ben borçluyum",
+  "finDebtLent": "Bana borçlular",
+  "finDebtPerson": "Kim",
+  "finDebtDue": "Vade",
+  "finDebtSettle": "Ödendi",
+  "finDebtSettleHint": "Borcu kapatır ve işlem kaydını açar.",
+  "finOverdue": "gecikmiş",
+  "finSettled": "ödendi",
+  "finTotals": "Toplamlar",
+  "finNet": "Fark",
+  "finByCategory": "Kategorilere göre giderler",
+  "finNoExpensesPeriod": "Bu dönemde gider yok.",
+  "finDynamics": "Dönemlere göre gelir ve gider",
+  "finPrevPeriod": "Önceki dönem",
+  "finNextPeriod": "Sonraki dönem",
+  "finAiComment": "Yapay zekâ yorumu",
+  "finAiCommentHint": "Yapay zekâ dönemi inceler: para nereye gitti, nerede tasarruf edilebilir.",
+  "finAiCommentAsk": "YZ yorumu",
+  "finSrcManual": "elle",
+  "finSrcReceiptQr": "fiş QR",
+  "finSrcReceiptPhoto": "fiş fotoğrafı",
+  "finSrcFood": "yemek fotoğrafı",
+  "finSrcBank": "banka bildirimi",
+  "finSrcSms": "banka SMS",
+  "finSrcStatement": "hesap özeti",
+  "finSrcSubscription": "abonelik",
+  "finSrcMarket": "market",
+  "finReasonJunkTax": "fast food vergisi",
+  "finReasonBudgetOver": "harcama limiti aşıldı",
+  "finReasonBudgetKept": "limit içinde kalındı",
+  "finLockTitle": "Sistem kilitli",
+  "finLockReason": "Sisteme girişi onaylayın",
+  "finLockEnterPin": "PIN girin",
+  "finLockUseBiometric": "Face ID veya parmak iziyle girişi onaylayın",
+  "finLockBiometricButton": "Face ID / parmak izi",
+  "finLockWrongPin": "Yanlış PIN",
+  "finLockCooldown": "Çok fazla deneme. {sec} sn bekleyin",
+  "@finLockCooldown": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockDigits": "Girilen hane: {n}",
+  "@finLockDigits": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockErase": "Sil",
+  "finLockOk": "Tamam",
+  "finLockSection": "Uygulamaya giriş",
+  "finLockIntro": "Uygulamayı koruyun: açılışta ve arka plandan dönünce Sistem Face ID, parmak izi veya PIN ister.",
+  "finLockModeOff": "Kapalı",
+  "finLockModeBiometric": "Face ID / parmak izi",
+  "finLockModePin": "PIN",
+  "finLockModeBoth": "Biyometri + PIN",
+  "finLockNoBiometric": "Cihazda biyometri yok veya ayarlanmamış.",
+  "finLockTimeout": "Arka plandan sonra tekrar sor",
+  "finLockTimeoutNow": "Hemen",
+  "finMinutes": "{n} dk",
+  "@finMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockChangePin": "PIN değiştir",
+  "finLockNewPin": "Yeni PIN",
+  "finLockRepeatPin": "PIN tekrar",
+  "finLockPinMismatch": "PIN kodları eşleşmedi",
+  "finLockPinChanged": "PIN değiştirildi",
+  "finLockPinRule": "{min}–{max} hane",
+  "@finLockPinRule": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockPinWarning": "Unutulan PIN kurtarılamaz — mümkünse biyometriyi de açın.",
+  "finJunkTaxSection": "Fast food vergisi",
+  "finJunkTaxEnabled": "Abur cubur için ◆ düş",
+  "finJunkTaxHint": "«Abur cubur» kategorilerindeki her alışveriş için",
+  "finJunkTaxAmount": "Alışveriş başına vergi",
+  "finSummaryFood": "Bu ay yemek",
+  "finSummaryUntilIncome": "Gelire kalan",
+  "finDays": "{n} gün",
+  "@finDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finRemindSubTitle": "Yarın ödeme: {title}",
+  "@finRemindSubTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "finRemindSubBody": "{amount} · {date}",
+  "@finRemindSubBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "finRemindDebtOweTitle": "Borç vadesi",
+  "finRemindDebtLentTitle": "Size geri ödenecek",
+  "finRemindDebtBody": "{person}: {amount}, son tarih {date}",
+  "@finRemindDebtBody": {
+    "placeholders": {
+      "person": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  }
+}

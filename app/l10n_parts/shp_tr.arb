@@ -130,7 +130,7 @@
   "dscCannotRefuse": "Mod görevleri iptal edilemez.",
   "dscPreviewNote": "Disiplin modunda bir gün böyle görünecek.",
   "dscBlockerTitle": "Uygulama engelleme",
-  "dscBlockerText": "Yatıştan sonra eğlence uygulamalarını engelleme daha sonra eklenecek.",
+  "dscBlockerText": "Disiplin modunda yatma saatinden sonra eğlence uygulamaları engellenir: Android'de «Sistem: yatma saati» ekranıyla, iPhone'da Kestirmeler otomasyonuyla.",
   "dscBlockerSoon": "Sonra",
   "dscEnable": "Modu aç",
   "dscDisable": "Modu kapat",

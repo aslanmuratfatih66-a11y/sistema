@@ -435,60 +435,35 @@ class AppLocalizationsTr extends AppLocalizations {
       'Su hedefinin %48’i tamam. 11:30’a kadar bir bardak iç, «Zindelik» bir saat daha sürsün.';
 
   @override
-  String get actStepsTitle => 'Adımlar';
+  String get hqStatStrengthShort => 'GÜÇ';
 
   @override
-  String actGoal(String goal) {
-    return 'Hedef: $goal';
-  }
+  String get hqStatEnduranceShort => 'DAY';
 
   @override
-  String get actDistance => 'Mesafe';
+  String get hqStatDisciplineShort => 'DİS';
 
   @override
-  String actDistanceKm(String km) {
-    return '$km km';
-  }
+  String get hqStatIntellectShort => 'ZEK';
 
   @override
-  String get actFloors => 'Katlar';
+  String get hqStatHealthShort => 'SAĞ';
 
   @override
-  String get actNoValue => '—';
+  String get hqStatLooksShort => 'GÖR';
 
   @override
-  String get actWeek => '7 gün';
+  String get hqCaloriesTodayTitle => 'Günlük kalori';
 
   @override
-  String get actAllow => 'İzin ver';
+  String get hqNutritionDiaryTitle => 'Beslenme günlüğü';
 
   @override
-  String get actPermissionHint =>
-      'Hareket sensörlerine erişim izni verin — adımlar otomatik sayılsın.';
+  String get hqNutritionDiarySoon =>
+      'Beslenme günlüğünü, yemek fotoğraflarını ve makro takibini Sistem bir sonraki aşamada açacak.';
 
   @override
-  String get actUnavailableHint =>
-      'Cihazda adım sayar yok — adımları elle girin.';
-
-  @override
-  String get actManual => 'Elle gir';
-
-  @override
-  String get actManualLabel => 'Bugünkü adımlar';
-
-  @override
-  String get actManualRange => '0 ile 100.000 arası';
-
-  @override
-  String get actSave => 'Kaydet';
-
-  @override
-  String get actCancel => 'İptal';
-
-  @override
-  String actStepsSemantic(String steps, String goal) {
-    return 'Bugünkü adımlar: $steps / $goal';
-  }
+  String get hqFinanceFoodTitle => 'Yemek bütçesi';
 
   @override
   String get bdyEnergy => 'Enerji';
@@ -800,6 +775,228 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get bdySwellCompareFirst => 'İlk ve sonuncuyu karşılaştır';
+
+  @override
+  String get blkTitle => 'Uygulama engelleme';
+
+  @override
+  String get blkOverlayTitle => 'Sistem: yatma vakti';
+
+  @override
+  String blkOverlayBody(String time) {
+    return 'Uyku zamanı. Eğlence $time saatine kadar kapalı. Telefonu bırak — yarın berrak bir zihin gerek.';
+  }
+
+  @override
+  String get blkOverlayButton => 'Kapat';
+
+  @override
+  String get blkNotifTitle => 'Sistem: yatma vakti';
+
+  @override
+  String blkNotifBody(String time) {
+    return 'Dikkat dağıtan uygulamalar $time saatine kadar kapalı';
+  }
+
+  @override
+  String blkIntro(String diamonds) {
+    return 'Disiplin modunda yatma saatinden sonra dikkat dağıtan uygulamalar «Sistem: yatma vakti» ekranıyla kapatılır. Denemeler kaydedilir; gecenin üçüncüsünden itibaren ceza $diamonds ◆.';
+  }
+
+  @override
+  String get blkStatusTitle => 'Durum';
+
+  @override
+  String blkDisciplineOn(String from, String until) {
+    return 'Disiplin modu açık. Engelleme: $from–$until.';
+  }
+
+  @override
+  String blkDisciplineOff(String from, String until) {
+    return 'Disiplin modu kapalı — engelleme çalışmıyor. Mod aralığı: $from–$until.';
+  }
+
+  @override
+  String get blkActiveNow => 'Engelleme şu an etkin';
+
+  @override
+  String get blkReady => 'Çalışmaya hazır';
+
+  @override
+  String get blkNotReady => 'İzinler gerekli';
+
+  @override
+  String get blkNoApps => 'Hiç uygulama seçilmedi';
+
+  @override
+  String get blkPermsTitle => 'İzinler';
+
+  @override
+  String get blkUsageAccess => 'Kullanım erişimi';
+
+  @override
+  String get blkUsageAccessHint =>
+      'Şu an hangi uygulamanın açık olduğunu görmek için.';
+
+  @override
+  String get blkOverlayPerm => 'Diğer uygulamaların üzerinde göster';
+
+  @override
+  String get blkOverlayPermHint =>
+      '«Sistem: yatma vakti» ekranını göstermek için.';
+
+  @override
+  String get blkGranted => 'Verildi';
+
+  @override
+  String get blkNotGranted => 'Verilmedi';
+
+  @override
+  String get blkOpenSettings => 'Ayarları aç';
+
+  @override
+  String get blkNotifHint =>
+      'Engelleme sırasında bildirim panelinde Sistem bildirimi durur — böylece Android denetimi durdurmaz.';
+
+  @override
+  String get blkAppsTitle => 'Uygulamalar';
+
+  @override
+  String get blkAppsHint =>
+      'İşaretlenenler yatma saatinden sonra kapatılır. Bilinen eğlence uygulamaları varsayılan olarak işaretli.';
+
+  @override
+  String blkAppsSelected(int count) {
+    return 'Seçili: $count';
+  }
+
+  @override
+  String get blkAppsLoading => 'Uygulama listesi yükleniyor…';
+
+  @override
+  String get blkAppsEmpty => 'Uygulama bulunamadı';
+
+  @override
+  String get blkSearch => 'Ara';
+
+  @override
+  String get blkShowAll => 'Tümünü göster';
+
+  @override
+  String get blkShowSelected => 'Yalnızca seçilenler';
+
+  @override
+  String get blkUnsupported => 'Bu cihazda engelleme kullanılamıyor.';
+
+  @override
+  String blkAttemptsTonight(int count) {
+    return 'Bu gece deneme sayısı: $count';
+  }
+
+  @override
+  String get blkIosIntro =>
+      'iPhone\'da doğrudan engelleme yok. «Kestirmeler» uygulamasında kişisel otomasyonlar kurun: uygulama açılınca hemen Sistem açılır. Yatma saatinden sonra «Sistem: yatma vakti» gösterir ve denemeyi kaydeder, gündüz «Şimdi serbest» der.';
+
+  @override
+  String get blkIosPickTitle => '1. Hangi uygulamalar';
+
+  @override
+  String get blkIosGames => 'Oyunlar (herhangi bir oyun)';
+
+  @override
+  String get blkIosStepsTitle => '2. Her uygulama için otomasyon';
+
+  @override
+  String get blkIosStep1 =>
+      '«Kestirmeler» uygulamasını açın → «Otomasyon» sekmesi → «+» («Yeni Otomasyon»).';
+
+  @override
+  String get blkIosStep2 =>
+      '«Uygulama»yı seçin, «Seç»e dokunun ve uygulamayı işaretleyin (birkaçını birden seçebilirsiniz — o zaman tek bağlantı, örneğin oyunlar için).';
+
+  @override
+  String get blkIosStep3 =>
+      '«Açıldığında»yı işaretleyin, «Hemen Çalıştır»ı seçin ve «Sonraki»ye dokunun.';
+
+  @override
+  String get blkIosStep4 =>
+      '«Yeni Boş Otomasyon» → «Eylem Ekle» → «URL\'yi Aç» eylemini bulun.';
+
+  @override
+  String get blkIosStep5 =>
+      'Bu uygulamanın bağlantısını yapıştırın (aşağıdaki «Kopyala» düğmesi) ve «Bitti»ye dokunun.';
+
+  @override
+  String get blkIosStep6 =>
+      'Diğer uygulamalar için tekrarlayın. Kontrol edin: uygulamayı açın — Sistem açılmalı.';
+
+  @override
+  String get blkIosLinksTitle => '3. Bağlantılar';
+
+  @override
+  String get blkIosLinksEmpty => 'Önce yukarıdan uygulamaları seçin.';
+
+  @override
+  String get blkCopy => 'Kopyala';
+
+  @override
+  String blkCopied(String app) {
+    return 'Bağlantı kopyalandı: $app';
+  }
+
+  @override
+  String get blkIosFocusTitle => 'İpucu: «Uyku» odak modu';
+
+  @override
+  String get blkIosFocusBody =>
+      'Ayarlar → Odak → «Uyku»: yatma saatinden kalkışa kadar zamanlayın, dikkat dağıtan uygulamaların bildirimlerini gizleyin ve ana ekranda yalnızca gerekenleri bırakın.';
+
+  @override
+  String get blkIosAlwaysNote =>
+      'Otomasyon her zaman çalışır — kararı Sistem verir: engelleme yalnızca disiplin modunda yatma saatinden sonra geçerli.';
+
+  @override
+  String get blkBlockedLabel => 'Sistem';
+
+  @override
+  String get blkBlockedTitle => 'Sistem: yatma vakti';
+
+  @override
+  String blkBlockedMessageApp(String app, String time) {
+    return '$app $time saatine kadar kapalı. Uyku da bir antrenmandır. Telefonu bırak.';
+  }
+
+  @override
+  String blkBlockedMessage(String time) {
+    return 'Eğlence $time saatine kadar kapalı. Uyku da bir antrenmandır. Telefonu bırak.';
+  }
+
+  @override
+  String blkPenaltyApplied(String diamonds) {
+    return 'Tekrarlanan deneme: −$diamonds ◆';
+  }
+
+  @override
+  String blkPenaltyWarning(String diamonds) {
+    return 'Gecenin üçüncü denemesinden itibaren her biri için ceza $diamonds ◆.';
+  }
+
+  @override
+  String get blkClose => 'Kapat';
+
+  @override
+  String get blkAllowedTitle => 'Şimdi serbest';
+
+  @override
+  String get blkAllowedMessage =>
+      'Engelleme şu an geçerli değil. Dinlen — ölçülü.';
+
+  @override
+  String get blkChecking => 'Kontrol ediliyor…';
+
+  @override
+  String get blkReasonBlockedAttempt =>
+      'Yatma saatinden sonra uygulama açma denemesi';
 
   @override
   String chrSemanticsChat(String name) {
@@ -1543,35 +1740,1357 @@ class AppLocalizationsTr extends AppLocalizations {
   String get onbStepPermissions => 'İzinler';
 
   @override
-  String get hqStatStrengthShort => 'GÜÇ';
+  String get almTitle => 'Alarmlar';
 
   @override
-  String get hqStatEnduranceShort => 'DAY';
+  String get almRingTitle => 'Kalk!';
 
   @override
-  String get hqStatDisciplineShort => 'DİS';
+  String almRingBodySquats(int count) {
+    return 'Kapatmak için $count squat yapın';
+  }
 
   @override
-  String get hqStatIntellectShort => 'ZEK';
+  String get almRingBodyQr => 'Kapatmak için başka odadaki QR kodu okutun';
 
   @override
-  String get hqStatHealthShort => 'SAĞ';
+  String get almDoTask => 'Görevi yap';
 
   @override
-  String get hqStatLooksShort => 'GÖR';
+  String get almStop => 'Durdur';
 
   @override
-  String get hqCaloriesTodayTitle => 'Günlük kalori';
+  String get almChannelName => 'Alarm';
 
   @override
-  String get hqNutritionDiaryTitle => 'Beslenme günlüğü';
+  String get almChannelDesc => 'Görevli alarmın çalması';
 
   @override
-  String get hqNutritionDiarySoon =>
-      'Beslenme günlüğünü, yemek fotoğraflarını ve makro takibini Sistem bir sonraki aşamada açacak.';
+  String get almFallbackBody =>
+      'Alarm kapatılmadı — uygulamayı açın ve görevi yapın.';
 
   @override
-  String get hqFinanceFoodTitle => 'Yemek bütçesi';
+  String get almReasonWake => 'Alarmla kalkış';
+
+  @override
+  String get almPermTitle => 'İzinler';
+
+  @override
+  String get almPermReady =>
+      'Alarm hazır: kilit ekranının üzerinde çalar ve sadece görevle kapanır.';
+
+  @override
+  String get almPermExact => 'Tam zamanlı alarmlar';
+
+  @override
+  String get almPermFullScreen => 'Kilit ekranında gösterme';
+
+  @override
+  String get almPermNotifications => 'Bildirimler';
+
+  @override
+  String get almPermAlarmKit => 'Sistem alarmı (AlarmKit)';
+
+  @override
+  String get almPermFallback =>
+      'Sistem alarmı kullanılamıyor — bir dizi yüksek sesli bildirim çalacak. Gece sessiz modu ve «Odak»ı açmayın.';
+
+  @override
+  String get almPermBackup =>
+      'Alarmı «Durdur» ile kapatırsanız, 3 dakika sonra görevi yapana kadar bildirimler gelir.';
+
+  @override
+  String get almPermGrant => 'İzin ver';
+
+  @override
+  String get almPermOn => 'var';
+
+  @override
+  String get almPermOff => 'yok';
+
+  @override
+  String get almEmpty =>
+      'Henüz alarm yok. İlkini ekleyin — sadece görevle kapatılabilecek.';
+
+  @override
+  String get almAdd => 'Alarm ekle';
+
+  @override
+  String get almNew => 'Yeni alarm';
+
+  @override
+  String get almEditTitle => 'Alarm';
+
+  @override
+  String get almDaysEveryday => 'Her gün';
+
+  @override
+  String get almDaysWeekdays => 'Hafta içi';
+
+  @override
+  String get almDaysWeekend => 'Hafta sonu';
+
+  @override
+  String get almDaysOnce => 'Bir kez';
+
+  @override
+  String get almDayMon => 'Pzt';
+
+  @override
+  String get almDayTue => 'Sal';
+
+  @override
+  String get almDayWed => 'Çar';
+
+  @override
+  String get almDayThu => 'Per';
+
+  @override
+  String get almDayFri => 'Cum';
+
+  @override
+  String get almDaySat => 'Cmt';
+
+  @override
+  String get almDaySun => 'Paz';
+
+  @override
+  String get almDaysHint => 'Hiç gün seçilmedi — alarm bir kez çalacak.';
+
+  @override
+  String get almTime => 'Saat';
+
+  @override
+  String get almDays => 'Günler';
+
+  @override
+  String get almLabel => 'Etiket';
+
+  @override
+  String get almTask => 'Görev';
+
+  @override
+  String get almTaskSquats => 'Squat';
+
+  @override
+  String get almTaskQr => 'QR kod';
+
+  @override
+  String almTaskSquatsShort(int count) {
+    return '$count squat';
+  }
+
+  @override
+  String get almSquatsCount => 'Squat sayısı';
+
+  @override
+  String get almQrHint =>
+      'Kodu yazdırıp başka bir odaya asın — örneğin mutfağa veya banyoya. Alarmı kapatmak için kalkıp yanına gitmeniz gerekecek.';
+
+  @override
+  String get almQrShare => 'Yazdırmak için paylaş';
+
+  @override
+  String get almQrShareText =>
+      '«Sistem» alarmının QR kodu. Başka bir odaya asın.';
+
+  @override
+  String get almQrRegenerate => 'Yeni kod';
+
+  @override
+  String get almQrShareFailed => 'Kod paylaşılamadı.';
+
+  @override
+  String get almDiscipline => 'Disiplin modu';
+
+  @override
+  String get almDisciplineHint =>
+      'Disiplin modunun kalkış alarmı: saat ve günleri mod belirler, görev değiştirilebilir.';
+
+  @override
+  String get almTest => '1 dk sonra dene';
+
+  @override
+  String get almTestScheduled =>
+      'Deneme alarmı bir dakika sonra çalacak. Ekranı kilitleyebilirsiniz.';
+
+  @override
+  String get almTestRing => 'Deneme';
+
+  @override
+  String get almDeleteConfirm => 'Alarm silinsin mi?';
+
+  @override
+  String get almNotFound => 'Alarm bulunamadı.';
+
+  @override
+  String get almSquatsHint =>
+      'Telefonu göğsünüzde tutun ve tam squat yapın — aşağı ve yukarı.';
+
+  @override
+  String almSquatsProgress(int done, int total) {
+    return '$done / $total';
+  }
+
+  @override
+  String get almSensorError => 'Hareket sensörü kullanılamıyor.';
+
+  @override
+  String get almHoldFallback => 'Kapatmak için basılı tutun';
+
+  @override
+  String get almScanQr => 'QR okut';
+
+  @override
+  String get almScanTitle => 'Alarm QR kodu';
+
+  @override
+  String get almScanHint => 'Kamerayı yazdırılmış koda tutun.';
+
+  @override
+  String get almScanNoCamera =>
+      'Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin.';
+
+  @override
+  String get almQrWrong => 'Bu doğru kod değil.';
+
+  @override
+  String get almQrMissing => 'Bu alarm için kod oluşturulmadı — squat yapın.';
+
+  @override
+  String almSnooze(int left) {
+    return '5 dk ertele ($left kaldı)';
+  }
+
+  @override
+  String get almSnoozeNone => 'Artık ertelenemez.';
+
+  @override
+  String almReward(int count) {
+    return 'Zamanında kalkış için +$count ◆';
+  }
+
+  @override
+  String get almDone => 'Kalkış sayıldı';
+
+  @override
+  String get almDoneBody => 'Alarm kapatıldı. Günaydın!';
+
+  @override
+  String get finTitle => 'Finans';
+
+  @override
+  String get finBalance => 'Bakiye';
+
+  @override
+  String get finCryptoValue => 'Kripto';
+
+  @override
+  String get finFreeToMonthEnd => 'Ay sonuna kadar serbest';
+
+  @override
+  String get finNextIncome => 'Sıradaki gelir';
+
+  @override
+  String get finMonthExpenses => 'Bu ayki giderler';
+
+  @override
+  String get finMonthIncome => 'Bu ayki gelirler';
+
+  @override
+  String get finMissingRates =>
+      'Bazı tutarların kuru yok, toplama dahil edilmedi. Kurları güncelleyin.';
+
+  @override
+  String get finRatesNever => 'Kurlar henüz yüklenmedi';
+
+  @override
+  String finRatesUpdated(String time) {
+    return 'Kurlar: $time';
+  }
+
+  @override
+  String get finRefreshRates => 'Kurları güncelle';
+
+  @override
+  String get finRefreshing => 'Güncelleniyor…';
+
+  @override
+  String get finInput => 'Giriş';
+
+  @override
+  String get finExpense => 'Gider';
+
+  @override
+  String get finIncome => 'Gelir';
+
+  @override
+  String get finTransfer => 'Transfer';
+
+  @override
+  String get finExpenses => 'Giderler';
+
+  @override
+  String get finIncomes => 'Gelirler';
+
+  @override
+  String get finReceiptQr => 'Fiş QR';
+
+  @override
+  String get finReceiptPhoto => 'Fiş fotoğrafı';
+
+  @override
+  String get finBanks => 'Bankalar';
+
+  @override
+  String get finStatement => 'Hesap özeti';
+
+  @override
+  String get finMarket => 'Market';
+
+  @override
+  String get finAccounts => 'Hesaplar';
+
+  @override
+  String get finNoAccounts =>
+      'Henüz hesap yok. Nakit veya kart ekleyin ya da bir gider girin; «Nakit» hesabı otomatik oluşur.';
+
+  @override
+  String get finManageAccounts => 'Hesaplar ve kripto';
+
+  @override
+  String get finBudgets => 'Limitler';
+
+  @override
+  String get finBudgetsEmptyShort => 'Limit yok.';
+
+  @override
+  String finBudgetsProposed(int n) {
+    return 'Yapay zekâ önerisi: $n — onay bekliyor';
+  }
+
+  @override
+  String get finManageBudgets => 'Limitleri ayarla';
+
+  @override
+  String get finSoon => 'Yakında';
+
+  @override
+  String get finChargeSoon => 'yakında ödeme';
+
+  @override
+  String get finRecent => 'Son işlemler';
+
+  @override
+  String get finNoOperations => 'İşlem yok.';
+
+  @override
+  String get finAllOperations => 'Tüm işlemler';
+
+  @override
+  String get finMore => 'Bölümler';
+
+  @override
+  String get finReports => 'Raporlar';
+
+  @override
+  String get finGoals => 'Birikim hedefleri';
+
+  @override
+  String get finSubscriptions => 'Abonelikler';
+
+  @override
+  String get finDebts => 'Borçlar';
+
+  @override
+  String get finSettings => 'Finans ayarları';
+
+  @override
+  String get finWarning => 'Uyarı';
+
+  @override
+  String get finSaveError => 'Kaydedilemedi';
+
+  @override
+  String get finAll => 'Tümü';
+
+  @override
+  String get finChoose => 'Seç';
+
+  @override
+  String get finTxNew => 'Yeni işlem';
+
+  @override
+  String get finTxEdit => 'İşlem';
+
+  @override
+  String get finTxDeleteConfirm => 'İşlem silinsin mi?';
+
+  @override
+  String get finAmount => 'Tutar';
+
+  @override
+  String get finAccount => 'Hesap';
+
+  @override
+  String get finFromAccount => 'Hesaptan';
+
+  @override
+  String get finToAccount => 'Hesaba';
+
+  @override
+  String get finToAmount => 'Yatırılan tutar';
+
+  @override
+  String get finToAmountHint =>
+      'Hesaplar farklı para biriminde: yatırılan tutarı girin, yoksa kurdan hesaplanır.';
+
+  @override
+  String get finTransferNeedsTwo => 'İki farklı hesap seçin';
+
+  @override
+  String get finNoAccountsAuto => 'Nakit (oluşturulacak)';
+
+  @override
+  String get finNoAccountsAutoHint =>
+      '«Nakit · RUB» hesabı otomatik oluşturulacak.';
+
+  @override
+  String get finCategory => 'Kategori';
+
+  @override
+  String get finCategoryAutoHint =>
+      'seçilmedi — Sistem satıcıya göre tahmin eder';
+
+  @override
+  String get finMerchant => 'Nerede';
+
+  @override
+  String get finPayer => 'Kimden';
+
+  @override
+  String get finDate => 'Tarih';
+
+  @override
+  String get finTime => 'Saat';
+
+  @override
+  String get finNote => 'Not';
+
+  @override
+  String get finSource => 'Kaynak';
+
+  @override
+  String get finNoCategory => 'Kategorisiz';
+
+  @override
+  String get finOperations => 'İşlemler';
+
+  @override
+  String get finAddOperation => 'İşlem ekle';
+
+  @override
+  String finOperationsCount(int n) {
+    return 'İşlem: $n';
+  }
+
+  @override
+  String get finShowMore => 'Daha fazla';
+
+  @override
+  String get finPeriodWeek => 'Hafta';
+
+  @override
+  String get finPeriodMonth => 'Ay';
+
+  @override
+  String get finPeriodYear => 'Yıl';
+
+  @override
+  String get finPeriodAll => 'Tümü';
+
+  @override
+  String get finAccountAdd => 'Hesap ekle';
+
+  @override
+  String get finAccountNew => 'Yeni hesap';
+
+  @override
+  String get finAccountEdit => 'Hesap';
+
+  @override
+  String get finAccountDeleteConfirm =>
+      'Hesap silinsin mi? İşlemler kalır ama hesapsız.';
+
+  @override
+  String get finAccountKind => 'Tür';
+
+  @override
+  String get finAccKindCash => 'Nakit';
+
+  @override
+  String get finAccKindCard => 'Kart';
+
+  @override
+  String get finAccKindDeposit => 'Mevduat';
+
+  @override
+  String get finAccKindCrypto => 'Kripto cüzdan';
+
+  @override
+  String get finAccountName => 'Ad';
+
+  @override
+  String get finCurrency => 'Para birimi';
+
+  @override
+  String get finOpeningBalance => 'Başlangıç bakiyesi';
+
+  @override
+  String get finOpeningBalanceHint => 'Kayda başlamadan önce hesaptaki tutar.';
+
+  @override
+  String get finBank => 'Banka';
+
+  @override
+  String get finBankHint => 'Örneğin: Ziraat, Garanti, İş Bankası';
+
+  @override
+  String get finCardLast4 => 'Kartın son 4 hanesi';
+
+  @override
+  String get finCardLast4Hint => 'Banka bildirimlerini eşleştirmek için';
+
+  @override
+  String get finArchive => 'Arşivde';
+
+  @override
+  String get finArchiveHint => 'Listelerden ve toplamdan gizle';
+
+  @override
+  String get finArchived => 'Arşiv';
+
+  @override
+  String get finCrypto => 'Kripto';
+
+  @override
+  String get finCryptoEmpty => 'Coin yok.';
+
+  @override
+  String get finCryptoRateNote =>
+      'Miktar elle girilir, kur otomatik (sunucu üzerinden CoinGecko).';
+
+  @override
+  String get finCryptoAdd => 'Coin ekle';
+
+  @override
+  String get finCryptoEdit => 'Coin';
+
+  @override
+  String get finCryptoSymbol => 'Sembol';
+
+  @override
+  String get finCryptoCoinId => 'CoinGecko id';
+
+  @override
+  String get finCryptoCoinIdHint => 'bitcoin, ethereum, the-open-network…';
+
+  @override
+  String get finCryptoAmount => 'Miktar';
+
+  @override
+  String get finNoRate => 'kur yok';
+
+  @override
+  String get finCategories => 'Kategoriler';
+
+  @override
+  String get finCategoryAdd => 'Yeni kategori';
+
+  @override
+  String get finCategoryName => 'Ad';
+
+  @override
+  String get finCategoryIcon => 'Simge';
+
+  @override
+  String get finJunkFood => 'Abur cubur';
+
+  @override
+  String get finJunkFoodHint =>
+      'Buradaki alışverişlere «fast food vergisi» (◆) uygulanır';
+
+  @override
+  String get finHide => 'Gizle';
+
+  @override
+  String get finHidden => 'gizli';
+
+  @override
+  String get finHideHint => 'Girişte gösterme';
+
+  @override
+  String get finCatGroceries => 'Market alışverişi';
+
+  @override
+  String get finCatCafe => 'Kafe ve kahve';
+
+  @override
+  String get finCatFastfood => 'Fast food';
+
+  @override
+  String get finCatTransport => 'Ulaşım';
+
+  @override
+  String get finCatHousing => 'Konut';
+
+  @override
+  String get finCatUtilities => 'Faturalar';
+
+  @override
+  String get finCatPhone => 'Telefon ve internet';
+
+  @override
+  String get finCatHealth => 'Sağlık ve eczane';
+
+  @override
+  String get finCatBeauty => 'Bakım ve güzellik';
+
+  @override
+  String get finCatClothes => 'Giyim';
+
+  @override
+  String get finCatEducation => 'Eğitim ve kitap';
+
+  @override
+  String get finCatSport => 'Spor';
+
+  @override
+  String get finCatFun => 'Eğlence';
+
+  @override
+  String get finCatSubscriptions => 'Abonelikler';
+
+  @override
+  String get finCatGifts => 'Hediyeler';
+
+  @override
+  String get finCatMarketplace => 'Pazaryerleri';
+
+  @override
+  String get finCatOther => 'Diğer';
+
+  @override
+  String get finCatStipend => 'Burs';
+
+  @override
+  String get finCatSalary => 'Maaş';
+
+  @override
+  String get finCatGiftIncome => 'Hediye geliri';
+
+  @override
+  String get finCatCashback => 'Nakit iade';
+
+  @override
+  String get finCatOtherIncome => 'Diğer gelirler';
+
+  @override
+  String get finBudgetsActive => 'Aktif limitler';
+
+  @override
+  String get finBudgetsEmpty =>
+      'Limit yok. Elle ekleyin veya yapay zekâdan öneri isteyin.';
+
+  @override
+  String get finBudgetsRule =>
+      'Limiti aştınız — ◆ ceza, dönemi limit içinde bitirdiniz — ◆ ödül.';
+
+  @override
+  String get finBudgetAdd => 'Limit ekle';
+
+  @override
+  String get finBudgetEdit => 'Limit';
+
+  @override
+  String get finLimit => 'Limit';
+
+  @override
+  String get finRewardDiamonds => 'Ödül';
+
+  @override
+  String get finPenaltyDiamonds => 'Ceza';
+
+  @override
+  String get finBudgetsAi => 'Yapay zekâ planı';
+
+  @override
+  String finBudgetsAiReady(int days) {
+    return 'Gözlem: $days gün — yapay zekâdan limit önerisi isteyebilirsiniz.';
+  }
+
+  @override
+  String finBudgetsAiNeedMore(int days) {
+    return '2–4 haftalık gözlem gerekli (şu an $days gün). Harcamalarınızı kaydedin — yapay zekâ alışkanlıklarınıza göre limit önerecek.';
+  }
+
+  @override
+  String get finBudgetsAiAsk => 'Limit öner (YZ)';
+
+  @override
+  String finAiSuggested(int n) {
+    return 'Önerilen limit: $n. Onaylayın veya reddedin.';
+  }
+
+  @override
+  String get finAiNoSuggestions => 'Yapay zekâ limit önermedi — veri henüz az.';
+
+  @override
+  String get finAccept => 'Kabul et';
+
+  @override
+  String get finReject => 'Reddet';
+
+  @override
+  String get finAiThinking => 'Sistem düşünüyor…';
+
+  @override
+  String get finAiNotSignedIn =>
+      'Yapay zekâ hesaba giriş yapınca kullanılabilir. Diğer her şey çevrimdışı çalışır.';
+
+  @override
+  String get finAiOffline =>
+      'Ağ yok. Daha sonra deneyin — veriler cihazda kayıtlı.';
+
+  @override
+  String get finAiBudget => 'Yapay zekâ harcama limiti doldu.';
+
+  @override
+  String get finAiRateLimited => 'Çok fazla istek. Biraz bekleyin.';
+
+  @override
+  String get finAiUnavailable =>
+      'Yapay zekâ şu an kullanılamıyor. Daha sonra deneyin.';
+
+  @override
+  String get finGoalsEmpty => 'Hedef yok.';
+
+  @override
+  String get finGoalsHint => 'İlerleme — seçilen birikim hesabının bakiyesi.';
+
+  @override
+  String get finGoalAdd => 'Yeni hedef';
+
+  @override
+  String get finGoalEdit => 'Hedef';
+
+  @override
+  String get finGoalTitle => 'Ne için biriktiriyoruz';
+
+  @override
+  String get finGoalTarget => 'Gereken tutar';
+
+  @override
+  String get finGoalAccount => 'Birikim hesabı';
+
+  @override
+  String get finGoalAccountHint => 'Bu hesabın bakiyesi — biriken tutar';
+
+  @override
+  String get finGoalDeadline => 'Hangi tarihe kadar';
+
+  @override
+  String get finGoalNoAccount => 'İlerlemeyi görmek için birikim hesabı seçin.';
+
+  @override
+  String get finGoalReached => 'Hedefe ulaşıldı!';
+
+  @override
+  String finUntil(String date) {
+    return '$date tarihine kadar';
+  }
+
+  @override
+  String get finSubscriptionsEmpty => 'Abonelik yok.';
+
+  @override
+  String get finSubscriptionsHint =>
+      'Ödeme gününde Sistem gideri kendisi kaydeder ve tarihi kaydırır.';
+
+  @override
+  String get finSubscriptionsMonthly => 'Aylık';
+
+  @override
+  String get finSubscriptionAdd => 'Yeni abonelik';
+
+  @override
+  String get finSubscriptionEdit => 'Abonelik';
+
+  @override
+  String get finSubscriptionTitle => 'Ad';
+
+  @override
+  String finNextCharge(String date) {
+    return 'ödeme $date';
+  }
+
+  @override
+  String get finNextChargeDate => 'Sonraki ödeme tarihi';
+
+  @override
+  String get finPaused => 'duraklatıldı';
+
+  @override
+  String get finActive => 'Aktif';
+
+  @override
+  String get finDebtsOpen => 'Açık borçlar';
+
+  @override
+  String get finDebtsClosed => 'Kapanan';
+
+  @override
+  String get finDebtsEmpty => 'Borç yok.';
+
+  @override
+  String get finDebtAdd => 'Yeni borç';
+
+  @override
+  String get finDebtEdit => 'Borç';
+
+  @override
+  String get finDebtOwe => 'Ben borçluyum';
+
+  @override
+  String get finDebtLent => 'Bana borçlular';
+
+  @override
+  String get finDebtPerson => 'Kim';
+
+  @override
+  String get finDebtDue => 'Vade';
+
+  @override
+  String get finDebtSettle => 'Ödendi';
+
+  @override
+  String get finDebtSettleHint => 'Borcu kapatır ve işlem kaydını açar.';
+
+  @override
+  String get finOverdue => 'gecikmiş';
+
+  @override
+  String get finSettled => 'ödendi';
+
+  @override
+  String get finTotals => 'Toplamlar';
+
+  @override
+  String get finNet => 'Fark';
+
+  @override
+  String get finByCategory => 'Kategorilere göre giderler';
+
+  @override
+  String get finNoExpensesPeriod => 'Bu dönemde gider yok.';
+
+  @override
+  String get finDynamics => 'Dönemlere göre gelir ve gider';
+
+  @override
+  String get finPrevPeriod => 'Önceki dönem';
+
+  @override
+  String get finNextPeriod => 'Sonraki dönem';
+
+  @override
+  String get finAiComment => 'Yapay zekâ yorumu';
+
+  @override
+  String get finAiCommentHint =>
+      'Yapay zekâ dönemi inceler: para nereye gitti, nerede tasarruf edilebilir.';
+
+  @override
+  String get finAiCommentAsk => 'YZ yorumu';
+
+  @override
+  String get finSrcManual => 'elle';
+
+  @override
+  String get finSrcReceiptQr => 'fiş QR';
+
+  @override
+  String get finSrcReceiptPhoto => 'fiş fotoğrafı';
+
+  @override
+  String get finSrcFood => 'yemek fotoğrafı';
+
+  @override
+  String get finSrcBank => 'banka bildirimi';
+
+  @override
+  String get finSrcSms => 'banka SMS';
+
+  @override
+  String get finSrcStatement => 'hesap özeti';
+
+  @override
+  String get finSrcSubscription => 'abonelik';
+
+  @override
+  String get finSrcMarket => 'market';
+
+  @override
+  String get finReasonJunkTax => 'fast food vergisi';
+
+  @override
+  String get finReasonBudgetOver => 'harcama limiti aşıldı';
+
+  @override
+  String get finReasonBudgetKept => 'limit içinde kalındı';
+
+  @override
+  String get finLockTitle => 'Sistem kilitli';
+
+  @override
+  String get finLockReason => 'Sisteme girişi onaylayın';
+
+  @override
+  String get finLockEnterPin => 'PIN girin';
+
+  @override
+  String get finLockUseBiometric =>
+      'Face ID veya parmak iziyle girişi onaylayın';
+
+  @override
+  String get finLockBiometricButton => 'Face ID / parmak izi';
+
+  @override
+  String get finLockWrongPin => 'Yanlış PIN';
+
+  @override
+  String finLockCooldown(int sec) {
+    return 'Çok fazla deneme. $sec sn bekleyin';
+  }
+
+  @override
+  String finLockDigits(int n) {
+    return 'Girilen hane: $n';
+  }
+
+  @override
+  String get finLockErase => 'Sil';
+
+  @override
+  String get finLockOk => 'Tamam';
+
+  @override
+  String get finLockSection => 'Uygulamaya giriş';
+
+  @override
+  String get finLockIntro =>
+      'Uygulamayı koruyun: açılışta ve arka plandan dönünce Sistem Face ID, parmak izi veya PIN ister.';
+
+  @override
+  String get finLockModeOff => 'Kapalı';
+
+  @override
+  String get finLockModeBiometric => 'Face ID / parmak izi';
+
+  @override
+  String get finLockModePin => 'PIN';
+
+  @override
+  String get finLockModeBoth => 'Biyometri + PIN';
+
+  @override
+  String get finLockNoBiometric => 'Cihazda biyometri yok veya ayarlanmamış.';
+
+  @override
+  String get finLockTimeout => 'Arka plandan sonra tekrar sor';
+
+  @override
+  String get finLockTimeoutNow => 'Hemen';
+
+  @override
+  String finMinutes(int n) {
+    return '$n dk';
+  }
+
+  @override
+  String get finLockChangePin => 'PIN değiştir';
+
+  @override
+  String get finLockNewPin => 'Yeni PIN';
+
+  @override
+  String get finLockRepeatPin => 'PIN tekrar';
+
+  @override
+  String get finLockPinMismatch => 'PIN kodları eşleşmedi';
+
+  @override
+  String get finLockPinChanged => 'PIN değiştirildi';
+
+  @override
+  String finLockPinRule(int min, int max) {
+    return '$min–$max hane';
+  }
+
+  @override
+  String get finLockPinWarning =>
+      'Unutulan PIN kurtarılamaz — mümkünse biyometriyi de açın.';
+
+  @override
+  String get finJunkTaxSection => 'Fast food vergisi';
+
+  @override
+  String get finJunkTaxEnabled => 'Abur cubur için ◆ düş';
+
+  @override
+  String get finJunkTaxHint =>
+      '«Abur cubur» kategorilerindeki her alışveriş için';
+
+  @override
+  String get finJunkTaxAmount => 'Alışveriş başına vergi';
+
+  @override
+  String get finSummaryFood => 'Bu ay yemek';
+
+  @override
+  String get finSummaryUntilIncome => 'Gelire kalan';
+
+  @override
+  String finDays(int n) {
+    return '$n gün';
+  }
+
+  @override
+  String finRemindSubTitle(String title) {
+    return 'Yarın ödeme: $title';
+  }
+
+  @override
+  String finRemindSubBody(String amount, String date) {
+    return '$amount · $date';
+  }
+
+  @override
+  String get finRemindDebtOweTitle => 'Borç vadesi';
+
+  @override
+  String get finRemindDebtLentTitle => 'Size geri ödenecek';
+
+  @override
+  String finRemindDebtBody(String person, String amount, String date) {
+    return '$person: $amount, son tarih $date';
+  }
+
+  @override
+  String get fniAccount => 'Hesap';
+
+  @override
+  String get fniAuto => 'Otomatik';
+
+  @override
+  String get fniCategory => 'Kategori';
+
+  @override
+  String get fniQrNotReceipt => 'Bu bir fiş QR kodu değil.';
+
+  @override
+  String get fniDuplicate => 'Bu işlem zaten kayıtlı.';
+
+  @override
+  String get fniAdded => 'İşlem eklendi.';
+
+  @override
+  String get fniSaveFailed => 'İşlem kaydedilemedi.';
+
+  @override
+  String get fniRetry => 'Tekrar dene';
+
+  @override
+  String get fniReceiptTitle => 'Fiş';
+
+  @override
+  String get fniStore => 'Mağaza';
+
+  @override
+  String get fniDate => 'Tarih';
+
+  @override
+  String get fniKind => 'Tür';
+
+  @override
+  String get fniRefund => 'İade';
+
+  @override
+  String get fniTotal => 'Toplam';
+
+  @override
+  String get fniQrNoItems =>
+      'Fiş kalemleri şu an alınamıyor — QR\'daki tutar kaydedilecek.';
+
+  @override
+  String get fniAdd => 'Ekle';
+
+  @override
+  String get fniReceiptQrTitle => 'QR ile fiş';
+
+  @override
+  String get fniReceiptPhotoTitle => 'Fotoğrafla fiş';
+
+  @override
+  String get fniNoCamera => 'Kamera kullanılamıyor. Ayarlardan izin verin.';
+
+  @override
+  String get fniClose => 'Kapat';
+
+  @override
+  String get fniQrHint => 'Kamerayı fişteki QR koduna tutun';
+
+  @override
+  String get fniFileFailed => 'Dosya açılamadı.';
+
+  @override
+  String get fniFileTooLarge =>
+      'Dosya 3 MB\'den büyük. Daha kısa bir dönem için ekstre alın.';
+
+  @override
+  String get fniStatementTitle => 'Ekstre içe aktarma';
+
+  @override
+  String get fniStatementFile => 'Ekstre dosyası';
+
+  @override
+  String get fniStatementHint =>
+      'Banka uygulamasından ekstreyi (CSV veya PDF) indirin ve dosyayı seçin.';
+
+  @override
+  String get fniPickFile => 'Dosya seç';
+
+  @override
+  String get fniStatementParsing => 'Ekstre okunuyor…';
+
+  @override
+  String get fniStatementEmpty => 'Dosyada işlem bulunamadı.';
+
+  @override
+  String get fniBank => 'Banka';
+
+  @override
+  String get fniSelectAll => 'Tümü';
+
+  @override
+  String get fniAlreadyImported => 'zaten var';
+
+  @override
+  String get fniBanksTitle => 'Bankalar';
+
+  @override
+  String get fniBanksAndroidOnly =>
+      'Banka bildirimleri ve SMS okuma yalnızca Android\'de var. iPhone\'da ekstre içe aktarmayı kullanın.';
+
+  @override
+  String get fniAccess => 'Erişim';
+
+  @override
+  String get fniAccessNotifications => 'Banka bildirimleri';
+
+  @override
+  String get fniOpenSettings => 'Ayarları aç';
+
+  @override
+  String get fniAccessSms => 'Banka SMS\'leri';
+
+  @override
+  String get fniAllow => 'İzin ver';
+
+  @override
+  String get fniAccessHint =>
+      'Yalnızca seçili bankaların mesajları okunur. Metinler uygulamada saklanır ve sunucunuzla eşitlenir.';
+
+  @override
+  String get fniBanksList => 'Bankalarım';
+
+  @override
+  String get fniProcessNow => 'İşle';
+
+  @override
+  String get fniSmsHistory => 'Son 30 gün SMS';
+
+  @override
+  String get fniGranted => 'Var';
+
+  @override
+  String get fniOtherBank => 'Diğer banka';
+
+  @override
+  String get fniSourceNotifications => 'Uygulama bildirimleri';
+
+  @override
+  String get fniSourceSms => 'SMS';
+
+  @override
+  String get fniPackages => 'Uygulama paketleri';
+
+  @override
+  String get fniExtraSenders => 'Ek SMS göndericileri';
+
+  @override
+  String get fniExtraSendersHint => 'Ad veya numara, virgülle';
+
+  @override
+  String get fniInbox => 'Gelenler';
+
+  @override
+  String get fniInboxEmpty =>
+      'Henüz bir şey yok. Yeni banka bildirimleri ve SMS\'ler burada görünecek.';
+
+  @override
+  String get fniStatusReview => 'Kontrol edin';
+
+  @override
+  String get fniStatusAdded => 'Eklendi';
+
+  @override
+  String get fniStatusDuplicate => 'Tekrar';
+
+  @override
+  String get fniStatusIgnored => 'İşlem değil';
+
+  @override
+  String get fniStatusFailed => 'Hata';
+
+  @override
+  String get fniStatusPending => 'Bekliyor';
+
+  @override
+  String get fniConfirm => 'Doğru';
+
+  @override
+  String get fniFix => 'Düzelt';
+
+  @override
+  String get fniAddManually => 'Elle ekle';
+
+  @override
+  String get fniFixInFinance =>
+      'Bu işlemi «Finans» bölümünde düzenleyin veya silin.';
+
+  @override
+  String get fniIgnore => 'Yok say';
+
+  @override
+  String get fniEditTitle => 'İşlem';
+
+  @override
+  String get fniExpense => 'Gider';
+
+  @override
+  String get fniIncome => 'Gelir';
+
+  @override
+  String get fniTransfer => 'Transfer';
+
+  @override
+  String get fniAmount => 'Tutar';
+
+  @override
+  String get fniMerchant => 'Nerede / kimden';
+
+  @override
+  String get fniCancel => 'İptal';
+
+  @override
+  String get fniSave => 'Kaydet';
+
+  @override
+  String fniImported(int added, int dup) {
+    return 'Eklendi: $added, zaten vardı: $dup';
+  }
+
+  @override
+  String fniImporting(int done, int total) {
+    return 'İçe aktarılıyor $done / $total';
+  }
+
+  @override
+  String fniImportN(int n) {
+    return 'İçe aktar ($n)';
+  }
+
+  @override
+  String fniRows(int n) {
+    return 'İşlemler: $n';
+  }
+
+  @override
+  String fniSmsFound(int n) {
+    return 'Bulunan SMS: $n';
+  }
+
+  @override
+  String fniSenders(String list) {
+    return 'Göndericiler: $list';
+  }
+
+  @override
+  String get actStepsTitle => 'Adımlar';
+
+  @override
+  String actGoal(String goal) {
+    return 'Hedef: $goal';
+  }
+
+  @override
+  String get actDistance => 'Mesafe';
+
+  @override
+  String actDistanceKm(String km) {
+    return '$km km';
+  }
+
+  @override
+  String get actFloors => 'Katlar';
+
+  @override
+  String get actNoValue => '—';
+
+  @override
+  String get actWeek => '7 gün';
+
+  @override
+  String get actAllow => 'İzin ver';
+
+  @override
+  String get actPermissionHint =>
+      'Hareket sensörlerine erişim izni verin — adımlar otomatik sayılsın.';
+
+  @override
+  String get actUnavailableHint =>
+      'Cihazda adım sayar yok — adımları elle girin.';
+
+  @override
+  String get actManual => 'Elle gir';
+
+  @override
+  String get actManualLabel => 'Bugünkü adımlar';
+
+  @override
+  String get actManualRange => '0 ile 100.000 arası';
+
+  @override
+  String get actSave => 'Kaydet';
+
+  @override
+  String get actCancel => 'İptal';
+
+  @override
+  String actStepsSemantic(String steps, String goal) {
+    return 'Bugünkü adımlar: $steps / $goal';
+  }
 
   @override
   String get int6PlanAi => 'Yapay zekâ ile plan oluştur';
@@ -1598,6 +3117,33 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get int6VoiceHint => 'Sunucudaki hazır sesler, dinle';
+
+  @override
+  String get int7Finance => 'Finans';
+
+  @override
+  String get int7FinanceHint => 'Hesaplar, işlemler, limitler, raporlar';
+
+  @override
+  String get int7Market => 'Alışveriş pazarı';
+
+  @override
+  String get int7MarketHint => 'Plana göre seçki ve fiyatlar';
+
+  @override
+  String get int7Blocker => 'Uygulama engelleme';
+
+  @override
+  String get int7BlockerHint => 'Disiplin modunda yatma saatinden sonra';
+
+  @override
+  String get int7Alarms => 'Görevli alarm';
+
+  @override
+  String get int7AlarmsHint => 'Yalnızca görevle kapanır';
+
+  @override
+  String get int7Setup => 'Ayarla';
 
   @override
   String get livNextQuest => 'Sıradaki görev';
@@ -1817,6 +3363,160 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get lrnErrServer => 'Yanıt alınamadı. Tekrar deneyin.';
+
+  @override
+  String get mktTitle => 'Market';
+
+  @override
+  String get mktSuggest => 'Öner (YZ)';
+
+  @override
+  String get mktSuggesting => 'Plana uygun ürünler seçiliyor…';
+
+  @override
+  String get mktCatAll => 'Tümü';
+
+  @override
+  String get mktCatSkin => 'Cilt bakımı';
+
+  @override
+  String get mktCatNutrition => 'Beslenme';
+
+  @override
+  String get mktCatEquipment => 'Ekipman';
+
+  @override
+  String get mktCatOther => 'Diğer';
+
+  @override
+  String get mktTabNew => 'Öneriler';
+
+  @override
+  String get mktTabSaved => 'Kaydedilenler';
+
+  @override
+  String get mktTabBought => 'Alınanlar';
+
+  @override
+  String get mktEmptyNew =>
+      'Henüz boş. «Öner (YZ)» düğmesine basın — Sistem planınıza uygun ürünler seçsin.';
+
+  @override
+  String get mktEmptySaved => 'Kaydedilmiş ürün yok.';
+
+  @override
+  String get mktEmptyBought => 'Henüz alışveriş yok.';
+
+  @override
+  String get mktEstimateNote =>
+      'Fiyatlar yaklaşıktır — belirtilen tarihteki web aramasına göre.';
+
+  @override
+  String mktPriceLine(String price, String source, String date) {
+    return '≈ $price · $source · $date';
+  }
+
+  @override
+  String mktPriceShort(String price, String date) {
+    return '≈ $price · $date';
+  }
+
+  @override
+  String get mktPriceUnknown => 'Fiyat bilinmiyor';
+
+  @override
+  String mktPricePaid(String price) {
+    return '$price karşılığında alındı';
+  }
+
+  @override
+  String get mktBudgetOk => 'Alınabilir';
+
+  @override
+  String get mktBudgetAfterIncome => 'Para gelince';
+
+  @override
+  String get mktBudgetOver => 'Bütçeye uygun değil';
+
+  @override
+  String get mktSave => 'Kaydet';
+
+  @override
+  String get mktHide => 'Gizle';
+
+  @override
+  String get mktBought => 'Aldım';
+
+  @override
+  String get mktRefreshPrice => 'Fiyatı güncelle';
+
+  @override
+  String get mktPriceUpdated => 'Fiyat güncellendi.';
+
+  @override
+  String get mktPriceNotFound => 'Güncel fiyat bulunamadı.';
+
+  @override
+  String get mktSearchSuffix => 'arama';
+
+  @override
+  String get mktLinkCopied => 'Bağlantı kopyalandı.';
+
+  @override
+  String get mktOpenFailed => 'Bağlantı açılamadı — kopyalandı.';
+
+  @override
+  String get mktBoughtTitle => 'Alışveriş';
+
+  @override
+  String mktBoughtMessage(String title) {
+    return '«$title» kaça mal oldu?';
+  }
+
+  @override
+  String get mktBoughtPrice => 'Gerçek fiyat';
+
+  @override
+  String get mktBoughtConfirm => 'Kaydet';
+
+  @override
+  String get mktBoughtRecorded => 'Alışveriş finanslara kaydedildi.';
+
+  @override
+  String get mktBoughtNoFinance =>
+      'Alındı olarak işaretlendi. Finanslara kaydedilmedi — bölüm henüz kullanılamıyor.';
+
+  @override
+  String get mktNoticeLabel => 'Sistem';
+
+  @override
+  String get mktNothingFound =>
+      'Sistem yeni ürün bulamadı. Başka bir kategori deneyin.';
+
+  @override
+  String mktAdded(int count) {
+    return 'Eklenen ürün: $count';
+  }
+
+  @override
+  String get mktErrOffline =>
+      'Sunucuya bağlantı yok. Kaydedilen ürünler çevrimdışı da görünür.';
+
+  @override
+  String get mktErrNotSignedIn =>
+      'Sistemin ürün seçmesi için hesabınıza giriş yapın («Daha fazla» → «Hesap»).';
+
+  @override
+  String get mktErrBudget => 'YZ limiti şu an doldu. Daha sonra deneyin.';
+
+  @override
+  String get mktErrUnavailable => 'Sunucudaki YZ şu an kullanılamıyor.';
+
+  @override
+  String get mktErrRateLimited => 'Çok fazla istek. Bir süre sonra deneyin.';
+
+  @override
+  String get mktErrServer => 'Yanıt alınamadı. Tekrar deneyin.';
 
   @override
   String get msgChannelName => 'Sistem mesajları';
@@ -2389,292 +4089,478 @@ class AppLocalizationsTr extends AppLocalizations {
   String get nutGroceryWater => 'İçme suyu';
 
   @override
-  String get planNoticeLabel => 'Bildirim';
+  String get wrkTitle => 'Antrenmanlar';
 
   @override
-  String get planTitle => 'Plan hazırlandı';
+  String get wrkProgram => 'Program';
 
   @override
-  String get planDraftNote =>
-      'Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.';
+  String get wrkToday => 'Bugün';
 
   @override
-  String planAcceptedAt(String date) {
-    return 'Plan kabul edildi: $date';
+  String wrkTodayDay(String key) {
+    return 'Programa göre — $key günü';
   }
 
   @override
-  String get planAccept => 'Kabul et';
+  String get wrkRestDay =>
+      'Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğin antrenmanı yapabilirsin.';
 
   @override
-  String get planEditData => 'Verileri değiştir';
-
-  @override
-  String get planRecalculate => 'Yeniden hesapla';
-
-  @override
-  String get planChooseSection => 'Hangi bölümü değiştirmek istersiniz?';
-
-  @override
-  String get planLoadError => 'Plan hazırlanamadı';
-
-  @override
-  String get planRetry => 'Tekrar dene';
-
-  @override
-  String get planNormsTitle => 'Normlar';
-
-  @override
-  String get planCalories => 'Kalori';
-
-  @override
-  String planKcal(String value) {
-    return '$value kcal';
+  String wrkDayTitle(String key) {
+    return '$key günü';
   }
 
   @override
-  String get planModeDeficit => 'Açık';
-
-  @override
-  String get planModeSurplus => 'Fazla';
-
-  @override
-  String get planModeMaintenance => 'Koruma';
-
-  @override
-  String planBmrTdee(String bmr, String tdee) {
-    return 'Bazal metabolizma $bmr · harcama $tdee kcal';
+  String wrkMinutesShort(int minutes) {
+    return '$minutes dk';
   }
 
   @override
-  String get planProtein => 'Protein';
-
-  @override
-  String get planFat => 'Yağ';
-
-  @override
-  String get planCarbs => 'Karbonhidrat';
-
-  @override
-  String planGrams(String value) {
-    return '$value g';
+  String wrkEstimate(int minutes) {
+    return '≈$minutes dk';
   }
 
   @override
-  String get planWater => 'Su';
-
-  @override
-  String planMl(String value) {
-    return '$value ml';
+  String wrkExerciseCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count egzersiz',
+      one: '$count egzersiz',
+    );
+    return '$_temp0';
   }
 
   @override
-  String planWaterTrainingDay(String value) {
-    return 'Antrenman gününde — $value ml';
+  String wrkSetsReps(int sets, int reps) {
+    return '$sets × $reps';
   }
 
   @override
-  String get planSleep => 'Uyku';
-
-  @override
-  String planHours(String value) {
-    return '$value sa';
+  String wrkSetsSeconds(int sets, int seconds) {
+    return '$sets × $seconds sn';
   }
 
   @override
-  String planHoursMinutes(String h, String m) {
-    return '$h sa $m dk';
+  String wrkRestShort(int seconds) {
+    return 'dinlenme $seconds sn';
   }
 
   @override
-  String planWakeBed(String wake, String bed) {
-    return 'Kalkış $wake · yatış $bed';
+  String get wrkGentle =>
+      'Hafif seçenek: zıplama ve omurgaya dikey yük yok — ankette sakatlık veya kısıtlama belirtilmiş.';
+
+  @override
+  String get wrkSafetyNote =>
+      'Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atla.';
+
+  @override
+  String get wrkLevelUnknown =>
+      'Ankette seviye belirtilmemiş — başlangıç programı.';
+
+  @override
+  String wrkProgressionWeeks(int weeks) {
+    return 'Tamamlanan hafta: $weeks';
   }
 
   @override
-  String get planRoutineTitle => 'Günlük düzen';
+  String get wrkProgressionNote =>
+      'Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her hafta için: +1 tekrar veya +5 sn, seviyenin üst sınırına kadar.';
 
   @override
-  String planWeek(String n) {
-    return 'Hafta $n';
+  String get wrkRegenerate => 'Programı yeniden oluştur';
+
+  @override
+  String get wrkRegenerateTitle => 'Program yeniden oluşturulsun mu?';
+
+  @override
+  String get wrkRegenerateText =>
+      'Program anket ve plana göre yeniden oluşturulacak. Antrenman geçmişi korunur, ilerleme baştan başlar.';
+
+  @override
+  String get wrkAiProgram => 'Yapay zekâdan program';
+
+  @override
+  String get wrkSoon => 'yakında';
+
+  @override
+  String get wrkStart => 'Antrenmana başla';
+
+  @override
+  String wrkStartDay(String key) {
+    return '$key gününe başla';
   }
 
   @override
-  String get planWdMon => 'Pzt';
+  String get wrkHistory => 'Geçmiş';
 
   @override
-  String get planWdTue => 'Sal';
+  String get wrkHistoryEmpty => 'Henüz antrenman yok.';
 
   @override
-  String get planWdWed => 'Çar';
+  String get wrkSessionDone => 'tamamlandı';
 
   @override
-  String get planWdThu => 'Per';
+  String get wrkSessionInterrupted => 'yarıda kaldı';
 
   @override
-  String get planWdFri => 'Cum';
-
-  @override
-  String get planWdSat => 'Cmt';
-
-  @override
-  String get planWdSun => 'Paz';
-
-  @override
-  String get planRoutineWake => 'Kalkış';
-
-  @override
-  String get planRoutineSkincareAm => 'Cilt bakımı (sabah)';
-
-  @override
-  String planRoutineMeal(String n) {
-    return 'Öğün $n';
+  String wrkSessionStats(int minutes, int kcal) {
+    return '$minutes dk · ≈$kcal kcal';
   }
 
   @override
-  String get planRoutineLeaveHome => 'Evden çıkış';
+  String get wrkPreparing => 'Program hazırlanıyor…';
 
   @override
-  String get planRoutineLesson => 'Ders';
+  String get wrkPhasePrepare => 'Hazırlan';
 
   @override
-  String get planRoutineWork => 'İş';
+  String get wrkPhaseWork => 'Çalışma';
 
   @override
-  String get planRoutineOther => 'Etkinlik';
+  String get wrkPhaseRest => 'Dinlenme';
 
   @override
-  String get planRoutineReturnHome => 'Evde';
+  String get wrkPaused => 'Duraklatıldı';
 
   @override
-  String get planRoutineTraining => 'Antrenman';
-
-  @override
-  String get planRoutineSkincarePm => 'Cilt bakımı (akşam)';
-
-  @override
-  String get planRoutineBed => 'Yatış';
-
-  @override
-  String get planQuestsTitle => 'Görevler';
-
-  @override
-  String get planQuestsNote =>
-      'Görevleri tamamlama bir sonraki güncellemede gelecek.';
-
-  @override
-  String planQuestLeaveHome(String time) {
-    return '$time saatine kadar evden çık';
+  String wrkSetOf(int set, int sets) {
+    return 'Set $set / $sets';
   }
 
   @override
-  String planQuestAttendLesson(String title) {
-    return 'Ders: $title';
+  String wrkRepsTarget(int reps) {
+    String _temp0 = intl.Intl.pluralLogic(
+      reps,
+      locale: localeName,
+      other: '$reps tekrar',
+      one: '$reps tekrar',
+    );
+    return '$_temp0';
   }
 
   @override
-  String planQuestAttendWork(String title) {
-    return 'İş: $title';
+  String get wrkDoneSet => 'Set tamam';
+
+  @override
+  String get wrkPause => 'Duraklat';
+
+  @override
+  String get wrkResume => 'Devam et';
+
+  @override
+  String get wrkSkipRest => 'Dinlenmeyi atla';
+
+  @override
+  String get wrkSkipExercise => 'Egzersizi atla';
+
+  @override
+  String get wrkStop => 'Bitir';
+
+  @override
+  String wrkNext(String name) {
+    return 'Sıradaki: $name';
   }
 
   @override
-  String planQuestWater(String ml) {
-    return '$ml ml su iç';
+  String get wrkLastExercise => 'Son egzersiz';
+
+  @override
+  String get wrkTechnique => 'Teknik';
+
+  @override
+  String get wrkVoice => 'Sesli yönlendirme';
+
+  @override
+  String get wrkProgressLabel => 'Antrenman ilerlemesi';
+
+  @override
+  String get wrkStopTitle => 'Antrenman bitirilsin mi?';
+
+  @override
+  String get wrkStopText =>
+      'Yapılanlar yarım kalan antrenman olarak kaydedilir.';
+
+  @override
+  String get wrkFinishedTitle => 'Antrenman tamamlandı';
+
+  @override
+  String wrkFinishedStats(int minutes, int kcal, int sets) {
+    return 'Süre: $minutes dk · ≈$kcal kcal · set: $sets';
   }
 
   @override
-  String planQuestSleep(String time, String hours) {
-    return '$time saatinde yat (uyku $hours sa)';
+  String get wrkWeightAssumed =>
+      'Harcama 70 kg kiloya göre tahmin: kilo ölçümü yok.';
+
+  @override
+  String get wrkKcalNote => 'Harcama MET ile tahmindir, ölçüm değildir.';
+
+  @override
+  String wrkSayPrepare(String name) {
+    return 'Hazırlan. $name.';
   }
 
   @override
-  String planQuestMeals(String count) {
-    return 'Plana göre öğünler: $count';
+  String wrkSaySet(int set, int sets, String amount) {
+    return 'Set $set / $sets. $amount. Başla!';
   }
 
   @override
-  String planQuestTraining(String minutes) {
-    return '$minutes dk antrenman';
+  String wrkSecondsAmount(int seconds) {
+    String _temp0 = intl.Intl.pluralLogic(
+      seconds,
+      locale: localeName,
+      other: '$seconds saniye',
+      one: '$seconds saniye',
+    );
+    return '$_temp0';
   }
 
   @override
-  String get planQuestSkincareMorning => 'Sabah cilt bakımı';
-
-  @override
-  String get planQuestSkincareEvening => 'Akşam cilt bakımı';
-
-  @override
-  String planQuestWakeOnTime(String time) {
-    return '$time saatinde ertelemeden kalk';
+  String wrkSayRest(String amount) {
+    return 'Dinlenme: $amount.';
   }
 
   @override
-  String planQuestStudy(String minutes) {
-    return '$minutes dk ders çalış';
+  String wrkSayNext(String name) {
+    return 'Sıradaki: $name.';
   }
 
   @override
-  String get planQuestTrackExpenses => 'Günün harcamalarını kaydet';
+  String get wrkSayFinished => 'Antrenman tamamlandı. Harika iş!';
 
   @override
-  String get planQuestEveryDay => 'her gün';
+  String get wrkExMarchInPlace => 'Yerinde yürüyüş';
 
   @override
-  String planQuestWeekOnly(String n) {
-    return 'hafta $n';
-  }
+  String get wrkExMarchInPlaceHint =>
+      'Dizlerini yükselt.\nKollar adımla birlikte çalışsın.\nDüzenli nefes al.';
 
   @override
-  String planQuestReward(String diamonds, String xp) {
-    return '+$diamonds ◆ · +$xp deneyim';
-  }
+  String get wrkExArmCircles => 'Kol çevirme';
 
   @override
-  String get planWarningsTitle => 'Uyarılar';
+  String get wrkExArmCirclesHint =>
+      'Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler.\nOmuzlar aşağıda.';
 
   @override
-  String planWarnSleepShort(String scheduled, String target, String bed) {
-    return 'Programa göre uyku $scheduled — norm olan $target süresinden az. Önerilen yatış saati: $bed.';
-  }
+  String get wrkExJumpingJacks => 'Jumping jack';
 
   @override
-  String get planWarnDeficitFloor =>
-      'Kalori açığı güvenli alt sınırla kısıtlandı — Sistem bunun altına inmez.';
+  String get wrkExJumpingJacksHint =>
+      'Zıpla: bacaklar açık, kollar yukarı.\nGeri zıpla.\nParmak uçlarına yumuşak in.';
 
   @override
-  String get planWarnActivityDefaulted =>
-      'Aktivite düzeyi belirtilmedi — «hareketsiz» kabul edildi.';
+  String get wrkExChairSquat => 'Sandalyeye çömelme';
 
   @override
-  String planWarnNoTrainingWindow(String day) {
-    return '$day: antrenman için boş zaman yok.';
-  }
+  String get wrkExChairSquatHint =>
+      'Sandalyenin önünde dur, ayaklar omuz genişliğinde.\nKalçayı geri iterek otur.\nSarsmadan kalk.';
 
   @override
-  String get planWarnInjuries =>
-      'Sakatlık veya kısıtlamalar belirtildi — yükü dikkatli seçin, emin değilseniz doktora danışın.';
+  String get wrkExGluteBridge => 'Kalça köprüsü';
 
   @override
-  String planMissingMessage(String fields) {
-    return 'Kalori ve makroları hesaplamak için doldurun: $fields.';
-  }
+  String get wrkExGluteBridgeHint =>
+      'Sırtüstü yat, ayaklar yerde.\nKalçayı kaldır, kalça kaslarını sık.\nYavaşça in.';
 
   @override
-  String get planMissingSex => 'cinsiyet';
+  String get wrkExSquat => 'Squat';
 
   @override
-  String get planMissingBirthDate => 'doğum tarihi';
+  String get wrkExSquatHint =>
+      'Ayaklar omuz genişliğinde, uçlar hafif dışa.\nKalça geri, dizler parmak yönünde.\nSırt düz, topuklar yerde.';
 
   @override
-  String get planMissingHeight => 'boy';
+  String get wrkExWallSit => 'Duvarda oturma';
 
   @override
-  String get planMissingWeight => 'kilo';
+  String get wrkExWallSitHint =>
+      'Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar in.\nPozisyonu koru.';
 
   @override
-  String planFillSection(String section) {
-    return 'Doldur: $section';
-  }
+  String get wrkExReverseLunge => 'Geri hamle';
+
+  @override
+  String get wrkExReverseLungeHint =>
+      'Geriye adım at, arka dizi yere doğru indir.\nÖn diz ayağın üzerinde.\nGeri dön, bacak değiştir.';
+
+  @override
+  String get wrkExGobletSquat => 'Goblet squat';
+
+  @override
+  String get wrkExGobletSquatHint =>
+      'Dambılı dik olarak göğüste tut.\nÇömel, dirsekler dizlerin arasında.\nSırt düz.';
+
+  @override
+  String get wrkExKettlebellSwing => 'Kettlebell salınımı';
+
+  @override
+  String get wrkExKettlebellSwingHint =>
+      'Kettlebell iki elde, ayaklar omuzdan geniş.\nKalça geri, sonra hızla ileri.\nKettlebell kalça gücüyle göğüs hizasına çıkar.';
+
+  @override
+  String get wrkExJumpSquat => 'Zıplamalı squat';
+
+  @override
+  String get wrkExJumpSquatHint =>
+      'Normal squat.\nYukarı sıçra.\nYumuşak inip squat\'a geç.';
+
+  @override
+  String get wrkExWallPushUp => 'Duvarda şınav';
+
+  @override
+  String get wrkExWallPushUpHint =>
+      'Avuçlar omuz hizasında duvarda.\nKolları bük, gövde düz.\nİtip geri gel.';
+
+  @override
+  String get wrkExKneePushUp => 'Dizüstü şınav';
+
+  @override
+  String get wrkExKneePushUpHint =>
+      'Dizler ve avuçlar yerde.\nDizden başa gövde düz.\nGöğüs yere, sonra yukarı.';
+
+  @override
+  String get wrkExPushUp => 'Şınav';
+
+  @override
+  String get wrkExPushUpHint =>
+      'Şınav pozisyonu, eller omuzdan biraz geniş.\nGövde düz bir çizgi.\nGöğüs yere, dirsekler 45°.';
+
+  @override
+  String get wrkExDumbbellPress => 'Yerde dambıl press';
+
+  @override
+  String get wrkExDumbbellPressHint =>
+      'Yerde yat, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indir.\nYukarı it.';
+
+  @override
+  String get wrkExDiamondPushUp => 'Elmas şınav';
+
+  @override
+  String get wrkExDiamondPushUpHint =>
+      'Avuçlar göğsün altında yan yana.\nDirsekler gövdeye yakın.\nGövde düz.';
+
+  @override
+  String get wrkExSuperman => 'Süperman';
+
+  @override
+  String get wrkExSupermanHint =>
+      'Yüzüstü yat, kollar önde.\nKol ve bacakları birkaç saniye kaldır.\nYavaşça indir.';
+
+  @override
+  String get wrkExReverseSnowAngel => 'Ters kar meleği';
+
+  @override
+  String get wrkExReverseSnowAngelHint =>
+      'Yüzüstü yat, kollar yanlarda.\nGöğsü ve kolları hafif kaldır.\nKolları yay çizerek başın üstüne ve geri götür.';
+
+  @override
+  String get wrkExBandRow => 'Lastik çekiş';
+
+  @override
+  String get wrkExBandRowHint =>
+      'Lastiği göğüs hizasına sabitle.\nKürek kemiklerini sıkarak bele çek.\nYavaşça bırak.';
+
+  @override
+  String get wrkExDumbbellRow => 'Eğilerek dambıl çekiş';
+
+  @override
+  String get wrkExDumbbellRowHint =>
+      'Bir el ve diz sandalyeye dayalı.\nDambılı bele çek.\nSırt düz.';
+
+  @override
+  String get wrkExPullUp => 'Barfiks';
+
+  @override
+  String get wrkExPullUpHint =>
+      'Tutuş omuzdan biraz geniş.\nÇeneyi bara çek.\nKontrollü in.';
+
+  @override
+  String get wrkExDeadBug => 'Ölü böcek';
+
+  @override
+  String get wrkExDeadBugHint =>
+      'Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indir.\nBel yere bastırılı.';
+
+  @override
+  String get wrkExBirdDog => 'Kuş-köpek';
+
+  @override
+  String get wrkExBirdDogHint =>
+      'Eller ve dizler yerde.\nZıt kol ve bacağı uzat.\nBekle, taraf değiştir.';
+
+  @override
+  String get wrkExPlank => 'Plank';
+
+  @override
+  String get wrkExPlankHint =>
+      'Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökme.';
+
+  @override
+  String get wrkExCrunch => 'Mekik';
+
+  @override
+  String get wrkExCrunchHint =>
+      'Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldır.\nYavaşça in.';
+
+  @override
+  String get wrkExSidePlank => 'Yan plank';
+
+  @override
+  String get wrkExSidePlankHint =>
+      'Ön kol yerde, bacaklar birlikte.\nKalça yukarıda, gövde düz.\nSürenin yarısı her tarafa.';
+
+  @override
+  String get wrkExLegRaise => 'Bacak kaldırma';
+
+  @override
+  String get wrkExLegRaiseHint =>
+      'Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldır.\nBel yerde, yavaş indir.';
+
+  @override
+  String get wrkExStepTouch => 'Yana adım';
+
+  @override
+  String get wrkExStepTouchHint =>
+      'Yana adım at, ayağı birleştir.\nDiğer tarafa.\nKollar ritimle çalışsın.';
+
+  @override
+  String get wrkExShadowBoxing => 'Gölge boksu';
+
+  @override
+  String get wrkExShadowBoxingHint =>
+      'Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket et.';
+
+  @override
+  String get wrkExHighKnees => 'Yüksek diz koşusu';
+
+  @override
+  String get wrkExHighKneesHint =>
+      'Yerinde koş.\nDizler bel hizasına.\nParmak uçlarına in.';
+
+  @override
+  String get wrkExMountainClimber => 'Dağcı';
+
+  @override
+  String get wrkExMountainClimberHint =>
+      'Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çek.\nKalçayı kaldırma.';
+
+  @override
+  String get wrkExBurpee => 'Burpee';
+
+  @override
+  String get wrkExBurpeeHint =>
+      'Çömel, eller yere.\nŞınav pozisyonuna sıçra ve geri gel.\nYukarı zıpla.';
+
+  @override
+  String get wrkExFullBodyStretch => 'Esneme';
+
+  @override
+  String get wrkExFullBodyStretchHint =>
+      'Yukarı uzan, sonra öne eğil.\nUyluk ve göğsü esnet.\nYavaş nefes al, sarsma.';
 
   @override
   String get qaUnitCm => 'cm';
@@ -5046,7 +6932,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get dscBlockerText =>
-      'Yatıştan sonra eğlence uygulamalarını engelleme daha sonra eklenecek.';
+      'Disiplin modunda yatma saatinden sonra eğlence uygulamaları engellenir: Android\'de «Sistem: yatma saati» ekranıyla, iPhone\'da Kestirmeler otomasyonuyla.';
 
   @override
   String get dscBlockerSoon => 'Sonra';
@@ -5446,7 +7332,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get visReceiptFinanceLater =>
-      'Fiş kaydedildi. Finansa kayıt bir sonraki güncellemede gelecek.';
+      'Kalemleri kontrol edin — ardından fiş finansa kaydedilebilir.';
 
   @override
   String get wlkTitle => 'Yürüyüş';
@@ -5661,476 +7547,290 @@ class AppLocalizationsTr extends AppLocalizations {
   String get wlkMapAttribution => '© OpenStreetMap katkıcıları';
 
   @override
-  String get wrkTitle => 'Antrenmanlar';
+  String get planNoticeLabel => 'Bildirim';
 
   @override
-  String get wrkProgram => 'Program';
+  String get planTitle => 'Plan hazırlandı';
 
   @override
-  String get wrkToday => 'Bugün';
+  String get planDraftNote =>
+      'Taslak plan — yapay zekâ bağlandıktan sonra Sistem onu netleştirecek.';
 
   @override
-  String wrkTodayDay(String key) {
-    return 'Programa göre — $key günü';
+  String planAcceptedAt(String date) {
+    return 'Plan kabul edildi: $date';
   }
 
   @override
-  String get wrkRestDay =>
-      'Bugün programa göre dinlenme günü. Aşağıdaki listeden istediğin antrenmanı yapabilirsin.';
+  String get planAccept => 'Kabul et';
 
   @override
-  String wrkDayTitle(String key) {
-    return '$key günü';
+  String get planEditData => 'Verileri değiştir';
+
+  @override
+  String get planRecalculate => 'Yeniden hesapla';
+
+  @override
+  String get planChooseSection => 'Hangi bölümü değiştirmek istersiniz?';
+
+  @override
+  String get planLoadError => 'Plan hazırlanamadı';
+
+  @override
+  String get planRetry => 'Tekrar dene';
+
+  @override
+  String get planNormsTitle => 'Normlar';
+
+  @override
+  String get planCalories => 'Kalori';
+
+  @override
+  String planKcal(String value) {
+    return '$value kcal';
   }
 
   @override
-  String wrkMinutesShort(int minutes) {
-    return '$minutes dk';
+  String get planModeDeficit => 'Açık';
+
+  @override
+  String get planModeSurplus => 'Fazla';
+
+  @override
+  String get planModeMaintenance => 'Koruma';
+
+  @override
+  String planBmrTdee(String bmr, String tdee) {
+    return 'Bazal metabolizma $bmr · harcama $tdee kcal';
   }
 
   @override
-  String wrkEstimate(int minutes) {
-    return '≈$minutes dk';
+  String get planProtein => 'Protein';
+
+  @override
+  String get planFat => 'Yağ';
+
+  @override
+  String get planCarbs => 'Karbonhidrat';
+
+  @override
+  String planGrams(String value) {
+    return '$value g';
   }
 
   @override
-  String wrkExerciseCount(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count egzersiz',
-      one: '$count egzersiz',
-    );
-    return '$_temp0';
+  String get planWater => 'Su';
+
+  @override
+  String planMl(String value) {
+    return '$value ml';
   }
 
   @override
-  String wrkSetsReps(int sets, int reps) {
-    return '$sets × $reps';
+  String planWaterTrainingDay(String value) {
+    return 'Antrenman gününde — $value ml';
   }
 
   @override
-  String wrkSetsSeconds(int sets, int seconds) {
-    return '$sets × $seconds sn';
+  String get planSleep => 'Uyku';
+
+  @override
+  String planHours(String value) {
+    return '$value sa';
   }
 
   @override
-  String wrkRestShort(int seconds) {
-    return 'dinlenme $seconds sn';
+  String planHoursMinutes(String h, String m) {
+    return '$h sa $m dk';
   }
 
   @override
-  String get wrkGentle =>
-      'Hafif seçenek: zıplama ve omurgaya dikey yük yok — ankette sakatlık veya kısıtlama belirtilmiş.';
-
-  @override
-  String get wrkSafetyNote =>
-      'Bir egzersiz ağrı veya rahatsızlık veriyorsa onu atla.';
-
-  @override
-  String get wrkLevelUnknown =>
-      'Ankette seviye belirtilmemiş — başlangıç programı.';
-
-  @override
-  String wrkProgressionWeeks(int weeks) {
-    return 'Tamamlanan hafta: $weeks';
+  String planWakeBed(String wake, String bed) {
+    return 'Kalkış $wake · yatış $bed';
   }
 
   @override
-  String get wrkProgressionNote =>
-      'Haftanın tüm antrenmanları (en fazla 3) yapılırsa hafta sayılır. Her hafta için: +1 tekrar veya +5 sn, seviyenin üst sınırına kadar.';
+  String get planRoutineTitle => 'Günlük düzen';
 
   @override
-  String get wrkRegenerate => 'Programı yeniden oluştur';
-
-  @override
-  String get wrkRegenerateTitle => 'Program yeniden oluşturulsun mu?';
-
-  @override
-  String get wrkRegenerateText =>
-      'Program anket ve plana göre yeniden oluşturulacak. Antrenman geçmişi korunur, ilerleme baştan başlar.';
-
-  @override
-  String get wrkAiProgram => 'Yapay zekâdan program';
-
-  @override
-  String get wrkSoon => 'yakında';
-
-  @override
-  String get wrkStart => 'Antrenmana başla';
-
-  @override
-  String wrkStartDay(String key) {
-    return '$key gününe başla';
+  String planWeek(String n) {
+    return 'Hafta $n';
   }
 
   @override
-  String get wrkHistory => 'Geçmiş';
+  String get planWdMon => 'Pzt';
 
   @override
-  String get wrkHistoryEmpty => 'Henüz antrenman yok.';
+  String get planWdTue => 'Sal';
 
   @override
-  String get wrkSessionDone => 'tamamlandı';
+  String get planWdWed => 'Çar';
 
   @override
-  String get wrkSessionInterrupted => 'yarıda kaldı';
+  String get planWdThu => 'Per';
 
   @override
-  String wrkSessionStats(int minutes, int kcal) {
-    return '$minutes dk · ≈$kcal kcal';
+  String get planWdFri => 'Cum';
+
+  @override
+  String get planWdSat => 'Cmt';
+
+  @override
+  String get planWdSun => 'Paz';
+
+  @override
+  String get planRoutineWake => 'Kalkış';
+
+  @override
+  String get planRoutineSkincareAm => 'Cilt bakımı (sabah)';
+
+  @override
+  String planRoutineMeal(String n) {
+    return 'Öğün $n';
   }
 
   @override
-  String get wrkPreparing => 'Program hazırlanıyor…';
+  String get planRoutineLeaveHome => 'Evden çıkış';
 
   @override
-  String get wrkPhasePrepare => 'Hazırlan';
+  String get planRoutineLesson => 'Ders';
 
   @override
-  String get wrkPhaseWork => 'Çalışma';
+  String get planRoutineWork => 'İş';
 
   @override
-  String get wrkPhaseRest => 'Dinlenme';
+  String get planRoutineOther => 'Etkinlik';
 
   @override
-  String get wrkPaused => 'Duraklatıldı';
+  String get planRoutineReturnHome => 'Evde';
 
   @override
-  String wrkSetOf(int set, int sets) {
-    return 'Set $set / $sets';
+  String get planRoutineTraining => 'Antrenman';
+
+  @override
+  String get planRoutineSkincarePm => 'Cilt bakımı (akşam)';
+
+  @override
+  String get planRoutineBed => 'Yatış';
+
+  @override
+  String get planQuestsTitle => 'Görevler';
+
+  @override
+  String get planQuestsNote =>
+      'Görevleri tamamlama bir sonraki güncellemede gelecek.';
+
+  @override
+  String planQuestLeaveHome(String time) {
+    return '$time saatine kadar evden çık';
   }
 
   @override
-  String wrkRepsTarget(int reps) {
-    String _temp0 = intl.Intl.pluralLogic(
-      reps,
-      locale: localeName,
-      other: '$reps tekrar',
-      one: '$reps tekrar',
-    );
-    return '$_temp0';
+  String planQuestAttendLesson(String title) {
+    return 'Ders: $title';
   }
 
   @override
-  String get wrkDoneSet => 'Set tamam';
-
-  @override
-  String get wrkPause => 'Duraklat';
-
-  @override
-  String get wrkResume => 'Devam et';
-
-  @override
-  String get wrkSkipRest => 'Dinlenmeyi atla';
-
-  @override
-  String get wrkSkipExercise => 'Egzersizi atla';
-
-  @override
-  String get wrkStop => 'Bitir';
-
-  @override
-  String wrkNext(String name) {
-    return 'Sıradaki: $name';
+  String planQuestAttendWork(String title) {
+    return 'İş: $title';
   }
 
   @override
-  String get wrkLastExercise => 'Son egzersiz';
-
-  @override
-  String get wrkTechnique => 'Teknik';
-
-  @override
-  String get wrkVoice => 'Sesli yönlendirme';
-
-  @override
-  String get wrkProgressLabel => 'Antrenman ilerlemesi';
-
-  @override
-  String get wrkStopTitle => 'Antrenman bitirilsin mi?';
-
-  @override
-  String get wrkStopText =>
-      'Yapılanlar yarım kalan antrenman olarak kaydedilir.';
-
-  @override
-  String get wrkFinishedTitle => 'Antrenman tamamlandı';
-
-  @override
-  String wrkFinishedStats(int minutes, int kcal, int sets) {
-    return 'Süre: $minutes dk · ≈$kcal kcal · set: $sets';
+  String planQuestWater(String ml) {
+    return '$ml ml su iç';
   }
 
   @override
-  String get wrkWeightAssumed =>
-      'Harcama 70 kg kiloya göre tahmin: kilo ölçümü yok.';
-
-  @override
-  String get wrkKcalNote => 'Harcama MET ile tahmindir, ölçüm değildir.';
-
-  @override
-  String wrkSayPrepare(String name) {
-    return 'Hazırlan. $name.';
+  String planQuestSleep(String time, String hours) {
+    return '$time saatinde yat (uyku $hours sa)';
   }
 
   @override
-  String wrkSaySet(int set, int sets, String amount) {
-    return 'Set $set / $sets. $amount. Başla!';
+  String planQuestMeals(String count) {
+    return 'Plana göre öğünler: $count';
   }
 
   @override
-  String wrkSecondsAmount(int seconds) {
-    String _temp0 = intl.Intl.pluralLogic(
-      seconds,
-      locale: localeName,
-      other: '$seconds saniye',
-      one: '$seconds saniye',
-    );
-    return '$_temp0';
+  String planQuestTraining(String minutes) {
+    return '$minutes dk antrenman';
   }
 
   @override
-  String wrkSayRest(String amount) {
-    return 'Dinlenme: $amount.';
+  String get planQuestSkincareMorning => 'Sabah cilt bakımı';
+
+  @override
+  String get planQuestSkincareEvening => 'Akşam cilt bakımı';
+
+  @override
+  String planQuestWakeOnTime(String time) {
+    return '$time saatinde ertelemeden kalk';
   }
 
   @override
-  String wrkSayNext(String name) {
-    return 'Sıradaki: $name.';
+  String planQuestStudy(String minutes) {
+    return '$minutes dk ders çalış';
   }
 
   @override
-  String get wrkSayFinished => 'Antrenman tamamlandı. Harika iş!';
+  String get planQuestTrackExpenses => 'Günün harcamalarını kaydet';
 
   @override
-  String get wrkExMarchInPlace => 'Yerinde yürüyüş';
+  String get planQuestEveryDay => 'her gün';
 
   @override
-  String get wrkExMarchInPlaceHint =>
-      'Dizlerini yükselt.\nKollar adımla birlikte çalışsın.\nDüzenli nefes al.';
+  String planQuestWeekOnly(String n) {
+    return 'hafta $n';
+  }
 
   @override
-  String get wrkExArmCircles => 'Kol çevirme';
+  String planQuestReward(String diamonds, String xp) {
+    return '+$diamonds ◆ · +$xp deneyim';
+  }
 
   @override
-  String get wrkExArmCirclesHint =>
-      'Kollar omuz hizasında yanlara.\nÖnce ileri, sonra geri küçük daireler.\nOmuzlar aşağıda.';
+  String get planWarningsTitle => 'Uyarılar';
 
   @override
-  String get wrkExJumpingJacks => 'Jumping jack';
+  String planWarnSleepShort(String scheduled, String target, String bed) {
+    return 'Programa göre uyku $scheduled — norm olan $target süresinden az. Önerilen yatış saati: $bed.';
+  }
 
   @override
-  String get wrkExJumpingJacksHint =>
-      'Zıpla: bacaklar açık, kollar yukarı.\nGeri zıpla.\nParmak uçlarına yumuşak in.';
+  String get planWarnDeficitFloor =>
+      'Kalori açığı güvenli alt sınırla kısıtlandı — Sistem bunun altına inmez.';
 
   @override
-  String get wrkExChairSquat => 'Sandalyeye çömelme';
+  String get planWarnActivityDefaulted =>
+      'Aktivite düzeyi belirtilmedi — «hareketsiz» kabul edildi.';
 
   @override
-  String get wrkExChairSquatHint =>
-      'Sandalyenin önünde dur, ayaklar omuz genişliğinde.\nKalçayı geri iterek otur.\nSarsmadan kalk.';
+  String planWarnNoTrainingWindow(String day) {
+    return '$day: antrenman için boş zaman yok.';
+  }
 
   @override
-  String get wrkExGluteBridge => 'Kalça köprüsü';
+  String get planWarnInjuries =>
+      'Sakatlık veya kısıtlamalar belirtildi — yükü dikkatli seçin, emin değilseniz doktora danışın.';
 
   @override
-  String get wrkExGluteBridgeHint =>
-      'Sırtüstü yat, ayaklar yerde.\nKalçayı kaldır, kalça kaslarını sık.\nYavaşça in.';
+  String planMissingMessage(String fields) {
+    return 'Kalori ve makroları hesaplamak için doldurun: $fields.';
+  }
 
   @override
-  String get wrkExSquat => 'Squat';
+  String get planMissingSex => 'cinsiyet';
 
   @override
-  String get wrkExSquatHint =>
-      'Ayaklar omuz genişliğinde, uçlar hafif dışa.\nKalça geri, dizler parmak yönünde.\nSırt düz, topuklar yerde.';
+  String get planMissingBirthDate => 'doğum tarihi';
 
   @override
-  String get wrkExWallSit => 'Duvarda oturma';
+  String get planMissingHeight => 'boy';
 
   @override
-  String get wrkExWallSitHint =>
-      'Sırt duvara yaslı.\nUyluklar yere neredeyse paralel olana kadar in.\nPozisyonu koru.';
+  String get planMissingWeight => 'kilo';
 
   @override
-  String get wrkExReverseLunge => 'Geri hamle';
-
-  @override
-  String get wrkExReverseLungeHint =>
-      'Geriye adım at, arka dizi yere doğru indir.\nÖn diz ayağın üzerinde.\nGeri dön, bacak değiştir.';
-
-  @override
-  String get wrkExGobletSquat => 'Goblet squat';
-
-  @override
-  String get wrkExGobletSquatHint =>
-      'Dambılı dik olarak göğüste tut.\nÇömel, dirsekler dizlerin arasında.\nSırt düz.';
-
-  @override
-  String get wrkExKettlebellSwing => 'Kettlebell salınımı';
-
-  @override
-  String get wrkExKettlebellSwingHint =>
-      'Kettlebell iki elde, ayaklar omuzdan geniş.\nKalça geri, sonra hızla ileri.\nKettlebell kalça gücüyle göğüs hizasına çıkar.';
-
-  @override
-  String get wrkExJumpSquat => 'Zıplamalı squat';
-
-  @override
-  String get wrkExJumpSquatHint =>
-      'Normal squat.\nYukarı sıçra.\nYumuşak inip squat\'a geç.';
-
-  @override
-  String get wrkExWallPushUp => 'Duvarda şınav';
-
-  @override
-  String get wrkExWallPushUpHint =>
-      'Avuçlar omuz hizasında duvarda.\nKolları bük, gövde düz.\nİtip geri gel.';
-
-  @override
-  String get wrkExKneePushUp => 'Dizüstü şınav';
-
-  @override
-  String get wrkExKneePushUpHint =>
-      'Dizler ve avuçlar yerde.\nDizden başa gövde düz.\nGöğüs yere, sonra yukarı.';
-
-  @override
-  String get wrkExPushUp => 'Şınav';
-
-  @override
-  String get wrkExPushUpHint =>
-      'Şınav pozisyonu, eller omuzdan biraz geniş.\nGövde düz bir çizgi.\nGöğüs yere, dirsekler 45°.';
-
-  @override
-  String get wrkExDumbbellPress => 'Yerde dambıl press';
-
-  @override
-  String get wrkExDumbbellPressHint =>
-      'Yerde yat, dambıllar göğüs üstünde.\nDirsekler yere değene kadar indir.\nYukarı it.';
-
-  @override
-  String get wrkExDiamondPushUp => 'Elmas şınav';
-
-  @override
-  String get wrkExDiamondPushUpHint =>
-      'Avuçlar göğsün altında yan yana.\nDirsekler gövdeye yakın.\nGövde düz.';
-
-  @override
-  String get wrkExSuperman => 'Süperman';
-
-  @override
-  String get wrkExSupermanHint =>
-      'Yüzüstü yat, kollar önde.\nKol ve bacakları birkaç saniye kaldır.\nYavaşça indir.';
-
-  @override
-  String get wrkExReverseSnowAngel => 'Ters kar meleği';
-
-  @override
-  String get wrkExReverseSnowAngelHint =>
-      'Yüzüstü yat, kollar yanlarda.\nGöğsü ve kolları hafif kaldır.\nKolları yay çizerek başın üstüne ve geri götür.';
-
-  @override
-  String get wrkExBandRow => 'Lastik çekiş';
-
-  @override
-  String get wrkExBandRowHint =>
-      'Lastiği göğüs hizasına sabitle.\nKürek kemiklerini sıkarak bele çek.\nYavaşça bırak.';
-
-  @override
-  String get wrkExDumbbellRow => 'Eğilerek dambıl çekiş';
-
-  @override
-  String get wrkExDumbbellRowHint =>
-      'Bir el ve diz sandalyeye dayalı.\nDambılı bele çek.\nSırt düz.';
-
-  @override
-  String get wrkExPullUp => 'Barfiks';
-
-  @override
-  String get wrkExPullUpHint =>
-      'Tutuş omuzdan biraz geniş.\nÇeneyi bara çek.\nKontrollü in.';
-
-  @override
-  String get wrkExDeadBug => 'Ölü böcek';
-
-  @override
-  String get wrkExDeadBugHint =>
-      'Sırtüstü, kollar yukarı, dizler kalça üstünde.\nZıt kol ve bacağı indir.\nBel yere bastırılı.';
-
-  @override
-  String get wrkExBirdDog => 'Kuş-köpek';
-
-  @override
-  String get wrkExBirdDogHint =>
-      'Eller ve dizler yerde.\nZıt kol ve bacağı uzat.\nBekle, taraf değiştir.';
-
-  @override
-  String get wrkExPlank => 'Plank';
-
-  @override
-  String get wrkExPlankHint =>
-      'Ön kollar ve ayak uçları yerde.\nGövde düz, karın sıkı.\nBelden çökme.';
-
-  @override
-  String get wrkExCrunch => 'Mekik';
-
-  @override
-  String get wrkExCrunchHint =>
-      'Sırtüstü, dizler bükük.\nOmuzları dizlere doğru kaldır.\nYavaşça in.';
-
-  @override
-  String get wrkExSidePlank => 'Yan plank';
-
-  @override
-  String get wrkExSidePlankHint =>
-      'Ön kol yerde, bacaklar birlikte.\nKalça yukarıda, gövde düz.\nSürenin yarısı her tarafa.';
-
-  @override
-  String get wrkExLegRaise => 'Bacak kaldırma';
-
-  @override
-  String get wrkExLegRaiseHint =>
-      'Sırtüstü, kollar yanlarda.\nDüz bacakları yukarı kaldır.\nBel yerde, yavaş indir.';
-
-  @override
-  String get wrkExStepTouch => 'Yana adım';
-
-  @override
-  String get wrkExStepTouchHint =>
-      'Yana adım at, ayağı birleştir.\nDiğer tarafa.\nKollar ritimle çalışsın.';
-
-  @override
-  String get wrkExShadowBoxing => 'Gölge boksu';
-
-  @override
-  String get wrkExShadowBoxingHint =>
-      'Duruş, yumruklar çenede.\nSırayla hafif yumruklar.\nZıplamadan parmak uçlarında hareket et.';
-
-  @override
-  String get wrkExHighKnees => 'Yüksek diz koşusu';
-
-  @override
-  String get wrkExHighKneesHint =>
-      'Yerinde koş.\nDizler bel hizasına.\nParmak uçlarına in.';
-
-  @override
-  String get wrkExMountainClimber => 'Dağcı';
-
-  @override
-  String get wrkExMountainClimberHint =>
-      'Düz kollarla şınav pozisyonu.\nDizleri sırayla göğse çek.\nKalçayı kaldırma.';
-
-  @override
-  String get wrkExBurpee => 'Burpee';
-
-  @override
-  String get wrkExBurpeeHint =>
-      'Çömel, eller yere.\nŞınav pozisyonuna sıçra ve geri gel.\nYukarı zıpla.';
-
-  @override
-  String get wrkExFullBodyStretch => 'Esneme';
-
-  @override
-  String get wrkExFullBodyStretchHint =>
-      'Yukarı uzan, sonra öne eğil.\nUyluk ve göğsü esnet.\nYavaş nefes al, sarsma.';
+  String planFillSection(String section) {
+    return 'Doldur: $section';
+  }
 }

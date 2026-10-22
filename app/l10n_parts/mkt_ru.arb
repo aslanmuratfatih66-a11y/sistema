@@ -1,0 +1,76 @@
+{
+  "mktTitle": "Маркет",
+  "mktSuggest": "Подобрать (ИИ)",
+  "mktSuggesting": "Подбираю товары под план…",
+  "mktCatAll": "Все",
+  "mktCatSkin": "Уход за кожей",
+  "mktCatNutrition": "Питание",
+  "mktCatEquipment": "Инвентарь",
+  "mktCatOther": "Другое",
+  "mktTabNew": "Подборка",
+  "mktTabSaved": "Сохранённые",
+  "mktTabBought": "Куплено",
+  "mktEmptyNew": "Пока пусто. Нажмите «Подобрать (ИИ)» — Система подберёт товары под ваш план.",
+  "mktEmptySaved": "Сохранённых товаров нет.",
+  "mktEmptyBought": "Покупок пока нет.",
+  "mktEstimateNote": "Цены примерные — по данным веб-поиска, на указанную дату.",
+  "mktPriceLine": "≈ {price} · {source} · {date}",
+  "@mktPriceLine": {
+    "placeholders": {
+      "price": {"type": "String"},
+      "source": {"type": "String"},
+      "date": {"type": "String"}
+    }
+  },
+  "mktPriceShort": "≈ {price} · {date}",
+  "@mktPriceShort": {
+    "placeholders": {
+      "price": {"type": "String"},
+      "date": {"type": "String"}
+    }
+  },
+  "mktPriceUnknown": "Цена неизвестна",
+  "mktPricePaid": "Куплено за {price}",
+  "@mktPricePaid": {
+    "placeholders": {
+      "price": {"type": "String"}
+    }
+  },
+  "mktBudgetOk": "Можно купить",
+  "mktBudgetAfterIncome": "После поступления денег",
+  "mktBudgetOver": "Не по бюджету",
+  "mktSave": "Сохранить",
+  "mktHide": "Скрыть",
+  "mktBought": "Купил",
+  "mktRefreshPrice": "Обновить цену",
+  "mktPriceUpdated": "Цена обновлена.",
+  "mktPriceNotFound": "Свежую цену найти не удалось.",
+  "mktSearchSuffix": "поиск",
+  "mktLinkCopied": "Ссылка скопирована.",
+  "mktOpenFailed": "Не удалось открыть ссылку — она скопирована.",
+  "mktBoughtTitle": "Покупка",
+  "mktBoughtMessage": "Сколько стоило «{title}»?",
+  "@mktBoughtMessage": {
+    "placeholders": {
+      "title": {"type": "String"}
+    }
+  },
+  "mktBoughtPrice": "Фактическая цена",
+  "mktBoughtConfirm": "Записать",
+  "mktBoughtRecorded": "Покупка записана в финансы.",
+  "mktBoughtNoFinance": "Отмечено как купленное. В финансы не записано — раздел пока недоступен.",
+  "mktNoticeLabel": "Система",
+  "mktNothingFound": "Система не нашла новых товаров. Попробуйте другую категорию.",
+  "mktAdded": "Добавлено товаров: {count}",
+  "@mktAdded": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "mktErrOffline": "Нет связи с сервером. Сохранённые товары доступны и офлайн.",
+  "mktErrNotSignedIn": "Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы Система подбирала товары.",
+  "mktErrBudget": "Лимит ИИ сейчас исчерпан. Попробуйте позже.",
+  "mktErrUnavailable": "ИИ на сервере сейчас недоступен.",
+  "mktErrRateLimited": "Слишком много запросов. Попробуйте через некоторое время.",
+  "mktErrServer": "Не удалось получить ответ. Попробуйте ещё раз."
+}

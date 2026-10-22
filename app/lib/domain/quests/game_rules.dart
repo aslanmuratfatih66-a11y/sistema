@@ -35,6 +35,7 @@ abstract final class PenaltyReasons {
   static const markRelapse = 'markRelapse';
   static const bossFailed = 'bossFailed';
   static const reproach = 'reproach'; // упрёк за пропуск (B)
+  static const blockedAttempt = 'blockedAttempt'; // попытка открыть заблокированное после отбоя (этап 7)
 
   static String forMark(DayMark m) => switch (m) {
         DayMark.walkedWithFriends => markWalked,

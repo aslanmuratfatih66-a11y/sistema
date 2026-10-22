@@ -391,46 +391,16 @@
   "homeDemoBossGoal": "Провести 5 тренировок за неделю",
   "homeDemoBossRewardTitle": "Несгибаемый",
   "homeDemoAssistantLine": "Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.",
-  "actStepsTitle": "Шаги",
-  "actGoal": "Цель: {goal}",
-  "@actGoal": {
-    "placeholders": {
-      "goal": {
-        "type": "String"
-      }
-    }
-  },
-  "actDistance": "Дистанция",
-  "actDistanceKm": "{km} км",
-  "@actDistanceKm": {
-    "placeholders": {
-      "km": {
-        "type": "String"
-      }
-    }
-  },
-  "actFloors": "Этажи",
-  "actNoValue": "—",
-  "actWeek": "7 дней",
-  "actAllow": "Разрешить",
-  "actPermissionHint": "Разрешите доступ к датчикам движения — шаги будут считаться сами.",
-  "actUnavailableHint": "Счётчика шагов на устройстве нет — введите шаги вручную.",
-  "actManual": "Ввести вручную",
-  "actManualLabel": "Шаги за сегодня",
-  "actManualRange": "От 0 до 100 000",
-  "actSave": "Сохранить",
-  "actCancel": "Отмена",
-  "actStepsSemantic": "Шаги за сегодня: {steps} из {goal}",
-  "@actStepsSemantic": {
-    "placeholders": {
-      "steps": {
-        "type": "String"
-      },
-      "goal": {
-        "type": "String"
-      }
-    }
-  },
+  "hqStatStrengthShort": "СИЛ",
+  "hqStatEnduranceShort": "ВЫН",
+  "hqStatDisciplineShort": "ДИС",
+  "hqStatIntellectShort": "ИНТ",
+  "hqStatHealthShort": "ЗДР",
+  "hqStatLooksShort": "ВНШ",
+  "hqCaloriesTodayTitle": "Калории за день",
+  "hqNutritionDiaryTitle": "Дневник питания",
+  "hqNutritionDiarySoon": "Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.",
+  "hqFinanceFoodTitle": "Финансы на еду",
   "bdyEnergy": "Энергия",
   "bdyHistory": "История",
   "bdyCharts": "Графики",
@@ -562,6 +532,160 @@
   "bdySwellTrend": "Тренд по утрам",
   "bdySwellEmpty": "Утренних фото пока нет.",
   "bdySwellCompareFirst": "Сравнить первое и последнее",
+  "blkTitle": "Блокировка приложений",
+  "blkOverlayTitle": "Система: отбой",
+  "blkOverlayBody": "Время сна. Развлечения закрыты до {time}. Положите телефон — завтра нужен ясный ум.",
+  "@blkOverlayBody": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "blkOverlayButton": "Закрыть",
+  "blkNotifTitle": "Система: отбой",
+  "blkNotifBody": "Отвлекающие приложения закрыты до {time}",
+  "@blkNotifBody": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "blkIntro": "В режиме дисциплины после отбоя отвлекающие приложения закрываются экраном «Система: отбой». Попытки записываются; с третьей за ночь — штраф {diamonds} ◆.",
+  "@blkIntro": {
+    "placeholders": {
+      "diamonds": {
+        "type": "String"
+      }
+    }
+  },
+  "blkStatusTitle": "Статус",
+  "blkDisciplineOn": "Режим дисциплины включён. Блокировка: {from}–{until}.",
+  "@blkDisciplineOn": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "until": {
+        "type": "String"
+      }
+    }
+  },
+  "blkDisciplineOff": "Режим дисциплины выключен — блокировка не действует. Окно режима: {from}–{until}.",
+  "@blkDisciplineOff": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "until": {
+        "type": "String"
+      }
+    }
+  },
+  "blkActiveNow": "Блокировка действует сейчас",
+  "blkReady": "Готово к работе",
+  "blkNotReady": "Нужны разрешения",
+  "blkNoApps": "Не выбрано ни одного приложения",
+  "blkPermsTitle": "Разрешения",
+  "blkUsageAccess": "Доступ к истории использования",
+  "blkUsageAccessHint": "Чтобы видеть, какое приложение открыто сейчас.",
+  "blkOverlayPerm": "Поверх других приложений",
+  "blkOverlayPermHint": "Чтобы показать экран «Система: отбой».",
+  "blkGranted": "Выдано",
+  "blkNotGranted": "Не выдано",
+  "blkOpenSettings": "Открыть настройки",
+  "blkNotifHint": "Во время блокировки в шторке висит уведомление Системы — так Android не остановит проверку.",
+  "blkAppsTitle": "Приложения",
+  "blkAppsHint": "Отмеченные закрываются после отбоя. Известные развлекательные отмечены по умолчанию.",
+  "blkAppsSelected": "Выбрано: {count}",
+  "@blkAppsSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "blkAppsLoading": "Загружаю список приложений…",
+  "blkAppsEmpty": "Приложения не найдены",
+  "blkSearch": "Поиск",
+  "blkShowAll": "Показать все",
+  "blkShowSelected": "Только выбранные",
+  "blkUnsupported": "На этом устройстве блокировка недоступна.",
+  "blkAttemptsTonight": "Попыток за эту ночь: {count}",
+  "@blkAttemptsTonight": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "blkIosIntro": "На iPhone прямой блокировки нет. Настройте личные автоматизации «Команд»: при открытии приложения сразу откроется Система. После отбоя она покажет «Система: отбой» и запишет попытку, днём — ответит «Сейчас можно».",
+  "blkIosPickTitle": "1. Какие приложения",
+  "blkIosGames": "Игры (любая игра)",
+  "blkIosStepsTitle": "2. Автоматизация для каждого приложения",
+  "blkIosStep1": "Откройте приложение «Команды» → вкладка «Автоматизация» → «+» («Новая автоматизация»).",
+  "blkIosStep2": "Выберите «Приложение», нажмите «Выбрать» и отметьте приложение (можно сразу несколько — тогда ссылка одна, например для игр).",
+  "blkIosStep3": "Отметьте «Открыто», выберите «Выполнять сразу» и нажмите «Далее».",
+  "blkIosStep4": "«Новая пустая автоматизация» → «Добавить действие» → найдите «Открыть URL».",
+  "blkIosStep5": "Вставьте ссылку этого приложения (кнопка «Скопировать» ниже) и нажмите «Готово».",
+  "blkIosStep6": "Повторите для остальных приложений. Проверьте: откройте приложение — должна открыться Система.",
+  "blkIosLinksTitle": "3. Ссылки",
+  "blkIosLinksEmpty": "Сначала выберите приложения выше.",
+  "blkCopy": "Скопировать",
+  "blkCopied": "Ссылка скопирована: {app}",
+  "@blkCopied": {
+    "placeholders": {
+      "app": {
+        "type": "String"
+      }
+    }
+  },
+  "blkIosFocusTitle": "Совет: фокус-режим «Сон»",
+  "blkIosFocusBody": "Настройки → Фокусирование → «Сон»: включайте по расписанию с отбоя до подъёма, скройте уведомления отвлекающих приложений и оставьте на главном экране только нужное.",
+  "blkIosAlwaysNote": "Автоматизация срабатывает в любое время — решает Система: блок действует только после отбоя в режиме дисциплины.",
+  "blkBlockedLabel": "Система",
+  "blkBlockedTitle": "Система: отбой",
+  "blkBlockedMessageApp": "{app} закрыт до {time}. Сон — тоже тренировка. Положите телефон.",
+  "@blkBlockedMessageApp": {
+    "placeholders": {
+      "app": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "blkBlockedMessage": "Развлечения закрыты до {time}. Сон — тоже тренировка. Положите телефон.",
+  "@blkBlockedMessage": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "blkPenaltyApplied": "Повторная попытка: −{diamonds} ◆",
+  "@blkPenaltyApplied": {
+    "placeholders": {
+      "diamonds": {
+        "type": "String"
+      }
+    }
+  },
+  "blkPenaltyWarning": "С третьей попытки за ночь — штраф {diamonds} ◆ за каждую.",
+  "@blkPenaltyWarning": {
+    "placeholders": {
+      "diamonds": {
+        "type": "String"
+      }
+    }
+  },
+  "blkClose": "Закрыть",
+  "blkAllowedTitle": "Сейчас можно",
+  "blkAllowedMessage": "Блокировка сейчас не действует. Отдыхайте — в меру.",
+  "blkChecking": "Проверяю…",
+  "blkReasonBlockedAttempt": "Попытка открыть приложение после отбоя",
   "chrSemanticsChat": "{name}: нажмите, чтобы открыть чат; удерживайте — меню; смахните вниз, чтобы убрать",
   "@chrSemanticsChat": {
     "placeholders": {
@@ -1062,16 +1186,658 @@
   "onbStepFinance": "Финансы",
   "onbStepCharacter": "Персонаж и голос",
   "onbStepPermissions": "Разрешения",
-  "hqStatStrengthShort": "СИЛ",
-  "hqStatEnduranceShort": "ВЫН",
-  "hqStatDisciplineShort": "ДИС",
-  "hqStatIntellectShort": "ИНТ",
-  "hqStatHealthShort": "ЗДР",
-  "hqStatLooksShort": "ВНШ",
-  "hqCaloriesTodayTitle": "Калории за день",
-  "hqNutritionDiaryTitle": "Дневник питания",
-  "hqNutritionDiarySoon": "Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.",
-  "hqFinanceFoodTitle": "Финансы на еду",
+  "almTitle": "Будильники",
+  "almRingTitle": "Подъём!",
+  "almRingBodySquats": "{count, plural, one{Сделайте {count} приседание, чтобы выключить} few{Сделайте {count} приседания, чтобы выключить} other{Сделайте {count} приседаний, чтобы выключить}}",
+  "@almRingBodySquats": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "almRingBodyQr": "Отсканируйте QR-код в другой комнате, чтобы выключить",
+  "almDoTask": "Выполнить задание",
+  "almStop": "Стоп",
+  "almChannelName": "Будильник",
+  "almChannelDesc": "Звонок будильника-квеста",
+  "almFallbackBody": "Будильник не выключен — откройте приложение и выполните задание.",
+  "almReasonWake": "Подъём по будильнику",
+  "almPermTitle": "Разрешения",
+  "almPermReady": "Будильник готов: звонит поверх экрана блокировки и выключается только заданием.",
+  "almPermExact": "Точные будильники",
+  "almPermFullScreen": "Показ поверх экрана блокировки",
+  "almPermNotifications": "Уведомления",
+  "almPermAlarmKit": "Системный будильник (AlarmKit)",
+  "almPermFallback": "Системный будильник недоступен — прозвонит серия громких уведомлений. Не включайте беззвучный режим и «Фокус» на ночь.",
+  "almPermBackup": "Если выключить звонок кнопкой «Стоп», через 3 минуты пойдут уведомления, пока не выполните задание.",
+  "almPermGrant": "Разрешить",
+  "almPermOn": "есть",
+  "almPermOff": "нет",
+  "almEmpty": "Будильников пока нет. Добавьте первый — выключить его можно будет только заданием.",
+  "almAdd": "Добавить будильник",
+  "almNew": "Новый будильник",
+  "almEditTitle": "Будильник",
+  "almDaysEveryday": "Каждый день",
+  "almDaysWeekdays": "По будням",
+  "almDaysWeekend": "По выходным",
+  "almDaysOnce": "Один раз",
+  "almDayMon": "Пн",
+  "almDayTue": "Вт",
+  "almDayWed": "Ср",
+  "almDayThu": "Чт",
+  "almDayFri": "Пт",
+  "almDaySat": "Сб",
+  "almDaySun": "Вс",
+  "almDaysHint": "Не выбрано ни одного дня — будильник прозвонит один раз.",
+  "almTime": "Время",
+  "almDays": "Дни",
+  "almLabel": "Подпись",
+  "almTask": "Задание",
+  "almTaskSquats": "Приседания",
+  "almTaskQr": "QR-код",
+  "almTaskSquatsShort": "{count, plural, one{{count} приседание} few{{count} приседания} other{{count} приседаний}}",
+  "@almTaskSquatsShort": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "almSquatsCount": "Количество приседаний",
+  "almQrHint": "Распечатайте код и повесьте в другой комнате — например, на кухне или в ванной. Чтобы выключить будильник, придётся встать и дойти до него.",
+  "almQrShare": "Поделиться для печати",
+  "almQrShareText": "QR-код будильника «Системы». Повесьте его в другой комнате.",
+  "almQrRegenerate": "Новый код",
+  "almQrShareFailed": "Не удалось поделиться кодом.",
+  "almDiscipline": "Режим дисциплины",
+  "almDisciplineHint": "Подъём режима дисциплины: время и дни задаёт режим, задание можно сменить.",
+  "almTest": "Проверить через 1 мин",
+  "almTestScheduled": "Проверочный звонок через минуту. Можно заблокировать экран.",
+  "almTestRing": "Проверка",
+  "almDeleteConfirm": "Удалить будильник?",
+  "almNotFound": "Будильник не найден.",
+  "almSquatsHint": "Держите телефон у груди и приседайте до конца — вниз и вверх.",
+  "almSquatsProgress": "{done} / {total}",
+  "@almSquatsProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "almSensorError": "Датчик движения недоступен.",
+  "almHoldFallback": "Удерживать, чтобы выключить",
+  "almScanQr": "Сканировать QR",
+  "almScanTitle": "QR будильника",
+  "almScanHint": "Наведите камеру на напечатанный код.",
+  "almScanNoCamera": "Камера недоступна. Разрешите доступ к камере в настройках.",
+  "almQrWrong": "Это не тот код.",
+  "almQrMissing": "Код для этого будильника не создан — выполните приседания.",
+  "almSnooze": "Отложить на 5 мин (осталось {left})",
+  "@almSnooze": {
+    "placeholders": {
+      "left": {
+        "type": "int"
+      }
+    }
+  },
+  "almSnoozeNone": "Откладывать больше нельзя.",
+  "almReward": "+{count} ◆ за подъём вовремя",
+  "@almReward": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "almDone": "Подъём засчитан",
+  "almDoneBody": "Будильник выключен. Доброе утро!",
+  "finTitle": "Финансы",
+  "finBalance": "Баланс",
+  "finCryptoValue": "Крипта",
+  "finFreeToMonthEnd": "Свободно до конца месяца",
+  "finNextIncome": "Ближайшее поступление",
+  "finMonthExpenses": "Расходы за месяц",
+  "finMonthIncome": "Доходы за месяц",
+  "finMissingRates": "Часть сумм без курса — не вошла в итог. Обновите курсы.",
+  "finRatesNever": "Курсы ещё не загружались",
+  "finRatesUpdated": "Курсы: {time}",
+  "@finRatesUpdated": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "finRefreshRates": "Обновить курсы",
+  "finRefreshing": "Обновляю…",
+  "finInput": "Ввод",
+  "finExpense": "Расход",
+  "finIncome": "Доход",
+  "finTransfer": "Перевод",
+  "finExpenses": "Расходы",
+  "finIncomes": "Доходы",
+  "finReceiptQr": "QR чека",
+  "finReceiptPhoto": "Фото чека",
+  "finBanks": "Банки",
+  "finStatement": "Выписка",
+  "finMarket": "Маркет",
+  "finAccounts": "Счета",
+  "finNoAccounts": "Счетов пока нет. Добавьте наличные или карту — или просто запишите расход, счёт «Наличные» создастся сам.",
+  "finManageAccounts": "Счета и крипта",
+  "finBudgets": "Лимиты",
+  "finBudgetsEmptyShort": "Лимитов нет.",
+  "finBudgetsProposed": "Предложено ИИ: {n} — ждут подтверждения",
+  "@finBudgetsProposed": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finManageBudgets": "Настроить лимиты",
+  "finSoon": "Скоро",
+  "finChargeSoon": "скоро списание",
+  "finRecent": "Последние операции",
+  "finNoOperations": "Операций нет.",
+  "finAllOperations": "Все операции",
+  "finMore": "Разделы",
+  "finReports": "Отчёты",
+  "finGoals": "Цели накопления",
+  "finSubscriptions": "Подписки",
+  "finDebts": "Долги",
+  "finSettings": "Настройки финансов",
+  "finWarning": "Предупреждение",
+  "finSaveError": "Не удалось сохранить",
+  "finAll": "Все",
+  "finChoose": "Выбрать",
+  "finTxNew": "Новая операция",
+  "finTxEdit": "Операция",
+  "finTxDeleteConfirm": "Удалить операцию?",
+  "finAmount": "Сумма",
+  "finAccount": "Счёт",
+  "finFromAccount": "Со счёта",
+  "finToAccount": "На счёт",
+  "finToAmount": "Зачислено",
+  "finToAmountHint": "Счета в разных валютах: укажите сумму зачисления, иначе — по курсу.",
+  "finTransferNeedsTwo": "Выберите два разных счёта",
+  "finNoAccountsAuto": "Наличные (создастся)",
+  "finNoAccountsAutoHint": "Счёт «Наличные · RUB» будет создан автоматически.",
+  "finCategory": "Категория",
+  "finCategoryAutoHint": "не выбрана — Система угадает по месту покупки",
+  "finMerchant": "Где",
+  "finPayer": "От кого",
+  "finDate": "Дата",
+  "finTime": "Время",
+  "finNote": "Заметка",
+  "finSource": "Источник",
+  "finNoCategory": "Без категории",
+  "finOperations": "Операции",
+  "finAddOperation": "Добавить операцию",
+  "finOperationsCount": "Операций: {n}",
+  "@finOperationsCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finShowMore": "Показать ещё",
+  "finPeriodWeek": "Неделя",
+  "finPeriodMonth": "Месяц",
+  "finPeriodYear": "Год",
+  "finPeriodAll": "Всё",
+  "finAccountAdd": "Добавить счёт",
+  "finAccountNew": "Новый счёт",
+  "finAccountEdit": "Счёт",
+  "finAccountDeleteConfirm": "Удалить счёт? Операции останутся, но без счёта.",
+  "finAccountKind": "Тип",
+  "finAccKindCash": "Наличные",
+  "finAccKindCard": "Карта",
+  "finAccKindDeposit": "Вклад",
+  "finAccKindCrypto": "Крипто-кошелёк",
+  "finAccountName": "Название",
+  "finCurrency": "Валюта",
+  "finOpeningBalance": "Начальный остаток",
+  "finOpeningBalanceHint": "Сколько было на счёте до начала учёта.",
+  "finBank": "Банк",
+  "finBankHint": "Например: Сбер, Т-Банк, Ziraat",
+  "finCardLast4": "Последние 4 цифры карты",
+  "finCardLast4Hint": "Для сопоставления уведомлений банка",
+  "finArchive": "В архиве",
+  "finArchiveHint": "Скрыть из списков и итогов",
+  "finArchived": "Архив",
+  "finCrypto": "Крипта",
+  "finCryptoEmpty": "Монет нет.",
+  "finCryptoRateNote": "Количество — вручную, курс — автоматически (CoinGecko через сервер).",
+  "finCryptoAdd": "Добавить монету",
+  "finCryptoEdit": "Монета",
+  "finCryptoSymbol": "Символ",
+  "finCryptoCoinId": "Id CoinGecko",
+  "finCryptoCoinIdHint": "bitcoin, ethereum, the-open-network…",
+  "finCryptoAmount": "Количество",
+  "finNoRate": "нет курса",
+  "finCategories": "Категории",
+  "finCategoryAdd": "Новая категория",
+  "finCategoryName": "Название",
+  "finCategoryIcon": "Иконка",
+  "finJunkFood": "Вредная еда",
+  "finJunkFoodHint": "Покупки здесь облагаются «налогом на фастфуд» (◆)",
+  "finHide": "Скрыть",
+  "finHidden": "скрыта",
+  "finHideHint": "Не показывать при вводе",
+  "finCatGroceries": "Продукты",
+  "finCatCafe": "Кафе и кофе",
+  "finCatFastfood": "Фастфуд",
+  "finCatTransport": "Транспорт",
+  "finCatHousing": "Жильё",
+  "finCatUtilities": "Коммунальные",
+  "finCatPhone": "Связь и интернет",
+  "finCatHealth": "Здоровье и аптека",
+  "finCatBeauty": "Уход и красота",
+  "finCatClothes": "Одежда",
+  "finCatEducation": "Учёба и книги",
+  "finCatSport": "Спорт",
+  "finCatFun": "Развлечения",
+  "finCatSubscriptions": "Подписки",
+  "finCatGifts": "Подарки",
+  "finCatMarketplace": "Маркетплейсы",
+  "finCatOther": "Прочее",
+  "finCatStipend": "Стипендия",
+  "finCatSalary": "Зарплата",
+  "finCatGiftIncome": "Подарили",
+  "finCatCashback": "Кешбэк",
+  "finCatOtherIncome": "Прочие доходы",
+  "finBudgetsActive": "Действующие лимиты",
+  "finBudgetsEmpty": "Лимитов нет. Добавьте вручную или попросите ИИ предложить.",
+  "finBudgetsRule": "Превысили лимит — штраф ◆, уложились за период — награда ◆.",
+  "finBudgetAdd": "Добавить лимит",
+  "finBudgetEdit": "Лимит",
+  "finLimit": "Лимит",
+  "finRewardDiamonds": "Награда",
+  "finPenaltyDiamonds": "Штраф",
+  "finBudgetsAi": "План от ИИ",
+  "finBudgetsAiReady": "Наблюдений: {days} дн. — можно попросить ИИ предложить лимиты.",
+  "@finBudgetsAiReady": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "finBudgetsAiNeedMore": "Нужно 2–4 недели наблюдений (сейчас {days} дн.). Записывайте траты — ИИ предложит лимиты по вашим привычкам.",
+  "@finBudgetsAiNeedMore": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "finBudgetsAiAsk": "Предложить лимиты (ИИ)",
+  "finAiSuggested": "Предложено лимитов: {n}. Подтвердите или отклоните.",
+  "@finAiSuggested": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finAiNoSuggestions": "ИИ не предложил лимитов — данных пока мало.",
+  "finAccept": "Принять",
+  "finReject": "Отклонить",
+  "finAiThinking": "Система думает…",
+  "finAiNotSignedIn": "ИИ доступен после входа в аккаунт. Остальное работает офлайн.",
+  "finAiOffline": "Нет сети. Попробуйте позже — данные сохранены на устройстве.",
+  "finAiBudget": "Лимит расходов на ИИ исчерпан.",
+  "finAiRateLimited": "Слишком много запросов. Подождите немного.",
+  "finAiUnavailable": "ИИ сейчас недоступен. Попробуйте позже.",
+  "finGoalsEmpty": "Целей нет.",
+  "finGoalsHint": "Прогресс — остаток выбранного счёта-копилки.",
+  "finGoalAdd": "Новая цель",
+  "finGoalEdit": "Цель",
+  "finGoalTitle": "На что копим",
+  "finGoalTarget": "Сколько нужно",
+  "finGoalAccount": "Счёт-копилка",
+  "finGoalAccountHint": "Остаток этого счёта — накоплено",
+  "finGoalDeadline": "К какой дате",
+  "finGoalNoAccount": "Выберите счёт-копилку, чтобы видеть прогресс.",
+  "finGoalReached": "Цель достигнута!",
+  "finUntil": "до {date}",
+  "@finUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "finSubscriptionsEmpty": "Подписок нет.",
+  "finSubscriptionsHint": "В день списания Система сама запишет расход и сдвинет дату.",
+  "finSubscriptionsMonthly": "В месяц",
+  "finSubscriptionAdd": "Новая подписка",
+  "finSubscriptionEdit": "Подписка",
+  "finSubscriptionTitle": "Название",
+  "finNextCharge": "списание {date}",
+  "@finNextCharge": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "finNextChargeDate": "Дата следующего списания",
+  "finPaused": "приостановлена",
+  "finActive": "Активна",
+  "finDebtsOpen": "Открытые долги",
+  "finDebtsClosed": "Погашенные",
+  "finDebtsEmpty": "Долгов нет.",
+  "finDebtAdd": "Новый долг",
+  "finDebtEdit": "Долг",
+  "finDebtOwe": "Я должен",
+  "finDebtLent": "Мне должны",
+  "finDebtPerson": "Кто",
+  "finDebtDue": "Срок",
+  "finDebtSettle": "Погашен",
+  "finDebtSettleHint": "Отметит долг закрытым и откроет запись операции.",
+  "finOverdue": "просрочен",
+  "finSettled": "погашен",
+  "finTotals": "Итоги",
+  "finNet": "Разница",
+  "finByCategory": "Расходы по категориям",
+  "finNoExpensesPeriod": "Расходов за период нет.",
+  "finDynamics": "Доходы и расходы по периодам",
+  "finPrevPeriod": "Предыдущий период",
+  "finNextPeriod": "Следующий период",
+  "finAiComment": "Комментарий ИИ",
+  "finAiCommentHint": "ИИ разберёт период: на что ушли деньги и где можно сэкономить.",
+  "finAiCommentAsk": "Комментарий ИИ",
+  "finSrcManual": "вручную",
+  "finSrcReceiptQr": "QR чека",
+  "finSrcReceiptPhoto": "фото чека",
+  "finSrcFood": "фото еды",
+  "finSrcBank": "уведомление банка",
+  "finSrcSms": "SMS банка",
+  "finSrcStatement": "выписка",
+  "finSrcSubscription": "подписка",
+  "finSrcMarket": "маркет",
+  "finReasonJunkTax": "налог на фастфуд",
+  "finReasonBudgetOver": "превышен лимит расходов",
+  "finReasonBudgetKept": "уложились в лимит",
+  "finLockTitle": "Система заблокирована",
+  "finLockReason": "Подтвердите вход в «Систему»",
+  "finLockEnterPin": "Введите PIN",
+  "finLockUseBiometric": "Подтвердите вход по Face ID или отпечатку",
+  "finLockBiometricButton": "Face ID / отпечаток",
+  "finLockWrongPin": "Неверный PIN",
+  "finLockCooldown": "Слишком много попыток. Подождите {sec} с",
+  "@finLockCooldown": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockDigits": "Введено цифр: {n}",
+  "@finLockDigits": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockErase": "Стереть",
+  "finLockOk": "Готово",
+  "finLockSection": "Вход в приложение",
+  "finLockIntro": "Защитите приложение: при запуске и после возврата из фона Система спросит Face ID, отпечаток или PIN.",
+  "finLockModeOff": "Выключено",
+  "finLockModeBiometric": "Face ID / отпечаток",
+  "finLockModePin": "PIN",
+  "finLockModeBoth": "Биометрия + PIN",
+  "finLockNoBiometric": "Биометрия на устройстве недоступна или не настроена.",
+  "finLockTimeout": "Спрашивать снова после фона",
+  "finLockTimeoutNow": "Сразу",
+  "finMinutes": "{n} мин",
+  "@finMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockChangePin": "Сменить PIN",
+  "finLockNewPin": "Новый PIN",
+  "finLockRepeatPin": "Повторите PIN",
+  "finLockPinMismatch": "PIN не совпали",
+  "finLockPinChanged": "PIN изменён",
+  "finLockPinRule": "От {min} до {max} цифр",
+  "@finLockPinRule": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "finLockPinWarning": "Забытый PIN не восстановить — включите и биометрию, если можно.",
+  "finJunkTaxSection": "Налог на фастфуд",
+  "finJunkTaxEnabled": "Списывать ◆ за вредную еду",
+  "finJunkTaxHint": "За каждую покупку в категориях «вредная еда»",
+  "finJunkTaxAmount": "Налог за покупку",
+  "finSummaryFood": "Еда за месяц",
+  "finSummaryUntilIncome": "До поступления",
+  "finDays": "{n} дн.",
+  "@finDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "finRemindSubTitle": "Завтра списание: {title}",
+  "@finRemindSubTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "finRemindSubBody": "{amount} · {date}",
+  "@finRemindSubBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "finRemindDebtOweTitle": "Срок долга",
+  "finRemindDebtLentTitle": "Вам должны вернуть",
+  "finRemindDebtBody": "{person}: {amount} до {date}",
+  "@finRemindDebtBody": {
+    "placeholders": {
+      "person": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "fniAccount": "Счёт",
+  "fniAuto": "Автоматически",
+  "fniCategory": "Категория",
+  "fniQrNotReceipt": "Это не QR-код кассового чека.",
+  "fniDuplicate": "Эта операция уже есть.",
+  "fniAdded": "Операция добавлена.",
+  "fniSaveFailed": "Не удалось сохранить операцию.",
+  "fniRetry": "Ещё раз",
+  "fniReceiptTitle": "Чек",
+  "fniStore": "Магазин",
+  "fniDate": "Дата",
+  "fniKind": "Тип",
+  "fniRefund": "Возврат",
+  "fniTotal": "Итого",
+  "fniQrNoItems": "Позиции чека из ФНС пока недоступны — записана сумма из QR.",
+  "fniAdd": "Добавить",
+  "fniReceiptQrTitle": "Чек по QR",
+  "fniReceiptPhotoTitle": "Чек по фото",
+  "fniNoCamera": "Камера недоступна. Разрешите доступ в настройках.",
+  "fniClose": "Закрыть",
+  "fniQrHint": "Наведите камеру на QR-код чека",
+  "fniFileFailed": "Не удалось открыть файл.",
+  "fniFileTooLarge": "Файл больше 3 МБ. Выгрузите выписку за меньший период.",
+  "fniStatementTitle": "Импорт выписки",
+  "fniStatementFile": "Файл выписки",
+  "fniStatementHint": "Выгрузите выписку в банковском приложении (CSV или PDF) и выберите файл.",
+  "fniPickFile": "Выбрать файл",
+  "fniStatementParsing": "Разбираю выписку…",
+  "fniStatementEmpty": "Операций в файле не найдено.",
+  "fniBank": "Банк",
+  "fniSelectAll": "Все",
+  "fniAlreadyImported": "уже есть",
+  "fniBanksTitle": "Банки",
+  "fniBanksAndroidOnly": "Чтение уведомлений и SMS банков доступно только на Android. На iPhone используйте импорт выписки.",
+  "fniAccess": "Доступ",
+  "fniAccessNotifications": "Уведомления банков",
+  "fniOpenSettings": "Открыть настройки",
+  "fniAccessSms": "SMS банков",
+  "fniAllow": "Разрешить",
+  "fniAccessHint": "Читаются только сообщения выбранных банков. Тексты хранятся в приложении и синхронизируются с вашим сервером.",
+  "fniBanksList": "Мои банки",
+  "fniProcessNow": "Обработать",
+  "fniSmsHistory": "SMS за 30 дней",
+  "fniGranted": "Есть",
+  "fniOtherBank": "Другой банк",
+  "fniSourceNotifications": "Уведомления приложения",
+  "fniSourceSms": "SMS",
+  "fniPackages": "Пакеты приложений",
+  "fniExtraSenders": "Свои отправители SMS",
+  "fniExtraSendersHint": "Имя или номер, через запятую",
+  "fniInbox": "Входящие",
+  "fniInboxEmpty": "Пока ничего. Новые уведомления и SMS банков появятся здесь.",
+  "fniStatusReview": "Проверьте",
+  "fniStatusAdded": "Добавлено",
+  "fniStatusDuplicate": "Дубль",
+  "fniStatusIgnored": "Не операция",
+  "fniStatusFailed": "Ошибка",
+  "fniStatusPending": "Ожидает",
+  "fniConfirm": "Верно",
+  "fniFix": "Исправить",
+  "fniAddManually": "Добавить вручную",
+  "fniFixInFinance": "Измените или удалите эту операцию в разделе «Финансы».",
+  "fniIgnore": "Игнор",
+  "fniEditTitle": "Операция",
+  "fniExpense": "Расход",
+  "fniIncome": "Доход",
+  "fniTransfer": "Перевод",
+  "fniAmount": "Сумма",
+  "fniMerchant": "Где / от кого",
+  "fniCancel": "Отмена",
+  "fniSave": "Сохранить",
+  "fniImported": "Добавлено: {added}, уже было: {dup}",
+  "@fniImported": {
+    "placeholders": {
+      "added": {
+        "type": "int"
+      },
+      "dup": {
+        "type": "int"
+      }
+    }
+  },
+  "fniImporting": "Импорт {done} / {total}",
+  "@fniImporting": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "fniImportN": "Импортировать ({n})",
+  "@fniImportN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniRows": "Операции: {n}",
+  "@fniRows": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniSmsFound": "Найдено SMS: {n}",
+  "@fniSmsFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fniSenders": "Отправители: {list}",
+  "@fniSenders": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      }
+    }
+  },
+  "actStepsTitle": "Шаги",
+  "actGoal": "Цель: {goal}",
+  "@actGoal": {
+    "placeholders": {
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "actDistance": "Дистанция",
+  "actDistanceKm": "{km} км",
+  "@actDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "actFloors": "Этажи",
+  "actNoValue": "—",
+  "actWeek": "7 дней",
+  "actAllow": "Разрешить",
+  "actPermissionHint": "Разрешите доступ к датчикам движения — шаги будут считаться сами.",
+  "actUnavailableHint": "Счётчика шагов на устройстве нет — введите шаги вручную.",
+  "actManual": "Ввести вручную",
+  "actManualLabel": "Шаги за сегодня",
+  "actManualRange": "От 0 до 100 000",
+  "actSave": "Сохранить",
+  "actCancel": "Отмена",
+  "actStepsSemantic": "Шаги за сегодня: {steps} из {goal}",
+  "@actStepsSemantic": {
+    "placeholders": {
+      "steps": {
+        "type": "String"
+      },
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
   "int6PlanAi": "Построить план с ИИ",
   "int6PlanAiError": "Не удалось построить план с ИИ. Проверьте вход в аккаунт и сеть.",
   "int6Learning": "Знания",
@@ -1080,6 +1846,15 @@
   "int6AiJournalHint": "Бюджет и что Система меняла (с отменой)",
   "int6Voice": "Голос персонажа",
   "int6VoiceHint": "Готовые голоса сервера, прослушать",
+  "int7Finance": "Финансы",
+  "int7FinanceHint": "Счета, операции, лимиты, отчёты",
+  "int7Market": "Маркет покупок",
+  "int7MarketHint": "Подборка под план с ценами",
+  "int7Blocker": "Блокировка приложений",
+  "int7BlockerHint": "После отбоя в режиме дисциплины",
+  "int7Alarms": "Будильник-квест",
+  "int7AlarmsHint": "Выключается только заданием",
+  "int7Setup": "Настроить",
   "livNextQuest": "Следующий квест",
   "livNoQuest": "Квестов нет",
   "livOverdue": "Просрочен",
@@ -1200,6 +1975,96 @@
   "lrnErrBudget": "Лимит ИИ исчерпан. Попробуйте позже.",
   "lrnErrUnavailable": "ИИ сейчас недоступен на сервере.",
   "lrnErrServer": "Не удалось получить ответ. Попробуйте ещё раз.",
+  "mktTitle": "Маркет",
+  "mktSuggest": "Подобрать (ИИ)",
+  "mktSuggesting": "Подбираю товары под план…",
+  "mktCatAll": "Все",
+  "mktCatSkin": "Уход за кожей",
+  "mktCatNutrition": "Питание",
+  "mktCatEquipment": "Инвентарь",
+  "mktCatOther": "Другое",
+  "mktTabNew": "Подборка",
+  "mktTabSaved": "Сохранённые",
+  "mktTabBought": "Куплено",
+  "mktEmptyNew": "Пока пусто. Нажмите «Подобрать (ИИ)» — Система подберёт товары под ваш план.",
+  "mktEmptySaved": "Сохранённых товаров нет.",
+  "mktEmptyBought": "Покупок пока нет.",
+  "mktEstimateNote": "Цены примерные — по данным веб-поиска, на указанную дату.",
+  "mktPriceLine": "≈ {price} · {source} · {date}",
+  "@mktPriceLine": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mktPriceShort": "≈ {price} · {date}",
+  "@mktPriceShort": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mktPriceUnknown": "Цена неизвестна",
+  "mktPricePaid": "Куплено за {price}",
+  "@mktPricePaid": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "mktBudgetOk": "Можно купить",
+  "mktBudgetAfterIncome": "После поступления денег",
+  "mktBudgetOver": "Не по бюджету",
+  "mktSave": "Сохранить",
+  "mktHide": "Скрыть",
+  "mktBought": "Купил",
+  "mktRefreshPrice": "Обновить цену",
+  "mktPriceUpdated": "Цена обновлена.",
+  "mktPriceNotFound": "Свежую цену найти не удалось.",
+  "mktSearchSuffix": "поиск",
+  "mktLinkCopied": "Ссылка скопирована.",
+  "mktOpenFailed": "Не удалось открыть ссылку — она скопирована.",
+  "mktBoughtTitle": "Покупка",
+  "mktBoughtMessage": "Сколько стоило «{title}»?",
+  "@mktBoughtMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "mktBoughtPrice": "Фактическая цена",
+  "mktBoughtConfirm": "Записать",
+  "mktBoughtRecorded": "Покупка записана в финансы.",
+  "mktBoughtNoFinance": "Отмечено как купленное. В финансы не записано — раздел пока недоступен.",
+  "mktNoticeLabel": "Система",
+  "mktNothingFound": "Система не нашла новых товаров. Попробуйте другую категорию.",
+  "mktAdded": "Добавлено товаров: {count}",
+  "@mktAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mktErrOffline": "Нет связи с сервером. Сохранённые товары доступны и офлайн.",
+  "mktErrNotSignedIn": "Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы Система подбирала товары.",
+  "mktErrBudget": "Лимит ИИ сейчас исчерпан. Попробуйте позже.",
+  "mktErrUnavailable": "ИИ на сервере сейчас недоступен.",
+  "mktErrRateLimited": "Слишком много запросов. Попробуйте через некоторое время.",
+  "mktErrServer": "Не удалось получить ответ. Попробуйте ещё раз.",
   "msgChannelName": "Сообщения Системы",
   "msgChannelDesc": "Брифинги, подбадривания и упрёки персонажа",
   "msgTplBriefingTitle": "[ Система ] Утренний брифинг",
@@ -1522,286 +2387,295 @@
   "nutGroceryFruits": "Фрукты",
   "nutGroceryOil": "Растительное масло",
   "nutGroceryWater": "Питьевая вода",
-  "planNoticeLabel": "Уведомление",
-  "planTitle": "План составлен",
-  "planDraftNote": "Черновой план — Система уточнит его после подключения ИИ.",
-  "planAcceptedAt": "План принят {date}",
-  "@planAcceptedAt": {
+  "wrkTitle": "Тренировки",
+  "wrkProgram": "Программа",
+  "wrkToday": "Сегодня",
+  "wrkTodayDay": "По программе — день {key}",
+  "@wrkTodayDay": {
     "placeholders": {
-      "date": {
+      "key": {
         "type": "String"
       }
     }
   },
-  "planAccept": "Принять",
-  "planEditData": "Изменить данные",
-  "planRecalculate": "Пересчитать",
-  "planChooseSection": "Какой раздел изменить?",
-  "planLoadError": "Не удалось составить план",
-  "planRetry": "Повторить",
-  "planNormsTitle": "Нормы",
-  "planCalories": "Калории",
-  "planKcal": "{value} ккал",
-  "@planKcal": {
+  "wrkRestDay": "Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.",
+  "wrkDayTitle": "День {key}",
+  "@wrkDayTitle": {
     "placeholders": {
-      "value": {
+      "key": {
         "type": "String"
       }
     }
   },
-  "planModeDeficit": "Дефицит",
-  "planModeSurplus": "Профицит",
-  "planModeMaintenance": "Поддержание",
-  "planBmrTdee": "Базовый обмен {bmr} · расход {tdee} ккал",
-  "@planBmrTdee": {
+  "wrkMinutesShort": "{minutes} мин",
+  "@wrkMinutesShort": {
     "placeholders": {
-      "bmr": {
-        "type": "String"
-      },
-      "tdee": {
-        "type": "String"
+      "minutes": {
+        "type": "int"
       }
     }
   },
-  "planProtein": "Белки",
-  "planFat": "Жиры",
-  "planCarbs": "Углеводы",
-  "planGrams": "{value} г",
-  "@planGrams": {
+  "wrkEstimate": "≈{minutes} мин",
+  "@wrkEstimate": {
     "placeholders": {
-      "value": {
-        "type": "String"
+      "minutes": {
+        "type": "int"
       }
     }
   },
-  "planWater": "Вода",
-  "planMl": "{value} мл",
-  "@planMl": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
-  "planWaterTrainingDay": "В день тренировки — {value} мл",
-  "@planWaterTrainingDay": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
-  "planSleep": "Сон",
-  "planHours": "{value} ч",
-  "@planHours": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
-  "planHoursMinutes": "{h} ч {m} мин",
-  "@planHoursMinutes": {
-    "placeholders": {
-      "h": {
-        "type": "String"
-      },
-      "m": {
-        "type": "String"
-      }
-    }
-  },
-  "planWakeBed": "Подъём {wake} · отбой {bed}",
-  "@planWakeBed": {
-    "placeholders": {
-      "wake": {
-        "type": "String"
-      },
-      "bed": {
-        "type": "String"
-      }
-    }
-  },
-  "planRoutineTitle": "Распорядок дня",
-  "planWeek": "Неделя {n}",
-  "@planWeek": {
-    "placeholders": {
-      "n": {
-        "type": "String"
-      }
-    }
-  },
-  "planWdMon": "Пн",
-  "planWdTue": "Вт",
-  "planWdWed": "Ср",
-  "planWdThu": "Чт",
-  "planWdFri": "Пт",
-  "planWdSat": "Сб",
-  "planWdSun": "Вс",
-  "planRoutineWake": "Подъём",
-  "planRoutineSkincareAm": "Уход за кожей (утро)",
-  "planRoutineMeal": "Приём пищи {n}",
-  "@planRoutineMeal": {
-    "placeholders": {
-      "n": {
-        "type": "String"
-      }
-    }
-  },
-  "planRoutineLeaveHome": "Выход из дома",
-  "planRoutineLesson": "Пара",
-  "planRoutineWork": "Работа",
-  "planRoutineOther": "Дело",
-  "planRoutineReturnHome": "Дома",
-  "planRoutineTraining": "Тренировка",
-  "planRoutineSkincarePm": "Уход за кожей (вечер)",
-  "planRoutineBed": "Отбой",
-  "planQuestsTitle": "Квесты",
-  "planQuestsNote": "Выполнение квестов появится в следующем обновлении.",
-  "planQuestLeaveHome": "Выйти из дома к {time}",
-  "@planQuestLeaveHome": {
-    "placeholders": {
-      "time": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestAttendLesson": "Пара: {title}",
-  "@planQuestAttendLesson": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestAttendWork": "Работа: {title}",
-  "@planQuestAttendWork": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestWater": "Выпить {ml} мл воды",
-  "@planQuestWater": {
-    "placeholders": {
-      "ml": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestSleep": "Лечь спать в {time} (сон {hours} ч)",
-  "@planQuestSleep": {
-    "placeholders": {
-      "time": {
-        "type": "String"
-      },
-      "hours": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestMeals": "Приёмы пищи по плану: {count}",
-  "@planQuestMeals": {
+  "wrkExerciseCount": "{count, plural, one{{count} упражнение} few{{count} упражнения} many{{count} упражнений} other{{count} упражнения}}",
+  "@wrkExerciseCount": {
     "placeholders": {
       "count": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsReps": "{sets} × {reps}",
+  "@wrkSetsReps": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkSetsSeconds": "{sets} × {seconds} с",
+  "@wrkSetsSeconds": {
+    "placeholders": {
+      "sets": {
+        "type": "int"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRestShort": "отдых {seconds} с",
+  "@wrkRestShort": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkGentle": "Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.",
+  "wrkSafetyNote": "Если упражнение вызывает боль или дискомфорт — пропустите его.",
+  "wrkLevelUnknown": "Уровень в анкете не указан — программа для новичка.",
+  "wrkProgressionWeeks": "Выполненных недель: {weeks}",
+  "@wrkProgressionWeeks": {
+    "placeholders": {
+      "weeks": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkProgressionNote": "Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.",
+  "wrkRegenerate": "Пересоздать программу",
+  "wrkRegenerateTitle": "Пересоздать программу?",
+  "wrkRegenerateText": "Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.",
+  "wrkAiProgram": "Программа от ИИ",
+  "wrkSoon": "скоро",
+  "wrkStart": "Начать тренировку",
+  "wrkStartDay": "Начать день {key}",
+  "@wrkStartDay": {
+    "placeholders": {
+      "key": {
         "type": "String"
       }
     }
   },
-  "planQuestTraining": "Тренировка {minutes} мин",
-  "@planQuestTraining": {
+  "wrkHistory": "История",
+  "wrkHistoryEmpty": "Тренировок пока нет.",
+  "wrkSessionDone": "завершена",
+  "wrkSessionInterrupted": "прервана",
+  "wrkSessionStats": "{minutes} мин · ≈{kcal} ккал",
+  "@wrkSessionStats": {
     "placeholders": {
       "minutes": {
-        "type": "String"
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
       }
     }
   },
-  "planQuestSkincareMorning": "Утренний уход за кожей",
-  "planQuestSkincareEvening": "Вечерний уход за кожей",
-  "planQuestWakeOnTime": "Подъём в {time} без отсрочек",
-  "@planQuestWakeOnTime": {
+  "wrkPreparing": "Программа собирается…",
+  "wrkPhasePrepare": "Приготовьтесь",
+  "wrkPhaseWork": "Работа",
+  "wrkPhaseRest": "Отдых",
+  "wrkPaused": "Пауза",
+  "wrkSetOf": "Подход {set} из {sets}",
+  "@wrkSetOf": {
     "placeholders": {
-      "time": {
+      "set": {
+        "type": "int"
+      },
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkRepsTarget": "{reps, plural, one{{reps} повтор} few{{reps} повтора} many{{reps} повторов} other{{reps} повтора}}",
+  "@wrkRepsTarget": {
+    "placeholders": {
+      "reps": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkDoneSet": "Подход выполнен",
+  "wrkPause": "Пауза",
+  "wrkResume": "Продолжить",
+  "wrkSkipRest": "Пропустить отдых",
+  "wrkSkipExercise": "Пропустить упражнение",
+  "wrkStop": "Прервать",
+  "wrkNext": "Далее: {name}",
+  "@wrkNext": {
+    "placeholders": {
+      "name": {
         "type": "String"
       }
     }
   },
-  "planQuestStudy": "Учёба {minutes} мин",
-  "@planQuestStudy": {
+  "wrkLastExercise": "Последнее упражнение",
+  "wrkTechnique": "Техника",
+  "wrkVoice": "Голосовые подсказки",
+  "wrkProgressLabel": "Прогресс тренировки",
+  "wrkStopTitle": "Прервать тренировку?",
+  "wrkStopText": "Сделанное сохранится как незавершённая тренировка.",
+  "wrkFinishedTitle": "Тренировка завершена",
+  "wrkFinishedStats": "Время: {minutes} мин · ≈{kcal} ккал · подходов: {sets}",
+  "@wrkFinishedStats": {
     "placeholders": {
       "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestTrackExpenses": "Записать траты за день",
-  "planQuestEveryDay": "каждый день",
-  "planQuestWeekOnly": "неделя {n}",
-  "@planQuestWeekOnly": {
-    "placeholders": {
-      "n": {
-        "type": "String"
-      }
-    }
-  },
-  "planQuestReward": "+{diamonds} ◆ · +{xp} опыта",
-  "@planQuestReward": {
-    "placeholders": {
-      "diamonds": {
-        "type": "String"
+        "type": "int"
       },
-      "xp": {
-        "type": "String"
-      }
-    }
-  },
-  "planWarningsTitle": "Предупреждения",
-  "planWarnSleepShort": "По расписанию сна {scheduled} — меньше нормы {target}. Рекомендуемый отбой — {bed}.",
-  "@planWarnSleepShort": {
-    "placeholders": {
-      "scheduled": {
-        "type": "String"
+      "kcal": {
+        "type": "int"
       },
-      "target": {
+      "sets": {
+        "type": "int"
+      }
+    }
+  },
+  "wrkWeightAssumed": "Расход — оценка по весу 70 кг: замеров веса нет.",
+  "wrkKcalNote": "Расход — оценка по MET, не измерение.",
+  "wrkSayPrepare": "Приготовьтесь. {name}.",
+  "@wrkSayPrepare": {
+    "placeholders": {
+      "name": {
         "type": "String"
+      }
+    }
+  },
+  "wrkSaySet": "Подход {set} из {sets}. {amount}. Начали!",
+  "@wrkSaySet": {
+    "placeholders": {
+      "set": {
+        "type": "int"
       },
-      "bed": {
+      "sets": {
+        "type": "int"
+      },
+      "amount": {
         "type": "String"
       }
     }
   },
-  "planWarnDeficitFloor": "Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.",
-  "planWarnActivityDefaulted": "Уровень активности не указан — взят «сидячий».",
-  "planWarnNoTrainingWindow": "{day}: нет свободного окна для тренировки.",
-  "@planWarnNoTrainingWindow": {
+  "wrkSecondsAmount": "{seconds, plural, one{{seconds} секунда} few{{seconds} секунды} many{{seconds} секунд} other{{seconds} секунды}}",
+  "@wrkSecondsAmount": {
     "placeholders": {
-      "day": {
-        "type": "String"
+      "seconds": {
+        "type": "int"
       }
     }
   },
-  "planWarnInjuries": "Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.",
-  "planMissingMessage": "Для расчёта калорий и БЖУ заполните: {fields}.",
-  "@planMissingMessage": {
+  "wrkSayRest": "Отдых: {amount}.",
+  "@wrkSayRest": {
     "placeholders": {
-      "fields": {
+      "amount": {
         "type": "String"
       }
     }
   },
-  "planMissingSex": "пол",
-  "planMissingBirthDate": "дата рождения",
-  "planMissingHeight": "рост",
-  "planMissingWeight": "вес",
-  "planFillSection": "Заполнить: {section}",
-  "@planFillSection": {
+  "wrkSayNext": "Далее: {name}.",
+  "@wrkSayNext": {
     "placeholders": {
-      "section": {
+      "name": {
         "type": "String"
       }
     }
   },
+  "wrkSayFinished": "Тренировка завершена. Отличная работа!",
+  "wrkExMarchInPlace": "Ходьба на месте",
+  "wrkExMarchInPlaceHint": "Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.",
+  "wrkExArmCircles": "Круги руками",
+  "wrkExArmCirclesHint": "Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.",
+  "wrkExJumpingJacks": "Джампинг-джек",
+  "wrkExJumpingJacksHint": "Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.",
+  "wrkExChairSquat": "Приседание на стул",
+  "wrkExChairSquatHint": "Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.",
+  "wrkExGluteBridge": "Ягодичный мост",
+  "wrkExGluteBridgeHint": "Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.",
+  "wrkExSquat": "Приседания",
+  "wrkExSquatHint": "Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.",
+  "wrkExWallSit": "Стульчик у стены",
+  "wrkExWallSitHint": "Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.",
+  "wrkExReverseLunge": "Выпады назад",
+  "wrkExReverseLungeHint": "Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.",
+  "wrkExGobletSquat": "Гоблет-присед",
+  "wrkExGobletSquatHint": "Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.",
+  "wrkExKettlebellSwing": "Махи гирей",
+  "wrkExKettlebellSwingHint": "Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.",
+  "wrkExJumpSquat": "Присед с выпрыгиванием",
+  "wrkExJumpSquatHint": "Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.",
+  "wrkExWallPushUp": "Отжимания от стены",
+  "wrkExWallPushUpHint": "Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.",
+  "wrkExKneePushUp": "Отжимания с колен",
+  "wrkExKneePushUpHint": "Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.",
+  "wrkExPushUp": "Отжимания",
+  "wrkExPushUpHint": "Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.",
+  "wrkExDumbbellPress": "Жим гантелей лёжа",
+  "wrkExDumbbellPressHint": "Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.",
+  "wrkExDiamondPushUp": "Узкие отжимания",
+  "wrkExDiamondPushUpHint": "Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.",
+  "wrkExSuperman": "Супермен",
+  "wrkExSupermanHint": "Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.",
+  "wrkExReverseSnowAngel": "Обратный снежный ангел",
+  "wrkExReverseSnowAngelHint": "Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.",
+  "wrkExBandRow": "Тяга резинки",
+  "wrkExBandRowHint": "Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.",
+  "wrkExDumbbellRow": "Тяга гантели в наклоне",
+  "wrkExDumbbellRowHint": "Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.",
+  "wrkExPullUp": "Подтягивания",
+  "wrkExPullUpHint": "Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.",
+  "wrkExDeadBug": "Мёртвый жук",
+  "wrkExDeadBugHint": "Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.",
+  "wrkExBirdDog": "Птица-собака",
+  "wrkExBirdDogHint": "Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.",
+  "wrkExPlank": "Планка",
+  "wrkExPlankHint": "Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.",
+  "wrkExCrunch": "Скручивания",
+  "wrkExCrunchHint": "Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.",
+  "wrkExSidePlank": "Боковая планка",
+  "wrkExSidePlankHint": "Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.",
+  "wrkExLegRaise": "Подъём ног лёжа",
+  "wrkExLegRaiseHint": "Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.",
+  "wrkExStepTouch": "Приставные шаги",
+  "wrkExStepTouchHint": "Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.",
+  "wrkExShadowBoxing": "Бой с тенью",
+  "wrkExShadowBoxingHint": "Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.",
+  "wrkExHighKnees": "Бег с высоким подниманием колен",
+  "wrkExHighKneesHint": "Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.",
+  "wrkExMountainClimber": "Скалолаз",
+  "wrkExMountainClimberHint": "Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.",
+  "wrkExBurpee": "Бёрпи",
+  "wrkExBurpeeHint": "Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.",
+  "wrkExFullBodyStretch": "Растяжка",
+  "wrkExFullBodyStretchHint": "Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков.",
   "qaUnitCm": "см",
   "qaUnitKg": "кг",
   "qaRangeHint": "Допустимо от {min} до {max}",
@@ -3049,7 +3923,7 @@
   "dscCannotRefuse": "Квесты режима нельзя отменить.",
   "dscPreviewNote": "Так будет выглядеть день в режиме дисциплины.",
   "dscBlockerTitle": "Блокировка приложений",
-  "dscBlockerText": "Блокировка развлекательных приложений после отбоя появится позже.",
+  "dscBlockerText": "В режиме дисциплины после отбоя развлекательные приложения блокируются: на Android — экраном «Система: отбой», на iPhone — через автоматизацию «Команд».",
   "dscBlockerSoon": "Позже",
   "dscEnable": "Включить режим",
   "dscDisable": "Выключить режим",
@@ -3270,7 +4144,7 @@
   "visReceiptTitle": "Чек",
   "visReceiptStore": "Магазин",
   "visReceiptDate": "Дата",
-  "visReceiptFinanceLater": "Чек сохранён. Запись в финансы появится в следующем обновлении.",
+  "visReceiptFinanceLater": "Проверьте позиции — дальше чек можно записать в финансы.",
   "wlkTitle": "Прогулка",
   "wlkPlan": "Маршрут",
   "wlkByDistance": "Километры",
@@ -3398,293 +4272,284 @@
   },
   "wlkTrackerUnavailable": "Трекинг прогулки недоступен.",
   "wlkMapAttribution": "© участники OpenStreetMap",
-  "wrkTitle": "Тренировки",
-  "wrkProgram": "Программа",
-  "wrkToday": "Сегодня",
-  "wrkTodayDay": "По программе — день {key}",
-  "@wrkTodayDay": {
+  "planNoticeLabel": "Уведомление",
+  "planTitle": "План составлен",
+  "planDraftNote": "Черновой план — Система уточнит его после подключения ИИ.",
+  "planAcceptedAt": "План принят {date}",
+  "@planAcceptedAt": {
     "placeholders": {
-      "key": {
+      "date": {
         "type": "String"
       }
     }
   },
-  "wrkRestDay": "Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.",
-  "wrkDayTitle": "День {key}",
-  "@wrkDayTitle": {
+  "planAccept": "Принять",
+  "planEditData": "Изменить данные",
+  "planRecalculate": "Пересчитать",
+  "planChooseSection": "Какой раздел изменить?",
+  "planLoadError": "Не удалось составить план",
+  "planRetry": "Повторить",
+  "planNormsTitle": "Нормы",
+  "planCalories": "Калории",
+  "planKcal": "{value} ккал",
+  "@planKcal": {
     "placeholders": {
-      "key": {
+      "value": {
         "type": "String"
       }
     }
   },
-  "wrkMinutesShort": "{minutes} мин",
-  "@wrkMinutesShort": {
+  "planModeDeficit": "Дефицит",
+  "planModeSurplus": "Профицит",
+  "planModeMaintenance": "Поддержание",
+  "planBmrTdee": "Базовый обмен {bmr} · расход {tdee} ккал",
+  "@planBmrTdee": {
     "placeholders": {
-      "minutes": {
-        "type": "int"
+      "bmr": {
+        "type": "String"
+      },
+      "tdee": {
+        "type": "String"
       }
     }
   },
-  "wrkEstimate": "≈{minutes} мин",
-  "@wrkEstimate": {
+  "planProtein": "Белки",
+  "planFat": "Жиры",
+  "planCarbs": "Углеводы",
+  "planGrams": "{value} г",
+  "@planGrams": {
     "placeholders": {
-      "minutes": {
-        "type": "int"
+      "value": {
+        "type": "String"
       }
     }
   },
-  "wrkExerciseCount": "{count, plural, one{{count} упражнение} few{{count} упражнения} many{{count} упражнений} other{{count} упражнения}}",
-  "@wrkExerciseCount": {
+  "planWater": "Вода",
+  "planMl": "{value} мл",
+  "@planMl": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planWaterTrainingDay": "В день тренировки — {value} мл",
+  "@planWaterTrainingDay": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planSleep": "Сон",
+  "planHours": "{value} ч",
+  "@planHours": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "planHoursMinutes": "{h} ч {m} мин",
+  "@planHoursMinutes": {
+    "placeholders": {
+      "h": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "planWakeBed": "Подъём {wake} · отбой {bed}",
+  "@planWakeBed": {
+    "placeholders": {
+      "wake": {
+        "type": "String"
+      },
+      "bed": {
+        "type": "String"
+      }
+    }
+  },
+  "planRoutineTitle": "Распорядок дня",
+  "planWeek": "Неделя {n}",
+  "@planWeek": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "planWdMon": "Пн",
+  "planWdTue": "Вт",
+  "planWdWed": "Ср",
+  "planWdThu": "Чт",
+  "planWdFri": "Пт",
+  "planWdSat": "Сб",
+  "planWdSun": "Вс",
+  "planRoutineWake": "Подъём",
+  "planRoutineSkincareAm": "Уход за кожей (утро)",
+  "planRoutineMeal": "Приём пищи {n}",
+  "@planRoutineMeal": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "planRoutineLeaveHome": "Выход из дома",
+  "planRoutineLesson": "Пара",
+  "planRoutineWork": "Работа",
+  "planRoutineOther": "Дело",
+  "planRoutineReturnHome": "Дома",
+  "planRoutineTraining": "Тренировка",
+  "planRoutineSkincarePm": "Уход за кожей (вечер)",
+  "planRoutineBed": "Отбой",
+  "planQuestsTitle": "Квесты",
+  "planQuestsNote": "Выполнение квестов появится в следующем обновлении.",
+  "planQuestLeaveHome": "Выйти из дома к {time}",
+  "@planQuestLeaveHome": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestAttendLesson": "Пара: {title}",
+  "@planQuestAttendLesson": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestAttendWork": "Работа: {title}",
+  "@planQuestAttendWork": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestWater": "Выпить {ml} мл воды",
+  "@planQuestWater": {
+    "placeholders": {
+      "ml": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestSleep": "Лечь спать в {time} (сон {hours} ч)",
+  "@planQuestSleep": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestMeals": "Приёмы пищи по плану: {count}",
+  "@planQuestMeals": {
     "placeholders": {
       "count": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkSetsReps": "{sets} × {reps}",
-  "@wrkSetsReps": {
-    "placeholders": {
-      "sets": {
-        "type": "int"
-      },
-      "reps": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkSetsSeconds": "{sets} × {seconds} с",
-  "@wrkSetsSeconds": {
-    "placeholders": {
-      "sets": {
-        "type": "int"
-      },
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkRestShort": "отдых {seconds} с",
-  "@wrkRestShort": {
-    "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkGentle": "Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.",
-  "wrkSafetyNote": "Если упражнение вызывает боль или дискомфорт — пропустите его.",
-  "wrkLevelUnknown": "Уровень в анкете не указан — программа для новичка.",
-  "wrkProgressionWeeks": "Выполненных недель: {weeks}",
-  "@wrkProgressionWeeks": {
-    "placeholders": {
-      "weeks": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkProgressionNote": "Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.",
-  "wrkRegenerate": "Пересоздать программу",
-  "wrkRegenerateTitle": "Пересоздать программу?",
-  "wrkRegenerateText": "Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.",
-  "wrkAiProgram": "Программа от ИИ",
-  "wrkSoon": "скоро",
-  "wrkStart": "Начать тренировку",
-  "wrkStartDay": "Начать день {key}",
-  "@wrkStartDay": {
-    "placeholders": {
-      "key": {
         "type": "String"
       }
     }
   },
-  "wrkHistory": "История",
-  "wrkHistoryEmpty": "Тренировок пока нет.",
-  "wrkSessionDone": "завершена",
-  "wrkSessionInterrupted": "прервана",
-  "wrkSessionStats": "{minutes} мин · ≈{kcal} ккал",
-  "@wrkSessionStats": {
+  "planQuestTraining": "Тренировка {minutes} мин",
+  "@planQuestTraining": {
     "placeholders": {
       "minutes": {
-        "type": "int"
-      },
-      "kcal": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkPreparing": "Программа собирается…",
-  "wrkPhasePrepare": "Приготовьтесь",
-  "wrkPhaseWork": "Работа",
-  "wrkPhaseRest": "Отдых",
-  "wrkPaused": "Пауза",
-  "wrkSetOf": "Подход {set} из {sets}",
-  "@wrkSetOf": {
-    "placeholders": {
-      "set": {
-        "type": "int"
-      },
-      "sets": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkRepsTarget": "{reps, plural, one{{reps} повтор} few{{reps} повтора} many{{reps} повторов} other{{reps} повтора}}",
-  "@wrkRepsTarget": {
-    "placeholders": {
-      "reps": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkDoneSet": "Подход выполнен",
-  "wrkPause": "Пауза",
-  "wrkResume": "Продолжить",
-  "wrkSkipRest": "Пропустить отдых",
-  "wrkSkipExercise": "Пропустить упражнение",
-  "wrkStop": "Прервать",
-  "wrkNext": "Далее: {name}",
-  "@wrkNext": {
-    "placeholders": {
-      "name": {
         "type": "String"
       }
     }
   },
-  "wrkLastExercise": "Последнее упражнение",
-  "wrkTechnique": "Техника",
-  "wrkVoice": "Голосовые подсказки",
-  "wrkProgressLabel": "Прогресс тренировки",
-  "wrkStopTitle": "Прервать тренировку?",
-  "wrkStopText": "Сделанное сохранится как незавершённая тренировка.",
-  "wrkFinishedTitle": "Тренировка завершена",
-  "wrkFinishedStats": "Время: {minutes} мин · ≈{kcal} ккал · подходов: {sets}",
-  "@wrkFinishedStats": {
+  "planQuestSkincareMorning": "Утренний уход за кожей",
+  "planQuestSkincareEvening": "Вечерний уход за кожей",
+  "planQuestWakeOnTime": "Подъём в {time} без отсрочек",
+  "@planQuestWakeOnTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestStudy": "Учёба {minutes} мин",
+  "@planQuestStudy": {
     "placeholders": {
       "minutes": {
-        "type": "int"
-      },
-      "kcal": {
-        "type": "int"
-      },
-      "sets": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkWeightAssumed": "Расход — оценка по весу 70 кг: замеров веса нет.",
-  "wrkKcalNote": "Расход — оценка по MET, не измерение.",
-  "wrkSayPrepare": "Приготовьтесь. {name}.",
-  "@wrkSayPrepare": {
-    "placeholders": {
-      "name": {
         "type": "String"
       }
     }
   },
-  "wrkSaySet": "Подход {set} из {sets}. {amount}. Начали!",
-  "@wrkSaySet": {
+  "planQuestTrackExpenses": "Записать траты за день",
+  "planQuestEveryDay": "каждый день",
+  "planQuestWeekOnly": "неделя {n}",
+  "@planQuestWeekOnly": {
     "placeholders": {
-      "set": {
-        "type": "int"
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "planQuestReward": "+{diamonds} ◆ · +{xp} опыта",
+  "@planQuestReward": {
+    "placeholders": {
+      "diamonds": {
+        "type": "String"
       },
-      "sets": {
-        "type": "int"
+      "xp": {
+        "type": "String"
+      }
+    }
+  },
+  "planWarningsTitle": "Предупреждения",
+  "planWarnSleepShort": "По расписанию сна {scheduled} — меньше нормы {target}. Рекомендуемый отбой — {bed}.",
+  "@planWarnSleepShort": {
+    "placeholders": {
+      "scheduled": {
+        "type": "String"
       },
-      "amount": {
+      "target": {
+        "type": "String"
+      },
+      "bed": {
         "type": "String"
       }
     }
   },
-  "wrkSecondsAmount": "{seconds, plural, one{{seconds} секунда} few{{seconds} секунды} many{{seconds} секунд} other{{seconds} секунды}}",
-  "@wrkSecondsAmount": {
+  "planWarnDeficitFloor": "Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.",
+  "planWarnActivityDefaulted": "Уровень активности не указан — взят «сидячий».",
+  "planWarnNoTrainingWindow": "{day}: нет свободного окна для тренировки.",
+  "@planWarnNoTrainingWindow": {
     "placeholders": {
-      "seconds": {
-        "type": "int"
-      }
-    }
-  },
-  "wrkSayRest": "Отдых: {amount}.",
-  "@wrkSayRest": {
-    "placeholders": {
-      "amount": {
+      "day": {
         "type": "String"
       }
     }
   },
-  "wrkSayNext": "Далее: {name}.",
-  "@wrkSayNext": {
+  "planWarnInjuries": "Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.",
+  "planMissingMessage": "Для расчёта калорий и БЖУ заполните: {fields}.",
+  "@planMissingMessage": {
     "placeholders": {
-      "name": {
+      "fields": {
         "type": "String"
       }
     }
   },
-  "wrkSayFinished": "Тренировка завершена. Отличная работа!",
-  "wrkExMarchInPlace": "Ходьба на месте",
-  "wrkExMarchInPlaceHint": "Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.",
-  "wrkExArmCircles": "Круги руками",
-  "wrkExArmCirclesHint": "Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.",
-  "wrkExJumpingJacks": "Джампинг-джек",
-  "wrkExJumpingJacksHint": "Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.",
-  "wrkExChairSquat": "Приседание на стул",
-  "wrkExChairSquatHint": "Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.",
-  "wrkExGluteBridge": "Ягодичный мост",
-  "wrkExGluteBridgeHint": "Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.",
-  "wrkExSquat": "Приседания",
-  "wrkExSquatHint": "Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.",
-  "wrkExWallSit": "Стульчик у стены",
-  "wrkExWallSitHint": "Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.",
-  "wrkExReverseLunge": "Выпады назад",
-  "wrkExReverseLungeHint": "Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.",
-  "wrkExGobletSquat": "Гоблет-присед",
-  "wrkExGobletSquatHint": "Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.",
-  "wrkExKettlebellSwing": "Махи гирей",
-  "wrkExKettlebellSwingHint": "Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.",
-  "wrkExJumpSquat": "Присед с выпрыгиванием",
-  "wrkExJumpSquatHint": "Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.",
-  "wrkExWallPushUp": "Отжимания от стены",
-  "wrkExWallPushUpHint": "Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.",
-  "wrkExKneePushUp": "Отжимания с колен",
-  "wrkExKneePushUpHint": "Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.",
-  "wrkExPushUp": "Отжимания",
-  "wrkExPushUpHint": "Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.",
-  "wrkExDumbbellPress": "Жим гантелей лёжа",
-  "wrkExDumbbellPressHint": "Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.",
-  "wrkExDiamondPushUp": "Узкие отжимания",
-  "wrkExDiamondPushUpHint": "Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.",
-  "wrkExSuperman": "Супермен",
-  "wrkExSupermanHint": "Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.",
-  "wrkExReverseSnowAngel": "Обратный снежный ангел",
-  "wrkExReverseSnowAngelHint": "Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.",
-  "wrkExBandRow": "Тяга резинки",
-  "wrkExBandRowHint": "Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.",
-  "wrkExDumbbellRow": "Тяга гантели в наклоне",
-  "wrkExDumbbellRowHint": "Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.",
-  "wrkExPullUp": "Подтягивания",
-  "wrkExPullUpHint": "Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.",
-  "wrkExDeadBug": "Мёртвый жук",
-  "wrkExDeadBugHint": "Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.",
-  "wrkExBirdDog": "Птица-собака",
-  "wrkExBirdDogHint": "Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.",
-  "wrkExPlank": "Планка",
-  "wrkExPlankHint": "Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.",
-  "wrkExCrunch": "Скручивания",
-  "wrkExCrunchHint": "Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.",
-  "wrkExSidePlank": "Боковая планка",
-  "wrkExSidePlankHint": "Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.",
-  "wrkExLegRaise": "Подъём ног лёжа",
-  "wrkExLegRaiseHint": "Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.",
-  "wrkExStepTouch": "Приставные шаги",
-  "wrkExStepTouchHint": "Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.",
-  "wrkExShadowBoxing": "Бой с тенью",
-  "wrkExShadowBoxingHint": "Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.",
-  "wrkExHighKnees": "Бег с высоким подниманием колен",
-  "wrkExHighKneesHint": "Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.",
-  "wrkExMountainClimber": "Скалолаз",
-  "wrkExMountainClimberHint": "Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.",
-  "wrkExBurpee": "Бёрпи",
-  "wrkExBurpeeHint": "Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.",
-  "wrkExFullBodyStretch": "Растяжка",
-  "wrkExFullBodyStretchHint": "Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков."
+  "planMissingSex": "пол",
+  "planMissingBirthDate": "дата рождения",
+  "planMissingHeight": "рост",
+  "planMissingWeight": "вес",
+  "planFillSection": "Заполнить: {section}",
+  "@planFillSection": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      }
+    }
+  }
 }

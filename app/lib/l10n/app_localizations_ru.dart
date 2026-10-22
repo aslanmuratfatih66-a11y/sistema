@@ -440,60 +440,35 @@ class AppLocalizationsRu extends AppLocalizations {
       'Вода — 48% нормы. Выпей стакан до 11:30, и «Бодрость» продлится ещё час.';
 
   @override
-  String get actStepsTitle => 'Шаги';
+  String get hqStatStrengthShort => 'СИЛ';
 
   @override
-  String actGoal(String goal) {
-    return 'Цель: $goal';
-  }
+  String get hqStatEnduranceShort => 'ВЫН';
 
   @override
-  String get actDistance => 'Дистанция';
+  String get hqStatDisciplineShort => 'ДИС';
 
   @override
-  String actDistanceKm(String km) {
-    return '$km км';
-  }
+  String get hqStatIntellectShort => 'ИНТ';
 
   @override
-  String get actFloors => 'Этажи';
+  String get hqStatHealthShort => 'ЗДР';
 
   @override
-  String get actNoValue => '—';
+  String get hqStatLooksShort => 'ВНШ';
 
   @override
-  String get actWeek => '7 дней';
+  String get hqCaloriesTodayTitle => 'Калории за день';
 
   @override
-  String get actAllow => 'Разрешить';
+  String get hqNutritionDiaryTitle => 'Дневник питания';
 
   @override
-  String get actPermissionHint =>
-      'Разрешите доступ к датчикам движения — шаги будут считаться сами.';
+  String get hqNutritionDiarySoon =>
+      'Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.';
 
   @override
-  String get actUnavailableHint =>
-      'Счётчика шагов на устройстве нет — введите шаги вручную.';
-
-  @override
-  String get actManual => 'Ввести вручную';
-
-  @override
-  String get actManualLabel => 'Шаги за сегодня';
-
-  @override
-  String get actManualRange => 'От 0 до 100 000';
-
-  @override
-  String get actSave => 'Сохранить';
-
-  @override
-  String get actCancel => 'Отмена';
-
-  @override
-  String actStepsSemantic(String steps, String goal) {
-    return 'Шаги за сегодня: $steps из $goal';
-  }
+  String get hqFinanceFoodTitle => 'Финансы на еду';
 
   @override
   String get bdyEnergy => 'Энергия';
@@ -803,6 +778,227 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get bdySwellCompareFirst => 'Сравнить первое и последнее';
+
+  @override
+  String get blkTitle => 'Блокировка приложений';
+
+  @override
+  String get blkOverlayTitle => 'Система: отбой';
+
+  @override
+  String blkOverlayBody(String time) {
+    return 'Время сна. Развлечения закрыты до $time. Положите телефон — завтра нужен ясный ум.';
+  }
+
+  @override
+  String get blkOverlayButton => 'Закрыть';
+
+  @override
+  String get blkNotifTitle => 'Система: отбой';
+
+  @override
+  String blkNotifBody(String time) {
+    return 'Отвлекающие приложения закрыты до $time';
+  }
+
+  @override
+  String blkIntro(String diamonds) {
+    return 'В режиме дисциплины после отбоя отвлекающие приложения закрываются экраном «Система: отбой». Попытки записываются; с третьей за ночь — штраф $diamonds ◆.';
+  }
+
+  @override
+  String get blkStatusTitle => 'Статус';
+
+  @override
+  String blkDisciplineOn(String from, String until) {
+    return 'Режим дисциплины включён. Блокировка: $from–$until.';
+  }
+
+  @override
+  String blkDisciplineOff(String from, String until) {
+    return 'Режим дисциплины выключен — блокировка не действует. Окно режима: $from–$until.';
+  }
+
+  @override
+  String get blkActiveNow => 'Блокировка действует сейчас';
+
+  @override
+  String get blkReady => 'Готово к работе';
+
+  @override
+  String get blkNotReady => 'Нужны разрешения';
+
+  @override
+  String get blkNoApps => 'Не выбрано ни одного приложения';
+
+  @override
+  String get blkPermsTitle => 'Разрешения';
+
+  @override
+  String get blkUsageAccess => 'Доступ к истории использования';
+
+  @override
+  String get blkUsageAccessHint =>
+      'Чтобы видеть, какое приложение открыто сейчас.';
+
+  @override
+  String get blkOverlayPerm => 'Поверх других приложений';
+
+  @override
+  String get blkOverlayPermHint => 'Чтобы показать экран «Система: отбой».';
+
+  @override
+  String get blkGranted => 'Выдано';
+
+  @override
+  String get blkNotGranted => 'Не выдано';
+
+  @override
+  String get blkOpenSettings => 'Открыть настройки';
+
+  @override
+  String get blkNotifHint =>
+      'Во время блокировки в шторке висит уведомление Системы — так Android не остановит проверку.';
+
+  @override
+  String get blkAppsTitle => 'Приложения';
+
+  @override
+  String get blkAppsHint =>
+      'Отмеченные закрываются после отбоя. Известные развлекательные отмечены по умолчанию.';
+
+  @override
+  String blkAppsSelected(int count) {
+    return 'Выбрано: $count';
+  }
+
+  @override
+  String get blkAppsLoading => 'Загружаю список приложений…';
+
+  @override
+  String get blkAppsEmpty => 'Приложения не найдены';
+
+  @override
+  String get blkSearch => 'Поиск';
+
+  @override
+  String get blkShowAll => 'Показать все';
+
+  @override
+  String get blkShowSelected => 'Только выбранные';
+
+  @override
+  String get blkUnsupported => 'На этом устройстве блокировка недоступна.';
+
+  @override
+  String blkAttemptsTonight(int count) {
+    return 'Попыток за эту ночь: $count';
+  }
+
+  @override
+  String get blkIosIntro =>
+      'На iPhone прямой блокировки нет. Настройте личные автоматизации «Команд»: при открытии приложения сразу откроется Система. После отбоя она покажет «Система: отбой» и запишет попытку, днём — ответит «Сейчас можно».';
+
+  @override
+  String get blkIosPickTitle => '1. Какие приложения';
+
+  @override
+  String get blkIosGames => 'Игры (любая игра)';
+
+  @override
+  String get blkIosStepsTitle => '2. Автоматизация для каждого приложения';
+
+  @override
+  String get blkIosStep1 =>
+      'Откройте приложение «Команды» → вкладка «Автоматизация» → «+» («Новая автоматизация»).';
+
+  @override
+  String get blkIosStep2 =>
+      'Выберите «Приложение», нажмите «Выбрать» и отметьте приложение (можно сразу несколько — тогда ссылка одна, например для игр).';
+
+  @override
+  String get blkIosStep3 =>
+      'Отметьте «Открыто», выберите «Выполнять сразу» и нажмите «Далее».';
+
+  @override
+  String get blkIosStep4 =>
+      '«Новая пустая автоматизация» → «Добавить действие» → найдите «Открыть URL».';
+
+  @override
+  String get blkIosStep5 =>
+      'Вставьте ссылку этого приложения (кнопка «Скопировать» ниже) и нажмите «Готово».';
+
+  @override
+  String get blkIosStep6 =>
+      'Повторите для остальных приложений. Проверьте: откройте приложение — должна открыться Система.';
+
+  @override
+  String get blkIosLinksTitle => '3. Ссылки';
+
+  @override
+  String get blkIosLinksEmpty => 'Сначала выберите приложения выше.';
+
+  @override
+  String get blkCopy => 'Скопировать';
+
+  @override
+  String blkCopied(String app) {
+    return 'Ссылка скопирована: $app';
+  }
+
+  @override
+  String get blkIosFocusTitle => 'Совет: фокус-режим «Сон»';
+
+  @override
+  String get blkIosFocusBody =>
+      'Настройки → Фокусирование → «Сон»: включайте по расписанию с отбоя до подъёма, скройте уведомления отвлекающих приложений и оставьте на главном экране только нужное.';
+
+  @override
+  String get blkIosAlwaysNote =>
+      'Автоматизация срабатывает в любое время — решает Система: блок действует только после отбоя в режиме дисциплины.';
+
+  @override
+  String get blkBlockedLabel => 'Система';
+
+  @override
+  String get blkBlockedTitle => 'Система: отбой';
+
+  @override
+  String blkBlockedMessageApp(String app, String time) {
+    return '$app закрыт до $time. Сон — тоже тренировка. Положите телефон.';
+  }
+
+  @override
+  String blkBlockedMessage(String time) {
+    return 'Развлечения закрыты до $time. Сон — тоже тренировка. Положите телефон.';
+  }
+
+  @override
+  String blkPenaltyApplied(String diamonds) {
+    return 'Повторная попытка: −$diamonds ◆';
+  }
+
+  @override
+  String blkPenaltyWarning(String diamonds) {
+    return 'С третьей попытки за ночь — штраф $diamonds ◆ за каждую.';
+  }
+
+  @override
+  String get blkClose => 'Закрыть';
+
+  @override
+  String get blkAllowedTitle => 'Сейчас можно';
+
+  @override
+  String get blkAllowedMessage =>
+      'Блокировка сейчас не действует. Отдыхайте — в меру.';
+
+  @override
+  String get blkChecking => 'Проверяю…';
+
+  @override
+  String get blkReasonBlockedAttempt =>
+      'Попытка открыть приложение после отбоя';
 
   @override
   String chrSemanticsChat(String name) {
@@ -1547,35 +1743,1375 @@ class AppLocalizationsRu extends AppLocalizations {
   String get onbStepPermissions => 'Разрешения';
 
   @override
-  String get hqStatStrengthShort => 'СИЛ';
+  String get almTitle => 'Будильники';
 
   @override
-  String get hqStatEnduranceShort => 'ВЫН';
+  String get almRingTitle => 'Подъём!';
 
   @override
-  String get hqStatDisciplineShort => 'ДИС';
+  String almRingBodySquats(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Сделайте $count приседаний, чтобы выключить',
+      few: 'Сделайте $count приседания, чтобы выключить',
+      one: 'Сделайте $count приседание, чтобы выключить',
+    );
+    return '$_temp0';
+  }
 
   @override
-  String get hqStatIntellectShort => 'ИНТ';
+  String get almRingBodyQr =>
+      'Отсканируйте QR-код в другой комнате, чтобы выключить';
 
   @override
-  String get hqStatHealthShort => 'ЗДР';
+  String get almDoTask => 'Выполнить задание';
 
   @override
-  String get hqStatLooksShort => 'ВНШ';
+  String get almStop => 'Стоп';
 
   @override
-  String get hqCaloriesTodayTitle => 'Калории за день';
+  String get almChannelName => 'Будильник';
 
   @override
-  String get hqNutritionDiaryTitle => 'Дневник питания';
+  String get almChannelDesc => 'Звонок будильника-квеста';
 
   @override
-  String get hqNutritionDiarySoon =>
-      'Дневник питания, фото еды и подсчёт БЖУ Система откроет на следующем этапе.';
+  String get almFallbackBody =>
+      'Будильник не выключен — откройте приложение и выполните задание.';
 
   @override
-  String get hqFinanceFoodTitle => 'Финансы на еду';
+  String get almReasonWake => 'Подъём по будильнику';
+
+  @override
+  String get almPermTitle => 'Разрешения';
+
+  @override
+  String get almPermReady =>
+      'Будильник готов: звонит поверх экрана блокировки и выключается только заданием.';
+
+  @override
+  String get almPermExact => 'Точные будильники';
+
+  @override
+  String get almPermFullScreen => 'Показ поверх экрана блокировки';
+
+  @override
+  String get almPermNotifications => 'Уведомления';
+
+  @override
+  String get almPermAlarmKit => 'Системный будильник (AlarmKit)';
+
+  @override
+  String get almPermFallback =>
+      'Системный будильник недоступен — прозвонит серия громких уведомлений. Не включайте беззвучный режим и «Фокус» на ночь.';
+
+  @override
+  String get almPermBackup =>
+      'Если выключить звонок кнопкой «Стоп», через 3 минуты пойдут уведомления, пока не выполните задание.';
+
+  @override
+  String get almPermGrant => 'Разрешить';
+
+  @override
+  String get almPermOn => 'есть';
+
+  @override
+  String get almPermOff => 'нет';
+
+  @override
+  String get almEmpty =>
+      'Будильников пока нет. Добавьте первый — выключить его можно будет только заданием.';
+
+  @override
+  String get almAdd => 'Добавить будильник';
+
+  @override
+  String get almNew => 'Новый будильник';
+
+  @override
+  String get almEditTitle => 'Будильник';
+
+  @override
+  String get almDaysEveryday => 'Каждый день';
+
+  @override
+  String get almDaysWeekdays => 'По будням';
+
+  @override
+  String get almDaysWeekend => 'По выходным';
+
+  @override
+  String get almDaysOnce => 'Один раз';
+
+  @override
+  String get almDayMon => 'Пн';
+
+  @override
+  String get almDayTue => 'Вт';
+
+  @override
+  String get almDayWed => 'Ср';
+
+  @override
+  String get almDayThu => 'Чт';
+
+  @override
+  String get almDayFri => 'Пт';
+
+  @override
+  String get almDaySat => 'Сб';
+
+  @override
+  String get almDaySun => 'Вс';
+
+  @override
+  String get almDaysHint =>
+      'Не выбрано ни одного дня — будильник прозвонит один раз.';
+
+  @override
+  String get almTime => 'Время';
+
+  @override
+  String get almDays => 'Дни';
+
+  @override
+  String get almLabel => 'Подпись';
+
+  @override
+  String get almTask => 'Задание';
+
+  @override
+  String get almTaskSquats => 'Приседания';
+
+  @override
+  String get almTaskQr => 'QR-код';
+
+  @override
+  String almTaskSquatsShort(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count приседаний',
+      few: '$count приседания',
+      one: '$count приседание',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get almSquatsCount => 'Количество приседаний';
+
+  @override
+  String get almQrHint =>
+      'Распечатайте код и повесьте в другой комнате — например, на кухне или в ванной. Чтобы выключить будильник, придётся встать и дойти до него.';
+
+  @override
+  String get almQrShare => 'Поделиться для печати';
+
+  @override
+  String get almQrShareText =>
+      'QR-код будильника «Системы». Повесьте его в другой комнате.';
+
+  @override
+  String get almQrRegenerate => 'Новый код';
+
+  @override
+  String get almQrShareFailed => 'Не удалось поделиться кодом.';
+
+  @override
+  String get almDiscipline => 'Режим дисциплины';
+
+  @override
+  String get almDisciplineHint =>
+      'Подъём режима дисциплины: время и дни задаёт режим, задание можно сменить.';
+
+  @override
+  String get almTest => 'Проверить через 1 мин';
+
+  @override
+  String get almTestScheduled =>
+      'Проверочный звонок через минуту. Можно заблокировать экран.';
+
+  @override
+  String get almTestRing => 'Проверка';
+
+  @override
+  String get almDeleteConfirm => 'Удалить будильник?';
+
+  @override
+  String get almNotFound => 'Будильник не найден.';
+
+  @override
+  String get almSquatsHint =>
+      'Держите телефон у груди и приседайте до конца — вниз и вверх.';
+
+  @override
+  String almSquatsProgress(int done, int total) {
+    return '$done / $total';
+  }
+
+  @override
+  String get almSensorError => 'Датчик движения недоступен.';
+
+  @override
+  String get almHoldFallback => 'Удерживать, чтобы выключить';
+
+  @override
+  String get almScanQr => 'Сканировать QR';
+
+  @override
+  String get almScanTitle => 'QR будильника';
+
+  @override
+  String get almScanHint => 'Наведите камеру на напечатанный код.';
+
+  @override
+  String get almScanNoCamera =>
+      'Камера недоступна. Разрешите доступ к камере в настройках.';
+
+  @override
+  String get almQrWrong => 'Это не тот код.';
+
+  @override
+  String get almQrMissing =>
+      'Код для этого будильника не создан — выполните приседания.';
+
+  @override
+  String almSnooze(int left) {
+    return 'Отложить на 5 мин (осталось $left)';
+  }
+
+  @override
+  String get almSnoozeNone => 'Откладывать больше нельзя.';
+
+  @override
+  String almReward(int count) {
+    return '+$count ◆ за подъём вовремя';
+  }
+
+  @override
+  String get almDone => 'Подъём засчитан';
+
+  @override
+  String get almDoneBody => 'Будильник выключен. Доброе утро!';
+
+  @override
+  String get finTitle => 'Финансы';
+
+  @override
+  String get finBalance => 'Баланс';
+
+  @override
+  String get finCryptoValue => 'Крипта';
+
+  @override
+  String get finFreeToMonthEnd => 'Свободно до конца месяца';
+
+  @override
+  String get finNextIncome => 'Ближайшее поступление';
+
+  @override
+  String get finMonthExpenses => 'Расходы за месяц';
+
+  @override
+  String get finMonthIncome => 'Доходы за месяц';
+
+  @override
+  String get finMissingRates =>
+      'Часть сумм без курса — не вошла в итог. Обновите курсы.';
+
+  @override
+  String get finRatesNever => 'Курсы ещё не загружались';
+
+  @override
+  String finRatesUpdated(String time) {
+    return 'Курсы: $time';
+  }
+
+  @override
+  String get finRefreshRates => 'Обновить курсы';
+
+  @override
+  String get finRefreshing => 'Обновляю…';
+
+  @override
+  String get finInput => 'Ввод';
+
+  @override
+  String get finExpense => 'Расход';
+
+  @override
+  String get finIncome => 'Доход';
+
+  @override
+  String get finTransfer => 'Перевод';
+
+  @override
+  String get finExpenses => 'Расходы';
+
+  @override
+  String get finIncomes => 'Доходы';
+
+  @override
+  String get finReceiptQr => 'QR чека';
+
+  @override
+  String get finReceiptPhoto => 'Фото чека';
+
+  @override
+  String get finBanks => 'Банки';
+
+  @override
+  String get finStatement => 'Выписка';
+
+  @override
+  String get finMarket => 'Маркет';
+
+  @override
+  String get finAccounts => 'Счета';
+
+  @override
+  String get finNoAccounts =>
+      'Счетов пока нет. Добавьте наличные или карту — или просто запишите расход, счёт «Наличные» создастся сам.';
+
+  @override
+  String get finManageAccounts => 'Счета и крипта';
+
+  @override
+  String get finBudgets => 'Лимиты';
+
+  @override
+  String get finBudgetsEmptyShort => 'Лимитов нет.';
+
+  @override
+  String finBudgetsProposed(int n) {
+    return 'Предложено ИИ: $n — ждут подтверждения';
+  }
+
+  @override
+  String get finManageBudgets => 'Настроить лимиты';
+
+  @override
+  String get finSoon => 'Скоро';
+
+  @override
+  String get finChargeSoon => 'скоро списание';
+
+  @override
+  String get finRecent => 'Последние операции';
+
+  @override
+  String get finNoOperations => 'Операций нет.';
+
+  @override
+  String get finAllOperations => 'Все операции';
+
+  @override
+  String get finMore => 'Разделы';
+
+  @override
+  String get finReports => 'Отчёты';
+
+  @override
+  String get finGoals => 'Цели накопления';
+
+  @override
+  String get finSubscriptions => 'Подписки';
+
+  @override
+  String get finDebts => 'Долги';
+
+  @override
+  String get finSettings => 'Настройки финансов';
+
+  @override
+  String get finWarning => 'Предупреждение';
+
+  @override
+  String get finSaveError => 'Не удалось сохранить';
+
+  @override
+  String get finAll => 'Все';
+
+  @override
+  String get finChoose => 'Выбрать';
+
+  @override
+  String get finTxNew => 'Новая операция';
+
+  @override
+  String get finTxEdit => 'Операция';
+
+  @override
+  String get finTxDeleteConfirm => 'Удалить операцию?';
+
+  @override
+  String get finAmount => 'Сумма';
+
+  @override
+  String get finAccount => 'Счёт';
+
+  @override
+  String get finFromAccount => 'Со счёта';
+
+  @override
+  String get finToAccount => 'На счёт';
+
+  @override
+  String get finToAmount => 'Зачислено';
+
+  @override
+  String get finToAmountHint =>
+      'Счета в разных валютах: укажите сумму зачисления, иначе — по курсу.';
+
+  @override
+  String get finTransferNeedsTwo => 'Выберите два разных счёта';
+
+  @override
+  String get finNoAccountsAuto => 'Наличные (создастся)';
+
+  @override
+  String get finNoAccountsAutoHint =>
+      'Счёт «Наличные · RUB» будет создан автоматически.';
+
+  @override
+  String get finCategory => 'Категория';
+
+  @override
+  String get finCategoryAutoHint =>
+      'не выбрана — Система угадает по месту покупки';
+
+  @override
+  String get finMerchant => 'Где';
+
+  @override
+  String get finPayer => 'От кого';
+
+  @override
+  String get finDate => 'Дата';
+
+  @override
+  String get finTime => 'Время';
+
+  @override
+  String get finNote => 'Заметка';
+
+  @override
+  String get finSource => 'Источник';
+
+  @override
+  String get finNoCategory => 'Без категории';
+
+  @override
+  String get finOperations => 'Операции';
+
+  @override
+  String get finAddOperation => 'Добавить операцию';
+
+  @override
+  String finOperationsCount(int n) {
+    return 'Операций: $n';
+  }
+
+  @override
+  String get finShowMore => 'Показать ещё';
+
+  @override
+  String get finPeriodWeek => 'Неделя';
+
+  @override
+  String get finPeriodMonth => 'Месяц';
+
+  @override
+  String get finPeriodYear => 'Год';
+
+  @override
+  String get finPeriodAll => 'Всё';
+
+  @override
+  String get finAccountAdd => 'Добавить счёт';
+
+  @override
+  String get finAccountNew => 'Новый счёт';
+
+  @override
+  String get finAccountEdit => 'Счёт';
+
+  @override
+  String get finAccountDeleteConfirm =>
+      'Удалить счёт? Операции останутся, но без счёта.';
+
+  @override
+  String get finAccountKind => 'Тип';
+
+  @override
+  String get finAccKindCash => 'Наличные';
+
+  @override
+  String get finAccKindCard => 'Карта';
+
+  @override
+  String get finAccKindDeposit => 'Вклад';
+
+  @override
+  String get finAccKindCrypto => 'Крипто-кошелёк';
+
+  @override
+  String get finAccountName => 'Название';
+
+  @override
+  String get finCurrency => 'Валюта';
+
+  @override
+  String get finOpeningBalance => 'Начальный остаток';
+
+  @override
+  String get finOpeningBalanceHint => 'Сколько было на счёте до начала учёта.';
+
+  @override
+  String get finBank => 'Банк';
+
+  @override
+  String get finBankHint => 'Например: Сбер, Т-Банк, Ziraat';
+
+  @override
+  String get finCardLast4 => 'Последние 4 цифры карты';
+
+  @override
+  String get finCardLast4Hint => 'Для сопоставления уведомлений банка';
+
+  @override
+  String get finArchive => 'В архиве';
+
+  @override
+  String get finArchiveHint => 'Скрыть из списков и итогов';
+
+  @override
+  String get finArchived => 'Архив';
+
+  @override
+  String get finCrypto => 'Крипта';
+
+  @override
+  String get finCryptoEmpty => 'Монет нет.';
+
+  @override
+  String get finCryptoRateNote =>
+      'Количество — вручную, курс — автоматически (CoinGecko через сервер).';
+
+  @override
+  String get finCryptoAdd => 'Добавить монету';
+
+  @override
+  String get finCryptoEdit => 'Монета';
+
+  @override
+  String get finCryptoSymbol => 'Символ';
+
+  @override
+  String get finCryptoCoinId => 'Id CoinGecko';
+
+  @override
+  String get finCryptoCoinIdHint => 'bitcoin, ethereum, the-open-network…';
+
+  @override
+  String get finCryptoAmount => 'Количество';
+
+  @override
+  String get finNoRate => 'нет курса';
+
+  @override
+  String get finCategories => 'Категории';
+
+  @override
+  String get finCategoryAdd => 'Новая категория';
+
+  @override
+  String get finCategoryName => 'Название';
+
+  @override
+  String get finCategoryIcon => 'Иконка';
+
+  @override
+  String get finJunkFood => 'Вредная еда';
+
+  @override
+  String get finJunkFoodHint =>
+      'Покупки здесь облагаются «налогом на фастфуд» (◆)';
+
+  @override
+  String get finHide => 'Скрыть';
+
+  @override
+  String get finHidden => 'скрыта';
+
+  @override
+  String get finHideHint => 'Не показывать при вводе';
+
+  @override
+  String get finCatGroceries => 'Продукты';
+
+  @override
+  String get finCatCafe => 'Кафе и кофе';
+
+  @override
+  String get finCatFastfood => 'Фастфуд';
+
+  @override
+  String get finCatTransport => 'Транспорт';
+
+  @override
+  String get finCatHousing => 'Жильё';
+
+  @override
+  String get finCatUtilities => 'Коммунальные';
+
+  @override
+  String get finCatPhone => 'Связь и интернет';
+
+  @override
+  String get finCatHealth => 'Здоровье и аптека';
+
+  @override
+  String get finCatBeauty => 'Уход и красота';
+
+  @override
+  String get finCatClothes => 'Одежда';
+
+  @override
+  String get finCatEducation => 'Учёба и книги';
+
+  @override
+  String get finCatSport => 'Спорт';
+
+  @override
+  String get finCatFun => 'Развлечения';
+
+  @override
+  String get finCatSubscriptions => 'Подписки';
+
+  @override
+  String get finCatGifts => 'Подарки';
+
+  @override
+  String get finCatMarketplace => 'Маркетплейсы';
+
+  @override
+  String get finCatOther => 'Прочее';
+
+  @override
+  String get finCatStipend => 'Стипендия';
+
+  @override
+  String get finCatSalary => 'Зарплата';
+
+  @override
+  String get finCatGiftIncome => 'Подарили';
+
+  @override
+  String get finCatCashback => 'Кешбэк';
+
+  @override
+  String get finCatOtherIncome => 'Прочие доходы';
+
+  @override
+  String get finBudgetsActive => 'Действующие лимиты';
+
+  @override
+  String get finBudgetsEmpty =>
+      'Лимитов нет. Добавьте вручную или попросите ИИ предложить.';
+
+  @override
+  String get finBudgetsRule =>
+      'Превысили лимит — штраф ◆, уложились за период — награда ◆.';
+
+  @override
+  String get finBudgetAdd => 'Добавить лимит';
+
+  @override
+  String get finBudgetEdit => 'Лимит';
+
+  @override
+  String get finLimit => 'Лимит';
+
+  @override
+  String get finRewardDiamonds => 'Награда';
+
+  @override
+  String get finPenaltyDiamonds => 'Штраф';
+
+  @override
+  String get finBudgetsAi => 'План от ИИ';
+
+  @override
+  String finBudgetsAiReady(int days) {
+    return 'Наблюдений: $days дн. — можно попросить ИИ предложить лимиты.';
+  }
+
+  @override
+  String finBudgetsAiNeedMore(int days) {
+    return 'Нужно 2–4 недели наблюдений (сейчас $days дн.). Записывайте траты — ИИ предложит лимиты по вашим привычкам.';
+  }
+
+  @override
+  String get finBudgetsAiAsk => 'Предложить лимиты (ИИ)';
+
+  @override
+  String finAiSuggested(int n) {
+    return 'Предложено лимитов: $n. Подтвердите или отклоните.';
+  }
+
+  @override
+  String get finAiNoSuggestions =>
+      'ИИ не предложил лимитов — данных пока мало.';
+
+  @override
+  String get finAccept => 'Принять';
+
+  @override
+  String get finReject => 'Отклонить';
+
+  @override
+  String get finAiThinking => 'Система думает…';
+
+  @override
+  String get finAiNotSignedIn =>
+      'ИИ доступен после входа в аккаунт. Остальное работает офлайн.';
+
+  @override
+  String get finAiOffline =>
+      'Нет сети. Попробуйте позже — данные сохранены на устройстве.';
+
+  @override
+  String get finAiBudget => 'Лимит расходов на ИИ исчерпан.';
+
+  @override
+  String get finAiRateLimited => 'Слишком много запросов. Подождите немного.';
+
+  @override
+  String get finAiUnavailable => 'ИИ сейчас недоступен. Попробуйте позже.';
+
+  @override
+  String get finGoalsEmpty => 'Целей нет.';
+
+  @override
+  String get finGoalsHint => 'Прогресс — остаток выбранного счёта-копилки.';
+
+  @override
+  String get finGoalAdd => 'Новая цель';
+
+  @override
+  String get finGoalEdit => 'Цель';
+
+  @override
+  String get finGoalTitle => 'На что копим';
+
+  @override
+  String get finGoalTarget => 'Сколько нужно';
+
+  @override
+  String get finGoalAccount => 'Счёт-копилка';
+
+  @override
+  String get finGoalAccountHint => 'Остаток этого счёта — накоплено';
+
+  @override
+  String get finGoalDeadline => 'К какой дате';
+
+  @override
+  String get finGoalNoAccount =>
+      'Выберите счёт-копилку, чтобы видеть прогресс.';
+
+  @override
+  String get finGoalReached => 'Цель достигнута!';
+
+  @override
+  String finUntil(String date) {
+    return 'до $date';
+  }
+
+  @override
+  String get finSubscriptionsEmpty => 'Подписок нет.';
+
+  @override
+  String get finSubscriptionsHint =>
+      'В день списания Система сама запишет расход и сдвинет дату.';
+
+  @override
+  String get finSubscriptionsMonthly => 'В месяц';
+
+  @override
+  String get finSubscriptionAdd => 'Новая подписка';
+
+  @override
+  String get finSubscriptionEdit => 'Подписка';
+
+  @override
+  String get finSubscriptionTitle => 'Название';
+
+  @override
+  String finNextCharge(String date) {
+    return 'списание $date';
+  }
+
+  @override
+  String get finNextChargeDate => 'Дата следующего списания';
+
+  @override
+  String get finPaused => 'приостановлена';
+
+  @override
+  String get finActive => 'Активна';
+
+  @override
+  String get finDebtsOpen => 'Открытые долги';
+
+  @override
+  String get finDebtsClosed => 'Погашенные';
+
+  @override
+  String get finDebtsEmpty => 'Долгов нет.';
+
+  @override
+  String get finDebtAdd => 'Новый долг';
+
+  @override
+  String get finDebtEdit => 'Долг';
+
+  @override
+  String get finDebtOwe => 'Я должен';
+
+  @override
+  String get finDebtLent => 'Мне должны';
+
+  @override
+  String get finDebtPerson => 'Кто';
+
+  @override
+  String get finDebtDue => 'Срок';
+
+  @override
+  String get finDebtSettle => 'Погашен';
+
+  @override
+  String get finDebtSettleHint =>
+      'Отметит долг закрытым и откроет запись операции.';
+
+  @override
+  String get finOverdue => 'просрочен';
+
+  @override
+  String get finSettled => 'погашен';
+
+  @override
+  String get finTotals => 'Итоги';
+
+  @override
+  String get finNet => 'Разница';
+
+  @override
+  String get finByCategory => 'Расходы по категориям';
+
+  @override
+  String get finNoExpensesPeriod => 'Расходов за период нет.';
+
+  @override
+  String get finDynamics => 'Доходы и расходы по периодам';
+
+  @override
+  String get finPrevPeriod => 'Предыдущий период';
+
+  @override
+  String get finNextPeriod => 'Следующий период';
+
+  @override
+  String get finAiComment => 'Комментарий ИИ';
+
+  @override
+  String get finAiCommentHint =>
+      'ИИ разберёт период: на что ушли деньги и где можно сэкономить.';
+
+  @override
+  String get finAiCommentAsk => 'Комментарий ИИ';
+
+  @override
+  String get finSrcManual => 'вручную';
+
+  @override
+  String get finSrcReceiptQr => 'QR чека';
+
+  @override
+  String get finSrcReceiptPhoto => 'фото чека';
+
+  @override
+  String get finSrcFood => 'фото еды';
+
+  @override
+  String get finSrcBank => 'уведомление банка';
+
+  @override
+  String get finSrcSms => 'SMS банка';
+
+  @override
+  String get finSrcStatement => 'выписка';
+
+  @override
+  String get finSrcSubscription => 'подписка';
+
+  @override
+  String get finSrcMarket => 'маркет';
+
+  @override
+  String get finReasonJunkTax => 'налог на фастфуд';
+
+  @override
+  String get finReasonBudgetOver => 'превышен лимит расходов';
+
+  @override
+  String get finReasonBudgetKept => 'уложились в лимит';
+
+  @override
+  String get finLockTitle => 'Система заблокирована';
+
+  @override
+  String get finLockReason => 'Подтвердите вход в «Систему»';
+
+  @override
+  String get finLockEnterPin => 'Введите PIN';
+
+  @override
+  String get finLockUseBiometric => 'Подтвердите вход по Face ID или отпечатку';
+
+  @override
+  String get finLockBiometricButton => 'Face ID / отпечаток';
+
+  @override
+  String get finLockWrongPin => 'Неверный PIN';
+
+  @override
+  String finLockCooldown(int sec) {
+    return 'Слишком много попыток. Подождите $sec с';
+  }
+
+  @override
+  String finLockDigits(int n) {
+    return 'Введено цифр: $n';
+  }
+
+  @override
+  String get finLockErase => 'Стереть';
+
+  @override
+  String get finLockOk => 'Готово';
+
+  @override
+  String get finLockSection => 'Вход в приложение';
+
+  @override
+  String get finLockIntro =>
+      'Защитите приложение: при запуске и после возврата из фона Система спросит Face ID, отпечаток или PIN.';
+
+  @override
+  String get finLockModeOff => 'Выключено';
+
+  @override
+  String get finLockModeBiometric => 'Face ID / отпечаток';
+
+  @override
+  String get finLockModePin => 'PIN';
+
+  @override
+  String get finLockModeBoth => 'Биометрия + PIN';
+
+  @override
+  String get finLockNoBiometric =>
+      'Биометрия на устройстве недоступна или не настроена.';
+
+  @override
+  String get finLockTimeout => 'Спрашивать снова после фона';
+
+  @override
+  String get finLockTimeoutNow => 'Сразу';
+
+  @override
+  String finMinutes(int n) {
+    return '$n мин';
+  }
+
+  @override
+  String get finLockChangePin => 'Сменить PIN';
+
+  @override
+  String get finLockNewPin => 'Новый PIN';
+
+  @override
+  String get finLockRepeatPin => 'Повторите PIN';
+
+  @override
+  String get finLockPinMismatch => 'PIN не совпали';
+
+  @override
+  String get finLockPinChanged => 'PIN изменён';
+
+  @override
+  String finLockPinRule(int min, int max) {
+    return 'От $min до $max цифр';
+  }
+
+  @override
+  String get finLockPinWarning =>
+      'Забытый PIN не восстановить — включите и биометрию, если можно.';
+
+  @override
+  String get finJunkTaxSection => 'Налог на фастфуд';
+
+  @override
+  String get finJunkTaxEnabled => 'Списывать ◆ за вредную еду';
+
+  @override
+  String get finJunkTaxHint => 'За каждую покупку в категориях «вредная еда»';
+
+  @override
+  String get finJunkTaxAmount => 'Налог за покупку';
+
+  @override
+  String get finSummaryFood => 'Еда за месяц';
+
+  @override
+  String get finSummaryUntilIncome => 'До поступления';
+
+  @override
+  String finDays(int n) {
+    return '$n дн.';
+  }
+
+  @override
+  String finRemindSubTitle(String title) {
+    return 'Завтра списание: $title';
+  }
+
+  @override
+  String finRemindSubBody(String amount, String date) {
+    return '$amount · $date';
+  }
+
+  @override
+  String get finRemindDebtOweTitle => 'Срок долга';
+
+  @override
+  String get finRemindDebtLentTitle => 'Вам должны вернуть';
+
+  @override
+  String finRemindDebtBody(String person, String amount, String date) {
+    return '$person: $amount до $date';
+  }
+
+  @override
+  String get fniAccount => 'Счёт';
+
+  @override
+  String get fniAuto => 'Автоматически';
+
+  @override
+  String get fniCategory => 'Категория';
+
+  @override
+  String get fniQrNotReceipt => 'Это не QR-код кассового чека.';
+
+  @override
+  String get fniDuplicate => 'Эта операция уже есть.';
+
+  @override
+  String get fniAdded => 'Операция добавлена.';
+
+  @override
+  String get fniSaveFailed => 'Не удалось сохранить операцию.';
+
+  @override
+  String get fniRetry => 'Ещё раз';
+
+  @override
+  String get fniReceiptTitle => 'Чек';
+
+  @override
+  String get fniStore => 'Магазин';
+
+  @override
+  String get fniDate => 'Дата';
+
+  @override
+  String get fniKind => 'Тип';
+
+  @override
+  String get fniRefund => 'Возврат';
+
+  @override
+  String get fniTotal => 'Итого';
+
+  @override
+  String get fniQrNoItems =>
+      'Позиции чека из ФНС пока недоступны — записана сумма из QR.';
+
+  @override
+  String get fniAdd => 'Добавить';
+
+  @override
+  String get fniReceiptQrTitle => 'Чек по QR';
+
+  @override
+  String get fniReceiptPhotoTitle => 'Чек по фото';
+
+  @override
+  String get fniNoCamera => 'Камера недоступна. Разрешите доступ в настройках.';
+
+  @override
+  String get fniClose => 'Закрыть';
+
+  @override
+  String get fniQrHint => 'Наведите камеру на QR-код чека';
+
+  @override
+  String get fniFileFailed => 'Не удалось открыть файл.';
+
+  @override
+  String get fniFileTooLarge =>
+      'Файл больше 3 МБ. Выгрузите выписку за меньший период.';
+
+  @override
+  String get fniStatementTitle => 'Импорт выписки';
+
+  @override
+  String get fniStatementFile => 'Файл выписки';
+
+  @override
+  String get fniStatementHint =>
+      'Выгрузите выписку в банковском приложении (CSV или PDF) и выберите файл.';
+
+  @override
+  String get fniPickFile => 'Выбрать файл';
+
+  @override
+  String get fniStatementParsing => 'Разбираю выписку…';
+
+  @override
+  String get fniStatementEmpty => 'Операций в файле не найдено.';
+
+  @override
+  String get fniBank => 'Банк';
+
+  @override
+  String get fniSelectAll => 'Все';
+
+  @override
+  String get fniAlreadyImported => 'уже есть';
+
+  @override
+  String get fniBanksTitle => 'Банки';
+
+  @override
+  String get fniBanksAndroidOnly =>
+      'Чтение уведомлений и SMS банков доступно только на Android. На iPhone используйте импорт выписки.';
+
+  @override
+  String get fniAccess => 'Доступ';
+
+  @override
+  String get fniAccessNotifications => 'Уведомления банков';
+
+  @override
+  String get fniOpenSettings => 'Открыть настройки';
+
+  @override
+  String get fniAccessSms => 'SMS банков';
+
+  @override
+  String get fniAllow => 'Разрешить';
+
+  @override
+  String get fniAccessHint =>
+      'Читаются только сообщения выбранных банков. Тексты хранятся в приложении и синхронизируются с вашим сервером.';
+
+  @override
+  String get fniBanksList => 'Мои банки';
+
+  @override
+  String get fniProcessNow => 'Обработать';
+
+  @override
+  String get fniSmsHistory => 'SMS за 30 дней';
+
+  @override
+  String get fniGranted => 'Есть';
+
+  @override
+  String get fniOtherBank => 'Другой банк';
+
+  @override
+  String get fniSourceNotifications => 'Уведомления приложения';
+
+  @override
+  String get fniSourceSms => 'SMS';
+
+  @override
+  String get fniPackages => 'Пакеты приложений';
+
+  @override
+  String get fniExtraSenders => 'Свои отправители SMS';
+
+  @override
+  String get fniExtraSendersHint => 'Имя или номер, через запятую';
+
+  @override
+  String get fniInbox => 'Входящие';
+
+  @override
+  String get fniInboxEmpty =>
+      'Пока ничего. Новые уведомления и SMS банков появятся здесь.';
+
+  @override
+  String get fniStatusReview => 'Проверьте';
+
+  @override
+  String get fniStatusAdded => 'Добавлено';
+
+  @override
+  String get fniStatusDuplicate => 'Дубль';
+
+  @override
+  String get fniStatusIgnored => 'Не операция';
+
+  @override
+  String get fniStatusFailed => 'Ошибка';
+
+  @override
+  String get fniStatusPending => 'Ожидает';
+
+  @override
+  String get fniConfirm => 'Верно';
+
+  @override
+  String get fniFix => 'Исправить';
+
+  @override
+  String get fniAddManually => 'Добавить вручную';
+
+  @override
+  String get fniFixInFinance =>
+      'Измените или удалите эту операцию в разделе «Финансы».';
+
+  @override
+  String get fniIgnore => 'Игнор';
+
+  @override
+  String get fniEditTitle => 'Операция';
+
+  @override
+  String get fniExpense => 'Расход';
+
+  @override
+  String get fniIncome => 'Доход';
+
+  @override
+  String get fniTransfer => 'Перевод';
+
+  @override
+  String get fniAmount => 'Сумма';
+
+  @override
+  String get fniMerchant => 'Где / от кого';
+
+  @override
+  String get fniCancel => 'Отмена';
+
+  @override
+  String get fniSave => 'Сохранить';
+
+  @override
+  String fniImported(int added, int dup) {
+    return 'Добавлено: $added, уже было: $dup';
+  }
+
+  @override
+  String fniImporting(int done, int total) {
+    return 'Импорт $done / $total';
+  }
+
+  @override
+  String fniImportN(int n) {
+    return 'Импортировать ($n)';
+  }
+
+  @override
+  String fniRows(int n) {
+    return 'Операции: $n';
+  }
+
+  @override
+  String fniSmsFound(int n) {
+    return 'Найдено SMS: $n';
+  }
+
+  @override
+  String fniSenders(String list) {
+    return 'Отправители: $list';
+  }
+
+  @override
+  String get actStepsTitle => 'Шаги';
+
+  @override
+  String actGoal(String goal) {
+    return 'Цель: $goal';
+  }
+
+  @override
+  String get actDistance => 'Дистанция';
+
+  @override
+  String actDistanceKm(String km) {
+    return '$km км';
+  }
+
+  @override
+  String get actFloors => 'Этажи';
+
+  @override
+  String get actNoValue => '—';
+
+  @override
+  String get actWeek => '7 дней';
+
+  @override
+  String get actAllow => 'Разрешить';
+
+  @override
+  String get actPermissionHint =>
+      'Разрешите доступ к датчикам движения — шаги будут считаться сами.';
+
+  @override
+  String get actUnavailableHint =>
+      'Счётчика шагов на устройстве нет — введите шаги вручную.';
+
+  @override
+  String get actManual => 'Ввести вручную';
+
+  @override
+  String get actManualLabel => 'Шаги за сегодня';
+
+  @override
+  String get actManualRange => 'От 0 до 100 000';
+
+  @override
+  String get actSave => 'Сохранить';
+
+  @override
+  String get actCancel => 'Отмена';
+
+  @override
+  String actStepsSemantic(String steps, String goal) {
+    return 'Шаги за сегодня: $steps из $goal';
+  }
 
   @override
   String get int6PlanAi => 'Построить план с ИИ';
@@ -1601,6 +3137,33 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get int6VoiceHint => 'Готовые голоса сервера, прослушать';
+
+  @override
+  String get int7Finance => 'Финансы';
+
+  @override
+  String get int7FinanceHint => 'Счета, операции, лимиты, отчёты';
+
+  @override
+  String get int7Market => 'Маркет покупок';
+
+  @override
+  String get int7MarketHint => 'Подборка под план с ценами';
+
+  @override
+  String get int7Blocker => 'Блокировка приложений';
+
+  @override
+  String get int7BlockerHint => 'После отбоя в режиме дисциплины';
+
+  @override
+  String get int7Alarms => 'Будильник-квест';
+
+  @override
+  String get int7AlarmsHint => 'Выключается только заданием';
+
+  @override
+  String get int7Setup => 'Настроить';
 
   @override
   String get livNextQuest => 'Следующий квест';
@@ -1821,6 +3384,161 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get lrnErrServer => 'Не удалось получить ответ. Попробуйте ещё раз.';
+
+  @override
+  String get mktTitle => 'Маркет';
+
+  @override
+  String get mktSuggest => 'Подобрать (ИИ)';
+
+  @override
+  String get mktSuggesting => 'Подбираю товары под план…';
+
+  @override
+  String get mktCatAll => 'Все';
+
+  @override
+  String get mktCatSkin => 'Уход за кожей';
+
+  @override
+  String get mktCatNutrition => 'Питание';
+
+  @override
+  String get mktCatEquipment => 'Инвентарь';
+
+  @override
+  String get mktCatOther => 'Другое';
+
+  @override
+  String get mktTabNew => 'Подборка';
+
+  @override
+  String get mktTabSaved => 'Сохранённые';
+
+  @override
+  String get mktTabBought => 'Куплено';
+
+  @override
+  String get mktEmptyNew =>
+      'Пока пусто. Нажмите «Подобрать (ИИ)» — Система подберёт товары под ваш план.';
+
+  @override
+  String get mktEmptySaved => 'Сохранённых товаров нет.';
+
+  @override
+  String get mktEmptyBought => 'Покупок пока нет.';
+
+  @override
+  String get mktEstimateNote =>
+      'Цены примерные — по данным веб-поиска, на указанную дату.';
+
+  @override
+  String mktPriceLine(String price, String source, String date) {
+    return '≈ $price · $source · $date';
+  }
+
+  @override
+  String mktPriceShort(String price, String date) {
+    return '≈ $price · $date';
+  }
+
+  @override
+  String get mktPriceUnknown => 'Цена неизвестна';
+
+  @override
+  String mktPricePaid(String price) {
+    return 'Куплено за $price';
+  }
+
+  @override
+  String get mktBudgetOk => 'Можно купить';
+
+  @override
+  String get mktBudgetAfterIncome => 'После поступления денег';
+
+  @override
+  String get mktBudgetOver => 'Не по бюджету';
+
+  @override
+  String get mktSave => 'Сохранить';
+
+  @override
+  String get mktHide => 'Скрыть';
+
+  @override
+  String get mktBought => 'Купил';
+
+  @override
+  String get mktRefreshPrice => 'Обновить цену';
+
+  @override
+  String get mktPriceUpdated => 'Цена обновлена.';
+
+  @override
+  String get mktPriceNotFound => 'Свежую цену найти не удалось.';
+
+  @override
+  String get mktSearchSuffix => 'поиск';
+
+  @override
+  String get mktLinkCopied => 'Ссылка скопирована.';
+
+  @override
+  String get mktOpenFailed => 'Не удалось открыть ссылку — она скопирована.';
+
+  @override
+  String get mktBoughtTitle => 'Покупка';
+
+  @override
+  String mktBoughtMessage(String title) {
+    return 'Сколько стоило «$title»?';
+  }
+
+  @override
+  String get mktBoughtPrice => 'Фактическая цена';
+
+  @override
+  String get mktBoughtConfirm => 'Записать';
+
+  @override
+  String get mktBoughtRecorded => 'Покупка записана в финансы.';
+
+  @override
+  String get mktBoughtNoFinance =>
+      'Отмечено как купленное. В финансы не записано — раздел пока недоступен.';
+
+  @override
+  String get mktNoticeLabel => 'Система';
+
+  @override
+  String get mktNothingFound =>
+      'Система не нашла новых товаров. Попробуйте другую категорию.';
+
+  @override
+  String mktAdded(int count) {
+    return 'Добавлено товаров: $count';
+  }
+
+  @override
+  String get mktErrOffline =>
+      'Нет связи с сервером. Сохранённые товары доступны и офлайн.';
+
+  @override
+  String get mktErrNotSignedIn =>
+      'Войдите в аккаунт («Ещё» → «Аккаунт»), чтобы Система подбирала товары.';
+
+  @override
+  String get mktErrBudget => 'Лимит ИИ сейчас исчерпан. Попробуйте позже.';
+
+  @override
+  String get mktErrUnavailable => 'ИИ на сервере сейчас недоступен.';
+
+  @override
+  String get mktErrRateLimited =>
+      'Слишком много запросов. Попробуйте через некоторое время.';
+
+  @override
+  String get mktErrServer => 'Не удалось получить ответ. Попробуйте ещё раз.';
 
   @override
   String get msgChannelName => 'Сообщения Системы';
@@ -2397,292 +4115,484 @@ class AppLocalizationsRu extends AppLocalizations {
   String get nutGroceryWater => 'Питьевая вода';
 
   @override
-  String get planNoticeLabel => 'Уведомление';
+  String get wrkTitle => 'Тренировки';
 
   @override
-  String get planTitle => 'План составлен';
+  String get wrkProgram => 'Программа';
 
   @override
-  String get planDraftNote =>
-      'Черновой план — Система уточнит его после подключения ИИ.';
+  String get wrkToday => 'Сегодня';
 
   @override
-  String planAcceptedAt(String date) {
-    return 'План принят $date';
+  String wrkTodayDay(String key) {
+    return 'По программе — день $key';
   }
 
   @override
-  String get planAccept => 'Принять';
+  String get wrkRestDay =>
+      'Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.';
 
   @override
-  String get planEditData => 'Изменить данные';
-
-  @override
-  String get planRecalculate => 'Пересчитать';
-
-  @override
-  String get planChooseSection => 'Какой раздел изменить?';
-
-  @override
-  String get planLoadError => 'Не удалось составить план';
-
-  @override
-  String get planRetry => 'Повторить';
-
-  @override
-  String get planNormsTitle => 'Нормы';
-
-  @override
-  String get planCalories => 'Калории';
-
-  @override
-  String planKcal(String value) {
-    return '$value ккал';
+  String wrkDayTitle(String key) {
+    return 'День $key';
   }
 
   @override
-  String get planModeDeficit => 'Дефицит';
-
-  @override
-  String get planModeSurplus => 'Профицит';
-
-  @override
-  String get planModeMaintenance => 'Поддержание';
-
-  @override
-  String planBmrTdee(String bmr, String tdee) {
-    return 'Базовый обмен $bmr · расход $tdee ккал';
+  String wrkMinutesShort(int minutes) {
+    return '$minutes мин';
   }
 
   @override
-  String get planProtein => 'Белки';
-
-  @override
-  String get planFat => 'Жиры';
-
-  @override
-  String get planCarbs => 'Углеводы';
-
-  @override
-  String planGrams(String value) {
-    return '$value г';
+  String wrkEstimate(int minutes) {
+    return '≈$minutes мин';
   }
 
   @override
-  String get planWater => 'Вода';
-
-  @override
-  String planMl(String value) {
-    return '$value мл';
+  String wrkExerciseCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count упражнения',
+      many: '$count упражнений',
+      few: '$count упражнения',
+      one: '$count упражнение',
+    );
+    return '$_temp0';
   }
 
   @override
-  String planWaterTrainingDay(String value) {
-    return 'В день тренировки — $value мл';
+  String wrkSetsReps(int sets, int reps) {
+    return '$sets × $reps';
   }
 
   @override
-  String get planSleep => 'Сон';
-
-  @override
-  String planHours(String value) {
-    return '$value ч';
+  String wrkSetsSeconds(int sets, int seconds) {
+    return '$sets × $seconds с';
   }
 
   @override
-  String planHoursMinutes(String h, String m) {
-    return '$h ч $m мин';
+  String wrkRestShort(int seconds) {
+    return 'отдых $seconds с';
   }
 
   @override
-  String planWakeBed(String wake, String bed) {
-    return 'Подъём $wake · отбой $bed';
+  String get wrkGentle =>
+      'Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.';
+
+  @override
+  String get wrkSafetyNote =>
+      'Если упражнение вызывает боль или дискомфорт — пропустите его.';
+
+  @override
+  String get wrkLevelUnknown =>
+      'Уровень в анкете не указан — программа для новичка.';
+
+  @override
+  String wrkProgressionWeeks(int weeks) {
+    return 'Выполненных недель: $weeks';
   }
 
   @override
-  String get planRoutineTitle => 'Распорядок дня';
+  String get wrkProgressionNote =>
+      'Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.';
 
   @override
-  String planWeek(String n) {
-    return 'Неделя $n';
+  String get wrkRegenerate => 'Пересоздать программу';
+
+  @override
+  String get wrkRegenerateTitle => 'Пересоздать программу?';
+
+  @override
+  String get wrkRegenerateText =>
+      'Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.';
+
+  @override
+  String get wrkAiProgram => 'Программа от ИИ';
+
+  @override
+  String get wrkSoon => 'скоро';
+
+  @override
+  String get wrkStart => 'Начать тренировку';
+
+  @override
+  String wrkStartDay(String key) {
+    return 'Начать день $key';
   }
 
   @override
-  String get planWdMon => 'Пн';
+  String get wrkHistory => 'История';
 
   @override
-  String get planWdTue => 'Вт';
+  String get wrkHistoryEmpty => 'Тренировок пока нет.';
 
   @override
-  String get planWdWed => 'Ср';
+  String get wrkSessionDone => 'завершена';
 
   @override
-  String get planWdThu => 'Чт';
+  String get wrkSessionInterrupted => 'прервана';
 
   @override
-  String get planWdFri => 'Пт';
-
-  @override
-  String get planWdSat => 'Сб';
-
-  @override
-  String get planWdSun => 'Вс';
-
-  @override
-  String get planRoutineWake => 'Подъём';
-
-  @override
-  String get planRoutineSkincareAm => 'Уход за кожей (утро)';
-
-  @override
-  String planRoutineMeal(String n) {
-    return 'Приём пищи $n';
+  String wrkSessionStats(int minutes, int kcal) {
+    return '$minutes мин · ≈$kcal ккал';
   }
 
   @override
-  String get planRoutineLeaveHome => 'Выход из дома';
+  String get wrkPreparing => 'Программа собирается…';
 
   @override
-  String get planRoutineLesson => 'Пара';
+  String get wrkPhasePrepare => 'Приготовьтесь';
 
   @override
-  String get planRoutineWork => 'Работа';
+  String get wrkPhaseWork => 'Работа';
 
   @override
-  String get planRoutineOther => 'Дело';
+  String get wrkPhaseRest => 'Отдых';
 
   @override
-  String get planRoutineReturnHome => 'Дома';
+  String get wrkPaused => 'Пауза';
 
   @override
-  String get planRoutineTraining => 'Тренировка';
-
-  @override
-  String get planRoutineSkincarePm => 'Уход за кожей (вечер)';
-
-  @override
-  String get planRoutineBed => 'Отбой';
-
-  @override
-  String get planQuestsTitle => 'Квесты';
-
-  @override
-  String get planQuestsNote =>
-      'Выполнение квестов появится в следующем обновлении.';
-
-  @override
-  String planQuestLeaveHome(String time) {
-    return 'Выйти из дома к $time';
+  String wrkSetOf(int set, int sets) {
+    return 'Подход $set из $sets';
   }
 
   @override
-  String planQuestAttendLesson(String title) {
-    return 'Пара: $title';
+  String wrkRepsTarget(int reps) {
+    String _temp0 = intl.Intl.pluralLogic(
+      reps,
+      locale: localeName,
+      other: '$reps повтора',
+      many: '$reps повторов',
+      few: '$reps повтора',
+      one: '$reps повтор',
+    );
+    return '$_temp0';
   }
 
   @override
-  String planQuestAttendWork(String title) {
-    return 'Работа: $title';
+  String get wrkDoneSet => 'Подход выполнен';
+
+  @override
+  String get wrkPause => 'Пауза';
+
+  @override
+  String get wrkResume => 'Продолжить';
+
+  @override
+  String get wrkSkipRest => 'Пропустить отдых';
+
+  @override
+  String get wrkSkipExercise => 'Пропустить упражнение';
+
+  @override
+  String get wrkStop => 'Прервать';
+
+  @override
+  String wrkNext(String name) {
+    return 'Далее: $name';
   }
 
   @override
-  String planQuestWater(String ml) {
-    return 'Выпить $ml мл воды';
+  String get wrkLastExercise => 'Последнее упражнение';
+
+  @override
+  String get wrkTechnique => 'Техника';
+
+  @override
+  String get wrkVoice => 'Голосовые подсказки';
+
+  @override
+  String get wrkProgressLabel => 'Прогресс тренировки';
+
+  @override
+  String get wrkStopTitle => 'Прервать тренировку?';
+
+  @override
+  String get wrkStopText =>
+      'Сделанное сохранится как незавершённая тренировка.';
+
+  @override
+  String get wrkFinishedTitle => 'Тренировка завершена';
+
+  @override
+  String wrkFinishedStats(int minutes, int kcal, int sets) {
+    return 'Время: $minutes мин · ≈$kcal ккал · подходов: $sets';
   }
 
   @override
-  String planQuestSleep(String time, String hours) {
-    return 'Лечь спать в $time (сон $hours ч)';
+  String get wrkWeightAssumed =>
+      'Расход — оценка по весу 70 кг: замеров веса нет.';
+
+  @override
+  String get wrkKcalNote => 'Расход — оценка по MET, не измерение.';
+
+  @override
+  String wrkSayPrepare(String name) {
+    return 'Приготовьтесь. $name.';
   }
 
   @override
-  String planQuestMeals(String count) {
-    return 'Приёмы пищи по плану: $count';
+  String wrkSaySet(int set, int sets, String amount) {
+    return 'Подход $set из $sets. $amount. Начали!';
   }
 
   @override
-  String planQuestTraining(String minutes) {
-    return 'Тренировка $minutes мин';
+  String wrkSecondsAmount(int seconds) {
+    String _temp0 = intl.Intl.pluralLogic(
+      seconds,
+      locale: localeName,
+      other: '$seconds секунды',
+      many: '$seconds секунд',
+      few: '$seconds секунды',
+      one: '$seconds секунда',
+    );
+    return '$_temp0';
   }
 
   @override
-  String get planQuestSkincareMorning => 'Утренний уход за кожей';
-
-  @override
-  String get planQuestSkincareEvening => 'Вечерний уход за кожей';
-
-  @override
-  String planQuestWakeOnTime(String time) {
-    return 'Подъём в $time без отсрочек';
+  String wrkSayRest(String amount) {
+    return 'Отдых: $amount.';
   }
 
   @override
-  String planQuestStudy(String minutes) {
-    return 'Учёба $minutes мин';
+  String wrkSayNext(String name) {
+    return 'Далее: $name.';
   }
 
   @override
-  String get planQuestTrackExpenses => 'Записать траты за день';
+  String get wrkSayFinished => 'Тренировка завершена. Отличная работа!';
 
   @override
-  String get planQuestEveryDay => 'каждый день';
+  String get wrkExMarchInPlace => 'Ходьба на месте';
 
   @override
-  String planQuestWeekOnly(String n) {
-    return 'неделя $n';
-  }
+  String get wrkExMarchInPlaceHint =>
+      'Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.';
 
   @override
-  String planQuestReward(String diamonds, String xp) {
-    return '+$diamonds ◆ · +$xp опыта';
-  }
+  String get wrkExArmCircles => 'Круги руками';
 
   @override
-  String get planWarningsTitle => 'Предупреждения';
+  String get wrkExArmCirclesHint =>
+      'Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.';
 
   @override
-  String planWarnSleepShort(String scheduled, String target, String bed) {
-    return 'По расписанию сна $scheduled — меньше нормы $target. Рекомендуемый отбой — $bed.';
-  }
+  String get wrkExJumpingJacks => 'Джампинг-джек';
 
   @override
-  String get planWarnDeficitFloor =>
-      'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.';
+  String get wrkExJumpingJacksHint =>
+      'Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.';
 
   @override
-  String get planWarnActivityDefaulted =>
-      'Уровень активности не указан — взят «сидячий».';
+  String get wrkExChairSquat => 'Приседание на стул';
 
   @override
-  String planWarnNoTrainingWindow(String day) {
-    return '$day: нет свободного окна для тренировки.';
-  }
+  String get wrkExChairSquatHint =>
+      'Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.';
 
   @override
-  String get planWarnInjuries =>
-      'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.';
+  String get wrkExGluteBridge => 'Ягодичный мост';
 
   @override
-  String planMissingMessage(String fields) {
-    return 'Для расчёта калорий и БЖУ заполните: $fields.';
-  }
+  String get wrkExGluteBridgeHint =>
+      'Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.';
 
   @override
-  String get planMissingSex => 'пол';
+  String get wrkExSquat => 'Приседания';
 
   @override
-  String get planMissingBirthDate => 'дата рождения';
+  String get wrkExSquatHint =>
+      'Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.';
 
   @override
-  String get planMissingHeight => 'рост';
+  String get wrkExWallSit => 'Стульчик у стены';
 
   @override
-  String get planMissingWeight => 'вес';
+  String get wrkExWallSitHint =>
+      'Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.';
 
   @override
-  String planFillSection(String section) {
-    return 'Заполнить: $section';
-  }
+  String get wrkExReverseLunge => 'Выпады назад';
+
+  @override
+  String get wrkExReverseLungeHint =>
+      'Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.';
+
+  @override
+  String get wrkExGobletSquat => 'Гоблет-присед';
+
+  @override
+  String get wrkExGobletSquatHint =>
+      'Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.';
+
+  @override
+  String get wrkExKettlebellSwing => 'Махи гирей';
+
+  @override
+  String get wrkExKettlebellSwingHint =>
+      'Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.';
+
+  @override
+  String get wrkExJumpSquat => 'Присед с выпрыгиванием';
+
+  @override
+  String get wrkExJumpSquatHint =>
+      'Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.';
+
+  @override
+  String get wrkExWallPushUp => 'Отжимания от стены';
+
+  @override
+  String get wrkExWallPushUpHint =>
+      'Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.';
+
+  @override
+  String get wrkExKneePushUp => 'Отжимания с колен';
+
+  @override
+  String get wrkExKneePushUpHint =>
+      'Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.';
+
+  @override
+  String get wrkExPushUp => 'Отжимания';
+
+  @override
+  String get wrkExPushUpHint =>
+      'Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.';
+
+  @override
+  String get wrkExDumbbellPress => 'Жим гантелей лёжа';
+
+  @override
+  String get wrkExDumbbellPressHint =>
+      'Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.';
+
+  @override
+  String get wrkExDiamondPushUp => 'Узкие отжимания';
+
+  @override
+  String get wrkExDiamondPushUpHint =>
+      'Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.';
+
+  @override
+  String get wrkExSuperman => 'Супермен';
+
+  @override
+  String get wrkExSupermanHint =>
+      'Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.';
+
+  @override
+  String get wrkExReverseSnowAngel => 'Обратный снежный ангел';
+
+  @override
+  String get wrkExReverseSnowAngelHint =>
+      'Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.';
+
+  @override
+  String get wrkExBandRow => 'Тяга резинки';
+
+  @override
+  String get wrkExBandRowHint =>
+      'Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.';
+
+  @override
+  String get wrkExDumbbellRow => 'Тяга гантели в наклоне';
+
+  @override
+  String get wrkExDumbbellRowHint =>
+      'Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.';
+
+  @override
+  String get wrkExPullUp => 'Подтягивания';
+
+  @override
+  String get wrkExPullUpHint =>
+      'Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.';
+
+  @override
+  String get wrkExDeadBug => 'Мёртвый жук';
+
+  @override
+  String get wrkExDeadBugHint =>
+      'Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.';
+
+  @override
+  String get wrkExBirdDog => 'Птица-собака';
+
+  @override
+  String get wrkExBirdDogHint =>
+      'Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.';
+
+  @override
+  String get wrkExPlank => 'Планка';
+
+  @override
+  String get wrkExPlankHint =>
+      'Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.';
+
+  @override
+  String get wrkExCrunch => 'Скручивания';
+
+  @override
+  String get wrkExCrunchHint =>
+      'Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.';
+
+  @override
+  String get wrkExSidePlank => 'Боковая планка';
+
+  @override
+  String get wrkExSidePlankHint =>
+      'Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.';
+
+  @override
+  String get wrkExLegRaise => 'Подъём ног лёжа';
+
+  @override
+  String get wrkExLegRaiseHint =>
+      'Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.';
+
+  @override
+  String get wrkExStepTouch => 'Приставные шаги';
+
+  @override
+  String get wrkExStepTouchHint =>
+      'Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.';
+
+  @override
+  String get wrkExShadowBoxing => 'Бой с тенью';
+
+  @override
+  String get wrkExShadowBoxingHint =>
+      'Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.';
+
+  @override
+  String get wrkExHighKnees => 'Бег с высоким подниманием колен';
+
+  @override
+  String get wrkExHighKneesHint =>
+      'Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.';
+
+  @override
+  String get wrkExMountainClimber => 'Скалолаз';
+
+  @override
+  String get wrkExMountainClimberHint =>
+      'Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.';
+
+  @override
+  String get wrkExBurpee => 'Бёрпи';
+
+  @override
+  String get wrkExBurpeeHint =>
+      'Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.';
+
+  @override
+  String get wrkExFullBodyStretch => 'Растяжка';
+
+  @override
+  String get wrkExFullBodyStretchHint =>
+      'Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков.';
 
   @override
   String get qaUnitCm => 'см';
@@ -5066,7 +6976,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get dscBlockerText =>
-      'Блокировка развлекательных приложений после отбоя появится позже.';
+      'В режиме дисциплины после отбоя развлекательные приложения блокируются: на Android — экраном «Система: отбой», на iPhone — через автоматизацию «Команд».';
 
   @override
   String get dscBlockerSoon => 'Позже';
@@ -5463,7 +7373,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get visReceiptFinanceLater =>
-      'Чек сохранён. Запись в финансы появится в следующем обновлении.';
+      'Проверьте позиции — дальше чек можно записать в финансы.';
 
   @override
   String get wlkTitle => 'Прогулка';
@@ -5679,482 +7589,290 @@ class AppLocalizationsRu extends AppLocalizations {
   String get wlkMapAttribution => '© участники OpenStreetMap';
 
   @override
-  String get wrkTitle => 'Тренировки';
+  String get planNoticeLabel => 'Уведомление';
 
   @override
-  String get wrkProgram => 'Программа';
+  String get planTitle => 'План составлен';
 
   @override
-  String get wrkToday => 'Сегодня';
+  String get planDraftNote =>
+      'Черновой план — Система уточнит его после подключения ИИ.';
 
   @override
-  String wrkTodayDay(String key) {
-    return 'По программе — день $key';
+  String planAcceptedAt(String date) {
+    return 'План принят $date';
   }
 
   @override
-  String get wrkRestDay =>
-      'Сегодня по программе отдых. Можно провести любую тренировку из списка ниже.';
+  String get planAccept => 'Принять';
 
   @override
-  String wrkDayTitle(String key) {
-    return 'День $key';
+  String get planEditData => 'Изменить данные';
+
+  @override
+  String get planRecalculate => 'Пересчитать';
+
+  @override
+  String get planChooseSection => 'Какой раздел изменить?';
+
+  @override
+  String get planLoadError => 'Не удалось составить план';
+
+  @override
+  String get planRetry => 'Повторить';
+
+  @override
+  String get planNormsTitle => 'Нормы';
+
+  @override
+  String get planCalories => 'Калории';
+
+  @override
+  String planKcal(String value) {
+    return '$value ккал';
   }
 
   @override
-  String wrkMinutesShort(int minutes) {
-    return '$minutes мин';
+  String get planModeDeficit => 'Дефицит';
+
+  @override
+  String get planModeSurplus => 'Профицит';
+
+  @override
+  String get planModeMaintenance => 'Поддержание';
+
+  @override
+  String planBmrTdee(String bmr, String tdee) {
+    return 'Базовый обмен $bmr · расход $tdee ккал';
   }
 
   @override
-  String wrkEstimate(int minutes) {
-    return '≈$minutes мин';
+  String get planProtein => 'Белки';
+
+  @override
+  String get planFat => 'Жиры';
+
+  @override
+  String get planCarbs => 'Углеводы';
+
+  @override
+  String planGrams(String value) {
+    return '$value г';
   }
 
   @override
-  String wrkExerciseCount(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count упражнения',
-      many: '$count упражнений',
-      few: '$count упражнения',
-      one: '$count упражнение',
-    );
-    return '$_temp0';
+  String get planWater => 'Вода';
+
+  @override
+  String planMl(String value) {
+    return '$value мл';
   }
 
   @override
-  String wrkSetsReps(int sets, int reps) {
-    return '$sets × $reps';
+  String planWaterTrainingDay(String value) {
+    return 'В день тренировки — $value мл';
   }
 
   @override
-  String wrkSetsSeconds(int sets, int seconds) {
-    return '$sets × $seconds с';
+  String get planSleep => 'Сон';
+
+  @override
+  String planHours(String value) {
+    return '$value ч';
   }
 
   @override
-  String wrkRestShort(int seconds) {
-    return 'отдых $seconds с';
+  String planHoursMinutes(String h, String m) {
+    return '$h ч $m мин';
   }
 
   @override
-  String get wrkGentle =>
-      'Щадящий вариант: без прыжков и осевой нагрузки — в анкете указаны травмы или ограничения.';
-
-  @override
-  String get wrkSafetyNote =>
-      'Если упражнение вызывает боль или дискомфорт — пропустите его.';
-
-  @override
-  String get wrkLevelUnknown =>
-      'Уровень в анкете не указан — программа для новичка.';
-
-  @override
-  String wrkProgressionWeeks(int weeks) {
-    return 'Выполненных недель: $weeks';
+  String planWakeBed(String wake, String bed) {
+    return 'Подъём $wake · отбой $bed';
   }
 
   @override
-  String get wrkProgressionNote =>
-      'Неделя засчитывается, если выполнены все тренировки недели (не больше 3). За каждую: +1 повтор или +5 с, до потолка вашего уровня.';
+  String get planRoutineTitle => 'Распорядок дня';
 
   @override
-  String get wrkRegenerate => 'Пересоздать программу';
-
-  @override
-  String get wrkRegenerateTitle => 'Пересоздать программу?';
-
-  @override
-  String get wrkRegenerateText =>
-      'Программа соберётся заново по анкете и плану. История тренировок сохранится, прогрессия начнётся сначала.';
-
-  @override
-  String get wrkAiProgram => 'Программа от ИИ';
-
-  @override
-  String get wrkSoon => 'скоро';
-
-  @override
-  String get wrkStart => 'Начать тренировку';
-
-  @override
-  String wrkStartDay(String key) {
-    return 'Начать день $key';
+  String planWeek(String n) {
+    return 'Неделя $n';
   }
 
   @override
-  String get wrkHistory => 'История';
+  String get planWdMon => 'Пн';
 
   @override
-  String get wrkHistoryEmpty => 'Тренировок пока нет.';
+  String get planWdTue => 'Вт';
 
   @override
-  String get wrkSessionDone => 'завершена';
+  String get planWdWed => 'Ср';
 
   @override
-  String get wrkSessionInterrupted => 'прервана';
+  String get planWdThu => 'Чт';
 
   @override
-  String wrkSessionStats(int minutes, int kcal) {
-    return '$minutes мин · ≈$kcal ккал';
+  String get planWdFri => 'Пт';
+
+  @override
+  String get planWdSat => 'Сб';
+
+  @override
+  String get planWdSun => 'Вс';
+
+  @override
+  String get planRoutineWake => 'Подъём';
+
+  @override
+  String get planRoutineSkincareAm => 'Уход за кожей (утро)';
+
+  @override
+  String planRoutineMeal(String n) {
+    return 'Приём пищи $n';
   }
 
   @override
-  String get wrkPreparing => 'Программа собирается…';
+  String get planRoutineLeaveHome => 'Выход из дома';
 
   @override
-  String get wrkPhasePrepare => 'Приготовьтесь';
+  String get planRoutineLesson => 'Пара';
 
   @override
-  String get wrkPhaseWork => 'Работа';
+  String get planRoutineWork => 'Работа';
 
   @override
-  String get wrkPhaseRest => 'Отдых';
+  String get planRoutineOther => 'Дело';
 
   @override
-  String get wrkPaused => 'Пауза';
+  String get planRoutineReturnHome => 'Дома';
 
   @override
-  String wrkSetOf(int set, int sets) {
-    return 'Подход $set из $sets';
+  String get planRoutineTraining => 'Тренировка';
+
+  @override
+  String get planRoutineSkincarePm => 'Уход за кожей (вечер)';
+
+  @override
+  String get planRoutineBed => 'Отбой';
+
+  @override
+  String get planQuestsTitle => 'Квесты';
+
+  @override
+  String get planQuestsNote =>
+      'Выполнение квестов появится в следующем обновлении.';
+
+  @override
+  String planQuestLeaveHome(String time) {
+    return 'Выйти из дома к $time';
   }
 
   @override
-  String wrkRepsTarget(int reps) {
-    String _temp0 = intl.Intl.pluralLogic(
-      reps,
-      locale: localeName,
-      other: '$reps повтора',
-      many: '$reps повторов',
-      few: '$reps повтора',
-      one: '$reps повтор',
-    );
-    return '$_temp0';
+  String planQuestAttendLesson(String title) {
+    return 'Пара: $title';
   }
 
   @override
-  String get wrkDoneSet => 'Подход выполнен';
-
-  @override
-  String get wrkPause => 'Пауза';
-
-  @override
-  String get wrkResume => 'Продолжить';
-
-  @override
-  String get wrkSkipRest => 'Пропустить отдых';
-
-  @override
-  String get wrkSkipExercise => 'Пропустить упражнение';
-
-  @override
-  String get wrkStop => 'Прервать';
-
-  @override
-  String wrkNext(String name) {
-    return 'Далее: $name';
+  String planQuestAttendWork(String title) {
+    return 'Работа: $title';
   }
 
   @override
-  String get wrkLastExercise => 'Последнее упражнение';
-
-  @override
-  String get wrkTechnique => 'Техника';
-
-  @override
-  String get wrkVoice => 'Голосовые подсказки';
-
-  @override
-  String get wrkProgressLabel => 'Прогресс тренировки';
-
-  @override
-  String get wrkStopTitle => 'Прервать тренировку?';
-
-  @override
-  String get wrkStopText =>
-      'Сделанное сохранится как незавершённая тренировка.';
-
-  @override
-  String get wrkFinishedTitle => 'Тренировка завершена';
-
-  @override
-  String wrkFinishedStats(int minutes, int kcal, int sets) {
-    return 'Время: $minutes мин · ≈$kcal ккал · подходов: $sets';
+  String planQuestWater(String ml) {
+    return 'Выпить $ml мл воды';
   }
 
   @override
-  String get wrkWeightAssumed =>
-      'Расход — оценка по весу 70 кг: замеров веса нет.';
-
-  @override
-  String get wrkKcalNote => 'Расход — оценка по MET, не измерение.';
-
-  @override
-  String wrkSayPrepare(String name) {
-    return 'Приготовьтесь. $name.';
+  String planQuestSleep(String time, String hours) {
+    return 'Лечь спать в $time (сон $hours ч)';
   }
 
   @override
-  String wrkSaySet(int set, int sets, String amount) {
-    return 'Подход $set из $sets. $amount. Начали!';
+  String planQuestMeals(String count) {
+    return 'Приёмы пищи по плану: $count';
   }
 
   @override
-  String wrkSecondsAmount(int seconds) {
-    String _temp0 = intl.Intl.pluralLogic(
-      seconds,
-      locale: localeName,
-      other: '$seconds секунды',
-      many: '$seconds секунд',
-      few: '$seconds секунды',
-      one: '$seconds секунда',
-    );
-    return '$_temp0';
+  String planQuestTraining(String minutes) {
+    return 'Тренировка $minutes мин';
   }
 
   @override
-  String wrkSayRest(String amount) {
-    return 'Отдых: $amount.';
+  String get planQuestSkincareMorning => 'Утренний уход за кожей';
+
+  @override
+  String get planQuestSkincareEvening => 'Вечерний уход за кожей';
+
+  @override
+  String planQuestWakeOnTime(String time) {
+    return 'Подъём в $time без отсрочек';
   }
 
   @override
-  String wrkSayNext(String name) {
-    return 'Далее: $name.';
+  String planQuestStudy(String minutes) {
+    return 'Учёба $minutes мин';
   }
 
   @override
-  String get wrkSayFinished => 'Тренировка завершена. Отличная работа!';
+  String get planQuestTrackExpenses => 'Записать траты за день';
 
   @override
-  String get wrkExMarchInPlace => 'Ходьба на месте';
+  String get planQuestEveryDay => 'каждый день';
 
   @override
-  String get wrkExMarchInPlaceHint =>
-      'Высоко поднимайте колени.\nРуки работают в такт.\nДышите ровно.';
+  String planQuestWeekOnly(String n) {
+    return 'неделя $n';
+  }
 
   @override
-  String get wrkExArmCircles => 'Круги руками';
+  String planQuestReward(String diamonds, String xp) {
+    return '+$diamonds ◆ · +$xp опыта';
+  }
 
   @override
-  String get wrkExArmCirclesHint =>
-      'Руки в стороны на уровне плеч.\nМаленькие круги вперёд, затем назад.\nПлечи опущены.';
+  String get planWarningsTitle => 'Предупреждения';
 
   @override
-  String get wrkExJumpingJacks => 'Джампинг-джек';
+  String planWarnSleepShort(String scheduled, String target, String bed) {
+    return 'По расписанию сна $scheduled — меньше нормы $target. Рекомендуемый отбой — $bed.';
+  }
 
   @override
-  String get wrkExJumpingJacksHint =>
-      'Прыжок: ноги врозь, руки вверх.\nПрыжок обратно.\nПриземляйтесь мягко на носки.';
+  String get planWarnDeficitFloor =>
+      'Дефицит калорий ограничен безопасным минимумом — ниже Система не урезает.';
 
   @override
-  String get wrkExChairSquat => 'Приседание на стул';
+  String get planWarnActivityDefaulted =>
+      'Уровень активности не указан — взят «сидячий».';
 
   @override
-  String get wrkExChairSquatHint =>
-      'Встаньте перед стулом, ноги на ширине плеч.\nСядьте, отводя таз назад.\nВстаньте без рывка.';
+  String planWarnNoTrainingWindow(String day) {
+    return '$day: нет свободного окна для тренировки.';
+  }
 
   @override
-  String get wrkExGluteBridge => 'Ягодичный мост';
+  String get planWarnInjuries =>
+      'Указаны травмы или ограничения — нагрузку подбирайте осторожно, при сомнениях посоветуйтесь с врачом.';
 
   @override
-  String get wrkExGluteBridgeHint =>
-      'Лёжа на спине, стопы на полу.\nПоднимите таз, сожмите ягодицы.\nМедленно опуститесь.';
+  String planMissingMessage(String fields) {
+    return 'Для расчёта калорий и БЖУ заполните: $fields.';
+  }
 
   @override
-  String get wrkExSquat => 'Приседания';
+  String get planMissingSex => 'пол';
 
   @override
-  String get wrkExSquatHint =>
-      'Ноги на ширине плеч, носки чуть врозь.\nТаз назад, колени по направлению носков.\nСпина прямая, пятки на полу.';
+  String get planMissingBirthDate => 'дата рождения';
 
   @override
-  String get wrkExWallSit => 'Стульчик у стены';
+  String get planMissingHeight => 'рост';
 
   @override
-  String get wrkExWallSitHint =>
-      'Спина прижата к стене.\nОпуститесь, пока бёдра не станут почти параллельны полу.\nДержите позицию.';
+  String get planMissingWeight => 'вес';
 
   @override
-  String get wrkExReverseLunge => 'Выпады назад';
-
-  @override
-  String get wrkExReverseLungeHint =>
-      'Шаг назад, опустите заднее колено к полу.\nПереднее колено над стопой.\nВернитесь, смените ногу.';
-
-  @override
-  String get wrkExGobletSquat => 'Гоблет-присед';
-
-  @override
-  String get wrkExGobletSquatHint =>
-      'Гантель вертикально у груди.\nПрисед, локти между коленями.\nСпина прямая.';
-
-  @override
-  String get wrkExKettlebellSwing => 'Махи гирей';
-
-  @override
-  String get wrkExKettlebellSwingHint =>
-      'Гиря двумя руками, ноги шире плеч.\nТаз назад, затем резко вперёд.\nГиря поднимается до груди за счёт таза.';
-
-  @override
-  String get wrkExJumpSquat => 'Присед с выпрыгиванием';
-
-  @override
-  String get wrkExJumpSquatHint =>
-      'Обычный присед.\nВыпрыгните вверх.\nПриземлитесь мягко сразу в присед.';
-
-  @override
-  String get wrkExWallPushUp => 'Отжимания от стены';
-
-  @override
-  String get wrkExWallPushUpHint =>
-      'Ладони на стене на уровне плеч.\nСогните руки, корпус прямой.\nОттолкнитесь.';
-
-  @override
-  String get wrkExKneePushUp => 'Отжимания с колен';
-
-  @override
-  String get wrkExKneePushUpHint =>
-      'Упор на колени и ладони.\nКорпус прямой от колен до головы.\nГрудь к полу и вверх.';
-
-  @override
-  String get wrkExPushUp => 'Отжимания';
-
-  @override
-  String get wrkExPushUpHint =>
-      'Упор лёжа, ладони чуть шире плеч.\nКорпус — прямая линия.\nГрудь к полу, локти под 45°.';
-
-  @override
-  String get wrkExDumbbellPress => 'Жим гантелей лёжа';
-
-  @override
-  String get wrkExDumbbellPressHint =>
-      'Лёжа на полу, гантели над грудью.\nОпустите до касания локтями пола.\nВыжмите вверх.';
-
-  @override
-  String get wrkExDiamondPushUp => 'Узкие отжимания';
-
-  @override
-  String get wrkExDiamondPushUpHint =>
-      'Ладони рядом под грудью.\nЛокти вдоль корпуса.\nКорпус прямой.';
-
-  @override
-  String get wrkExSuperman => 'Супермен';
-
-  @override
-  String get wrkExSupermanHint =>
-      'Лёжа на животе, руки вперёд.\nПоднимите руки и ноги на пару секунд.\nМедленно опустите.';
-
-  @override
-  String get wrkExReverseSnowAngel => 'Обратный снежный ангел';
-
-  @override
-  String get wrkExReverseSnowAngelHint =>
-      'Лёжа на животе, руки вдоль тела.\nПриподнимите грудь и руки.\nДугой проведите руки над головой и обратно.';
-
-  @override
-  String get wrkExBandRow => 'Тяга резинки';
-
-  @override
-  String get wrkExBandRowHint =>
-      'Закрепите резинку на уровне груди.\nТяните к поясу, сводя лопатки.\nПлавно отпустите.';
-
-  @override
-  String get wrkExDumbbellRow => 'Тяга гантели в наклоне';
-
-  @override
-  String get wrkExDumbbellRowHint =>
-      'Опора рукой и коленом о стул.\nТяните гантель к поясу.\nСпина ровная.';
-
-  @override
-  String get wrkExPullUp => 'Подтягивания';
-
-  @override
-  String get wrkExPullUpHint =>
-      'Хват чуть шире плеч.\nПодтянитесь подбородком к перекладине.\nОпуститесь подконтрольно.';
-
-  @override
-  String get wrkExDeadBug => 'Мёртвый жук';
-
-  @override
-  String get wrkExDeadBugHint =>
-      'Лёжа на спине, руки вверх, колени над тазом.\nОпустите противоположные руку и ногу.\nПоясница прижата к полу.';
-
-  @override
-  String get wrkExBirdDog => 'Птица-собака';
-
-  @override
-  String get wrkExBirdDogHint =>
-      'Упор на ладони и колени.\nВытяните противоположные руку и ногу.\nЗадержитесь, смените сторону.';
-
-  @override
-  String get wrkExPlank => 'Планка';
-
-  @override
-  String get wrkExPlankHint =>
-      'Упор на предплечья и носки.\nКорпус — прямая линия, живот напряжён.\nНе прогибайтесь в пояснице.';
-
-  @override
-  String get wrkExCrunch => 'Скручивания';
-
-  @override
-  String get wrkExCrunchHint =>
-      'Лёжа на спине, колени согнуты.\nПоднимите плечи к коленям.\nМедленно опуститесь.';
-
-  @override
-  String get wrkExSidePlank => 'Боковая планка';
-
-  @override
-  String get wrkExSidePlankHint =>
-      'Упор на предплечье, ноги вместе.\nТаз поднят, корпус прямой.\nПоловину времени — на каждую сторону.';
-
-  @override
-  String get wrkExLegRaise => 'Подъём ног лёжа';
-
-  @override
-  String get wrkExLegRaiseHint =>
-      'Лёжа на спине, руки вдоль тела.\nПоднимите прямые ноги вверх.\nОпускайте медленно, поясница прижата.';
-
-  @override
-  String get wrkExStepTouch => 'Приставные шаги';
-
-  @override
-  String get wrkExStepTouchHint =>
-      'Шаг в сторону, приставьте ногу.\nВ другую сторону.\nРуки работают в такт.';
-
-  @override
-  String get wrkExShadowBoxing => 'Бой с тенью';
-
-  @override
-  String get wrkExShadowBoxingHint =>
-      'Стойка, кулаки у подбородка.\nЛёгкие удары поочерёдно.\nДвигайтесь на носках без прыжков.';
-
-  @override
-  String get wrkExHighKnees => 'Бег с высоким подниманием колен';
-
-  @override
-  String get wrkExHighKneesHint =>
-      'Бег на месте.\nКолени до уровня пояса.\nПриземление на носки.';
-
-  @override
-  String get wrkExMountainClimber => 'Скалолаз';
-
-  @override
-  String get wrkExMountainClimberHint =>
-      'Упор лёжа на прямых руках.\nПоочерёдно подтягивайте колени к груди.\nТаз не поднимайте.';
-
-  @override
-  String get wrkExBurpee => 'Бёрпи';
-
-  @override
-  String get wrkExBurpeeHint =>
-      'Присед, руки на пол.\nОтскок в упор лёжа и обратно.\nВыпрыгните вверх.';
-
-  @override
-  String get wrkExFullBodyStretch => 'Растяжка';
-
-  @override
-  String get wrkExFullBodyStretchHint =>
-      'Потянитесь вверх, затем наклон к ногам.\nРастяните бёдра и грудь.\nДышите медленно, без рывков.';
+  String planFillSection(String section) {
+    return 'Заполнить: $section';
+  }
 }

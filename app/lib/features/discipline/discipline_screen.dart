@@ -1,8 +1,10 @@
 // Режим дисциплины (SPEC §6): статус и причина, когда выключится, правила на сегодня, ручное включение.
-// Блокировка приложений после отбоя — этап 7 (AppBlocker), здесь только пометка.
+// Блокировка приложений после отбоя (AppBlocker) — настройка на экране Routes.blocker.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../app/routes.dart';
 import '../../domain/discipline/discipline_l10n.dart';
 import '../../domain/discipline/discipline_rules.dart';
 import '../../domain/quests/quest_api.dart';
@@ -148,9 +150,20 @@ class _DisciplineScreenState extends ConsumerState<DisciplineScreen> {
           SysPanel(
             key: const Key('dsc-blocker'),
             title: l.dscBlockerTitle,
-            trailing: SysPill(label: l.dscBlockerSoon),
             appearDelay: const Duration(milliseconds: 80),
-            child: Text(l.dscBlockerText, style: SysText.secondary),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(l.dscBlockerText, style: SysText.secondary),
+                const SizedBox(height: 10),
+                SysButton.secondary(
+                  label: l.int7Setup,
+                  icon: SysGlyph.shield,
+                  expand: true,
+                  onPressed: () => context.push(Routes.blocker),
+                ),
+              ],
+            ),
           ),
         ],
       ),

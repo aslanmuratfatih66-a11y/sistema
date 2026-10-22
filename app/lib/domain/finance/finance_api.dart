@@ -88,7 +88,7 @@ abstract interface class FxRatesSource {
 
 /// Пометка «можно купить / после поступления денег / не по бюджету» для маркета (C).
 abstract interface class BudgetAdvisor {
-  /// null — данных мало (нет счетов/операций).
+  /// [priceRub] — в копейках. null — данных мало (нет счетов/операций).
   Future<MarketBudget?> judge(int priceRub, {DateTime? at});
 }
 

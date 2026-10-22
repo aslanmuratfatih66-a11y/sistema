@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../core/data/app_locale.dart';
+import '../core/security/app_lock_gate.dart';
 import '../features/onboarding/onboarding_progress.dart';
 import '../l10n/app_localizations.dart';
 import '../ui/ui.dart';
@@ -16,10 +17,13 @@ final routerProvider = Provider<GoRouter>((ref) {
 });
 
 class SistemaApp extends ConsumerWidget {
-  const SistemaApp({super.key, this.locale});
+  const SistemaApp({super.key, this.locale, this.appLock = false});
 
   /// Принудительный язык (тесты). null — язык из профиля, иначе системы: tr → турецкий, иначе русский.
   final Locale? locale;
+
+  /// Вход по Face ID/PIN (AppLockGate). Включает main; тесты и предпросмотр — без гейта.
+  final bool appLock;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) => MaterialApp.router(
@@ -30,6 +34,8 @@ class SistemaApp extends ConsumerWidget {
         routerConfig: ref.watch(routerProvider),
         locale: locale ?? ref.watch(appLocaleProvider),
         localeListResolutionCallback: resolveAppLocale,
+        // Гейту нужны Localizations — поэтому внутри builder.
+        builder: appLock ? (context, child) => AppLockGate(child: child!) : null,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: const [
           AppLocalizations.delegate,

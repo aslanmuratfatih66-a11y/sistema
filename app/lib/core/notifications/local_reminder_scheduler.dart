@@ -15,7 +15,7 @@ import 'package:timezone/timezone.dart' as tz;
 import '../../app/service_factory.dart';
 import '../../l10n/app_localizations.dart';
 import '../db/database.dart';
-import 'ai_messages_sync.dart' show aiReproachFilter;
+import '../../app/reminder_filters.dart';
 import 'notification_api.dart';
 import 'reminder_coordinator.dart';
 import 'reminder_prefs_repository.dart';
@@ -316,7 +316,7 @@ Future<T> runReminderBackground<T>(Future<T> Function(ReminderCoordinator c) bod
       l10n: () => reminderL10n(db),
       observeLifecycle: false,
       foreground: false,
-      templateFilter: aiReproachFilter(db),
+      templateFilter: reminderTemplateFilter(db),
     );
     return await body(c);
   } finally {

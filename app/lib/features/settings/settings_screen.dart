@@ -14,7 +14,7 @@ import '../../core/sync/sync_api.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/ui.dart';
 import '../auth/sync_indicator.dart';
-import '../home/widgets/finance_summary_panel.dart';
+import '../finance/finance_summary.dart';
 import '../onboarding/onboarding_progress.dart';
 import '../onboarding/onboarding_step.dart';
 import 'backup/backup_platform.dart';
@@ -121,6 +121,30 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   title: l.int6AiJournal,
                   hint: l.int6AiJournalHint,
                   onTap: () => context.push(Routes.aiJournal),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.wallet,
+                  title: l.int7Finance,
+                  hint: l.int7FinanceHint,
+                  onTap: () => context.push(Routes.finance),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.shop,
+                  title: l.int7Market,
+                  hint: l.int7MarketHint,
+                  onTap: () => context.push(Routes.market),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.clock,
+                  title: l.int7Alarms,
+                  hint: l.int7AlarmsHint,
+                  onTap: () => context.push(Routes.alarms),
+                ),
+                _NavRow(
+                  glyph: SysGlyph.shield,
+                  title: l.int7Blocker,
+                  hint: l.int7BlockerHint,
+                  onTap: () => context.push(Routes.blocker),
                 ),
                 _NavRow(
                   glyph: SysGlyph.mic,

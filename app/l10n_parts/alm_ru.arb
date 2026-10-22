@@ -1,0 +1,100 @@
+{
+  "almTitle": "Будильники",
+  "almRingTitle": "Подъём!",
+  "almRingBodySquats": "{count, plural, one{Сделайте {count} приседание, чтобы выключить} few{Сделайте {count} приседания, чтобы выключить} other{Сделайте {count} приседаний, чтобы выключить}}",
+  "@almRingBodySquats": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "almRingBodyQr": "Отсканируйте QR-код в другой комнате, чтобы выключить",
+  "almDoTask": "Выполнить задание",
+  "almStop": "Стоп",
+  "almChannelName": "Будильник",
+  "almChannelDesc": "Звонок будильника-квеста",
+  "almFallbackBody": "Будильник не выключен — откройте приложение и выполните задание.",
+  "almReasonWake": "Подъём по будильнику",
+  "almPermTitle": "Разрешения",
+  "almPermReady": "Будильник готов: звонит поверх экрана блокировки и выключается только заданием.",
+  "almPermExact": "Точные будильники",
+  "almPermFullScreen": "Показ поверх экрана блокировки",
+  "almPermNotifications": "Уведомления",
+  "almPermAlarmKit": "Системный будильник (AlarmKit)",
+  "almPermFallback": "Системный будильник недоступен — прозвонит серия громких уведомлений. Не включайте беззвучный режим и «Фокус» на ночь.",
+  "almPermBackup": "Если выключить звонок кнопкой «Стоп», через 3 минуты пойдут уведомления, пока не выполните задание.",
+  "almPermGrant": "Разрешить",
+  "almPermOn": "есть",
+  "almPermOff": "нет",
+  "almEmpty": "Будильников пока нет. Добавьте первый — выключить его можно будет только заданием.",
+  "almAdd": "Добавить будильник",
+  "almNew": "Новый будильник",
+  "almEditTitle": "Будильник",
+  "almDaysEveryday": "Каждый день",
+  "almDaysWeekdays": "По будням",
+  "almDaysWeekend": "По выходным",
+  "almDaysOnce": "Один раз",
+  "almDayMon": "Пн",
+  "almDayTue": "Вт",
+  "almDayWed": "Ср",
+  "almDayThu": "Чт",
+  "almDayFri": "Пт",
+  "almDaySat": "Сб",
+  "almDaySun": "Вс",
+  "almDaysHint": "Не выбрано ни одного дня — будильник прозвонит один раз.",
+  "almTime": "Время",
+  "almDays": "Дни",
+  "almLabel": "Подпись",
+  "almTask": "Задание",
+  "almTaskSquats": "Приседания",
+  "almTaskQr": "QR-код",
+  "almTaskSquatsShort": "{count, plural, one{{count} приседание} few{{count} приседания} other{{count} приседаний}}",
+  "@almTaskSquatsShort": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "almSquatsCount": "Количество приседаний",
+  "almQrHint": "Распечатайте код и повесьте в другой комнате — например, на кухне или в ванной. Чтобы выключить будильник, придётся встать и дойти до него.",
+  "almQrShare": "Поделиться для печати",
+  "almQrShareText": "QR-код будильника «Системы». Повесьте его в другой комнате.",
+  "almQrRegenerate": "Новый код",
+  "almQrShareFailed": "Не удалось поделиться кодом.",
+  "almDiscipline": "Режим дисциплины",
+  "almDisciplineHint": "Подъём режима дисциплины: время и дни задаёт режим, задание можно сменить.",
+  "almTest": "Проверить через 1 мин",
+  "almTestScheduled": "Проверочный звонок через минуту. Можно заблокировать экран.",
+  "almTestRing": "Проверка",
+  "almDeleteConfirm": "Удалить будильник?",
+  "almNotFound": "Будильник не найден.",
+  "almSquatsHint": "Держите телефон у груди и приседайте до конца — вниз и вверх.",
+  "almSquatsProgress": "{done} / {total}",
+  "@almSquatsProgress": {
+    "placeholders": {
+      "done": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "almSensorError": "Датчик движения недоступен.",
+  "almHoldFallback": "Удерживать, чтобы выключить",
+  "almScanQr": "Сканировать QR",
+  "almScanTitle": "QR будильника",
+  "almScanHint": "Наведите камеру на напечатанный код.",
+  "almScanNoCamera": "Камера недоступна. Разрешите доступ к камере в настройках.",
+  "almQrWrong": "Это не тот код.",
+  "almQrMissing": "Код для этого будильника не создан — выполните приседания.",
+  "almSnooze": "Отложить на 5 мин (осталось {left})",
+  "@almSnooze": {
+    "placeholders": {
+      "left": {"type": "int"}
+    }
+  },
+  "almSnoozeNone": "Откладывать больше нельзя.",
+  "almReward": "+{count} ◆ за подъём вовремя",
+  "@almReward": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "almDone": "Подъём засчитан",
+  "almDoneBody": "Будильник выключен. Доброе утро!"
+}

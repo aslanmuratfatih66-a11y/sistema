@@ -1,5 +1,5 @@
-// Чек по фото (SPEC §8.7, §9.4): ИИ разбирает магазин, позиции и сумму. Запись в финансы — этап 7;
-// пока результат сохраняется в PhotoAnalyses (kind=receipt) и показывается.
+// Чек по фото (SPEC §8.7, §9.4): ИИ разбирает магазин, позиции и сумму; результат — в PhotoAnalyses (kind=receipt).
+// Запись в финансы — features/finance_input (ReceiptInputScreen) по возвращённому результату.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -23,7 +23,7 @@ Future<ReceiptResult?> showReceiptFlow(BuildContext context) async {
     builder: (_) => ReceiptScreen(photoPath: path, photoId: photo.id),
   ));
   if (result == null) await dropVisionPhoto(read, photo);
-  return result;
+  return result?.withPhoto(photo.id);
 }
 
 class ReceiptScreen extends ConsumerStatefulWidget {

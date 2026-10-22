@@ -172,6 +172,15 @@ class ReminderCoordinator with WidgetsBindingObserver {
 
   /// Нажатие в уведомлении (передний план или фоновый isolate).
   Future<void> handleResponse(ReminderResponse r) async {
+    // Не квест (напоминания финансов 'fin:…'): кнопки только закрывают уведомление.
+    if (r.instanceId.startsWith('fin:')) {
+      if (r.action == ReminderAction.open) {
+        onOpen?.call(r.instanceId);
+      } else {
+        await _scheduler.cancelInstance(r.instanceId);
+      }
+      return;
+    }
     try {
       switch (r.action) {
         case ReminderAction.done:

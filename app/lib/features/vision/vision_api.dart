@@ -240,7 +240,14 @@ class ReceiptLine {
 
 @immutable
 class ReceiptResult {
-  const ReceiptResult({required this.store, this.date, required this.currency, required this.items, required this.total});
+  const ReceiptResult({
+    required this.store,
+    this.date,
+    required this.currency,
+    required this.items,
+    required this.total,
+    this.photoId,
+  });
 
   factory ReceiptResult.fromJson(Map<String, dynamic> j) => ReceiptResult(
         store: _s(j['store']),
@@ -255,6 +262,12 @@ class ReceiptResult {
   final String currency;
   final List<ReceiptLine> items;
   final double total;
+
+  /// Photos.id сохранённого фото чека (заполняет showReceiptFlow).
+  final String? photoId;
+
+  ReceiptResult withPhoto(String? id) =>
+      ReceiptResult(store: store, date: date, currency: currency, items: items, total: total, photoId: id);
 }
 
 /// Ответ с исходным JSON (сохраняется в PhotoAnalyses.result).

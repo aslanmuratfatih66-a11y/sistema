@@ -1,0 +1,76 @@
+{
+  "mktTitle": "Market",
+  "mktSuggest": "Öner (YZ)",
+  "mktSuggesting": "Plana uygun ürünler seçiliyor…",
+  "mktCatAll": "Tümü",
+  "mktCatSkin": "Cilt bakımı",
+  "mktCatNutrition": "Beslenme",
+  "mktCatEquipment": "Ekipman",
+  "mktCatOther": "Diğer",
+  "mktTabNew": "Öneriler",
+  "mktTabSaved": "Kaydedilenler",
+  "mktTabBought": "Alınanlar",
+  "mktEmptyNew": "Henüz boş. «Öner (YZ)» düğmesine basın — Sistem planınıza uygun ürünler seçsin.",
+  "mktEmptySaved": "Kaydedilmiş ürün yok.",
+  "mktEmptyBought": "Henüz alışveriş yok.",
+  "mktEstimateNote": "Fiyatlar yaklaşıktır — belirtilen tarihteki web aramasına göre.",
+  "mktPriceLine": "≈ {price} · {source} · {date}",
+  "@mktPriceLine": {
+    "placeholders": {
+      "price": {"type": "String"},
+      "source": {"type": "String"},
+      "date": {"type": "String"}
+    }
+  },
+  "mktPriceShort": "≈ {price} · {date}",
+  "@mktPriceShort": {
+    "placeholders": {
+      "price": {"type": "String"},
+      "date": {"type": "String"}
+    }
+  },
+  "mktPriceUnknown": "Fiyat bilinmiyor",
+  "mktPricePaid": "{price} karşılığında alındı",
+  "@mktPricePaid": {
+    "placeholders": {
+      "price": {"type": "String"}
+    }
+  },
+  "mktBudgetOk": "Alınabilir",
+  "mktBudgetAfterIncome": "Para gelince",
+  "mktBudgetOver": "Bütçeye uygun değil",
+  "mktSave": "Kaydet",
+  "mktHide": "Gizle",
+  "mktBought": "Aldım",
+  "mktRefreshPrice": "Fiyatı güncelle",
+  "mktPriceUpdated": "Fiyat güncellendi.",
+  "mktPriceNotFound": "Güncel fiyat bulunamadı.",
+  "mktSearchSuffix": "arama",
+  "mktLinkCopied": "Bağlantı kopyalandı.",
+  "mktOpenFailed": "Bağlantı açılamadı — kopyalandı.",
+  "mktBoughtTitle": "Alışveriş",
+  "mktBoughtMessage": "«{title}» kaça mal oldu?",
+  "@mktBoughtMessage": {
+    "placeholders": {
+      "title": {"type": "String"}
+    }
+  },
+  "mktBoughtPrice": "Gerçek fiyat",
+  "mktBoughtConfirm": "Kaydet",
+  "mktBoughtRecorded": "Alışveriş finanslara kaydedildi.",
+  "mktBoughtNoFinance": "Alındı olarak işaretlendi. Finanslara kaydedilmedi — bölüm henüz kullanılamıyor.",
+  "mktNoticeLabel": "Sistem",
+  "mktNothingFound": "Sistem yeni ürün bulamadı. Başka bir kategori deneyin.",
+  "mktAdded": "Eklenen ürün: {count}",
+  "@mktAdded": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "mktErrOffline": "Sunucuya bağlantı yok. Kaydedilen ürünler çevrimdışı da görünür.",
+  "mktErrNotSignedIn": "Sistemin ürün seçmesi için hesabınıza giriş yapın («Daha fazla» → «Hesap»).",
+  "mktErrBudget": "YZ limiti şu an doldu. Daha sonra deneyin.",
+  "mktErrUnavailable": "Sunucudaki YZ şu an kullanılamıyor.",
+  "mktErrRateLimited": "Çok fazla istek. Bir süre sonra deneyin.",
+  "mktErrServer": "Yanıt alınamadı. Tekrar deneyin."
+}

@@ -24,7 +24,13 @@ import 'core/sync/sync_api.dart';
 import 'core/sync/sync_providers.dart';
 import 'core/notifications/background_refresh.dart';
 import 'core/notifications/local_reminder_scheduler.dart';
+import 'core/alarm/alarm_api.dart';
+import 'core/alarm/alarm_sync.dart';
+import 'core/alarm/channel_alarm_scheduler.dart';
 import 'core/notifications/ai_messages_sync.dart';
+import 'core/security/app_lock.dart';
+import 'core/security/app_lock_impl.dart';
+import 'app/reminder_filters.dart';
 import 'core/notifications/notification_api.dart';
 import 'core/notifications/reminder_coordinator.dart';
 import 'core/notifications/reminder_prefs_repository.dart';
@@ -32,10 +38,15 @@ import 'core/notifications/reminder_texts.dart';
 import 'core/voice/speech_input.dart';
 import 'core/voice/tts_service.dart';
 import 'core/voice/voice_providers.dart';
+import 'domain/discipline/app_blocker.dart';
+import 'domain/discipline/app_blocker_impl.dart';
+import 'domain/discipline/app_blocker_sync.dart';
 import 'domain/quests/quest_api.dart';
 import 'domain/quests/quest_section_hooks.dart';
 import 'domain/quests/section_hooks.dart';
 import 'domain/walks/walk_api.dart';
+import 'features/finance/finance_providers.dart';
+import 'features/finance_input/bank_inbox_service.dart';
 import 'features/character/voice/flutter_tts_service.dart';
 import 'features/onboarding/onboarding_progress.dart';
 import 'features/onboarding/questionnaire_a/data/photo_repository.dart';
@@ -73,6 +84,12 @@ Future<void> main() async {
     httpAiGatewayOverride,
     characterTtsProvider.overrideWith(buildServerTts),
     speechInputProvider.overrideWith((ref) => SttSpeechInput()),
+    // Этап 7: финансы (журнал операций, курсы, советник бюджета), вход по Face ID/PIN, блокировка, будильник.
+    ...financeOverrides,
+    appLockProvider.overrideWith((ref) => ref.watch(appLockImplProvider)),
+    bankTxRemoverProvider.overrideWith((ref) => ref.read(financeRepositoryProvider).removeTransaction),
+    appBlockerProvider.overrideWith((ref) => createPlatformAppBlocker(ref.watch(databaseProvider))),
+    alarmSchedulerProvider.overrideWithValue(createAlarmScheduler(db: db, l10n: () => reminderL10n(db))),
     ...syncOverrides(readPhoto: (rel) async {
       final f = await PhotoStorage().resolve(rel);
       return await f.exists() ? f.readAsBytes() : null;
@@ -88,8 +105,8 @@ Future<void> main() async {
     l10n: () => reminderL10n(db),
     // Кнопки уведомлений в фоне писали через своё соединение — потоки этого не видели.
     onResume: () async => db.markTablesUpdated(db.allTables),
-    onOpen: (_) => container.read(routerProvider).go(Routes.quests),
-    templateFilter: aiReproachFilter(db),
+    onOpen: (id) => container.read(routerProvider).go(id.startsWith(financeReminderPrefix) ? Routes.finance : Routes.quests),
+    templateFilter: reminderTemplateFilter(db),
   );
   // Разрешение на уведомления спрашивает экран напоминаний, не старт.
   await scheduler.init(onResponse: reminders.handleResponse);
@@ -102,7 +119,13 @@ Future<void> main() async {
   container.read(syncServiceProvider);
   // Шаги: опрос при старте, возврате и раз в 5 мин → StepLogs → квесты шагов.
   container.read(stepSyncProvider).start();
+  // Этап 7: блокировка после отбоя следует за режимом дисциплины.
+  container.read(disciplineBlockerSyncProvider).start();
+  // Этап 7: уведомления/SMS банков (Android) → входящие → операции.
+  unawaited(startBankInbox(container));
   unawaited(initBackgroundRefresh().catchError((Object e) => debugPrint('initBackgroundRefresh: $e')));
 
-  runApp(UncontrolledProviderScope(container: container, child: const SistemaApp()));
+  runApp(UncontrolledProviderScope(container: container, child: const SistemaApp(appLock: true)));
+  // Будильники: планирование по таблице и дисциплине; звонящий будильник → экран задания.
+  unawaited(container.read(alarmSyncProvider).start());
 }

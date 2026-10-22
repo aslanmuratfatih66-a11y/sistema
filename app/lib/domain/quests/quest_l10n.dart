@@ -2,6 +2,7 @@
 // реализация — сабагент A: системные ключи квестов, эффекты, титулы, причины штрафов.
 import '../../core/models/enums.dart';
 import '../../features/plan/model/plan.dart' show QuestCategory, QuestDraft, QuestKey;
+import '../../features/finance/fin_texts.dart' show finReasonLabel;
 import '../../features/plan/plan_l10n.dart' show planQuestTitle;
 import '../../l10n/app_localizations.dart';
 import '../discipline/discipline_l10n.dart' show disciplineQuestTitle;
@@ -90,7 +91,9 @@ String penaltyReasonLabel(AppLocalizations l, String reasonKey) => switch (reaso
       PenaltyReasons.markRelapse => l.qeReasonMarkRelapse,
       PenaltyReasons.bossFailed => l.qeReasonBossFailed,
       PenaltyReasons.reproach => l.qeReasonReproach,
-      _ => l.qeReasonOther,
+      PenaltyReasons.blockedAttempt => l.blkReasonBlockedAttempt,
+      'almReasonWake' => l.almReasonWake,
+      _ => finReasonLabel(l, reasonKey) ?? l.qeReasonOther,
     };
 
 /// Ранг буквой: E, D, C, B, A, S (не переводится).

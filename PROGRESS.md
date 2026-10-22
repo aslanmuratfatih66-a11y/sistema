@@ -2,17 +2,18 @@
 
 ## Сейчас
 Этап: 7 — Финансы, маркет, дисциплина
-Статус: каркас готов, сабагенты A–E в работе
-Следующий шаг: отчёты A–E → интеграция (манифест Android: сервисы банков/блокировки/будильника и разрешения; MainActivity — каналы; main.dart — overrides financeLedger/fxRates/budgetAdvisor/appLock/appBlocker/alarmScheduler, AppLockGate; «Ещё» — пункты; receipt_flow → ledger; merge_l10n) → push
+Статус: A–E готовы, интеграция сделана, собирается в CI
+Следующий шаг: `gh run watch`; при красном — `gh run view --log-failed` (риски: AlarmKit API в AlarmKitChannel.swift, Kotlin Blocker*/Bank*/Alarm*), до 8 итераций; затем этап 8
 
 ## Этап 7 — чек-лист
 - [x] Каркас: БД v7 (FinAccounts, FinCategories, FinTransactions, FinBudgets, FinGoals, FinSubscriptions, FinDebts, CryptoHoldings, BankInbox, MarketItems, BlockedApps, BlockAttempts, Alarms, AlarmRuns), enums (FinAccountKind, FinTxKind, FinTxSource, MarketBudget, AlarmTask); QuestService.award (◆ вне квестов, идемпотентно по ref); контракты domain/finance/finance_api.dart (FinanceLedger, FxRatesSource, BudgetAdvisor), core/security/app_lock.dart, core/alarm/alarm_api.dart; маршруты /finance /finance/receipt /finance/banks /finance/statement /market /blocker /blocked /alarms /alarm/ring (заглушки); local_auth, sensors_plus; Info.plist: NSFaceIDUsageDescription, NSAlarmKitUsageDescription; AlarmKitChannel.swift (заготовка, в pbxproj); сервер: ai.Document (PDF), пакеты finance/market (контракт эндпоинтов в doc-комментарии), проводка в main.go
-- [ ] A Финансы — ядро (features/finance, core/security)
-- [ ] B Финансы — ввод (features/finance_input, server/internal/finance, Android bank listener/SMS)
-- [ ] C Маркет (features/market, server/internal/market)
-- [ ] D Блокировка (domain/discipline/app_blocker*, features/blocker, Android blocker)
-- [ ] E Будильник (core/alarm, features/alarm, Android AlarmManager, iOS AlarmKit)
-- [ ] Интеграция, push
+- [x] A Финансы — ядро: счета/крипта/операции/категории/лимиты (ИИ-предложение ≥14 дней)/цели/подписки/долги/отчёты fl_chart + комментарий ИИ, LocalFinanceLedger (дедуп uuid v5 от ref, налог на фастфуд, лимиты → award), CachedFxRatesSource, LocalBudgetAdvisor, AppLockGate (биометрия/PIN)
+- [x] B Финансы — ввод: QR ФНС (сумма/дата из QR, позиции — TODO ФНС), фото чека, уведомления/SMS банков (шаблоны RU/TR + ИИ), выписка CSV/PDF; сервер finance: rates (+CoinGecko), bank/parse, statement, receipt/qr, budget/suggest, report/comment
+- [x] C Маркет: подборка ИИ с веб-поиском цен (кэш 3 дня), ссылки на поиск магазинов, пометка бюджета, «купил» → операция
+- [x] D Блокировка: Android UsageStats + оверлей (BlockerService specialUse), iOS мастер «Команд» + sistema://app/blocked?app=…, штраф с 3-й попытки за ночь, DisciplineBlockerSync
+- [x] E Будильник: AlarmManager.setAlarmClock + full-screen + AlarmRingService; AlarmKit (iOS 26) + страховочная серия уведомлений; приседания (акселерометр) или QR; награда за подъём; будильник дисциплины
+- [x] Интеграция: манифест (SMS, usage stats, overlay, FGS specialUse/mediaPlayback, exact alarm, full-screen; сервисы/ресиверы Bank*/Blocker*/Alarm*), MainActivity (каналы, onNewIntent), main (overrides финансов/AppLock/блокировки/будильника, запуск BankInbox/BlockerSync/AlarmSync), AppLockGate в builder (SistemaApp(appLock:true)), reminder_filters.dart (упрёки ИИ + напоминания подписок/долгов 'fin:'), «Ещё»: Финансы/Маркет/Будильник/Блокировка + сводка финансов, url_launcher, photoId в ReceiptResult
+- [ ] CI зелёный
 
 ## Этап 6 — итог
 A–F + интеграция, CI зелёный (run 39704046010 app, 39704046012 server).
@@ -106,6 +107,7 @@ A–F + интеграция, CI зелёный (run 39704046010 app, 3970404601
 - Проверка до пуша: в app/ — `flutter analyze` и `flutter test`, в server/ — `go vet ./...` и `go test ./...`
 
 ## Известные проблемы
+- Этап 7: AlarmKit API писался по памяти (риск сборки iOS); FNS — только сумма/дата из QR; SMS-отправители банков TR не подтверждены; тексты банковских уведомлений синхронизируются на сервер; цели — прогресс только по счёту-копилке; погашение долга не привязывает операцию (debtId); забытый PIN (режим «только PIN») не восстановить; Kotlin этапа 7 проверен только сборкой
 - Этап 6: FCM-токен — заглушка NoPushTokenSource (нужен google-services.json и firebase_messaging); id моделей Gemini и формат ElevenLabs — сверить при подключении ключей; пояс пользователя для сообщений по умолчанию UTC+3
 - Этап 5: фото не скачиваются с сервера на второе устройство (remotePath не заполняется); TOTP нельзя отключить/перевыпустить; защита от повтора TOTP-кода — в памяти; сервер/деплой не проверены вживую — инструкция deploy/README.md
 - Этап 4: Spotify — заглушка (нужна регистрация в Spotify Dashboard, Redirect URI); прогулка после перезапуска восстанавливается на паузе; норма шагов виджета — 8000 по умолчанию; Swift/Kotlin этапа 4 проверены только сборкой
@@ -141,6 +143,7 @@ A–F + интеграция, CI зелёный (run 39704046010 app, 3970404601
   - фото-сессия: отсчёт без лагов (1.3), совпадение с контуром тела на ~2 м, овал лица, голос ассистента
 
 ## История
+- 2026-10-22 — этап 7 — финансы, ввод, маркет, блокировка, будильник; интеграция
 - 2026-10-22 — этап 6 — ИИ-слой, фото-анализ, персонаж, голос/чат, сообщения наперёд, знания; интеграция
 - 2026-10-21 — этап 3 — питание, шаги/расход, тело, тренировки; 459 тестов, CI зелёный
 - 2026-10-21 — этап 2 — интеграция A–D, 317 тестов зелёные; начат этап 3 (каркас)

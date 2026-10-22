@@ -1,9 +1,9 @@
 // Блокировка развлекательных приложений после отбоя в режиме дисциплины (SPEC §8.6) — ЭТАП 7.
-// Сейчас только интерфейс и заглушка.
+// Реализации — app_blocker_impl.dart (Android/iOS), связка с режимом — app_blocker_sync.dart.
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// Блокировщик приложений. Android: Usage Access + оверлей/Accessibility; iOS: автоматизации «Команд»
-/// с deep link `sistema://blocked?app=…`.
+/// с deep link `sistema://app/blocked?app=…`.
 abstract interface class AppBlocker {
   /// Поддерживается ли блокировка на этом устройстве (и есть ли разрешения).
   Future<bool> isAvailable();
@@ -19,7 +19,7 @@ abstract interface class AppBlocker {
 class NoopAppBlocker implements AppBlocker {
   const NoopAppBlocker();
 
-  // TODO(этап 7): Android — UsageStats + оверлей «Система: отбой»; iOS — мастер автоматизаций «Команд».
+  // Платформы без блокировки и тесты. В main переопределяется createPlatformAppBlocker(db).
   @override
   Future<bool> isAvailable() async => false;
 

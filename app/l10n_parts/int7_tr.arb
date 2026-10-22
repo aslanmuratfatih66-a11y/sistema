@@ -1,0 +1,12 @@
+{
+  "@@locale": "tr",
+  "int7Finance": "Finans",
+  "int7FinanceHint": "Hesaplar, işlemler, limitler, raporlar",
+  "int7Market": "Alışveriş pazarı",
+  "int7MarketHint": "Plana göre seçki ve fiyatlar",
+  "int7Blocker": "Uygulama engelleme",
+  "int7BlockerHint": "Disiplin modunda yatma saatinden sonra",
+  "int7Alarms": "Görevli alarm",
+  "int7AlarmsHint": "Yalnızca görevle kapanır",
+  "int7Setup": "Ayarla"
+}

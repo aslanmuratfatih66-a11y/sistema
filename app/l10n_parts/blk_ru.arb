@@ -1,0 +1,126 @@
+{
+  "blkTitle": "Блокировка приложений",
+  "blkOverlayTitle": "Система: отбой",
+  "blkOverlayBody": "Время сна. Развлечения закрыты до {time}. Положите телефон — завтра нужен ясный ум.",
+  "@blkOverlayBody": {
+    "placeholders": {
+      "time": {"type": "String"}
+    }
+  },
+  "blkOverlayButton": "Закрыть",
+  "blkNotifTitle": "Система: отбой",
+  "blkNotifBody": "Отвлекающие приложения закрыты до {time}",
+  "@blkNotifBody": {
+    "placeholders": {
+      "time": {"type": "String"}
+    }
+  },
+  "blkIntro": "В режиме дисциплины после отбоя отвлекающие приложения закрываются экраном «Система: отбой». Попытки записываются; с третьей за ночь — штраф {diamonds} ◆.",
+  "@blkIntro": {
+    "placeholders": {
+      "diamonds": {"type": "String"}
+    }
+  },
+  "blkStatusTitle": "Статус",
+  "blkDisciplineOn": "Режим дисциплины включён. Блокировка: {from}–{until}.",
+  "@blkDisciplineOn": {
+    "placeholders": {
+      "from": {"type": "String"},
+      "until": {"type": "String"}
+    }
+  },
+  "blkDisciplineOff": "Режим дисциплины выключен — блокировка не действует. Окно режима: {from}–{until}.",
+  "@blkDisciplineOff": {
+    "placeholders": {
+      "from": {"type": "String"},
+      "until": {"type": "String"}
+    }
+  },
+  "blkActiveNow": "Блокировка действует сейчас",
+  "blkReady": "Готово к работе",
+  "blkNotReady": "Нужны разрешения",
+  "blkNoApps": "Не выбрано ни одного приложения",
+  "blkPermsTitle": "Разрешения",
+  "blkUsageAccess": "Доступ к истории использования",
+  "blkUsageAccessHint": "Чтобы видеть, какое приложение открыто сейчас.",
+  "blkOverlayPerm": "Поверх других приложений",
+  "blkOverlayPermHint": "Чтобы показать экран «Система: отбой».",
+  "blkGranted": "Выдано",
+  "blkNotGranted": "Не выдано",
+  "blkOpenSettings": "Открыть настройки",
+  "blkNotifHint": "Во время блокировки в шторке висит уведомление Системы — так Android не остановит проверку.",
+  "blkAppsTitle": "Приложения",
+  "blkAppsHint": "Отмеченные закрываются после отбоя. Известные развлекательные отмечены по умолчанию.",
+  "blkAppsSelected": "Выбрано: {count}",
+  "@blkAppsSelected": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "blkAppsLoading": "Загружаю список приложений…",
+  "blkAppsEmpty": "Приложения не найдены",
+  "blkSearch": "Поиск",
+  "blkShowAll": "Показать все",
+  "blkShowSelected": "Только выбранные",
+  "blkUnsupported": "На этом устройстве блокировка недоступна.",
+  "blkAttemptsTonight": "Попыток за эту ночь: {count}",
+  "@blkAttemptsTonight": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "blkIosIntro": "На iPhone прямой блокировки нет. Настройте личные автоматизации «Команд»: при открытии приложения сразу откроется Система. После отбоя она покажет «Система: отбой» и запишет попытку, днём — ответит «Сейчас можно».",
+  "blkIosPickTitle": "1. Какие приложения",
+  "blkIosGames": "Игры (любая игра)",
+  "blkIosStepsTitle": "2. Автоматизация для каждого приложения",
+  "blkIosStep1": "Откройте приложение «Команды» → вкладка «Автоматизация» → «+» («Новая автоматизация»).",
+  "blkIosStep2": "Выберите «Приложение», нажмите «Выбрать» и отметьте приложение (можно сразу несколько — тогда ссылка одна, например для игр).",
+  "blkIosStep3": "Отметьте «Открыто», выберите «Выполнять сразу» и нажмите «Далее».",
+  "blkIosStep4": "«Новая пустая автоматизация» → «Добавить действие» → найдите «Открыть URL».",
+  "blkIosStep5": "Вставьте ссылку этого приложения (кнопка «Скопировать» ниже) и нажмите «Готово».",
+  "blkIosStep6": "Повторите для остальных приложений. Проверьте: откройте приложение — должна открыться Система.",
+  "blkIosLinksTitle": "3. Ссылки",
+  "blkIosLinksEmpty": "Сначала выберите приложения выше.",
+  "blkCopy": "Скопировать",
+  "blkCopied": "Ссылка скопирована: {app}",
+  "@blkCopied": {
+    "placeholders": {
+      "app": {"type": "String"}
+    }
+  },
+  "blkIosFocusTitle": "Совет: фокус-режим «Сон»",
+  "blkIosFocusBody": "Настройки → Фокусирование → «Сон»: включайте по расписанию с отбоя до подъёма, скройте уведомления отвлекающих приложений и оставьте на главном экране только нужное.",
+  "blkIosAlwaysNote": "Автоматизация срабатывает в любое время — решает Система: блок действует только после отбоя в режиме дисциплины.",
+  "blkBlockedLabel": "Система",
+  "blkBlockedTitle": "Система: отбой",
+  "blkBlockedMessageApp": "{app} закрыт до {time}. Сон — тоже тренировка. Положите телефон.",
+  "@blkBlockedMessageApp": {
+    "placeholders": {
+      "app": {"type": "String"},
+      "time": {"type": "String"}
+    }
+  },
+  "blkBlockedMessage": "Развлечения закрыты до {time}. Сон — тоже тренировка. Положите телефон.",
+  "@blkBlockedMessage": {
+    "placeholders": {
+      "time": {"type": "String"}
+    }
+  },
+  "blkPenaltyApplied": "Повторная попытка: −{diamonds} ◆",
+  "@blkPenaltyApplied": {
+    "placeholders": {
+      "diamonds": {"type": "String"}
+    }
+  },
+  "blkPenaltyWarning": "С третьей попытки за ночь — штраф {diamonds} ◆ за каждую.",
+  "@blkPenaltyWarning": {
+    "placeholders": {
+      "diamonds": {"type": "String"}
+    }
+  },
+  "blkClose": "Закрыть",
+  "blkAllowedTitle": "Сейчас можно",
+  "blkAllowedMessage": "Блокировка сейчас не действует. Отдыхайте — в меру.",
+  "blkChecking": "Проверяю…",
+  "blkReasonBlockedAttempt": "Попытка открыть приложение после отбоя"
+}
