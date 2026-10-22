@@ -79,7 +79,7 @@ jobs:
         run: echo "::warning::ANDROID_KEYSTORE_BASE64 is not set — release APK will be signed with the debug key."
 
       - run: flutter pub get
-      - run: flutter build apk --release
+      - run: flutter build apk --release --dart-define=SISTEMA_SERVER_URL=${{ vars.SISTEMA_SERVER_URL }}
 
       - name: Rename APK
         id: apk
@@ -121,7 +121,7 @@ jobs:
       - name: Build iOS (no codesign)
         run: |
           app_path=""
-          if flutter build ipa --release --no-codesign; then
+          if flutter build ipa --release --no-codesign --dart-define=SISTEMA_SERVER_URL=${{ vars.SISTEMA_SERVER_URL }}; then
             candidate="build/ios/archive/Runner.xcarchive/Products/Applications/Runner.app"
             if [ -d "$candidate" ]; then
               app_path="$candidate"
@@ -129,7 +129,7 @@ jobs:
           fi
           if [ -z "$app_path" ]; then
             echo "::warning::xcarchive not found, falling back to 'flutter build ios'."
-            flutter build ios --release --no-codesign
+            flutter build ios --release --no-codesign --dart-define=SISTEMA_SERVER_URL=${{ vars.SISTEMA_SERVER_URL }}
             app_path="build/ios/iphoneos/Runner.app"
           fi
           test -d "$app_path"

@@ -9,3 +9,6 @@ key.properties
 .env
 /server/bin/
 /dist/
+
+# Собранный бинарник сервера для деплоя
+deploy/sistema-server
