@@ -29,6 +29,9 @@ abstract final class Routes {
 
   /// «Путь уровней» (нажатие на LVL на главном).
   static const levels = '/levels';
+
+  /// Итоги дня (уведомление перед отбоем, вкладка «Квесты»).
+  static const daySummary = '/day-summary';
   static const learning = '/learning';
 
   /// Расходы ИИ и журнал действий ИИ (с отменой).

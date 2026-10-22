@@ -21,6 +21,7 @@ import '../schedule/widgets/schedule_common.dart';
 import '../onboarding/onboarding_progress.dart';
 import '../onboarding/onboarding_step.dart';
 import 'backup/backup_platform.dart';
+import 'day_modes_panel.dart';
 import 'backup/backup_service.dart';
 import 'settings_summaries.dart';
 import '../chat/voice_picker.dart';
@@ -95,6 +96,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ],
             ),
           ),
+          const SizedBox(height: 16),
+          const DayModesPanel(),
           const SizedBox(height: 16),
           SysPanel(
             title: l.setSectionAi,

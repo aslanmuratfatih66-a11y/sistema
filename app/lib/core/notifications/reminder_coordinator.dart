@@ -25,6 +25,7 @@ class ReminderCoordinator with WidgetsBindingObserver {
     this.onResume,
     this.onOpen,
     this.templateFilter,
+    this.beforeTick,
   }) : _clock = clock ?? DateTime.now;
 
   final QuestService _quests;
@@ -48,6 +49,9 @@ class ReminderCoordinator with WidgetsBindingObserver {
 
   /// Правка запросов окна перед планированием (например, убрать шаблонный упрёк, если есть упрёк ИИ).
   final Future<List<ReminderRequest>> Function(List<ReminderRequest> requests)? templateFilter;
+
+  /// До проверки движка: например, режимы дня сдвигают квесты, попавшие на занятость (SPEC §8.13).
+  final Future<void> Function(DateTime now)? beforeTick;
 
   bool _foreground;
   bool _started = false;
@@ -120,6 +124,14 @@ class ReminderCoordinator with WidgetsBindingObserver {
 
   Future<void> _tick() async {
     try {
+      final before = beforeTick;
+      if (before != null) {
+        try {
+          await before(_clock());
+        } catch (e, st) {
+          _log(e, st);
+        }
+      }
       final outcomes = await _quests.tick(_clock());
       // На переднем плане последствия показывают системные окна; иначе — уведомлением.
       if (!_foreground && outcomes.isNotEmpty) await _notify(outcomes);

@@ -34,7 +34,7 @@ final questNextProvider = StreamProvider<QuestItem?>((ref) {
 final questTodayProvider = Provider<DateTime>((ref) => dayOf(ref.watch(homeClockProvider)));
 
 /// Режим вкладки: сегодня / неделя / история.
-enum QuestsView { today, week, history }
+enum QuestsView { today, week, history, habits }
 
 final questsViewProvider = NotifierProvider<QuestsViewState, QuestsView>(QuestsViewState.new);
 

@@ -8134,4 +8134,246 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get chrTapHoldHint => 'Подержи меня три секунды — поговорим.';
+
+  @override
+  String get sumTitle => 'Итоги дня';
+
+  @override
+  String sumLine(int done, int total, int diamonds) {
+    return 'Сегодня выполнено $done из $total, баланс за день $diamonds ◆.';
+  }
+
+  @override
+  String get sumToneGood => 'Хороший день. Завтра — в том же темпе.';
+
+  @override
+  String get sumToneBad => 'Есть что подтянуть. Завтра — чище.';
+
+  @override
+  String get sumToneSoftGood => 'Ты молодец. Отдыхай, завтра продолжим.';
+
+  @override
+  String get sumToneSoftBad => 'Ничего страшного. Высыпайся — завтра получится лучше.';
+
+  @override
+  String get sumToneHarshGood => 'Принято. Не расслабляйся — завтра так же.';
+
+  @override
+  String get sumToneHarshBad => 'Слабо. Завтра без оправданий.';
+
+  @override
+  String get sumDone => 'выполнено';
+
+  @override
+  String get sumDiamonds => 'баллы';
+
+  @override
+  String get sumXp => 'опыт';
+
+  @override
+  String get sumMistakes => 'Ошибки и незакрытое';
+
+  @override
+  String get sumDoneTitle => 'Сделано';
+
+  @override
+  String get sumTomorrow => 'План на завтра';
+
+  @override
+  String get sumTomorrowEmpty => 'На завтра квестов пока нет.';
+
+  @override
+  String sumMore(int n) {
+    return 'и ещё $n';
+  }
+
+  @override
+  String get sumNotifTitle => 'Итоги дня';
+
+  @override
+  String get sumNotifBody => 'Подведём итоги перед отбоем — что сделано и что завтра.';
+
+  @override
+  String get busyTitle => 'Занятость';
+
+  @override
+  String get busyHint => 'Квесты на это время сдвинутся на конец занятости без штрафа, напоминания будут тихими. Пары, работа и дорога из расписания учитываются сами.';
+
+  @override
+  String busyActive(String time) {
+    return 'Занят до $time';
+  }
+
+  @override
+  String get busyClear => 'Я освободился';
+
+  @override
+  String busyHours(int h) {
+    return '$h ч';
+  }
+
+  @override
+  String autoplanHidden(int n) {
+    return 'Автоплан: ещё заданий — $n, откроются по очереди.';
+  }
+
+  @override
+  String get habTitle => 'Привычки';
+
+  @override
+  String get habEmpty => 'От чего избавляемся? Добавьте привычку — Система посчитает дни без неё и сэкономленные деньги.';
+
+  @override
+  String get habAdd => 'Добавить привычку';
+
+  @override
+  String get habAddSave => 'Начать отсчёт';
+
+  @override
+  String get habRulesHint => 'За серии — ◆ (1, 3, 7, 14, 30… дней). Честная отметка срыва — небольшой штраф, скрытый срыв обходится дороже.';
+
+  @override
+  String get habHelpHint => 'Если бросить тяжело — это нормально. Помогут врач или горячая линия (в России — 8-800-200-0-200, в Турции — ALO 171).';
+
+  @override
+  String get habRelapse => 'Был срыв';
+
+  @override
+  String get habRelapseTitle => 'Срыв';
+
+  @override
+  String habRelapseHint(int n) {
+    return 'Честно — значит мягко: −$n ◆, серия начнётся заново, лучший результат сохранится. Что стало причиной?';
+  }
+
+  @override
+  String get habNoticeLabel => 'Система';
+
+  @override
+  String get habRemove => 'Удалить';
+
+  @override
+  String habRemoveConfirm(String name) {
+    return 'Удалить привычку «$name» и её историю?';
+  }
+
+  @override
+  String get habDaysWithout => 'дн. без срыва';
+
+  @override
+  String habBest(int n) {
+    return 'рекорд $n';
+  }
+
+  @override
+  String habNext(int days, int diamonds) {
+    return 'Следующая отметка — $days дн.: +$diamonds ◆';
+  }
+
+  @override
+  String habSaved(int sum) {
+    return 'Сэкономлено: $sum ₽';
+  }
+
+  @override
+  String habLastTrigger(String trigger) {
+    return 'Последняя причина срыва: $trigger';
+  }
+
+  @override
+  String get habCustomTitle => 'Название';
+
+  @override
+  String get habDailyCost => 'Сколько уходило в день на привычку';
+
+  @override
+  String get habAlreadyDays => 'Уже не делаю, дней';
+
+  @override
+  String get habSmoking => 'Курение';
+
+  @override
+  String get habVape => 'Вейп';
+
+  @override
+  String get habAlcohol => 'Алкоголь';
+
+  @override
+  String get habSweets => 'Сладкое';
+
+  @override
+  String get habEnergy => 'Энергетики';
+
+  @override
+  String get habPhone => 'Залипание в телефон';
+
+  @override
+  String get habLateSleep => 'Поздний отбой';
+
+  @override
+  String get habCustom => 'Своя привычка';
+
+  @override
+  String get habTrigStress => 'Стресс';
+
+  @override
+  String get habTrigBoredom => 'Скука';
+
+  @override
+  String get habTrigCompany => 'Компания';
+
+  @override
+  String get habTrigTired => 'Усталость';
+
+  @override
+  String get habTrigHabitTime => 'Привычное время';
+
+  @override
+  String get habTrigOther => 'Другое';
+
+  @override
+  String get habReasonRelapse => 'Срыв привычки';
+
+  @override
+  String get dmTitle => 'Режимы дня';
+
+  @override
+  String get dmAutoplan => 'Автоплан';
+
+  @override
+  String get dmAutoplanHint => 'Видно только текущее задание; следующее откроется после него.';
+
+  @override
+  String dmAutoplanLocked(int level) {
+    return 'Откроется на $level уровне.';
+  }
+
+  @override
+  String get dmAutoplanDiscipline => 'Автоплан в режиме дисциплины';
+
+  @override
+  String get dmBusySchedule => 'Занятость по расписанию';
+
+  @override
+  String get dmBusyScheduleHint => 'Пары, работа и дорога: квесты сдвигаются, напоминания тихие.';
+
+  @override
+  String get dmAdaptive => 'Адаптивная сложность';
+
+  @override
+  String get dmAdaptiveHint => 'Нагрузка подстраивается под выполнение за 2 недели, не выше рамок плана.';
+
+  @override
+  String get dmAdaptiveCollecting => 'Собираю статистику (нужно 10+ закрытых квестов за 2 недели).';
+
+  @override
+  String dmAdaptiveStatus(String pct, int rate) {
+    return 'Нагрузка $pct% к плану · выполнение $rate% за 2 недели';
+  }
+
+  @override
+  String get dmSummary => 'Итоги дня перед отбоем';
+
+  @override
+  String get dmSummaryHint => 'Уведомление за 30 минут до отбоя: что сделано, баллы, план на завтра.';
 }

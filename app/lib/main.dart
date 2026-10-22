@@ -7,6 +7,10 @@ import 'app/app.dart';
 import 'app/live_bridge.dart';
 import 'app/routes.dart';
 import 'app/service_factory.dart';
+import 'core/data/user_setting_store.dart';
+import 'domain/day_modes/day_modes.dart';
+import 'features/day_summary/day_summary_screen.dart' show daySummaryReminderPrefix;
+import 'features/habits/habit_repository.dart';
 import 'core/activity/activity_api.dart';
 import 'core/activity/activity_providers.dart';
 import 'core/activity/channel_step_counter.dart';
@@ -106,8 +110,17 @@ Future<void> main() async {
     l10n: () => reminderL10n(db),
     // Кнопки уведомлений в фоне писали через своё соединение — потоки этого не видели.
     onResume: () async => db.markTablesUpdated(db.allTables),
-    onOpen: (id) => container.read(routerProvider).go(id.startsWith(financeReminderPrefix) ? Routes.finance : Routes.quests),
+    onOpen: (id) => container.read(routerProvider).go(switch (id) {
+          _ when id.startsWith(financeReminderPrefix) => Routes.finance,
+          _ when id.startsWith(daySummaryReminderPrefix) => Routes.daySummary,
+          _ => Routes.quests,
+        }),
     templateFilter: reminderTemplateFilter(db),
+    // Режимы дня сдвигают квесты с занятости до проверки просрочек; серии привычек — бонусы.
+    beforeTick: (now) async {
+      await DayModesService(db).apply(now);
+      await HabitRepository(UserSettingStore(db), quests).checkMilestones(now);
+    },
   );
   // Разрешение на уведомления спрашивает экран напоминаний, не старт.
   await scheduler.init(onResponse: reminders.handleResponse);

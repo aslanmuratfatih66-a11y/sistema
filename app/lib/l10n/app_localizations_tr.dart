@@ -8080,4 +8080,246 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get chrTapHoldHint => 'Üç saniye basılı tut — konuşalım.';
+
+  @override
+  String get sumTitle => 'Günün özeti';
+
+  @override
+  String sumLine(int done, int total, int diamonds) {
+    return 'Bugün $total görevden $done tanesi tamamlandı, günlük bakiye $diamonds ◆.';
+  }
+
+  @override
+  String get sumToneGood => 'İyi bir gündü. Yarın aynı tempoda.';
+
+  @override
+  String get sumToneBad => 'Toparlanacak şeyler var. Yarın daha temiz.';
+
+  @override
+  String get sumToneSoftGood => 'Harikaydın. Dinlen, yarın devam ederiz.';
+
+  @override
+  String get sumToneSoftBad => 'Önemli değil. İyi uyu — yarın daha iyi olacak.';
+
+  @override
+  String get sumToneHarshGood => 'Kabul. Gevşeme — yarın da aynısı.';
+
+  @override
+  String get sumToneHarshBad => 'Zayıf. Yarın bahane yok.';
+
+  @override
+  String get sumDone => 'tamamlandı';
+
+  @override
+  String get sumDiamonds => 'puan';
+
+  @override
+  String get sumXp => 'TP';
+
+  @override
+  String get sumMistakes => 'Hatalar ve kapanmayanlar';
+
+  @override
+  String get sumDoneTitle => 'Yapılanlar';
+
+  @override
+  String get sumTomorrow => 'Yarının planı';
+
+  @override
+  String get sumTomorrowEmpty => 'Yarın için henüz görev yok.';
+
+  @override
+  String sumMore(int n) {
+    return 've $n tane daha';
+  }
+
+  @override
+  String get sumNotifTitle => 'Günün özeti';
+
+  @override
+  String get sumNotifBody => 'Uyumadan önce özet: neler yapıldı, yarın ne var.';
+
+  @override
+  String get busyTitle => 'Meşguliyet';
+
+  @override
+  String get busyHint => 'Bu süredeki görevler cezasız olarak meşguliyet sonuna kayar, hatırlatıcılar sessiz olur. Programdaki dersler, iş ve yol otomatik sayılır.';
+
+  @override
+  String busyActive(String time) {
+    return '$time saatine kadar meşgul';
+  }
+
+  @override
+  String get busyClear => 'Müsaitim';
+
+  @override
+  String busyHours(int h) {
+    return '$h sa';
+  }
+
+  @override
+  String autoplanHidden(int n) {
+    return 'Otomatik plan: $n görev daha var, sırayla açılacak.';
+  }
+
+  @override
+  String get habTitle => 'Alışkanlıklar';
+
+  @override
+  String get habEmpty => 'Neyi bırakıyoruz? Bir alışkanlık ekleyin — Sistem onsuz geçen günleri ve tasarrufu sayar.';
+
+  @override
+  String get habAdd => 'Alışkanlık ekle';
+
+  @override
+  String get habAddSave => 'Sayacı başlat';
+
+  @override
+  String get habRulesHint => 'Seriler için ◆ (1, 3, 7, 14, 30… gün). Dürüst kayma kaydı küçük bir ceza, gizlemek daha pahalıya mal olur.';
+
+  @override
+  String get habHelpHint => 'Bırakmak zorsa bu normal. Doktor veya yardım hattı destek olur (Türkiye\'de ALO 171, Rusya\'da 8-800-200-0-200).';
+
+  @override
+  String get habRelapse => 'Kaydım';
+
+  @override
+  String get habRelapseTitle => 'Kayma';
+
+  @override
+  String habRelapseHint(int n) {
+    return 'Dürüst olmak yumuşak demek: −$n ◆, seri yeniden başlar, en iyi sonuç kalır. Sebep neydi?';
+  }
+
+  @override
+  String get habNoticeLabel => 'Sistem';
+
+  @override
+  String get habRemove => 'Sil';
+
+  @override
+  String habRemoveConfirm(String name) {
+    return '«$name» alışkanlığı ve geçmişi silinsin mi?';
+  }
+
+  @override
+  String get habDaysWithout => 'gün kaymadan';
+
+  @override
+  String habBest(int n) {
+    return 'rekor $n';
+  }
+
+  @override
+  String habNext(int days, int diamonds) {
+    return 'Sonraki hedef — $days gün: +$diamonds ◆';
+  }
+
+  @override
+  String habSaved(int sum) {
+    return 'Tasarruf: $sum ₽';
+  }
+
+  @override
+  String habLastTrigger(String trigger) {
+    return 'Son kayma sebebi: $trigger';
+  }
+
+  @override
+  String get habCustomTitle => 'Ad';
+
+  @override
+  String get habDailyCost => 'Alışkanlığa günde ne harcanıyordu';
+
+  @override
+  String get habAlreadyDays => 'Kaç gündür yapmıyorum';
+
+  @override
+  String get habSmoking => 'Sigara';
+
+  @override
+  String get habVape => 'Elektronik sigara';
+
+  @override
+  String get habAlcohol => 'Alkol';
+
+  @override
+  String get habSweets => 'Tatlı';
+
+  @override
+  String get habEnergy => 'Enerji içecekleri';
+
+  @override
+  String get habPhone => 'Telefona dalmak';
+
+  @override
+  String get habLateSleep => 'Geç yatmak';
+
+  @override
+  String get habCustom => 'Kendi alışkanlığım';
+
+  @override
+  String get habTrigStress => 'Stres';
+
+  @override
+  String get habTrigBoredom => 'Can sıkıntısı';
+
+  @override
+  String get habTrigCompany => 'Arkadaş ortamı';
+
+  @override
+  String get habTrigTired => 'Yorgunluk';
+
+  @override
+  String get habTrigHabitTime => 'Alışık olunan saat';
+
+  @override
+  String get habTrigOther => 'Diğer';
+
+  @override
+  String get habReasonRelapse => 'Alışkanlıkta kayma';
+
+  @override
+  String get dmTitle => 'Gün modları';
+
+  @override
+  String get dmAutoplan => 'Otomatik plan';
+
+  @override
+  String get dmAutoplanHint => 'Yalnızca mevcut görev görünür; sonraki onun ardından açılır.';
+
+  @override
+  String dmAutoplanLocked(int level) {
+    return '$level. seviyede açılır.';
+  }
+
+  @override
+  String get dmAutoplanDiscipline => 'Disiplin modunda otomatik plan';
+
+  @override
+  String get dmBusySchedule => 'Programa göre meşguliyet';
+
+  @override
+  String get dmBusyScheduleHint => 'Dersler, iş ve yol: görevler kayar, hatırlatıcılar sessiz.';
+
+  @override
+  String get dmAdaptive => 'Uyarlanabilir zorluk';
+
+  @override
+  String get dmAdaptiveHint => 'Yük, son 2 haftadaki başarıya göre ayarlanır, plan sınırlarını aşmaz.';
+
+  @override
+  String get dmAdaptiveCollecting => 'İstatistik toplanıyor (2 haftada 10+ kapanmış görev gerekli).';
+
+  @override
+  String dmAdaptiveStatus(String pct, int rate) {
+    return 'Plana göre yük $pct% · 2 haftalık başarı $rate%';
+  }
+
+  @override
+  String get dmSummary => 'Uyumadan önce gün özeti';
+
+  @override
+  String get dmSummaryHint => 'Yatmadan 30 dakika önce bildirim: yapılanlar, puanlar, yarının planı.';
 }

@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sistema/domain/day_modes/day_modes.dart';
 import 'package:sistema/domain/quests/quest_api.dart';
+import 'package:sistema/features/habits/habit_repository.dart';
 import 'package:sistema/features/home/data/demo_home_data.dart';
 import 'package:sistema/features/home/data/home_live_data.dart';
 import 'package:sistema/features/home/data/home_providers.dart';
@@ -43,6 +45,10 @@ Widget tabApp(Widget screen, Locale locale, {double textScale = 1, QuestService?
         homeNowSourceProvider.overrideWithValue(() => fixedNow),
         questServiceProvider.overrideWithValue(service ?? FakeQuestService(now: fixedNow)),
         homeContextProvider.overrideWithValue(testHomeContext()),
+        // Режимы дня и привычки — без БД.
+        dayModesPrefsProvider.overrideWith((ref) => Stream.value(const DayModesPrefs())),
+        dayBusyProvider.overrideWith((ref) => Stream.value(null)),
+        habitsProvider.overrideWith((ref) => Stream.value(const <Habit>[])),
       ],
       child: MaterialApp(
         theme: buildSystemTheme(),

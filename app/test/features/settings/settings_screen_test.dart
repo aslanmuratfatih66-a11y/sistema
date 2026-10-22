@@ -4,6 +4,7 @@ import 'package:drift/drift.dart' hide isNull, isNotNull;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sistema/domain/quests/quest_api.dart';
 import 'package:sistema/core/capabilities/capability_service.dart';
 import 'package:sistema/core/data/profile_repository.dart';
 import 'package:sistema/core/db/database.dart';
@@ -16,6 +17,7 @@ import 'package:sistema/l10n/app_localizations.dart';
 import 'package:sistema/ui/ui.dart';
 
 import '../../helpers/test_db.dart';
+import '../quests/fake_quest_service.dart';
 
 class _FakeSaver implements BackupSaver {
   String? name;
@@ -68,6 +70,7 @@ void main() {
         backupSaverProvider.overrideWithValue(saver),
         backupPickerProvider.overrideWithValue(picker),
         onboardingProgressProvider.overrideWithValue(progress),
+        questServiceProvider.overrideWithValue(FakeQuestService(now: DateTime(2026, 10, 21, 10, 46))),
       ],
       child: MaterialApp(
         theme: buildSystemTheme(),

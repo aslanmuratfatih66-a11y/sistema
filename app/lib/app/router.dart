@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../features/body/body_screen.dart';
 import '../features/discipline/discipline_screen.dart';
 import '../features/home/home_screen.dart';
+import '../features/day_summary/day_summary_screen.dart';
 import '../features/health/health_screen.dart';
 import '../features/levels/level_path_screen.dart';
 import '../features/more/more_screen.dart';
@@ -64,6 +65,7 @@ GoRouter buildRouter(OnboardingProgress onboarding) => GoRouter(
         GoRoute(path: Routes.talk, builder: (_, _) => const LiveTalkScreen()),
         GoRoute(path: Routes.settings, builder: (_, _) => const SettingsScreen()),
         GoRoute(path: Routes.levels, builder: (_, _) => const LevelPathScreen()),
+        GoRoute(path: Routes.daySummary, builder: (_, _) => const DaySummaryScreen()),
         GoRoute(path: Routes.learning, builder: (_, _) => const LearningScreen()),
         GoRoute(path: Routes.aiJournal, builder: (_, _) => const AiJournalScreen()),
         GoRoute(path: Routes.finance, builder: (_, _) => const FinanceScreen()),

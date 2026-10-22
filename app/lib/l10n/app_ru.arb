@@ -4741,5 +4741,180 @@
       }
     }
   },
-  "chrTapHoldHint": "Подержи меня три секунды — поговорим."
+  "chrTapHoldHint": "Подержи меня три секунды — поговорим.",
+  "sumTitle": "Итоги дня",
+  "sumLine": "Сегодня выполнено {done} из {total}, баланс за день {diamonds} ◆.",
+  "@sumLine": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "sumToneGood": "Хороший день. Завтра — в том же темпе.",
+  "sumToneBad": "Есть что подтянуть. Завтра — чище.",
+  "sumToneSoftGood": "Ты молодец. Отдыхай, завтра продолжим.",
+  "sumToneSoftBad": "Ничего страшного. Высыпайся — завтра получится лучше.",
+  "sumToneHarshGood": "Принято. Не расслабляйся — завтра так же.",
+  "sumToneHarshBad": "Слабо. Завтра без оправданий.",
+  "sumDone": "выполнено",
+  "sumDiamonds": "баллы",
+  "sumXp": "опыт",
+  "sumMistakes": "Ошибки и незакрытое",
+  "sumDoneTitle": "Сделано",
+  "sumTomorrow": "План на завтра",
+  "sumTomorrowEmpty": "На завтра квестов пока нет.",
+  "sumMore": "и ещё {n}",
+  "@sumMore": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "sumNotifTitle": "Итоги дня",
+  "sumNotifBody": "Подведём итоги перед отбоем — что сделано и что завтра.",
+  "busyTitle": "Занятость",
+  "busyHint": "Квесты на это время сдвинутся на конец занятости без штрафа, напоминания будут тихими. Пары, работа и дорога из расписания учитываются сами.",
+  "busyActive": "Занят до {time}",
+  "@busyActive": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "busyClear": "Я освободился",
+  "busyHours": "{h} ч",
+  "@busyHours": {
+    "placeholders": {
+      "h": {
+        "type": "int"
+      }
+    }
+  },
+  "autoplanHidden": "Автоплан: ещё заданий — {n}, откроются по очереди.",
+  "@autoplanHidden": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "habTitle": "Привычки",
+  "habEmpty": "От чего избавляемся? Добавьте привычку — Система посчитает дни без неё и сэкономленные деньги.",
+  "habAdd": "Добавить привычку",
+  "habAddSave": "Начать отсчёт",
+  "habRulesHint": "За серии — ◆ (1, 3, 7, 14, 30… дней). Честная отметка срыва — небольшой штраф, скрытый срыв обходится дороже.",
+  "habHelpHint": "Если бросить тяжело — это нормально. Помогут врач или горячая линия (в России — 8-800-200-0-200, в Турции — ALO 171).",
+  "habRelapse": "Был срыв",
+  "habRelapseTitle": "Срыв",
+  "habRelapseHint": "Честно — значит мягко: −{n} ◆, серия начнётся заново, лучший результат сохранится. Что стало причиной?",
+  "@habRelapseHint": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "habNoticeLabel": "Система",
+  "habRemove": "Удалить",
+  "habRemoveConfirm": "Удалить привычку «{name}» и её историю?",
+  "@habRemoveConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "habDaysWithout": "дн. без срыва",
+  "habBest": "рекорд {n}",
+  "@habBest": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "habNext": "Следующая отметка — {days} дн.: +{diamonds} ◆",
+  "@habNext": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "diamonds": {
+        "type": "int"
+      }
+    }
+  },
+  "habSaved": "Сэкономлено: {sum} ₽",
+  "@habSaved": {
+    "placeholders": {
+      "sum": {
+        "type": "int"
+      }
+    }
+  },
+  "habLastTrigger": "Последняя причина срыва: {trigger}",
+  "@habLastTrigger": {
+    "placeholders": {
+      "trigger": {
+        "type": "String"
+      }
+    }
+  },
+  "habCustomTitle": "Название",
+  "habDailyCost": "Сколько уходило в день на привычку",
+  "habAlreadyDays": "Уже не делаю, дней",
+  "habSmoking": "Курение",
+  "habVape": "Вейп",
+  "habAlcohol": "Алкоголь",
+  "habSweets": "Сладкое",
+  "habEnergy": "Энергетики",
+  "habPhone": "Залипание в телефон",
+  "habLateSleep": "Поздний отбой",
+  "habCustom": "Своя привычка",
+  "habTrigStress": "Стресс",
+  "habTrigBoredom": "Скука",
+  "habTrigCompany": "Компания",
+  "habTrigTired": "Усталость",
+  "habTrigHabitTime": "Привычное время",
+  "habTrigOther": "Другое",
+  "habReasonRelapse": "Срыв привычки",
+  "dmTitle": "Режимы дня",
+  "dmAutoplan": "Автоплан",
+  "dmAutoplanHint": "Видно только текущее задание; следующее откроется после него.",
+  "dmAutoplanLocked": "Откроется на {level} уровне.",
+  "@dmAutoplanLocked": {
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "dmAutoplanDiscipline": "Автоплан в режиме дисциплины",
+  "dmBusySchedule": "Занятость по расписанию",
+  "dmBusyScheduleHint": "Пары, работа и дорога: квесты сдвигаются, напоминания тихие.",
+  "dmAdaptive": "Адаптивная сложность",
+  "dmAdaptiveHint": "Нагрузка подстраивается под выполнение за 2 недели, не выше рамок плана.",
+  "dmAdaptiveCollecting": "Собираю статистику (нужно 10+ закрытых квестов за 2 недели).",
+  "dmAdaptiveStatus": "Нагрузка {pct}% к плану · выполнение {rate}% за 2 недели",
+  "@dmAdaptiveStatus": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      },
+      "rate": {
+        "type": "int"
+      }
+    }
+  },
+  "dmSummary": "Итоги дня перед отбоем",
+  "dmSummaryHint": "Уведомление за 30 минут до отбоя: что сделано, баллы, план на завтра."
 }

@@ -134,6 +134,438 @@ abstract class AppLocalizations {
   /// **'Ещё'**
   String get navMore;
 
+  /// No description provided for @sumTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итоги дня'**
+  String get sumTitle;
+
+  /// No description provided for @sumLine.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сегодня выполнено {done} из {total}, баланс за день {diamonds} ◆.'**
+  String sumLine(int done, int total, int diamonds);
+
+  /// No description provided for @sumToneGood.
+  ///
+  /// In ru, this message translates to:
+  /// **'Хороший день. Завтра — в том же темпе.'**
+  String get sumToneGood;
+
+  /// No description provided for @sumToneBad.
+  ///
+  /// In ru, this message translates to:
+  /// **'Есть что подтянуть. Завтра — чище.'**
+  String get sumToneBad;
+
+  /// No description provided for @sumToneSoftGood.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ты молодец. Отдыхай, завтра продолжим.'**
+  String get sumToneSoftGood;
+
+  /// No description provided for @sumToneSoftBad.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ничего страшного. Высыпайся — завтра получится лучше.'**
+  String get sumToneSoftBad;
+
+  /// No description provided for @sumToneHarshGood.
+  ///
+  /// In ru, this message translates to:
+  /// **'Принято. Не расслабляйся — завтра так же.'**
+  String get sumToneHarshGood;
+
+  /// No description provided for @sumToneHarshBad.
+  ///
+  /// In ru, this message translates to:
+  /// **'Слабо. Завтра без оправданий.'**
+  String get sumToneHarshBad;
+
+  /// No description provided for @sumDone.
+  ///
+  /// In ru, this message translates to:
+  /// **'выполнено'**
+  String get sumDone;
+
+  /// No description provided for @sumDiamonds.
+  ///
+  /// In ru, this message translates to:
+  /// **'баллы'**
+  String get sumDiamonds;
+
+  /// No description provided for @sumXp.
+  ///
+  /// In ru, this message translates to:
+  /// **'опыт'**
+  String get sumXp;
+
+  /// No description provided for @sumMistakes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ошибки и незакрытое'**
+  String get sumMistakes;
+
+  /// No description provided for @sumDoneTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сделано'**
+  String get sumDoneTitle;
+
+  /// No description provided for @sumTomorrow.
+  ///
+  /// In ru, this message translates to:
+  /// **'План на завтра'**
+  String get sumTomorrow;
+
+  /// No description provided for @sumTomorrowEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'На завтра квестов пока нет.'**
+  String get sumTomorrowEmpty;
+
+  /// No description provided for @sumMore.
+  ///
+  /// In ru, this message translates to:
+  /// **'и ещё {n}'**
+  String sumMore(int n);
+
+  /// No description provided for @sumNotifTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итоги дня'**
+  String get sumNotifTitle;
+
+  /// No description provided for @sumNotifBody.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подведём итоги перед отбоем — что сделано и что завтра.'**
+  String get sumNotifBody;
+
+  /// No description provided for @busyTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Занятость'**
+  String get busyTitle;
+
+  /// No description provided for @busyHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Квесты на это время сдвинутся на конец занятости без штрафа, напоминания будут тихими. Пары, работа и дорога из расписания учитываются сами.'**
+  String get busyHint;
+
+  /// No description provided for @busyActive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Занят до {time}'**
+  String busyActive(String time);
+
+  /// No description provided for @busyClear.
+  ///
+  /// In ru, this message translates to:
+  /// **'Я освободился'**
+  String get busyClear;
+
+  /// No description provided for @busyHours.
+  ///
+  /// In ru, this message translates to:
+  /// **'{h} ч'**
+  String busyHours(int h);
+
+  /// No description provided for @autoplanHidden.
+  ///
+  /// In ru, this message translates to:
+  /// **'Автоплан: ещё заданий — {n}, откроются по очереди.'**
+  String autoplanHidden(int n);
+
+  /// No description provided for @habTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Привычки'**
+  String get habTitle;
+
+  /// No description provided for @habEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'От чего избавляемся? Добавьте привычку — Система посчитает дни без неё и сэкономленные деньги.'**
+  String get habEmpty;
+
+  /// No description provided for @habAdd.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить привычку'**
+  String get habAdd;
+
+  /// No description provided for @habAddSave.
+  ///
+  /// In ru, this message translates to:
+  /// **'Начать отсчёт'**
+  String get habAddSave;
+
+  /// No description provided for @habRulesHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'За серии — ◆ (1, 3, 7, 14, 30… дней). Честная отметка срыва — небольшой штраф, скрытый срыв обходится дороже.'**
+  String get habRulesHint;
+
+  /// No description provided for @habHelpHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Если бросить тяжело — это нормально. Помогут врач или горячая линия (в России — 8-800-200-0-200, в Турции — ALO 171).'**
+  String get habHelpHint;
+
+  /// No description provided for @habRelapse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Был срыв'**
+  String get habRelapse;
+
+  /// No description provided for @habRelapseTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срыв'**
+  String get habRelapseTitle;
+
+  /// No description provided for @habRelapseHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Честно — значит мягко: −{n} ◆, серия начнётся заново, лучший результат сохранится. Что стало причиной?'**
+  String habRelapseHint(int n);
+
+  /// No description provided for @habNoticeLabel.
+  ///
+  /// In ru, this message translates to:
+  /// **'Система'**
+  String get habNoticeLabel;
+
+  /// No description provided for @habRemove.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить'**
+  String get habRemove;
+
+  /// No description provided for @habRemoveConfirm.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить привычку «{name}» и её историю?'**
+  String habRemoveConfirm(String name);
+
+  /// No description provided for @habDaysWithout.
+  ///
+  /// In ru, this message translates to:
+  /// **'дн. без срыва'**
+  String get habDaysWithout;
+
+  /// No description provided for @habBest.
+  ///
+  /// In ru, this message translates to:
+  /// **'рекорд {n}'**
+  String habBest(int n);
+
+  /// No description provided for @habNext.
+  ///
+  /// In ru, this message translates to:
+  /// **'Следующая отметка — {days} дн.: +{diamonds} ◆'**
+  String habNext(int days, int diamonds);
+
+  /// No description provided for @habSaved.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сэкономлено: {sum} ₽'**
+  String habSaved(int sum);
+
+  /// No description provided for @habLastTrigger.
+  ///
+  /// In ru, this message translates to:
+  /// **'Последняя причина срыва: {trigger}'**
+  String habLastTrigger(String trigger);
+
+  /// No description provided for @habCustomTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Название'**
+  String get habCustomTitle;
+
+  /// No description provided for @habDailyCost.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сколько уходило в день на привычку'**
+  String get habDailyCost;
+
+  /// No description provided for @habAlreadyDays.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уже не делаю, дней'**
+  String get habAlreadyDays;
+
+  /// No description provided for @habSmoking.
+  ///
+  /// In ru, this message translates to:
+  /// **'Курение'**
+  String get habSmoking;
+
+  /// No description provided for @habVape.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вейп'**
+  String get habVape;
+
+  /// No description provided for @habAlcohol.
+  ///
+  /// In ru, this message translates to:
+  /// **'Алкоголь'**
+  String get habAlcohol;
+
+  /// No description provided for @habSweets.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сладкое'**
+  String get habSweets;
+
+  /// No description provided for @habEnergy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Энергетики'**
+  String get habEnergy;
+
+  /// No description provided for @habPhone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Залипание в телефон'**
+  String get habPhone;
+
+  /// No description provided for @habLateSleep.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поздний отбой'**
+  String get habLateSleep;
+
+  /// No description provided for @habCustom.
+  ///
+  /// In ru, this message translates to:
+  /// **'Своя привычка'**
+  String get habCustom;
+
+  /// No description provided for @habTrigStress.
+  ///
+  /// In ru, this message translates to:
+  /// **'Стресс'**
+  String get habTrigStress;
+
+  /// No description provided for @habTrigBoredom.
+  ///
+  /// In ru, this message translates to:
+  /// **'Скука'**
+  String get habTrigBoredom;
+
+  /// No description provided for @habTrigCompany.
+  ///
+  /// In ru, this message translates to:
+  /// **'Компания'**
+  String get habTrigCompany;
+
+  /// No description provided for @habTrigTired.
+  ///
+  /// In ru, this message translates to:
+  /// **'Усталость'**
+  String get habTrigTired;
+
+  /// No description provided for @habTrigHabitTime.
+  ///
+  /// In ru, this message translates to:
+  /// **'Привычное время'**
+  String get habTrigHabitTime;
+
+  /// No description provided for @habTrigOther.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другое'**
+  String get habTrigOther;
+
+  /// No description provided for @habReasonRelapse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Срыв привычки'**
+  String get habReasonRelapse;
+
+  /// No description provided for @dmTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Режимы дня'**
+  String get dmTitle;
+
+  /// No description provided for @dmAutoplan.
+  ///
+  /// In ru, this message translates to:
+  /// **'Автоплан'**
+  String get dmAutoplan;
+
+  /// No description provided for @dmAutoplanHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Видно только текущее задание; следующее откроется после него.'**
+  String get dmAutoplanHint;
+
+  /// No description provided for @dmAutoplanLocked.
+  ///
+  /// In ru, this message translates to:
+  /// **'Откроется на {level} уровне.'**
+  String dmAutoplanLocked(int level);
+
+  /// No description provided for @dmAutoplanDiscipline.
+  ///
+  /// In ru, this message translates to:
+  /// **'Автоплан в режиме дисциплины'**
+  String get dmAutoplanDiscipline;
+
+  /// No description provided for @dmBusySchedule.
+  ///
+  /// In ru, this message translates to:
+  /// **'Занятость по расписанию'**
+  String get dmBusySchedule;
+
+  /// No description provided for @dmBusyScheduleHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пары, работа и дорога: квесты сдвигаются, напоминания тихие.'**
+  String get dmBusyScheduleHint;
+
+  /// No description provided for @dmAdaptive.
+  ///
+  /// In ru, this message translates to:
+  /// **'Адаптивная сложность'**
+  String get dmAdaptive;
+
+  /// No description provided for @dmAdaptiveHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нагрузка подстраивается под выполнение за 2 недели, не выше рамок плана.'**
+  String get dmAdaptiveHint;
+
+  /// No description provided for @dmAdaptiveCollecting.
+  ///
+  /// In ru, this message translates to:
+  /// **'Собираю статистику (нужно 10+ закрытых квестов за 2 недели).'**
+  String get dmAdaptiveCollecting;
+
+  /// No description provided for @dmAdaptiveStatus.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нагрузка {pct}% к плану · выполнение {rate}% за 2 недели'**
+  String dmAdaptiveStatus(String pct, int rate);
+
+  /// No description provided for @dmSummary.
+  ///
+  /// In ru, this message translates to:
+  /// **'Итоги дня перед отбоем'**
+  String get dmSummary;
+
+  /// No description provided for @dmSummaryHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Уведомление за 30 минут до отбоя: что сделано, баллы, план на завтра.'**
+  String get dmSummaryHint;
+
   /// No description provided for @chrTapHoldHint.
   ///
   /// In ru, this message translates to:

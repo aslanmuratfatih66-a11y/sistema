@@ -129,6 +129,7 @@ String penaltyReasonLabel(AppLocalizations l, String reasonKey) => switch (reaso
       PenaltyReasons.reproach => l.qeReasonReproach,
       PenaltyReasons.blockedAttempt => l.blkReasonBlockedAttempt,
       'almReasonWake' => l.almReasonWake,
+      'habitRelapse' => l.habReasonRelapse,
       _ => finReasonLabel(l, reasonKey) ?? l.qeReasonOther,
     };
 
