@@ -45,7 +45,8 @@ void main() {
     });
 
     test('титулы за уровни в интервале', () {
-      expect(_rules.levelTitlesBetween(1, 9), isEmpty);
+      expect(_rules.levelTitlesBetween(1, 4), isEmpty);
+      expect(_rules.levelTitlesBetween(1, 9), [GameTitles.level5]);
       expect(_rules.levelTitlesBetween(9, 10), [GameTitles.level10]);
       expect(_rules.levelTitlesBetween(9, 30), containsAll([GameTitles.level10, GameTitles.level25]));
     });
